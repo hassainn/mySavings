@@ -927,6 +927,8 @@
       }
       .setup-card {
         position: relative;
+        display: flex;
+        flex-direction: column;
         min-height: 145px;
         padding: 17px;
         color: var(--ink);
@@ -938,8 +940,18 @@
         border-color: rgba(31, 207, 150, 0.42);
         transform: translateY(-2px);
       }
+      .setup-card-head {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 10px;
+        margin-bottom: 8px;
+      }
       .setup-card .stock-price {
-        margin-top: 30px;
+        margin-top: auto;
+      }
+      .setup-card small {
+        margin-top: 2px;
       }
       .stock-logo {
         display: grid;
@@ -970,10 +982,10 @@
         cursor: pointer;
       }
       .stock-line {
-        position: absolute;
-        right: 12px;
-        bottom: 12px;
-        width: 48%;
+        width: 88px;
+        height: 30px;
+        flex: 0 0 auto;
+        opacity: 0.9;
       }
       .stock-price {
         color: var(--ink);
@@ -2827,7 +2839,7 @@
           )
             .map(
               (x) =>
-                `<button class="card setup-card" onclick="detail('${x[0]}')">${logo(x[0], x[3].startsWith("-"))}<div class="stock-price">${x[0]} · ${x[2]}</div><small class="${x[3].startsWith("-") ? "down" : "up"}">${x[3]} · Score ${x[4]}</small>${spark(!x[3].startsWith("-"))}</button>`,
+                `<button class="card setup-card" onclick="detail('${x[0]}')"><div class="setup-card-head">${logo(x[0], x[3].startsWith("-"))}${spark(!x[3].startsWith("-"))}</div><div class="stock-price">${x[0]} · ${x[2]}</div><small class="${x[3].startsWith("-") ? "down" : "up"}">${x[3]} · Score ${x[4]}</small></button>`,
             )
             .join(
               "",
