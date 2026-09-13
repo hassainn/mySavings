@@ -2198,6 +2198,7 @@
         padding: 0;
       }
       .mood-head {
+        position: relative;
         padding: 20px 20px 18px;
         background: #10271f;
         color: #eafff7;
@@ -2215,6 +2216,48 @@
         color: #a4c2b7;
         font-size: 13px;
         line-height: 1.5;
+      }
+      .mood-lock {
+        position: absolute;
+        top: 18px;
+        right: 18px;
+        padding: 4px 9px;
+        border-radius: 999px;
+        background: rgba(255, 255, 255, 0.12);
+        color: #ffd17b;
+        font:
+          800 10px/1 ui-monospace,
+          SFMono-Regular,
+          Consolas,
+          monospace;
+        letter-spacing: 0.06em;
+      }
+      .mood-spectrum.indeterminate {
+        opacity: 0.3;
+      }
+      .breadth-line.locked b {
+        color: #9aaba4;
+      }
+      .breadth-track.empty {
+        height: 7px;
+        border: 1px dashed #cfe0d8;
+        background: transparent;
+      }
+      .mood-cta {
+        width: 100%;
+        margin: 12px 0 10px;
+        padding: 11px 14px;
+        border: 1px solid var(--line);
+        border-radius: 13px;
+        background: #fff;
+        color: var(--mint-dark);
+        font-weight: 800;
+        cursor: pointer;
+        transition: 150ms ease;
+      }
+      .mood-cta:hover {
+        border-color: #b9ead9;
+        background: var(--mint-soft);
       }
       .mood-spectrum {
         position: relative;
@@ -2654,22 +2697,22 @@
       function marketMoodPanel() {
         const mood = scanFeed?.marketMood || {};
         const hasBreadth = Number(mood.evaluated || 0) > 0;
-        const score = hasBreadth ? Math.max(0, Math.min(100, Number(mood.score || 0))) : 50;
-        const label = hasBreadth
-          ? mood.label || "Mixed"
-          : marketIntel?.status === "live"
-            ? marketIntel.marketMood || "AI briefing available"
-            : "Awaiting breadth scan";
-        const guidance = hasBreadth
-          ? mood.guidance || "Use breadth with price and volume confirmation."
-          : "Connect Upstox to calculate market mood from every scanned NSE equity.";
+        // A null/absent value renders as a dashed placeholder, never a fake "0.0%".
         const metric = (name, value) => {
           const numeric = Number(value);
-          const display = Number.isFinite(numeric) ? `${numeric.toFixed(1)}%` : "—";
-          const width = Number.isFinite(numeric) ? Math.max(0, Math.min(100, numeric)) : 0;
-          return `<div class="breadth-line"><span>${name}</span><b>${display}</b><span class="breadth-track"><span style="width:${width}%"></span></span></div>`;
+          const known = value !== null && value !== undefined && Number.isFinite(numeric);
+          const display = known ? `${numeric.toFixed(1)}%` : "—";
+          const width = known ? Math.max(0, Math.min(100, numeric)) : 0;
+          return `<div class="breadth-line${known ? "" : " locked"}"><span>${name}</span><b>${display}</b><span class="breadth-track${known ? "" : " empty"}">${known ? `<span style="width:${width}%"></span>` : ""}</span></div>`;
         };
-        return `<aside class="card market-pulse mood-card"><div class="mood-head"><small>MARKET MOOD · NSE BREADTH</small><h3>${escapeHTML(label)}</h3><p>${escapeHTML(guidance)}</p><div class="mood-spectrum" aria-label="Market mood score ${hasBreadth ? score : "not available"}"><span style="left:${score}%"></span></div></div><div class="mood-body">${metric("Advancing today", mood.advancersPct)}${metric("Above SMA 50", mood.aboveSma50Pct)}${metric("Above SMA 200", mood.aboveSma200Pct)}<span class="mood-source">${hasBreadth ? `${Number(mood.evaluated).toLocaleString("en-IN")} equities evaluated · average move ${Number(mood.averageChangePct || 0) >= 0 ? "+" : ""}${Number(mood.averageChangePct || 0).toFixed(2)}%` : "Upstox breadth will replace this waiting state after both daily scan slices finish."}</span></div></aside>`;
+        if (!hasBreadth) {
+          const newsMood = marketIntel?.status === "live" ? marketIntel.marketMood : null;
+          return `<aside class="card market-pulse mood-card"><div class="mood-head"><small>MARKET MOOD · NSE BREADTH</small><span class="mood-lock">◔ AWAITING SCAN</span><h3>${escapeHTML(newsMood || "Breadth not yet live")}</h3><p>${newsMood ? "That's today's headline tone. Live NSE breadth — advancers and stocks above their moving averages — turns on once the Upstox scan runs." : "Score market mood from every scanned NSE equity by connecting the read-only Upstox feed."}</p><div class="mood-spectrum indeterminate" aria-hidden="true"></div></div><div class="mood-body">${metric("Advancing today")}${metric("Above SMA 50")}${metric("Above SMA 200")}<button class="mood-cta" onclick="page('scanner')">See how to activate →</button><span class="mood-source">Add the repository secret UPSTOX_ACCESS_TOKEN and run the NSE scan. The token stays in GitHub Actions — never in the browser.</span></div></aside>`;
+        }
+        const score = Math.max(0, Math.min(100, Number(mood.score || 0)));
+        const label = mood.label || "Mixed";
+        const guidance = mood.guidance || "Use breadth with price and volume confirmation.";
+        return `<aside class="card market-pulse mood-card"><div class="mood-head"><small>MARKET MOOD · NSE BREADTH</small><h3>${escapeHTML(label)}</h3><p>${escapeHTML(guidance)}</p><div class="mood-spectrum" aria-label="Market mood score ${score}"><span style="left:${score}%"></span></div></div><div class="mood-body">${metric("Advancing today", mood.advancersPct)}${metric("Above SMA 50", mood.aboveSma50Pct)}${metric("Above SMA 200", mood.aboveSma200Pct)}<span class="mood-source">${Number(mood.evaluated).toLocaleString("en-IN")} equities evaluated · average move ${Number(mood.averageChangePct || 0) >= 0 ? "+" : ""}${Number(mood.averageChangePct || 0).toFixed(2)}%</span></div></aside>`;
       }
       function visibleSignals() {
         const signals = Array.isArray(scanFeed?.signals) ? scanFeed.signals : [];
