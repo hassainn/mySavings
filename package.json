@@ -14,7 +14,9 @@
     "db:generate": "drizzle-kit generate",
     "intelligence:refresh": "node scripts/generate-market-intelligence.mjs",
     "scanner:refresh": "node scripts/scan-upstox-universe.mjs",
-    "export:static": "node scripts/export-static.mjs"
+    "export:static": "node scripts/export-static.mjs",
+    "strategist:refresh": "node scripts/generate-strategist-plan.mjs",
+    "test:strategist": "node --test tests/strategist.test.mjs"
   },
   "dependencies": {
     "@base-ui/react": "^1.7.0",

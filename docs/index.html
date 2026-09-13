@@ -2240,6 +2240,7 @@
           <span class="nav-icon">◫</span>AI market news
           <span class="nav-badge">LIVE</span>
         </button>
+        <button class="nav" data-page="strategist"><span class="nav-icon">✧</span>AI Strategist</button>
         <button class="nav" data-page="paper">
           <span class="nav-icon">↗</span>Paper trading
         </button>
@@ -2277,6 +2278,7 @@
           <button class="news-menu-item" data-page="news">
             AI market news
           </button>
+          <button data-page="strategist">AI Strategist</button>
           <button data-page="market">Market health</button>
           <button data-page="journal">Trade journal</button>
           <button data-page="backtest">Backtest</button>
@@ -2352,6 +2354,8 @@
       </form>
     </div>
     <div class="toast" id="toast"></div>
+    <style>.strategist-command::after { content: none; } .strategist-idea { padding: 22px; } .strategist-idea li { margin: 8px 0; } .strategist-idea .scan-summary { flex-wrap: wrap; }</style>
+    <script src="strategist.js"></script>
     <script>
       const K = "alpha-swing-list",
         S = [
@@ -2722,7 +2726,7 @@
             "Good afternoon, Hassain",
             '<button class="btn" onclick="openStockModal()">＋ Add stock</button>',
           ) +
-          `<section class="card portfolio-hero"><div class="portfolio-top"><span>PAPER PORTFOLIO</span><span class="live-chip">● Market closed</span></div><div class="portfolio-value"><strong>₹5,00,000</strong><span>+1.74%</span></div><div class="portfolio-stats"><div><small>Today's gain</small><b>₹2,344.11</b></div><div><small>Open risk</small><b>₹0.00</b></div><div><small>Buying power</small><b>₹5,00,000</b></div></div>${spark(true, true)}</section>${agenticPreview()}${briefingPreview()}<div class="overview-grid"><div><div class="section-head"><h2>Top setups</h2><button onclick="page('scanner')">View scanner →</button></div><section class="setup-strip">${S.slice(
+          `<section class="card portfolio-hero"><div class="portfolio-top"><span>PAPER PORTFOLIO</span><span class="live-chip">● Market closed</span></div><div class="portfolio-value"><strong>₹5,00,000</strong><span>+1.74%</span></div><div class="portfolio-stats"><div><small>Today's gain</small><b>₹2,344.11</b></div><div><small>Open risk</small><b>₹0.00</b></div><div><small>Buying power</small><b>₹5,00,000</b></div></div>${spark(true, true)}</section>${strategistPreview()}${agenticPreview()}${briefingPreview()}<div class="overview-grid"><div><div class="section-head"><h2>Top setups</h2><button onclick="page('scanner')">View scanner →</button></div><section class="setup-strip">${S.slice(
             0,
             3,
           )
@@ -3103,6 +3107,7 @@
         currentPage = x;
         ({
           overview,
+          strategist,
           scanner,
           watchlist: watch,
           market,
@@ -3118,7 +3123,7 @@
           .forEach((b) => b.classList.toggle("active", b.dataset.page === x));
         moreButton.classList.toggle(
           "active",
-          ["news", "market", "journal", "backtest", "settings"].includes(x),
+          ["strategist", "news", "market", "journal", "backtest", "settings"].includes(x),
         );
         window.scrollTo({ top: 0, behavior: "smooth" });
       }
@@ -3135,6 +3140,7 @@
       page("overview");
       loadIntelligence();
       loadAgenticScan();
+      loadStrategist();
       if ("serviceWorker" in navigator)
         navigator.serviceWorker.register("sw.js");
     </script>

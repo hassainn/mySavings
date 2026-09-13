@@ -4,6 +4,20 @@ Mobile-first Indian swing-trading workspace with watchlists, alerts, market heal
 
 Live app: <https://hassainn.github.io/mySavings/>
 
+## Daily AI Strategist and memory
+
+Open **AI Strategist** from the sidebar, mobile More menu, or dashboard. The saved plan includes the deterministic market gate, up to eight ranked candidates with original scanner levels, bearish cautions, prior-session observations, and seven recent daily summaries. The browser marks old plans watch-only and highlights locally watched symbols without uploading the private watchlist.
+
+`npm run strategist:refresh` generates `docs/data/strategist-plan.json` and a rolling 30-session `strategist-memory.json`. Repeated runs replace the same India-calendar-day record. Continuity compares the previous session with newer scanner observations; it does not claim fills, intraday target/stop touches or investment returns. Memory contains only public scanner research, never a user's journal or holdings.
+
+The gate requires a complete `live` scan, valid breadth, and a scan no older than four calendar days (allowing a normal weekend). Individual candidates also require recent candle dates and valid entry/stop/target ordering. Breadth below 45 is WEAK; 45–54 is CAUTION; 55 or above is HEALTHY. Only HEALTHY can show **Review**, and even then the human decides. All other gates show **Watch**. This is a daily research tool, not a live execution engine.
+
+**Refresh AI Strategist** runs at 08:15 and 18:00 IST on weekdays, 10:15 IST on weekends, after successful scanner/news workflows, and on manual dispatch. It calls Gemini only when a complete plan and `GEMINI_API_KEY` are available; missing credentials, timeouts and malformed AI responses retain the deterministic plan. The AI response can add commentary only. The Pages workflow deploys after strategist completion, including updates committed using the Actions token.
+
+To activate: add the `UPSTOX_ACCESS_TOKEN` repository secret, run both scanner slices, and optionally add `GEMINI_API_KEY` for commentary. No credential belongs in frontend assets. The refresh button reloads the saved result; it does not start a backend job. The existing paper portfolio and journal remain separate from strategist observations.
+
+Run `npm run test:strategist` to verify gates, stale inputs, candidate filtering, daily memory and provider failures without API credentials or live market calls.
+
 ## Gemini market intelligence
 
 The public application never receives the Gemini credential. A scheduled GitHub Actions workflow calls Gemini server-side, uses Google Search grounding, saves a reviewed JSON feed under `docs/data/`, and then GitHub Pages publishes that feed.
@@ -19,7 +33,7 @@ The generated research includes market and sector briefings, stock-specific news
 
 Gemini 3.8 Flash with Google Search grounding is configured by default. Search grounding may require a paid Gemini API project. Never put the key in `docs/`, JavaScript, commits, screenshots, issues or chat messages.
 
-The workflow refreshes hourly during the Indian market day on weekdays and once daily on weekends. Each refresh commits only the generated JSON feed; that commit automatically triggers the GitHub Pages deployment workflow.
+The workflow refreshes hourly during the Indian market day on weekdays and once daily on weekends. Each refresh commits the generated JSON feed, triggers the strategist, and then publishes through the Pages workflow-completion trigger.
 
 Useful scripts:
 
