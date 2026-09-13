@@ -1419,6 +1419,363 @@
         }
       }
     </style>
+    <style id="market-intelligence-design">
+      .nav-badge {
+        margin-left: auto;
+        padding: 3px 7px;
+        border-radius: 999px;
+        background: #10271f;
+        color: #7ff0c9;
+        font:
+          800 10px/1 ui-monospace,
+          SFMono-Regular,
+          Consolas,
+          monospace;
+        letter-spacing: 0.08em;
+      }
+      .intel-brief {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) auto;
+        gap: 22px;
+        align-items: center;
+        margin-top: 22px;
+        padding: 22px 24px;
+        border: 1px solid #d9e8e1;
+        border-left: 5px solid var(--mint);
+        border-radius: 18px;
+        background: linear-gradient(105deg, #fff 0%, #f5fffb 100%);
+        box-shadow: 0 14px 38px rgba(25, 72, 57, 0.065);
+      }
+      .intel-brief h2 {
+        margin: 4px 0 6px;
+        font-family: Georgia, Cambria, "Times New Roman", serif;
+        font-size: 22px;
+        font-weight: 700;
+        letter-spacing: -0.025em;
+      }
+      .intel-brief p {
+        max-width: 780px;
+        margin: 0;
+        color: var(--muted);
+        font-size: 14px;
+      }
+      .intel-kicker {
+        display: flex;
+        align-items: center;
+        gap: 9px;
+        color: #667a72;
+        font:
+          750 11px/1.2 ui-monospace,
+          SFMono-Regular,
+          Consolas,
+          monospace;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+      }
+      .intel-status {
+        padding: 5px 8px;
+        border-radius: 999px;
+        background: var(--mint-soft);
+        color: var(--mint-dark);
+        letter-spacing: 0.04em;
+      }
+      .intel-status.setup_required {
+        background: #fff4da;
+        color: #a46800;
+      }
+      .intel-page-head {
+        display: grid;
+        grid-template-columns: minmax(0, 1.25fr) minmax(260px, 0.75fr);
+        gap: 16px;
+        margin-bottom: 22px;
+      }
+      .intel-lead,
+      .intel-focus {
+        padding: 24px;
+      }
+      .intel-lead {
+        position: relative;
+        overflow: hidden;
+        border: 0;
+        background: #10271f;
+        color: #e9fff7;
+      }
+      .intel-lead::after {
+        content: "AI";
+        position: absolute;
+        right: -16px;
+        bottom: -45px;
+        color: rgba(107, 239, 191, 0.08);
+        font:
+          900 160px/1 ui-monospace,
+          SFMono-Regular,
+          Consolas,
+          monospace;
+        letter-spacing: -0.1em;
+      }
+      .intel-lead .intel-kicker {
+        color: #8ccbb5;
+      }
+      .intel-lead h2 {
+        position: relative;
+        z-index: 1;
+        max-width: 760px;
+        margin: 14px 0 10px;
+        color: #fff;
+        font-family: Georgia, Cambria, "Times New Roman", serif;
+        font-size: clamp(25px, 3vw, 38px);
+        font-weight: 700;
+        line-height: 1.15;
+        letter-spacing: -0.035em;
+      }
+      .intel-lead p,
+      .intel-focus p {
+        position: relative;
+        z-index: 1;
+        margin: 0;
+        color: #a9c6bb;
+        font-size: 14px;
+        line-height: 1.65;
+      }
+      .intel-focus {
+        background: linear-gradient(145deg, #20cf98, #11b982);
+        color: #073e2e;
+      }
+      .intel-focus h3 {
+        margin: 12px 0 8px;
+        color: #073e2e;
+        font-family: Georgia, Cambria, "Times New Roman", serif;
+      }
+      .intel-focus p {
+        color: #07513b;
+      }
+      .sector-grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 14px;
+      }
+      .sector-card {
+        padding: 20px;
+      }
+      .sector-top,
+      .news-meta,
+      .news-footer {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 10px;
+      }
+      .sector-card h3 {
+        margin: 12px 0 8px;
+        font-size: 19px;
+      }
+      .sector-card p {
+        min-height: 60px;
+        margin: 0;
+        color: var(--muted);
+        font-size: 13px;
+        line-height: 1.55;
+      }
+      .rank {
+        display: grid;
+        width: 30px;
+        height: 30px;
+        place-items: center;
+        border-radius: 10px;
+        background: #10271f;
+        color: #fff;
+        font:
+          800 12px/1 ui-monospace,
+          SFMono-Regular,
+          Consolas,
+          monospace;
+      }
+      .momentum {
+        color: var(--mint-dark);
+        font:
+          800 11px/1 ui-monospace,
+          SFMono-Regular,
+          Consolas,
+          monospace;
+        text-transform: uppercase;
+      }
+      .heat-track {
+        height: 7px;
+        margin: 16px 0 10px;
+        overflow: hidden;
+        border-radius: 99px;
+        background: #e7eeea;
+      }
+      .heat-track span {
+        display: block;
+        height: 100%;
+        border-radius: inherit;
+        background: linear-gradient(90deg, #20cf98, #078c64);
+      }
+      .ticker-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 6px;
+        margin-top: 13px;
+      }
+      .ticker-list button,
+      .news-filter {
+        min-height: 34px;
+        padding: 0 10px;
+        border: 1px solid var(--line);
+        border-radius: 10px;
+        background: #f7faf8;
+        color: #53665f;
+        font:
+          750 12px/1 ui-monospace,
+          SFMono-Regular,
+          Consolas,
+          monospace;
+        cursor: pointer;
+      }
+      .news-toolbar {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        margin-bottom: 14px;
+      }
+      .news-filter.active {
+        border-color: #b9ead9;
+        background: var(--mint-soft);
+        color: var(--mint-dark);
+      }
+      .news-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 14px;
+      }
+      .news-card {
+        display: flex;
+        min-height: 260px;
+        flex-direction: column;
+        padding: 21px;
+      }
+      .news-scope,
+      .sentiment {
+        padding: 5px 8px;
+        border-radius: 999px;
+        font:
+          800 10px/1 ui-monospace,
+          SFMono-Regular,
+          Consolas,
+          monospace;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+      }
+      .news-scope {
+        background: #eef3f0;
+        color: #53665f;
+      }
+      .sentiment.Positive {
+        background: var(--mint-soft);
+        color: var(--mint-dark);
+      }
+      .sentiment.Negative {
+        background: var(--rose-soft);
+        color: var(--rose);
+      }
+      .sentiment.Neutral,
+      .sentiment.Mixed {
+        background: #fff4da;
+        color: #986100;
+      }
+      .news-card h3 {
+        margin: 17px 0 10px;
+        font-family: Georgia, Cambria, "Times New Roman", serif;
+        font-size: 21px;
+        line-height: 1.25;
+      }
+      .news-card p {
+        margin: 0 0 16px;
+        color: var(--muted);
+        font-size: 14px;
+        line-height: 1.6;
+      }
+      .impact-note {
+        margin-top: auto;
+        padding: 11px 12px;
+        border-left: 3px solid var(--mint);
+        background: #f6faf8;
+        color: #43574f;
+        font-size: 12px;
+      }
+      .news-footer {
+        margin-top: 15px;
+        color: #84958e;
+        font-size: 11px;
+      }
+      .source-link {
+        color: var(--mint-dark);
+        font-weight: 800;
+        text-decoration: none;
+      }
+      .source-link:hover {
+        text-decoration: underline;
+      }
+      .intel-disclaimer {
+        margin-top: 20px;
+        padding: 15px 17px;
+        border: 1px solid #f1e0b5;
+        border-radius: 14px;
+        background: #fffaf0;
+        color: #735e2c;
+        font-size: 12px;
+        line-height: 1.55;
+      }
+      .stock-news {
+        margin-top: 20px;
+      }
+      .stock-news .news-grid {
+        grid-template-columns: 1fr;
+      }
+      .stock-news .news-card {
+        min-height: 0;
+      }
+      @media (max-width: 980px) {
+        .sector-grid {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+      }
+      @media (max-width: 760px) {
+        .intel-brief,
+        .intel-page-head {
+          grid-template-columns: 1fr;
+        }
+        .intel-brief {
+          padding: 19px;
+        }
+        .intel-brief .btn {
+          width: 100%;
+        }
+        .intel-page-head,
+        .sector-grid,
+        .news-grid {
+          grid-template-columns: 1fr;
+        }
+        .intel-lead,
+        .intel-focus,
+        .sector-card,
+        .news-card {
+          padding: 19px;
+        }
+        .sector-card p {
+          min-height: 0;
+        }
+        .news-card {
+          min-height: 0;
+        }
+        .mobile-menu .news-menu-item {
+          grid-column: 1 / -1;
+          background: #10271f;
+          color: #b7f7df;
+        }
+      }
+    </style>
   </head>
   <body>
     <div class="app">
@@ -1436,6 +1793,10 @@
         </button>
         <button class="nav" data-page="market">
           <span class="nav-icon">✦</span>Market health
+        </button>
+        <button class="nav" data-page="news">
+          <span class="nav-icon">◫</span>AI market news
+          <span class="nav-badge">LIVE</span>
         </button>
         <button class="nav" data-page="paper">
           <span class="nav-icon">↗</span>Paper trading
@@ -1468,6 +1829,9 @@
           </button>
         </nav>
         <div class="mobile-menu" id="mobileMenu">
+          <button class="news-menu-item" data-page="news">
+            AI market news
+          </button>
           <button data-page="market">Market health</button>
           <button data-page="journal">Trade journal</button>
           <button data-page="backtest">Backtest</button>
@@ -1560,7 +1924,81 @@
         localStorage.getItem("alpha-journal") || "[]",
       );
       let currentPage = "overview";
+      let marketIntel = null;
+      let newsFilter = "all";
+      let intelLoading = false;
       const $ = (x) => document.querySelector(x);
+      function escapeHTML(value = "") {
+        return String(value).replace(
+          /[&<>'"]/g,
+          (character) =>
+            ({
+              "&": "&amp;",
+              "<": "&lt;",
+              ">": "&gt;",
+              "'": "&#39;",
+              '"': "&quot;",
+            })[character],
+        );
+      }
+      function safeUrl(value = "") {
+        try {
+          const parsed = new URL(value);
+          return parsed.protocol === "https:" ? parsed.href : "";
+        } catch {
+          return "";
+        }
+      }
+      function intelStatus() {
+        return marketIntel?.status === "live"
+          ? "Live & grounded"
+          : "Setup preview";
+      }
+      function formatPublished(value) {
+        if (!value) return "Awaiting live refresh";
+        const date = new Date(value);
+        if (Number.isNaN(date.getTime())) return escapeHTML(value);
+        return date.toLocaleString("en-IN", {
+          day: "numeric",
+          month: "short",
+          hour: "numeric",
+          minute: "2-digit",
+        });
+      }
+      async function loadIntelligence(force = false) {
+        if (intelLoading) return;
+        intelLoading = true;
+        try {
+          const suffix = force ? `?refresh=${Date.now()}` : "";
+          const response = await fetch(
+            `data/market-intelligence.json${suffix}`,
+            {
+              cache: "no-store",
+            },
+          );
+          if (!response.ok) throw new Error("Market feed unavailable");
+          marketIntel = await response.json();
+          if (currentPage === "overview") overview();
+          if (currentPage === "news") news();
+        } catch {
+          marketIntel = {
+            status: "error",
+            marketMood: "Feed temporarily unavailable",
+            marketSummary:
+              "The saved market briefing could not be loaded. Check the connection and try again.",
+            dailyFocus:
+              "Use exchange filings and verified sources while the feed reconnects.",
+            sectors: [],
+            news: [],
+            disclaimer:
+              "Verify all market information before making decisions.",
+          };
+          if (currentPage === "overview") overview();
+          if (currentPage === "news") news();
+        } finally {
+          intelLoading = false;
+        }
+      }
       function title(t, btn = "") {
         return `<div class="title"><div><small>ALPHA SWING · NSE</small><h1>${t}</h1></div>${btn}</div>`;
       }
@@ -1598,6 +2036,32 @@
           })
           .join("");
       }
+      function briefingPreview() {
+        if (!marketIntel) {
+          return `<section class="intel-brief"><div><div class="intel-kicker">GEMINI MARKET INTELLIGENCE</div><h2>Loading the latest research brief…</h2><p>Preparing market, sector and stock-specific coverage.</p></div></section>`;
+        }
+        const statusClass = escapeHTML(marketIntel.status || "setup_required");
+        return `<section class="intel-brief"><div><div class="intel-kicker">GEMINI MARKET INTELLIGENCE <span class="intel-status ${statusClass}">${intelStatus()}</span></div><h2>${escapeHTML(marketIntel.marketMood || "Market briefing")}</h2><p>${escapeHTML(marketIntel.marketSummary || "No market summary is available yet.")}</p></div><button class="btn" onclick="page('news')">Open intelligence →</button></section>`;
+      }
+      function renderNewsCard(item) {
+        const sourceUrl = safeUrl(item.sourceUrl);
+        const source = sourceUrl
+          ? `<a class="source-link" href="${sourceUrl}" target="_blank" rel="noopener noreferrer">${escapeHTML(item.sourceName || "Open source")} ↗</a>`
+          : `<span>${escapeHTML(item.sourceName || "Source unavailable")}</span>`;
+        const sentiment = ["Positive", "Negative", "Neutral", "Mixed"].includes(
+          item.sentiment,
+        )
+          ? item.sentiment
+          : "Neutral";
+        return `<article class="card news-card"><div class="news-meta"><span class="news-scope">${escapeHTML(item.category || "market")} · ${escapeHTML(item.symbol || "NSE")}</span><span class="sentiment ${sentiment}">${sentiment}</span></div><h3>${escapeHTML(item.headline || "Market update")}</h3><p>${escapeHTML(item.summary || "No summary available.")}</p><div class="impact-note"><b>Trading relevance</b><br>${escapeHTML(item.impact || "Review the source and price reaction.")}</div><div class="news-footer"><span>${formatPublished(item.publishedAt)}</span>${source}</div></article>`;
+      }
+      function stockNewsFor(symbol) {
+        const items = (marketIntel?.news || []).filter(
+          (item) => String(item.symbol).toUpperCase() === symbol,
+        );
+        if (!items.length) return "";
+        return `<section class="stock-news"><div class="section-head"><h2>Latest ${escapeHTML(symbol)} news</h2><button onclick="page('news')">All intelligence →</button></div><div class="news-grid">${items.slice(0, 2).map(renderNewsCard).join("")}</div></section>`;
+      }
       function notify(t, b) {
         if (Notification.permission === "granted")
           new Notification(t, { body: b });
@@ -1612,7 +2076,7 @@
             "Good afternoon, Hassain",
             '<button class="btn" onclick="openStockModal()">＋ Add stock</button>',
           ) +
-          `<section class="card portfolio-hero"><div class="portfolio-top"><span>PAPER PORTFOLIO</span><span class="live-chip">● Market closed</span></div><div class="portfolio-value"><strong>₹5,00,000</strong><span>+1.74%</span></div><div class="portfolio-stats"><div><small>Today's gain</small><b>₹2,344.11</b></div><div><small>Open risk</small><b>₹0.00</b></div><div><small>Buying power</small><b>₹5,00,000</b></div></div>${spark(true, true)}</section><div class="overview-grid"><div><div class="section-head"><h2>Top setups</h2><button onclick="page('scanner')">View scanner →</button></div><section class="setup-strip">${S.slice(
+          `<section class="card portfolio-hero"><div class="portfolio-top"><span>PAPER PORTFOLIO</span><span class="live-chip">● Market closed</span></div><div class="portfolio-value"><strong>₹5,00,000</strong><span>+1.74%</span></div><div class="portfolio-stats"><div><small>Today's gain</small><b>₹2,344.11</b></div><div><small>Open risk</small><b>₹0.00</b></div><div><small>Buying power</small><b>₹5,00,000</b></div></div>${spark(true, true)}</section>${briefingPreview()}<div class="overview-grid"><div><div class="section-head"><h2>Top setups</h2><button onclick="page('scanner')">View scanner →</button></div><section class="setup-strip">${S.slice(
             0,
             3,
           )
@@ -1636,7 +2100,8 @@
         const watched = list.some((item) => item.s === x[0]);
         app.innerHTML =
           `<div class="title"><div><small>SELECTED SETUP</small><h1>${x[0]}</h1><span class="muted">${x[1]}</span></div><button class="mini" onclick="page('overview')">← Back</button></div>` +
-          `<div class="detail-layout"><section class="card detail-chart"><div style="display:flex;align-items:center;gap:12px">${logo(x[0], x[3].startsWith("-"))}<div><b>${x[0]}</b><br><small class="muted">NSE · Equity</small></div></div><div class="detail-price">${x[2]}</div><div class="${x[3].startsWith("-") ? "down" : "up"}">${x[3]} today</div><div class="range-tabs"><button>1D</button><button>1W</button><button class="active">1M</button><button>1Y</button><button>5Y</button></div><svg class="chart-canvas" viewBox="0 0 650 270" role="img" aria-label="One month candlestick chart"><defs><linearGradient id="chartFill" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#21cf98" stop-opacity=".22"/><stop offset="1" stop-color="#21cf98" stop-opacity="0"/></linearGradient></defs><g stroke="#e8efeb" stroke-width="1"><line x1="20" y1="40" x2="630" y2="40"/><line x1="20" y1="100" x2="630" y2="100"/><line x1="20" y1="160" x2="630" y2="160"/><line x1="20" y1="220" x2="630" y2="220"/></g><path d="M20 205 C70 190 90 205 130 175 S200 155 230 168 S300 115 340 130 S410 92 450 110 S510 70 545 82 S590 35 630 45 L630 245 L20 245 Z" fill="url(#chartFill)"/><path d="M20 205 C70 190 90 205 130 175 S200 155 230 168 S300 115 340 130 S410 92 450 110 S510 70 545 82 S590 35 630 45" fill="none" stroke="#18bd88" stroke-width="4" stroke-linecap="round"/><circle cx="630" cy="45" r="7" fill="#18bd88" stroke="#fff" stroke-width="4"/></svg><div class="detail-actions"><button class="btn" onclick="prefillPaper('${x[0]}','${x[2].replace(/[^0-9.]/g, "")}')">Paper buy</button><button class="mini" onclick="${watched ? `removeBySymbol('${x[0]}')` : `quickAdd('${x[0]}','${x[1]}')`}">${watched ? "Remove from watchlist" : "Add to watchlist"}</button></div></section><aside class="card detail-aside"><small>SETUP QUALITY</small><h3>${x[4]} / 100 <span class="notice">${x[4] > 94 ? "A+" : "A"}</span></h3><div class="quality-list"><div><span>Trend template</span><b>8 / 8</b></div><div><span>Relative strength</span><b>${Math.max(82, x[4] - 2)}</b></div><div><span>VCP score</span><b>${x[4]}</b></div><div><span>Relative volume</span><b>1.82×</b></div><div><span>Market gate</span><b style="color:#e5a12f">Caution</b></div></div><p class="pulse-copy" style="text-align:left">Paper trading only until the Upstox market-data connection is active.</p></aside></div>`;
+          `<div class="detail-layout"><section class="card detail-chart"><div style="display:flex;align-items:center;gap:12px">${logo(x[0], x[3].startsWith("-"))}<div><b>${x[0]}</b><br><small class="muted">NSE · Equity</small></div></div><div class="detail-price">${x[2]}</div><div class="${x[3].startsWith("-") ? "down" : "up"}">${x[3]} today</div><div class="range-tabs"><button>1D</button><button>1W</button><button class="active">1M</button><button>1Y</button><button>5Y</button></div><svg class="chart-canvas" viewBox="0 0 650 270" role="img" aria-label="One month candlestick chart"><defs><linearGradient id="chartFill" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#21cf98" stop-opacity=".22"/><stop offset="1" stop-color="#21cf98" stop-opacity="0"/></linearGradient></defs><g stroke="#e8efeb" stroke-width="1"><line x1="20" y1="40" x2="630" y2="40"/><line x1="20" y1="100" x2="630" y2="100"/><line x1="20" y1="160" x2="630" y2="160"/><line x1="20" y1="220" x2="630" y2="220"/></g><path d="M20 205 C70 190 90 205 130 175 S200 155 230 168 S300 115 340 130 S410 92 450 110 S510 70 545 82 S590 35 630 45 L630 245 L20 245 Z" fill="url(#chartFill)"/><path d="M20 205 C70 190 90 205 130 175 S200 155 230 168 S300 115 340 130 S410 92 450 110 S510 70 545 82 S590 35 630 45" fill="none" stroke="#18bd88" stroke-width="4" stroke-linecap="round"/><circle cx="630" cy="45" r="7" fill="#18bd88" stroke="#fff" stroke-width="4"/></svg><div class="detail-actions"><button class="btn" onclick="prefillPaper('${x[0]}','${x[2].replace(/[^0-9.]/g, "")}')">Paper buy</button><button class="mini" onclick="${watched ? `removeBySymbol('${x[0]}')` : `quickAdd('${x[0]}','${x[1]}')`}">${watched ? "Remove from watchlist" : "Add to watchlist"}</button></div></section><aside class="card detail-aside"><small>SETUP QUALITY</small><h3>${x[4]} / 100 <span class="notice">${x[4] > 94 ? "A+" : "A"}</span></h3><div class="quality-list"><div><span>Trend template</span><b>8 / 8</b></div><div><span>Relative strength</span><b>${Math.max(82, x[4] - 2)}</b></div><div><span>VCP score</span><b>${x[4]}</b></div><div><span>Relative volume</span><b>1.82×</b></div><div><span>Market gate</span><b style="color:#e5a12f">Caution</b></div></div><p class="pulse-copy" style="text-align:left">Paper trading only until the Upstox market-data connection is active.</p></aside></div>` +
+          stockNewsFor(x[0]);
         document
           .querySelectorAll("[data-page]")
           .forEach((b) => b.classList.remove("active"));
@@ -1669,6 +2134,62 @@
         app.innerHTML =
           title("Market health") +
           `<section class="card"><small>MARKET GATE</small><h3>CAUTION</h3><div class="metrics"><div class="metric"><span>Nifty 500</span><b class="up">+0.48%</b></div><div class="metric"><span>Nifty 50</span><b class="up">+0.36%</b></div><div class="metric"><span>India VIX</span><b>12.84</b></div><div class="metric"><span>Breadth</span><b>62%</b></div></div><div class="notice">A/A+ setups only. Reduce risk until the market gate improves.</div></section>`;
+      }
+      function setNewsFilter(filter) {
+        newsFilter = filter;
+        news();
+      }
+      function news() {
+        if (!marketIntel) {
+          app.innerHTML =
+            title("AI market news") +
+            `<section class="card intel-lead"><div class="intel-kicker">GEMINI 3.8 FLASH</div><h2>Loading grounded market intelligence…</h2><p>Collecting the saved market, sector and stock briefing.</p></section>`;
+          return;
+        }
+        const sectors = Array.isArray(marketIntel.sectors)
+          ? marketIntel.sectors
+          : [];
+        const allNews = Array.isArray(marketIntel.news) ? marketIntel.news : [];
+        const visibleNews =
+          newsFilter === "all"
+            ? allNews
+            : allNews.filter((item) => item.category === newsFilter);
+        const statusClass = ["live", "setup_required", "error"].includes(
+          marketIntel.status,
+        )
+          ? marketIntel.status
+          : "setup_required";
+        const generated = marketIntel.generatedAt
+          ? `Updated ${formatPublished(marketIntel.generatedAt)}`
+          : "Waiting for first live refresh";
+        app.innerHTML =
+          title(
+            "AI market news",
+            '<button class="btn" onclick="loadIntelligence(true)">Check latest feed</button>',
+          ) +
+          `<section class="intel-page-head"><article class="card intel-lead"><div class="intel-kicker">GEMINI 3.8 FLASH <span class="intel-status ${statusClass}">${intelStatus()}</span></div><h2>${escapeHTML(marketIntel.marketMood || "Indian market briefing")}</h2><p>${escapeHTML(marketIntel.marketSummary || "No market summary is available.")}</p><div class="news-footer"><span>${generated}</span><span>${escapeHTML(String(marketIntel.sources?.length || 0))} grounded sources</span></div></article><aside class="card intel-focus"><div class="intel-kicker">TODAY'S RESEARCH FOCUS</div><h3>Price reaction first</h3><p>${escapeHTML(marketIntel.dailyFocus || "Confirm news with price, volume and primary filings.")}</p></aside></section>` +
+          `<div class="section-head"><h2>Sector heat</h2><span class="muted">Evidence-weighted, not a recommendation</span></div><section class="sector-grid">${
+            sectors.length
+              ? sectors
+                  .map((sector, index) => {
+                    const score = Math.max(
+                      0,
+                      Math.min(100, Number(sector.score) || 0),
+                    );
+                    const stocks = (sector.relatedStocks || [])
+                      .map((stock) =>
+                        String(stock)
+                          .toUpperCase()
+                          .replace(/[^A-Z0-9.-]/g, "")
+                          .slice(0, 20),
+                      )
+                      .filter(Boolean);
+                    return `<article class="card sector-card"><div class="sector-top"><span class="rank">${index + 1}</span><span class="momentum">${escapeHTML(sector.momentum || "Mixed")}</span></div><h3>${escapeHTML(sector.name || "Sector")}</h3><p>${escapeHTML(sector.reason || "Awaiting evidence-backed sector analysis.")}</p><div class="heat-track" aria-label="Momentum score ${score} out of 100"><span style="width:${score}%"></span></div><small>${score}/100 evidence score</small><div class="ticker-list">${stocks.map((stock) => `<button onclick="detail('${stock}')">${escapeHTML(stock)}</button>`).join("")}</div></article>`;
+                  })
+                  .join("")
+              : '<div class="notice">Sector intelligence will appear after the next Gemini refresh.</div>'
+          }</section>` +
+          `<div class="section-head"><h2>Professional news desk</h2><span class="muted">Market · sector · stock</span></div><div class="news-toolbar">${["all", "market", "sector", "stock"].map((filter) => `<button class="news-filter ${newsFilter === filter ? "active" : ""}" onclick="setNewsFilter('${filter}')">${filter === "all" ? "All coverage" : filter[0].toUpperCase() + filter.slice(1)}</button>`).join("")}</div><section class="news-grid">${visibleNews.length ? visibleNews.map(renderNewsCard).join("") : '<div class="notice">No stories match this filter yet.</div>'}</section><div class="intel-disclaimer">${escapeHTML(marketIntel.disclaimer || "AI-generated research summary. Verify primary sources before making investment decisions. Not investment advice.")}</div>`;
       }
       function paper() {
         const invested = positions.reduce((n, p) => n + p.entry * p.qty, 0);
@@ -1766,7 +2287,7 @@
       function settings() {
         app.innerHTML =
           title("Settings") +
-          `<section class="card settings"><h3>Trading preferences</h3><label>Default risk per trade (%)</label><input id="defaultRisk" type="number" value="${localStorage.getItem("alpha-risk") || 0.5}" step="0.1"><label>Provider status</label><input value="Upstox — configuration required" disabled><p><button class="btn" onclick="saveSettings()">Save preferences</button> <button class="mini" onclick="openModal('riskModal')">Open risk calculator</button></p></section>`;
+          `<section class="card settings"><h3>Trading preferences</h3><label>Default risk per trade (%)</label><input id="defaultRisk" type="number" value="${localStorage.getItem("alpha-risk") || 0.5}" step="0.1"><label>Market-data provider</label><input value="Upstox — configuration required" disabled><label>AI news provider</label><input value="Gemini 3.8 Flash — ${intelStatus()}" disabled><p><button class="btn" onclick="saveSettings()">Save preferences</button> <button class="mini" onclick="openModal('riskModal')">Open risk calculator</button></p></section>`;
       }
       function openModal(id) {
         document.getElementById(id).classList.add("open");
@@ -1892,6 +2413,7 @@
           scanner,
           watchlist: watch,
           market,
+          news,
           paper,
           journal,
           backtest,
@@ -1903,7 +2425,7 @@
           .forEach((b) => b.classList.toggle("active", b.dataset.page === x));
         moreButton.classList.toggle(
           "active",
-          ["market", "journal", "backtest", "settings"].includes(x),
+          ["news", "market", "journal", "backtest", "settings"].includes(x),
         );
         window.scrollTo({ top: 0, behavior: "smooth" });
       }
@@ -1918,6 +2440,7 @@
         .querySelectorAll("[data-page]")
         .forEach((b) => (b.onclick = () => page(b.dataset.page)));
       page("overview");
+      loadIntelligence();
       if ("serviceWorker" in navigator)
         navigator.serviceWorker.register("sw.js");
     </script>

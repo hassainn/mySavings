@@ -1,0 +1,68 @@
+{
+  "status": "setup_required",
+  "generatedAt": null,
+  "model": "gemini-3.8-flash",
+  "marketMood": "Waiting for live briefing",
+  "marketSummary": "The Gemini market-intelligence pipeline is installed. Add the GEMINI_API_KEY repository secret and run the refresh workflow to replace this setup preview with grounded Indian market coverage.",
+  "dailyFocus": "Track confirmed price and volume reactions after news; headlines alone are not trade signals.",
+  "sectors": [
+    {
+      "name": "Defence & aerospace",
+      "momentum": "Preview",
+      "score": 86,
+      "reason": "Configured for order-flow, policy and earnings coverage.",
+      "catalysts": ["Order wins", "Budget policy"],
+      "risks": ["Valuation", "Execution"],
+      "relatedStocks": ["HAL", "BEL", "COCHINSHIP"]
+    },
+    {
+      "name": "Capital goods",
+      "momentum": "Preview",
+      "score": 79,
+      "reason": "Configured for capex, power equipment and industrial demand coverage.",
+      "catalysts": ["Private capex", "Grid investment"],
+      "risks": ["Input costs", "Project delays"],
+      "relatedStocks": ["CGPOWER", "BEL"]
+    },
+    {
+      "name": "Consumer discretionary",
+      "momentum": "Preview",
+      "score": 71,
+      "reason": "Configured for consumption, store expansion and margin coverage.",
+      "catalysts": ["Demand recovery", "Premiumisation"],
+      "risks": ["High valuations", "Weak demand"],
+      "relatedStocks": ["TRENT"]
+    }
+  ],
+  "news": [
+    {
+      "category": "market",
+      "symbol": "NIFTY",
+      "headline": "Gemini news feed is ready to activate",
+      "summary": "Once the repository secret is added, this card will contain a sourced summary of the latest Indian market developments.",
+      "sentiment": "Neutral",
+      "impact": "Setup",
+      "sourceName": "Google AI for Developers",
+      "sourceUrl": "https://ai.google.dev/gemini-api/docs/google-search",
+      "publishedAt": null
+    },
+    {
+      "category": "stock",
+      "symbol": "HAL",
+      "headline": "Stock-specific monitoring is configured",
+      "summary": "The live feed will connect company news with catalysts, risks and likely trading relevance without issuing buy or sell calls.",
+      "sentiment": "Neutral",
+      "impact": "Setup",
+      "sourceName": "Gemini API documentation",
+      "sourceUrl": "https://ai.google.dev/gemini-api/docs",
+      "publishedAt": null
+    }
+  ],
+  "sources": [
+    {
+      "title": "Grounding with Google Search",
+      "url": "https://ai.google.dev/gemini-api/docs/google-search"
+    }
+  ],
+  "disclaimer": "AI-generated research summary. Verify source articles and exchange filings before making investment decisions. Not investment advice."
+}

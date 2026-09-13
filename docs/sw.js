@@ -1,10 +1,17 @@
-const CACHE = "alpha-swing-v4";
+const CACHE = "alpha-swing-v5";
 self.addEventListener("install", (e) => {
   self.skipWaiting();
   e.waitUntil(
     caches
       .open(CACHE)
-      .then((c) => c.addAll(["./", "./index.html", "./manifest.webmanifest"])),
+      .then((c) =>
+        c.addAll([
+          "./",
+          "./index.html",
+          "./manifest.webmanifest",
+          "./data/market-intelligence.json",
+        ]),
+      ),
   );
 });
 self.addEventListener("activate", (e) =>

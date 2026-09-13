@@ -1,6 +1,36 @@
-# vinext-starter
+# Alpha Swing AI
 
-A clean full-stack starter running on [vinext](https://github.com/cloudflare/vinext), with optional Cloudflare D1 and Drizzle support.
+Mobile-first Indian swing-trading workspace with watchlists, alerts, market health, paper trading, a journal, local backtesting and Gemini-powered market intelligence.
+
+Live app: <https://hassainn.github.io/mySavings/>
+
+## Gemini market intelligence
+
+The public application never receives the Gemini credential. A scheduled GitHub Actions workflow calls Gemini server-side, uses Google Search grounding, saves a reviewed JSON feed under `docs/data/`, and then GitHub Pages publishes that feed.
+
+The generated research includes market and sector briefings, stock-specific news, source links, publication times, sentiment and trading relevance without buy/sell recommendations.
+
+### Activate the live feed
+
+1. Create a current Gemini authorization key in [Google AI Studio](https://aistudio.google.com/apikey).
+2. In this GitHub repository, open **Settings → Secrets and variables → Actions**.
+3. Add a repository secret named `GEMINI_API_KEY`.
+4. Open **Actions → Refresh Gemini Market Intelligence → Run workflow**.
+
+Gemini 3.8 Flash with Google Search grounding is configured by default. Search grounding may require a paid Gemini API project. Never put the key in `docs/`, JavaScript, commits, screenshots, issues or chat messages.
+
+The workflow refreshes hourly during the Indian market day on weekdays and once daily on weekends. Each refresh commits only the generated JSON feed; that commit automatically triggers the GitHub Pages deployment workflow.
+
+Useful scripts:
+
+- `npm run intelligence:refresh` — generate the grounded feed when `GEMINI_API_KEY` is set.
+- `npm run export:static` — copy the GitHub Pages application into `dist` for Sites hosting.
+
+Gemini produces a research summary, not a licensed exchange price feed. Connect Upstox separately for authenticated live quotes and candles. Always verify primary filings and source articles before making an investment decision.
+
+## Vinext starter reference
+
+The repository retains its original Vinext/Cloudflare starter for future server-backed phases.
 
 ## Prerequisites
 
@@ -65,7 +95,9 @@ export default async function Home() {
   const requestHeaders = await headers();
   const userId = requestHeaders.get("oai-authenticated-user-id");
   const email = requestHeaders.get("oai-authenticated-user-email");
-  const encodedFullName = requestHeaders.get("oai-authenticated-user-full-name");
+  const encodedFullName = requestHeaders.get(
+    "oai-authenticated-user-full-name",
+  );
   const fullName =
     encodedFullName &&
     requestHeaders.get("oai-authenticated-user-full-name-encoding") ===
