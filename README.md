@@ -38,8 +38,13 @@ The scanner runs after the NSE cash session and reads the daily Upstox instrumen
 - Darvas boxes
 - EMA21/SMA50/SMA200 trend alignment
 - RSI, MACD, ATR and relative-volume confirmation
+- bullish engulfing, morning star, hammer, piercing line and bullish harami
+- bearish engulfing, evening star, shooting star, dark cloud cover and bearish harami
+- doji and inside-bar context
 
-Every result includes the evidence, an entry trigger, structural stop, 2R reference target and a small symbol-specific historical check. The 1–99 confidence value measures indicator agreement; it is **not a promised win rate**. No market strategy can honestly guarantee 99% wins.
+Every result includes the evidence, candle bias, an entry trigger when a long plan is valid, structural stop, 2R reference target and a small symbol-specific historical check. Strong bearish candle reversals become **Caution** signals and do not fabricate a long entry plan. The 1–99 confidence value measures indicator agreement; it is **not a promised win rate**. No market strategy can honestly guarantee 99% wins.
+
+The dashboard market-mood panel is calculated from the percentage of scanned NSE equities advancing, above SMA50 and above SMA200. Gemini commentary remains separate supporting research and never overrides the price-breadth calculation.
 
 ### Activate the scan
 

@@ -1855,7 +1855,7 @@
         position: relative;
         z-index: 1;
         display: grid;
-        grid-template-columns: repeat(4, minmax(0, 1fr));
+        grid-template-columns: repeat(5, minmax(0, 1fr));
         gap: 1px;
         margin-top: 22px;
         overflow: hidden;
@@ -1989,6 +1989,55 @@
         background: #fff2d5;
         color: #966000;
       }
+      .signal-state.Caution {
+        background: #ffe7e8;
+        color: #a23b46;
+      }
+      .candle-badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 7px;
+        padding: 5px 8px;
+        border-radius: 999px;
+        background: #e9faf4;
+        color: #08734f;
+        font: 750 10px/1.15 ui-monospace, SFMono-Regular, Consolas, monospace;
+      }
+      .candle-badge.bearish {
+        background: #fff0f1;
+        color: #a23b46;
+      }
+      .candle-badge.neutral {
+        background: #f1f3f2;
+        color: #5f7069;
+      }
+      .candle-mark {
+        position: relative;
+        width: 6px;
+        height: 19px;
+        flex: 0 0 6px;
+      }
+      .candle-mark::before {
+        content: "";
+        position: absolute;
+        left: 2px;
+        top: 0;
+        width: 2px;
+        height: 100%;
+        border-radius: 2px;
+        background: currentColor;
+      }
+      .candle-mark::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 5px;
+        width: 6px;
+        height: 9px;
+        border-radius: 1px;
+        background: currentColor;
+        box-shadow: 0 0 0 2px #fff;
+      }
       .price-plan {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
@@ -2066,6 +2115,85 @@
         margin: 0;
         color: #99b8ac;
         font-size: 13px;
+      }
+      .mood-card {
+        overflow: hidden;
+        padding: 0;
+      }
+      .mood-head {
+        padding: 20px 20px 18px;
+        background: #10271f;
+        color: #eafff7;
+      }
+      .mood-head small {
+        color: #8eb4a6;
+      }
+      .mood-head h3 {
+        margin: 8px 0 5px;
+        color: #fff;
+        font-size: 25px;
+      }
+      .mood-head p {
+        margin: 0;
+        color: #a4c2b7;
+        font-size: 13px;
+        line-height: 1.5;
+      }
+      .mood-spectrum {
+        position: relative;
+        height: 8px;
+        margin-top: 18px;
+        border-radius: 999px;
+        background: linear-gradient(90deg, #db6671 0 32%, #e9b85e 48% 58%, #20c997 72% 100%);
+      }
+      .mood-spectrum span {
+        position: absolute;
+        top: 50%;
+        width: 15px;
+        height: 15px;
+        border: 3px solid #fff;
+        border-radius: 50%;
+        background: #10271f;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+        transform: translate(-50%, -50%);
+      }
+      .mood-body {
+        padding: 18px 20px 20px;
+      }
+      .breadth-line {
+        display: grid;
+        grid-template-columns: 1fr auto;
+        gap: 7px 12px;
+        padding: 10px 0;
+        border-bottom: 1px solid var(--line);
+        color: #50645c;
+        font-size: 12px;
+      }
+      .breadth-line:last-child {
+        border-bottom: 0;
+      }
+      .breadth-line b {
+        color: var(--ink);
+      }
+      .breadth-track {
+        grid-column: 1 / -1;
+        height: 5px;
+        overflow: hidden;
+        border-radius: 999px;
+        background: #e8efec;
+      }
+      .breadth-track span {
+        display: block;
+        height: 100%;
+        border-radius: inherit;
+        background: var(--mint);
+      }
+      .mood-source {
+        display: block;
+        margin-top: 12px;
+        color: #84958e;
+        font-size: 11px;
+        line-height: 1.45;
       }
       @media (max-width: 1120px) {
         .scan-console { grid-template-columns: 1fr; }
@@ -2366,7 +2494,7 @@
         }
       }
       function formatPrice(value) {
-        if (!Number.isFinite(Number(value))) return "₹—";
+        if (value === null || value === undefined || value === "" || !Number.isFinite(Number(value))) return "₹—";
         return `₹${Number(value).toLocaleString("en-IN", { maximumFractionDigits: 2 })}`;
       }
       function scanGeneratedAt() {
@@ -2428,6 +2556,26 @@
           : "Add the read-only Upstox token to run the first scheduled scan.";
         return `<section class="agent-preview"><div><div class="intel-kicker">AGENTIC STRATEGY SCAN <span class="scan-live ${escapeHTML(scanFeed?.status || "setup_required")}">${escapeHTML(scanStatus())}</span></div><h2>${escapeHTML(headline)}</h2><p>${escapeHTML(detail)}</p></div><button class="btn" onclick="page('scanner')">Open scan →</button></section>`;
       }
+      function marketMoodPanel() {
+        const mood = scanFeed?.marketMood || {};
+        const hasBreadth = Number(mood.evaluated || 0) > 0;
+        const score = hasBreadth ? Math.max(0, Math.min(100, Number(mood.score || 0))) : 50;
+        const label = hasBreadth
+          ? mood.label || "Mixed"
+          : marketIntel?.status === "live"
+            ? marketIntel.marketMood || "AI briefing available"
+            : "Awaiting breadth scan";
+        const guidance = hasBreadth
+          ? mood.guidance || "Use breadth with price and volume confirmation."
+          : "Connect Upstox to calculate market mood from every scanned NSE equity.";
+        const metric = (name, value) => {
+          const numeric = Number(value);
+          const display = Number.isFinite(numeric) ? `${numeric.toFixed(1)}%` : "—";
+          const width = Number.isFinite(numeric) ? Math.max(0, Math.min(100, numeric)) : 0;
+          return `<div class="breadth-line"><span>${name}</span><b>${display}</b><span class="breadth-track"><span style="width:${width}%"></span></span></div>`;
+        };
+        return `<aside class="card market-pulse mood-card"><div class="mood-head"><small>MARKET MOOD · NSE BREADTH</small><h3>${escapeHTML(label)}</h3><p>${escapeHTML(guidance)}</p><div class="mood-spectrum" aria-label="Market mood score ${hasBreadth ? score : "not available"}"><span style="left:${score}%"></span></div></div><div class="mood-body">${metric("Advancing today", mood.advancersPct)}${metric("Above SMA 50", mood.aboveSma50Pct)}${metric("Above SMA 200", mood.aboveSma200Pct)}<span class="mood-source">${hasBreadth ? `${Number(mood.evaluated).toLocaleString("en-IN")} equities evaluated · average move ${Number(mood.averageChangePct || 0) >= 0 ? "+" : ""}${Number(mood.averageChangePct || 0).toFixed(2)}%` : "Upstox breadth will replace this waiting state after both daily scan slices finish."}</span></div></aside>`;
+      }
       function visibleSignals() {
         const signals = Array.isArray(scanFeed?.signals) ? scanFeed.signals : [];
         const query = scanSearch.trim().toLowerCase();
@@ -2440,17 +2588,19 @@
       }
       function signalCard(signal) {
         const patterns = (signal.patterns || []).slice(0, 3);
+        const candle = signal.candlestickPatterns?.[0];
         const encodedSymbol = encodeURIComponent(signal.symbol);
-        return `<button class="signal-card" onclick="openSignal(decodeURIComponent('${encodedSymbol}'))"><span class="signal-identity">${logo(signal.symbol, Number(signal.changePct) < 0)}<span><b>${escapeHTML(signal.symbol)}</b><small>${escapeHTML(signal.name || "NSE equity")} · <span class="${Number(signal.changePct) < 0 ? "down" : "up"}">${Number(signal.changePct || 0) >= 0 ? "+" : ""}${Number(signal.changePct || 0).toFixed(2)}%</span></small></span></span><span><span class="signal-level"><span class="confidence-number">${Number(signal.confidence || 0)}</span><span><small>confidence</small><span class="confidence-rail"><span style="width:${Math.min(99, Number(signal.confidence || 0))}%"></span></span></span></span></span><span class="price-plan"><span><small>Trigger</small><b>${formatPrice(signal.entryTrigger)}</b></span><span><small>Stop</small><b>${formatPrice(signal.stop)}</b></span><span><small>2R target</small><b>${formatPrice(signal.target2R)}</b></span></span><span class="signal-state ${escapeHTML(signal.state || "Watch")}">${escapeHTML(signal.state || "Watch")}</span><span class="strategy-chips" style="grid-column:1/-1">${patterns.map((pattern) => `<span>${escapeHTML(pattern)}</span>`).join("")}<span>${Number(signal.indicators?.relativeVolume || 0).toFixed(2)}× volume</span><span>RSI ${Number(signal.indicators?.rsi14 || 0).toFixed(0)}</span></span></button>`;
+        return `<button class="signal-card" onclick="openSignal(decodeURIComponent('${encodedSymbol}'))"><span class="signal-identity">${logo(signal.symbol, Number(signal.changePct) < 0)}<span><b>${escapeHTML(signal.symbol)}</b><small>${escapeHTML(signal.name || "NSE equity")} · <span class="${Number(signal.changePct) < 0 ? "down" : "up"}">${Number(signal.changePct || 0) >= 0 ? "+" : ""}${Number(signal.changePct || 0).toFixed(2)}%</span></small></span></span><span><span class="signal-level"><span class="confidence-number">${Number(signal.confidence || 0)}</span><span><small>confidence</small><span class="confidence-rail"><span style="width:${Math.min(99, Number(signal.confidence || 0))}%"></span></span></span></span></span><span class="price-plan"><span><small>${signal.state === "Caution" ? "Long trigger" : "Trigger"}</small><b>${formatPrice(signal.entryTrigger)}</b></span><span><small>Stop</small><b>${formatPrice(signal.stop)}</b></span><span><small>2R target</small><b>${formatPrice(signal.target2R)}</b></span></span><span class="signal-state ${escapeHTML(signal.state || "Watch")}">${escapeHTML(signal.state || "Watch")}</span><span class="strategy-chips" style="grid-column:1/-1">${candle ? `<span class="candle-badge ${escapeHTML(candle.bias || "neutral")}"><i class="candle-mark"></i>${escapeHTML(candle.name)}</span>` : ""}${patterns.filter((pattern) => !String(pattern).startsWith("Candle ·")).map((pattern) => `<span>${escapeHTML(pattern)}</span>`).join("")}<span>${Number(signal.indicators?.relativeVolume || 0).toFixed(2)}× volume</span><span>RSI ${Number(signal.indicators?.rsi14 || 0).toFixed(0)}</span></span></button>`;
       }
       function openSignal(symbol) {
         const signal = (scanFeed?.signals || []).find((item) => item.symbol === symbol);
         if (!signal) return detail(symbol);
         const watched = list.some((item) => item.s === symbol);
         const evidence = (signal.evidence || []).map((item) => `<li>${escapeHTML(item)}</li>`).join("");
+        const candlePatterns = (signal.candlestickPatterns || []).map((pattern) => `<span class="candle-badge ${escapeHTML(pattern.bias || "neutral")}"><i class="candle-mark"></i>${escapeHTML(pattern.name)} · ${escapeHTML(pattern.bias)}</span>`).join("");
         const sample = Number(signal.validation?.sampleSize || 0);
         const encodedSymbol = encodeURIComponent(symbol);
-        app.innerHTML = `<div class="title"><div><small>AGENTIC SCAN · ${escapeHTML(signal.state || "WATCH")}</small><h1>${escapeHTML(symbol)}</h1><span class="muted">${escapeHTML(signal.name || "NSE equity")}</span></div><button class="mini" onclick="page('scanner')">← Back to scan</button></div><div class="detail-layout"><section class="card detail-chart"><div class="signal-top"><div class="signal-identity">${logo(symbol, Number(signal.changePct) < 0)}<div><b>${escapeHTML(symbol)}</b><small>${escapeHTML(signal.primaryPattern || "Confluence setup")}</small></div></div><span class="signal-state ${escapeHTML(signal.state || "Watch")}">${escapeHTML(signal.state || "Watch")}</span></div><div class="detail-price">${formatPrice(signal.close)}</div><div class="${Number(signal.changePct) < 0 ? "down" : "up"}">${Number(signal.changePct || 0) >= 0 ? "+" : ""}${Number(signal.changePct || 0).toFixed(2)}% latest session</div><div class="price-plan" style="margin:24px 0"><span><small>Entry trigger</small><b>${formatPrice(signal.entryTrigger)}</b></span><span><small>Structural stop</small><b>${formatPrice(signal.stop)}</b></span><span><small>2R objective</small><b>${formatPrice(signal.target2R)}</b></span></div><h2>Why it ranked</h2><ul class="scan-fineprint">${evidence || "<li>Review the indicator confluence before acting.</li>"}</ul><div class="detail-actions"><button class="btn" onclick="prefillPaper(decodeURIComponent('${encodedSymbol}'),'${Number(signal.entryTrigger || 0)}')">Plan paper trade</button><button class="mini" onclick="${watched ? `removeBySymbol(decodeURIComponent('${encodedSymbol}'))` : `quickAddSignal(decodeURIComponent('${encodedSymbol}'))`}">${watched ? "Remove from watchlist" : "Add to watchlist"}</button><button class="mini" onclick="speakSignalBySymbol(decodeURIComponent('${encodedSymbol}'))">Hear alert</button></div></section><aside class="card detail-aside"><small>EXPLAINABLE CONFIDENCE</small><h3>${Number(signal.confidence || 0)} / 99</h3><div class="confidence-rail" style="width:100%;height:9px"><span style="width:${Math.min(99, Number(signal.confidence || 0))}%"></span></div><div class="quality-list" style="margin-top:18px"><div><span>RSI 14</span><b>${Number(signal.indicators?.rsi14 || 0).toFixed(1)}</b></div><div><span>Relative volume</span><b>${Number(signal.indicators?.relativeVolume || 0).toFixed(2)}×</b></div><div><span>ATR 14</span><b>${formatPrice(signal.indicators?.atr14)}</b></div><div><span>Historical samples</span><b>${sample || "Insufficient"}</b></div><div><span>Observed win rate</span><b>${sample ? `${Number(signal.validation.winRate || 0)}%` : "—"}</b></div></div><p class="pulse-copy" style="text-align:left">Confidence measures present-day indicator agreement. It is not a promised win rate. Historical checks exclude costs and slippage.</p></aside></div>`;
+        app.innerHTML = `<div class="title"><div><small>AGENTIC SCAN · ${escapeHTML(signal.state || "WATCH")}</small><h1>${escapeHTML(symbol)}</h1><span class="muted">${escapeHTML(signal.name || "NSE equity")}</span></div><button class="mini" onclick="page('scanner')">← Back to scan</button></div><div class="detail-layout"><section class="card detail-chart"><div class="signal-top"><div class="signal-identity">${logo(symbol, Number(signal.changePct) < 0)}<div><b>${escapeHTML(symbol)}</b><small>${escapeHTML(signal.primaryPattern || "Confluence setup")}</small></div></div><span class="signal-state ${escapeHTML(signal.state || "Watch")}">${escapeHTML(signal.state || "Watch")}</span></div><div class="detail-price">${formatPrice(signal.close)}</div><div class="${Number(signal.changePct) < 0 ? "down" : "up"}">${Number(signal.changePct || 0) >= 0 ? "+" : ""}${Number(signal.changePct || 0).toFixed(2)}% latest session</div>${candlePatterns ? `<div class="strategy-chips" style="margin-top:16px">${candlePatterns}</div>` : ""}<div class="price-plan" style="margin:24px 0"><span><small>Entry trigger</small><b>${formatPrice(signal.entryTrigger)}</b></span><span><small>Structural stop</small><b>${formatPrice(signal.stop)}</b></span><span><small>2R objective</small><b>${formatPrice(signal.target2R)}</b></span></div><h2>Why it ranked</h2><ul class="scan-fineprint">${evidence || "<li>Review the indicator confluence before acting.</li>"}</ul><div class="detail-actions">${Number.isFinite(Number(signal.entryTrigger)) && signal.entryTrigger !== null ? `<button class="btn" onclick="prefillPaper(decodeURIComponent('${encodedSymbol}'),'${Number(signal.entryTrigger)}')">Plan paper trade</button>` : ""}<button class="mini" onclick="${watched ? `removeBySymbol(decodeURIComponent('${encodedSymbol}'))` : `quickAddSignal(decodeURIComponent('${encodedSymbol}'))`}">${watched ? "Remove from watchlist" : "Add to watchlist"}</button><button class="mini" onclick="speakSignalBySymbol(decodeURIComponent('${encodedSymbol}'))">Hear alert</button></div></section><aside class="card detail-aside"><small>EXPLAINABLE CONFIDENCE</small><h3>${Number(signal.confidence || 0)} / 99</h3><div class="confidence-rail" style="width:100%;height:9px"><span style="width:${Math.min(99, Number(signal.confidence || 0))}%"></span></div><div class="quality-list" style="margin-top:18px"><div><span>Candle bias</span><b>${escapeHTML(signal.bias || "neutral")}</b></div><div><span>RSI 14</span><b>${Number(signal.indicators?.rsi14 || 0).toFixed(1)}</b></div><div><span>Relative volume</span><b>${Number(signal.indicators?.relativeVolume || 0).toFixed(2)}×</b></div><div><span>ATR 14</span><b>${formatPrice(signal.indicators?.atr14)}</b></div><div><span>Historical samples</span><b>${sample || "Insufficient"}</b></div><div><span>Observed win rate</span><b>${sample ? `${Number(signal.validation.winRate || 0)}%` : "—"}</b></div></div><p class="pulse-copy" style="text-align:left">Candlestick patterns are context signals, not standalone trade instructions. Confirm trend, volume and market mood.</p></aside></div>`;
         document.querySelectorAll("[data-page]").forEach((button) => button.classList.remove("active"));
         mobileMenu.classList.remove("open");
       }
@@ -2485,7 +2635,10 @@
       function speakSignal(signal) {
         if (!speechAvailable() || !signal) return;
         window.speechSynthesis.cancel();
-        const words = `${signal.state || "Watch"} alert for ${signal.symbol}. ${signal.primaryPattern || "Strategy confluence"}. Confidence ${signal.confidence} out of 99. Entry trigger ${Number(signal.entryTrigger).toFixed(2)} rupees. Structural stop ${Number(signal.stop).toFixed(2)} rupees.`;
+        const plan = signal.entryTrigger === null || signal.entryTrigger === undefined
+          ? "Bearish or neutral candle indication. No long entry plan is active."
+          : `Entry trigger ${Number(signal.entryTrigger).toFixed(2)} rupees. Structural stop ${Number(signal.stop).toFixed(2)} rupees.`;
+        const words = `${signal.state || "Watch"} alert for ${signal.symbol}. ${signal.primaryPattern || "Strategy confluence"}. Confidence ${signal.confidence} out of 99. ${plan}`;
         const utterance = new SpeechSynthesisUtterance(words);
         utterance.rate = 0.95;
         utterance.pitch = 1;
@@ -2522,7 +2675,7 @@
         const seen = new Set(JSON.parse(localStorage.getItem(seenKey) || "[]"));
         const fresh = (scanFeed.signals || []).filter((signal) => {
           const id = `${scanFeed.generatedAt}:${signal.symbol}:${signal.state}`;
-          return Number(signal.confidence) >= scanThreshold && signal.state === "Triggered" && !seen.has(id);
+          return Number(signal.confidence) >= scanThreshold && ["Triggered", "Caution"].includes(signal.state) && !seen.has(id);
         });
         if (fresh[0]) speakSignal(fresh[0]);
         fresh.slice(0, 3).forEach((signal) => {
@@ -2579,7 +2732,7 @@
             )
             .join(
               "",
-            )}</section><div class="section-head"><h2>Watchlist</h2><button onclick="page('watchlist')">Manage →</button></div><div class="rows">${watchPreview()}</div></div><aside class="card market-pulse"><small>MARKET PULSE</small><h3>Selective momentum</h3><div class="pulse-ring"></div><p class="pulse-copy">Three quality names are close to their pivots. Wait for price and volume confirmation.</p><div class="quality-list"><div><span>Nifty 500</span><b class="up">+0.48%</b></div><div><span>India VIX</span><b>12.84</b></div><div><span>Breadth</span><b>62%</b></div></div></aside></div>`;
+            )}</section><div class="section-head"><h2>Watchlist</h2><button onclick="page('watchlist')">Manage →</button></div><div class="rows">${watchPreview()}</div></div>${marketMoodPanel()}</div>`;
       }
       function detail(symbol) {
         const saved = list.find((item) => item.s === symbol);
@@ -2624,7 +2777,7 @@
             "Agentic scan",
             '<button class="btn" onclick="loadAgenticScan(true)">↻ Refresh feed</button>',
           ) +
-          `<section class="card scan-command"><div class="scan-command-top"><div class="intel-kicker">UPSTOX · NSE CASH · DAILY STRATEGY ENGINE</div><span class="scan-live ${statusClass}">${escapeHTML(scanStatus())}</span></div><h2>One ranked view of every actionable setup.</h2><p>Deterministic indicators find structure; the ranking explains why each stock qualifies. Confidence is evidence strength—not a guaranteed win rate or a trade instruction.</p><div class="scan-summary"><div><small>Equities scanned</small><b>${Number(universe.scanned || 0).toLocaleString("en-IN")}</b></div><div><small>Qualified</small><b>${Number(summary.qualified || 0)}</b></div><div><small>Armed</small><b>${Number(summary.armed || 0)}</b></div><div><small>Triggered</small><b>${Number(summary.triggered || 0)}</b></div></div></section><div class="scan-console"><section><div class="scan-toolbar"><input aria-label="Search scan results" value="${escapeHTML(scanSearch)}" placeholder="Search symbol, company or setup" oninput="setScanSearch(this.value)"><select aria-label="Filter by strategy" onchange="setScanStrategy(this.value)"><option value="all">All strategies</option>${strategies.map((strategy) => `<option value="${escapeHTML(strategy)}" ${scanStrategy === strategy ? "selected" : ""}>${escapeHTML(strategy)}</option>`).join("")}</select><button class="mini" onclick="exportCsv()">Export CSV</button></div><div class="scan-meta"><span class="muted"><span id="visibleSignalCount">0 shown</span> · ${escapeHTML(scanGeneratedAt())}</span><label class="muted">Confidence ≥ <b id="thresholdValue">${scanThreshold}</b> <input aria-label="Minimum confidence" type="range" min="40" max="90" step="5" value="${scanThreshold}" oninput="setScanThreshold(this.value)"></label></div><div class="signal-stack" id="agentSignalResults" style="margin-top:14px">${setupNeeded ? `<div class="scan-empty"><h3>Connect Upstox to start the market-wide scan</h3><p>The workflow is installed and will scan NSE normal cash equities after market close. Add the repository secret <b>UPSTOX_ACCESS_TOKEN</b>, then run “Run NSE Agentic Scan” once from GitHub Actions.</p></div>` : ""}</div></section><aside class="scan-side"><section class="card"><small>VOICE + BROWSER ALERTS</small><h3>Alerts on this device</h3><p>Hear the highest-ranked new trigger and receive browser notifications. Your browser requires one tap to enable sound.</p><div class="scan-actions"><button class="mini voice-button ${voiceEnabled ? "on" : ""}" onclick="enableVoiceAlerts()">${voiceEnabled ? "● Voice on" : "Enable voice"}</button><button class="mini" onclick="testAgentVoice()">Test voice</button></div></section><section class="card"><small>STRATEGY LIBRARY</small><h3>Seven explainable lenses</h3><p>Price structure, trend, momentum and participation must agree before a setup ranks highly.</p><div class="strategy-list">${(scanFeed?.strategyLibrary || ["20-day breakout", "Double bottom", "VCP", "Darvas box", "Trend template", "MACD momentum"]).map((strategy) => `<div><span>${escapeHTML(strategy)}</span><b>Rule-based</b></div>`).join("")}</div></section><section class="card"><small>RISK CONTROL</small><h3>No “99% win” claims</h3><p>${escapeHTML(scanFeed?.disclaimer || "Every setup can fail. Validate liquidity, position size and the structural stop before acting.")}</p></section></aside></div>`;
+          `<section class="card scan-command"><div class="scan-command-top"><div class="intel-kicker">UPSTOX · NSE CASH · DAILY STRATEGY ENGINE</div><span class="scan-live ${statusClass}">${escapeHTML(scanStatus())}</span></div><h2>Structure, momentum and candle context in one ranked view.</h2><p>Deterministic rules recognize bullish, bearish and neutral candlestick patterns alongside breakouts and trend indicators. Confidence is evidence strength—not a guaranteed win rate or a trade instruction.</p><div class="scan-summary"><div><small>Equities scanned</small><b>${Number(universe.scanned || 0).toLocaleString("en-IN")}</b></div><div><small>Qualified</small><b>${Number(summary.qualified || 0)}</b></div><div><small>Candle signals</small><b>${Number(summary.candlestickSignals || 0)}</b></div><div><small>Armed</small><b>${Number(summary.armed || 0)}</b></div><div><small>Triggered</small><b>${Number(summary.triggered || 0)}</b></div></div></section><div class="scan-console"><section><div class="scan-toolbar"><input aria-label="Search scan results" value="${escapeHTML(scanSearch)}" placeholder="Search symbol, company or setup" oninput="setScanSearch(this.value)"><select aria-label="Filter by strategy" onchange="setScanStrategy(this.value)"><option value="all">All strategies</option>${strategies.map((strategy) => `<option value="${escapeHTML(strategy)}" ${scanStrategy === strategy ? "selected" : ""}>${escapeHTML(strategy)}</option>`).join("")}</select><button class="mini" onclick="exportCsv()">Export CSV</button></div><div class="scan-meta"><span class="muted"><span id="visibleSignalCount">0 shown</span> · ${escapeHTML(scanGeneratedAt())}</span><label class="muted">Confidence ≥ <b id="thresholdValue">${scanThreshold}</b> <input aria-label="Minimum confidence" type="range" min="40" max="90" step="5" value="${scanThreshold}" oninput="setScanThreshold(this.value)"></label></div><div class="signal-stack" id="agentSignalResults" style="margin-top:14px">${setupNeeded ? `<div class="scan-empty"><h3>Connect Upstox to start the market-wide scan</h3><p>The workflow is installed and will scan NSE normal cash equities after market close. Add the repository secret <b>UPSTOX_ACCESS_TOKEN</b>, then run “Run NSE Agentic Scan” once from GitHub Actions.</p></div>` : ""}</div></section><aside class="scan-side"><section class="card"><small>VOICE + BROWSER ALERTS</small><h3>Alerts on this device</h3><p>Hear fresh triggered setups and strong bearish candle cautions. Your browser requires one tap to enable sound.</p><div class="scan-actions"><button class="mini voice-button ${voiceEnabled ? "on" : ""}" onclick="enableVoiceAlerts()">${voiceEnabled ? "● Voice on" : "Enable voice"}</button><button class="mini" onclick="testAgentVoice()">Test voice</button></div></section><section class="card"><small>STRATEGY LIBRARY</small><h3>Structure + candle library</h3><p>Price structure, trend, momentum, participation and candle context must agree before a long setup ranks highly.</p><div class="strategy-list">${(scanFeed?.strategyLibrary || ["20-day breakout", "Double bottom", "VCP", "Darvas box", "Candle · Bullish engulfing", "Candle · Bearish engulfing", "Candle · Hammer", "Candle · Shooting star"]).map((strategy) => `<div><span>${escapeHTML(strategy)}</span><b>Rule-based</b></div>`).join("")}</div></section><section class="card"><small>RISK CONTROL</small><h3>No “99% win” claims</h3><p>${escapeHTML(scanFeed?.disclaimer || "Every setup can fail. Validate liquidity, position size and the structural stop before acting.")}</p></section></aside></div>`;
         if (!setupNeeded) renderSignalResults();
       }
       function watch() {

@@ -1,5 +1,5 @@
 {
-  "schemaVersion": 1,
+  "schemaVersion": 2,
   "status": "setup_required",
   "provider": "Upstox",
   "generatedAt": null,
@@ -16,7 +16,20 @@
     "qualified": 0,
     "armed": 0,
     "triggered": 0,
-    "highConfidence": 0
+    "cautions": 0,
+    "highConfidence": 0,
+    "candlestickSignals": 0
+  },
+  "marketMood": {
+    "evaluated": 0,
+    "advancersPct": null,
+    "aboveSma50Pct": null,
+    "aboveSma200Pct": null,
+    "averageChangePct": null,
+    "score": null,
+    "label": "Awaiting market data",
+    "tone": "neutral",
+    "guidance": "Connect Upstox to calculate market mood from NSE breadth."
   },
   "strategyLibrary": [
     "20-day breakout",
@@ -25,7 +38,19 @@
     "VCP",
     "Darvas box",
     "Trend template",
-    "MACD momentum"
+    "MACD momentum",
+    "Candle · Bullish engulfing",
+    "Candle · Bearish engulfing",
+    "Candle · Morning star",
+    "Candle · Evening star",
+    "Candle · Hammer",
+    "Candle · Shooting star",
+    "Candle · Piercing line",
+    "Candle · Dark cloud cover",
+    "Candle · Doji",
+    "Candle · Inside bar",
+    "Candle · Bullish harami",
+    "Candle · Bearish harami"
   ],
   "signals": [],
   "failures": [],

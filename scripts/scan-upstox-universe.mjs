@@ -150,6 +150,156 @@ function detectDarvas(candles) {
   };
 }
 
+function detectCandlestickPatterns(candles) {
+  if (candles.length < 3) return [];
+  const current = candles.at(-1);
+  const previous = candles.at(-2);
+  const first = candles.at(-3);
+  const parts = (candle) => {
+    const range = Math.max(candle.high - candle.low, Number.EPSILON);
+    const body = Math.abs(candle.close - candle.open);
+    return {
+      body,
+      range,
+      upper: candle.high - Math.max(candle.open, candle.close),
+      lower: Math.min(candle.open, candle.close) - candle.low,
+      bullish: candle.close > candle.open,
+      bearish: candle.close < candle.open,
+      midpoint: (candle.open + candle.close) / 2,
+    };
+  };
+  const now = parts(current);
+  const prior = parts(previous);
+  const oldest = parts(first);
+  const averageBody = mean(candles.slice(-23, -3).map((candle) => Math.abs(candle.close - candle.open)));
+  const patterns = [];
+  const add = (name, bias, strength, note) => patterns.push({ name, bias, strength, note });
+
+  if (
+    prior.bearish && now.bullish &&
+    current.open <= previous.close && current.close >= previous.open &&
+    now.body >= prior.body * 0.9
+  ) add("Bullish engulfing", "bullish", 4, "Bullish real body fully covered the prior bearish body");
+  if (
+    prior.bullish && now.bearish &&
+    current.open >= previous.close && current.close <= previous.open &&
+    now.body >= prior.body * 0.9
+  ) add("Bearish engulfing", "bearish", 4, "Bearish real body fully covered the prior bullish body");
+  if (
+    oldest.bearish && oldest.body > averageBody &&
+    prior.body < averageBody * 0.65 && now.bullish &&
+    current.close > oldest.midpoint
+  ) add("Morning star", "bullish", 5, "Three-candle reversal closed above the first candle midpoint");
+  if (
+    oldest.bullish && oldest.body > averageBody &&
+    prior.body < averageBody * 0.65 && now.bearish &&
+    current.close < oldest.midpoint
+  ) add("Evening star", "bearish", 5, "Three-candle reversal closed below the first candle midpoint");
+  if (
+    now.lower >= Math.max(now.body * 2, now.range * 0.45) &&
+    now.upper <= Math.max(now.body, now.range * 0.12) &&
+    current.close >= current.low + now.range * 0.6
+  ) add("Hammer", "bullish", 3, "Long lower wick shows rejection from the session low");
+  if (
+    now.upper >= Math.max(now.body * 2, now.range * 0.45) &&
+    now.lower <= Math.max(now.body, now.range * 0.12) &&
+    current.close <= current.low + now.range * 0.4
+  ) add("Shooting star", "bearish", 3, "Long upper wick shows rejection from the session high");
+  if (
+    prior.bearish && now.bullish && current.open < previous.close &&
+    current.close > prior.midpoint && current.close < previous.open
+  ) add("Piercing line", "bullish", 3, "Bullish close recovered more than half of the prior bearish body");
+  if (
+    prior.bullish && now.bearish && current.open > previous.close &&
+    current.close < prior.midpoint && current.close > previous.open
+  ) add("Dark cloud cover", "bearish", 3, "Bearish close retraced more than half of the prior bullish body");
+  if (now.body / now.range <= 0.1) {
+    add("Doji", "neutral", 1, "Open and close are nearly equal, signalling indecision");
+  }
+  if (current.high < previous.high && current.low > previous.low) {
+    add("Inside bar", "neutral", 2, "The full session range contracted inside the prior candle");
+  }
+  if (
+    prior.body > averageBody && now.body < prior.body * 0.45 &&
+    Math.max(current.open, current.close) < Math.max(previous.open, previous.close) &&
+    Math.min(current.open, current.close) > Math.min(previous.open, previous.close)
+  ) {
+    add(now.bullish ? "Bullish harami" : "Bearish harami", now.bullish ? "bullish" : "bearish", 3, "Small real body formed inside the prior real body");
+  }
+  return patterns.sort((a, b) => b.strength - a.strength).slice(0, 3);
+}
+
+function marketObservation(candles) {
+  if (candles.length < 200) return null;
+  const closes = candles.map((candle) => candle.close);
+  const close = closes.at(-1);
+  const previous = closes.at(-2);
+  if (!Number.isFinite(close) || !Number.isFinite(previous)) return null;
+  return {
+    changePct: pct(close, previous),
+    advancing: close > previous,
+    aboveSma50: close > sma(closes, 50),
+    aboveSma200: close > sma(closes, 200),
+  };
+}
+
+function summarizeBreadth(counts) {
+  const evaluated = Number(counts.evaluated || 0);
+  if (!evaluated) {
+    return {
+      evaluated: 0,
+      advancersPct: null,
+      aboveSma50Pct: null,
+      aboveSma200Pct: null,
+      averageChangePct: null,
+      score: null,
+      label: "Awaiting market data",
+      tone: "neutral",
+      guidance: "Connect Upstox to calculate market mood from NSE breadth.",
+    };
+  }
+  const advancersPct = (Number(counts.advancers || 0) / evaluated) * 100;
+  const aboveSma50Pct = (Number(counts.aboveSma50 || 0) / evaluated) * 100;
+  const aboveSma200Pct = (Number(counts.aboveSma200 || 0) / evaluated) * 100;
+  const averageChangePct = Number(counts.totalChange || 0) / evaluated;
+  const score = Math.max(0, Math.min(100, advancersPct * 0.35 + aboveSma50Pct * 0.4 + aboveSma200Pct * 0.25));
+  let label = "Defensive";
+  let tone = "bearish";
+  let guidance = "Breadth is weak. Protect capital and require exceptional confirmation.";
+  if (score >= 65) {
+    label = "Risk-on";
+    tone = "bullish";
+    guidance = "Broad participation supports confirmed breakouts and constructive pullbacks.";
+  } else if (score >= 55) {
+    label = "Constructive";
+    tone = "bullish";
+    guidance = "Participation is healthy, but keep normal entry and risk discipline.";
+  } else if (score >= 45) {
+    label = "Mixed";
+    tone = "neutral";
+    guidance = "Leadership is selective. Prefer strong relative strength and volume confirmation.";
+  } else if (score >= 35) {
+    label = "Cautious";
+    tone = "cautious";
+    guidance = "Participation is narrowing. Reduce size and wait for cleaner confirmation.";
+  }
+  return {
+    evaluated,
+    advancers: Number(counts.advancers || 0),
+    aboveSma50: Number(counts.aboveSma50 || 0),
+    aboveSma200: Number(counts.aboveSma200 || 0),
+    totalChange: Number(counts.totalChange || 0),
+    advancersPct: round(advancersPct, 1),
+    aboveSma50Pct: round(aboveSma50Pct, 1),
+    aboveSma200Pct: round(aboveSma200Pct, 1),
+    averageChangePct: round(averageChangePct, 2),
+    score: round(score, 0),
+    label,
+    tone,
+    guidance,
+  };
+}
+
 function evaluateBreakoutHistory(candles) {
   const outcomes = [];
   for (let index = 55; index < candles.length - 12; index += 1) {
@@ -201,6 +351,7 @@ function analyze(instrument, candles) {
   const doubleBottom = detectDoubleBottom(candles);
   const vcp = detectVcp(candles);
   const darvas = detectDarvas(candles);
+  const candlestickPatterns = detectCandlestickPatterns(candles);
   const tags = [];
   const evidence = [];
   let score = 28;
@@ -217,14 +368,26 @@ function analyze(instrument, candles) {
   if (doubleBottom.active) { tags.push("Double bottom"); evidence.push("Two aligned swing lows with neckline pressure"); score += 13; }
   if (vcp.active) { tags.push("VCP"); evidence.push("Contracting ranges with volume dry-up"); score += 13; }
   if (darvas.active) { tags.push("Darvas box"); evidence.push("Tight 30-session box near its ceiling"); score += 8; }
+  for (const pattern of candlestickPatterns) {
+    tags.push(`Candle · ${pattern.name}`);
+    evidence.push(pattern.note);
+    if (pattern.bias === "bullish") score += pattern.strength * 3;
+    if (pattern.bias === "bearish") score -= pattern.strength * 2;
+    if (pattern.bias === "neutral") score += pattern.strength;
+  }
   if (close > sma50 && sma50 > sma200 && sma(closes, 50, closes.length - 11) < sma50) {
     tags.push("Golden trend");
     score += 5;
   }
 
   const actionablePatterns = ["20-day breakout", "52-week high", "Double bottom", "VCP", "Darvas box", "Near breakout"];
-  const meaningful = tags.some((tag) => actionablePatterns.includes(tag));
+  const candlePatternNames = candlestickPatterns.map((pattern) => `Candle · ${pattern.name}`);
+  const meaningful = tags.some((tag) => actionablePatterns.includes(tag)) || candlestickPatterns.length > 0;
   if (!meaningful) return null;
+  const dominantCandle = candlestickPatterns[0] || null;
+  const hasLongStructure = tags.some((tag) => actionablePatterns.includes(tag));
+  if (!hasLongStructure && dominantCandle) score = Math.max(score, 50 + dominantCandle.strength * 6);
+  const bearishCaution = dominantCandle?.bias === "bearish" && dominantCandle.strength >= 3;
   const confidence = Math.max(1, Math.min(99, Math.round(score)));
   const pivotCandidates = [priorHigh20, doubleBottom.neckline, vcp.pivot, darvas.ceiling].filter(Number.isFinite);
   const entryTrigger = Math.max(...pivotCandidates) * 1.001;
@@ -242,14 +405,16 @@ function analyze(instrument, candles) {
     close: round(close),
     changePct: round(pct(close, candles.at(-2).close)),
     confidence,
-    state: close >= entryTrigger ? "Triggered" : confidence >= 78 ? "Armed" : "Watch",
-    primaryPattern: tags.find((tag) => actionablePatterns.includes(tag)) || tags[0] || "Confluence",
-    patterns: tags.slice(0, 6),
-    evidence: evidence.slice(0, 5),
-    entryTrigger: round(entryTrigger),
-    stop: round(stop),
-    target2R: round(target),
-    riskReward: risk > 0 ? 2 : null,
+    state: bearishCaution ? "Caution" : close >= entryTrigger ? "Triggered" : confidence >= 78 ? "Armed" : "Watch",
+    bias: bearishCaution ? "bearish" : dominantCandle?.bias || "bullish",
+    primaryPattern: (!hasLongStructure && candlePatternNames[0]) || tags.find((tag) => actionablePatterns.includes(tag)) || candlePatternNames[0] || tags[0] || "Confluence",
+    patterns: tags.slice(0, 8),
+    candlestickPatterns,
+    evidence: evidence.slice(0, 7),
+    entryTrigger: bearishCaution && !hasLongStructure ? null : round(entryTrigger),
+    stop: bearishCaution && !hasLongStructure ? null : round(stop),
+    target2R: bearishCaution && !hasLongStructure ? null : round(target),
+    riskReward: bearishCaution && !hasLongStructure ? null : risk > 0 ? 2 : null,
     indicators: {
       ema21: round(ema21), sma50: round(sma50), sma200: round(sma200),
       rsi14: round(rsi14, 1), macd: round(macd), atr14: round(atr14),
@@ -296,6 +461,13 @@ fromDate.setUTCDate(fromDate.getUTCDate() - 430);
 const isoDate = (date) => date.toISOString().slice(0, 10);
 const signals = [];
 const failures = [];
+const breadthCounts = {
+  evaluated: 0,
+  advancers: 0,
+  aboveSma50: 0,
+  aboveSma200: 0,
+  totalChange: 0,
+};
 let attempted = 0;
 
 for (let index = 0; index < universe.length; index += 1) {
@@ -308,6 +480,14 @@ for (let index = 0; index < universe.length; index += 1) {
     const candles = (payload.data?.candles || [])
       .map(([date, open, high, low, close, volume]) => ({ date, open, high, low, close, volume }))
       .sort((a, b) => new Date(a.date) - new Date(b.date));
+    const observation = marketObservation(candles);
+    if (observation) {
+      breadthCounts.evaluated += 1;
+      breadthCounts.advancers += observation.advancing ? 1 : 0;
+      breadthCounts.aboveSma50 += observation.aboveSma50 ? 1 : 0;
+      breadthCounts.aboveSma200 += observation.aboveSma200 ? 1 : 0;
+      breadthCounts.totalChange += observation.changePct;
+    }
     const signal = analyze(instrument, candles);
     if (signal) signals.push(signal);
   } catch (error) {
@@ -324,7 +504,7 @@ for (let index = 0; index < universe.length; index += 1) {
 signals.sort((a, b) => b.confidence - a.confidence || b.changePct - a.changePct);
 const now = new Date().toISOString();
 const partitionResult = {
-  schemaVersion: 1,
+  schemaVersion: 2,
   status: "partition_complete",
   provider: "Upstox",
   generatedAt: now,
@@ -342,11 +522,18 @@ const partitionResult = {
     qualified: signals.length,
     armed: signals.filter((signal) => signal.state === "Armed").length,
     triggered: signals.filter((signal) => signal.state === "Triggered").length,
+    cautions: signals.filter((signal) => signal.state === "Caution").length,
     highConfidence: signals.filter((signal) => signal.confidence >= 80).length,
+    candlestickSignals: signals.filter((signal) => signal.candlestickPatterns?.length).length,
   },
+  marketMood: summarizeBreadth(breadthCounts),
   strategyLibrary: [
     "20-day breakout", "52-week high", "Double bottom", "VCP",
     "Darvas box", "Trend template", "MACD momentum",
+    "Candle · Bullish engulfing", "Candle · Bearish engulfing",
+    "Candle · Morning star", "Candle · Evening star", "Candle · Hammer",
+    "Candle · Shooting star", "Candle · Piercing line", "Candle · Dark cloud cover",
+    "Candle · Doji", "Candle · Inside bar", "Candle · Bullish harami", "Candle · Bearish harami",
   ],
   signals: signals.slice(0, 250),
   failures: failures.slice(0, 25),
@@ -373,6 +560,18 @@ const mergedSignals = partitions
   .sort((a, b) => b.confidence - a.confidence || b.changePct - a.changePct)
   .slice(0, 250);
 const mergedFailures = partitions.flatMap((part) => part.failures || []).slice(0, 25);
+const mergedBreadthCounts = partitions.reduce(
+  (counts, part) => {
+    const mood = part.marketMood || {};
+    counts.evaluated += Number(mood.evaluated || 0);
+    counts.advancers += Number(mood.advancers || 0);
+    counts.aboveSma50 += Number(mood.aboveSma50 || 0);
+    counts.aboveSma200 += Number(mood.aboveSma200 || 0);
+    counts.totalChange += Number(mood.totalChange || 0);
+    return counts;
+  },
+  { evaluated: 0, advancers: 0, aboveSma50: 0, aboveSma200: 0, totalChange: 0 },
+);
 const result = {
   ...partitionResult,
   status: partitions.length === partitionCount ? "live" : "partial",
@@ -392,8 +591,11 @@ const result = {
     qualified: partitions.reduce((sum, part) => sum + Number(part.summary?.qualified || 0), 0),
     armed: partitions.reduce((sum, part) => sum + Number(part.summary?.armed || 0), 0),
     triggered: partitions.reduce((sum, part) => sum + Number(part.summary?.triggered || 0), 0),
+    cautions: partitions.reduce((sum, part) => sum + Number(part.summary?.cautions || 0), 0),
     highConfidence: partitions.reduce((sum, part) => sum + Number(part.summary?.highConfidence || 0), 0),
+    candlestickSignals: partitions.reduce((sum, part) => sum + Number(part.summary?.candlestickSignals || 0), 0),
   },
+  marketMood: summarizeBreadth(mergedBreadthCounts),
   signals: mergedSignals,
   failures: mergedFailures,
 };
