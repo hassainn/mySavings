@@ -1,7 +1,7 @@
 {
   "status": "live",
   "method": "rss-deterministic",
-  "generatedAt": "2026-09-13T15:24:25.921Z",
+  "generatedAt": "2026-09-13T15:27:30.871Z",
   "model": null,
   "marketMood": "Constructive headline tone",
   "marketSummary": "14 market and stock updates from Indian financial media in the last few sessions; 1 flagged essential for swing traders (1 positive, 0 negative). Headline sentiment is a first read — confirm with price and volume.",
@@ -85,17 +85,20 @@
       ]
     },
     {
-      "name": "Auto",
+      "name": "Consumer & retail",
       "momentum": "Mixed",
-      "score": 50,
-      "reason": "No fresh headlines in the current feed window.",
+      "score": 53,
+      "reason": "1 recent headline in the feed window (0 positive, 0 negative).",
       "catalysts": [
-        "Awaiting fresh catalysts"
+        "Recent news flow"
       ],
       "risks": [
-        "Headline risk"
+        "Headline risk",
+        "Confirm with price and volume"
       ],
-      "relatedStocks": []
+      "relatedStocks": [
+        "TRENT"
+      ]
     }
   ],
   "news": [
@@ -112,6 +115,20 @@
       "sourceName": "LiveMint Markets",
       "sourceUrl": "https://www.livemint.com/market/ipo/kamarajar-port-invites-bankers-for-1-200-crore-ipo-11789280693928.html",
       "publishedAt": "2026-09-13T11:45:32.000Z"
+    },
+    {
+      "category": "sector",
+      "symbol": "NSE",
+      "headline": "Penny stock under ₹10: Nearly 170% up in 6 months — FMCG share declares expansion of overseas business",
+      "summary": "Penny stock under 10 rupees has delivered over 125% YTD return",
+      "sentiment": "Neutral",
+      "importance": "Medium",
+      "catalystType": "Guidance",
+      "timeHorizon": "Today",
+      "impact": "Guidance/capex news reframes the trend; confirm it with price structure, not the headline.",
+      "sourceName": "LiveMint Markets",
+      "sourceUrl": "https://www.livemint.com/market/stock-market-news/penny-stock-under-rs-10-nearly-170-up-in-6-months-fmcg-share-declares-expansion-of-overseas-business-11789311265556.html",
+      "publishedAt": "2026-09-13T15:24:55.000Z"
     },
     {
       "category": "stock",
@@ -280,26 +297,16 @@
       "sourceName": "Economic Times Markets",
       "sourceUrl": "https://economictimes.indiatimes.com/markets/us-stocks/wall-street-guide/this-is-the-test-all-eyes-on-us-fed-to-tackle-high-inflation/articleshow/134177098.cms",
       "publishedAt": "2026-09-13T04:27:47.000Z"
-    },
-    {
-      "category": "stock",
-      "symbol": "NSE",
-      "headline": "SEBI weighs two options for derivatives settlement, closing auction timings",
-      "summary": "Regulator proposes blending VWAP and closing auction prices, or retaining the old method for at least a year",
-      "sentiment": "Neutral",
-      "importance": "Medium",
-      "catalystType": "Regulatory",
-      "timeHorizon": "Today",
-      "impact": "Policy/regulatory catalyst — can reprice the whole group; check breadth first.",
-      "sourceName": "Hindu BusinessLine Markets",
-      "sourceUrl": "https://www.thehindubusinessline.com/markets/sebi-weighs-two-options-for-derivatives-settlement-closing-auction-timings/article71460299.ece",
-      "publishedAt": "2026-09-12T16:14:22.000Z"
     }
   ],
   "sources": [
     {
       "title": "LiveMint Markets",
       "url": "https://www.livemint.com/market/ipo/kamarajar-port-invites-bankers-for-1-200-crore-ipo-11789280693928.html"
+    },
+    {
+      "title": "LiveMint Markets",
+      "url": "https://www.livemint.com/market/stock-market-news/penny-stock-under-rs-10-nearly-170-up-in-6-months-fmcg-share-declares-expansion-of-overseas-business-11789311265556.html"
     },
     {
       "title": "Hindu BusinessLine Markets",
@@ -348,10 +355,6 @@
     {
       "title": "Economic Times Markets",
       "url": "https://economictimes.indiatimes.com/markets/us-stocks/wall-street-guide/this-is-the-test-all-eyes-on-us-fed-to-tackle-high-inflation/articleshow/134177098.cms"
-    },
-    {
-      "title": "Hindu BusinessLine Markets",
-      "url": "https://www.thehindubusinessline.com/markets/sebi-weighs-two-options-for-derivatives-settlement-closing-auction-timings/article71460299.ece"
     }
   ],
   "disclaimer": "AI-generated research summary. Verify source articles and exchange filings before making investment decisions. Not investment advice."
