@@ -6,6 +6,12 @@
     <title>Alpha Swing AI</title>
     <meta name="theme-color" content="#f3f7f5" />
     <link rel="manifest" href="manifest.webmanifest" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700;800&display=swap"
+    />
     <style>
       :root {
         --bg: #0e1722;
@@ -1432,6 +1438,33 @@
       }
     </style>
     <style id="market-intelligence-design">
+      /* Full-monospace treatment for the AI market-news view (Claude Code feel). */
+      .news-view
+        :is(h1, h2, h3, h4, h5, p, a, b, i, em, strong, small, span, button, div, li, label, input, select, article, aside) {
+        font-family:
+          "JetBrains Mono",
+          ui-monospace,
+          SFMono-Regular,
+          Menlo,
+          Consolas,
+          monospace !important;
+      }
+      .news-view h1 {
+        letter-spacing: -0.02em;
+      }
+      .news-view .intel-lead h2,
+      .news-view .news-card h3,
+      .news-view .intel-focus h3,
+      .news-view .sector-card h3 {
+        letter-spacing: -0.02em;
+        line-height: 1.25;
+      }
+      .news-view .news-card p,
+      .news-view .intel-lead p,
+      .news-view .sector-card p {
+        font-size: 13px;
+        line-height: 1.6;
+      }
       .nav-badge {
         margin-left: auto;
         padding: 3px 7px;
@@ -2954,8 +2987,10 @@
       function news() {
         if (!marketIntel) {
           app.innerHTML =
+            `<div class="news-view">` +
             title("AI market news") +
-            `<section class="card intel-lead"><div class="intel-kicker">GEMINI 3.8 FLASH</div><h2>Loading grounded market intelligence…</h2><p>Collecting the saved market, sector and stock briefing.</p></section>`;
+            `<section class="card intel-lead"><div class="intel-kicker">MARKET INTELLIGENCE</div><h2>Loading market intelligence…</h2><p>Collecting the saved market, sector and stock briefing.</p></section>` +
+            `</div>`;
           return;
         }
         const sectors = Array.isArray(marketIntel.sectors)
@@ -2986,6 +3021,7 @@
           ? `Updated ${formatPublished(marketIntel.generatedAt)}`
           : "Waiting for first live refresh";
         app.innerHTML =
+          `<div class="news-view">` +
           title(
             "AI market news",
             '<button class="btn" onclick="loadIntelligence(true)">Check latest feed</button>',
@@ -3012,7 +3048,7 @@
                   .join("")
               : '<div class="notice">Sector intelligence will appear after the next Gemini refresh.</div>'
           }</section>` +
-          `<div class="section-head"><h2>Professional news desk</h2><span class="muted">Market · sector · stock</span></div><div class="news-toolbar">${["all", "essential", "market", "sector", "stock"].map((filter) => { const label = filter === "all" ? "All coverage" : filter === "essential" ? `Essential${essentialCount ? ` · ${essentialCount}` : ""}` : filter[0].toUpperCase() + filter.slice(1); return `<button class="news-filter ${newsFilter === filter ? "active" : ""}" onclick="setNewsFilter('${filter}')">${label}</button>`; }).join("")}</div><section class="news-grid">${visibleNews.length ? visibleNews.map(renderNewsCard).join("") : '<div class="notice">No stories match this filter yet.</div>'}</section><div class="intel-disclaimer">${escapeHTML(marketIntel.disclaimer || "AI-generated research summary. Verify primary sources before making investment decisions. Not investment advice.")}</div>`;
+          `<div class="section-head"><h2>Professional news desk</h2><span class="muted">Market · sector · stock</span></div><div class="news-toolbar">${["all", "essential", "market", "sector", "stock"].map((filter) => { const label = filter === "all" ? "All coverage" : filter === "essential" ? `Essential${essentialCount ? ` · ${essentialCount}` : ""}` : filter[0].toUpperCase() + filter.slice(1); return `<button class="news-filter ${newsFilter === filter ? "active" : ""}" onclick="setNewsFilter('${filter}')">${label}</button>`; }).join("")}</div><section class="news-grid">${visibleNews.length ? visibleNews.map(renderNewsCard).join("") : '<div class="notice">No stories match this filter yet.</div>'}</section><div class="intel-disclaimer">${escapeHTML(marketIntel.disclaimer || "AI-generated research summary. Verify primary sources before making investment decisions. Not investment advice.")}</div>` + `</div>`;
       }
       function paper() {
         const invested = positions.reduce((n, p) => n + p.entry * p.qty, 0);
