@@ -1,9 +1,10 @@
 <!doctype html>
 <html>
   <head>
+    <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <title>Alpha Swing AI</title>
-    <meta name="theme-color" content="#0e1722" />
+    <meta name="theme-color" content="#f3f7f5" />
     <link rel="manifest" href="manifest.webmanifest" />
     <style>
       :root {
@@ -544,20 +545,910 @@
         }
       }
     </style>
+    <style id="mint-mobile-redesign">
+      :root {
+        --bg: #f3f7f5;
+        --side: #ffffff;
+        --card: #ffffff;
+        --line: #e4ece8;
+        --gold: #1fcf96;
+        --ink: #14251f;
+        --muted: #73847d;
+        --green: #20c997;
+        --mint: #22d39b;
+        --mint-dark: #0aa879;
+        --mint-soft: #e9fbf4;
+        --rose: #f06b78;
+        --rose-soft: #fff0f2;
+        --navy: #11241e;
+        --shadow: 0 18px 50px rgba(25, 72, 57, 0.08);
+      }
+      * {
+        -webkit-tap-highlight-color: transparent;
+      }
+      html {
+        background: var(--bg);
+        overflow-x: hidden;
+      }
+      body {
+        background: var(--bg);
+        color: var(--ink);
+        font-family:
+          Inter,
+          ui-sans-serif,
+          -apple-system,
+          BlinkMacSystemFont,
+          "Segoe UI",
+          sans-serif;
+        font-size: 16px;
+        line-height: 1.45;
+        overflow-x: hidden;
+      }
+      button,
+      input,
+      select,
+      textarea {
+        font: inherit;
+      }
+      button:focus-visible,
+      input:focus-visible,
+      select:focus-visible,
+      textarea:focus-visible {
+        outline: 3px solid rgba(31, 207, 150, 0.22);
+        outline-offset: 2px;
+      }
+      .app {
+        min-height: 100vh;
+      }
+      .side {
+        position: sticky;
+        top: 0;
+        width: 244px;
+        height: 100vh;
+        padding: 30px 18px;
+        background: #fff;
+        border-right: 1px solid var(--line);
+      }
+      .brand {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        padding: 4px 8px 18px;
+        color: var(--ink);
+        font-size: 18px;
+        font-weight: 800;
+        letter-spacing: -0.5px;
+      }
+      .brand::before {
+        content: "A";
+        display: grid;
+        width: 34px;
+        height: 34px;
+        place-items: center;
+        border-radius: 11px 11px 5px 11px;
+        background: var(--mint);
+        color: #fff;
+        font-weight: 900;
+        box-shadow: 0 9px 24px rgba(31, 207, 150, 0.28);
+      }
+      .brand b {
+        color: var(--mint-dark);
+      }
+      .side p {
+        margin: 18px 10px 8px;
+        color: #9aaba4;
+        font-size: 12px;
+        font-weight: 700;
+        letter-spacing: 0.12em;
+      }
+      .nav {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        margin: 4px 0;
+        padding: 12px 14px;
+        border-radius: 14px;
+        color: #6e8079;
+        font-size: 14px;
+        font-weight: 650;
+        transition: 160ms ease;
+      }
+      .nav .nav-icon {
+        display: grid;
+        width: 24px;
+        height: 24px;
+        place-items: center;
+        color: #8da099;
+        font-size: 17px;
+      }
+      .nav:hover,
+      .nav.active {
+        background: var(--mint-soft);
+        color: var(--mint-dark);
+        box-shadow: none;
+        transform: translateX(2px);
+      }
+      .nav.active .nav-icon {
+        color: var(--mint-dark);
+      }
+      .main {
+        background:
+          radial-gradient(
+            circle at 90% 0%,
+            rgba(50, 220, 165, 0.07),
+            transparent 26rem
+          ),
+          var(--bg);
+      }
+      .top {
+        position: sticky;
+        z-index: 10;
+        top: 0;
+        display: flex;
+        height: 72px;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 38px;
+        border-bottom: 1px solid rgba(222, 233, 228, 0.9);
+        background: rgba(243, 247, 245, 0.88);
+        backdrop-filter: blur(18px);
+      }
+      .status {
+        color: #71827b;
+        font-size: 13px;
+        letter-spacing: 0;
+      }
+      .status::first-letter {
+        color: var(--mint);
+      }
+      .status span {
+        margin-left: 10px;
+        color: var(--ink);
+        font-weight: 700;
+      }
+      .avatar {
+        display: grid;
+        width: 38px;
+        height: 38px;
+        place-items: center;
+        border: 3px solid #fff;
+        border-radius: 50%;
+        background: var(--navy);
+        color: #fff;
+        font-size: 12px;
+        font-weight: 800;
+        box-shadow: 0 8px 20px rgba(22, 54, 44, 0.15);
+      }
+      .wrap {
+        width: min(1180px, 100%);
+        margin: auto;
+        padding: 34px 38px 70px;
+      }
+      .title {
+        align-items: center;
+        margin-bottom: 24px;
+      }
+      .title small,
+      .eyebrow,
+      .card > small {
+        color: #82938c;
+        font-size: 12px;
+        font-weight: 750;
+        letter-spacing: 0.11em;
+      }
+      .title h1 {
+        margin: 3px 0 0;
+        color: var(--ink);
+        font-family: inherit;
+        font-size: clamp(28px, 4vw, 42px);
+        font-weight: 800;
+        letter-spacing: -0.045em;
+      }
+      h2,
+      h3 {
+        color: var(--ink);
+        font-family: inherit;
+        letter-spacing: -0.025em;
+      }
+      h2 {
+        font-size: 25px;
+      }
+      h3 {
+        margin: 7px 0 18px;
+        font-size: 21px;
+      }
+      .card {
+        border: 1px solid rgba(224, 234, 229, 0.9);
+        border-radius: 20px;
+        background: #fff;
+        box-shadow: var(--shadow);
+      }
+      .btn,
+      .mini,
+      .remove {
+        min-height: 42px;
+        border-radius: 13px;
+        font-weight: 750;
+        transition:
+          transform 150ms ease,
+          box-shadow 150ms ease,
+          background 150ms ease;
+      }
+      .btn {
+        border: 0;
+        background: var(--mint);
+        color: #073f2e;
+        box-shadow: 0 10px 22px rgba(31, 207, 150, 0.2);
+      }
+      .btn:hover,
+      .mini:hover,
+      .remove:hover {
+        transform: translateY(-1px);
+      }
+      .mini {
+        border: 1px solid var(--line);
+        background: #fff;
+        color: #53665f;
+      }
+      .remove {
+        border: 1px solid #ffdadd;
+        background: var(--rose-soft);
+        color: #c14f5a;
+      }
+      .portfolio-hero {
+        position: relative;
+        min-height: 270px;
+        overflow: hidden;
+        padding: 30px;
+        border: 0;
+        border-radius: 28px;
+        background: linear-gradient(
+          135deg,
+          #29d9a4 0%,
+          #19ca92 55%,
+          #0eb780 100%
+        );
+        color: #073f2e;
+        box-shadow: 0 24px 60px rgba(20, 188, 132, 0.23);
+      }
+      .portfolio-hero::after {
+        content: "";
+        position: absolute;
+        right: -90px;
+        bottom: -125px;
+        width: 330px;
+        height: 330px;
+        border: 1px solid rgba(255, 255, 255, 0.28);
+        border-radius: 50%;
+        box-shadow:
+          0 0 0 38px rgba(255, 255, 255, 0.05),
+          0 0 0 76px rgba(255, 255, 255, 0.04);
+      }
+      .portfolio-top,
+      .portfolio-value,
+      .portfolio-stats {
+        position: relative;
+        z-index: 1;
+      }
+      .portfolio-top {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        font-size: 13px;
+        font-weight: 750;
+        letter-spacing: 0.06em;
+      }
+      .live-chip {
+        padding: 7px 10px;
+        border: 1px solid rgba(255, 255, 255, 0.55);
+        border-radius: 999px;
+        background: rgba(255, 255, 255, 0.18);
+        color: #064633;
+        font-size: 12px;
+      }
+      .portfolio-value {
+        display: flex;
+        align-items: baseline;
+        gap: 14px;
+        margin: 24px 0 23px;
+      }
+      .portfolio-value strong {
+        color: #062f24;
+        font-size: clamp(36px, 5vw, 56px);
+        font-weight: 850;
+        letter-spacing: -0.055em;
+      }
+      .portfolio-value span {
+        padding: 6px 9px;
+        border-radius: 10px;
+        background: rgba(255, 255, 255, 0.3);
+        font-size: 13px;
+        font-weight: 800;
+      }
+      .portfolio-stats {
+        display: grid;
+        width: min(520px, 100%);
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+      }
+      .portfolio-stats div {
+        padding: 12px 14px;
+        border-radius: 14px;
+        background: rgba(255, 255, 255, 0.2);
+      }
+      .portfolio-stats small,
+      .portfolio-stats b {
+        display: block;
+      }
+      .portfolio-stats small {
+        margin-bottom: 4px;
+        color: rgba(5, 62, 44, 0.74);
+        font-size: 11px;
+      }
+      .portfolio-stats b {
+        color: #063c2d;
+        font-size: 14px;
+      }
+      .hero-line {
+        position: absolute;
+        right: 20px;
+        bottom: 15px;
+        width: 42%;
+        min-width: 270px;
+        opacity: 0.75;
+      }
+      .section-head {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin: 30px 2px 14px;
+      }
+      .section-head h2 {
+        margin: 0;
+        font-size: 21px;
+      }
+      .section-head button {
+        border: 0;
+        background: transparent;
+        color: var(--mint-dark);
+        font-size: 13px;
+        font-weight: 800;
+        cursor: pointer;
+      }
+      .overview-grid {
+        display: grid;
+        grid-template-columns: minmax(0, 1.55fr) minmax(290px, 0.75fr);
+        gap: 22px;
+      }
+      .setup-strip {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 12px;
+      }
+      .setup-card {
+        position: relative;
+        min-height: 145px;
+        padding: 17px;
+        color: var(--ink);
+        font: inherit;
+        text-align: left;
+        cursor: pointer;
+      }
+      .setup-card:hover {
+        border-color: rgba(31, 207, 150, 0.42);
+        transform: translateY(-2px);
+      }
+      .setup-card .stock-price {
+        margin-top: 30px;
+      }
+      .stock-logo {
+        display: grid;
+        width: 38px;
+        height: 38px;
+        place-items: center;
+        flex: 0 0 auto;
+        border-radius: 12px;
+        background: var(--mint-soft);
+        color: var(--mint-dark);
+        font-size: 12px;
+        font-weight: 900;
+      }
+      .stock-logo.rose {
+        background: var(--rose-soft);
+        color: var(--rose);
+      }
+      .stock-open {
+        display: flex;
+        min-width: 0;
+        align-items: center;
+        gap: 12px;
+        padding: 0;
+        border: 0;
+        background: transparent;
+        color: inherit;
+        text-align: left;
+        cursor: pointer;
+      }
+      .stock-line {
+        position: absolute;
+        right: 12px;
+        bottom: 12px;
+        width: 48%;
+      }
+      .stock-price {
+        color: var(--ink);
+        font-size: 15px;
+        font-weight: 800;
+      }
+      .up,
+      .positive {
+        color: var(--mint-dark) !important;
+      }
+      .down {
+        color: var(--rose) !important;
+      }
+      .market-pulse {
+        min-height: 100%;
+        padding: 22px;
+      }
+      .pulse-ring {
+        display: grid;
+        width: 132px;
+        height: 132px;
+        margin: 18px auto;
+        place-items: center;
+        border-radius: 50%;
+        background: conic-gradient(var(--mint) 0 76%, #ecf2ef 76% 100%);
+      }
+      .pulse-ring::before {
+        content: "76";
+        display: grid;
+        width: 104px;
+        height: 104px;
+        place-items: center;
+        border-radius: 50%;
+        background: #fff;
+        color: var(--ink);
+        font-size: 34px;
+        font-weight: 850;
+      }
+      .pulse-copy {
+        color: var(--muted);
+        text-align: center;
+        font-size: 13px;
+      }
+      .rows {
+        overflow: hidden;
+        border: 1px solid var(--line);
+        border-radius: 18px;
+        background: #fff;
+      }
+      .row {
+        min-height: 78px;
+        border-bottom: 1px solid var(--line);
+        color: var(--ink);
+      }
+      .row:last-child {
+        border-bottom: 0;
+      }
+      .row small,
+      .muted {
+        color: var(--muted);
+      }
+      .notice,
+      .pill {
+        border: 0;
+        border-radius: 999px;
+        background: var(--mint-soft);
+        color: var(--mint-dark);
+      }
+      .metrics,
+      .kpi-grid {
+        gap: 14px;
+      }
+      .metric,
+      .kpi {
+        border-top: 0;
+      }
+      .metric > b,
+      .kpi > b {
+        color: var(--ink);
+        font-family: inherit;
+        font-weight: 850;
+      }
+      .verdict {
+        align-items: center;
+        background: #fff;
+      }
+      .gate {
+        border-right-color: var(--line);
+      }
+      .gate b {
+        color: #f0a733;
+      }
+      .watchrow {
+        border-bottom-color: var(--line);
+      }
+      input,
+      select,
+      textarea,
+      .toolbar input,
+      .settings input,
+      .field {
+        min-height: 46px;
+        border: 1px solid var(--line);
+        border-radius: 13px;
+        background: #f9fbfa;
+        color: var(--ink);
+      }
+      input:focus,
+      select:focus,
+      textarea:focus {
+        border-color: var(--mint);
+        background: #fff;
+      }
+      .form-grid input,
+      .form-grid select,
+      .form-grid textarea {
+        border: 1px solid var(--line);
+        background: #f9fbfa;
+        color: var(--ink);
+      }
+      .table th {
+        color: var(--muted);
+      }
+      .table td,
+      .table th {
+        border-bottom-color: var(--line);
+      }
+      .file {
+        border-color: #bfeede;
+        background: var(--mint-soft);
+      }
+      .modal {
+        background: rgba(9, 31, 24, 0.45);
+        backdrop-filter: blur(8px);
+      }
+      .dialog {
+        border: 0;
+        border-radius: 24px;
+        background: #fff;
+        color: var(--ink);
+        box-shadow: 0 34px 100px rgba(8, 45, 33, 0.28);
+      }
+      .dialog-head {
+        border-bottom-color: var(--line);
+      }
+      .dialog-head button {
+        color: var(--muted);
+      }
+      .risk-result span {
+        border-color: var(--line);
+        background: #f7faf8;
+      }
+      .toast {
+        border: 0;
+        border-radius: 14px;
+        background: var(--navy);
+        color: #fff;
+        box-shadow: 0 18px 45px rgba(7, 35, 27, 0.25);
+      }
+      .mobile-menu {
+        display: none;
+      }
+      .detail-layout {
+        display: grid;
+        grid-template-columns: minmax(0, 1.35fr) minmax(280px, 0.65fr);
+        gap: 20px;
+      }
+      .detail-chart {
+        padding: 24px;
+      }
+      .detail-price {
+        margin: 18px 0 3px;
+        font-size: clamp(34px, 5vw, 52px);
+        font-weight: 850;
+        letter-spacing: -0.05em;
+      }
+      .range-tabs {
+        display: flex;
+        gap: 8px;
+        margin: 20px 0;
+      }
+      .range-tabs button {
+        width: 42px;
+        height: 34px;
+        border: 0;
+        border-radius: 10px;
+        background: transparent;
+        color: var(--muted);
+        font-size: 12px;
+        font-weight: 800;
+      }
+      .range-tabs button.active {
+        background: var(--mint);
+        color: #074431;
+      }
+      .chart-canvas {
+        width: 100%;
+        min-height: 260px;
+      }
+      .detail-actions {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+        margin-top: 18px;
+      }
+      .detail-aside {
+        padding: 22px;
+      }
+      .quality-list {
+        display: grid;
+        gap: 9px;
+      }
+      .quality-list div {
+        display: flex;
+        justify-content: space-between;
+        padding: 12px 0;
+        border-bottom: 1px solid var(--line);
+        color: var(--muted);
+        font-size: 14px;
+      }
+      .quality-list b {
+        color: var(--ink);
+      }
+      @media (max-width: 980px) {
+        .side {
+          width: 210px;
+        }
+        .overview-grid,
+        .detail-layout {
+          grid-template-columns: 1fr;
+        }
+        .market-pulse {
+          min-height: 270px;
+        }
+      }
+      @media (max-width: 760px) {
+        body {
+          background: #f2f7f4;
+        }
+        .side {
+          display: none;
+        }
+        .top {
+          height: 64px;
+          padding: 0 18px;
+          background: rgba(255, 255, 255, 0.9);
+        }
+        .status {
+          font-size: 0;
+        }
+        .status::after {
+          content: "Alpha Swing";
+          color: var(--ink);
+          font-size: 17px;
+          font-weight: 850;
+          letter-spacing: -0.03em;
+        }
+        .wrap {
+          padding: 22px 16px 112px;
+        }
+        .title {
+          margin-bottom: 18px;
+        }
+        .title small {
+          display: none;
+        }
+        .title h1 {
+          font-size: 27px;
+        }
+        .title .btn {
+          min-height: 40px;
+          padding: 0 14px;
+          font-size: 13px;
+        }
+        .portfolio-hero {
+          min-height: 300px;
+          margin: 0 -4px;
+          padding: 24px 20px;
+          border-radius: 25px;
+        }
+        .portfolio-value {
+          display: block;
+          margin: 28px 0 24px;
+        }
+        .portfolio-value strong {
+          display: block;
+          font-size: 39px;
+        }
+        .portfolio-value span {
+          display: inline-block;
+          margin-top: 8px;
+        }
+        .portfolio-stats {
+          grid-template-columns: 1fr 1fr;
+        }
+        .portfolio-stats div:last-child {
+          display: none;
+        }
+        .hero-line {
+          right: -25px;
+          bottom: 15px;
+          min-width: 230px;
+          width: 55%;
+          opacity: 0.42;
+        }
+        .overview-grid {
+          display: block;
+        }
+        .setup-strip {
+          display: flex;
+          overflow-x: auto;
+          margin: 0 -16px;
+          padding: 4px 16px 18px;
+          scroll-snap-type: x mandatory;
+          scrollbar-width: none;
+        }
+        .setup-strip::-webkit-scrollbar {
+          display: none;
+        }
+        .setup-card {
+          min-width: 190px;
+          scroll-snap-align: start;
+        }
+        .market-pulse {
+          display: none;
+        }
+        .card {
+          border-radius: 18px;
+          box-shadow: 0 12px 32px rgba(25, 72, 57, 0.065);
+        }
+        .mobile {
+          position: fixed;
+          z-index: 40;
+          right: 10px;
+          bottom: 10px;
+          left: 10px;
+          display: grid;
+          height: 70px;
+          grid-template-columns: repeat(5, 1fr);
+          padding: 7px;
+          border: 1px solid rgba(221, 232, 226, 0.95);
+          border-radius: 22px;
+          background: rgba(255, 255, 255, 0.95);
+          box-shadow: 0 18px 55px rgba(12, 46, 36, 0.16);
+          backdrop-filter: blur(18px);
+        }
+        .mobile button {
+          display: grid;
+          min-width: 0;
+          place-items: center;
+          align-content: center;
+          gap: 2px;
+          border: 0;
+          border-radius: 15px;
+          background: transparent;
+          color: #8a9a94;
+          font-size: 17px;
+        }
+        .mobile button span {
+          display: block;
+          font-size: 10px;
+          font-weight: 750;
+        }
+        .mobile button.active {
+          background: var(--mint-soft);
+          color: var(--mint-dark);
+        }
+        .mobile-menu {
+          position: fixed;
+          z-index: 35;
+          right: 16px;
+          bottom: 90px;
+          left: 16px;
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          gap: 9px;
+          padding: 14px;
+          border: 1px solid var(--line);
+          border-radius: 22px;
+          background: rgba(255, 255, 255, 0.98);
+          box-shadow: 0 24px 70px rgba(7, 37, 28, 0.2);
+          transform: translateY(20px);
+          opacity: 0;
+          pointer-events: none;
+          transition: 180ms ease;
+        }
+        .mobile-menu.open {
+          transform: translateY(0);
+          opacity: 1;
+          pointer-events: auto;
+        }
+        .mobile-menu button {
+          min-height: 48px;
+          border: 0;
+          border-radius: 14px;
+          background: #f5f9f7;
+          color: var(--ink);
+          font-weight: 700;
+        }
+        .metrics,
+        .kpi-grid {
+          grid-template-columns: 1fr 1fr;
+        }
+        .grid,
+        .form-grid,
+        .risk-result {
+          grid-template-columns: 1fr;
+        }
+        .row {
+          grid-template-columns: minmax(0, 1.2fr) auto auto;
+          gap: 9px;
+          padding: 14px;
+        }
+        .row > div:nth-child(3) {
+          display: none;
+        }
+        .watchrow {
+          grid-template-columns: 1fr auto;
+        }
+        .watchrow label {
+          grid-column: 1 / -1;
+          order: 3;
+        }
+        .table {
+          display: block;
+          overflow-x: auto;
+          white-space: nowrap;
+        }
+        .detail-chart,
+        .detail-aside {
+          padding: 18px;
+        }
+        .chart-canvas {
+          min-height: 220px;
+        }
+      }
+      @media (prefers-reduced-motion: reduce) {
+        *,
+        *::before,
+        *::after {
+          scroll-behavior: auto !important;
+          transition-duration: 0.01ms !important;
+        }
+      }
+    </style>
   </head>
   <body>
     <div class="app">
       <aside class="side">
         <div class="brand">ALPHA <b>SWING</b></div>
         <p>WORKSPACE</p>
-        <button class="nav active" data-page="overview">⌂ Overview</button
-        ><button class="nav" data-page="scanner">⌁ Scanner</button
-        ><button class="nav" data-page="watchlist">◎ Watchlist</button
-        ><button class="nav" data-page="market">◉ Market health</button
-        ><button class="nav" data-page="paper">◈ Paper trading</button
-        ><button class="nav" data-page="journal">✎ Journal</button
-        ><button class="nav" data-page="backtest">⌁ Backtest</button
-        ><button class="nav" data-page="settings">⚙ Settings</button>
+        <button class="nav active" data-page="overview">
+          <span class="nav-icon">⌂</span>Overview
+        </button>
+        <button class="nav" data-page="scanner">
+          <span class="nav-icon">⌕</span>Scanner
+        </button>
+        <button class="nav" data-page="watchlist">
+          <span class="nav-icon">◎</span>Watchlist
+        </button>
+        <button class="nav" data-page="market">
+          <span class="nav-icon">✦</span>Market health
+        </button>
+        <button class="nav" data-page="paper">
+          <span class="nav-icon">↗</span>Paper trading
+        </button>
+        <button class="nav" data-page="journal">
+          <span class="nav-icon">✎</span>Journal
+        </button>
+        <button class="nav" data-page="backtest">
+          <span class="nav-icon">⌁</span>Backtest
+        </button>
+        <button class="nav" data-page="settings">
+          <span class="nav-icon">⚙</span>Settings
+        </button>
       </aside>
       <main class="main">
         <header class="top">
@@ -566,14 +1457,22 @@
         </header>
         <div class="wrap" id="app"></div>
         <nav class="mobile">
-          <button data-page="overview">Overview</button
-          ><button data-page="scanner">Scanner</button
-          ><button data-page="watchlist">Watchlist</button
-          ><button data-page="paper">Paper</button
-          ><button data-page="journal">Journal</button
-          ><button data-page="backtest">Backtest</button
-          ><button data-page="settings">Settings</button>
+          <button class="active" data-page="overview">
+            ⌂<span>Home</span>
+          </button>
+          <button data-page="scanner">⌕<span>Scanner</span></button>
+          <button data-page="watchlist">◎<span>Watchlist</span></button>
+          <button data-page="paper">↗<span>Paper</span></button>
+          <button type="button" id="moreButton" onclick="toggleMobileMenu()">
+            •••<span>More</span>
+          </button>
         </nav>
+        <div class="mobile-menu" id="mobileMenu">
+          <button data-page="market">Market health</button>
+          <button data-page="journal">Trade journal</button>
+          <button data-page="backtest">Backtest</button>
+          <button data-page="settings">Settings</button>
+        </div>
       </main>
     </div>
     <div class="modal" id="stockModal">
@@ -660,15 +1559,44 @@
       let journalEntries = JSON.parse(
         localStorage.getItem("alpha-journal") || "[]",
       );
+      let currentPage = "overview";
       const $ = (x) => document.querySelector(x);
       function title(t, btn = "") {
-        return `<div class="title"><div><small>YOUR TRADING WORKSPACE</small><h1>${t}</h1></div>${btn}</div>`;
+        return `<div class="title"><div><small>ALPHA SWING · NSE</small><h1>${t}</h1></div>${btn}</div>`;
+      }
+      function spark(up = true, wide = false) {
+        const color = up ? "#12b985" : "#ee7080";
+        const points = up
+          ? "2,35 18,31 30,34 43,22 57,27 71,16 86,20 101,8 118,12"
+          : "2,15 18,18 30,13 43,25 57,22 71,33 86,27 101,37 118,31";
+        return `<svg class="${wide ? "hero-line" : "stock-line"}" viewBox="0 0 120 44" role="img" aria-label="${up ? "Rising" : "Falling"} price trend"><polyline points="${points}" fill="none" stroke="${wide ? "rgba(255,255,255,.92)" : color}" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><circle cx="118" cy="${up ? 12 : 31}" r="3.5" fill="${wide ? "#fff" : color}"/></svg>`;
+      }
+      function logo(symbol, down = false) {
+        return `<span class="stock-logo ${down ? "rose" : ""}">${symbol.slice(0, 2)}</span>`;
       }
       function rows() {
         return S.map(
           (x) =>
-            `<div class="row"><div><b>${x[0]}</b><br><small>${x[1]}</small></div><div><b>${x[2]}</b><br><small class="up">${x[3]}</small></div><div><span class="notice">${x[4] > 94 ? "Confirming" : "Armed"}</span></div><button class="mini" onclick="quickAdd('${x[0]}','${x[1]}')">＋</button></div>`,
+            `<div class="row"><button class="stock-open" onclick="detail('${x[0]}')">${logo(x[0], x[3].startsWith("-"))}<span><b>${x[0]}</b><br><small>${x[1]}</small></span></button><div><b>${x[2]}</b><br><small class="${x[3].startsWith("-") ? "down" : "up"}">${x[3]}</small></div><div><span class="notice">${x[4] > 94 ? "Confirming" : "Armed"}</span></div><button class="mini" aria-label="Add ${x[0]} to watchlist" onclick="quickAdd('${x[0]}','${x[1]}')">＋</button></div>`,
         ).join("");
+      }
+      function watchPreview() {
+        if (!list.length)
+          return '<div class="notice">No watched stocks yet. Add a symbol to begin.</div>';
+        return list
+          .slice(0, 4)
+          .map((item) => {
+            const stock = S.find((x) => x[0] === item.s) || [
+              item.s,
+              item.n,
+              "₹—",
+              "Awaiting feed",
+              80,
+            ];
+            const isDown = String(stock[3]).startsWith("-");
+            return `<div class="row"><button class="stock-open" onclick="detail('${item.s}')">${logo(item.s, isDown)}<span><b>${item.s}</b><br><small>${item.n}</small></span></button><div><b>${stock[2]}</b><br><small class="${isDown ? "down" : "up"}">${stock[3]}</small></div><div><span class="notice">${item.on ? "Alert on" : "Alert off"}</span></div><button class="mini" aria-label="Open ${item.s}" onclick="detail('${item.s}')">→</button></div>`;
+          })
+          .join("");
       }
       function notify(t, b) {
         if (Notification.permission === "granted")
@@ -677,15 +1605,49 @@
       }
       function save() {
         localStorage.setItem(K, JSON.stringify(list));
-        watch();
       }
       function overview() {
         app.innerHTML =
           title(
-            "Overview",
-            '<button class="btn" onclick="openStockModal()">＋ Add to watchlist</button>',
+            "Good afternoon, Hassain",
+            '<button class="btn" onclick="openStockModal()">＋ Add stock</button>',
           ) +
-          `<section class="card verdict"><div class="gate"><small>MARKET GATE</small><b>CAUTION</b><span>A/A+ setups only</span></div><div><small>DAILY VERDICT</small><h2>Be selective. Let price and volume prove the move.</h2><span class="muted">Three high-quality candidates are near their pivots. Wait for confirmation.</span></div></section><section class="metrics"><div class="card metric"><span>Qualified setups</span><b>07</b><span>2 new since last scan</span></div><div class="card metric"><span>Near pivot</span><b>03</b><span>within 1% of pivot</span></div><div class="card metric"><span>Confirmed today</span><b>00</b><span>feed unavailable</span></div><div class="card metric"><span>Portfolio risk</span><b>0.00%</b><span>of 5% maximum</span></div></section><section class="grid"><div class="card"><small class="eyebrow">QUALIFIED · NIFTY 500</small><h3>Setup radar</h3><div class="rows">${rows()}</div></div><div class="card focus"><small>SELECTED SETUP</small><h3>HAL <span class="notice">A+</span></h3><div class="score">96</div><div class="quality"><div>Trend template <b>8/8</b></div><div>Relative strength <b>94</b></div><div>VCP score <b>96</b></div><div>RVOL <b>1.82×</b></div></div></div></section>`;
+          `<section class="card portfolio-hero"><div class="portfolio-top"><span>PAPER PORTFOLIO</span><span class="live-chip">● Market closed</span></div><div class="portfolio-value"><strong>₹5,00,000</strong><span>+1.74%</span></div><div class="portfolio-stats"><div><small>Today's gain</small><b>₹2,344.11</b></div><div><small>Open risk</small><b>₹0.00</b></div><div><small>Buying power</small><b>₹5,00,000</b></div></div>${spark(true, true)}</section><div class="overview-grid"><div><div class="section-head"><h2>Top setups</h2><button onclick="page('scanner')">View scanner →</button></div><section class="setup-strip">${S.slice(
+            0,
+            3,
+          )
+            .map(
+              (x) =>
+                `<button class="card setup-card" onclick="detail('${x[0]}')">${logo(x[0], x[3].startsWith("-"))}<div class="stock-price">${x[0]} · ${x[2]}</div><small class="${x[3].startsWith("-") ? "down" : "up"}">${x[3]} · Score ${x[4]}</small>${spark(!x[3].startsWith("-"))}</button>`,
+            )
+            .join(
+              "",
+            )}</section><div class="section-head"><h2>Watchlist</h2><button onclick="page('watchlist')">Manage →</button></div><div class="rows">${watchPreview()}</div></div><aside class="card market-pulse"><small>MARKET PULSE</small><h3>Selective momentum</h3><div class="pulse-ring"></div><p class="pulse-copy">Three quality names are close to their pivots. Wait for price and volume confirmation.</p><div class="quality-list"><div><span>Nifty 500</span><b class="up">+0.48%</b></div><div><span>India VIX</span><b>12.84</b></div><div><span>Breadth</span><b>62%</b></div></div></aside></div>`;
+      }
+      function detail(symbol) {
+        const saved = list.find((item) => item.s === symbol);
+        const x = S.find((item) => item[0] === symbol) || [
+          symbol,
+          saved?.n || symbol,
+          "₹—",
+          "0.00%",
+          80,
+        ];
+        const watched = list.some((item) => item.s === x[0]);
+        app.innerHTML =
+          `<div class="title"><div><small>SELECTED SETUP</small><h1>${x[0]}</h1><span class="muted">${x[1]}</span></div><button class="mini" onclick="page('overview')">← Back</button></div>` +
+          `<div class="detail-layout"><section class="card detail-chart"><div style="display:flex;align-items:center;gap:12px">${logo(x[0], x[3].startsWith("-"))}<div><b>${x[0]}</b><br><small class="muted">NSE · Equity</small></div></div><div class="detail-price">${x[2]}</div><div class="${x[3].startsWith("-") ? "down" : "up"}">${x[3]} today</div><div class="range-tabs"><button>1D</button><button>1W</button><button class="active">1M</button><button>1Y</button><button>5Y</button></div><svg class="chart-canvas" viewBox="0 0 650 270" role="img" aria-label="One month candlestick chart"><defs><linearGradient id="chartFill" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#21cf98" stop-opacity=".22"/><stop offset="1" stop-color="#21cf98" stop-opacity="0"/></linearGradient></defs><g stroke="#e8efeb" stroke-width="1"><line x1="20" y1="40" x2="630" y2="40"/><line x1="20" y1="100" x2="630" y2="100"/><line x1="20" y1="160" x2="630" y2="160"/><line x1="20" y1="220" x2="630" y2="220"/></g><path d="M20 205 C70 190 90 205 130 175 S200 155 230 168 S300 115 340 130 S410 92 450 110 S510 70 545 82 S590 35 630 45 L630 245 L20 245 Z" fill="url(#chartFill)"/><path d="M20 205 C70 190 90 205 130 175 S200 155 230 168 S300 115 340 130 S410 92 450 110 S510 70 545 82 S590 35 630 45" fill="none" stroke="#18bd88" stroke-width="4" stroke-linecap="round"/><circle cx="630" cy="45" r="7" fill="#18bd88" stroke="#fff" stroke-width="4"/></svg><div class="detail-actions"><button class="btn" onclick="prefillPaper('${x[0]}','${x[2].replace(/[^0-9.]/g, "")}')">Paper buy</button><button class="mini" onclick="${watched ? `removeBySymbol('${x[0]}')` : `quickAdd('${x[0]}','${x[1]}')`}">${watched ? "Remove from watchlist" : "Add to watchlist"}</button></div></section><aside class="card detail-aside"><small>SETUP QUALITY</small><h3>${x[4]} / 100 <span class="notice">${x[4] > 94 ? "A+" : "A"}</span></h3><div class="quality-list"><div><span>Trend template</span><b>8 / 8</b></div><div><span>Relative strength</span><b>${Math.max(82, x[4] - 2)}</b></div><div><span>VCP score</span><b>${x[4]}</b></div><div><span>Relative volume</span><b>1.82×</b></div><div><span>Market gate</span><b style="color:#e5a12f">Caution</b></div></div><p class="pulse-copy" style="text-align:left">Paper trading only until the Upstox market-data connection is active.</p></aside></div>`;
+        document
+          .querySelectorAll("[data-page]")
+          .forEach((b) => b.classList.remove("active"));
+        mobileMenu.classList.remove("open");
+      }
+      function prefillPaper(symbol, price) {
+        page("paper");
+        pSymbol.value = symbol;
+        pEntry.value = Number(price) || "";
+        pStop.value = price ? (Number(price) * 0.96).toFixed(2) : "";
+        pQty.focus();
       }
       function scanner() {
         app.innerHTML =
@@ -701,7 +1663,7 @@
             "Watchlist",
             '<button class="btn" onclick="openStockModal()">＋ Add symbol</button>',
           ) +
-          `<section class="card watch"><small>YOUR LIST</small><h3>Watchlist & alerts</h3><div id="items">${list.length ? list.map((x, i) => `<div class="watchrow"><div><b>${x.s}</b><br><small>${x.n}</small></div><label><input type="checkbox" ${x.on ? "checked" : ""} onchange="toggle(${i},this.checked)"> Alert above ₹ <input type="number" value="${x.target || 0}" onchange="setTarget(${i},this.value)"></label><button class="remove" onclick="removeItem(${i})">Remove</button></div>`).join("") : '<div class="notice">No symbols yet. Add a stock to monitor it.</div>'}</div><p><button class="btn" onclick="testAlert()">Test alert</button> <button class="remove" onclick="enableAlerts()">Enable browser alerts</button></p></section>`;
+          `<section class="card watch"><small>YOUR LIST</small><h3>Price alerts</h3><div id="items">${list.length ? list.map((x, i) => `<div class="watchrow"><button class="stock-open" onclick="detail('${x.s}')">${logo(x.s)}<span><b>${x.s}</b><br><small>${x.n}</small></span></button><label><input type="checkbox" ${x.on ? "checked" : ""} onchange="toggle(${i},this.checked)"> Alert above ₹ <input aria-label="Alert target for ${x.s}" type="number" value="${x.target || 0}" onchange="setTarget(${i},this.value)"></label><button class="remove" onclick="removeItem(${i})">Remove</button></div>`).join("") : '<div class="notice">Your watchlist is empty. Add a symbol to start monitoring it.</div>'}</div><p><button class="btn" onclick="testAlert()">Test alert</button> <button class="mini" onclick="enableAlerts()">Enable browser alerts</button></p></section>`;
       }
       function market() {
         app.innerHTML =
@@ -842,6 +1804,8 @@
         });
         localStorage.setItem(K, JSON.stringify(list));
         closeModal("stockModal");
+        if (currentPage === "watchlist") watch();
+        if (currentPage === "overview") overview();
         toastMsg(s + " added to watchlist");
       };
       function setTarget(i, value) {
@@ -852,6 +1816,15 @@
       function removeItem(i) {
         list.splice(i, 1);
         save();
+        watch();
+        toastMsg("Stock removed from watchlist");
+      }
+      function removeBySymbol(symbol) {
+        const i = list.findIndex((item) => item.s === symbol);
+        if (i >= 0) list.splice(i, 1);
+        save();
+        detail(symbol);
+        toastMsg(symbol + " removed from watchlist");
       }
       function toggle(i, v) {
         list[i].on = v;
@@ -913,6 +1886,7 @@
         riskResult.innerHTML = `<span>Risk amount<b>₹${((c * p) / 100).toLocaleString("en-IN")}</b></span><span>Quantity<b>${q}</b></span><span>Position value<b>₹${(q * e).toLocaleString("en-IN")}</b></span><span>2R target<b>₹${(e + 2 * r).toLocaleString("en-IN")}</b></span>`;
       };
       function page(x) {
+        currentPage = x;
         ({
           overview,
           scanner,
@@ -923,14 +1897,27 @@
           backtest,
           settings,
         })[x]();
+        mobileMenu.classList.remove("open");
         document
           .querySelectorAll("[data-page]")
           .forEach((b) => b.classList.toggle("active", b.dataset.page === x));
+        moreButton.classList.toggle(
+          "active",
+          ["market", "journal", "backtest", "settings"].includes(x),
+        );
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      }
+      function toggleMobileMenu() {
+        mobileMenu.classList.toggle("open");
+        moreButton.classList.toggle(
+          "active",
+          mobileMenu.classList.contains("open"),
+        );
       }
       document
         .querySelectorAll("[data-page]")
         .forEach((b) => (b.onclick = () => page(b.dataset.page)));
-      overview();
+      page("overview");
       if ("serviceWorker" in navigator)
         navigator.serviceWorker.register("sw.js");
     </script>
