@@ -106,7 +106,7 @@ const groundedSchema = {
           impact: { type: "string" },
           sourceName: { type: "string" },
           sourceUrl: { type: "string" },
-          publishedAt: { type: ["string", "null"] },
+          publishedAt: { type: "string" },
         },
       },
     },
@@ -472,7 +472,7 @@ ESSENTIALITY BAR — a swing trader only cares about news that can move price or
 
 For every item: set "importance" to High only if it can plausibly move the stock or the setup this week; set "catalystType" to the best-fitting category; set "timeHorizon" (Today / This week / Watch); and make "impact" a concrete one-line swing-trade read (never a buy/sell/target call). Order the news array most-essential first (all High before Medium before Low).
 
-Cover the broad market plus the watchlist: HAL, BEL, TRENT, CGPOWER and COCHINSHIP; add other clearly market-moving NSE names when warranted. Return 8-14 news items and 3-6 sectors ranked by breakout leadership. Name the source, include its real HTTPS article URL, and use an ISO-8601 publishedAt when available. Do not invent prices, filings, dates, quotes or URLs. Do not give buy/sell/target advice. Keep summaries concise and professional.`;
+Cover the broad market plus the watchlist: HAL, BEL, TRENT, CGPOWER and COCHINSHIP; add other clearly market-moving NSE names when warranted. Return 8-14 news items and 3-6 sectors ranked by breakout leadership. Name the source, include its real HTTPS article URL, and set publishedAt to an ISO-8601 string (empty string if unknown). Do not invent prices, filings, dates, quotes or URLs. Do not give buy/sell/target advice. Keep summaries concise and professional.`;
 
 function classifyPrompt(items) {
   const list = items
