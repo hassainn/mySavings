@@ -22,23 +22,13 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Check Gemini configuration
-        id: gemini
-        shell: bash
-        run: |
-          if [ -n "$GEMINI_API_KEY" ]; then
-            echo "configured=true" >> "$GITHUB_OUTPUT"
-          else
-            echo "configured=false" >> "$GITHUB_OUTPUT"
-            echo "GEMINI_API_KEY is not configured; keeping the existing feed."
-          fi
-
-      - name: Generate grounded market intelligence
-        if: steps.gemini.outputs.configured == 'true'
+      # Runs with or without GEMINI_API_KEY: the generator falls back to free
+      # RSS headlines (deterministic ranking) when Gemini is unavailable, and
+      # upgrades to grounded Gemini automatically when a billed key is present.
+      - name: Generate market intelligence
         run: node scripts/generate-market-intelligence.mjs
 
       - name: Publish refreshed feed
-        if: steps.gemini.outputs.configured == 'true'
         shell: bash
         run: |
           git config user.name "alpha-swing-bot"
@@ -48,6 +38,6 @@ jobs:
             echo "No market-intelligence changes to publish."
             exit 0
           fi
-          git commit -m "Refresh Gemini market intelligence"
+          git commit -m "Refresh market intelligence"
           git pull --rebase origin main
           git push origin HEAD:main

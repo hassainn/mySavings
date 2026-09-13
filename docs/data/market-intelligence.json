@@ -1,73 +1,357 @@
 {
-  "status": "setup_required",
-  "generatedAt": null,
-  "model": "gemini-3.8-flash",
-  "marketMood": "Waiting for live briefing",
-  "marketSummary": "The Gemini market-intelligence pipeline is installed. Add the GEMINI_API_KEY repository secret and run the refresh workflow to replace this setup preview with grounded Indian market coverage.",
-  "dailyFocus": "Track confirmed price and volume reactions after news; headlines alone are not trade signals.",
+  "status": "live",
+  "method": "rss-deterministic",
+  "generatedAt": "2026-09-13T15:03:46.318Z",
+  "model": null,
+  "marketMood": "Constructive headline tone",
+  "marketSummary": "14 market and stock updates from Indian financial media in the last few sessions; 1 flagged essential for swing traders (1 positive, 0 negative). Headline sentiment is a first read — confirm with price and volume.",
+  "dailyFocus": "Trade the reaction, not the headline: wait for price to clear the pivot on above-average volume, and size every entry with a defined stop.",
   "sectors": [
     {
-      "name": "Defence & aerospace",
-      "momentum": "Preview",
-      "score": 86,
-      "reason": "Configured for order-flow, policy and earnings coverage.",
-      "catalysts": ["Order wins", "Budget policy"],
-      "risks": ["Valuation", "Execution"],
-      "relatedStocks": ["HAL", "BEL", "COCHINSHIP"]
-    },
-    {
-      "name": "Capital goods",
-      "momentum": "Preview",
-      "score": 79,
-      "reason": "Configured for capex, power equipment and industrial demand coverage.",
-      "catalysts": ["Private capex", "Grid investment"],
-      "risks": ["Input costs", "Project delays"],
-      "relatedStocks": ["CGPOWER", "BEL"]
-    },
-    {
-      "name": "Consumer discretionary",
-      "momentum": "Preview",
+      "name": "Energy & oil",
+      "momentum": "Improving",
       "score": 71,
-      "reason": "Configured for consumption, store expansion and margin coverage.",
-      "catalysts": ["Demand recovery", "Premiumisation"],
-      "risks": ["High valuations", "Weak demand"],
-      "relatedStocks": ["TRENT"]
+      "reason": "3 recent headlines in the feed window (1 positive, 0 negative).",
+      "catalysts": [
+        "Recent news flow"
+      ],
+      "risks": [
+        "Headline risk",
+        "Confirm with price and volume"
+      ],
+      "relatedStocks": []
+    },
+    {
+      "name": "Banking & financials",
+      "momentum": "Mixed",
+      "score": 59,
+      "reason": "3 recent headlines in the feed window (0 positive, 0 negative).",
+      "catalysts": [
+        "Recent news flow"
+      ],
+      "risks": [
+        "Headline risk",
+        "Confirm with price and volume"
+      ],
+      "relatedStocks": []
+    },
+    {
+      "name": "Defence & aerospace",
+      "momentum": "Mixed",
+      "score": 56,
+      "reason": "2 recent headlines in the feed window (0 positive, 0 negative).",
+      "catalysts": [
+        "Recent news flow"
+      ],
+      "risks": [
+        "Headline risk",
+        "Confirm with price and volume"
+      ],
+      "relatedStocks": [
+        "HAL",
+        "BEL",
+        "COCHINSHIP"
+      ]
+    },
+    {
+      "name": "IT services",
+      "momentum": "Mixed",
+      "score": 53,
+      "reason": "1 recent headline in the feed window (0 positive, 0 negative).",
+      "catalysts": [
+        "Recent news flow"
+      ],
+      "risks": [
+        "Headline risk",
+        "Confirm with price and volume"
+      ],
+      "relatedStocks": []
+    },
+    {
+      "name": "Capital goods & power",
+      "momentum": "Mixed",
+      "score": 53,
+      "reason": "1 recent headline in the feed window (0 positive, 0 negative).",
+      "catalysts": [
+        "Recent news flow"
+      ],
+      "risks": [
+        "Headline risk",
+        "Confirm with price and volume"
+      ],
+      "relatedStocks": [
+        "CGPOWER",
+        "COCHINSHIP"
+      ]
+    },
+    {
+      "name": "Auto",
+      "momentum": "Mixed",
+      "score": 50,
+      "reason": "No fresh headlines in the current feed window.",
+      "catalysts": [
+        "Awaiting fresh catalysts"
+      ],
+      "risks": [
+        "Headline risk"
+      ],
+      "relatedStocks": []
     }
   ],
   "news": [
     {
-      "category": "market",
-      "symbol": "NIFTY",
-      "headline": "Gemini news feed is ready to activate",
-      "summary": "Once the repository secret is added, this card will contain a sourced summary of the latest Indian market developments, ranked by how much each item can move a swing trade.",
+      "category": "stock",
+      "symbol": "NSE",
+      "headline": "Kamarajar Port invites bankers for ₹1,200 crore IPO",
+      "summary": "Kamarajar Port has begun the process of appointing up to three bookrunning lead managers for its proposed IPO, which is likely to include a ₹1,200 crore offer for sale.",
       "sentiment": "Neutral",
-      "importance": "Medium",
-      "catalystType": "Other",
-      "timeHorizon": "Watch",
-      "impact": "Setup preview — no live catalyst yet.",
-      "sourceName": "Google AI for Developers",
-      "sourceUrl": "https://ai.google.dev/gemini-api/docs/google-search",
-      "publishedAt": null
+      "importance": "High",
+      "catalystType": "Block deal",
+      "timeHorizon": "Today",
+      "impact": "Ownership/supply change — watch the price reaction near support and resistance.",
+      "sourceName": "LiveMint Markets",
+      "sourceUrl": "https://www.livemint.com/market/ipo/kamarajar-port-invites-bankers-for-1-200-crore-ipo-11789280693928.html",
+      "publishedAt": "2026-09-13T11:45:32.000Z"
     },
     {
       "category": "stock",
-      "symbol": "HAL",
-      "headline": "Stock-specific monitoring is configured",
-      "summary": "The live feed will connect company news with catalysts, importance and a concrete swing-trade read, without issuing buy or sell calls.",
+      "symbol": "NSE",
+      "headline": "Gold and silver prices: Analysts warn of volatility ahead",
+      "summary": "Fed decision, crude oil, West Asia tensions key driver for gold, silver next week, analysts say",
       "sentiment": "Neutral",
-      "importance": "Low",
+      "importance": "Medium",
       "catalystType": "Other",
-      "timeHorizon": "Watch",
-      "impact": "Setup preview — no live catalyst yet.",
-      "sourceName": "Gemini API documentation",
-      "sourceUrl": "https://ai.google.dev/gemini-api/docs",
-      "publishedAt": null
+      "timeHorizon": "Today",
+      "impact": "Review the source and the price/volume reaction before acting.",
+      "sourceName": "Hindu BusinessLine Markets",
+      "sourceUrl": "https://www.thehindubusinessline.com/markets/gold/gold-and-silver-prices-analysts-warn-of-volatility-ahead/article71463481.ece",
+      "publishedAt": "2026-09-13T13:21:14.000Z"
+    },
+    {
+      "category": "stock",
+      "symbol": "NSE",
+      "headline": "BEML dividend 2026 record date soon: Over 33% returns in 6 months; now 246% dividend - Check amount per share, yield",
+      "summary": "BEML share price has gained 6.74% in a month and 33% in six months, suggesting a recovery in recent trading sessions.",
+      "sentiment": "Neutral",
+      "importance": "Medium",
+      "catalystType": "Corporate action",
+      "timeHorizon": "Today",
+      "impact": "Corporate action — check ex-dates and adjust your levels.",
+      "sourceName": "LiveMint Markets",
+      "sourceUrl": "https://www.livemint.com/market/stock-market-news/beml-dividend-2026-record-date-soon-over-33-returns-in-6-months-now-246-dividend-check-amount-per-share-yield-11789295162458.html",
+      "publishedAt": "2026-09-13T11:35:26.000Z"
+    },
+    {
+      "category": "stock",
+      "symbol": "NSE",
+      "headline": "NSE IPO: SBI, BoB, LIC to New India Assurance Company | Top 10 selling shareholders earn up to 5,57,700% return",
+      "summary": "NSE IPO: The weighted average cost of acquisition of the NSE shares for The New India Assurance Company and National Insurance Company is ₹0.32 per share",
+      "sentiment": "Neutral",
+      "importance": "Medium",
+      "catalystType": "Ownership",
+      "timeHorizon": "Today",
+      "impact": "M&A/stake change can reprice the name; wait for the structure to settle.",
+      "sourceName": "LiveMint Markets",
+      "sourceUrl": "https://www.livemint.com/market/ipo/nse-ipo-sbi-bob-lic-to-new-india-assurance-company-top-10-selling-shareholders-earn-up-to-5-57-700-return-11789293789157.html",
+      "publishedAt": "2026-09-13T11:19:15.000Z"
+    },
+    {
+      "category": "stock",
+      "symbol": "NSE",
+      "headline": "How Warren Buffett's 'big error' may finally be paying off after a decade",
+      "summary": "Warren Buffett’s $37 billion acquisition of Precision Castparts, once acknowledged as an expensive mistake, may finally be paying off. Supply shortages and GE Aerospace’s rival acquisition have reportedly lifted Precision Castparts’ value to about $100 billion.",
+      "sentiment": "Neutral",
+      "importance": "Medium",
+      "catalystType": "Ownership",
+      "timeHorizon": "Today",
+      "impact": "M&A/stake change can reprice the name; wait for the structure to settle.",
+      "sourceName": "Economic Times Markets",
+      "sourceUrl": "https://economictimes.indiatimes.com/markets/us-stocks/wall-street-guide/how-warren-buffetts-big-error-may-finally-be-paying-off-after-a-decade/articleshow/134192774.cms",
+      "publishedAt": "2026-09-13T09:59:16.000Z"
+    },
+    {
+      "category": "stock",
+      "symbol": "NIFTY",
+      "headline": "US Fed interest rate decision, inflation data, oil to drive markets in holiday-shortened week: Analysts",
+      "summary": "Markets remained under significant pressure during the last week, with the Nifty-50 extending its weekly losing streak to five consecutive weeks, as escalating tensions in West Asia triggered a sharp rise in crude oil prices",
+      "sentiment": "Positive",
+      "importance": "Medium",
+      "catalystType": "Other",
+      "timeHorizon": "Today",
+      "impact": "Review the source and the price/volume reaction before acting.",
+      "sourceName": "Hindu BusinessLine Markets",
+      "sourceUrl": "https://www.thehindubusinessline.com/markets/us-fed-interest-rate-decision-inflation-data-oil-to-drive-markets-in-holiday-shortened-week-analysts/article71462893.ece",
+      "publishedAt": "2026-09-13T08:26:59.000Z"
+    },
+    {
+      "category": "sector",
+      "symbol": "NSE",
+      "headline": "All eyes on Warsh as rate-hike fever spreads across G7 central banks",
+      "summary": "Three decisions, starting with the US Federal Reserve on Wednesday and followed on successive days by peers in the UK and Japan, may recast the global monetary policy landscape for the rest of 2026 and beyond.",
+      "sentiment": "Neutral",
+      "importance": "Medium",
+      "catalystType": "Regulatory",
+      "timeHorizon": "Today",
+      "impact": "Policy/regulatory catalyst — can reprice the whole group; check breadth first.",
+      "sourceName": "Hindu BusinessLine Markets",
+      "sourceUrl": "https://www.thehindubusinessline.com/money-and-banking/all-eyes-on-warsh-as-rate-hike-fever-spreads-across-g7-central-banks/article71462865.ece",
+      "publishedAt": "2026-09-13T08:25:01.000Z"
+    },
+    {
+      "category": "market",
+      "symbol": "NSE",
+      "headline": "Inside NSE IPO journey: Why India's largest exchange took 10 long years to reach Dalal Street",
+      "summary": "After nearly a decade of delays, NSE is finally set to enter the public markets with its IPO. The issue will be entirely an offer for sale, allowing existing shareholders to sell their stakes without raising fresh capital for the exchange. From the co-location controversy to the Supreme Court settle",
+      "sentiment": "Neutral",
+      "importance": "Medium",
+      "catalystType": "Block deal",
+      "timeHorizon": "Today",
+      "impact": "Ownership/supply change — watch the price reaction near support and resistance.",
+      "sourceName": "Economic Times Markets",
+      "sourceUrl": "https://economictimes.indiatimes.com/markets/ipos/fpos/inside-nse-ipo-journey-why-indias-largest-exchange-took-10-long-years-to-reach-dalal-street/articleshow/134188204.cms",
+      "publishedAt": "2026-09-13T08:19:11.000Z"
+    },
+    {
+      "category": "stock",
+      "symbol": "COCHINSHIP",
+      "headline": "Dividends and stock splits: Hindustan Copper, Cochin Shipyard among 200+ stocks with record dates this week. Check full list",
+      "summary": "Over 90 companies have fixed September 18 as the record date for dividends and other corporate actions. Victoria Mills leads with a Rs 50 per share dividend, followed by Sharda Motor Industries at Rs 20. The list also includes several companies announcing dividends, while Oriana Power and Kairosoft ",
+      "sentiment": "Neutral",
+      "importance": "Medium",
+      "catalystType": "Corporate action",
+      "timeHorizon": "Today",
+      "impact": "Corporate action — check ex-dates and adjust your levels.",
+      "sourceName": "Economic Times Markets",
+      "sourceUrl": "https://economictimes.indiatimes.com/markets/stocks/news/dividends-and-stock-splits-hindustan-copper-cochin-shipyard-among-200-stocks-with-record-dates-this-week-check-full-list/articleshow/134185981.cms",
+      "publishedAt": "2026-09-13T07:31:47.000Z"
+    },
+    {
+      "category": "sector",
+      "symbol": "NSE",
+      "headline": "Why it’s getting harder for Tata Sons to resist an IPO",
+      "summary": "The RBI reportedly rejected Tata Sons’ request for exemption from rules requiring upper-layer NBFCs to list publicly. The decision could intensify pressure on the Tata Group holding company to launch an IPO, despite its efforts to remain private.",
+      "sentiment": "Neutral",
+      "importance": "Medium",
+      "catalystType": "Regulatory",
+      "timeHorizon": "Today",
+      "impact": "Policy/regulatory catalyst — can reprice the whole group; check breadth first.",
+      "sourceName": "Economic Times Markets",
+      "sourceUrl": "https://economictimes.indiatimes.com/markets/ipos/fpos/why-its-getting-harder-for-tata-sons-to-resist-an-ipo/articleshow/134183425.cms",
+      "publishedAt": "2026-09-13T06:33:30.000Z"
+    },
+    {
+      "category": "stock",
+      "symbol": "NSE",
+      "headline": "FPIs withdraw ₹13,138 crore from equities in Sep so far amid global uncertainty",
+      "summary": "The latest outflow comes after Foreign Portfolio Investors (FPIs) turned net buyers in July and August, infusing ₹20,200 crore and ₹29,630 crore, respectively",
+      "sentiment": "Neutral",
+      "importance": "Medium",
+      "catalystType": "Macro/flows",
+      "timeHorizon": "Today",
+      "impact": "Flows set the risk backdrop; not a standalone setup trigger.",
+      "sourceName": "Hindu BusinessLine Markets",
+      "sourceUrl": "https://www.thehindubusinessline.com/markets/fpis-withdraw-13138-crore-from-equities-in-sep-so-far-amid-global-uncertainty/article71462646.ece",
+      "publishedAt": "2026-09-13T05:39:53.000Z"
+    },
+    {
+      "category": "stock",
+      "symbol": "NSE",
+      "headline": "FPIs withdraw Rs 13,138 crore from equities in September so far amid global uncertainty",
+      "summary": "During the first week of September, a massive outflow of Rs 13,138 crore from Indian equities occurred, marking a stark reversal after foreign investors had previously engaged in net buying during July and August. The pullback can be attributed to global uncertainties, climbing crude oil costs, and ",
+      "sentiment": "Neutral",
+      "importance": "Medium",
+      "catalystType": "Macro/flows",
+      "timeHorizon": "Today",
+      "impact": "Flows set the risk backdrop; not a standalone setup trigger.",
+      "sourceName": "Economic Times Markets",
+      "sourceUrl": "https://economictimes.indiatimes.com/markets/stocks/news/fpis-withdraw-rs-13138-crore-from-equities-in-september-so-far-amid-global-uncertainty/articleshow/134180766.cms",
+      "publishedAt": "2026-09-13T05:35:34.000Z"
+    },
+    {
+      "category": "stock",
+      "symbol": "NSE",
+      "headline": "'This is the test': All eyes on US Fed to tackle high inflation",
+      "summary": "The US Federal Reserve goes into a key rate-setting meeting this week with markets expecting policymakers to pull the trigger on a rate hike to tackle persistently high inflation -- and analysts say central bank chief Kevin Warsh's credibility is on the line. In recent weeks, however, several Fed po",
+      "sentiment": "Neutral",
+      "importance": "Medium",
+      "catalystType": "Other",
+      "timeHorizon": "Today",
+      "impact": "Review the source and the price/volume reaction before acting.",
+      "sourceName": "Economic Times Markets",
+      "sourceUrl": "https://economictimes.indiatimes.com/markets/us-stocks/wall-street-guide/this-is-the-test-all-eyes-on-us-fed-to-tackle-high-inflation/articleshow/134177098.cms",
+      "publishedAt": "2026-09-13T04:27:47.000Z"
+    },
+    {
+      "category": "stock",
+      "symbol": "NSE",
+      "headline": "SEBI weighs two options for derivatives settlement, closing auction timings",
+      "summary": "Regulator proposes blending VWAP and closing auction prices, or retaining the old method for at least a year",
+      "sentiment": "Neutral",
+      "importance": "Medium",
+      "catalystType": "Regulatory",
+      "timeHorizon": "Today",
+      "impact": "Policy/regulatory catalyst — can reprice the whole group; check breadth first.",
+      "sourceName": "Hindu BusinessLine Markets",
+      "sourceUrl": "https://www.thehindubusinessline.com/markets/sebi-weighs-two-options-for-derivatives-settlement-closing-auction-timings/article71460299.ece",
+      "publishedAt": "2026-09-12T16:14:22.000Z"
     }
   ],
   "sources": [
     {
-      "title": "Grounding with Google Search",
-      "url": "https://ai.google.dev/gemini-api/docs/google-search"
+      "title": "LiveMint Markets",
+      "url": "https://www.livemint.com/market/ipo/kamarajar-port-invites-bankers-for-1-200-crore-ipo-11789280693928.html"
+    },
+    {
+      "title": "Hindu BusinessLine Markets",
+      "url": "https://www.thehindubusinessline.com/markets/gold/gold-and-silver-prices-analysts-warn-of-volatility-ahead/article71463481.ece"
+    },
+    {
+      "title": "LiveMint Markets",
+      "url": "https://www.livemint.com/market/stock-market-news/beml-dividend-2026-record-date-soon-over-33-returns-in-6-months-now-246-dividend-check-amount-per-share-yield-11789295162458.html"
+    },
+    {
+      "title": "LiveMint Markets",
+      "url": "https://www.livemint.com/market/ipo/nse-ipo-sbi-bob-lic-to-new-india-assurance-company-top-10-selling-shareholders-earn-up-to-5-57-700-return-11789293789157.html"
+    },
+    {
+      "title": "Economic Times Markets",
+      "url": "https://economictimes.indiatimes.com/markets/us-stocks/wall-street-guide/how-warren-buffetts-big-error-may-finally-be-paying-off-after-a-decade/articleshow/134192774.cms"
+    },
+    {
+      "title": "Hindu BusinessLine Markets",
+      "url": "https://www.thehindubusinessline.com/markets/us-fed-interest-rate-decision-inflation-data-oil-to-drive-markets-in-holiday-shortened-week-analysts/article71462893.ece"
+    },
+    {
+      "title": "Hindu BusinessLine Markets",
+      "url": "https://www.thehindubusinessline.com/money-and-banking/all-eyes-on-warsh-as-rate-hike-fever-spreads-across-g7-central-banks/article71462865.ece"
+    },
+    {
+      "title": "Economic Times Markets",
+      "url": "https://economictimes.indiatimes.com/markets/ipos/fpos/inside-nse-ipo-journey-why-indias-largest-exchange-took-10-long-years-to-reach-dalal-street/articleshow/134188204.cms"
+    },
+    {
+      "title": "Economic Times Markets",
+      "url": "https://economictimes.indiatimes.com/markets/stocks/news/dividends-and-stock-splits-hindustan-copper-cochin-shipyard-among-200-stocks-with-record-dates-this-week-check-full-list/articleshow/134185981.cms"
+    },
+    {
+      "title": "Economic Times Markets",
+      "url": "https://economictimes.indiatimes.com/markets/ipos/fpos/why-its-getting-harder-for-tata-sons-to-resist-an-ipo/articleshow/134183425.cms"
+    },
+    {
+      "title": "Hindu BusinessLine Markets",
+      "url": "https://www.thehindubusinessline.com/markets/fpis-withdraw-13138-crore-from-equities-in-sep-so-far-amid-global-uncertainty/article71462646.ece"
+    },
+    {
+      "title": "Economic Times Markets",
+      "url": "https://economictimes.indiatimes.com/markets/stocks/news/fpis-withdraw-rs-13138-crore-from-equities-in-september-so-far-amid-global-uncertainty/articleshow/134180766.cms"
+    },
+    {
+      "title": "Economic Times Markets",
+      "url": "https://economictimes.indiatimes.com/markets/us-stocks/wall-street-guide/this-is-the-test-all-eyes-on-us-fed-to-tackle-high-inflation/articleshow/134177098.cms"
+    },
+    {
+      "title": "Hindu BusinessLine Markets",
+      "url": "https://www.thehindubusinessline.com/markets/sebi-weighs-two-options-for-derivatives-settlement-closing-auction-timings/article71460299.ece"
     }
   ],
   "disclaimer": "AI-generated research summary. Verify source articles and exchange filings before making investment decisions. Not investment advice."

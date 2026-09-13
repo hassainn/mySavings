@@ -2452,9 +2452,23 @@
         }
       }
       function intelStatus() {
-        return marketIntel?.status === "live"
-          ? "Live & grounded"
-          : "Setup preview";
+        if (marketIntel?.status !== "live") return "Setup preview";
+        return (
+          {
+            "gemini-grounded": "Live · AI + Search",
+            "rss-gemini": "Live · AI ranked",
+            "rss-deterministic": "Live · headlines",
+          }[marketIntel.method] || "Live"
+        );
+      }
+      function intelSourceLabel() {
+        return (
+          {
+            "gemini-grounded": "GEMINI 3.8 FLASH",
+            "rss-gemini": "RSS + GEMINI",
+            "rss-deterministic": "INDIAN MARKET RSS",
+          }[marketIntel?.method] || "MARKET INTELLIGENCE"
+        );
       }
       function formatPublished(value) {
         if (!value) return "Awaiting live refresh";
@@ -2587,7 +2601,7 @@
           return `<section class="intel-brief"><div><div class="intel-kicker">GEMINI MARKET INTELLIGENCE</div><h2>Loading the latest research brief…</h2><p>Preparing market, sector and stock-specific coverage.</p></div></section>`;
         }
         const statusClass = escapeHTML(marketIntel.status || "setup_required");
-        return `<section class="intel-brief"><div><div class="intel-kicker">GEMINI MARKET INTELLIGENCE <span class="intel-status ${statusClass}">${intelStatus()}</span></div><h2>${escapeHTML(marketIntel.marketMood || "Market briefing")}</h2><p>${escapeHTML(marketIntel.marketSummary || "No market summary is available yet.")}</p></div><button class="btn" onclick="page('news')">Open intelligence →</button></section>`;
+        return `<section class="intel-brief"><div><div class="intel-kicker">${intelSourceLabel()} <span class="intel-status ${statusClass}">${intelStatus()}</span></div><h2>${escapeHTML(marketIntel.marketMood || "Market briefing")}</h2><p>${escapeHTML(marketIntel.marketSummary || "No market summary is available yet.")}</p></div><button class="btn" onclick="page('news')">Open intelligence →</button></section>`;
       }
       function agenticPreview() {
         const live = scanFeed?.status === "live";
@@ -2891,7 +2905,7 @@
             "AI market news",
             '<button class="btn" onclick="loadIntelligence(true)">Check latest feed</button>',
           ) +
-          `<section class="intel-page-head"><article class="card intel-lead"><div class="intel-kicker">GEMINI 3.8 FLASH <span class="intel-status ${statusClass}">${intelStatus()}</span></div><h2>${escapeHTML(marketIntel.marketMood || "Indian market briefing")}</h2><p>${escapeHTML(marketIntel.marketSummary || "No market summary is available.")}</p><div class="news-footer"><span>${generated}</span><span>${escapeHTML(String(marketIntel.sources?.length || 0))} grounded sources</span></div></article><aside class="card intel-focus"><div class="intel-kicker">TODAY'S RESEARCH FOCUS</div><h3>Price reaction first</h3><p>${escapeHTML(marketIntel.dailyFocus || "Confirm news with price, volume and primary filings.")}</p></aside></section>` +
+          `<section class="intel-page-head"><article class="card intel-lead"><div class="intel-kicker">${intelSourceLabel()} <span class="intel-status ${statusClass}">${intelStatus()}</span></div><h2>${escapeHTML(marketIntel.marketMood || "Indian market briefing")}</h2><p>${escapeHTML(marketIntel.marketSummary || "No market summary is available.")}</p><div class="news-footer"><span>${generated}</span><span>${escapeHTML(String(marketIntel.sources?.length || 0))} sources</span></div></article><aside class="card intel-focus"><div class="intel-kicker">TODAY'S RESEARCH FOCUS</div><h3>Price reaction first</h3><p>${escapeHTML(marketIntel.dailyFocus || "Confirm news with price, volume and primary filings.")}</p></aside></section>` +
           `<div class="section-head"><h2>Sector heat</h2><span class="muted">Evidence-weighted, not a recommendation</span></div><section class="sector-grid">${
             sectors.length
               ? sectors
