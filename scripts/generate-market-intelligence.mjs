@@ -53,10 +53,11 @@ const CATALYST_ENUM = [
 const HORIZON_ENUM = ["Today", "This week", "Watch"];
 const IMPORTANCE_RANK = { High: 0, Medium: 1, Low: 2 };
 
+// NOTE: the interactions API rejects JSON-Schema min/max constraints in schemas
+// this size (verified: identical schema 400s with them, 200s without). Count
+// expectations live in the prompt instead; the finalisers validate counts.
 const sectorSchema = {
   type: "array",
-  minItems: 3,
-  maxItems: 6,
   items: {
     type: "object",
     additionalProperties: false,
@@ -64,11 +65,11 @@ const sectorSchema = {
     properties: {
       name: { type: "string" },
       momentum: { type: "string", enum: ["Leading", "Improving", "Mixed", "Weakening"] },
-      score: { type: "integer", minimum: 0, maximum: 100 },
+      score: { type: "integer" },
       reason: { type: "string" },
-      catalysts: { type: "array", minItems: 1, maxItems: 3, items: { type: "string" } },
-      risks: { type: "array", minItems: 1, maxItems: 3, items: { type: "string" } },
-      relatedStocks: { type: "array", maxItems: 6, items: { type: "string" } },
+      catalysts: { type: "array", items: { type: "string" } },
+      risks: { type: "array", items: { type: "string" } },
+      relatedStocks: { type: "array", items: { type: "string" } },
     },
   },
 };
@@ -85,8 +86,6 @@ const groundedSchema = {
     sectors: sectorSchema,
     news: {
       type: "array",
-      minItems: 8,
-      maxItems: 14,
       items: {
         type: "object",
         additionalProperties: false,
@@ -128,14 +127,12 @@ const classifySchema = {
     sectors: sectorSchema,
     items: {
       type: "array",
-      minItems: 6,
-      maxItems: 14,
       items: {
         type: "object",
         additionalProperties: false,
         required: ["index", "category", "symbol", "summary", "sentiment", "importance", "catalystType", "timeHorizon", "impact"],
         properties: {
-          index: { type: "integer", minimum: 0 },
+          index: { type: "integer" },
           category: { type: "string", enum: CATEGORY_ENUM },
           symbol: { type: "string" },
           summary: { type: "string" },
@@ -463,7 +460,7 @@ ESSENTIALITY BAR — a swing trader only cares about news that can move price or
 
 For every item: set "importance" to High only if it can plausibly move the stock or the setup this week; set "catalystType" to the best-fitting category; set "timeHorizon" (Today / This week / Watch); and make "impact" a concrete one-line swing-trade read (never a buy/sell/target call). Order the news array most-essential first (all High before Medium before Low).
 
-Cover the broad market plus the watchlist: HAL, BEL, TRENT, CGPOWER and COCHINSHIP; add other clearly market-moving NSE names when warranted. Rank sectors by breakout leadership. Name the source, include its real HTTPS article URL, and use an ISO-8601 publishedAt when available. Do not invent prices, filings, dates, quotes or URLs. Do not give buy/sell/target advice. Keep summaries concise and professional.`;
+Cover the broad market plus the watchlist: HAL, BEL, TRENT, CGPOWER and COCHINSHIP; add other clearly market-moving NSE names when warranted. Return 8-14 news items and 3-6 sectors ranked by breakout leadership. Name the source, include its real HTTPS article URL, and use an ISO-8601 publishedAt when available. Do not invent prices, filings, dates, quotes or URLs. Do not give buy/sell/target advice. Keep summaries concise and professional.`;
 
 function classifyPrompt(items) {
   const list = items
@@ -473,7 +470,7 @@ function classifyPrompt(items) {
 
 Below are recent Indian market headlines, each with a numbered index. Select the ones most essential to a swing trader and classify ONLY those. Reference each by its "index" from the list — never invent headlines, sources or URLs, and do not use any information beyond what each headline provides.
 
-Prioritise: results/guidance, order wins/capex, rating changes, block/bulk deals and ownership/FII-DII shifts, index changes, regulatory actions. Drop routine index recaps, opinion and hype. For each selected item set importance (High only if it can move price or a setup this week), catalystType, sentiment, timeHorizon (Today/This week/Watch), a short factual summary, and a one-line swing-trade "impact" read (never a buy/sell/target call). Order most-essential first. Also give a short marketMood, marketSummary, dailyFocus and 3-6 ranked sectors inferred only from these headlines.
+Prioritise: results/guidance, order wins/capex, rating changes, block/bulk deals and ownership/FII-DII shifts, index changes, regulatory actions. Drop routine index recaps, opinion and hype. Select the 6-14 most essential items. For each set importance (High only if it can move price or a setup this week), catalystType, sentiment, timeHorizon (Today/This week/Watch), a short factual summary, and a one-line swing-trade "impact" read (never a buy/sell/target call). Order most-essential first. Also give a short marketMood, marketSummary, dailyFocus and 3-6 ranked sectors inferred only from these headlines.
 
 Current time: ${today.toISOString()}.
 
