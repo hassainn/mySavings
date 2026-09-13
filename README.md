@@ -1,6 +1,6 @@
 # Alpha Swing AI
 
-Mobile-first Indian swing-trading workspace with watchlists, alerts, market health, paper trading, a journal, local backtesting and Gemini-powered market intelligence.
+Mobile-first Indian swing-trading workspace with watchlists, alerts, market health, paper trading, a journal, local backtesting, Gemini-powered market intelligence and an explainable NSE strategy scanner.
 
 Live app: <https://hassainn.github.io/mySavings/>
 
@@ -27,6 +27,35 @@ Useful scripts:
 - `npm run export:static` — copy the GitHub Pages application into `dist` for Sites hosting.
 
 Gemini produces a research summary, not a licensed exchange price feed. Connect Upstox separately for authenticated live quotes and candles. Always verify primary filings and source articles before making an investment decision.
+
+## Upstox whole-market strategy scan
+
+The scanner runs after the NSE cash session and reads the daily Upstox instrument master plus daily historical candles. It filters normal NSE cash equities, then ranks explainable setups using:
+
+- 20-day and 52-week breakouts
+- double-bottom structure
+- volatility contraction (VCP)
+- Darvas boxes
+- EMA21/SMA50/SMA200 trend alignment
+- RSI, MACD, ATR and relative-volume confirmation
+
+Every result includes the evidence, an entry trigger, structural stop, 2R reference target and a small symbol-specific historical check. The 1–99 confidence value measures indicator agreement; it is **not a promised win rate**. No market strategy can honestly guarantee 99% wins.
+
+### Activate the scan
+
+1. Finish the Upstox developer-app activation.
+2. Create a read-only Upstox token suitable for analytics/historical market data.
+3. In this GitHub repository, open **Settings → Secrets and variables → Actions**.
+4. Add the repository secret `UPSTOX_ACCESS_TOKEN`.
+5. Open **Actions → Run NSE Agentic Scan → Run workflow**.
+
+The scheduled job is intentionally rate-limited and never places, modifies or cancels orders. Because Upstox limits standard historical-data calls, the full NSE universe is divided into two non-overlapping slices that run 35 minutes apart and merge into one ranked feed. The broker token stays in GitHub Actions and is never sent to the browser.
+
+Browser and spoken alerts are opt-in per device. Open **Agentic scan**, choose **Enable voice**, and allow notifications. A newly generated triggered setup above the saved confidence threshold can then announce once on that device.
+
+## Family and custom-domain deployment
+
+The private Sites deployment can be shared with exactly the three approved email accounts. `mehaboobfund.in` can remain managed in MilesWeb DNS while its records point to the private deployment. Scanner and news feeds are read from the GitHub-generated JSON, so scheduled refreshes remain current without putting API secrets into MilesWeb or the browser.
 
 ## Vinext starter reference
 

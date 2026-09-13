@@ -1,0 +1,79 @@
+name: Run NSE Agentic Scan
+
+on:
+  workflow_dispatch:
+    inputs:
+      partition:
+        description: "Universe slice to scan (run the other slice after 35 minutes)"
+        required: true
+        default: "0"
+        type: choice
+        options:
+          - "0"
+          - "1"
+  schedule:
+    - cron: "45 10 * * 1-5"
+    - cron: "20 11 * * 1-5"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: nse-agentic-scan
+  cancel-in-progress: false
+
+jobs:
+  scan:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    env:
+      UPSTOX_ACCESS_TOKEN: ${{ secrets.UPSTOX_ACCESS_TOKEN }}
+      MAX_INSTRUMENTS: "1850"
+      UPSTOX_REQUEST_SPACING_MS: "135"
+      PARTITION_COUNT: "2"
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Check Upstox configuration
+        id: upstox
+        shell: bash
+        run: |
+          if [ -n "$UPSTOX_ACCESS_TOKEN" ]; then
+            echo "configured=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "configured=false" >> "$GITHUB_OUTPUT"
+            echo "UPSTOX_ACCESS_TOKEN is not configured; keeping the existing scan."
+          fi
+
+      - name: Select rate-safe universe slice
+        id: partition
+        shell: bash
+        run: |
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            echo "index=${{ inputs.partition }}" >> "$GITHUB_OUTPUT"
+          elif [ "${{ github.event.schedule }}" = "20 11 * * 1-5" ]; then
+            echo "index=1" >> "$GITHUB_OUTPUT"
+          else
+            echo "index=0" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Scan NSE cash universe
+        if: steps.upstox.outputs.configured == 'true'
+        env:
+          PARTITION_INDEX: ${{ steps.partition.outputs.index }}
+        run: node scripts/scan-upstox-universe.mjs
+
+      - name: Publish ranked signals
+        if: steps.upstox.outputs.configured == 'true'
+        shell: bash
+        run: |
+          git config user.name "alpha-swing-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add docs/data/scanner-results.json docs/data/scanner-results-part-*.json
+          if git diff --cached --quiet; then
+            echo "No scanner changes to publish."
+            exit 0
+          fi
+          git commit -m "Refresh NSE agentic scan"
+          git pull --rebase origin main
+          git push origin HEAD:main

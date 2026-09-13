@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "status": "setup_required",
+  "provider": "Upstox",
+  "generatedAt": null,
+  "methodologyUpdatedAt": "2026-09-13T00:00:00.000Z",
+  "universe": {
+    "name": "NSE normal cash equities",
+    "eligible": 0,
+    "requested": 0,
+    "scanned": 0,
+    "failed": 0,
+    "truncated": false
+  },
+  "summary": {
+    "qualified": 0,
+    "armed": 0,
+    "triggered": 0,
+    "highConfidence": 0
+  },
+  "strategyLibrary": [
+    "20-day breakout",
+    "52-week high",
+    "Double bottom",
+    "VCP",
+    "Darvas box",
+    "Trend template",
+    "MACD momentum"
+  ],
+  "signals": [],
+  "failures": [],
+  "disclaimer": "Connect the Upstox data feed to produce deterministic scan results. Confidence is not a win-rate promise and no strategy guarantees returns."
+}

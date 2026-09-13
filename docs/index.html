@@ -1776,6 +1776,319 @@
         }
       }
     </style>
+    <style id="agentic-scan-design">
+      .scan-command {
+        position: relative;
+        overflow: hidden;
+        margin-bottom: 18px;
+        padding: 24px;
+        border: 0;
+        background: #10271f;
+        color: #eafff7;
+      }
+      .scan-command::after {
+        content: "SCAN";
+        position: absolute;
+        right: -14px;
+        bottom: -34px;
+        color: rgba(113, 239, 194, 0.07);
+        font: 900 112px/1 ui-monospace, SFMono-Regular, Consolas, monospace;
+        letter-spacing: -0.1em;
+      }
+      .scan-command-top,
+      .scan-actions,
+      .signal-top,
+      .signal-level,
+      .scan-meta,
+      .scan-summary {
+        display: flex;
+        align-items: center;
+      }
+      .scan-command-top,
+      .signal-top,
+      .scan-meta {
+        justify-content: space-between;
+      }
+      .scan-command-top,
+      .scan-actions,
+      .scan-meta {
+        gap: 12px;
+        flex-wrap: wrap;
+      }
+      .scan-command h2 {
+        position: relative;
+        z-index: 1;
+        max-width: 780px;
+        margin: 14px 0 8px;
+        color: #fff;
+        font-family: Georgia, Cambria, "Times New Roman", serif;
+        font-size: clamp(25px, 3.5vw, 40px);
+        line-height: 1.12;
+        letter-spacing: -0.035em;
+      }
+      .scan-command p {
+        position: relative;
+        z-index: 1;
+        max-width: 850px;
+        margin: 0;
+        color: #a9c6bb;
+        font-size: 14px;
+        line-height: 1.6;
+      }
+      .scan-live {
+        position: relative;
+        z-index: 1;
+        padding: 7px 10px;
+        border: 1px solid rgba(126, 240, 201, 0.25);
+        border-radius: 999px;
+        color: #8ff4d0;
+        font: 800 11px/1 ui-monospace, SFMono-Regular, Consolas, monospace;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+      }
+      .scan-live.setup_required,
+      .scan-live.error {
+        border-color: rgba(255, 200, 90, 0.32);
+        color: #ffd17b;
+      }
+      .scan-summary {
+        position: relative;
+        z-index: 1;
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 1px;
+        margin-top: 22px;
+        overflow: hidden;
+        border: 1px solid rgba(149, 200, 181, 0.18);
+        border-radius: 14px;
+        background: rgba(149, 200, 181, 0.18);
+      }
+      .scan-summary div {
+        padding: 15px 16px;
+        background: #132f26;
+      }
+      .scan-summary small {
+        display: block;
+        color: #8eafa3;
+        font-size: 11px;
+      }
+      .scan-summary b {
+        display: block;
+        margin-top: 6px;
+        color: #fff;
+        font: 700 25px/1 Georgia, Cambria, serif;
+      }
+      .scan-console {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) 300px;
+        gap: 16px;
+      }
+      .scan-toolbar {
+        display: grid;
+        grid-template-columns: minmax(180px, 1fr) auto auto;
+        gap: 10px;
+        margin-bottom: 14px;
+      }
+      .scan-toolbar input,
+      .scan-toolbar select {
+        min-height: 44px;
+        border: 1px solid var(--line);
+        border-radius: 12px;
+        background: #fff;
+        color: var(--ink);
+        padding: 0 13px;
+        font: inherit;
+      }
+      .signal-stack {
+        display: grid;
+        gap: 10px;
+      }
+      .signal-card {
+        display: grid;
+        grid-template-columns: minmax(190px, 1.15fr) minmax(180px, 1fr) minmax(220px, 1.15fr) auto;
+        gap: 16px;
+        align-items: center;
+        width: 100%;
+        padding: 17px;
+        border: 1px solid var(--line);
+        border-radius: 15px;
+        background: #fff;
+        color: var(--ink);
+        text-align: left;
+        cursor: pointer;
+        transition: border-color 0.18s ease, transform 0.18s ease, box-shadow 0.18s ease;
+      }
+      .signal-card:hover {
+        border-color: #9cddc7;
+        transform: translateY(-1px);
+        box-shadow: 0 10px 28px rgba(18, 82, 61, 0.08);
+      }
+      .signal-card:focus-visible {
+        outline: 3px solid rgba(32, 207, 152, 0.3);
+        outline-offset: 2px;
+      }
+      .signal-identity {
+        display: flex;
+        align-items: center;
+        gap: 11px;
+        min-width: 0;
+      }
+      .signal-identity div {
+        min-width: 0;
+      }
+      .signal-identity b,
+      .signal-identity small {
+        display: block;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+      .signal-identity small,
+      .signal-level small,
+      .price-plan small {
+        color: var(--muted);
+      }
+      .signal-level {
+        gap: 10px;
+      }
+      .confidence-rail {
+        width: 74px;
+        height: 7px;
+        overflow: hidden;
+        border-radius: 999px;
+        background: #e9efec;
+      }
+      .confidence-rail span {
+        display: block;
+        height: 100%;
+        border-radius: inherit;
+        background: linear-gradient(90deg, #f0b95e, #20cf98);
+      }
+      .confidence-number {
+        color: #0c7b58;
+        font: 800 20px/1 ui-monospace, SFMono-Regular, Consolas, monospace;
+      }
+      .strategy-chips {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 5px;
+      }
+      .strategy-chips span,
+      .signal-state {
+        padding: 5px 8px;
+        border-radius: 999px;
+        background: #eff5f2;
+        color: #51665e;
+        font: 750 10px/1.15 ui-monospace, SFMono-Regular, Consolas, monospace;
+      }
+      .signal-state.Triggered {
+        background: #daf9ed;
+        color: #08734f;
+      }
+      .signal-state.Armed {
+        background: #fff2d5;
+        color: #966000;
+      }
+      .price-plan {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 9px;
+      }
+      .price-plan b {
+        display: block;
+        margin-top: 3px;
+        font-size: 13px;
+      }
+      .scan-side {
+        display: grid;
+        align-content: start;
+        gap: 14px;
+      }
+      .scan-side .card {
+        padding: 19px;
+      }
+      .scan-side h3 {
+        margin: 9px 0;
+        font-size: 21px;
+      }
+      .scan-side p,
+      .scan-fineprint {
+        color: var(--muted);
+        font-size: 13px;
+        line-height: 1.55;
+      }
+      .strategy-list {
+        display: grid;
+        gap: 8px;
+        margin-top: 14px;
+      }
+      .strategy-list div {
+        display: flex;
+        justify-content: space-between;
+        gap: 10px;
+        padding-top: 8px;
+        border-top: 1px solid var(--line);
+        color: #52665e;
+        font-size: 12px;
+      }
+      .voice-button.on {
+        background: #10271f;
+        color: #9cf6d6;
+      }
+      .scan-empty {
+        padding: 30px 22px;
+        border: 1px dashed #bad3c9;
+        border-radius: 15px;
+        background: #f9fcfa;
+        text-align: center;
+      }
+      .scan-empty h3 {
+        margin: 0 0 8px;
+      }
+      .agent-preview {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) auto;
+        gap: 18px;
+        align-items: center;
+        margin-top: 22px;
+        padding: 20px 22px;
+        border-radius: 18px;
+        background: #10271f;
+        color: #eafff7;
+      }
+      .agent-preview h2 {
+        margin: 5px 0;
+        color: #fff;
+        font-family: Georgia, Cambria, serif;
+        font-size: 22px;
+      }
+      .agent-preview p {
+        margin: 0;
+        color: #99b8ac;
+        font-size: 13px;
+      }
+      @media (max-width: 1120px) {
+        .scan-console { grid-template-columns: 1fr; }
+        .scan-side { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+        .signal-card { grid-template-columns: minmax(190px, 1fr) minmax(170px, .8fr) minmax(210px, 1fr); }
+        .signal-card > .signal-state { grid-column: 1 / -1; justify-self: start; }
+      }
+      @media (max-width: 760px) {
+        .scan-command { padding: 20px; }
+        .scan-command::after { font-size: 76px; }
+        .scan-summary { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+        .scan-toolbar { grid-template-columns: 1fr; }
+        .signal-card { grid-template-columns: 1fr; gap: 12px; }
+        .price-plan { padding-top: 10px; border-top: 1px solid var(--line); }
+        .scan-side { grid-template-columns: 1fr; }
+        .agent-preview { grid-template-columns: 1fr; }
+        .agent-preview .btn { width: 100%; }
+        .mobile-menu .scan-menu-item { grid-column: 1 / -1; background: #10271f; color: #b7f7df; }
+      }
+      @media (prefers-reduced-motion: reduce) {
+        .signal-card { transition: none; }
+      }
+    </style>
   </head>
   <body>
     <div class="app">
@@ -1786,7 +2099,8 @@
           <span class="nav-icon">⌂</span>Overview
         </button>
         <button class="nav" data-page="scanner">
-          <span class="nav-icon">⌕</span>Scanner
+          <span class="nav-icon">⌕</span>Agentic scan
+          <span class="nav-badge">AUTO</span>
         </button>
         <button class="nav" data-page="watchlist">
           <span class="nav-icon">◎</span>Watchlist
@@ -1821,7 +2135,7 @@
           <button class="active" data-page="overview">
             ⌂<span>Home</span>
           </button>
-          <button data-page="scanner">⌕<span>Scanner</span></button>
+          <button data-page="scanner">⌕<span>Scan</span></button>
           <button data-page="watchlist">◎<span>Watchlist</span></button>
           <button data-page="paper">↗<span>Paper</span></button>
           <button type="button" id="moreButton" onclick="toggleMobileMenu()">
@@ -1829,6 +2143,9 @@
           </button>
         </nav>
         <div class="mobile-menu" id="mobileMenu">
+          <button class="scan-menu-item" data-page="scanner">
+            Agentic NSE scan
+          </button>
           <button class="news-menu-item" data-page="news">
             AI market news
           </button>
@@ -1927,6 +2244,19 @@
       let marketIntel = null;
       let newsFilter = "all";
       let intelLoading = false;
+      let scanFeed = null;
+      let scanLoading = false;
+      let scanSearch = "";
+      let scanStrategy = "all";
+      let scanThreshold = Number(localStorage.getItem("alpha-scan-threshold") || 65);
+      let voiceEnabled = localStorage.getItem("alpha-voice-alerts") === "on";
+      const DATA_ROOT =
+        location.hostname === "hassainn.github.io" ||
+        location.hostname === "localhost" ||
+        location.hostname === "127.0.0.1" ||
+        location.protocol === "file:"
+          ? "data"
+          : "https://raw.githubusercontent.com/hassainn/mySavings/main/docs/data";
       const $ = (x) => document.querySelector(x);
       function escapeHTML(value = "") {
         return String(value).replace(
@@ -1971,7 +2301,7 @@
         try {
           const suffix = force ? `?refresh=${Date.now()}` : "";
           const response = await fetch(
-            `data/market-intelligence.json${suffix}`,
+            `${DATA_ROOT}/market-intelligence.json${suffix}`,
             {
               cache: "no-store",
             },
@@ -1998,6 +2328,50 @@
         } finally {
           intelLoading = false;
         }
+      }
+      function scanStatus() {
+        if (!scanFeed) return "Loading scan";
+        if (scanFeed.status === "live") return "Upstox scan live";
+        if (scanFeed.status === "partial") return "Coverage building";
+        if (scanFeed.status === "error") return "Feed unavailable";
+        return "Upstox setup needed";
+      }
+      async function loadAgenticScan(force = false) {
+        if (scanLoading) return;
+        scanLoading = true;
+        try {
+          const suffix = force ? `?refresh=${Date.now()}` : "";
+          const response = await fetch(`${DATA_ROOT}/scanner-results.json${suffix}`, {
+            cache: "no-store",
+          });
+          if (!response.ok) throw new Error("Scanner feed unavailable");
+          scanFeed = await response.json();
+          if (currentPage === "overview") overview();
+          if (currentPage === "scanner") scanner();
+          announceFreshSignals();
+        } catch {
+          scanFeed = {
+            status: "error",
+            generatedAt: null,
+            universe: { name: "NSE normal cash equities", scanned: 0, failed: 0 },
+            summary: { qualified: 0, armed: 0, triggered: 0, highConfidence: 0 },
+            strategyLibrary: [],
+            signals: [],
+            disclaimer: "The saved scan could not be loaded. Check the connection and refresh.",
+          };
+          if (currentPage === "overview") overview();
+          if (currentPage === "scanner") scanner();
+        } finally {
+          scanLoading = false;
+        }
+      }
+      function formatPrice(value) {
+        if (!Number.isFinite(Number(value))) return "₹—";
+        return `₹${Number(value).toLocaleString("en-IN", { maximumFractionDigits: 2 })}`;
+      }
+      function scanGeneratedAt() {
+        if (!scanFeed?.generatedAt) return "Awaiting the first authenticated scan";
+        return `Updated ${formatPublished(scanFeed.generatedAt)}`;
       }
       function title(t, btn = "") {
         return `<div class="title"><div><small>ALPHA SWING · NSE</small><h1>${t}</h1></div>${btn}</div>`;
@@ -2043,6 +2417,125 @@
         const statusClass = escapeHTML(marketIntel.status || "setup_required");
         return `<section class="intel-brief"><div><div class="intel-kicker">GEMINI MARKET INTELLIGENCE <span class="intel-status ${statusClass}">${intelStatus()}</span></div><h2>${escapeHTML(marketIntel.marketMood || "Market briefing")}</h2><p>${escapeHTML(marketIntel.marketSummary || "No market summary is available yet.")}</p></div><button class="btn" onclick="page('news')">Open intelligence →</button></section>`;
       }
+      function agenticPreview() {
+        const live = scanFeed?.status === "live";
+        const summary = scanFeed?.summary || {};
+        const headline = live
+          ? `${Number(summary.highConfidence || 0)} high-confidence setups across ${Number(scanFeed.universe?.scanned || 0).toLocaleString("en-IN")} NSE equities`
+          : "Your whole-market strategy engine is ready for Upstox";
+        const detail = live
+          ? `${Number(summary.triggered || 0)} triggered · ${Number(summary.armed || 0)} armed · ${scanGeneratedAt()}`
+          : "Add the read-only Upstox token to run the first scheduled scan.";
+        return `<section class="agent-preview"><div><div class="intel-kicker">AGENTIC STRATEGY SCAN <span class="scan-live ${escapeHTML(scanFeed?.status || "setup_required")}">${escapeHTML(scanStatus())}</span></div><h2>${escapeHTML(headline)}</h2><p>${escapeHTML(detail)}</p></div><button class="btn" onclick="page('scanner')">Open scan →</button></section>`;
+      }
+      function visibleSignals() {
+        const signals = Array.isArray(scanFeed?.signals) ? scanFeed.signals : [];
+        const query = scanSearch.trim().toLowerCase();
+        return signals.filter((signal) => {
+          const strategies = Array.isArray(signal.patterns) ? signal.patterns : [];
+          const matchesText = !query || `${signal.symbol} ${signal.name} ${strategies.join(" ")}`.toLowerCase().includes(query);
+          const matchesStrategy = scanStrategy === "all" || strategies.includes(scanStrategy);
+          return matchesText && matchesStrategy && Number(signal.confidence || 0) >= scanThreshold;
+        });
+      }
+      function signalCard(signal) {
+        const patterns = (signal.patterns || []).slice(0, 3);
+        const encodedSymbol = encodeURIComponent(signal.symbol);
+        return `<button class="signal-card" onclick="openSignal(decodeURIComponent('${encodedSymbol}'))"><span class="signal-identity">${logo(signal.symbol, Number(signal.changePct) < 0)}<span><b>${escapeHTML(signal.symbol)}</b><small>${escapeHTML(signal.name || "NSE equity")} · <span class="${Number(signal.changePct) < 0 ? "down" : "up"}">${Number(signal.changePct || 0) >= 0 ? "+" : ""}${Number(signal.changePct || 0).toFixed(2)}%</span></small></span></span><span><span class="signal-level"><span class="confidence-number">${Number(signal.confidence || 0)}</span><span><small>confidence</small><span class="confidence-rail"><span style="width:${Math.min(99, Number(signal.confidence || 0))}%"></span></span></span></span></span><span class="price-plan"><span><small>Trigger</small><b>${formatPrice(signal.entryTrigger)}</b></span><span><small>Stop</small><b>${formatPrice(signal.stop)}</b></span><span><small>2R target</small><b>${formatPrice(signal.target2R)}</b></span></span><span class="signal-state ${escapeHTML(signal.state || "Watch")}">${escapeHTML(signal.state || "Watch")}</span><span class="strategy-chips" style="grid-column:1/-1">${patterns.map((pattern) => `<span>${escapeHTML(pattern)}</span>`).join("")}<span>${Number(signal.indicators?.relativeVolume || 0).toFixed(2)}× volume</span><span>RSI ${Number(signal.indicators?.rsi14 || 0).toFixed(0)}</span></span></button>`;
+      }
+      function openSignal(symbol) {
+        const signal = (scanFeed?.signals || []).find((item) => item.symbol === symbol);
+        if (!signal) return detail(symbol);
+        const watched = list.some((item) => item.s === symbol);
+        const evidence = (signal.evidence || []).map((item) => `<li>${escapeHTML(item)}</li>`).join("");
+        const sample = Number(signal.validation?.sampleSize || 0);
+        const encodedSymbol = encodeURIComponent(symbol);
+        app.innerHTML = `<div class="title"><div><small>AGENTIC SCAN · ${escapeHTML(signal.state || "WATCH")}</small><h1>${escapeHTML(symbol)}</h1><span class="muted">${escapeHTML(signal.name || "NSE equity")}</span></div><button class="mini" onclick="page('scanner')">← Back to scan</button></div><div class="detail-layout"><section class="card detail-chart"><div class="signal-top"><div class="signal-identity">${logo(symbol, Number(signal.changePct) < 0)}<div><b>${escapeHTML(symbol)}</b><small>${escapeHTML(signal.primaryPattern || "Confluence setup")}</small></div></div><span class="signal-state ${escapeHTML(signal.state || "Watch")}">${escapeHTML(signal.state || "Watch")}</span></div><div class="detail-price">${formatPrice(signal.close)}</div><div class="${Number(signal.changePct) < 0 ? "down" : "up"}">${Number(signal.changePct || 0) >= 0 ? "+" : ""}${Number(signal.changePct || 0).toFixed(2)}% latest session</div><div class="price-plan" style="margin:24px 0"><span><small>Entry trigger</small><b>${formatPrice(signal.entryTrigger)}</b></span><span><small>Structural stop</small><b>${formatPrice(signal.stop)}</b></span><span><small>2R objective</small><b>${formatPrice(signal.target2R)}</b></span></div><h2>Why it ranked</h2><ul class="scan-fineprint">${evidence || "<li>Review the indicator confluence before acting.</li>"}</ul><div class="detail-actions"><button class="btn" onclick="prefillPaper(decodeURIComponent('${encodedSymbol}'),'${Number(signal.entryTrigger || 0)}')">Plan paper trade</button><button class="mini" onclick="${watched ? `removeBySymbol(decodeURIComponent('${encodedSymbol}'))` : `quickAddSignal(decodeURIComponent('${encodedSymbol}'))`}">${watched ? "Remove from watchlist" : "Add to watchlist"}</button><button class="mini" onclick="speakSignalBySymbol(decodeURIComponent('${encodedSymbol}'))">Hear alert</button></div></section><aside class="card detail-aside"><small>EXPLAINABLE CONFIDENCE</small><h3>${Number(signal.confidence || 0)} / 99</h3><div class="confidence-rail" style="width:100%;height:9px"><span style="width:${Math.min(99, Number(signal.confidence || 0))}%"></span></div><div class="quality-list" style="margin-top:18px"><div><span>RSI 14</span><b>${Number(signal.indicators?.rsi14 || 0).toFixed(1)}</b></div><div><span>Relative volume</span><b>${Number(signal.indicators?.relativeVolume || 0).toFixed(2)}×</b></div><div><span>ATR 14</span><b>${formatPrice(signal.indicators?.atr14)}</b></div><div><span>Historical samples</span><b>${sample || "Insufficient"}</b></div><div><span>Observed win rate</span><b>${sample ? `${Number(signal.validation.winRate || 0)}%` : "—"}</b></div></div><p class="pulse-copy" style="text-align:left">Confidence measures present-day indicator agreement. It is not a promised win rate. Historical checks exclude costs and slippage.</p></aside></div>`;
+        document.querySelectorAll("[data-page]").forEach((button) => button.classList.remove("active"));
+        mobileMenu.classList.remove("open");
+      }
+      function setScanSearch(value) {
+        scanSearch = value;
+        renderSignalResults();
+      }
+      function setScanStrategy(value) {
+        scanStrategy = value;
+        renderSignalResults();
+      }
+      function setScanThreshold(value) {
+        scanThreshold = Number(value);
+        localStorage.setItem("alpha-scan-threshold", String(scanThreshold));
+        const label = document.getElementById("thresholdValue");
+        if (label) label.textContent = String(scanThreshold);
+        renderSignalResults();
+      }
+      function renderSignalResults() {
+        const target = document.getElementById("agentSignalResults");
+        if (!target) return;
+        const signals = visibleSignals();
+        target.innerHTML = signals.length
+          ? signals.map(signalCard).join("")
+          : `<div class="scan-empty"><h3>No setups match these controls</h3><p>Lower the confidence threshold or choose another strategy.</p></div>`;
+        const count = document.getElementById("visibleSignalCount");
+        if (count) count.textContent = `${signals.length} shown`;
+      }
+      function speechAvailable() {
+        return "speechSynthesis" in window && "SpeechSynthesisUtterance" in window;
+      }
+      function speakSignal(signal) {
+        if (!speechAvailable() || !signal) return;
+        window.speechSynthesis.cancel();
+        const words = `${signal.state || "Watch"} alert for ${signal.symbol}. ${signal.primaryPattern || "Strategy confluence"}. Confidence ${signal.confidence} out of 99. Entry trigger ${Number(signal.entryTrigger).toFixed(2)} rupees. Structural stop ${Number(signal.stop).toFixed(2)} rupees.`;
+        const utterance = new SpeechSynthesisUtterance(words);
+        utterance.rate = 0.95;
+        utterance.pitch = 1;
+        window.speechSynthesis.speak(utterance);
+      }
+      function speakSignalBySymbol(symbol) {
+        const signal = (scanFeed?.signals || []).find((item) => item.symbol === symbol);
+        if (!signal) return toastMsg("Signal is not available");
+        speakSignal(signal);
+      }
+      async function enableVoiceAlerts() {
+        if (!speechAvailable()) return toastMsg("Voice alerts are not supported on this browser");
+        voiceEnabled = !voiceEnabled;
+        localStorage.setItem("alpha-voice-alerts", voiceEnabled ? "on" : "off");
+        if (voiceEnabled && "Notification" in window && Notification.permission === "default") {
+          await Notification.requestPermission();
+        }
+        scanner();
+        if (voiceEnabled) {
+          const top = visibleSignals()[0];
+          if (top) speakSignal(top);
+          else {
+            const utterance = new SpeechSynthesisUtterance("Alpha Swing voice alerts enabled on this device.");
+            window.speechSynthesis.speak(utterance);
+          }
+        } else {
+          window.speechSynthesis.cancel();
+        }
+        toastMsg(`Voice alerts ${voiceEnabled ? "enabled" : "disabled"} on this device`);
+      }
+      function announceFreshSignals() {
+        if (!voiceEnabled || scanFeed?.status !== "live") return;
+        const seenKey = "alpha-seen-agent-signals";
+        const seen = new Set(JSON.parse(localStorage.getItem(seenKey) || "[]"));
+        const fresh = (scanFeed.signals || []).filter((signal) => {
+          const id = `${scanFeed.generatedAt}:${signal.symbol}:${signal.state}`;
+          return Number(signal.confidence) >= scanThreshold && signal.state === "Triggered" && !seen.has(id);
+        });
+        if (fresh[0]) speakSignal(fresh[0]);
+        fresh.slice(0, 3).forEach((signal) => {
+          const id = `${scanFeed.generatedAt}:${signal.symbol}:${signal.state}`;
+          seen.add(id);
+          if ("Notification" in window && Notification.permission === "granted") {
+            new Notification(`${signal.symbol} · ${signal.primaryPattern}`, {
+              body: `Confidence ${signal.confidence}/99 · trigger ${formatPrice(signal.entryTrigger)} · stop ${formatPrice(signal.stop)}`,
+            });
+          }
+        });
+        localStorage.setItem(seenKey, JSON.stringify([...seen].slice(-200)));
+      }
       function renderNewsCard(item) {
         const sourceUrl = safeUrl(item.sourceUrl);
         const source = sourceUrl
@@ -2076,7 +2569,7 @@
             "Good afternoon, Hassain",
             '<button class="btn" onclick="openStockModal()">＋ Add stock</button>',
           ) +
-          `<section class="card portfolio-hero"><div class="portfolio-top"><span>PAPER PORTFOLIO</span><span class="live-chip">● Market closed</span></div><div class="portfolio-value"><strong>₹5,00,000</strong><span>+1.74%</span></div><div class="portfolio-stats"><div><small>Today's gain</small><b>₹2,344.11</b></div><div><small>Open risk</small><b>₹0.00</b></div><div><small>Buying power</small><b>₹5,00,000</b></div></div>${spark(true, true)}</section>${briefingPreview()}<div class="overview-grid"><div><div class="section-head"><h2>Top setups</h2><button onclick="page('scanner')">View scanner →</button></div><section class="setup-strip">${S.slice(
+          `<section class="card portfolio-hero"><div class="portfolio-top"><span>PAPER PORTFOLIO</span><span class="live-chip">● Market closed</span></div><div class="portfolio-value"><strong>₹5,00,000</strong><span>+1.74%</span></div><div class="portfolio-stats"><div><small>Today's gain</small><b>₹2,344.11</b></div><div><small>Open risk</small><b>₹0.00</b></div><div><small>Buying power</small><b>₹5,00,000</b></div></div>${spark(true, true)}</section>${agenticPreview()}${briefingPreview()}<div class="overview-grid"><div><div class="section-head"><h2>Top setups</h2><button onclick="page('scanner')">View scanner →</button></div><section class="setup-strip">${S.slice(
             0,
             3,
           )
@@ -2115,12 +2608,24 @@
         pQty.focus();
       }
       function scanner() {
+        const statusClass = escapeHTML(scanFeed?.status || "setup_required");
+        const summary = scanFeed?.summary || {};
+        const universe = scanFeed?.universe || {};
+        const strategies = Array.from(
+          new Set([
+            ...(scanFeed?.strategyLibrary || []),
+            ...(scanFeed?.signals || []).flatMap((signal) => signal.patterns || []),
+          ]),
+        );
+        const setupNeeded =
+          scanFeed && ["setup_required", "error"].includes(scanFeed.status);
         app.innerHTML =
           title(
-            "Scanner",
-            '<button class="btn" onclick="exportCsv()">Export CSV</button>',
+            "Agentic scan",
+            '<button class="btn" onclick="loadAgenticScan(true)">↻ Refresh feed</button>',
           ) +
-          `<section class="card"><small>QUALIFIED CANDIDATES</small><h3>Nifty 500 scan</h3><div class="toolbar"><input id="scanSearch" placeholder="Search symbol or company" oninput="filterRows(this.value)"><button class="mini" onclick="filterRows('')">Clear</button></div><div class="rows" id="scanRows">${rows()}</div></section>`;
+          `<section class="card scan-command"><div class="scan-command-top"><div class="intel-kicker">UPSTOX · NSE CASH · DAILY STRATEGY ENGINE</div><span class="scan-live ${statusClass}">${escapeHTML(scanStatus())}</span></div><h2>One ranked view of every actionable setup.</h2><p>Deterministic indicators find structure; the ranking explains why each stock qualifies. Confidence is evidence strength—not a guaranteed win rate or a trade instruction.</p><div class="scan-summary"><div><small>Equities scanned</small><b>${Number(universe.scanned || 0).toLocaleString("en-IN")}</b></div><div><small>Qualified</small><b>${Number(summary.qualified || 0)}</b></div><div><small>Armed</small><b>${Number(summary.armed || 0)}</b></div><div><small>Triggered</small><b>${Number(summary.triggered || 0)}</b></div></div></section><div class="scan-console"><section><div class="scan-toolbar"><input aria-label="Search scan results" value="${escapeHTML(scanSearch)}" placeholder="Search symbol, company or setup" oninput="setScanSearch(this.value)"><select aria-label="Filter by strategy" onchange="setScanStrategy(this.value)"><option value="all">All strategies</option>${strategies.map((strategy) => `<option value="${escapeHTML(strategy)}" ${scanStrategy === strategy ? "selected" : ""}>${escapeHTML(strategy)}</option>`).join("")}</select><button class="mini" onclick="exportCsv()">Export CSV</button></div><div class="scan-meta"><span class="muted"><span id="visibleSignalCount">0 shown</span> · ${escapeHTML(scanGeneratedAt())}</span><label class="muted">Confidence ≥ <b id="thresholdValue">${scanThreshold}</b> <input aria-label="Minimum confidence" type="range" min="40" max="90" step="5" value="${scanThreshold}" oninput="setScanThreshold(this.value)"></label></div><div class="signal-stack" id="agentSignalResults" style="margin-top:14px">${setupNeeded ? `<div class="scan-empty"><h3>Connect Upstox to start the market-wide scan</h3><p>The workflow is installed and will scan NSE normal cash equities after market close. Add the repository secret <b>UPSTOX_ACCESS_TOKEN</b>, then run “Run NSE Agentic Scan” once from GitHub Actions.</p></div>` : ""}</div></section><aside class="scan-side"><section class="card"><small>VOICE + BROWSER ALERTS</small><h3>Alerts on this device</h3><p>Hear the highest-ranked new trigger and receive browser notifications. Your browser requires one tap to enable sound.</p><div class="scan-actions"><button class="mini voice-button ${voiceEnabled ? "on" : ""}" onclick="enableVoiceAlerts()">${voiceEnabled ? "● Voice on" : "Enable voice"}</button><button class="mini" onclick="testAgentVoice()">Test voice</button></div></section><section class="card"><small>STRATEGY LIBRARY</small><h3>Seven explainable lenses</h3><p>Price structure, trend, momentum and participation must agree before a setup ranks highly.</p><div class="strategy-list">${(scanFeed?.strategyLibrary || ["20-day breakout", "Double bottom", "VCP", "Darvas box", "Trend template", "MACD momentum"]).map((strategy) => `<div><span>${escapeHTML(strategy)}</span><b>Rule-based</b></div>`).join("")}</div></section><section class="card"><small>RISK CONTROL</small><h3>No “99% win” claims</h3><p>${escapeHTML(scanFeed?.disclaimer || "Every setup can fail. Validate liquidity, position size and the structural stop before acting.")}</p></section></aside></div>`;
+        if (!setupNeeded) renderSignalResults();
       }
       function watch() {
         app.innerHTML =
@@ -2307,6 +2812,11 @@
         save();
         toastMsg(s + " added to watchlist");
       }
+      function quickAddSignal(symbol) {
+        const signal = (scanFeed?.signals || []).find((item) => item.symbol === symbol);
+        quickAdd(symbol, signal?.name || symbol);
+        if (signal) openSignal(symbol);
+      }
       function toastMsg(message) {
         toast.textContent = message;
         toast.classList.add("show");
@@ -2370,6 +2880,19 @@
           "Test alert: browser notifications are working.",
         );
       }
+      function testAgentVoice() {
+        if (!speechAvailable()) return toastMsg("Voice alerts are not supported on this browser");
+        const top = visibleSignals()[0];
+        if (top) speakSignal(top);
+        else {
+          const utterance = new SpeechSynthesisUtterance(
+            "Alpha Swing test alert. Voice notifications are working on this device.",
+          );
+          window.speechSynthesis.cancel();
+          window.speechSynthesis.speak(utterance);
+        }
+        toastMsg("Voice test started");
+      }
       function filterRows(query) {
         const q = query.toLowerCase();
         document
@@ -2382,7 +2905,24 @@
           );
       }
       function exportCsv() {
-        const lines = [["Symbol", "Company", "Price", "Change", "Score"], ...S]
+        const liveSignals = visibleSignals();
+        const data = liveSignals.length
+          ? liveSignals.map((signal) => [
+              signal.symbol,
+              signal.name,
+              signal.close,
+              signal.changePct,
+              signal.confidence,
+              signal.state,
+              signal.primaryPattern,
+              signal.entryTrigger,
+              signal.stop,
+              signal.target2R,
+              signal.validation?.sampleSize || 0,
+              signal.validation?.winRate ?? "",
+            ])
+          : S.map((item) => [...item, "Preview", "Sample", "", "", "", 0, ""]);
+        const lines = [["Symbol", "Company", "Price", "Change %", "Confidence", "State", "Primary pattern", "Entry trigger", "Stop", "2R target", "Backtest samples", "Observed win rate %"], ...data]
           .map((r) => r.map((v) => `"${v}"`).join(","))
           .join("\n");
         const a = document.createElement("a");
@@ -2441,6 +2981,7 @@
         .forEach((b) => (b.onclick = () => page(b.dataset.page)));
       page("overview");
       loadIntelligence();
+      loadAgenticScan();
       if ("serviceWorker" in navigator)
         navigator.serviceWorker.register("sw.js");
     </script>

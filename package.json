@@ -13,6 +13,7 @@
     "lint": "eslint . --ignore-pattern dist --ignore-pattern .next",
     "db:generate": "drizzle-kit generate",
     "intelligence:refresh": "node scripts/generate-market-intelligence.mjs",
+    "scanner:refresh": "node scripts/scan-upstox-universe.mjs",
     "export:static": "node scripts/export-static.mjs"
   },
   "dependencies": {
