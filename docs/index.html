@@ -1923,6 +1923,31 @@
         grid-template-columns: minmax(0, 1fr) 300px;
         gap: 16px;
       }
+      .scan-chips {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        margin-bottom: 12px;
+      }
+      .scan-chip {
+        min-height: 36px;
+        padding: 0 13px;
+        border: 1px solid var(--line);
+        border-radius: 999px;
+        background: #f7faf8;
+        color: #53665f;
+        font:
+          750 12px/1 ui-monospace,
+          SFMono-Regular,
+          Consolas,
+          monospace;
+        cursor: pointer;
+      }
+      .scan-chip.active {
+        border-color: #b9ead9;
+        background: var(--mint-soft);
+        color: var(--mint-dark);
+      }
       .scan-toolbar {
         display: grid;
         grid-template-columns: minmax(180px, 1fr) auto auto;
@@ -2668,6 +2693,11 @@
       }
       function setScanStrategy(value) {
         scanStrategy = value;
+        const select = document.getElementById("scanStrategySelect");
+        if (select && select.value !== value) select.value = value;
+        document
+          .querySelectorAll(".scan-chip")
+          .forEach((chip) => chip.classList.toggle("active", chip.dataset.strategy === value));
         renderSignalResults();
       }
       function setScanThreshold(value) {
@@ -2846,7 +2876,7 @@
             "Agentic scan",
             '<button class="btn" onclick="loadAgenticScan(true)">↻ Refresh feed</button>',
           ) +
-          `<section class="card scan-command"><div class="scan-command-top"><div class="intel-kicker">UPSTOX · NSE CASH · DAILY STRATEGY ENGINE</div><span class="scan-live ${statusClass}">${escapeHTML(scanStatus())}</span></div><h2>Breakouts and cup-and-handle bases — the setups the top 1% of traders wait for.</h2><p>Deterministic rules rank cup-and-handle and high-tight-flag bases, 20-day and 52-week breakouts, VCP and double-bottom structure, with trend, momentum, volume and candle context. Confidence is evidence strength—not a guaranteed win rate or a trade instruction.</p><div class="scan-summary"><div><small>Equities scanned</small><b>${Number(universe.scanned || 0).toLocaleString("en-IN")}</b></div><div><small>Qualified</small><b>${Number(summary.qualified || 0)}</b></div><div><small>Candle signals</small><b>${Number(summary.candlestickSignals || 0)}</b></div><div><small>Armed</small><b>${Number(summary.armed || 0)}</b></div><div><small>Triggered</small><b>${Number(summary.triggered || 0)}</b></div></div></section><div class="scan-console"><section><div class="scan-toolbar"><input aria-label="Search scan results" value="${escapeHTML(scanSearch)}" placeholder="Search symbol, company or setup" oninput="setScanSearch(this.value)"><select aria-label="Filter by strategy" onchange="setScanStrategy(this.value)"><option value="all">All strategies</option>${strategies.map((strategy) => `<option value="${escapeHTML(strategy)}" ${scanStrategy === strategy ? "selected" : ""}>${escapeHTML(strategy)}</option>`).join("")}</select><button class="mini" onclick="exportCsv()">Export CSV</button></div><div class="scan-meta"><span class="muted"><span id="visibleSignalCount">0 shown</span> · ${escapeHTML(scanGeneratedAt())}</span><label class="muted">Confidence ≥ <b id="thresholdValue">${scanThreshold}</b> <input aria-label="Minimum confidence" type="range" min="40" max="90" step="5" value="${scanThreshold}" oninput="setScanThreshold(this.value)"></label></div><div class="signal-stack" id="agentSignalResults" style="margin-top:14px">${setupNeeded ? `<div class="scan-empty"><h3>Connect Upstox to start the market-wide scan</h3><p>The workflow is installed and will scan NSE normal cash equities after market close. Add the repository secret <b>UPSTOX_ACCESS_TOKEN</b>, then run “Run NSE Agentic Scan” once from GitHub Actions.</p></div>` : ""}</div></section><aside class="scan-side"><section class="card"><small>VOICE + BROWSER ALERTS</small><h3>Alerts on this device</h3><p>Hear fresh triggered setups and strong bearish candle cautions. Your browser requires one tap to enable sound.</p><div class="scan-actions"><button class="mini voice-button ${voiceEnabled ? "on" : ""}" onclick="enableVoiceAlerts()">${voiceEnabled ? "● Voice on" : "Enable voice"}</button><button class="mini" onclick="testAgentVoice()">Test voice</button></div></section><section class="card"><small>STRATEGY LIBRARY</small><h3>Base &amp; breakout library</h3><p>Elite base patterns — cup-and-handle, high tight flag, VCP — plus breakouts, trend, momentum, volume and candle context must agree before a long setup ranks highly.</p><div class="strategy-list">${(scanFeed?.strategyLibrary || ["Cup & handle", "High tight flag", "20-day breakout", "52-week high", "VCP", "Double bottom", "Darvas box", "Trend template"]).map((strategy) => `<div><span>${escapeHTML(strategy)}</span><b>Rule-based</b></div>`).join("")}</div></section><section class="card"><small>RISK CONTROL</small><h3>No “99% win” claims</h3><p>${escapeHTML(scanFeed?.disclaimer || "Every setup can fail. Validate liquidity, position size and the structural stop before acting.")}</p></section></aside></div>`;
+          `<section class="card scan-command"><div class="scan-command-top"><div class="intel-kicker">UPSTOX · NSE CASH · DAILY STRATEGY ENGINE</div><span class="scan-live ${statusClass}">${escapeHTML(scanStatus())}</span></div><h2>Breakouts and cup-and-handle bases — the setups the top 1% of traders wait for.</h2><p>Deterministic rules rank cup-and-handle and high-tight-flag bases, 20-day and 52-week breakouts, VCP and double-bottom structure, with trend, momentum, volume and candle context. Confidence is evidence strength—not a guaranteed win rate or a trade instruction.</p><div class="scan-summary"><div><small>Equities scanned</small><b>${Number(universe.scanned || 0).toLocaleString("en-IN")}</b></div><div><small>Qualified</small><b>${Number(summary.qualified || 0)}</b></div><div><small>Candle signals</small><b>${Number(summary.candlestickSignals || 0)}</b></div><div><small>Armed</small><b>${Number(summary.armed || 0)}</b></div><div><small>Triggered</small><b>${Number(summary.triggered || 0)}</b></div></div></section><div class="scan-console"><section><div class="scan-chips">${[["all", "All setups"], ["Cup & handle", "Cup & Handle"], ["High tight flag", "High tight flag"], ["20-day breakout", "Breakout"], ["52-week high", "52-week high"], ["VCP", "VCP"]].map(([value, label]) => `<button class="scan-chip ${scanStrategy === value ? "active" : ""}" data-strategy="${escapeHTML(value)}" onclick="setScanStrategy(this.dataset.strategy)">${escapeHTML(label)}</button>`).join("")}</div><div class="scan-toolbar"><input aria-label="Search scan results" value="${escapeHTML(scanSearch)}" placeholder="Search symbol, company or setup" oninput="setScanSearch(this.value)"><select id="scanStrategySelect" aria-label="Filter by strategy" onchange="setScanStrategy(this.value)"><option value="all">All strategies</option>${strategies.map((strategy) => `<option value="${escapeHTML(strategy)}" ${scanStrategy === strategy ? "selected" : ""}>${escapeHTML(strategy)}</option>`).join("")}</select><button class="mini" onclick="exportCsv()">Export CSV</button></div><div class="scan-meta"><span class="muted"><span id="visibleSignalCount">0 shown</span> · ${escapeHTML(scanGeneratedAt())}</span><label class="muted">Confidence ≥ <b id="thresholdValue">${scanThreshold}</b> <input aria-label="Minimum confidence" type="range" min="40" max="90" step="5" value="${scanThreshold}" oninput="setScanThreshold(this.value)"></label></div><div class="signal-stack" id="agentSignalResults" style="margin-top:14px">${setupNeeded ? `<div class="scan-empty"><h3>Connect Upstox to start the market-wide scan</h3><p>The workflow is installed and will scan NSE normal cash equities after market close. Add the repository secret <b>UPSTOX_ACCESS_TOKEN</b>, then run “Run NSE Agentic Scan” once from GitHub Actions.</p></div>` : ""}</div></section><aside class="scan-side"><section class="card"><small>VOICE + BROWSER ALERTS</small><h3>Alerts on this device</h3><p>Hear fresh triggered setups and strong bearish candle cautions. Your browser requires one tap to enable sound.</p><div class="scan-actions"><button class="mini voice-button ${voiceEnabled ? "on" : ""}" onclick="enableVoiceAlerts()">${voiceEnabled ? "● Voice on" : "Enable voice"}</button><button class="mini" onclick="testAgentVoice()">Test voice</button></div></section><section class="card"><small>STRATEGY LIBRARY</small><h3>Base &amp; breakout library</h3><p>Elite base patterns — cup-and-handle, high tight flag, VCP — plus breakouts, trend, momentum, volume and candle context must agree before a long setup ranks highly.</p><div class="strategy-list">${(scanFeed?.strategyLibrary || ["Cup & handle", "High tight flag", "20-day breakout", "52-week high", "VCP", "Double bottom", "Darvas box", "Trend template"]).map((strategy) => `<div><span>${escapeHTML(strategy)}</span><b>Rule-based</b></div>`).join("")}</div></section><section class="card"><small>RISK CONTROL</small><h3>No “99% win” claims</h3><p>${escapeHTML(scanFeed?.disclaimer || "Every setup can fail. Validate liquidity, position size and the structural stop before acting.")}</p></section></aside></div>`;
         if (!setupNeeded) renderSignalResults();
       }
       function watch() {
