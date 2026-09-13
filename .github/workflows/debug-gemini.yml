@@ -1,0 +1,18 @@
+name: Debug Gemini structured output
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  debug:
+    runs-on: ubuntu-latest
+    env:
+      GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+      GEMINI_MODEL: gemini-3.8-flash
+    steps:
+      - uses: actions/checkout@v4
+      - name: Probe Gemini interactions API
+        run: node scripts/debug-gemini.mjs
