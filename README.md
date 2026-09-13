@@ -47,6 +47,8 @@ Gemini produces a research summary, not a licensed exchange price feed. Connect 
 The scanner runs after the NSE cash session and reads the daily Upstox instrument master plus daily historical candles. It filters normal NSE cash equities, then ranks explainable setups using:
 
 - 20-day and 52-week breakouts
+- cup-and-handle bases (rounded cup, shallow upper-half handle, volume dry-up, buy pivot)
+- high tight flags (near-vertical flagpole into a tight consolidation)
 - double-bottom structure
 - volatility contraction (VCP)
 - Darvas boxes

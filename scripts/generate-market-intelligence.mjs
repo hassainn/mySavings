@@ -84,6 +84,9 @@ const schema = {
           "headline",
           "summary",
           "sentiment",
+          "importance",
+          "catalystType",
+          "timeHorizon",
           "impact",
           "sourceName",
           "sourceUrl",
@@ -101,6 +104,30 @@ const schema = {
             type: "string",
             enum: ["Positive", "Neutral", "Negative", "Mixed"],
           },
+          importance: {
+            type: "string",
+            enum: ["High", "Medium", "Low"],
+          },
+          catalystType: {
+            type: "string",
+            enum: [
+              "Earnings",
+              "Guidance",
+              "Order win",
+              "Rating change",
+              "Block deal",
+              "Ownership",
+              "Index change",
+              "Regulatory",
+              "Macro/flows",
+              "Corporate action",
+              "Other",
+            ],
+          },
+          timeHorizon: {
+            type: "string",
+            enum: ["Today", "This week", "Watch"],
+          },
           impact: { type: "string" },
           sourceName: { type: "string" },
           sourceUrl: { type: "string" },
@@ -113,12 +140,16 @@ const schema = {
 };
 
 const today = new Date();
-const prompt = `You are the research editor for Alpha Swing AI, an Indian swing-trading decision workspace.
+const prompt = `You are the research editor for Alpha Swing AI, an Indian (NSE) swing-trading workspace whose users trade breakouts, cup-and-handle and other base breakouts on a multi-day to multi-week horizon.
 
 Current time: ${today.toISOString()}.
-Use Google Search to research only reputable, recent sources about Indian equities, NSE/BSE market conditions, sector momentum and company-specific developments. Prefer exchange filings, company announcements, SEBI/RBI/government releases, Reuters, Bloomberg, Business Standard, The Economic Times, Moneycontrol and similarly established publications. Focus on information published in the last 48 hours; use an older item only when it remains an active catalyst and state the date.
+Use Google Search to research only reputable, recent sources. Prefer exchange filings (NSE/BSE), company announcements, SEBI/RBI/government releases, Reuters, Bloomberg, Business Standard, The Economic Times, Mint, Moneycontrol and similarly established desks. Focus on items published in the last 48 hours; use an older item only if it is still an active, unresolved catalyst, and state its date.
 
-Cover the broad market plus the user's watchlist: HAL, BEL, TRENT, CGPOWER and COCHINSHIP. Rank the sectors showing the strongest evidence-backed momentum, but call them Leading only when price participation and credible catalysts agree. Separate facts from inference. Each news item must explain why it matters to a swing trader, name the source, include its real HTTPS article URL and use an ISO-8601 publishedAt value when available.
+ESSENTIALITY BAR — a swing trader only cares about news that can move price or change a setup's odds over the next few sessions. INCLUDE, in priority order: quarterly results and management guidance; large order wins, capex and capacity news; credible analyst rating/target changes; block/bulk deals and promoter/insider/FII-DII ownership shifts; index inclusion/exclusion; regulatory or policy actions; scheduled catalysts in the next 1-2 weeks (e.g. results dates, board meetings) — for a scheduled event set timeHorizon to "This week" or "Watch" and note the event date in the summary. EXCLUDE low-signal noise: routine open/close/"market ends higher" recaps with no catalyst, pure opinion/prediction pieces, target-price hype, and rumours without a named source.
+
+For every item: set "importance" to High only if it can plausibly move the stock or the setup this week (Medium = notable context, Low = background); set "catalystType" to the best-fitting category; set "timeHorizon" (Today / This week / Watch); and make "impact" a concrete, one-line swing-trade read (what it means for the trend, base or breakout — never a buy/sell/target call). Order the news array most-essential first (all High before Medium before Low).
+
+Cover the broad market plus the user's watchlist: HAL, BEL, TRENT, CGPOWER and COCHINSHIP; add other clearly market-moving NSE names when warranted. Rank sectors by breakout leadership, marking one Leading only when price participation and credible catalysts agree. Separate facts from inference. Name the source, include its real HTTPS article URL, and use an ISO-8601 publishedAt when available.
 
 Do not invent prices, filings, dates, quotes or URLs. Do not give buy, sell, target-price or guaranteed-return advice. If credible recent information is unavailable, say so rather than filling the gap. Keep summaries concise and professional.`;
 
@@ -202,14 +233,47 @@ const uniqueSources = Array.from(
   ).values(),
 );
 
-intelligence.news = (intelligence.news || []).map((item, index) => {
-  const fallback = uniqueSources[index % Math.max(uniqueSources.length, 1)];
-  return {
-    ...item,
-    sourceName: item.sourceName || fallback?.title || "Source",
-    sourceUrl: isHttps(item.sourceUrl) ? item.sourceUrl : fallback?.url || "",
-  };
-});
+const IMPORTANCE_RANK = { High: 0, Medium: 1, Low: 2 };
+const oneOf = (value, allowed, fallback) =>
+  allowed.includes(value) ? value : fallback;
+const publishedTime = (value) => {
+  const time = Date.parse(value);
+  return Number.isNaN(time) ? 0 : time;
+};
+
+intelligence.news = (intelligence.news || [])
+  .map((item, index) => {
+    const fallback = uniqueSources[index % Math.max(uniqueSources.length, 1)];
+    return {
+      ...item,
+      importance: oneOf(item.importance, ["High", "Medium", "Low"], "Medium"),
+      catalystType: oneOf(
+        item.catalystType,
+        [
+          "Earnings",
+          "Guidance",
+          "Order win",
+          "Rating change",
+          "Block deal",
+          "Ownership",
+          "Index change",
+          "Regulatory",
+          "Macro/flows",
+          "Corporate action",
+          "Other",
+        ],
+        "Other",
+      ),
+      timeHorizon: oneOf(item.timeHorizon, ["Today", "This week", "Watch"], "Watch"),
+      sourceName: item.sourceName || fallback?.title || "Source",
+      sourceUrl: isHttps(item.sourceUrl) ? item.sourceUrl : fallback?.url || "",
+    };
+  })
+  .sort(
+    (a, b) =>
+      IMPORTANCE_RANK[a.importance] - IMPORTANCE_RANK[b.importance] ||
+      publishedTime(b.publishedAt) - publishedTime(a.publishedAt),
+  );
 
 const result = {
   status: "live",

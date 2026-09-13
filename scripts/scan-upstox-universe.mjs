@@ -150,6 +150,106 @@ function detectDarvas(candles) {
   };
 }
 
+function detectCupAndHandle(candles) {
+  const n = candles.length;
+  if (n < 80) return { active: false };
+  const high = (i) => candles[i].high;
+  const low = (i) => candles[i].low;
+  const close = candles[n - 1].close;
+  const argMaxHigh = (a, b) => {
+    a = Math.max(0, a);
+    b = Math.min(n - 1, b);
+    let idx = a;
+    for (let i = a + 1; i <= b; i += 1) if (high(i) > high(idx)) idx = i;
+    return idx;
+  };
+  const argMinLow = (a, b) => {
+    a = Math.max(0, a);
+    b = Math.min(n - 1, b);
+    let idx = a;
+    for (let i = a + 1; i <= b; i += 1) if (low(i) < low(idx)) idx = i;
+    return idx;
+  };
+  // Right rim: the dominant peak in the last ~40 sessions; the handle forms after it.
+  const rr = argMaxHigh(n - 40, n - 4);
+  const rightRim = high(rr);
+  const handleLen = n - 1 - rr;
+  if (handleLen < 3 || handleLen > 35) return { active: false };
+  // Left rim: the prior high that opens the cup, 20-160 sessions before the right rim.
+  const lr = argMaxHigh(rr - 160, rr - 20);
+  const leftRim = high(lr);
+  const cupLen = rr - lr;
+  if (cupLen < 20 || cupLen > 160) return { active: false };
+  if (rightRim < leftRim * 0.85 || rightRim > leftRim * 1.1) return { active: false };
+  // Cup bottom strictly between the two rims.
+  const cl = argMinLow(lr + 1, rr - 1);
+  const cupLow = low(cl);
+  const rimAvg = (leftRim + rightRim) / 2;
+  const cupDepth = (rimAvg - cupLow) / rimAvg;
+  if (cupDepth < 0.12 || cupDepth > 0.5) return { active: false };
+  // Rounded U, not a sharp V: both legs took real time.
+  if (cl - lr < cupLen * 0.25 || rr - cl < cupLen * 0.25) return { active: false };
+  // A cup is a correction after an advance: price must have risen into the left rim.
+  const preLow = low(argMinLow(lr - 40, lr));
+  if (leftRim < preLow * 1.2) return { active: false };
+  // Handle: a shallow pullback that holds the upper half of the cup.
+  const handleLow = low(argMinLow(rr + 1, n - 1));
+  const pivot = rightRim;
+  const handleDepth = (pivot - handleLow) / pivot;
+  if (handleDepth < 0.02 || handleDepth > 0.15 || handleDepth > cupDepth * 0.5) {
+    return { active: false };
+  }
+  if (handleLow < cupLow + (pivot - cupLow) * 0.5) return { active: false };
+  // Forming near, or just clearing, the pivot - not far below and not already extended.
+  if (close < pivot * 0.9 || close > pivot * 1.05) return { active: false };
+  const cupVol = mean(candles.slice(lr, rr + 1).map((candle) => candle.volume));
+  const handleVol = mean(candles.slice(rr + 1, n).map((candle) => candle.volume));
+  const volumeDryUp = cupVol > 0 && handleVol < cupVol * 0.85;
+  return {
+    active: true,
+    pivot,
+    cupLow,
+    leftRim,
+    rightRim,
+    handleLow,
+    cupDepthPct: round(cupDepth * 100, 1),
+    handleDepthPct: round(handleDepth * 100, 1),
+    cupSessions: cupLen,
+    handleSessions: handleLen,
+    volumeDryUp,
+  };
+}
+
+function detectHighTightFlag(candles) {
+  const n = candles.length;
+  if (n < 60) return { active: false };
+  const close = candles[n - 1].close;
+  // A short, tight flag (5-25 sessions) resting on top of a near-vertical run.
+  for (let flagLen = 5; flagLen <= 25; flagLen += 1) {
+    const flag = candles.slice(n - flagLen, n);
+    const flagHigh = highest(flag.map((candle) => candle.high));
+    const flagLow = lowest(flag.map((candle) => candle.low));
+    const flagDepth = (flagHigh - flagLow) / flagHigh;
+    if (flagDepth > 0.25) continue;
+    const poleStart = n - flagLen - 45;
+    if (poleStart < 0) continue;
+    const baseLow = lowest(
+      candles.slice(poleStart, n - flagLen).map((candle) => candle.low),
+    );
+    const advance = (flagHigh - baseLow) / baseLow;
+    if (advance < 0.9) continue; // ~90-100%+ move builds the flagpole
+    if (close < flagHigh * 0.9) continue; // consolidating just under the pivot
+    return {
+      active: true,
+      pivot: flagHigh,
+      flagDepthPct: round(flagDepth * 100, 1),
+      advancePct: round(advance * 100, 0),
+      flagSessions: flagLen,
+    };
+  }
+  return { active: false };
+}
+
 function detectCandlestickPatterns(candles) {
   if (candles.length < 3) return [];
   const current = candles.at(-1);
@@ -351,6 +451,8 @@ function analyze(instrument, candles) {
   const doubleBottom = detectDoubleBottom(candles);
   const vcp = detectVcp(candles);
   const darvas = detectDarvas(candles);
+  const cupHandle = detectCupAndHandle(candles);
+  const highTightFlag = detectHighTightFlag(candles);
   const candlestickPatterns = detectCandlestickPatterns(candles);
   const tags = [];
   const evidence = [];
@@ -368,6 +470,17 @@ function analyze(instrument, candles) {
   if (doubleBottom.active) { tags.push("Double bottom"); evidence.push("Two aligned swing lows with neckline pressure"); score += 13; }
   if (vcp.active) { tags.push("VCP"); evidence.push("Contracting ranges with volume dry-up"); score += 13; }
   if (darvas.active) { tags.push("Darvas box"); evidence.push("Tight 30-session box near its ceiling"); score += 8; }
+  if (cupHandle.active) {
+    tags.push("Cup & handle");
+    evidence.push(`Rounded cup ${cupHandle.cupDepthPct}% deep with a ${cupHandle.handleDepthPct}% handle in the upper half of the base`);
+    if (cupHandle.volumeDryUp) evidence.push("Volume dried up through the handle");
+    score += 17;
+  }
+  if (highTightFlag.active) {
+    tags.push("High tight flag");
+    evidence.push(`Flagpole advanced ${highTightFlag.advancePct}% then paused in a tight ${highTightFlag.flagDepthPct}% flag`);
+    score += 12;
+  }
   for (const pattern of candlestickPatterns) {
     tags.push(`Candle · ${pattern.name}`);
     evidence.push(pattern.note);
@@ -380,7 +493,7 @@ function analyze(instrument, candles) {
     score += 5;
   }
 
-  const actionablePatterns = ["20-day breakout", "52-week high", "Double bottom", "VCP", "Darvas box", "Near breakout"];
+  const actionablePatterns = ["20-day breakout", "52-week high", "Double bottom", "VCP", "Darvas box", "Cup & handle", "High tight flag", "Near breakout"];
   const candlePatternNames = candlestickPatterns.map((pattern) => `Candle · ${pattern.name}`);
   const meaningful = tags.some((tag) => actionablePatterns.includes(tag)) || candlestickPatterns.length > 0;
   if (!meaningful) return null;
@@ -389,7 +502,7 @@ function analyze(instrument, candles) {
   if (!hasLongStructure && dominantCandle) score = Math.max(score, 50 + dominantCandle.strength * 6);
   const bearishCaution = dominantCandle?.bias === "bearish" && dominantCandle.strength >= 3;
   const confidence = Math.max(1, Math.min(99, Math.round(score)));
-  const pivotCandidates = [priorHigh20, doubleBottom.neckline, vcp.pivot, darvas.ceiling].filter(Number.isFinite);
+  const pivotCandidates = [priorHigh20, doubleBottom.neckline, vcp.pivot, darvas.ceiling, cupHandle.pivot, highTightFlag.pivot].filter(Number.isFinite);
   const entryTrigger = Math.max(...pivotCandidates) * 1.001;
   const structuralLow = lowest(candles.slice(-10).map((x) => x.low));
   const stop = Math.max(structuralLow, entryTrigger - atr14 * 2);
@@ -528,8 +641,8 @@ const partitionResult = {
   },
   marketMood: summarizeBreadth(breadthCounts),
   strategyLibrary: [
-    "20-day breakout", "52-week high", "Double bottom", "VCP",
-    "Darvas box", "Trend template", "MACD momentum",
+    "20-day breakout", "52-week high", "Cup & handle", "High tight flag",
+    "Double bottom", "VCP", "Darvas box", "Trend template", "MACD momentum",
     "Candle · Bullish engulfing", "Candle · Bearish engulfing",
     "Candle · Morning star", "Candle · Evening star", "Candle · Hammer",
     "Candle · Shooting star", "Candle · Piercing line", "Candle · Dark cloud cover",

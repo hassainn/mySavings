@@ -1684,6 +1684,46 @@
         background: #fff4da;
         color: #986100;
       }
+      .priority {
+        padding: 5px 9px;
+        border-radius: 999px;
+        font:
+          800 10px/1 ui-monospace,
+          SFMono-Regular,
+          Consolas,
+          monospace;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+      }
+      .priority.High {
+        background: #10271f;
+        color: #8ff4d0;
+      }
+      .priority.Medium {
+        background: #eef3f0;
+        color: #53665f;
+      }
+      .priority.Low {
+        background: #f4f6f5;
+        color: #9aa9a2;
+      }
+      .news-tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 6px;
+        margin: 13px 0 2px;
+      }
+      .news-tag {
+        padding: 4px 8px;
+        border-radius: 999px;
+        background: #f2f7f4;
+        color: #53665f;
+        font:
+          750 11px/1.2 ui-monospace,
+          SFMono-Regular,
+          Consolas,
+          monospace;
+      }
       .news-card h3 {
         margin: 17px 0 10px;
         font-family: Georgia, Cambria, "Times New Roman", serif;
@@ -2703,7 +2743,18 @@
         )
           ? item.sentiment
           : "Neutral";
-        return `<article class="card news-card"><div class="news-meta"><span class="news-scope">${escapeHTML(item.category || "market")} · ${escapeHTML(item.symbol || "NSE")}</span><span class="sentiment ${sentiment}">${sentiment}</span></div><h3>${escapeHTML(item.headline || "Market update")}</h3><p>${escapeHTML(item.summary || "No summary available.")}</p><div class="impact-note"><b>Trading relevance</b><br>${escapeHTML(item.impact || "Review the source and price reaction.")}</div><div class="news-footer"><span>${formatPublished(item.publishedAt)}</span>${source}</div></article>`;
+        const importance = ["High", "Medium", "Low"].includes(item.importance)
+          ? item.importance
+          : "Medium";
+        const priorityLabel = importance === "High" ? "● Essential" : importance;
+        const horizon = ["Today", "This week", "Watch"].includes(item.timeHorizon)
+          ? item.timeHorizon
+          : "";
+        const catalyst =
+          item.catalystType && item.catalystType !== "Other"
+            ? escapeHTML(item.catalystType)
+            : "";
+        return `<article class="card news-card"><div class="news-meta"><span class="priority ${importance}">${priorityLabel}</span><span class="sentiment ${sentiment}">${sentiment}</span></div><div class="news-tags"><span class="news-scope">${escapeHTML(item.category || "market")} · ${escapeHTML(item.symbol || "NSE")}</span>${catalyst ? `<span class="news-tag">${catalyst}</span>` : ""}${horizon ? `<span class="news-tag">${escapeHTML(horizon)}</span>` : ""}</div><h3>${escapeHTML(item.headline || "Market update")}</h3><p>${escapeHTML(item.summary || "No summary available.")}</p><div class="impact-note"><b>Swing-trade read</b><br>${escapeHTML(item.impact || "Review the source and price reaction.")}</div><div class="news-footer"><span>${formatPublished(item.publishedAt)}</span>${source}</div></article>`;
       }
       function stockNewsFor(symbol) {
         const items = (marketIntel?.news || []).filter(
@@ -2781,7 +2832,7 @@
             "Agentic scan",
             '<button class="btn" onclick="loadAgenticScan(true)">↻ Refresh feed</button>',
           ) +
-          `<section class="card scan-command"><div class="scan-command-top"><div class="intel-kicker">UPSTOX · NSE CASH · DAILY STRATEGY ENGINE</div><span class="scan-live ${statusClass}">${escapeHTML(scanStatus())}</span></div><h2>Structure, momentum and candle context in one ranked view.</h2><p>Deterministic rules recognize bullish, bearish and neutral candlestick patterns alongside breakouts and trend indicators. Confidence is evidence strength—not a guaranteed win rate or a trade instruction.</p><div class="scan-summary"><div><small>Equities scanned</small><b>${Number(universe.scanned || 0).toLocaleString("en-IN")}</b></div><div><small>Qualified</small><b>${Number(summary.qualified || 0)}</b></div><div><small>Candle signals</small><b>${Number(summary.candlestickSignals || 0)}</b></div><div><small>Armed</small><b>${Number(summary.armed || 0)}</b></div><div><small>Triggered</small><b>${Number(summary.triggered || 0)}</b></div></div></section><div class="scan-console"><section><div class="scan-toolbar"><input aria-label="Search scan results" value="${escapeHTML(scanSearch)}" placeholder="Search symbol, company or setup" oninput="setScanSearch(this.value)"><select aria-label="Filter by strategy" onchange="setScanStrategy(this.value)"><option value="all">All strategies</option>${strategies.map((strategy) => `<option value="${escapeHTML(strategy)}" ${scanStrategy === strategy ? "selected" : ""}>${escapeHTML(strategy)}</option>`).join("")}</select><button class="mini" onclick="exportCsv()">Export CSV</button></div><div class="scan-meta"><span class="muted"><span id="visibleSignalCount">0 shown</span> · ${escapeHTML(scanGeneratedAt())}</span><label class="muted">Confidence ≥ <b id="thresholdValue">${scanThreshold}</b> <input aria-label="Minimum confidence" type="range" min="40" max="90" step="5" value="${scanThreshold}" oninput="setScanThreshold(this.value)"></label></div><div class="signal-stack" id="agentSignalResults" style="margin-top:14px">${setupNeeded ? `<div class="scan-empty"><h3>Connect Upstox to start the market-wide scan</h3><p>The workflow is installed and will scan NSE normal cash equities after market close. Add the repository secret <b>UPSTOX_ACCESS_TOKEN</b>, then run “Run NSE Agentic Scan” once from GitHub Actions.</p></div>` : ""}</div></section><aside class="scan-side"><section class="card"><small>VOICE + BROWSER ALERTS</small><h3>Alerts on this device</h3><p>Hear fresh triggered setups and strong bearish candle cautions. Your browser requires one tap to enable sound.</p><div class="scan-actions"><button class="mini voice-button ${voiceEnabled ? "on" : ""}" onclick="enableVoiceAlerts()">${voiceEnabled ? "● Voice on" : "Enable voice"}</button><button class="mini" onclick="testAgentVoice()">Test voice</button></div></section><section class="card"><small>STRATEGY LIBRARY</small><h3>Structure + candle library</h3><p>Price structure, trend, momentum, participation and candle context must agree before a long setup ranks highly.</p><div class="strategy-list">${(scanFeed?.strategyLibrary || ["20-day breakout", "Double bottom", "VCP", "Darvas box", "Candle · Bullish engulfing", "Candle · Bearish engulfing", "Candle · Hammer", "Candle · Shooting star"]).map((strategy) => `<div><span>${escapeHTML(strategy)}</span><b>Rule-based</b></div>`).join("")}</div></section><section class="card"><small>RISK CONTROL</small><h3>No “99% win” claims</h3><p>${escapeHTML(scanFeed?.disclaimer || "Every setup can fail. Validate liquidity, position size and the structural stop before acting.")}</p></section></aside></div>`;
+          `<section class="card scan-command"><div class="scan-command-top"><div class="intel-kicker">UPSTOX · NSE CASH · DAILY STRATEGY ENGINE</div><span class="scan-live ${statusClass}">${escapeHTML(scanStatus())}</span></div><h2>Breakouts and cup-and-handle bases — the setups the top 1% of traders wait for.</h2><p>Deterministic rules rank cup-and-handle and high-tight-flag bases, 20-day and 52-week breakouts, VCP and double-bottom structure, with trend, momentum, volume and candle context. Confidence is evidence strength—not a guaranteed win rate or a trade instruction.</p><div class="scan-summary"><div><small>Equities scanned</small><b>${Number(universe.scanned || 0).toLocaleString("en-IN")}</b></div><div><small>Qualified</small><b>${Number(summary.qualified || 0)}</b></div><div><small>Candle signals</small><b>${Number(summary.candlestickSignals || 0)}</b></div><div><small>Armed</small><b>${Number(summary.armed || 0)}</b></div><div><small>Triggered</small><b>${Number(summary.triggered || 0)}</b></div></div></section><div class="scan-console"><section><div class="scan-toolbar"><input aria-label="Search scan results" value="${escapeHTML(scanSearch)}" placeholder="Search symbol, company or setup" oninput="setScanSearch(this.value)"><select aria-label="Filter by strategy" onchange="setScanStrategy(this.value)"><option value="all">All strategies</option>${strategies.map((strategy) => `<option value="${escapeHTML(strategy)}" ${scanStrategy === strategy ? "selected" : ""}>${escapeHTML(strategy)}</option>`).join("")}</select><button class="mini" onclick="exportCsv()">Export CSV</button></div><div class="scan-meta"><span class="muted"><span id="visibleSignalCount">0 shown</span> · ${escapeHTML(scanGeneratedAt())}</span><label class="muted">Confidence ≥ <b id="thresholdValue">${scanThreshold}</b> <input aria-label="Minimum confidence" type="range" min="40" max="90" step="5" value="${scanThreshold}" oninput="setScanThreshold(this.value)"></label></div><div class="signal-stack" id="agentSignalResults" style="margin-top:14px">${setupNeeded ? `<div class="scan-empty"><h3>Connect Upstox to start the market-wide scan</h3><p>The workflow is installed and will scan NSE normal cash equities after market close. Add the repository secret <b>UPSTOX_ACCESS_TOKEN</b>, then run “Run NSE Agentic Scan” once from GitHub Actions.</p></div>` : ""}</div></section><aside class="scan-side"><section class="card"><small>VOICE + BROWSER ALERTS</small><h3>Alerts on this device</h3><p>Hear fresh triggered setups and strong bearish candle cautions. Your browser requires one tap to enable sound.</p><div class="scan-actions"><button class="mini voice-button ${voiceEnabled ? "on" : ""}" onclick="enableVoiceAlerts()">${voiceEnabled ? "● Voice on" : "Enable voice"}</button><button class="mini" onclick="testAgentVoice()">Test voice</button></div></section><section class="card"><small>STRATEGY LIBRARY</small><h3>Base &amp; breakout library</h3><p>Elite base patterns — cup-and-handle, high tight flag, VCP — plus breakouts, trend, momentum, volume and candle context must agree before a long setup ranks highly.</p><div class="strategy-list">${(scanFeed?.strategyLibrary || ["Cup & handle", "High tight flag", "20-day breakout", "52-week high", "VCP", "Double bottom", "Darvas box", "Trend template"]).map((strategy) => `<div><span>${escapeHTML(strategy)}</span><b>Rule-based</b></div>`).join("")}</div></section><section class="card"><small>RISK CONTROL</small><h3>No “99% win” claims</h3><p>${escapeHTML(scanFeed?.disclaimer || "Every setup can fail. Validate liquidity, position size and the structural stop before acting.")}</p></section></aside></div>`;
         if (!setupNeeded) renderSignalResults();
       }
       function watch() {
@@ -2812,10 +2863,21 @@
           ? marketIntel.sectors
           : [];
         const allNews = Array.isArray(marketIntel.news) ? marketIntel.news : [];
-        const visibleNews =
+        const importanceRank = { High: 0, Medium: 1, Low: 2 };
+        const sortByImportance = (items) =>
+          [...items].sort(
+            (a, b) =>
+              (importanceRank[a.importance] ?? 1) - (importanceRank[b.importance] ?? 1) ||
+              (Date.parse(b.publishedAt) || 0) - (Date.parse(a.publishedAt) || 0),
+          );
+        const essentialCount = allNews.filter((item) => item.importance === "High").length;
+        const filteredNews =
           newsFilter === "all"
             ? allNews
-            : allNews.filter((item) => item.category === newsFilter);
+            : newsFilter === "essential"
+              ? allNews.filter((item) => item.importance === "High")
+              : allNews.filter((item) => item.category === newsFilter);
+        const visibleNews = sortByImportance(filteredNews);
         const statusClass = ["live", "setup_required", "error"].includes(
           marketIntel.status,
         )
@@ -2851,7 +2913,7 @@
                   .join("")
               : '<div class="notice">Sector intelligence will appear after the next Gemini refresh.</div>'
           }</section>` +
-          `<div class="section-head"><h2>Professional news desk</h2><span class="muted">Market · sector · stock</span></div><div class="news-toolbar">${["all", "market", "sector", "stock"].map((filter) => `<button class="news-filter ${newsFilter === filter ? "active" : ""}" onclick="setNewsFilter('${filter}')">${filter === "all" ? "All coverage" : filter[0].toUpperCase() + filter.slice(1)}</button>`).join("")}</div><section class="news-grid">${visibleNews.length ? visibleNews.map(renderNewsCard).join("") : '<div class="notice">No stories match this filter yet.</div>'}</section><div class="intel-disclaimer">${escapeHTML(marketIntel.disclaimer || "AI-generated research summary. Verify primary sources before making investment decisions. Not investment advice.")}</div>`;
+          `<div class="section-head"><h2>Professional news desk</h2><span class="muted">Market · sector · stock</span></div><div class="news-toolbar">${["all", "essential", "market", "sector", "stock"].map((filter) => { const label = filter === "all" ? "All coverage" : filter === "essential" ? `Essential${essentialCount ? ` · ${essentialCount}` : ""}` : filter[0].toUpperCase() + filter.slice(1); return `<button class="news-filter ${newsFilter === filter ? "active" : ""}" onclick="setNewsFilter('${filter}')">${label}</button>`; }).join("")}</div><section class="news-grid">${visibleNews.length ? visibleNews.map(renderNewsCard).join("") : '<div class="notice">No stories match this filter yet.</div>'}</section><div class="intel-disclaimer">${escapeHTML(marketIntel.disclaimer || "AI-generated research summary. Verify primary sources before making investment decisions. Not investment advice.")}</div>`;
       }
       function paper() {
         const invested = positions.reduce((n, p) => n + p.entry * p.qty, 0);
