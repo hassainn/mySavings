@@ -2,7 +2,9 @@
 <html>
   <head>
     <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>Alpha Swing AI</title><meta name="theme-color" content="#0e1722"><link rel="manifest" href="manifest.webmanifest">
+    <title>Alpha Swing AI</title>
+    <meta name="theme-color" content="#0e1722" />
+    <link rel="manifest" href="manifest.webmanifest" />
     <style>
       :root {
         --bg: #0e1722;
@@ -274,7 +276,186 @@
       .hidden {
         display: none;
       }
-      .toolbar{display:flex;gap:10px;margin:14px 0}.toolbar input,.field{width:100%;padding:11px;background:#0d1620;border:1px solid var(--line);border-radius:5px;color:white}.mini{border:1px solid #46617e;background:transparent;color:#b9cee5;border-radius:4px;padding:7px 9px;cursor:pointer}.modal{position:fixed;inset:0;background:#05090fbb;display:none;place-items:center;z-index:20;padding:16px}.modal.open{display:grid}.dialog{width:min(480px,100%);background:#152232;border:1px solid #49627e;border-radius:9px;padding:22px}.dialog-head{display:flex;justify-content:space-between}.dialog-head button{background:none;border:0;color:white;font-size:22px}.dialog label{display:block;color:var(--muted);font-size:12px;margin:12px 0 5px}.dialog-actions{display:flex;justify-content:flex-end;gap:8px;margin-top:18px}.toast{position:fixed;right:20px;bottom:20px;background:#20364c;border:1px solid #4b6b8b;padding:12px 16px;border-radius:6px;display:none;z-index:30}.toast.show{display:block}.risk-result{margin-top:15px;padding:14px;background:#0e1925;border-radius:6px;display:grid;grid-template-columns:repeat(2,1fr);gap:10px}.risk-result span{color:var(--muted);font-size:12px}.risk-result b{display:block;color:white;margin-top:3px}.danger{color:#f2a1a8}.watchrow input[type=number]{width:100px;padding:7px;background:#0d1620;border:1px solid var(--line);color:white;border-radius:4px}
+      .toolbar {
+        display: flex;
+        gap: 10px;
+        margin: 14px 0;
+      }
+      .toolbar input,
+      .field {
+        width: 100%;
+        padding: 11px;
+        background: #0d1620;
+        border: 1px solid var(--line);
+        border-radius: 5px;
+        color: white;
+      }
+      .mini {
+        border: 1px solid #46617e;
+        background: transparent;
+        color: #b9cee5;
+        border-radius: 4px;
+        padding: 7px 9px;
+        cursor: pointer;
+      }
+      .modal {
+        position: fixed;
+        inset: 0;
+        background: #05090fbb;
+        display: none;
+        place-items: center;
+        z-index: 20;
+        padding: 16px;
+      }
+      .modal.open {
+        display: grid;
+      }
+      .dialog {
+        width: min(480px, 100%);
+        background: #152232;
+        border: 1px solid #49627e;
+        border-radius: 9px;
+        padding: 22px;
+      }
+      .dialog-head {
+        display: flex;
+        justify-content: space-between;
+      }
+      .dialog-head button {
+        background: none;
+        border: 0;
+        color: white;
+        font-size: 22px;
+      }
+      .dialog label {
+        display: block;
+        color: var(--muted);
+        font-size: 12px;
+        margin: 12px 0 5px;
+      }
+      .dialog-actions {
+        display: flex;
+        justify-content: flex-end;
+        gap: 8px;
+        margin-top: 18px;
+      }
+      .toast {
+        position: fixed;
+        right: 20px;
+        bottom: 20px;
+        background: #20364c;
+        border: 1px solid #4b6b8b;
+        padding: 12px 16px;
+        border-radius: 6px;
+        display: none;
+        z-index: 30;
+      }
+      .toast.show {
+        display: block;
+      }
+      .risk-result {
+        margin-top: 15px;
+        padding: 14px;
+        background: #0e1925;
+        border-radius: 6px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+      }
+      .risk-result span {
+        color: var(--muted);
+        font-size: 12px;
+      }
+      .risk-result b {
+        display: block;
+        color: white;
+        margin-top: 3px;
+      }
+      .danger {
+        color: #f2a1a8;
+      }
+      .watchrow input[type="number"] {
+        width: 100px;
+        padding: 7px;
+        background: #0d1620;
+        border: 1px solid var(--line);
+        color: white;
+        border-radius: 4px;
+      }
+      .form-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+      }
+      .form-grid label {
+        color: var(--muted);
+        font-size: 12px;
+      }
+      .form-grid input,
+      .form-grid select,
+      .form-grid textarea {
+        display: block;
+        width: 100%;
+        margin-top: 5px;
+        padding: 10px;
+        background: #0d1620;
+        border: 1px solid var(--line);
+        border-radius: 5px;
+        color: white;
+      }
+      .form-grid textarea {
+        min-height: 85px;
+      }
+      .full {
+        grid-column: 1/-1;
+      }
+      .kpi-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 12px;
+        margin: 14px 0;
+      }
+      .kpi {
+        padding: 15px;
+        background: #0f1b28;
+        border-radius: 6px;
+      }
+      .kpi b {
+        display: block;
+        font-size: 24px;
+        margin-top: 5px;
+      }
+      .table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 14px;
+      }
+      .table th,
+      .table td {
+        text-align: left;
+        border-top: 1px solid var(--line);
+        padding: 12px 8px;
+      }
+      .table th {
+        color: var(--muted);
+        font-size: 11px;
+      }
+      .pill {
+        padding: 4px 7px;
+        border-radius: 4px;
+        background: #243d56;
+        color: #abd4ff;
+        font-size: 11px;
+      }
+      .file {
+        padding: 18px;
+        border: 1px dashed #49627e;
+        border-radius: 7px;
+        text-align: center;
+      }
+      .positive {
+        color: var(--green);
+      }
       .mobile {
         display: none;
       }
@@ -328,6 +509,17 @@
           grid-column: 2;
           grid-row: 1/3;
         }
+        .form-grid,
+        .kpi-grid {
+          grid-template-columns: 1fr;
+        }
+        .table {
+          font-size: 12px;
+        }
+        .table th:nth-child(3),
+        .table td:nth-child(3) {
+          display: none;
+        }
         .mobile {
           display: flex;
           position: fixed;
@@ -338,12 +530,14 @@
           background: var(--side);
           border-top: 1px solid var(--line);
           justify-content: space-around;
+          overflow-x: auto;
         }
         .mobile button {
           border: 0;
           background: none;
           color: var(--muted);
           font-size: 11px;
+          min-width: 76px;
         }
         .mobile button.active {
           color: var(--gold);
@@ -360,6 +554,9 @@
         ><button class="nav" data-page="scanner">⌁ Scanner</button
         ><button class="nav" data-page="watchlist">◎ Watchlist</button
         ><button class="nav" data-page="market">◉ Market health</button
+        ><button class="nav" data-page="paper">◈ Paper trading</button
+        ><button class="nav" data-page="journal">✎ Journal</button
+        ><button class="nav" data-page="backtest">⌁ Backtest</button
         ><button class="nav" data-page="settings">⚙ Settings</button>
       </aside>
       <main class="main">
@@ -372,12 +569,81 @@
           <button data-page="overview">Overview</button
           ><button data-page="scanner">Scanner</button
           ><button data-page="watchlist">Watchlist</button
+          ><button data-page="paper">Paper</button
+          ><button data-page="journal">Journal</button
+          ><button data-page="backtest">Backtest</button
           ><button data-page="settings">Settings</button>
         </nav>
       </main>
     </div>
-    <div class="modal" id="stockModal"><form class="dialog" id="stockForm"><div class="dialog-head"><h3>Add stock</h3><button type="button" onclick="closeModal('stockModal')">×</button></div><label for="symbol">NSE symbol</label><input class="field" id="symbol" required maxlength="15" placeholder="HAL"><label for="company">Company name</label><input class="field" id="company" required placeholder="Hindustan Aeronautics"><label for="target">Alert above price (₹)</label><input class="field" id="target" type="number" min="0" step="0.05" placeholder="5100"><div class="dialog-actions"><button class="mini" type="button" onclick="closeModal('stockModal')">Cancel</button><button class="btn" type="submit">Add stock</button></div></form></div>
-    <div class="modal" id="riskModal"><form class="dialog" id="riskForm"><div class="dialog-head"><h3>Risk calculator</h3><button type="button" onclick="closeModal('riskModal')">×</button></div><label>Capital (₹)</label><input class="field" id="capital" type="number" value="500000"><label>Entry / Stop (₹)</label><div class="toolbar"><input class="field" id="entry" type="number" value="5107"><input class="field" id="stop" type="number" value="4920"></div><label>Risk per trade (%)</label><input class="field" id="riskPct" type="number" value="0.5" step="0.1"><div class="risk-result" id="riskResult"></div><div class="dialog-actions"><button class="btn" type="submit">Calculate</button></div></form></div><div class="toast" id="toast"></div>
+    <div class="modal" id="stockModal">
+      <form class="dialog" id="stockForm">
+        <div class="dialog-head">
+          <h3>Add stock</h3>
+          <button type="button" onclick="closeModal('stockModal')">×</button>
+        </div>
+        <label for="symbol">NSE symbol</label
+        ><input
+          class="field"
+          id="symbol"
+          required
+          maxlength="15"
+          placeholder="HAL"
+        /><label for="company">Company name</label
+        ><input
+          class="field"
+          id="company"
+          required
+          placeholder="Hindustan Aeronautics"
+        /><label for="target">Alert above price (₹)</label
+        ><input
+          class="field"
+          id="target"
+          type="number"
+          min="0"
+          step="0.05"
+          placeholder="5100"
+        />
+        <div class="dialog-actions">
+          <button class="mini" type="button" onclick="closeModal('stockModal')">
+            Cancel</button
+          ><button class="btn" type="submit">Add stock</button>
+        </div>
+      </form>
+    </div>
+    <div class="modal" id="riskModal">
+      <form class="dialog" id="riskForm">
+        <div class="dialog-head">
+          <h3>Risk calculator</h3>
+          <button type="button" onclick="closeModal('riskModal')">×</button>
+        </div>
+        <label>Capital (₹)</label
+        ><input class="field" id="capital" type="number" value="500000" /><label
+          >Entry / Stop (₹)</label
+        >
+        <div class="toolbar">
+          <input class="field" id="entry" type="number" value="5107" /><input
+            class="field"
+            id="stop"
+            type="number"
+            value="4920"
+          />
+        </div>
+        <label>Risk per trade (%)</label
+        ><input
+          class="field"
+          id="riskPct"
+          type="number"
+          value="0.5"
+          step="0.1"
+        />
+        <div class="risk-result" id="riskResult"></div>
+        <div class="dialog-actions">
+          <button class="btn" type="submit">Calculate</button>
+        </div>
+      </form>
+    </div>
+    <div class="toast" id="toast"></div>
     <script>
       const K = "alpha-swing-list",
         S = [
@@ -390,6 +656,10 @@
       let list =
         JSON.parse(localStorage.getItem(K) || "null") ||
         S.slice(0, 2).map((x) => ({ s: x[0], n: x[1], on: true }));
+      let positions = JSON.parse(localStorage.getItem("alpha-paper") || "[]");
+      let journalEntries = JSON.parse(
+        localStorage.getItem("alpha-journal") || "[]",
+      );
       const $ = (x) => document.querySelector(x);
       function title(t, btn = "") {
         return `<div class="title"><div><small>YOUR TRADING WORKSPACE</small><h1>${t}</h1></div>${btn}</div>`;
@@ -419,7 +689,10 @@
       }
       function scanner() {
         app.innerHTML =
-          title("Scanner", "<button class=\"btn\" onclick=\"exportCsv()\">Export CSV</button>") +
+          title(
+            "Scanner",
+            '<button class="btn" onclick="exportCsv()">Export CSV</button>',
+          ) +
           `<section class="card"><small>QUALIFIED CANDIDATES</small><h3>Nifty 500 scan</h3><div class="toolbar"><input id="scanSearch" placeholder="Search symbol or company" oninput="filterRows(this.value)"><button class="mini" onclick="filterRows('')">Clear</button></div><div class="rows" id="scanRows">${rows()}</div></section>`;
       }
       function watch() {
@@ -428,25 +701,154 @@
             "Watchlist",
             '<button class="btn" onclick="openStockModal()">＋ Add symbol</button>',
           ) +
-          `<section class="card watch"><small>YOUR LIST</small><h3>Watchlist & alerts</h3><div id="items">${list.length ? list.map((x, i) => `<div class="watchrow"><div><b>${x.s}</b><br><small>${x.n}</small></div><label><input type="checkbox" ${x.on ? "checked" : ""} onchange="toggle(${i},this.checked)"> Alert above ₹ <input type="number" value="${x.target||0}" onchange="setTarget(${i},this.value)"></label><button class="remove" onclick="removeItem(${i})">Remove</button></div>`).join("") : '<div class="notice">No symbols yet. Add a stock to monitor it.</div>'}</div><p><button class="btn" onclick="testAlert()">Test alert</button> <button class="remove" onclick="enableAlerts()">Enable browser alerts</button></p></section>`;
+          `<section class="card watch"><small>YOUR LIST</small><h3>Watchlist & alerts</h3><div id="items">${list.length ? list.map((x, i) => `<div class="watchrow"><div><b>${x.s}</b><br><small>${x.n}</small></div><label><input type="checkbox" ${x.on ? "checked" : ""} onchange="toggle(${i},this.checked)"> Alert above ₹ <input type="number" value="${x.target || 0}" onchange="setTarget(${i},this.value)"></label><button class="remove" onclick="removeItem(${i})">Remove</button></div>`).join("") : '<div class="notice">No symbols yet. Add a stock to monitor it.</div>'}</div><p><button class="btn" onclick="testAlert()">Test alert</button> <button class="remove" onclick="enableAlerts()">Enable browser alerts</button></p></section>`;
       }
       function market() {
         app.innerHTML =
           title("Market health") +
           `<section class="card"><small>MARKET GATE</small><h3>CAUTION</h3><div class="metrics"><div class="metric"><span>Nifty 500</span><b class="up">+0.48%</b></div><div class="metric"><span>Nifty 50</span><b class="up">+0.36%</b></div><div class="metric"><span>India VIX</span><b>12.84</b></div><div class="metric"><span>Breadth</span><b>62%</b></div></div><div class="notice">A/A+ setups only. Reduce risk until the market gate improves.</div></section>`;
       }
+      function paper() {
+        const invested = positions.reduce((n, p) => n + p.entry * p.qty, 0);
+        app.innerHTML =
+          title("Paper trading") +
+          `<section class="kpi-grid"><div class="card kpi"><small>Open positions</small><b>${positions.length}</b></div><div class="card kpi"><small>Capital deployed</small><b>₹${invested.toLocaleString("en-IN")}</b></div><div class="card kpi"><small>Mode</small><b class="positive">PAPER</b></div></section><section class="card"><h3>New paper position</h3><form class="form-grid" onsubmit="paperBuy(event)"><label>Symbol<input id="pSymbol" required placeholder="HAL"></label><label>Entry price<input id="pEntry" required type="number" step="0.05"></label><label>Stop loss<input id="pStop" required type="number" step="0.05"></label><label>Quantity<input id="pQty" required type="number" min="1"></label><button class="btn full">Paper buy</button></form>${positions.length ? `<table class="table"><tr><th>Symbol</th><th>Entry</th><th>Stop</th><th>Qty</th><th></th></tr>${positions.map((p, i) => `<tr><td><b>${p.symbol}</b></td><td>₹${p.entry}</td><td>₹${p.stop}</td><td>${p.qty}</td><td><button class="remove" onclick="closePaper(${i})">Close</button></td></tr>`).join("")}</table>` : '<div class="notice">No paper positions yet.</div>'}</section>`;
+      }
+      function paperBuy(e) {
+        e.preventDefault();
+        const entry = Number(pEntry.value),
+          stop = Number(pStop.value);
+        if (stop >= entry) return toastMsg("Stop must be below entry");
+        positions.push({
+          symbol: pSymbol.value.trim().toUpperCase(),
+          entry,
+          stop,
+          qty: Number(pQty.value),
+          date: new Date().toISOString(),
+        });
+        localStorage.setItem("alpha-paper", JSON.stringify(positions));
+        paper();
+        toastMsg("Paper position opened");
+      }
+      function closePaper(i) {
+        const p = positions.splice(i, 1)[0];
+        localStorage.setItem("alpha-paper", JSON.stringify(positions));
+        journalEntries.unshift({
+          symbol: p.symbol,
+          setup: "Paper trade",
+          notes: `Closed paper position from ₹${p.entry}`,
+          date: new Date().toLocaleDateString("en-IN"),
+        });
+        localStorage.setItem("alpha-journal", JSON.stringify(journalEntries));
+        paper();
+        toastMsg("Position closed and journaled");
+      }
+      function journal() {
+        app.innerHTML =
+          title("Trade journal") +
+          `<section class="card"><h3>Add journal note</h3><form class="form-grid" onsubmit="addJournal(event)"><label>Symbol<input id="jSymbol" required></label><label>Setup<select id="jSetup"><option>VCP</option><option>Breakout</option><option>Pullback</option><option>Darvas box</option></select></label><label class="full">Notes<textarea id="jNotes" required></textarea></label><button class="btn full">Save journal entry</button></form>${journalEntries.length ? `<table class="table"><tr><th>Date</th><th>Symbol</th><th>Setup</th><th>Notes</th><th></th></tr>${journalEntries.map((j, i) => `<tr><td>${j.date}</td><td><b>${j.symbol}</b></td><td><span class="pill">${j.setup}</span></td><td>${j.notes}</td><td><button class="remove" onclick="deleteJournal(${i})">Delete</button></td></tr>`).join("")}</table>` : '<div class="notice">Your journal is empty.</div>'}</section>`;
+      }
+      function addJournal(e) {
+        e.preventDefault();
+        journalEntries.unshift({
+          symbol: jSymbol.value.trim().toUpperCase(),
+          setup: jSetup.value,
+          notes: jNotes.value.trim(),
+          date: new Date().toLocaleDateString("en-IN"),
+        });
+        localStorage.setItem("alpha-journal", JSON.stringify(journalEntries));
+        journal();
+        toastMsg("Journal entry saved");
+      }
+      function deleteJournal(i) {
+        journalEntries.splice(i, 1);
+        localStorage.setItem("alpha-journal", JSON.stringify(journalEntries));
+        journal();
+      }
+      function backtest() {
+        app.innerHTML =
+          title("Backtest") +
+          `<section class="card"><h3>Import daily candles</h3><div class="file"><p>CSV columns: date, open, high, low, close, volume</p><input id="csvFile" type="file" accept=".csv"><p><button class="btn" onclick="runBacktest()">Run 20/50 SMA test</button></p></div><div id="backtestResult" class="notice">Import at least 50 daily candles to calculate results locally.</div></section>`;
+      }
+      async function runBacktest() {
+        const f = csvFile.files[0];
+        if (!f) return toastMsg("Choose a candle CSV first");
+        const rows = (await f.text())
+          .trim()
+          .split(/\r?\n/)
+          .slice(1)
+          .map((r) => r.split(","))
+          .filter((r) => r.length >= 5)
+          .map((r) => Number(r[4]));
+        if (rows.length < 50) return toastMsg("At least 50 rows are required");
+        let trades = 0,
+          wins = 0,
+          entry = 0;
+        const avg = (i, n) =>
+          rows.slice(i - n + 1, i + 1).reduce((a, b) => a + b, 0) / n;
+        for (let i = 50; i < rows.length; i++) {
+          const fast = avg(i, 20),
+            slow = avg(i, 50),
+            pf = avg(i - 1, 20),
+            ps = avg(i - 1, 50);
+          if (!entry && fast > slow && pf <= ps) {
+            entry = rows[i];
+            trades++;
+          } else if (entry && fast < slow && pf >= ps) {
+            if (rows[i] > entry) wins++;
+            entry = 0;
+          }
+        }
+        backtestResult.innerHTML = `<b>${trades} trades</b> · ${trades ? Math.round((wins / trades) * 100) : 0}% win rate · deterministic 20/50 SMA crossover. Results exclude costs and slippage.`;
+      }
       function settings() {
         app.innerHTML =
           title("Settings") +
-          `<section class="card settings"><h3>Trading preferences</h3><label>Default risk per trade (%)</label><input id="defaultRisk" type="number" value="${localStorage.getItem('alpha-risk')||0.5}" step="0.1"><label>Provider status</label><input value="Upstox — configuration required" disabled><p><button class="btn" onclick="saveSettings()">Save preferences</button> <button class="mini" onclick="openModal('riskModal')">Open risk calculator</button></p></section>`;
+          `<section class="card settings"><h3>Trading preferences</h3><label>Default risk per trade (%)</label><input id="defaultRisk" type="number" value="${localStorage.getItem("alpha-risk") || 0.5}" step="0.1"><label>Provider status</label><input value="Upstox — configuration required" disabled><p><button class="btn" onclick="saveSettings()">Save preferences</button> <button class="mini" onclick="openModal('riskModal')">Open risk calculator</button></p></section>`;
       }
-      function openModal(id){document.getElementById(id).classList.add("open")}
-      function closeModal(id){document.getElementById(id).classList.remove("open")}
-      function openStockModal(){stockForm.reset();openModal("stockModal");symbol.focus()}
-      function quickAdd(s,n){if(list.some(x=>x.s===s))return toastMsg(s+" is already watched");list.push({s,n,on:true,target:0});save();toastMsg(s+" added to watchlist")}
-      function toastMsg(message){toast.textContent=message;toast.classList.add("show");setTimeout(()=>toast.classList.remove("show"),2200)}
-      stockForm.onsubmit=(event)=>{event.preventDefault();const s=symbol.value.trim().toUpperCase();if(list.some(x=>x.s===s))return toastMsg("Stock already exists");list.push({s,n:company.value.trim(),on:true,target:Number(target.value)||0});localStorage.setItem(K,JSON.stringify(list));closeModal("stockModal");toastMsg(s+" added to watchlist")}
-      function setTarget(i,value){list[i].target=Number(value)||0;localStorage.setItem(K,JSON.stringify(list));toastMsg("Alert price saved")}
+      function openModal(id) {
+        document.getElementById(id).classList.add("open");
+      }
+      function closeModal(id) {
+        document.getElementById(id).classList.remove("open");
+      }
+      function openStockModal() {
+        stockForm.reset();
+        openModal("stockModal");
+        symbol.focus();
+      }
+      function quickAdd(s, n) {
+        if (list.some((x) => x.s === s))
+          return toastMsg(s + " is already watched");
+        list.push({ s, n, on: true, target: 0 });
+        save();
+        toastMsg(s + " added to watchlist");
+      }
+      function toastMsg(message) {
+        toast.textContent = message;
+        toast.classList.add("show");
+        setTimeout(() => toast.classList.remove("show"), 2200);
+      }
+      stockForm.onsubmit = (event) => {
+        event.preventDefault();
+        const s = symbol.value.trim().toUpperCase();
+        if (list.some((x) => x.s === s))
+          return toastMsg("Stock already exists");
+        list.push({
+          s,
+          n: company.value.trim(),
+          on: true,
+          target: Number(target.value) || 0,
+        });
+        localStorage.setItem(K, JSON.stringify(list));
+        closeModal("stockModal");
+        toastMsg(s + " added to watchlist");
+      };
+      function setTarget(i, value) {
+        list[i].target = Number(value) || 0;
+        localStorage.setItem(K, JSON.stringify(list));
+        toastMsg("Alert price saved");
+      }
       function removeItem(i) {
         list.splice(i, 1);
         save();
@@ -474,12 +876,53 @@
           "Test alert: browser notifications are working.",
         );
       }
-      function filterRows(query){const q=query.toLowerCase();document.querySelectorAll("#scanRows .row").forEach(row=>row.style.display=row.textContent.toLowerCase().includes(q)?"grid":"none")}
-      function exportCsv(){const lines=[["Symbol","Company","Price","Change","Score"],...S].map(r=>r.map(v=>`"${v}"`).join(",")).join("\n");const a=document.createElement("a");a.href=URL.createObjectURL(new Blob([lines],{type:"text/csv"}));a.download="alpha-swing-scanner.csv";a.click();URL.revokeObjectURL(a.href);toastMsg("Scanner CSV downloaded")}
-      function saveSettings(){localStorage.setItem("alpha-risk",defaultRisk.value);toastMsg("Preferences saved")}
-      riskForm.onsubmit=(event)=>{event.preventDefault();const c=Number(capital.value),e=Number(entry.value),s=Number(stop.value),p=Number(riskPct.value),r=e-s,q=r>0?Math.floor(c*p/100/r):0;riskResult.innerHTML=`<span>Risk amount<b>₹${(c*p/100).toLocaleString("en-IN")}</b></span><span>Quantity<b>${q}</b></span><span>Position value<b>₹${(q*e).toLocaleString("en-IN")}</b></span><span>2R target<b>₹${(e+2*r).toLocaleString("en-IN")}</b></span>`}
+      function filterRows(query) {
+        const q = query.toLowerCase();
+        document
+          .querySelectorAll("#scanRows .row")
+          .forEach(
+            (row) =>
+              (row.style.display = row.textContent.toLowerCase().includes(q)
+                ? "grid"
+                : "none"),
+          );
+      }
+      function exportCsv() {
+        const lines = [["Symbol", "Company", "Price", "Change", "Score"], ...S]
+          .map((r) => r.map((v) => `"${v}"`).join(","))
+          .join("\n");
+        const a = document.createElement("a");
+        a.href = URL.createObjectURL(new Blob([lines], { type: "text/csv" }));
+        a.download = "alpha-swing-scanner.csv";
+        a.click();
+        URL.revokeObjectURL(a.href);
+        toastMsg("Scanner CSV downloaded");
+      }
+      function saveSettings() {
+        localStorage.setItem("alpha-risk", defaultRisk.value);
+        toastMsg("Preferences saved");
+      }
+      riskForm.onsubmit = (event) => {
+        event.preventDefault();
+        const c = Number(capital.value),
+          e = Number(entry.value),
+          s = Number(stop.value),
+          p = Number(riskPct.value),
+          r = e - s,
+          q = r > 0 ? Math.floor((c * p) / 100 / r) : 0;
+        riskResult.innerHTML = `<span>Risk amount<b>₹${((c * p) / 100).toLocaleString("en-IN")}</b></span><span>Quantity<b>${q}</b></span><span>Position value<b>₹${(q * e).toLocaleString("en-IN")}</b></span><span>2R target<b>₹${(e + 2 * r).toLocaleString("en-IN")}</b></span>`;
+      };
       function page(x) {
-        ({ overview, scanner, watchlist: watch, market, settings })[x]();
+        ({
+          overview,
+          scanner,
+          watchlist: watch,
+          market,
+          paper,
+          journal,
+          backtest,
+          settings,
+        })[x]();
         document
           .querySelectorAll("[data-page]")
           .forEach((b) => b.classList.toggle("active", b.dataset.page === x));
@@ -488,7 +931,8 @@
         .querySelectorAll("[data-page]")
         .forEach((b) => (b.onclick = () => page(b.dataset.page)));
       overview();
-      if("serviceWorker" in navigator)navigator.serviceWorker.register("sw.js");
+      if ("serviceWorker" in navigator)
+        navigator.serviceWorker.register("sw.js");
     </script>
   </body>
 </html>
