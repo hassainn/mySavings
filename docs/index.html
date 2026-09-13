@@ -1,1 +1,494 @@
-<!doctype html><html><head><meta name="viewport" content="width=device-width,initial-scale=1"><title>Alpha Swing AI</title><style>:root{--bg:#0e1722;--side:#09111a;--card:#152232;--line:#2b4059;--gold:#dfb65f;--ink:#ecf2fb;--muted:#91a6c0;--green:#5ed0a4}*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:14px Arial,sans-serif}.app{display:flex;min-height:100vh}.side{width:250px;background:var(--side);border-right:1px solid var(--line);padding:25px 14px}.brand{font-size:18px;font-weight:bold;letter-spacing:2px;color:#fff;padding:8px}.brand b{color:var(--gold)}.side p{font-size:11px;letter-spacing:2px;color:var(--muted);margin:42px 8px 10px}.nav{width:100%;background:none;border:0;color:#a9bdd3;text-align:left;padding:13px;border-radius:6px;font-weight:bold;cursor:pointer}.nav:hover,.nav.active{background:#203249;color:#fff;box-shadow:inset 2px 0 var(--gold)}.main{flex:1;min-width:0}.top{height:82px;border-bottom:1px solid var(--line);padding:0 45px;display:flex;align-items:center;justify-content:space-between}.status{color:var(--gold);font-family:monospace}.status span{color:var(--muted);margin-left:12px}.avatar{background:#315778;border-radius:50%;width:39px;height:39px;display:grid;place-items:center;font-weight:bold}.wrap{max-width:1500px;margin:auto;padding:38px 45px 85px}.title{display:flex;justify-content:space-between;align-items:end;margin-bottom:28px}.title small,.eyebrow{color:#94aaca;letter-spacing:2px;font-size:10px}.title h1{font:600 42px Georgia,serif;margin:8px 0 0}.btn{background:var(--gold);border:0;border-radius:6px;padding:12px 16px;font-weight:bold;color:#101923;cursor:pointer}.card{background:var(--card);border:1px solid var(--line);border-radius:8px;padding:20px}.verdict{display:flex;gap:34px;align-items:center}.gate{padding-right:34px;border-right:1px solid var(--line);min-width:165px}.gate b{display:block;color:var(--gold);font:18px monospace;margin:8px 0}.gate span{color:var(--muted)}h2{font-size:18px;margin:6px 0}h3{font:24px Georgia,serif;margin:5px 0}.metrics{display:grid;grid-template-columns:repeat(4,1fr);gap:15px;margin:18px 0}.metric{border-top:2px solid #5288be}.metric b{display:block;font:36px Georgia,serif;margin:8px 0}.metric span{color:var(--muted);font-size:12px}.grid{display:grid;grid-template-columns:1fr 315px;gap:17px}.rows{margin:16px -20px -20px}.row{display:grid;grid-template-columns:2fr 1fr 1fr .5fr;gap:12px;padding:15px 20px;border-top:1px solid var(--line);align-items:center}.row small,.muted{color:var(--muted)}.up{color:var(--green)}.score{text-align:center;border:5px solid #4c85a9;border-top-color:var(--gold);border-radius:50%;width:104px;height:104px;margin:20px auto;display:grid;place-content:center;font:37px Georgia}.quality{display:grid;gap:11px}.quality div{display:flex;justify-content:space-between;color:var(--muted)}.quality b{color:white}.watch{margin-top:18px}.watchrow{display:grid;grid-template-columns:2fr 1fr auto;gap:12px;padding:14px 0;border-top:1px solid var(--line);align-items:center}.watchrow label{color:#a8cef7}.remove{background:none;border:1px solid #86535c;color:#f4a1a8;border-radius:4px;padding:7px;cursor:pointer}.notice{padding:12px;margin:12px 0;border:1px solid #476580;border-radius:5px;background:#182b3e;color:#bbd5f1}.settings input{display:block;width:100%;margin:8px 0 16px;padding:11px;background:#0d1620;border:1px solid var(--line);border-radius:5px;color:white}.hidden{display:none}.mobile{display:none}@media(max-width:720px){.side{display:none}.top{height:62px;padding:0 18px}.wrap{padding:25px 15px 75px}.title h1{font-size:34px}.metrics{grid-template-columns:repeat(2,1fr);gap:9px}.grid{grid-template-columns:1fr}.focus{display:none}.verdict{display:block}.gate{border:0;border-bottom:1px solid var(--line);padding-bottom:12px;margin-bottom:14px}.row{grid-template-columns:2fr 1fr}.row>:nth-child(3),.row>:nth-child(4){display:none}.watchrow{grid-template-columns:1fr auto}.watchrow label{grid-column:1}.watchrow button{grid-column:2;grid-row:1/3}.mobile{display:flex;position:fixed;bottom:0;left:0;right:0;height:62px;background:var(--side);border-top:1px solid var(--line);justify-content:space-around}.mobile button{border:0;background:none;color:var(--muted);font-size:11px}.mobile button.active{color:var(--gold)}}</style></head><body><div class="app"><aside class="side"><div class="brand">ALPHA <b>SWING</b></div><p>WORKSPACE</p><button class="nav active" data-page="overview">⌂ Overview</button><button class="nav" data-page="scanner">⌁ Scanner</button><button class="nav" data-page="watchlist">◎ Watchlist</button><button class="nav" data-page="market">◉ Market health</button><button class="nav" data-page="settings">⚙ Settings</button></aside><main class="main"><header class="top"><div class="status">● NSE · India <span>Market closed</span></div><div class="avatar">HS</div></header><div class="wrap" id="app"></div><nav class="mobile"><button data-page="overview">Overview</button><button data-page="scanner">Scanner</button><button data-page="watchlist">Watchlist</button><button data-page="settings">Settings</button></nav></main></div><script>const K='alpha-swing-list',S=[['HAL','Hindustan Aeronautics','₹5,107','+1.42%',96],['BEL','Bharat Electronics','₹410.20','+0.86%',91],['TRENT','Trent Limited','₹6,084','+0.52%',89]];let list=JSON.parse(localStorage.getItem(K)||'null')||S.slice(0,2).map(x=>({s:x[0],n:x[1],on:true}));const $=x=>document.querySelector(x);function title(t,btn=''){return `<div class="title"><div><small>YOUR TRADING WORKSPACE</small><h1>${t}</h1></div>${btn}</div>`}function rows(){return S.map(x=>`<div class="row"><div><b>${x[0]}</b><br><small>${x[1]}</small></div><div><b>${x[2]}</b><br><small class="up">${x[3]}</small></div><div><span class="notice">${x[4]>94?'Confirming':'Armed'}</span></div><b>${x[4]}</b></div>`).join('')}function notify(t,b){if(Notification.permission==='granted')new Notification(t,{body:b});else alert(t+'\\n'+b)}function save(){localStorage.setItem(K,JSON.stringify(list));watch()}function overview(){app.innerHTML=title('Overview','<button class="btn" onclick="add()">＋ Add to watchlist</button>')+`<section class="card verdict"><div class="gate"><small>MARKET GATE</small><b>CAUTION</b><span>A/A+ setups only</span></div><div><small>DAILY VERDICT</small><h2>Be selective. Let price and volume prove the move.</h2><span class="muted">Three high-quality candidates are near their pivots. Wait for confirmation.</span></div></section><section class="metrics"><div class="card metric"><span>Qualified setups</span><b>07</b><span>2 new since last scan</span></div><div class="card metric"><span>Near pivot</span><b>03</b><span>within 1% of pivot</span></div><div class="card metric"><span>Confirmed today</span><b>00</b><span>feed unavailable</span></div><div class="card metric"><span>Portfolio risk</span><b>0.00%</b><span>of 5% maximum</span></div></section><section class="grid"><div class="card"><small class="eyebrow">QUALIFIED · NIFTY 500</small><h3>Setup radar</h3><div class="rows">${rows()}</div></div><div class="card focus"><small>SELECTED SETUP</small><h3>HAL <span class="notice">A+</span></h3><div class="score">96</div><div class="quality"><div>Trend template <b>8/8</b></div><div>Relative strength <b>94</b></div><div>VCP score <b>96</b></div><div>RVOL <b>1.82×</b></div></div></div></section>`}function scanner(){app.innerHTML=title('Scanner','<button class="btn" onclick="notify(\'Scanner\',\'Offline scan refreshed from local data.\')">Run scan</button>')+`<section class="card"><small>QUALIFIED CANDIDATES</small><h3>Nifty 500 scan</h3><div class="rows">${rows()}</div></section>`}function watch(){app.innerHTML=title('Watchlist','<button class="btn" onclick="add()">＋ Add symbol</button>')+`<section class="card watch"><small>YOUR LIST</small><h3>Watchlist & alerts</h3><div id="items">${list.length?list.map((x,i)=>`<div class="watchrow"><div><b>${x.s}</b><br><small>${x.n}</small></div><label><input type="checkbox" ${x.on?'checked':''} onchange="toggle(${i},this.checked)"> Price alerts</label><button class="remove" onclick="removeItem(${i})">Remove</button></div>`).join(''):'<div class="notice">No symbols yet. Add a stock to monitor it.</div>'}</div><p><button class="btn" onclick="testAlert()">Test alert</button> <button class="remove" onclick="enableAlerts()">Enable browser alerts</button></p></section>`}function market(){app.innerHTML=title('Market health')+`<section class="card"><small>MARKET GATE</small><h3>CAUTION</h3><div class="metrics"><div class="metric"><span>Nifty 500</span><b class="up">+0.48%</b></div><div class="metric"><span>Nifty 50</span><b class="up">+0.36%</b></div><div class="metric"><span>India VIX</span><b>12.84</b></div><div class="metric"><span>Breadth</span><b>62%</b></div></div><div class="notice">A/A+ setups only. Reduce risk until the market gate improves.</div></section>`}function settings(){app.innerHTML=title('Settings')+`<section class="card settings"><h3>Alert preferences</h3><label>Default risk per trade</label><input value="0.50%"><label>Provider status</label><input value="Upstox — configuration required" disabled><button class="btn" onclick="notify(\'Settings saved\',\'Your device preferences were saved.\')">Save preferences</button></section>`}function add(){let s=(prompt('NSE symbol')||'').trim().toUpperCase();if(!s)return;if(list.some(x=>x.s===s))return alert('Already in your watchlist.');list.push({s,n:(prompt('Company name')||s).trim(),on:true});save();notify('Watchlist updated',s+' added with alerts on.')}function removeItem(i){list.splice(i,1);save()}function toggle(i,v){list[i].on=v;save();notify('Alerts updated',list[i].s+' alerts '+(v?'enabled':'disabled')+'.')}async function enableAlerts(){let r=await Notification.requestPermission();notify('Browser alerts',r==='granted'?'Enabled on this device.':'Permission not granted.')}function testAlert(){notify('Alpha Swing AI','Test alert: browser notifications are working.')}function page(x){({overview,scanner,watchlist:watch,market,settings})[x]();document.querySelectorAll('[data-page]').forEach(b=>b.classList.toggle('active',b.dataset.page===x))}document.querySelectorAll('[data-page]').forEach(b=>b.onclick=()=>page(b.dataset.page));overview();</script></body></html>
+<!doctype html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Alpha Swing AI</title><meta name="theme-color" content="#0e1722"><link rel="manifest" href="manifest.webmanifest">
+    <style>
+      :root {
+        --bg: #0e1722;
+        --side: #09111a;
+        --card: #152232;
+        --line: #2b4059;
+        --gold: #dfb65f;
+        --ink: #ecf2fb;
+        --muted: #91a6c0;
+        --green: #5ed0a4;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        background: var(--bg);
+        color: var(--ink);
+        font:
+          14px Arial,
+          sans-serif;
+      }
+      .app {
+        display: flex;
+        min-height: 100vh;
+      }
+      .side {
+        width: 250px;
+        background: var(--side);
+        border-right: 1px solid var(--line);
+        padding: 25px 14px;
+      }
+      .brand {
+        font-size: 18px;
+        font-weight: bold;
+        letter-spacing: 2px;
+        color: #fff;
+        padding: 8px;
+      }
+      .brand b {
+        color: var(--gold);
+      }
+      .side p {
+        font-size: 11px;
+        letter-spacing: 2px;
+        color: var(--muted);
+        margin: 42px 8px 10px;
+      }
+      .nav {
+        width: 100%;
+        background: none;
+        border: 0;
+        color: #a9bdd3;
+        text-align: left;
+        padding: 13px;
+        border-radius: 6px;
+        font-weight: bold;
+        cursor: pointer;
+      }
+      .nav:hover,
+      .nav.active {
+        background: #203249;
+        color: #fff;
+        box-shadow: inset 2px 0 var(--gold);
+      }
+      .main {
+        flex: 1;
+        min-width: 0;
+      }
+      .top {
+        height: 82px;
+        border-bottom: 1px solid var(--line);
+        padding: 0 45px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+      .status {
+        color: var(--gold);
+        font-family: monospace;
+      }
+      .status span {
+        color: var(--muted);
+        margin-left: 12px;
+      }
+      .avatar {
+        background: #315778;
+        border-radius: 50%;
+        width: 39px;
+        height: 39px;
+        display: grid;
+        place-items: center;
+        font-weight: bold;
+      }
+      .wrap {
+        max-width: 1500px;
+        margin: auto;
+        padding: 38px 45px 85px;
+      }
+      .title {
+        display: flex;
+        justify-content: space-between;
+        align-items: end;
+        margin-bottom: 28px;
+      }
+      .title small,
+      .eyebrow {
+        color: #94aaca;
+        letter-spacing: 2px;
+        font-size: 10px;
+      }
+      .title h1 {
+        font:
+          600 42px Georgia,
+          serif;
+        margin: 8px 0 0;
+      }
+      .btn {
+        background: var(--gold);
+        border: 0;
+        border-radius: 6px;
+        padding: 12px 16px;
+        font-weight: bold;
+        color: #101923;
+        cursor: pointer;
+      }
+      .card {
+        background: var(--card);
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        padding: 20px;
+      }
+      .verdict {
+        display: flex;
+        gap: 34px;
+        align-items: center;
+      }
+      .gate {
+        padding-right: 34px;
+        border-right: 1px solid var(--line);
+        min-width: 165px;
+      }
+      .gate b {
+        display: block;
+        color: var(--gold);
+        font: 18px monospace;
+        margin: 8px 0;
+      }
+      .gate span {
+        color: var(--muted);
+      }
+      h2 {
+        font-size: 18px;
+        margin: 6px 0;
+      }
+      h3 {
+        font:
+          24px Georgia,
+          serif;
+        margin: 5px 0;
+      }
+      .metrics {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 15px;
+        margin: 18px 0;
+      }
+      .metric {
+        border-top: 2px solid #5288be;
+      }
+      .metric b {
+        display: block;
+        font:
+          36px Georgia,
+          serif;
+        margin: 8px 0;
+      }
+      .metric span {
+        color: var(--muted);
+        font-size: 12px;
+      }
+      .grid {
+        display: grid;
+        grid-template-columns: 1fr 315px;
+        gap: 17px;
+      }
+      .rows {
+        margin: 16px -20px -20px;
+      }
+      .row {
+        display: grid;
+        grid-template-columns: 2fr 1fr 1fr 0.5fr;
+        gap: 12px;
+        padding: 15px 20px;
+        border-top: 1px solid var(--line);
+        align-items: center;
+      }
+      .row small,
+      .muted {
+        color: var(--muted);
+      }
+      .up {
+        color: var(--green);
+      }
+      .score {
+        text-align: center;
+        border: 5px solid #4c85a9;
+        border-top-color: var(--gold);
+        border-radius: 50%;
+        width: 104px;
+        height: 104px;
+        margin: 20px auto;
+        display: grid;
+        place-content: center;
+        font: 37px Georgia;
+      }
+      .quality {
+        display: grid;
+        gap: 11px;
+      }
+      .quality div {
+        display: flex;
+        justify-content: space-between;
+        color: var(--muted);
+      }
+      .quality b {
+        color: white;
+      }
+      .watch {
+        margin-top: 18px;
+      }
+      .watchrow {
+        display: grid;
+        grid-template-columns: 2fr 1fr auto;
+        gap: 12px;
+        padding: 14px 0;
+        border-top: 1px solid var(--line);
+        align-items: center;
+      }
+      .watchrow label {
+        color: #a8cef7;
+      }
+      .remove {
+        background: none;
+        border: 1px solid #86535c;
+        color: #f4a1a8;
+        border-radius: 4px;
+        padding: 7px;
+        cursor: pointer;
+      }
+      .notice {
+        padding: 12px;
+        margin: 12px 0;
+        border: 1px solid #476580;
+        border-radius: 5px;
+        background: #182b3e;
+        color: #bbd5f1;
+      }
+      .settings input {
+        display: block;
+        width: 100%;
+        margin: 8px 0 16px;
+        padding: 11px;
+        background: #0d1620;
+        border: 1px solid var(--line);
+        border-radius: 5px;
+        color: white;
+      }
+      .hidden {
+        display: none;
+      }
+      .toolbar{display:flex;gap:10px;margin:14px 0}.toolbar input,.field{width:100%;padding:11px;background:#0d1620;border:1px solid var(--line);border-radius:5px;color:white}.mini{border:1px solid #46617e;background:transparent;color:#b9cee5;border-radius:4px;padding:7px 9px;cursor:pointer}.modal{position:fixed;inset:0;background:#05090fbb;display:none;place-items:center;z-index:20;padding:16px}.modal.open{display:grid}.dialog{width:min(480px,100%);background:#152232;border:1px solid #49627e;border-radius:9px;padding:22px}.dialog-head{display:flex;justify-content:space-between}.dialog-head button{background:none;border:0;color:white;font-size:22px}.dialog label{display:block;color:var(--muted);font-size:12px;margin:12px 0 5px}.dialog-actions{display:flex;justify-content:flex-end;gap:8px;margin-top:18px}.toast{position:fixed;right:20px;bottom:20px;background:#20364c;border:1px solid #4b6b8b;padding:12px 16px;border-radius:6px;display:none;z-index:30}.toast.show{display:block}.risk-result{margin-top:15px;padding:14px;background:#0e1925;border-radius:6px;display:grid;grid-template-columns:repeat(2,1fr);gap:10px}.risk-result span{color:var(--muted);font-size:12px}.risk-result b{display:block;color:white;margin-top:3px}.danger{color:#f2a1a8}.watchrow input[type=number]{width:100px;padding:7px;background:#0d1620;border:1px solid var(--line);color:white;border-radius:4px}
+      .mobile {
+        display: none;
+      }
+      @media (max-width: 720px) {
+        .side {
+          display: none;
+        }
+        .top {
+          height: 62px;
+          padding: 0 18px;
+        }
+        .wrap {
+          padding: 25px 15px 75px;
+        }
+        .title h1 {
+          font-size: 34px;
+        }
+        .metrics {
+          grid-template-columns: repeat(2, 1fr);
+          gap: 9px;
+        }
+        .grid {
+          grid-template-columns: 1fr;
+        }
+        .focus {
+          display: none;
+        }
+        .verdict {
+          display: block;
+        }
+        .gate {
+          border: 0;
+          border-bottom: 1px solid var(--line);
+          padding-bottom: 12px;
+          margin-bottom: 14px;
+        }
+        .row {
+          grid-template-columns: 2fr 1fr;
+        }
+        .row > :nth-child(3),
+        .row > :nth-child(4) {
+          display: none;
+        }
+        .watchrow {
+          grid-template-columns: 1fr auto;
+        }
+        .watchrow label {
+          grid-column: 1;
+        }
+        .watchrow button {
+          grid-column: 2;
+          grid-row: 1/3;
+        }
+        .mobile {
+          display: flex;
+          position: fixed;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          height: 62px;
+          background: var(--side);
+          border-top: 1px solid var(--line);
+          justify-content: space-around;
+        }
+        .mobile button {
+          border: 0;
+          background: none;
+          color: var(--muted);
+          font-size: 11px;
+        }
+        .mobile button.active {
+          color: var(--gold);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="app">
+      <aside class="side">
+        <div class="brand">ALPHA <b>SWING</b></div>
+        <p>WORKSPACE</p>
+        <button class="nav active" data-page="overview">⌂ Overview</button
+        ><button class="nav" data-page="scanner">⌁ Scanner</button
+        ><button class="nav" data-page="watchlist">◎ Watchlist</button
+        ><button class="nav" data-page="market">◉ Market health</button
+        ><button class="nav" data-page="settings">⚙ Settings</button>
+      </aside>
+      <main class="main">
+        <header class="top">
+          <div class="status">● NSE · India <span>Market closed</span></div>
+          <div class="avatar">HS</div>
+        </header>
+        <div class="wrap" id="app"></div>
+        <nav class="mobile">
+          <button data-page="overview">Overview</button
+          ><button data-page="scanner">Scanner</button
+          ><button data-page="watchlist">Watchlist</button
+          ><button data-page="settings">Settings</button>
+        </nav>
+      </main>
+    </div>
+    <div class="modal" id="stockModal"><form class="dialog" id="stockForm"><div class="dialog-head"><h3>Add stock</h3><button type="button" onclick="closeModal('stockModal')">×</button></div><label for="symbol">NSE symbol</label><input class="field" id="symbol" required maxlength="15" placeholder="HAL"><label for="company">Company name</label><input class="field" id="company" required placeholder="Hindustan Aeronautics"><label for="target">Alert above price (₹)</label><input class="field" id="target" type="number" min="0" step="0.05" placeholder="5100"><div class="dialog-actions"><button class="mini" type="button" onclick="closeModal('stockModal')">Cancel</button><button class="btn" type="submit">Add stock</button></div></form></div>
+    <div class="modal" id="riskModal"><form class="dialog" id="riskForm"><div class="dialog-head"><h3>Risk calculator</h3><button type="button" onclick="closeModal('riskModal')">×</button></div><label>Capital (₹)</label><input class="field" id="capital" type="number" value="500000"><label>Entry / Stop (₹)</label><div class="toolbar"><input class="field" id="entry" type="number" value="5107"><input class="field" id="stop" type="number" value="4920"></div><label>Risk per trade (%)</label><input class="field" id="riskPct" type="number" value="0.5" step="0.1"><div class="risk-result" id="riskResult"></div><div class="dialog-actions"><button class="btn" type="submit">Calculate</button></div></form></div><div class="toast" id="toast"></div>
+    <script>
+      const K = "alpha-swing-list",
+        S = [
+          ["HAL", "Hindustan Aeronautics", "₹5,107", "+1.42%", 96],
+          ["BEL", "Bharat Electronics", "₹410.20", "+0.86%", 91],
+          ["TRENT", "Trent Limited", "₹6,084", "+0.52%", 89],
+          ["CGPOWER", "CG Power", "₹835.40", "-0.18%", 82],
+          ["COCHINSHIP", "Cochin Shipyard", "₹1,843", "+2.10%", 93],
+        ];
+      let list =
+        JSON.parse(localStorage.getItem(K) || "null") ||
+        S.slice(0, 2).map((x) => ({ s: x[0], n: x[1], on: true }));
+      const $ = (x) => document.querySelector(x);
+      function title(t, btn = "") {
+        return `<div class="title"><div><small>YOUR TRADING WORKSPACE</small><h1>${t}</h1></div>${btn}</div>`;
+      }
+      function rows() {
+        return S.map(
+          (x) =>
+            `<div class="row"><div><b>${x[0]}</b><br><small>${x[1]}</small></div><div><b>${x[2]}</b><br><small class="up">${x[3]}</small></div><div><span class="notice">${x[4] > 94 ? "Confirming" : "Armed"}</span></div><button class="mini" onclick="quickAdd('${x[0]}','${x[1]}')">＋</button></div>`,
+        ).join("");
+      }
+      function notify(t, b) {
+        if (Notification.permission === "granted")
+          new Notification(t, { body: b });
+        else alert(t + "\\n" + b);
+      }
+      function save() {
+        localStorage.setItem(K, JSON.stringify(list));
+        watch();
+      }
+      function overview() {
+        app.innerHTML =
+          title(
+            "Overview",
+            '<button class="btn" onclick="openStockModal()">＋ Add to watchlist</button>',
+          ) +
+          `<section class="card verdict"><div class="gate"><small>MARKET GATE</small><b>CAUTION</b><span>A/A+ setups only</span></div><div><small>DAILY VERDICT</small><h2>Be selective. Let price and volume prove the move.</h2><span class="muted">Three high-quality candidates are near their pivots. Wait for confirmation.</span></div></section><section class="metrics"><div class="card metric"><span>Qualified setups</span><b>07</b><span>2 new since last scan</span></div><div class="card metric"><span>Near pivot</span><b>03</b><span>within 1% of pivot</span></div><div class="card metric"><span>Confirmed today</span><b>00</b><span>feed unavailable</span></div><div class="card metric"><span>Portfolio risk</span><b>0.00%</b><span>of 5% maximum</span></div></section><section class="grid"><div class="card"><small class="eyebrow">QUALIFIED · NIFTY 500</small><h3>Setup radar</h3><div class="rows">${rows()}</div></div><div class="card focus"><small>SELECTED SETUP</small><h3>HAL <span class="notice">A+</span></h3><div class="score">96</div><div class="quality"><div>Trend template <b>8/8</b></div><div>Relative strength <b>94</b></div><div>VCP score <b>96</b></div><div>RVOL <b>1.82×</b></div></div></div></section>`;
+      }
+      function scanner() {
+        app.innerHTML =
+          title("Scanner", "<button class=\"btn\" onclick=\"exportCsv()\">Export CSV</button>") +
+          `<section class="card"><small>QUALIFIED CANDIDATES</small><h3>Nifty 500 scan</h3><div class="toolbar"><input id="scanSearch" placeholder="Search symbol or company" oninput="filterRows(this.value)"><button class="mini" onclick="filterRows('')">Clear</button></div><div class="rows" id="scanRows">${rows()}</div></section>`;
+      }
+      function watch() {
+        app.innerHTML =
+          title(
+            "Watchlist",
+            '<button class="btn" onclick="openStockModal()">＋ Add symbol</button>',
+          ) +
+          `<section class="card watch"><small>YOUR LIST</small><h3>Watchlist & alerts</h3><div id="items">${list.length ? list.map((x, i) => `<div class="watchrow"><div><b>${x.s}</b><br><small>${x.n}</small></div><label><input type="checkbox" ${x.on ? "checked" : ""} onchange="toggle(${i},this.checked)"> Alert above ₹ <input type="number" value="${x.target||0}" onchange="setTarget(${i},this.value)"></label><button class="remove" onclick="removeItem(${i})">Remove</button></div>`).join("") : '<div class="notice">No symbols yet. Add a stock to monitor it.</div>'}</div><p><button class="btn" onclick="testAlert()">Test alert</button> <button class="remove" onclick="enableAlerts()">Enable browser alerts</button></p></section>`;
+      }
+      function market() {
+        app.innerHTML =
+          title("Market health") +
+          `<section class="card"><small>MARKET GATE</small><h3>CAUTION</h3><div class="metrics"><div class="metric"><span>Nifty 500</span><b class="up">+0.48%</b></div><div class="metric"><span>Nifty 50</span><b class="up">+0.36%</b></div><div class="metric"><span>India VIX</span><b>12.84</b></div><div class="metric"><span>Breadth</span><b>62%</b></div></div><div class="notice">A/A+ setups only. Reduce risk until the market gate improves.</div></section>`;
+      }
+      function settings() {
+        app.innerHTML =
+          title("Settings") +
+          `<section class="card settings"><h3>Trading preferences</h3><label>Default risk per trade (%)</label><input id="defaultRisk" type="number" value="${localStorage.getItem('alpha-risk')||0.5}" step="0.1"><label>Provider status</label><input value="Upstox — configuration required" disabled><p><button class="btn" onclick="saveSettings()">Save preferences</button> <button class="mini" onclick="openModal('riskModal')">Open risk calculator</button></p></section>`;
+      }
+      function openModal(id){document.getElementById(id).classList.add("open")}
+      function closeModal(id){document.getElementById(id).classList.remove("open")}
+      function openStockModal(){stockForm.reset();openModal("stockModal");symbol.focus()}
+      function quickAdd(s,n){if(list.some(x=>x.s===s))return toastMsg(s+" is already watched");list.push({s,n,on:true,target:0});save();toastMsg(s+" added to watchlist")}
+      function toastMsg(message){toast.textContent=message;toast.classList.add("show");setTimeout(()=>toast.classList.remove("show"),2200)}
+      stockForm.onsubmit=(event)=>{event.preventDefault();const s=symbol.value.trim().toUpperCase();if(list.some(x=>x.s===s))return toastMsg("Stock already exists");list.push({s,n:company.value.trim(),on:true,target:Number(target.value)||0});localStorage.setItem(K,JSON.stringify(list));closeModal("stockModal");toastMsg(s+" added to watchlist")}
+      function setTarget(i,value){list[i].target=Number(value)||0;localStorage.setItem(K,JSON.stringify(list));toastMsg("Alert price saved")}
+      function removeItem(i) {
+        list.splice(i, 1);
+        save();
+      }
+      function toggle(i, v) {
+        list[i].on = v;
+        save();
+        notify(
+          "Alerts updated",
+          list[i].s + " alerts " + (v ? "enabled" : "disabled") + ".",
+        );
+      }
+      async function enableAlerts() {
+        let r = await Notification.requestPermission();
+        notify(
+          "Browser alerts",
+          r === "granted"
+            ? "Enabled on this device."
+            : "Permission not granted.",
+        );
+      }
+      function testAlert() {
+        notify(
+          "Alpha Swing AI",
+          "Test alert: browser notifications are working.",
+        );
+      }
+      function filterRows(query){const q=query.toLowerCase();document.querySelectorAll("#scanRows .row").forEach(row=>row.style.display=row.textContent.toLowerCase().includes(q)?"grid":"none")}
+      function exportCsv(){const lines=[["Symbol","Company","Price","Change","Score"],...S].map(r=>r.map(v=>`"${v}"`).join(",")).join("\n");const a=document.createElement("a");a.href=URL.createObjectURL(new Blob([lines],{type:"text/csv"}));a.download="alpha-swing-scanner.csv";a.click();URL.revokeObjectURL(a.href);toastMsg("Scanner CSV downloaded")}
+      function saveSettings(){localStorage.setItem("alpha-risk",defaultRisk.value);toastMsg("Preferences saved")}
+      riskForm.onsubmit=(event)=>{event.preventDefault();const c=Number(capital.value),e=Number(entry.value),s=Number(stop.value),p=Number(riskPct.value),r=e-s,q=r>0?Math.floor(c*p/100/r):0;riskResult.innerHTML=`<span>Risk amount<b>₹${(c*p/100).toLocaleString("en-IN")}</b></span><span>Quantity<b>${q}</b></span><span>Position value<b>₹${(q*e).toLocaleString("en-IN")}</b></span><span>2R target<b>₹${(e+2*r).toLocaleString("en-IN")}</b></span>`}
+      function page(x) {
+        ({ overview, scanner, watchlist: watch, market, settings })[x]();
+        document
+          .querySelectorAll("[data-page]")
+          .forEach((b) => b.classList.toggle("active", b.dataset.page === x));
+      }
+      document
+        .querySelectorAll("[data-page]")
+        .forEach((b) => (b.onclick = () => page(b.dataset.page)));
+      overview();
+      if("serviceWorker" in navigator)navigator.serviceWorker.register("sw.js");
+    </script>
+  </body>
+</html>
