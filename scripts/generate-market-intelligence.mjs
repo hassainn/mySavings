@@ -404,24 +404,36 @@ function buildDeterministic(items) {
 }
 
 // -------------------------------------------------------------- Gemini API
-async function callGemini({ prompt, tools }) {
-  const response = await fetch("https://generativelanguage.googleapis.com/v1beta/interactions", {
-    method: "POST",
-    headers: { "Content-Type": "application/json", "x-goog-api-key": apiKey },
-    body: JSON.stringify({
-      model,
-      input: prompt,
-      ...(tools?.length ? { tools } : {}),
-      response_format: {
-        type: "text",
-        mime_type: "application/json",
-        schema: tools?.length ? groundedSchema : classifySchema,
-      },
-    }),
+const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
+
+async function callGemini({ prompt, tools, retries = 2, retryOn = [500, 503] }) {
+  const body = JSON.stringify({
+    model,
+    input: prompt,
+    ...(tools?.length ? { tools } : {}),
+    response_format: {
+      type: "text",
+      mime_type: "application/json",
+      schema: tools?.length ? groundedSchema : classifySchema,
+    },
   });
-  if (!response.ok) {
-    const details = await response.text();
-    throw new Error(`Gemini API ${response.status}: ${details.slice(0, 300)}`);
+  let response;
+  for (let attempt = 0; ; attempt += 1) {
+    response = await fetch("https://generativelanguage.googleapis.com/v1beta/interactions", {
+      method: "POST",
+      headers: { "Content-Type": "application/json", "x-goog-api-key": apiKey },
+      body,
+    });
+    if (response.ok) break;
+    const details = (await response.text()).slice(0, 300);
+    if (retryOn.includes(response.status) && attempt < retries) {
+      // 429 on the free tier clears within a minute; 500/503 are transient spikes.
+      const waitMs = response.status === 429 ? 15000 : 5000;
+      console.log(`Gemini ${response.status}; retrying in ${waitMs / 1000}s (attempt ${attempt + 1}/${retries}).`);
+      await sleep(waitMs);
+      continue;
+    }
+    throw new Error(`Gemini API ${response.status}: ${details}`);
   }
   const payload = await response.json();
   if (payload.status && payload.status !== "completed") {
@@ -583,7 +595,10 @@ if (!payload) {
   }
   if (apiKey) {
     try {
-      payload = finaliseClassified(await callGemini({ prompt: classifyPrompt(items), tools: [] }), items);
+      payload = finaliseClassified(
+        await callGemini({ prompt: classifyPrompt(items), tools: [], retryOn: [429, 500, 503] }),
+        items,
+      );
       method = "rss-gemini";
       console.log("Using RSS headlines classified by Gemini.");
     } catch (error) {
