@@ -1,7 +1,7 @@
 {
   "status": "live",
   "method": "rss-deterministic",
-  "generatedAt": "2026-09-13T15:27:30.871Z",
+  "generatedAt": "2026-09-13T15:30:56.952Z",
   "model": null,
   "marketMood": "Constructive headline tone",
   "marketSummary": "14 market and stock updates from Indian financial media in the last few sessions; 1 flagged essential for swing traders (1 positive, 0 negative). Headline sentiment is a first read — confirm with price and volume.",
@@ -12,20 +12,6 @@
       "momentum": "Improving",
       "score": 71,
       "reason": "3 recent headlines in the feed window (1 positive, 0 negative).",
-      "catalysts": [
-        "Recent news flow"
-      ],
-      "risks": [
-        "Headline risk",
-        "Confirm with price and volume"
-      ],
-      "relatedStocks": []
-    },
-    {
-      "name": "Banking & financials",
-      "momentum": "Mixed",
-      "score": 59,
-      "reason": "3 recent headlines in the feed window (0 positive, 0 negative).",
       "catalysts": [
         "Recent news flow"
       ],
@@ -52,6 +38,20 @@
         "BEL",
         "COCHINSHIP"
       ]
+    },
+    {
+      "name": "Banking & financials",
+      "momentum": "Mixed",
+      "score": 56,
+      "reason": "2 recent headlines in the feed window (0 positive, 0 negative).",
+      "catalysts": [
+        "Recent news flow"
+      ],
+      "risks": [
+        "Headline risk",
+        "Confirm with price and volume"
+      ],
+      "relatedStocks": []
     },
     {
       "name": "IT services",
@@ -115,6 +115,20 @@
       "sourceName": "LiveMint Markets",
       "sourceUrl": "https://www.livemint.com/market/ipo/kamarajar-port-invites-bankers-for-1-200-crore-ipo-11789280693928.html",
       "publishedAt": "2026-09-13T11:45:32.000Z"
+    },
+    {
+      "category": "stock",
+      "symbol": "NSE",
+      "headline": "SEBI’s CAS fix finds early favour for the old way of settling derivatives",
+      "summary": "SEBI weighs blended VWAP against a one-year return to the old method as traders seem to favour simpler expiry settlement",
+      "sentiment": "Neutral",
+      "importance": "Medium",
+      "catalystType": "Regulatory",
+      "timeHorizon": "Today",
+      "impact": "Policy/regulatory catalyst — can reprice the whole group; check breadth first.",
+      "sourceName": "Hindu BusinessLine Markets",
+      "sourceUrl": "https://www.thehindubusinessline.com/markets/sebis-cas-fix-finds-early-favour-for-the-old-way-of-settling-derivatives/article71463989.ece",
+      "publishedAt": "2026-09-13T15:27:54.000Z"
     },
     {
       "category": "sector",
@@ -283,26 +297,16 @@
       "sourceName": "Economic Times Markets",
       "sourceUrl": "https://economictimes.indiatimes.com/markets/stocks/news/fpis-withdraw-rs-13138-crore-from-equities-in-september-so-far-amid-global-uncertainty/articleshow/134180766.cms",
       "publishedAt": "2026-09-13T05:35:34.000Z"
-    },
-    {
-      "category": "stock",
-      "symbol": "NSE",
-      "headline": "'This is the test': All eyes on US Fed to tackle high inflation",
-      "summary": "The US Federal Reserve goes into a key rate-setting meeting this week with markets expecting policymakers to pull the trigger on a rate hike to tackle persistently high inflation -- and analysts say central bank chief Kevin Warsh's credibility is on the line. In recent weeks, however, several Fed po",
-      "sentiment": "Neutral",
-      "importance": "Medium",
-      "catalystType": "Other",
-      "timeHorizon": "Today",
-      "impact": "Review the source and the price/volume reaction before acting.",
-      "sourceName": "Economic Times Markets",
-      "sourceUrl": "https://economictimes.indiatimes.com/markets/us-stocks/wall-street-guide/this-is-the-test-all-eyes-on-us-fed-to-tackle-high-inflation/articleshow/134177098.cms",
-      "publishedAt": "2026-09-13T04:27:47.000Z"
     }
   ],
   "sources": [
     {
       "title": "LiveMint Markets",
       "url": "https://www.livemint.com/market/ipo/kamarajar-port-invites-bankers-for-1-200-crore-ipo-11789280693928.html"
+    },
+    {
+      "title": "Hindu BusinessLine Markets",
+      "url": "https://www.thehindubusinessline.com/markets/sebis-cas-fix-finds-early-favour-for-the-old-way-of-settling-derivatives/article71463989.ece"
     },
     {
       "title": "LiveMint Markets",
@@ -351,10 +355,6 @@
     {
       "title": "Economic Times Markets",
       "url": "https://economictimes.indiatimes.com/markets/stocks/news/fpis-withdraw-rs-13138-crore-from-equities-in-september-so-far-amid-global-uncertainty/articleshow/134180766.cms"
-    },
-    {
-      "title": "Economic Times Markets",
-      "url": "https://economictimes.indiatimes.com/markets/us-stocks/wall-street-guide/this-is-the-test-all-eyes-on-us-fed-to-tackle-high-inflation/articleshow/134177098.cms"
     }
   ],
   "disclaimer": "AI-generated research summary. Verify source articles and exchange filings before making investment decisions. Not investment advice."
