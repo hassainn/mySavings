@@ -562,8 +562,8 @@ function analyze(instrument, candles, benchMomByDate = null) {
   const evidence = [];
   let score = 28;
 
-  const trendTemplate = close > ema21 && close > sma50 && sma50 > sma200;
-  if (trendTemplate) { tags.push("Trend template"); evidence.push("Price above EMA21, SMA50 and SMA200"); score += 18; }
+  const basicTrendUp = close > ema21 && close > sma50 && sma50 > sma200;
+  if (basicTrendUp) { tags.push("Trend template"); evidence.push("Price above EMA21, SMA50 and SMA200"); score += 18; }
   if (close > priorHigh20) { tags.push("20-day breakout"); evidence.push("Close cleared the prior 20-session high"); score += 18; }
   else if (close >= priorHigh20 * 0.985) { tags.push("Near breakout"); evidence.push("Within 1.5% of the 20-session pivot"); score += 9; }
   if (close > high52) { tags.push("52-week high"); evidence.push("New trailing-year price high"); score += 12; }
