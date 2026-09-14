@@ -20,8 +20,8 @@
 (function () {
   "use strict";
 
-  const SUPABASE_URL = ""; // e.g. "https://abcdefgh.supabase.co"
-  const SUPABASE_ANON_KEY = ""; // anon / publishable key (browser-safe)
+  const SUPABASE_URL = "https://edmvmyogbfxrbxhkqoag.supabase.co";
+  const SUPABASE_ANON_KEY = "sb_publishable_abFsuEay_0vkvZPbVJotGQ_BFWc4Ep4"; // publishable (browser-safe)
   const APPROVED_EMAILS = [
     "hassainn.mcsa@gmail.com",
   ];
