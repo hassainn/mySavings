@@ -81,3 +81,15 @@ test('analyst enrichment sanitises invalid verdict and stage from the model', as
   assert.equal(result.analysis.bySymbol.TEST.verdict, 'Watch');
   assert.equal(result.analysis.bySymbol.TEST.stage, 'Unclear');
 });
+test('earnings discipline caps a leadership verdict when growth is weak, and captures EPS growth', async () => {
+  const p = plan();
+  const model = { analyst: 'x', summary: 'ok', stocks: [{ symbol: 'TEST', stage: 'Stage 2 advancing', technical: 't',
+    epsGrowth: ['Q1 FY27 +8%', 'Q4 FY26 +14%', 'Q3 FY26 +22%'], revenueGrowth: '+6%', earningsTrend: 'Decelerating', growthQualified: 'No',
+    fundamental: 'f', verdict: 'Leading', risk: 'r' }] };
+  const result = await enrichPlan(p, {}, { apiKey: 'test', fetchImpl: async () => ({ ok: true, json: async () => ({ output_text: JSON.stringify(model) }) }) });
+  const a = result.analysis.bySymbol.TEST;
+  assert.equal(a.verdict, 'Watch'); // Leading capped by decelerating / not-qualified growth
+  assert.equal(a.earningsTrend, 'Decelerating');
+  assert.equal(a.growthQualified, 'No');
+  assert.deepEqual(a.epsGrowth, ['Q1 FY27 +8%', 'Q4 FY26 +14%', 'Q3 FY26 +22%']);
+});
