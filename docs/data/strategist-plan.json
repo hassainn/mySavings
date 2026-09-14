@@ -1,13 +1,32 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-09-14T15:55:20.844Z",
+  "generatedAt": "2026-09-14T16:05:19.934Z",
   "sessionDate": "2026-09-14",
   "status": "ready",
-  "scanGeneratedAt": "2026-09-14T15:42:11.082Z",
+  "scanGeneratedAt": "2026-09-14T16:05:03.354Z",
   "gate": "WEAK",
-  "breadthScore": 39,
+  "breadthScore": 40,
   "verdict": "No new buys. Observe and protect capital.",
   "ideas": [
+    {
+      "symbol": "63MOONS",
+      "name": "63 Moons Technologies",
+      "pattern": "Near breakout",
+      "confidence": 99,
+      "state": "Watch",
+      "scanState": "Armed",
+      "asOf": "2026-09-11T00:00:00+05:30",
+      "close": 908.9,
+      "entryTrigger": 958.91,
+      "stop": 876.99,
+      "target2R": 1122.74,
+      "evidence": [
+        "Price above EMA21, SMA50 and SMA200",
+        "Within 1.5% of the 20-session pivot",
+        "3.5× 20-day average volume",
+        "RSI 72 supports momentum without extreme extension"
+      ]
+    },
     {
       "symbol": "AAREYDRUGS",
       "name": "AAREY DRUGS & PHARM LTD",
@@ -140,25 +159,6 @@
         "Rounded cup 24.2% deep with a 7.5% handle in the upper half of the base",
         "Volume dried up through the handle"
       ]
-    },
-    {
-      "symbol": "APOLLO",
-      "name": "Apollo Micro Systems",
-      "pattern": "Near breakout",
-      "confidence": 99,
-      "state": "Watch",
-      "scanState": "Armed",
-      "asOf": "2026-09-11T00:00:00+05:30",
-      "close": 422.25,
-      "entryTrigger": 466.97,
-      "stop": 443.92,
-      "target2R": 513.07,
-      "evidence": [
-        "Price above EMA21, SMA50 and SMA200",
-        "Within 1.5% of the 20-session pivot",
-        "1.35× 20-day average volume",
-        "MACD is above signal and zero line"
-      ]
     }
   ],
   "cautions": [
@@ -175,6 +175,10 @@
       "reason": "Double bottom"
     },
     {
+      "symbol": "MANINDS",
+      "reason": "Double bottom"
+    },
+    {
       "symbol": "CAPLIPOINT",
       "reason": "Double bottom"
     },
@@ -188,10 +192,6 @@
     },
     {
       "symbol": "EDELWEISS",
-      "reason": "Double bottom"
-    },
-    {
-      "symbol": "RML",
       "reason": "Double bottom"
     }
   ],
