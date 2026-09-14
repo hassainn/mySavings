@@ -11,7 +11,7 @@
     },
     {
       "sessionDate": "2026-09-14",
-      "generatedAt": "2026-09-14T15:24:29.372Z",
+      "generatedAt": "2026-09-14T15:42:23.363Z",
       "gate": "WEAK",
       "verdict": "No new buys. Observe and protect capital.",
       "ideas": [
@@ -130,6 +130,25 @@
           ]
         },
         {
+          "symbol": "APLAPOLLO",
+          "name": "APL Apollo Tubes",
+          "pattern": "Double bottom",
+          "confidence": 99,
+          "state": "Watch",
+          "scanState": "Armed",
+          "asOf": "2026-09-11T00:00:00+05:30",
+          "close": 2153.5,
+          "entryTrigger": 2283.28,
+          "stop": 2157.92,
+          "target2R": 2534,
+          "evidence": [
+            "Price above EMA21, SMA50 and SMA200",
+            "Two aligned swing lows with neckline pressure",
+            "Rounded cup 24.2% deep with a 7.5% handle in the upper half of the base",
+            "Volume dried up through the handle"
+          ]
+        },
+        {
           "symbol": "APOLLO",
           "name": "Apollo Micro Systems",
           "pattern": "Near breakout",
@@ -146,25 +165,6 @@
             "Within 1.5% of the 20-session pivot",
             "1.35× 20-day average volume",
             "MACD is above signal and zero line"
-          ]
-        },
-        {
-          "symbol": "ARROWGREEN",
-          "name": "ARROW GREENTECH",
-          "pattern": "Double bottom",
-          "confidence": 99,
-          "state": "Watch",
-          "scanState": "Armed",
-          "asOf": "2026-09-11T00:00:00+05:30",
-          "close": 813,
-          "entryTrigger": 829.83,
-          "stop": 764.53,
-          "target2R": 960.43,
-          "evidence": [
-            "Price above EMA21, SMA50 and SMA200",
-            "MACD is above signal and zero line",
-            "Two aligned swing lows with neckline pressure",
-            "Rounded cup 16.3% deep with a 6.4% handle in the upper half of the base"
           ]
         }
       ],
