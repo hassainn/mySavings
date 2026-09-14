@@ -11,9 +11,9 @@
     },
     {
       "sessionDate": "2026-09-14",
-      "generatedAt": "2026-09-14T14:52:43.106Z",
-      "gate": "UNAVAILABLE",
-      "verdict": "Watch only. A fresh, complete scanner feed is required.",
+      "generatedAt": "2026-09-14T15:24:29.372Z",
+      "gate": "WEAK",
+      "verdict": "No new buys. Observe and protect capital.",
       "ideas": [
         {
           "symbol": "AAREYDRUGS",
@@ -92,6 +92,25 @@
           ]
         },
         {
+          "symbol": "AONELIQUID",
+          "name": "AONEAMC - AONELIQUID",
+          "pattern": "20-day breakout",
+          "confidence": 99,
+          "state": "Watch",
+          "scanState": "Armed",
+          "asOf": "2026-09-11T00:00:00+05:30",
+          "close": 1076.74,
+          "entryTrigger": 1077.37,
+          "stop": 1076.92,
+          "target2R": 1078.25,
+          "evidence": [
+            "Price above EMA21, SMA50 and SMA200",
+            "Close cleared the prior 20-session high",
+            "Two aligned swing lows with neckline pressure",
+            "Contracting ranges with volume dry-up"
+          ]
+        },
+        {
           "symbol": "APARINDS",
           "name": "Apar Industries",
           "pattern": "Double bottom",
@@ -146,25 +165,6 @@
             "MACD is above signal and zero line",
             "Two aligned swing lows with neckline pressure",
             "Rounded cup 16.3% deep with a 6.4% handle in the upper half of the base"
-          ]
-        },
-        {
-          "symbol": "AZAD",
-          "name": "AZAD ENGINEERING LIMITED",
-          "pattern": "Double bottom",
-          "confidence": 99,
-          "state": "Watch",
-          "scanState": "Armed",
-          "asOf": "2026-09-11T00:00:00+05:30",
-          "close": 2849.1,
-          "entryTrigger": 2989.59,
-          "stop": 2793.62,
-          "target2R": 3381.53,
-          "evidence": [
-            "Price above EMA21, SMA50 and SMA200",
-            "RSI 56 supports momentum without extreme extension",
-            "Two aligned swing lows with neckline pressure",
-            "Contracting ranges with volume dry-up"
           ]
         }
       ],
