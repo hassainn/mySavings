@@ -138,7 +138,13 @@
       });
       button.disabled = false;
       button.textContent = "Email me a login link";
-      setMsg(error ? "Could not send the link. Check the email and try again." : "Check your inbox for a secure login link.");
+      if (!error) {
+        setMsg("Check your inbox for a secure login link.");
+      } else if (/rate limit/i.test(error.message || "")) {
+        setMsg("Email limit reached for now — please wait a bit and try again (or ask the admin to set up email delivery).");
+      } else {
+        setMsg("Could not send the link: " + (error.message || "please try again shortly."));
+      }
     });
 
     el("#auth-signout").addEventListener("click", async () => {
