@@ -732,7 +732,12 @@ const partitionUniverse = eligible.filter((_, index) => index % partitionCount =
 const universe = partitionUniverse.slice(0, maxInstruments);
 const toDate = new Date();
 const fromDate = new Date(toDate);
-fromDate.setUTCDate(fromDate.getUTCDate() - 430);
+// ~820 calendar days ≈ 560 trading candles. RS rating needs a 252-bar momentum
+// warmup PLUS ~252 bars of relative-strength history for its percentile, so a
+// shorter window (the old 430d ≈ 291 candles) left <60 usable points and RS was
+// always null. This window fills the RS history to its 252-bar cap for stocks
+// with enough listing history; newer names still fall back to null (relaxed gates).
+fromDate.setUTCDate(fromDate.getUTCDate() - 820);
 const isoDate = (date) => date.toISOString().slice(0, 10);
 
 // RS benchmark (Nifty 500) for the Minervini trend template. Fetched once;
