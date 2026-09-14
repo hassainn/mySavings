@@ -18,7 +18,9 @@
     "triggered": 0,
     "cautions": 0,
     "highConfidence": 0,
-    "candlestickSignals": 0
+    "candlestickSignals": 0,
+    "sepaBreakouts": 0,
+    "superPerformers": 0
   },
   "marketMood": {
     "evaluated": 0,
@@ -32,6 +34,11 @@
     "guidance": "Connect Upstox to calculate market mood from NSE breadth."
   },
   "strategyLibrary": [
+    "SEPA breakout",
+    "Super-performer",
+    "Stage 2",
+    "Trend template",
+    "Swing TSL buy",
     "20-day breakout",
     "52-week high",
     "Cup & handle",

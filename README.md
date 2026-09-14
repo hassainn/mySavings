@@ -48,6 +48,8 @@ Gemini produces a research summary, not a licensed exchange price feed. Connect 
 
 The scanner runs after the NSE cash session and reads the daily Upstox instrument master plus daily historical candles. It filters normal NSE cash equities, then ranks explainable setups using:
 
+- Minervini SEPA layer: 8-point Trend Template, 4-stage classification, RS-percentile vs the Nifty 500 benchmark, Stage-2 "SEPA breakout" and strict "Super-performer" gates (RS>=95, >=2x 50-day volume, <=2.5% past pivot, RSI floor, within 10% of the 52-week high, close in the top 25% of range, tight T3/T1 base)
+- swing high/low trailing-stop (TSL) buy/exit state, per the Accurate Swing Trading System
 - 20-day and 52-week breakouts
 - cup-and-handle bases (rounded cup, shallow upper-half handle, volume dry-up, buy pivot)
 - high tight flags (near-vertical flagpole into a tight consolidation)

@@ -428,7 +428,111 @@ function evaluateBreakoutHistory(candles) {
   };
 }
 
-function analyze(instrument, candles) {
+// ---- Minervini SEPA helpers (ported from the user's TradingView indicator) ----
+
+// Weighted multi-timeframe momentum (63/126/189/252-day ROC), per bar.
+function momentumSeries(closes) {
+  const out = new Array(closes.length).fill(null);
+  for (let i = 252; i < closes.length; i += 1) {
+    if (closes[i - 63] > 0 && closes[i - 126] > 0 && closes[i - 189] > 0 && closes[i - 252] > 0) {
+      const roc = (n) => (closes[i] / closes[i - n] - 1) * 100;
+      out[i] = roc(63) * 0.4 + roc(126) * 0.2 + roc(189) * 0.2 + roc(252) * 0.2;
+    }
+  }
+  return out;
+}
+
+// RS rating = percentile of the stock's benchmark-relative momentum vs its own
+// 252-bar history (0-100). A proxy, not an IBD/MarketSmith cross-sectional rank.
+function relativeStrengthRating(candles, benchMomByDate) {
+  if (!benchMomByDate || benchMomByDate.size === 0) return null;
+  const mom = momentumSeries(candles.map((c) => c.close));
+  const rel = candles.map((c, i) => {
+    const bench = benchMomByDate.get(c.date.slice(0, 10));
+    return mom[i] != null && bench != null ? mom[i] - bench : null;
+  });
+  const smooth = rel.map((_, i) => {
+    if (i < 4) return null;
+    const window = rel.slice(i - 4, i + 1);
+    return window.every((value) => value != null) ? mean(window) : null;
+  });
+  const value = smooth.at(-1);
+  if (value == null) return null;
+  const history = [];
+  for (let i = smooth.length - 2; i >= 0 && history.length < 252; i -= 1) {
+    if (smooth[i] != null) history.push(smooth[i]);
+  }
+  if (history.length < 60) return null;
+  return round((history.filter((x) => x <= value).length / history.length) * 100, 0);
+}
+
+// 8-point Minervini Trend Template evaluated on the latest bar.
+function trendTemplate(candles, closes, rsRating) {
+  const close = closes.at(-1);
+  const sma50 = sma(closes, 50);
+  const sma150 = sma(closes, 150);
+  const sma200 = sma(closes, 200);
+  const sma200Past = sma(closes, 200, closes.length - 22); // ~21 sessions ago
+  const rising = sma200Past != null && sma200 > sma200Past;
+  const high52 = highest(candles.slice(-252).map((c) => c.high));
+  const low52 = lowest(candles.slice(-252).map((c) => c.low));
+  const rules = [
+    close > sma150 && close > sma200,
+    sma150 > sma200,
+    rising,
+    sma50 > sma150 && sma50 > sma200,
+    close > sma50,
+    low52 > 0 && close >= low52 * 1.3,
+    high52 > 0 && close >= high52 * 0.75,
+    rsRating != null && rsRating >= 70,
+  ];
+  return { score: rules.filter(Boolean).length, sma50, sma150, sma200, rising };
+}
+
+// 4-stage classification (snapshot; healthy pullbacks hold Stage 2).
+function classifyStage(closes, tpl) {
+  const close = closes.at(-1);
+  const { sma50, sma150, sma200, rising } = tpl;
+  const sma200Past = sma(closes, 200, closes.length - 22);
+  const falling = sma200Past != null && sma200 < sma200Past;
+  const stage2 = close > sma50 && sma50 > sma150 && sma150 > sma200 && rising;
+  const stage4 = close < sma50 && sma50 < sma150 && sma150 < sma200 && falling;
+  const uptrendIntact = sma150 > sma200 && rising && close > sma150 && sma50 > sma200;
+  let stage = 1;
+  if (stage2 || uptrendIntact) stage = 2;
+  else if (stage4) stage = 4;
+  else if (close < sma50 && sma150 >= sma200) stage = 3;
+  const names = { 1: "Stage 1 base", 2: "Stage 2 advancing", 3: "Stage 3 top", 4: "Stage 4 decline" };
+  return { stage, stageName: names[stage] };
+}
+
+// "Accurate Swing Trading System" (ceyhun) swing high/low trailing stop.
+function detectSwingTsl(candles, period = 3) {
+  const n = candles.length;
+  if (n < period + 2) return { state: null, freshBuy: false, freshSell: false };
+  const rangeHigh = (end) => { let m = -Infinity; for (let k = end - period + 1; k <= end; k += 1) if (k >= 0) m = Math.max(m, candles[k].high); return m; };
+  const rangeLow = (end) => { let m = Infinity; for (let k = end - period + 1; k <= end; k += 1) if (k >= 0) m = Math.min(m, candles[k].low); return m; };
+  let avn = 0;
+  let tslPrev = null;
+  let closePrev = null;
+  let state = null;
+  let freshBuy = false;
+  let freshSell = false;
+  for (let i = period; i < n; i += 1) {
+    const close = candles[i].close;
+    const avd = close > rangeHigh(i - 1) ? 1 : close < rangeLow(i - 1) ? -1 : 0;
+    if (avd !== 0) avn = avd;
+    const tsl = avn === 1 ? rangeLow(i) : rangeHigh(i);
+    freshBuy = tslPrev != null && closePrev != null && closePrev <= tslPrev && close > tsl;
+    freshSell = tslPrev != null && closePrev != null && closePrev >= tslPrev && close < tsl;
+    state = close >= tsl ? "Buy" : "Sell";
+    tslPrev = tsl;
+    closePrev = close;
+  }
+  return { state, freshBuy, freshSell };
+}
+
+function analyze(instrument, candles, benchMomByDate = null) {
   if (candles.length < 210) return null;
   const close = candles.at(-1).close;
   if (close < minimumPrice) return null;
@@ -493,7 +597,47 @@ function analyze(instrument, candles) {
     score += 5;
   }
 
-  const actionablePatterns = ["20-day breakout", "52-week high", "Double bottom", "VCP", "Darvas box", "Cup & handle", "High tight flag", "Near breakout"];
+  // ---- Minervini SEPA layer (trend template, stage, RS, super-performer, swing TSL) ----
+  const rsRating = relativeStrengthRating(candles, benchMomByDate);
+  const tpl = trendTemplate(candles, closes, rsRating);
+  const sma150 = tpl.sma150;
+  const { stage, stageName } = classifyStage(closes, tpl);
+  const swing = detectSwingTsl(candles, 3);
+  const avgVolume50Prev = mean(volumes.slice(-51, -1));
+  const rvol50 = avgVolume50Prev ? candles.at(-1).volume / avgVolume50Prev : 0;
+  const pivotForExt = Number.isFinite(priorHigh20) && priorHigh20 > 0 ? priorHigh20 : close;
+  const extensionPct = pivotForExt > 0 ? (close / pivotForExt - 1) * 100 : 0;
+  const lastBar = candles.at(-1);
+  const barRange = lastBar.high - lastBar.low;
+  const closeTop25 = barRange > 0 ? close >= lastBar.high - barRange * 0.25 : true;
+  const pctBelow52High = high52 > 0 ? ((high52 - close) / high52) * 100 : 100;
+  const segLen = 15;
+  const segRange = (offset) => {
+    const slice = candles.slice(-(offset + segLen), candles.length - offset);
+    if (slice.length < segLen) return null;
+    const hi = highest(slice.map((c) => c.high));
+    const lo = lowest(slice.map((c) => c.low));
+    return lo > 0 ? ((hi - lo) / lo) * 100 : null;
+  };
+  const t1Range = segRange(segLen * 2 + 1);
+  const t3Range = segRange(1);
+  const t3Tight = t3Range != null && t3Range <= 10;
+  const t3RatioOk = t1Range != null && t1Range > 0 && t3Range != null ? t3Range <= t1Range * 0.55 : false;
+  const stage2 = stage === 2;
+  const brokeOut = close > priorHigh20 || close > high52;
+  const sepaBreakout = stage2 && tpl.score >= 7 && brokeOut && relativeVolume >= 1.3;
+  const superGates = rsRating != null && rsRating >= 95 && rvol50 >= 2 && extensionPct <= 2.5 &&
+    (rsi14 == null || rsi14 >= 55) && pctBelow52High <= 10 && closeTop25 && t3Tight && t3RatioOk;
+  const superPerformer = sepaBreakout && superGates;
+
+  if (stage2) { tags.push("Stage 2"); evidence.push(`${stageName}, above rising 50/150/200 DMA`); score += 8; }
+  if (tpl.score >= 7) { tags.push(`Trend template ${tpl.score}/8`); evidence.push(`Minervini trend template ${tpl.score}/8${rsRating != null ? ` · RS ${rsRating}` : ""}`); score += tpl.score >= 8 ? 12 : 6; }
+  if (sepaBreakout) { tags.push("SEPA breakout"); evidence.push("Stage-2 breakout confirmed by the trend template and volume"); score += 10; }
+  if (superPerformer) { tags.push("Super-performer"); evidence.push(`Strict SEPA gates met: RS ${rsRating}, ${round(rvol50)}× 50-day volume, ${round(extensionPct)}% past pivot, tight ${round(t3Range)}% base`); score += 12; }
+  if (swing.freshBuy) { tags.push("Swing TSL buy"); evidence.push("Fresh swing trailing-stop buy crossover"); score += 6; }
+  else if (swing.state === "Buy") { tags.push("Swing TSL long"); }
+
+  const actionablePatterns = ["20-day breakout", "52-week high", "Double bottom", "VCP", "Darvas box", "Cup & handle", "High tight flag", "SEPA breakout", "Super-performer", "Near breakout"];
   const candlePatternNames = candlestickPatterns.map((pattern) => `Candle · ${pattern.name}`);
   const meaningful = tags.some((tag) => actionablePatterns.includes(tag)) || candlestickPatterns.length > 0;
   if (!meaningful) return null;
@@ -520,8 +664,8 @@ function analyze(instrument, candles) {
     confidence,
     state: bearishCaution ? "Caution" : close >= entryTrigger ? "Triggered" : confidence >= 78 ? "Armed" : "Watch",
     bias: bearishCaution ? "bearish" : dominantCandle?.bias || "bullish",
-    primaryPattern: (!hasLongStructure && candlePatternNames[0]) || tags.find((tag) => actionablePatterns.includes(tag)) || candlePatternNames[0] || tags[0] || "Confluence",
-    patterns: tags.slice(0, 8),
+    primaryPattern: superPerformer ? "Super-performer" : sepaBreakout ? "SEPA breakout" : (!hasLongStructure && candlePatternNames[0]) || tags.find((tag) => actionablePatterns.includes(tag)) || candlePatternNames[0] || tags[0] || "Confluence",
+    patterns: tags.slice(0, 10),
     candlestickPatterns,
     evidence: evidence.slice(0, 7),
     entryTrigger: bearishCaution && !hasLongStructure ? null : round(entryTrigger),
@@ -529,9 +673,15 @@ function analyze(instrument, candles) {
     target2R: bearishCaution && !hasLongStructure ? null : round(target),
     riskReward: bearishCaution && !hasLongStructure ? null : risk > 0 ? 2 : null,
     indicators: {
-      ema21: round(ema21), sma50: round(sma50), sma200: round(sma200),
+      ema21: round(ema21), sma50: round(sma50), sma150: round(sma150), sma200: round(sma200),
       rsi14: round(rsi14, 1), macd: round(macd), atr14: round(atr14),
-      relativeVolume: round(relativeVolume),
+      relativeVolume: round(relativeVolume), rsRating,
+    },
+    sepa: {
+      stage, stageName, trendScore: tpl.score, rsRating,
+      sepaBreakout, superPerformer,
+      swingState: swing.state, swingFreshBuy: swing.freshBuy,
+      extensionPct: round(extensionPct), rvol50: round(rvol50), pctBelow52High: round(pctBelow52High),
     },
     validation: backtest,
   };
@@ -572,6 +722,28 @@ const toDate = new Date();
 const fromDate = new Date(toDate);
 fromDate.setUTCDate(fromDate.getUTCDate() - 430);
 const isoDate = (date) => date.toISOString().slice(0, 10);
+
+// RS benchmark (Nifty 500) for the Minervini trend template. Fetched once;
+// if it fails, RS gates relax gracefully rather than breaking the scan.
+const benchmarkKey = process.env.RS_BENCHMARK_KEY || "NSE_INDEX|Nifty 500";
+let benchMomByDate = null;
+try {
+  const benchPayload = await fetchJson(
+    `https://api.upstox.com/v3/historical-candle/${encodeURIComponent(benchmarkKey)}/days/1/${isoDate(toDate)}/${isoDate(fromDate)}`,
+    true,
+  );
+  const benchCandles = (benchPayload.data?.candles || [])
+    .map(([date, open, high, low, close]) => ({ date, close }))
+    .sort((a, b) => new Date(a.date) - new Date(b.date));
+  const benchMomentum = momentumSeries(benchCandles.map((c) => c.close));
+  benchMomByDate = new Map(
+    benchCandles.map((c, i) => [c.date.slice(0, 10), benchMomentum[i]]).filter(([, m]) => m != null),
+  );
+  console.log(`RS benchmark ${benchmarkKey}: ${benchMomByDate.size} dated momentum points.`);
+} catch (error) {
+  console.log(`RS benchmark unavailable (${String(error.message).slice(0, 100)}); RS gates relaxed.`);
+}
+
 const signals = [];
 const failures = [];
 const breadthCounts = {
@@ -601,7 +773,7 @@ for (let index = 0; index < universe.length; index += 1) {
       breadthCounts.aboveSma200 += observation.aboveSma200 ? 1 : 0;
       breadthCounts.totalChange += observation.changePct;
     }
-    const signal = analyze(instrument, candles);
+    const signal = analyze(instrument, candles, benchMomByDate);
     if (signal) signals.push(signal);
   } catch (error) {
     failures.push({ symbol: instrument.trading_symbol, reason: String(error.message).slice(0, 160) });
@@ -638,11 +810,14 @@ const partitionResult = {
     cautions: signals.filter((signal) => signal.state === "Caution").length,
     highConfidence: signals.filter((signal) => signal.confidence >= 80).length,
     candlestickSignals: signals.filter((signal) => signal.candlestickPatterns?.length).length,
+    sepaBreakouts: signals.filter((signal) => signal.sepa?.sepaBreakout).length,
+    superPerformers: signals.filter((signal) => signal.sepa?.superPerformer).length,
   },
   marketMood: summarizeBreadth(breadthCounts),
   strategyLibrary: [
+    "SEPA breakout", "Super-performer", "Stage 2", "Trend template", "Swing TSL buy",
     "20-day breakout", "52-week high", "Cup & handle", "High tight flag",
-    "Double bottom", "VCP", "Darvas box", "Trend template", "MACD momentum",
+    "Double bottom", "VCP", "Darvas box", "MACD momentum",
     "Candle · Bullish engulfing", "Candle · Bearish engulfing",
     "Candle · Morning star", "Candle · Evening star", "Candle · Hammer",
     "Candle · Shooting star", "Candle · Piercing line", "Candle · Dark cloud cover",
@@ -707,6 +882,8 @@ const result = {
     cautions: partitions.reduce((sum, part) => sum + Number(part.summary?.cautions || 0), 0),
     highConfidence: partitions.reduce((sum, part) => sum + Number(part.summary?.highConfidence || 0), 0),
     candlestickSignals: partitions.reduce((sum, part) => sum + Number(part.summary?.candlestickSignals || 0), 0),
+    sepaBreakouts: partitions.reduce((sum, part) => sum + Number(part.summary?.sepaBreakouts || 0), 0),
+    superPerformers: partitions.reduce((sum, part) => sum + Number(part.summary?.superPerformers || 0), 0),
   },
   marketMood: summarizeBreadth(mergedBreadthCounts),
   signals: mergedSignals,
