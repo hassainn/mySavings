@@ -99,6 +99,14 @@
     });
 
   (async () => {
+    // Capture any auth params from the URL BEFORE the Supabase client loads and
+    // strips them, so we can detect a recovery link or surface its error.
+    const initialHash = (location.hash || "").replace(/^#/, "");
+    const initialSearch = (location.search || "").replace(/^\?/, "");
+    const urlAuth = (key) => {
+      const h = new URLSearchParams(initialHash).get(key);
+      return h != null ? h : new URLSearchParams(initialSearch).get(key);
+    };
     try {
       await loadScript("https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.js");
     } catch {
@@ -165,8 +173,17 @@
       evaluate();
     });
 
-    // If we arrived via a recovery link, show the set-password step immediately.
-    if (/type=recovery/i.test(location.hash || "")) { recovering = true; showRecovery(); }
+    // Handle arriving from a reset link: surface any error, else show set-password.
+    const urlError = urlAuth("error_description") || urlAuth("error_code") || urlAuth("error");
+    const isRecoveryLink = urlAuth("type") === "recovery" || !!urlAuth("access_token") && urlAuth("type") === "recovery";
+    if (urlError) {
+      showLogin();
+      setMsg("Reset link problem: " + decodeURIComponent(String(urlError)).replace(/\+/g, " ") + " — request a fresh link and open it right away.");
+      try { history.replaceState({}, "", location.pathname); } catch {}
+    } else if (isRecoveryLink) {
+      recovering = true;
+      showRecovery();
+    }
     if (!recovering) await evaluate();
 
     el("#auth-form").addEventListener("submit", async (event) => {
@@ -238,7 +255,14 @@
       button.textContent = "Saving…";
       try {
         const { error } = await client.auth.updateUser({ password: pw });
-        if (error) { setRMsg("Could not save: " + (error.message || "try again.")); return; }
+        if (error) {
+          if (/session|missing|jwt|not authenticated/i.test(error.message || "")) {
+            setRMsg("This reset link expired or was already used. Go back and request a fresh one, then open it right away.");
+          } else {
+            setRMsg("Could not save: " + (error.message || "try again."));
+          }
+          return;
+        }
         try { history.replaceState({}, "", location.pathname + location.search); } catch {}
         recovering = false;
         setRMsg("Password saved. Signing you in…");
