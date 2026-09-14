@@ -62,3 +62,22 @@ test('model fields cannot override gate or price levels', async () => {
   assert.equal(result.gate, 'HEALTHY');
   assert.deepEqual(result.ideas, p.ideas);
 });
+test('analyst enrichment adds per-stock analysis without touching ideas, gate or levels', async () => {
+  const p = plan();
+  const model = { analyst: 'SEPA + CANSLIM', summary: 'Breadth healthy; lead with strength.', stocks: [
+    { symbol: 'TEST', stage: 'Stage 2 advancing', technical: 'Trend template intact', fundamental: 'EPS +40%', verdict: 'Leading', risk: 'Loss of stop invalidates' },
+    { symbol: 'GHOST', stage: 'Unclear', technical: 'x', fundamental: 'y', verdict: 'Avoid', risk: 'z' } ] };
+  const result = await enrichPlan(p, {}, { apiKey: 'test', fetchImpl: async () => ({ ok: true, json: async () => ({ output_text: JSON.stringify(model) }) }) });
+  assert.equal(result.commentaryStatus, 'available');
+  assert.equal(result.gate, 'HEALTHY');
+  assert.deepEqual(result.ideas, p.ideas);
+  assert.equal(result.analysis.bySymbol.TEST.verdict, 'Leading');
+  assert.equal(result.analysis.bySymbol.TEST.stage, 'Stage 2 advancing');
+  assert.ok(!('GHOST' in result.analysis.bySymbol));
+});
+test('analyst enrichment sanitises invalid verdict and stage from the model', async () => {
+  const p = plan();
+  const result = await enrichPlan(p, {}, { apiKey: 'test', fetchImpl: async () => ({ ok: true, json: async () => ({ output_text: JSON.stringify({ analyst: 'x', summary: 'ok', stocks: [{ symbol: 'TEST', stage: 'BUY NOW', technical: 'a', fundamental: 'b', verdict: 'STRONG BUY', risk: 'c' }] }) }) }) });
+  assert.equal(result.analysis.bySymbol.TEST.verdict, 'Watch');
+  assert.equal(result.analysis.bySymbol.TEST.stage, 'Unclear');
+});

@@ -2507,7 +2507,20 @@
       </form>
     </div>
     <div class="toast" id="toast"></div>
-    <style>.strategist-command::after { content: none; } .strategist-idea { padding: 22px; } .strategist-idea li { margin: 8px 0; } .strategist-idea .scan-summary { flex-wrap: wrap; }</style>
+    <style>
+      .strategist-command::after { content: none; }
+      .strategist-idea { padding: 22px; }
+      .strategist-idea li { margin: 8px 0; }
+      .strategist-idea .scan-summary { flex-wrap: wrap; }
+      .analyst-read { margin-top: 14px; padding-top: 14px; border-top: 1px solid var(--line); }
+      .analyst-read p { margin: 7px 0; font-size: 13px; line-height: 1.55; }
+      .analyst-verdict { display: flex; align-items: center; gap: 10px; margin-bottom: 8px; }
+      .verdict-chip { padding: 5px 10px; border-radius: 999px; font: 800 11px/1 ui-monospace, SFMono-Regular, Consolas, monospace; letter-spacing: 0.04em; text-transform: uppercase; background: #eef3f0; color: #53665f; }
+      .verdict-chip.Leading { background: #10271f; color: #8ff4d0; }
+      .verdict-chip.Constructive { background: var(--mint-soft); color: var(--mint-dark); }
+      .verdict-chip.Extended { background: #fff4da; color: #a46800; }
+      .verdict-chip.Avoid { background: var(--rose-soft); color: #c14f5a; }
+    </style>
     <script src="strategist.js"></script>
     <script>
       const K = "alpha-swing-list",
