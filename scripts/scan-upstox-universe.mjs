@@ -646,6 +646,17 @@ function analyze(instrument, candles, benchMomByDate = null) {
   if (!hasLongStructure && dominantCandle) score = Math.max(score, 50 + dominantCandle.strength * 6);
   const bearishCaution = dominantCandle?.bias === "bearish" && dominantCandle.strength >= 3;
   const confidence = Math.max(1, Math.min(99, Math.round(score)));
+
+  // Setup grade (A+/A/B/C) — Minervini-style tiering from the SEPA confluence.
+  const gradeRsOk = rsRating == null || rsRating >= 80;
+  const gradeRsStrong = rsRating == null || rsRating >= 88;
+  let grade = "C";
+  if (!bearishCaution) {
+    if (superPerformer || (stage2 && tpl.score >= 8 && sepaBreakout && confidence >= 88 && gradeRsStrong)) grade = "A+";
+    else if (stage2 && tpl.score >= 7 && (sepaBreakout || brokeOut) && confidence >= 80 && gradeRsOk) grade = "A";
+    else if ((stage2 || sepaBreakout || hasLongStructure) && confidence >= 70) grade = "B";
+  }
+
   const pivotCandidates = [priorHigh20, doubleBottom.neckline, vcp.pivot, darvas.ceiling, cupHandle.pivot, highTightFlag.pivot].filter(Number.isFinite);
   const entryTrigger = Math.max(...pivotCandidates) * 1.001;
   const structuralLow = lowest(candles.slice(-10).map((x) => x.low));
@@ -662,6 +673,7 @@ function analyze(instrument, candles, benchMomByDate = null) {
     close: round(close),
     changePct: round(pct(close, candles.at(-2).close)),
     confidence,
+    grade,
     state: bearishCaution ? "Caution" : close >= entryTrigger ? "Triggered" : confidence >= 78 ? "Armed" : "Watch",
     bias: bearishCaution ? "bearish" : dominantCandle?.bias || "bullish",
     primaryPattern: superPerformer ? "Super-performer" : sepaBreakout ? "SEPA breakout" : (!hasLongStructure && candlePatternNames[0]) || tags.find((tag) => actionablePatterns.includes(tag)) || candlePatternNames[0] || tags[0] || "Confluence",
@@ -812,6 +824,9 @@ const partitionResult = {
     candlestickSignals: signals.filter((signal) => signal.candlestickPatterns?.length).length,
     sepaBreakouts: signals.filter((signal) => signal.sepa?.sepaBreakout).length,
     superPerformers: signals.filter((signal) => signal.sepa?.superPerformer).length,
+    gradeAPlus: signals.filter((signal) => signal.grade === "A+").length,
+    gradeA: signals.filter((signal) => signal.grade === "A").length,
+    gradeB: signals.filter((signal) => signal.grade === "B").length,
   },
   marketMood: summarizeBreadth(breadthCounts),
   strategyLibrary: [
@@ -884,6 +899,9 @@ const result = {
     candlestickSignals: partitions.reduce((sum, part) => sum + Number(part.summary?.candlestickSignals || 0), 0),
     sepaBreakouts: partitions.reduce((sum, part) => sum + Number(part.summary?.sepaBreakouts || 0), 0),
     superPerformers: partitions.reduce((sum, part) => sum + Number(part.summary?.superPerformers || 0), 0),
+    gradeAPlus: partitions.reduce((sum, part) => sum + Number(part.summary?.gradeAPlus || 0), 0),
+    gradeA: partitions.reduce((sum, part) => sum + Number(part.summary?.gradeA || 0), 0),
+    gradeB: partitions.reduce((sum, part) => sum + Number(part.summary?.gradeB || 0), 0),
   },
   marketMood: summarizeBreadth(mergedBreadthCounts),
   signals: mergedSignals,

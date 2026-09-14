@@ -1993,6 +1993,71 @@
         background: var(--mint-soft);
         color: var(--mint-dark);
       }
+      .scan-grades {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        margin-bottom: 10px;
+      }
+      .grade-chip {
+        min-height: 36px;
+        padding: 0 14px;
+        border: 1px solid var(--line);
+        border-radius: 999px;
+        background: #fff;
+        color: #53665f;
+        font:
+          800 13px/1 ui-monospace,
+          SFMono-Regular,
+          Consolas,
+          monospace;
+        cursor: pointer;
+      }
+      .grade-chip.active {
+        outline: 2px solid rgba(31, 207, 150, 0.35);
+        outline-offset: 1px;
+      }
+      .grade-chip.grade-aplus {
+        border-color: #0aa879;
+        color: #0aa879;
+      }
+      .grade-chip.grade-a {
+        border-color: #5fd3ad;
+        color: var(--mint-dark);
+      }
+      .grade-chip.grade-b {
+        border-color: #f0cf85;
+        color: #a46800;
+      }
+      .grade-badge {
+        display: inline-grid;
+        place-items: center;
+        min-width: 26px;
+        height: 22px;
+        padding: 0 6px;
+        border-radius: 7px;
+        font:
+          800 11px/1 ui-monospace,
+          SFMono-Regular,
+          Consolas,
+          monospace;
+      }
+      .grade-badge.grade-aplus {
+        background: #0aa879;
+        color: #fff;
+      }
+      .grade-badge.grade-a {
+        background: var(--mint-soft);
+        color: var(--mint-dark);
+      }
+      .grade-badge.grade-b {
+        background: #fff4da;
+        color: #a46800;
+      }
+      .grade-badge.grade-c {
+        background: #eef3f0;
+        color: #7a8a83;
+      }
       .scan-toolbar {
         display: grid;
         grid-template-columns: minmax(180px, 1fr) auto auto;
@@ -2552,6 +2617,7 @@
       let scanLoading = false;
       let scanSearch = "";
       let scanStrategy = "all";
+      let scanGrade = "all";
       let scanThreshold = Number(localStorage.getItem("alpha-scan-threshold") || 65);
       let voiceEnabled = localStorage.getItem("alpha-voice-alerts") === "on";
       const DATA_ROOT =
@@ -2773,14 +2839,15 @@
           const strategies = Array.isArray(signal.patterns) ? signal.patterns : [];
           const matchesText = !query || `${signal.symbol} ${signal.name} ${strategies.join(" ")}`.toLowerCase().includes(query);
           const matchesStrategy = scanStrategy === "all" || strategies.includes(scanStrategy);
-          return matchesText && matchesStrategy && Number(signal.confidence || 0) >= scanThreshold;
+          const matchesGrade = scanGrade === "all" || signal.grade === scanGrade;
+          return matchesText && matchesStrategy && matchesGrade && Number(signal.confidence || 0) >= scanThreshold;
         });
       }
       function signalCard(signal) {
         const patterns = (signal.patterns || []).slice(0, 3);
         const candle = signal.candlestickPatterns?.[0];
         const encodedSymbol = encodeURIComponent(signal.symbol);
-        return `<button class="signal-card" onclick="openSignal(decodeURIComponent('${encodedSymbol}'))"><span class="signal-identity">${logo(signal.symbol, Number(signal.changePct) < 0)}<span><b>${escapeHTML(signal.symbol)}</b><small>${escapeHTML(signal.name || "NSE equity")} · <span class="${Number(signal.changePct) < 0 ? "down" : "up"}">${Number(signal.changePct || 0) >= 0 ? "+" : ""}${Number(signal.changePct || 0).toFixed(2)}%</span></small></span></span><span><span class="signal-level"><span class="confidence-number">${Number(signal.confidence || 0)}</span><span><small>confidence</small><span class="confidence-rail"><span style="width:${Math.min(99, Number(signal.confidence || 0))}%"></span></span></span></span></span><span class="price-plan"><span><small>${signal.state === "Caution" ? "Long trigger" : "Trigger"}</small><b>${formatPrice(signal.entryTrigger)}</b></span><span><small>Stop</small><b>${formatPrice(signal.stop)}</b></span><span><small>2R target</small><b>${formatPrice(signal.target2R)}</b></span></span><span class="signal-state ${escapeHTML(signal.state || "Watch")}">${escapeHTML(signal.state || "Watch")}</span><span class="strategy-chips" style="grid-column:1/-1">${candle ? `<span class="candle-badge ${escapeHTML(candle.bias || "neutral")}"><i class="candle-mark"></i>${escapeHTML(candle.name)}</span>` : ""}${patterns.filter((pattern) => !String(pattern).startsWith("Candle ·")).map((pattern) => `<span>${escapeHTML(pattern)}</span>`).join("")}<span>${Number(signal.indicators?.relativeVolume || 0).toFixed(2)}× volume</span><span>RSI ${Number(signal.indicators?.rsi14 || 0).toFixed(0)}</span></span></button>`;
+        return `<button class="signal-card" onclick="openSignal(decodeURIComponent('${encodedSymbol}'))"><span class="signal-identity">${logo(signal.symbol, Number(signal.changePct) < 0)}${signal.grade ? `<span class="grade-badge ${gradeClass(signal.grade)}">${escapeHTML(signal.grade)}</span>` : ""}<span><b>${escapeHTML(signal.symbol)}</b><small>${escapeHTML(signal.name || "NSE equity")} · <span class="${Number(signal.changePct) < 0 ? "down" : "up"}">${Number(signal.changePct || 0) >= 0 ? "+" : ""}${Number(signal.changePct || 0).toFixed(2)}%</span></small></span></span><span><span class="signal-level"><span class="confidence-number">${Number(signal.confidence || 0)}</span><span><small>confidence</small><span class="confidence-rail"><span style="width:${Math.min(99, Number(signal.confidence || 0))}%"></span></span></span></span></span><span class="price-plan"><span><small>${signal.state === "Caution" ? "Long trigger" : "Trigger"}</small><b>${formatPrice(signal.entryTrigger)}</b></span><span><small>Stop</small><b>${formatPrice(signal.stop)}</b></span><span><small>2R target</small><b>${formatPrice(signal.target2R)}</b></span></span><span class="signal-state ${escapeHTML(signal.state || "Watch")}">${escapeHTML(signal.state || "Watch")}</span><span class="strategy-chips" style="grid-column:1/-1">${candle ? `<span class="candle-badge ${escapeHTML(candle.bias || "neutral")}"><i class="candle-mark"></i>${escapeHTML(candle.name)}</span>` : ""}${patterns.filter((pattern) => !String(pattern).startsWith("Candle ·")).map((pattern) => `<span>${escapeHTML(pattern)}</span>`).join("")}<span>${Number(signal.indicators?.relativeVolume || 0).toFixed(2)}× volume</span><span>RSI ${Number(signal.indicators?.rsi14 || 0).toFixed(0)}</span></span></button>`;
       }
       function openSignal(symbol) {
         const signal = (scanFeed?.signals || []).find((item) => item.symbol === symbol);
@@ -2790,7 +2857,7 @@
         const candlePatterns = (signal.candlestickPatterns || []).map((pattern) => `<span class="candle-badge ${escapeHTML(pattern.bias || "neutral")}"><i class="candle-mark"></i>${escapeHTML(pattern.name)} · ${escapeHTML(pattern.bias)}</span>`).join("");
         const sample = Number(signal.validation?.sampleSize || 0);
         const encodedSymbol = encodeURIComponent(symbol);
-        app.innerHTML = `<div class="title"><div><small>AGENTIC SCAN · ${escapeHTML(signal.state || "WATCH")}</small><h1>${escapeHTML(symbol)}</h1><span class="muted">${escapeHTML(signal.name || "NSE equity")}</span></div><button class="mini" onclick="page('scanner')">← Back to scan</button></div><div class="detail-layout"><section class="card detail-chart"><div class="signal-top"><div class="signal-identity">${logo(symbol, Number(signal.changePct) < 0)}<div><b>${escapeHTML(symbol)}</b><small>${escapeHTML(signal.primaryPattern || "Confluence setup")}</small></div></div><span class="signal-state ${escapeHTML(signal.state || "Watch")}">${escapeHTML(signal.state || "Watch")}</span></div><div class="detail-price">${formatPrice(signal.close)}</div><div class="${Number(signal.changePct) < 0 ? "down" : "up"}">${Number(signal.changePct || 0) >= 0 ? "+" : ""}${Number(signal.changePct || 0).toFixed(2)}% latest session</div>${candlePatterns ? `<div class="strategy-chips" style="margin-top:16px">${candlePatterns}</div>` : ""}<div class="price-plan" style="margin:24px 0"><span><small>Entry trigger</small><b>${formatPrice(signal.entryTrigger)}</b></span><span><small>Structural stop</small><b>${formatPrice(signal.stop)}</b></span><span><small>2R objective</small><b>${formatPrice(signal.target2R)}</b></span></div><h2>Why it ranked</h2><ul class="scan-fineprint">${evidence || "<li>Review the indicator confluence before acting.</li>"}</ul><div class="detail-actions">${Number.isFinite(Number(signal.entryTrigger)) && signal.entryTrigger !== null ? `<button class="btn" onclick="prefillPaper(decodeURIComponent('${encodedSymbol}'),'${Number(signal.entryTrigger)}')">Plan paper trade</button>` : ""}<button class="mini" onclick="${watched ? `removeBySymbol(decodeURIComponent('${encodedSymbol}'))` : `quickAddSignal(decodeURIComponent('${encodedSymbol}'))`}">${watched ? "Remove from watchlist" : "Add to watchlist"}</button><button class="mini" onclick="speakSignalBySymbol(decodeURIComponent('${encodedSymbol}'))">Hear alert</button></div></section><aside class="card detail-aside"><small>EXPLAINABLE CONFIDENCE</small><h3>${Number(signal.confidence || 0)} / 99</h3><div class="confidence-rail" style="width:100%;height:9px"><span style="width:${Math.min(99, Number(signal.confidence || 0))}%"></span></div>${signal.sepa ? `<div class="quality-list" style="margin-top:18px"><div><span>Minervini stage</span><b>${escapeHTML(signal.sepa.stageName || "—")}</b></div><div><span>Trend template</span><b>${Number(signal.sepa.trendScore || 0)}/8</b></div><div><span>RS rating</span><b>${signal.sepa.rsRating != null ? escapeHTML(String(signal.sepa.rsRating)) : "—"}</b></div>${signal.sepa.superPerformer ? '<div><span>Super-performer</span><b class="up">★ Yes</b></div>' : signal.sepa.sepaBreakout ? '<div><span>SEPA breakout</span><b class="up">Yes</b></div>' : ""}${signal.sepa.swingState ? `<div><span>Swing TSL</span><b>${escapeHTML(signal.sepa.swingState)}</b></div>` : ""}</div>` : ""}<div class="quality-list" style="margin-top:18px"><div><span>Candle bias</span><b>${escapeHTML(signal.bias || "neutral")}</b></div><div><span>RSI 14</span><b>${Number(signal.indicators?.rsi14 || 0).toFixed(1)}</b></div><div><span>Relative volume</span><b>${Number(signal.indicators?.relativeVolume || 0).toFixed(2)}×</b></div><div><span>ATR 14</span><b>${formatPrice(signal.indicators?.atr14)}</b></div><div><span>Historical samples</span><b>${sample || "Insufficient"}</b></div><div><span>Observed win rate</span><b>${sample ? `${Number(signal.validation.winRate || 0)}%` : "—"}</b></div></div><p class="pulse-copy" style="text-align:left">Candlestick patterns are context signals, not standalone trade instructions. Confirm trend, volume and market mood.</p></aside></div>`;
+        app.innerHTML = `<div class="title"><div><small>AGENTIC SCAN · ${escapeHTML(signal.state || "WATCH")}</small><h1>${escapeHTML(symbol)}</h1><span class="muted">${escapeHTML(signal.name || "NSE equity")}</span></div><button class="mini" onclick="page('scanner')">← Back to scan</button></div><div class="detail-layout"><section class="card detail-chart"><div class="signal-top"><div class="signal-identity">${logo(symbol, Number(signal.changePct) < 0)}<div><b>${escapeHTML(symbol)}</b><small>${escapeHTML(signal.primaryPattern || "Confluence setup")}</small></div></div><span class="signal-state ${escapeHTML(signal.state || "Watch")}">${escapeHTML(signal.state || "Watch")}</span></div><div class="detail-price">${formatPrice(signal.close)}</div><div class="${Number(signal.changePct) < 0 ? "down" : "up"}">${Number(signal.changePct || 0) >= 0 ? "+" : ""}${Number(signal.changePct || 0).toFixed(2)}% latest session</div>${candlePatterns ? `<div class="strategy-chips" style="margin-top:16px">${candlePatterns}</div>` : ""}<div class="price-plan" style="margin:24px 0"><span><small>Entry trigger</small><b>${formatPrice(signal.entryTrigger)}</b></span><span><small>Structural stop</small><b>${formatPrice(signal.stop)}</b></span><span><small>2R objective</small><b>${formatPrice(signal.target2R)}</b></span></div><h2>Why it ranked</h2><ul class="scan-fineprint">${evidence || "<li>Review the indicator confluence before acting.</li>"}</ul><div class="detail-actions">${Number.isFinite(Number(signal.entryTrigger)) && signal.entryTrigger !== null ? `<button class="btn" onclick="prefillPaper(decodeURIComponent('${encodedSymbol}'),'${Number(signal.entryTrigger)}')">Plan paper trade</button>` : ""}<button class="mini" onclick="${watched ? `removeBySymbol(decodeURIComponent('${encodedSymbol}'))` : `quickAddSignal(decodeURIComponent('${encodedSymbol}'))`}">${watched ? "Remove from watchlist" : "Add to watchlist"}</button><button class="mini" onclick="speakSignalBySymbol(decodeURIComponent('${encodedSymbol}'))">Hear alert</button></div></section><aside class="card detail-aside"><small>EXPLAINABLE CONFIDENCE</small><h3>${Number(signal.confidence || 0)} / 99 ${signal.grade ? `<span class="grade-badge ${gradeClass(signal.grade)}">${escapeHTML(signal.grade)}</span>` : ""}</h3><div class="confidence-rail" style="width:100%;height:9px"><span style="width:${Math.min(99, Number(signal.confidence || 0))}%"></span></div>${signal.sepa ? `<div class="quality-list" style="margin-top:18px"><div><span>Minervini stage</span><b>${escapeHTML(signal.sepa.stageName || "—")}</b></div><div><span>Trend template</span><b>${Number(signal.sepa.trendScore || 0)}/8</b></div><div><span>RS rating</span><b>${signal.sepa.rsRating != null ? escapeHTML(String(signal.sepa.rsRating)) : "—"}</b></div>${signal.sepa.superPerformer ? '<div><span>Super-performer</span><b class="up">★ Yes</b></div>' : signal.sepa.sepaBreakout ? '<div><span>SEPA breakout</span><b class="up">Yes</b></div>' : ""}${signal.sepa.swingState ? `<div><span>Swing TSL</span><b>${escapeHTML(signal.sepa.swingState)}</b></div>` : ""}</div>` : ""}<div class="quality-list" style="margin-top:18px"><div><span>Candle bias</span><b>${escapeHTML(signal.bias || "neutral")}</b></div><div><span>RSI 14</span><b>${Number(signal.indicators?.rsi14 || 0).toFixed(1)}</b></div><div><span>Relative volume</span><b>${Number(signal.indicators?.relativeVolume || 0).toFixed(2)}×</b></div><div><span>ATR 14</span><b>${formatPrice(signal.indicators?.atr14)}</b></div><div><span>Historical samples</span><b>${sample || "Insufficient"}</b></div><div><span>Observed win rate</span><b>${sample ? `${Number(signal.validation.winRate || 0)}%` : "—"}</b></div></div><p class="pulse-copy" style="text-align:left">Candlestick patterns are context signals, not standalone trade instructions. Confirm trend, volume and market mood.</p></aside></div>`;
         document.querySelectorAll("[data-page]").forEach((button) => button.classList.remove("active"));
         mobileMenu.classList.remove("open");
       }
@@ -2805,6 +2872,14 @@
         document
           .querySelectorAll(".scan-chip")
           .forEach((chip) => chip.classList.toggle("active", chip.dataset.strategy === value));
+        renderSignalResults();
+      }
+      const gradeClass = (grade) => "grade-" + String(grade || "C").replace("+", "plus").replace(/[^a-z]/gi, "").toLowerCase();
+      function setScanGrade(value) {
+        scanGrade = value;
+        document
+          .querySelectorAll(".grade-chip")
+          .forEach((chip) => chip.classList.toggle("active", chip.dataset.grade === value));
         renderSignalResults();
       }
       function setScanThreshold(value) {
@@ -2976,6 +3051,8 @@
             ...(scanFeed?.signals || []).flatMap((signal) => signal.patterns || []),
           ]),
         );
+        const allSignals = Array.isArray(scanFeed?.signals) ? scanFeed.signals : [];
+        const gradeCount = (g) => allSignals.filter((s) => s.grade === g).length;
         const setupNeeded =
           scanFeed && ["setup_required", "error"].includes(scanFeed.status);
         app.innerHTML =
@@ -2983,7 +3060,7 @@
             "Agentic scan",
             '<button class="btn" onclick="loadAgenticScan(true)">↻ Refresh feed</button>',
           ) +
-          `<section class="card scan-command"><div class="scan-command-top"><div class="intel-kicker">UPSTOX · NSE CASH · DAILY STRATEGY ENGINE</div><span class="scan-live ${statusClass}">${escapeHTML(scanStatus())}</span></div><h2>Breakouts and cup-and-handle bases — the setups the top 1% of traders wait for.</h2><p>Deterministic rules rank cup-and-handle and high-tight-flag bases, 20-day and 52-week breakouts, VCP and double-bottom structure, with trend, momentum, volume and candle context. Confidence is evidence strength—not a guaranteed win rate or a trade instruction.</p><div class="scan-summary"><div><small>Equities scanned</small><b>${Number(universe.scanned || 0).toLocaleString("en-IN")}</b></div><div><small>Qualified</small><b>${Number(summary.qualified || 0)}</b></div><div><small>Candle signals</small><b>${Number(summary.candlestickSignals || 0)}</b></div><div><small>Armed</small><b>${Number(summary.armed || 0)}</b></div><div><small>Triggered</small><b>${Number(summary.triggered || 0)}</b></div></div></section><div class="scan-console"><section><div class="scan-chips">${[["all", "All setups"], ["Super-performer", "★ Super-performer"], ["SEPA breakout", "SEPA breakout"], ["Cup & handle", "Cup & Handle"], ["High tight flag", "High tight flag"], ["20-day breakout", "Breakout"], ["52-week high", "52-week high"], ["VCP", "VCP"]].map(([value, label]) => `<button class="scan-chip ${scanStrategy === value ? "active" : ""}" data-strategy="${escapeHTML(value)}" onclick="setScanStrategy(this.dataset.strategy)">${escapeHTML(label)}</button>`).join("")}</div><div class="scan-toolbar"><input aria-label="Search scan results" value="${escapeHTML(scanSearch)}" placeholder="Search symbol, company or setup" oninput="setScanSearch(this.value)"><select id="scanStrategySelect" aria-label="Filter by strategy" onchange="setScanStrategy(this.value)"><option value="all">All strategies</option>${strategies.map((strategy) => `<option value="${escapeHTML(strategy)}" ${scanStrategy === strategy ? "selected" : ""}>${escapeHTML(strategy)}</option>`).join("")}</select><button class="mini" onclick="exportCsv()">Export CSV</button></div><div class="scan-meta"><span class="muted"><span id="visibleSignalCount">0 shown</span> · ${escapeHTML(scanGeneratedAt())}</span><label class="muted">Confidence ≥ <b id="thresholdValue">${scanThreshold}</b> <input aria-label="Minimum confidence" type="range" min="40" max="90" step="5" value="${scanThreshold}" oninput="setScanThreshold(this.value)"></label></div><div class="signal-stack" id="agentSignalResults" style="margin-top:14px">${setupNeeded ? `<div class="scan-empty"><h3>Connect Upstox to start the market-wide scan</h3><p>The workflow is installed and will scan NSE normal cash equities after market close. Add the repository secret <b>UPSTOX_ACCESS_TOKEN</b>, then run “Run NSE Agentic Scan” once from GitHub Actions.</p></div>` : ""}</div></section><aside class="scan-side"><section class="card"><small>VOICE + BROWSER ALERTS</small><h3>Alerts on this device</h3><p>Hear fresh triggered setups and strong bearish candle cautions. Your browser requires one tap to enable sound.</p><div class="scan-actions"><button class="mini voice-button ${voiceEnabled ? "on" : ""}" onclick="enableVoiceAlerts()">${voiceEnabled ? "● Voice on" : "Enable voice"}</button><button class="mini" onclick="testAgentVoice()">Test voice</button></div></section><section class="card"><small>STRATEGY LIBRARY</small><h3>Base &amp; breakout library</h3><p>Elite base patterns — cup-and-handle, high tight flag, VCP — plus breakouts, trend, momentum, volume and candle context must agree before a long setup ranks highly.</p><div class="strategy-list">${(scanFeed?.strategyLibrary || ["Cup & handle", "High tight flag", "20-day breakout", "52-week high", "VCP", "Double bottom", "Darvas box", "Trend template"]).map((strategy) => `<div><span>${escapeHTML(strategy)}</span><b>Rule-based</b></div>`).join("")}</div></section><section class="card"><small>RISK CONTROL</small><h3>No “99% win” claims</h3><p>${escapeHTML(scanFeed?.disclaimer || "Every setup can fail. Validate liquidity, position size and the structural stop before acting.")}</p></section></aside></div>`;
+          `<section class="card scan-command"><div class="scan-command-top"><div class="intel-kicker">UPSTOX · NSE CASH · DAILY STRATEGY ENGINE</div><span class="scan-live ${statusClass}">${escapeHTML(scanStatus())}</span></div><h2>Breakouts and cup-and-handle bases — the setups the top 1% of traders wait for.</h2><p>Deterministic rules rank cup-and-handle and high-tight-flag bases, 20-day and 52-week breakouts, VCP and double-bottom structure, with trend, momentum, volume and candle context. Confidence is evidence strength—not a guaranteed win rate or a trade instruction.</p><div class="scan-summary"><div><small>Equities scanned</small><b>${Number(universe.scanned || 0).toLocaleString("en-IN")}</b></div><div><small>Qualified</small><b>${Number(summary.qualified || 0)}</b></div><div><small>Candle signals</small><b>${Number(summary.candlestickSignals || 0)}</b></div><div><small>Armed</small><b>${Number(summary.armed || 0)}</b></div><div><small>Triggered</small><b>${Number(summary.triggered || 0)}</b></div></div></section><div class="scan-console"><section><div class="scan-grades">${[["all", "All grades"], ["A+", "A+"], ["A", "A"], ["B", "B"]].map(([value, label]) => { const count = value === "all" ? allSignals.length : gradeCount(value); return `<button class="grade-chip ${value === "all" ? "" : gradeClass(value)} ${scanGrade === value ? "active" : ""}" data-grade="${escapeHTML(value)}" onclick="setScanGrade(this.dataset.grade)">${escapeHTML(label)}${count ? ` · ${count}` : ""}</button>`; }).join("")}</div><div class="scan-chips">${[["all", "All setups"], ["Super-performer", "★ Super-performer"], ["SEPA breakout", "SEPA breakout"], ["Cup & handle", "Cup & Handle"], ["High tight flag", "High tight flag"], ["20-day breakout", "Breakout"], ["52-week high", "52-week high"], ["VCP", "VCP"]].map(([value, label]) => `<button class="scan-chip ${scanStrategy === value ? "active" : ""}" data-strategy="${escapeHTML(value)}" onclick="setScanStrategy(this.dataset.strategy)">${escapeHTML(label)}</button>`).join("")}</div><div class="scan-toolbar"><input aria-label="Search scan results" value="${escapeHTML(scanSearch)}" placeholder="Search symbol, company or setup" oninput="setScanSearch(this.value)"><select id="scanStrategySelect" aria-label="Filter by strategy" onchange="setScanStrategy(this.value)"><option value="all">All strategies</option>${strategies.map((strategy) => `<option value="${escapeHTML(strategy)}" ${scanStrategy === strategy ? "selected" : ""}>${escapeHTML(strategy)}</option>`).join("")}</select><button class="mini" onclick="exportCsv()">Export CSV</button></div><div class="scan-meta"><span class="muted"><span id="visibleSignalCount">0 shown</span> · ${escapeHTML(scanGeneratedAt())}</span><label class="muted">Confidence ≥ <b id="thresholdValue">${scanThreshold}</b> <input aria-label="Minimum confidence" type="range" min="40" max="90" step="5" value="${scanThreshold}" oninput="setScanThreshold(this.value)"></label></div><div class="signal-stack" id="agentSignalResults" style="margin-top:14px">${setupNeeded ? `<div class="scan-empty"><h3>Connect Upstox to start the market-wide scan</h3><p>The workflow is installed and will scan NSE normal cash equities after market close. Add the repository secret <b>UPSTOX_ACCESS_TOKEN</b>, then run “Run NSE Agentic Scan” once from GitHub Actions.</p></div>` : ""}</div></section><aside class="scan-side"><section class="card"><small>VOICE + BROWSER ALERTS</small><h3>Alerts on this device</h3><p>Hear fresh triggered setups and strong bearish candle cautions. Your browser requires one tap to enable sound.</p><div class="scan-actions"><button class="mini voice-button ${voiceEnabled ? "on" : ""}" onclick="enableVoiceAlerts()">${voiceEnabled ? "● Voice on" : "Enable voice"}</button><button class="mini" onclick="testAgentVoice()">Test voice</button></div></section><section class="card"><small>STRATEGY LIBRARY</small><h3>Base &amp; breakout library</h3><p>Elite base patterns — cup-and-handle, high tight flag, VCP — plus breakouts, trend, momentum, volume and candle context must agree before a long setup ranks highly.</p><div class="strategy-list">${(scanFeed?.strategyLibrary || ["Cup & handle", "High tight flag", "20-day breakout", "52-week high", "VCP", "Double bottom", "Darvas box", "Trend template"]).map((strategy) => `<div><span>${escapeHTML(strategy)}</span><b>Rule-based</b></div>`).join("")}</div></section><section class="card"><small>RISK CONTROL</small><h3>No “99% win” claims</h3><p>${escapeHTML(scanFeed?.disclaimer || "Every setup can fail. Validate liquidity, position size and the structural stop before acting.")}</p></section></aside></div>`;
         if (!setupNeeded) renderSignalResults();
       }
       function watch() {
