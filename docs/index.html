@@ -3005,10 +3005,44 @@
       function save() {
         localStorage.setItem(K, JSON.stringify(list));
       }
+      function timeGreeting() {
+        const h = new Date().getHours();
+        return h < 12 ? "Good morning" : h < 17 ? "Good afternoon" : h < 21 ? "Good evening" : "Good night";
+      }
+      function memberRecord() {
+        try {
+          const m = JSON.parse(localStorage.getItem("alpha-member") || "null");
+          if (m && m.email) return m;
+        } catch {}
+        return null;
+      }
+      function memberName() {
+        const m = memberRecord();
+        if (!m) return "";
+        if (m.name && m.name.trim()) return m.name.trim();
+        const local = String(m.email).split("@")[0].split(/[._-]+/)[0];
+        return local ? local.charAt(0).toUpperCase() + local.slice(1) : "";
+      }
+      function memberInitials() {
+        const name = memberName();
+        if (name) {
+          const parts = name.trim().split(/\s+/);
+          return (parts.length > 1 ? parts[0][0] + parts[1][0] : name.slice(0, 2)).toUpperCase();
+        }
+        const m = memberRecord();
+        return m ? String(m.email).slice(0, 2).toUpperCase() : "HS";
+      }
+      function applyMember() {
+        const avatar = document.querySelector(".avatar");
+        if (avatar) avatar.textContent = memberInitials();
+        if (currentPage === "overview") overview();
+      }
+      window.applyMember = applyMember;
       function overview() {
+        const name = memberName();
         app.innerHTML =
           title(
-            "Good afternoon, Hassain",
+            `${timeGreeting()}${name ? `, ${escapeHTML(name)}` : ""}`,
             '<button class="btn" onclick="openStockModal()">＋ Add stock</button>',
           ) +
           `<section class="card portfolio-hero"><div class="portfolio-top"><span>PAPER PORTFOLIO</span><span class="live-chip">● Market closed</span></div><div class="portfolio-value"><strong>₹5,00,000</strong><span>+1.74%</span></div><div class="portfolio-stats"><div><small>Today's gain</small><b>₹2,344.11</b></div><div><small>Open risk</small><b>₹0.00</b></div><div><small>Buying power</small><b>₹5,00,000</b></div></div>${spark(true, true)}</section>${strategistPreview()}${agenticPreview()}${briefingPreview()}<div class="overview-grid"><div><div class="section-head"><h2>Top setups</h2><button onclick="page('scanner')">View scanner →</button></div><section class="setup-strip">${S.slice(
@@ -3439,6 +3473,7 @@
         .querySelectorAll("[data-page]")
         .forEach((b) => (b.onclick = () => page(b.dataset.page)));
       page("overview");
+      applyMember();
       loadIntelligence();
       loadAgenticScan();
       loadStrategist();

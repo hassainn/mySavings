@@ -88,9 +88,16 @@
 
     const evaluate = async () => {
       const { data } = await client.auth.getSession();
-      const email = data && data.session && data.session.user && String(data.session.user.email || "").toLowerCase();
+      const user = data && data.session && data.session.user;
+      const email = user && String(user.email || "").toLowerCase();
       if (!email) return;
-      if (approved.has(email)) { openApp(); return; }
+      if (approved.has(email)) {
+        const name = (user.user_metadata && (user.user_metadata.full_name || user.user_metadata.name)) || "";
+        try { localStorage.setItem("alpha-member", JSON.stringify({ email, name })); } catch {}
+        if (typeof window.applyMember === "function") window.applyMember();
+        openApp();
+        return;
+      }
       setMsg(email + " is not an approved member. Ask the admin to add your email.");
       const out = el("#auth-signout");
       if (out) out.hidden = false;
@@ -118,6 +125,8 @@
 
     el("#auth-signout").addEventListener("click", async () => {
       await client.auth.signOut();
+      try { localStorage.removeItem("alpha-member"); } catch {}
+      if (typeof window.applyMember === "function") window.applyMember();
       setMsg("Signed out. Sign in with your approved email to continue.");
       el("#auth-signout").hidden = true;
     });
