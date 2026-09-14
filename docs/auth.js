@@ -22,6 +22,9 @@
 
   const SUPABASE_URL = "https://edmvmyogbfxrbxhkqoag.supabase.co";
   const SUPABASE_ANON_KEY = "sb_publishable_abFsuEay_0vkvZPbVJotGQ_BFWc4Ep4"; // publishable (browser-safe)
+  // Bootstrap fallback only — the real approved list lives in the Supabase
+  // `approved_members` table (add/remove members there). These emails are always
+  // allowed so the owner can't be locked out.
   const APPROVED_EMAILS = [
     "hassainn.mcsa@gmail.com",
   ];
@@ -86,12 +89,27 @@
     const client = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
     const openApp = () => { gate.remove(); style.remove(); };
 
+    // Approval is managed in Supabase: the is_email_approved() function checks the
+    // approved_members table without exposing the list. The hardcoded set is a
+    // bootstrap fallback so the owner can't be locked out if the RPC is missing.
+    const isApproved = async (rawEmail) => {
+      const addr = String(rawEmail || "").trim().toLowerCase();
+      if (!addr) return false;
+      if (approved.has(addr)) return true;
+      try {
+        const { data, error } = await client.rpc("is_email_approved", { check_email: addr });
+        return !error && data === true;
+      } catch {
+        return false;
+      }
+    };
+
     const evaluate = async () => {
       const { data } = await client.auth.getSession();
       const user = data && data.session && data.session.user;
       const email = user && String(user.email || "").toLowerCase();
       if (!email) return;
-      if (approved.has(email)) {
+      if (await isApproved(email)) {
         const name = (user.user_metadata && (user.user_metadata.full_name || user.user_metadata.name)) || "";
         try { localStorage.setItem("alpha-member", JSON.stringify({ email, name })); } catch {}
         if (typeof window.applyMember === "function") window.applyMember();
@@ -110,7 +128,7 @@
     el("#auth-form").addEventListener("submit", async (event) => {
       event.preventDefault();
       const email = String(el("#auth-email").value || "").trim().toLowerCase();
-      if (!approved.has(email)) { setMsg("That email is not on the approved member list."); return; }
+      if (!(await isApproved(email))) { setMsg("That email is not on the approved member list."); return; }
       const button = el("#auth-submit");
       button.disabled = true;
       button.textContent = "Sending…";
