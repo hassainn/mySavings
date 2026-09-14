@@ -1,4 +1,4 @@
-const CACHE = "alpha-swing-v10";
+const CACHE = "alpha-swing-v11";
 self.addEventListener("install", (e) => {
   self.skipWaiting();
   e.waitUntil(

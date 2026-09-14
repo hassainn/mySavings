@@ -1,29 +1,26 @@
 /* Member access gate — Supabase email + password login + approved allow-list.
  *
  * The app is a static site, so this gates the UI experience. It becomes ACTIVE
- * only once SUPABASE_URL and SUPABASE_ANON_KEY are filled in below; until then
- * the site loads normally (so nothing breaks during setup).
+ * only once SUPABASE_URL and SUPABASE_ANON_KEY are filled in below.
  *
- * Why password (not magic link): magic links depend on email delivery (rate
- * limited on the free tier) and a matching Redirect URL, and the session felt
- * "temporary". Password sign-in needs no email round-trip and the Supabase
- * client keeps the session signed in (auto-refresh), so members stay logged in.
+ * Login: email + password. First sign-in for a NEW approved email sets the
+ * password automatically (project has email auto-confirm on, so no confirmation
+ * email is needed). Sessions are persisted and auto-refreshed, so members stay
+ * signed in.
  *
- * First sign-in sets the member's password (the project has email auto-confirm
- * on, so no confirmation email is needed). Only emails on the approved list —
- * the bootstrap set below OR the Supabase `approved_members` table — can sign in
- * or register.
+ * "Forgot / set password": sends a one-time reset link. This is how an account
+ * that already existed WITHOUT a password (e.g. left over from the old magic-link
+ * login) sets its first password. Requires the site URL to be listed under
+ * Supabase → Authentication → URL Configuration (Site URL + Redirect URLs).
  *
- * Note: this hides the UI behind login. To make the DATA itself private, the
- * feeds must later move behind Supabase row-level security.
+ * Only approved emails (the bootstrap set below OR the Supabase approved_members
+ * table via is_email_approved()) can sign in, register, or request a reset.
  */
 (function () {
   "use strict";
 
   const SUPABASE_URL = "https://edmvmyogbfxrbxhkqoag.supabase.co";
   const SUPABASE_ANON_KEY = "sb_publishable_abFsuEay_0vkvZPbVJotGQ_BFWc4Ep4"; // publishable (browser-safe)
-  // Always-allowed members (bootstrap). Additional members can be managed in the
-  // Supabase `approved_members` table via the is_email_approved() function.
   const APPROVED_EMAILS = [
     "hassainn.mcsa@gmail.com",
     "nhussain.hpt@gmail.com",
@@ -49,25 +46,40 @@
       border:1px solid #e4ece8;border-radius:13px;font:inherit;background:#f9fbfa;color:#14251f}
     #auth-gate .auth-btn{width:100%;min-height:48px;margin-top:18px;border:0;border-radius:13px;background:#1fcf96;color:#073f2e;font:800 15px/1 inherit;cursor:pointer}
     #auth-gate .auth-btn:disabled{opacity:.6;cursor:default}
-    #auth-gate .auth-link{margin-top:14px;background:none;border:0;color:#0aa879;font-weight:700;cursor:pointer}
+    #auth-gate .auth-link{margin-top:14px;background:none;border:0;color:#0aa879;font-weight:700;cursor:pointer;padding:0;font-size:13px}
     #auth-gate .auth-fine{margin-top:16px;font-size:11px;color:#98a8a2}`;
   document.head.appendChild(style);
 
   const gate = document.createElement("div");
   gate.id = "auth-gate";
   gate.innerHTML =
-    '<form class="auth-card" id="auth-form">' +
+    '<div class="auth-card">' +
     '<div class="auth-brand">ALPHA <b>SWING</b></div>' +
+    '<div id="auth-login">' +
     "<h2>Member access</h2>" +
     '<p id="auth-msg">Sign in with your approved email and password.</p>' +
+    '<form id="auth-form">' +
     '<label for="auth-email">Email</label>' +
     '<input id="auth-email" type="email" placeholder="you@email.com" autocomplete="email" required>' +
     '<label for="auth-password">Password</label>' +
     '<input id="auth-password" type="password" placeholder="Your password" autocomplete="current-password" required minlength="' + MIN_PASSWORD + '">' +
     '<button class="auth-btn" id="auth-submit" type="submit">Sign in</button>' +
+    "</form>" +
+    '<button class="auth-link" id="auth-forgot" type="button">Forgot / set password</button>' +
     '<button class="auth-link" id="auth-signout" type="button" hidden>Sign out</button>' +
     '<p class="auth-fine">First time? Your password is set on first sign-in. Access is limited to approved members. Educational research only — not investment advice.</p>' +
-    "</form>";
+    "</div>" +
+    '<div id="auth-recovery" hidden>' +
+    "<h2>Set your password</h2>" +
+    '<p id="auth-rmsg">Choose a password for your account.</p>' +
+    '<form id="auth-rform">' +
+    '<label for="auth-newpw">New password</label>' +
+    '<input id="auth-newpw" type="password" placeholder="At least ' + MIN_PASSWORD + ' characters" autocomplete="new-password" required minlength="' + MIN_PASSWORD + '">' +
+    '<button class="auth-btn" id="auth-rsubmit" type="submit">Save password</button>' +
+    "</form>" +
+    '<button class="auth-link" id="auth-rcancel" type="button">Back to sign in</button>' +
+    "</div>" +
+    "</div>";
 
   const mount = () => document.body && document.body.appendChild(gate);
   if (document.body) mount();
@@ -75,6 +87,7 @@
 
   const el = (id) => gate.querySelector(id);
   const setMsg = (text) => { const m = el("#auth-msg"); if (m) m.textContent = text; };
+  const setRMsg = (text) => { const m = el("#auth-rmsg"); if (m) m.textContent = text; };
 
   const loadScript = (src) =>
     new Promise((resolve, reject) => {
@@ -92,14 +105,13 @@
       setMsg("Could not load the login service. Check your connection and refresh.");
       return;
     }
+    // detectSessionInUrl:true so the reset link's recovery token is picked up.
     const client = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY, {
-      auth: { persistSession: true, autoRefreshToken: true, detectSessionInUrl: false },
+      auth: { persistSession: true, autoRefreshToken: true, detectSessionInUrl: true },
     });
     const openApp = () => { gate.remove(); style.remove(); };
+    let recovering = false;
 
-    // Approval is managed in Supabase: is_email_approved() checks the
-    // approved_members table without exposing the list. The hardcoded set is a
-    // bootstrap fallback so approved members can't be locked out if the RPC is missing.
     const isApproved = async (rawEmail) => {
       const addr = String(rawEmail || "").trim().toLowerCase();
       if (!addr) return false;
@@ -119,8 +131,17 @@
       if (typeof window.applyMember === "function") window.applyMember();
     };
 
-    // Called on load and on every auth state change: if a signed-in session
-    // belongs to an approved member, open the app; otherwise sign it out.
+    const showRecovery = () => {
+      const l = el("#auth-login"); const r = el("#auth-recovery");
+      if (l) l.hidden = true;
+      if (r) r.hidden = false;
+    };
+    const showLogin = () => {
+      const l = el("#auth-login"); const r = el("#auth-recovery");
+      if (r) r.hidden = true;
+      if (l) l.hidden = false;
+    };
+
     const evaluate = async () => {
       const { data } = await client.auth.getSession();
       const user = data && data.session && data.session.user;
@@ -138,8 +159,15 @@
       return false;
     };
 
-    client.auth.onAuthStateChange(() => evaluate());
-    await evaluate();
+    client.auth.onAuthStateChange((event) => {
+      if (event === "PASSWORD_RECOVERY") { recovering = true; showRecovery(); return; }
+      if (recovering) return; // stay on the set-password step until it's saved
+      evaluate();
+    });
+
+    // If we arrived via a recovery link, show the set-password step immediately.
+    if (/type=recovery/i.test(location.hash || "")) { recovering = true; showRecovery(); }
+    if (!recovering) await evaluate();
 
     el("#auth-form").addEventListener("submit", async (event) => {
       event.preventDefault();
@@ -153,28 +181,23 @@
       button.disabled = true;
       button.textContent = "Signing in…";
       try {
-        // 1) Try a normal password sign-in.
         const signIn = await client.auth.signInWithPassword({ email, password });
         if (!signIn.error && signIn.data && signIn.data.session) {
           applyMember(signIn.data.session.user);
           openApp();
           return;
         }
-        // 2) Wrong password OR the account doesn't exist yet. Try to register
-        //    (first-time set-password). Email auto-confirm returns a session.
         const signUp = await client.auth.signUp({ email, password });
         if (!signUp.error && signUp.data && signUp.data.session) {
           applyMember(signUp.data.session.user);
           openApp();
           return;
         }
-        // 3) Account already exists but sign-in failed = wrong password.
-        //    (GoTrue returns a user with an empty identities[] for an existing email.)
         const existing =
           (signUp.data && signUp.data.user && Array.isArray(signUp.data.user.identities) && signUp.data.user.identities.length === 0) ||
           /already registered|already exists/i.test((signUp.error && signUp.error.message) || "");
         if (existing) {
-          setMsg("Incorrect password for this member. Try again, or ask the admin to reset it.");
+          setMsg("This email already has an account. Tap “Forgot / set password” below to set your password.");
         } else {
           const msg = (signUp.error && signUp.error.message) || (signIn.error && signIn.error.message) || "Please try again.";
           setMsg("Could not sign in: " + msg);
@@ -185,6 +208,54 @@
         button.disabled = false;
         button.textContent = "Sign in";
       }
+    });
+
+    el("#auth-forgot").addEventListener("click", async () => {
+      const email = String(el("#auth-email").value || "").trim().toLowerCase();
+      if (!email) { setMsg("Enter your email above first, then tap this again."); return; }
+      if (!(await isApproved(email))) { setMsg("That email is not on the approved member list."); return; }
+      const link = el("#auth-forgot");
+      link.disabled = true;
+      const { error } = await client.auth.resetPasswordForEmail(email, {
+        redirectTo: location.href.split("#")[0],
+      });
+      link.disabled = false;
+      if (!error) {
+        setMsg("Check your email for a link to set your password (it may take a minute — check spam too).");
+      } else if (/rate limit/i.test(error.message || "")) {
+        setMsg("Too many requests just now — wait a couple of minutes and try again.");
+      } else {
+        setMsg("Could not send the reset link: " + (error.message || "please try again shortly."));
+      }
+    });
+
+    el("#auth-rform").addEventListener("submit", async (event) => {
+      event.preventDefault();
+      const pw = String(el("#auth-newpw").value || "");
+      if (pw.length < MIN_PASSWORD) { setRMsg("Password must be at least " + MIN_PASSWORD + " characters."); return; }
+      const button = el("#auth-rsubmit");
+      button.disabled = true;
+      button.textContent = "Saving…";
+      try {
+        const { error } = await client.auth.updateUser({ password: pw });
+        if (error) { setRMsg("Could not save: " + (error.message || "try again.")); return; }
+        try { history.replaceState({}, "", location.pathname + location.search); } catch {}
+        recovering = false;
+        setRMsg("Password saved. Signing you in…");
+        const ok = await evaluate();
+        if (!ok) { showLogin(); setMsg("Password saved. Sign in with your email and new password."); }
+      } catch (err) {
+        setRMsg("Could not save: " + ((err && err.message) || "try again."));
+      } finally {
+        button.disabled = false;
+        button.textContent = "Save password";
+      }
+    });
+
+    el("#auth-rcancel").addEventListener("click", () => {
+      recovering = false;
+      try { history.replaceState({}, "", location.pathname + location.search); } catch {}
+      showLogin();
     });
 
     el("#auth-signout").addEventListener("click", async () => {
