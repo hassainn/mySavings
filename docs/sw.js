@@ -1,4 +1,4 @@
-const CACHE = "alpha-swing-v8";
+const CACHE = "alpha-swing-v9";
 self.addEventListener("install", (e) => {
   self.skipWaiting();
   e.waitUntil(
@@ -10,6 +10,7 @@ self.addEventListener("install", (e) => {
           "./index.html",
           "./manifest.webmanifest",
           "./strategist.js",
+          "./auth.js",
           "./data/strategist-plan.json",
           "./data/market-intelligence.json",
           "./data/scanner-results.json",
