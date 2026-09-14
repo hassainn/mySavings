@@ -1,18 +1,18 @@
-/* Member access gate — Supabase email magic-link login + approved allow-list.
+/* Member access gate — Supabase email + password login + approved allow-list.
  *
  * The app is a static site, so this gates the UI experience. It becomes ACTIVE
  * only once SUPABASE_URL and SUPABASE_ANON_KEY are filled in below; until then
  * the site loads normally (so nothing breaks during setup).
  *
- * Setup (free Supabase project):
- *   1. supabase.com → New project (free).
- *   2. Project Settings → API → copy "Project URL" and the "anon"/publishable
- *      key (safe to expose in the browser) into the two constants below.
- *   3. Authentication → Providers → Email → enable "Email" (magic link).
- *   4. Authentication → URL Configuration → set Site URL and add Redirect URLs
- *      for where the app is served (e.g. https://mehaboobfund.in and
- *      https://hassainn.github.io/mySavings/).
- *   5. Add every approved member's email to APPROVED_EMAILS (lowercase).
+ * Why password (not magic link): magic links depend on email delivery (rate
+ * limited on the free tier) and a matching Redirect URL, and the session felt
+ * "temporary". Password sign-in needs no email round-trip and the Supabase
+ * client keeps the session signed in (auto-refresh), so members stay logged in.
+ *
+ * First sign-in sets the member's password (the project has email auto-confirm
+ * on, so no confirmation email is needed). Only emails on the approved list —
+ * the bootstrap set below OR the Supabase `approved_members` table — can sign in
+ * or register.
  *
  * Note: this hides the UI behind login. To make the DATA itself private, the
  * feeds must later move behind Supabase row-level security.
@@ -22,12 +22,14 @@
 
   const SUPABASE_URL = "https://edmvmyogbfxrbxhkqoag.supabase.co";
   const SUPABASE_ANON_KEY = "sb_publishable_abFsuEay_0vkvZPbVJotGQ_BFWc4Ep4"; // publishable (browser-safe)
-  // Bootstrap fallback only — the real approved list lives in the Supabase
-  // `approved_members` table (add/remove members there). These emails are always
-  // allowed so the owner can't be locked out.
+  // Always-allowed members (bootstrap). Additional members can be managed in the
+  // Supabase `approved_members` table via the is_email_approved() function.
   const APPROVED_EMAILS = [
     "hassainn.mcsa@gmail.com",
+    "nhussain.hpt@gmail.com",
+    "mehaboobn1@gmail.com",
   ];
+  const MIN_PASSWORD = 6;
 
   if (!SUPABASE_URL || !SUPABASE_ANON_KEY) return; // gate off until configured
 
@@ -42,9 +44,10 @@
     #auth-gate .auth-brand b{color:#0aa879}
     #auth-gate h2{margin:16px 0 6px;color:#14251f;font-size:22px}
     #auth-gate p{color:#5b6b64;font-size:14px;line-height:1.5;margin:0}
-    #auth-gate input{width:100%;box-sizing:border-box;margin:16px 0;min-height:48px;padding:0 14px;
+    #auth-gate label{display:block;margin-top:14px;font-size:12px;font-weight:700;color:#5b6b64;letter-spacing:.3px}
+    #auth-gate input{width:100%;box-sizing:border-box;margin:6px 0 0;min-height:48px;padding:0 14px;
       border:1px solid #e4ece8;border-radius:13px;font:inherit;background:#f9fbfa;color:#14251f}
-    #auth-gate .auth-btn{width:100%;min-height:48px;border:0;border-radius:13px;background:#1fcf96;color:#073f2e;font:800 15px/1 inherit;cursor:pointer}
+    #auth-gate .auth-btn{width:100%;min-height:48px;margin-top:18px;border:0;border-radius:13px;background:#1fcf96;color:#073f2e;font:800 15px/1 inherit;cursor:pointer}
     #auth-gate .auth-btn:disabled{opacity:.6;cursor:default}
     #auth-gate .auth-link{margin-top:14px;background:none;border:0;color:#0aa879;font-weight:700;cursor:pointer}
     #auth-gate .auth-fine{margin-top:16px;font-size:11px;color:#98a8a2}`;
@@ -56,11 +59,14 @@
     '<form class="auth-card" id="auth-form">' +
     '<div class="auth-brand">ALPHA <b>SWING</b></div>' +
     "<h2>Member access</h2>" +
-    '<p id="auth-msg">Sign in with your approved email to continue.</p>' +
+    '<p id="auth-msg">Sign in with your approved email and password.</p>' +
+    '<label for="auth-email">Email</label>' +
     '<input id="auth-email" type="email" placeholder="you@email.com" autocomplete="email" required>' +
-    '<button class="auth-btn" id="auth-submit" type="submit">Email me a login link</button>' +
+    '<label for="auth-password">Password</label>' +
+    '<input id="auth-password" type="password" placeholder="Your password" autocomplete="current-password" required minlength="' + MIN_PASSWORD + '">' +
+    '<button class="auth-btn" id="auth-submit" type="submit">Sign in</button>' +
     '<button class="auth-link" id="auth-signout" type="button" hidden>Sign out</button>' +
-    '<p class="auth-fine">Access is limited to approved members. Educational research only — not investment advice.</p>' +
+    '<p class="auth-fine">First time? Your password is set on first sign-in. Access is limited to approved members. Educational research only — not investment advice.</p>' +
     "</form>";
 
   const mount = () => document.body && document.body.appendChild(gate);
@@ -86,12 +92,14 @@
       setMsg("Could not load the login service. Check your connection and refresh.");
       return;
     }
-    const client = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+    const client = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY, {
+      auth: { persistSession: true, autoRefreshToken: true, detectSessionInUrl: false },
+    });
     const openApp = () => { gate.remove(); style.remove(); };
 
-    // Approval is managed in Supabase: the is_email_approved() function checks the
+    // Approval is managed in Supabase: is_email_approved() checks the
     // approved_members table without exposing the list. The hardcoded set is a
-    // bootstrap fallback so the owner can't be locked out if the RPC is missing.
+    // bootstrap fallback so approved members can't be locked out if the RPC is missing.
     const isApproved = async (rawEmail) => {
       const addr = String(rawEmail || "").trim().toLowerCase();
       if (!addr) return false;
@@ -104,22 +112,30 @@
       }
     };
 
+    const applyMember = (user) => {
+      const email = String(user.email || "").toLowerCase();
+      const name = (user.user_metadata && (user.user_metadata.full_name || user.user_metadata.name)) || "";
+      try { localStorage.setItem("alpha-member", JSON.stringify({ email, name })); } catch {}
+      if (typeof window.applyMember === "function") window.applyMember();
+    };
+
+    // Called on load and on every auth state change: if a signed-in session
+    // belongs to an approved member, open the app; otherwise sign it out.
     const evaluate = async () => {
       const { data } = await client.auth.getSession();
       const user = data && data.session && data.session.user;
       const email = user && String(user.email || "").toLowerCase();
-      if (!email) return;
+      if (!email) return false;
       if (await isApproved(email)) {
-        const name = (user.user_metadata && (user.user_metadata.full_name || user.user_metadata.name)) || "";
-        try { localStorage.setItem("alpha-member", JSON.stringify({ email, name })); } catch {}
-        if (typeof window.applyMember === "function") window.applyMember();
+        applyMember(user);
         openApp();
-        return;
+        return true;
       }
       setMsg(email + " is not an approved member. Ask the admin to add your email.");
       const out = el("#auth-signout");
       if (out) out.hidden = false;
       await client.auth.signOut();
+      return false;
     };
 
     client.auth.onAuthStateChange(() => evaluate());
@@ -128,22 +144,46 @@
     el("#auth-form").addEventListener("submit", async (event) => {
       event.preventDefault();
       const email = String(el("#auth-email").value || "").trim().toLowerCase();
+      const password = String(el("#auth-password").value || "");
+      if (!email) { setMsg("Enter your email."); return; }
+      if (password.length < MIN_PASSWORD) { setMsg("Password must be at least " + MIN_PASSWORD + " characters."); return; }
       if (!(await isApproved(email))) { setMsg("That email is not on the approved member list."); return; }
+
       const button = el("#auth-submit");
       button.disabled = true;
-      button.textContent = "Sending…";
-      const { error } = await client.auth.signInWithOtp({
-        email,
-        options: { emailRedirectTo: location.href.split("#")[0] },
-      });
-      button.disabled = false;
-      button.textContent = "Email me a login link";
-      if (!error) {
-        setMsg("Check your inbox for a secure login link.");
-      } else if (/rate limit/i.test(error.message || "")) {
-        setMsg("Email limit reached for now — please wait a bit and try again (or ask the admin to set up email delivery).");
-      } else {
-        setMsg("Could not send the link: " + (error.message || "please try again shortly."));
+      button.textContent = "Signing in…";
+      try {
+        // 1) Try a normal password sign-in.
+        const signIn = await client.auth.signInWithPassword({ email, password });
+        if (!signIn.error && signIn.data && signIn.data.session) {
+          applyMember(signIn.data.session.user);
+          openApp();
+          return;
+        }
+        // 2) Wrong password OR the account doesn't exist yet. Try to register
+        //    (first-time set-password). Email auto-confirm returns a session.
+        const signUp = await client.auth.signUp({ email, password });
+        if (!signUp.error && signUp.data && signUp.data.session) {
+          applyMember(signUp.data.session.user);
+          openApp();
+          return;
+        }
+        // 3) Account already exists but sign-in failed = wrong password.
+        //    (GoTrue returns a user with an empty identities[] for an existing email.)
+        const existing =
+          (signUp.data && signUp.data.user && Array.isArray(signUp.data.user.identities) && signUp.data.user.identities.length === 0) ||
+          /already registered|already exists/i.test((signUp.error && signUp.error.message) || "");
+        if (existing) {
+          setMsg("Incorrect password for this member. Try again, or ask the admin to reset it.");
+        } else {
+          const msg = (signUp.error && signUp.error.message) || (signIn.error && signIn.error.message) || "Please try again.";
+          setMsg("Could not sign in: " + msg);
+        }
+      } catch (err) {
+        setMsg("Could not sign in: " + ((err && err.message) || "please try again shortly."));
+      } finally {
+        button.disabled = false;
+        button.textContent = "Sign in";
       }
     });
 
@@ -151,7 +191,7 @@
       await client.auth.signOut();
       try { localStorage.removeItem("alpha-member"); } catch {}
       if (typeof window.applyMember === "function") window.applyMember();
-      setMsg("Signed out. Sign in with your approved email to continue.");
+      setMsg("Signed out. Sign in with your approved email and password.");
       el("#auth-signout").hidden = true;
     });
   })();
