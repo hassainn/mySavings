@@ -79,14 +79,15 @@ The scheduled job is intentionally rate-limited and never places, modifies or ca
 
 Browser and spoken alerts are opt-in per device. Open **Agentic scan**, choose **Enable voice**, and allow notifications. A newly generated triggered setup above the saved confidence threshold can then announce once on that device.
 
-## Custom domain (mehaboobfund.in on GitHub Pages)
+## Custom domain (mehaboobfund.in on MilesWeb)
 
-`docs/CNAME` binds the GitHub Pages deployment to **mehaboobfund.in**, so every push auto-publishes to the domain with no re-upload. Point the domain from MilesWeb DNS:
+`mehaboobfund.in` is hosted on **MilesWeb** (its A record points to the MilesWeb server; SSL is issued there). Deploy by uploading the `docs/` files into the domain's `public_html`:
 
-- apex `@` → four A records: `185.199.108.153`, `185.199.109.153`, `185.199.110.153`, `185.199.111.153`
-- `www` → CNAME `hassainn.github.io`
+1. cPanel → File Manager → the domain's document root (e.g. `public_html`).
+2. Upload the exported bundle (`docs/` contents: `index.html`, `strategist.js`, `auth.js`, `sw.js`, `manifest.webmanifest`, `data/`) and extract.
+3. Ensure SSL is active for the domain (cPanel → SSL/TLS Status → AutoSSL).
 
-Then set the same domain under the repo's **Settings → Pages → Custom domain** and enable **Enforce HTTPS** (GitHub provisions the certificate automatically once DNS resolves; this can take up to an hour). The app serves its data same-origin from `docs/data/` on the domain, kept current by the scheduled Actions — no API secrets in the browser. To host on MilesWeb's own servers instead, upload the `docs/` files to `public_html`; the app then falls back to reading the feeds from GitHub raw.
+The app is static, so on a non-GitHub host it reads the scanner/news/strategist feeds live from **GitHub raw** (`raw.githubusercontent.com/hassainn/mySavings/main/docs/data`) — the scheduled Actions keep those current, and no API secrets ever touch MilesWeb or the browser. The canonical auto-deploying copy remains GitHub Pages at `hassainn.github.io/mySavings`. (To serve the domain from GitHub Pages instead, repoint the apex A records to `185.199.108-111.153`, add a `docs/CNAME`, and set the custom domain under Settings → Pages.)
 
 ## Vinext starter reference
 
