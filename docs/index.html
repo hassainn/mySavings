@@ -2620,10 +2620,19 @@
       let scanGrade = "all";
       let scanThreshold = Number(localStorage.getItem("alpha-scan-threshold") || 65);
       let voiceEnabled = localStorage.getItem("alpha-voice-alerts") === "on";
+      // On GitHub Pages (github.io or the mehaboobfund.in custom domain) the
+      // scheduled Actions keep docs/data/ fresh and same-origin, so read it
+      // directly. Any other host (e.g. a static MilesWeb upload) falls back to
+      // GitHub raw so the feeds still stay current.
+      const SAME_ORIGIN_DATA_HOSTS = [
+        "hassainn.github.io",
+        "mehaboobfund.in",
+        "www.mehaboobfund.in",
+        "localhost",
+        "127.0.0.1",
+      ];
       const DATA_ROOT =
-        location.hostname === "hassainn.github.io" ||
-        location.hostname === "localhost" ||
-        location.hostname === "127.0.0.1" ||
+        SAME_ORIGIN_DATA_HOSTS.includes(location.hostname) ||
         location.protocol === "file:"
           ? "data"
           : "https://raw.githubusercontent.com/hassainn/mySavings/main/docs/data";
