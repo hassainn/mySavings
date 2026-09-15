@@ -1,4 +1,4 @@
-import { mkdir, writeFile } from "node:fs/promises";
+import { mkdir, readFile, writeFile } from "node:fs/promises";
 import path from "node:path";
 import process from "node:process";
 
@@ -572,6 +572,114 @@ function finaliseClassified(result, items) {
   };
 }
 
+// ----------------------------------- market direction (why up / down / sideways)
+const INDEX_KEY = process.env.MARKET_INDEX_KEY || "NSE_INDEX|Nifty 50";
+
+async function fetchIndexCloses(key) {
+  const to = new Date();
+  const from = new Date(to);
+  from.setUTCDate(from.getUTCDate() - 400);
+  const iso = (d) => d.toISOString().slice(0, 10);
+  const url = `https://api.upstox.com/v3/historical-candle/${encodeURIComponent(key)}/days/1/${iso(to)}/${iso(from)}`;
+  try {
+    const res = await fetch(url, { headers: { Accept: "application/json" } });
+    if (!res.ok) return null;
+    const body = await res.json();
+    const rows = (body.data?.candles || [])
+      .map(([date, , , , close]) => ({ date, close: Number(close) }))
+      .filter((r) => Number.isFinite(r.close))
+      .sort((a, b) => new Date(a.date) - new Date(b.date));
+    return rows.length ? rows : null;
+  } catch {
+    return null;
+  }
+}
+
+const smaOf = (arr, n) => (arr.length >= n ? arr.slice(-n).reduce((s, v) => s + v, 0) / n : null);
+
+async function analyzeMarketDirection(feed) {
+  const reasons = [];
+  let direction = "Sideways";
+  let changePct = null;
+  let close = null;
+  let asOf = null;
+
+  const rows = await fetchIndexCloses(INDEX_KEY);
+  if (rows && rows.length > 60) {
+    const closes = rows.map((r) => r.close);
+    close = closes.at(-1);
+    const prev = closes.at(-2);
+    changePct = prev ? Number(((close / prev - 1) * 100).toFixed(2)) : null;
+    asOf = rows.at(-1).date.slice(0, 10);
+    const sma20 = smaOf(closes, 20);
+    const sma50 = smaOf(closes, 50);
+    const sma200 = smaOf(closes, 200);
+    const sma50Past = smaOf(closes.slice(0, -10), 50);
+    const rising = sma50Past != null && sma50 != null && sma50 > sma50Past;
+    const falling = sma50Past != null && sma50 != null && sma50 < sma50Past;
+    const chg5 = closes.length > 6 ? (close / closes.at(-6) - 1) * 100 : 0;
+    const above = sma50 != null && close > sma50 && (sma20 == null || sma20 >= sma50);
+    const below = sma50 != null && close < sma50 && (sma20 == null || sma20 <= sma50);
+    if (above && rising && chg5 > -1) direction = "Uptrend";
+    else if (below && falling && chg5 < 1) direction = "Downtrend";
+    else direction = "Sideways";
+
+    const dma = [];
+    if (sma20 != null) dma.push(`${close >= sma20 ? "above" : "below"} its 20-DMA`);
+    if (sma50 != null) dma.push(`${close >= sma50 ? "above" : "below"} the 50-DMA${rising ? " (rising)" : falling ? " (falling)" : ""}`);
+    if (sma200 != null) dma.push(`${close >= sma200 ? "above" : "below"} the 200-DMA`);
+    reasons.push({ tag: "Index", text: `Nifty 50 closed ${changePct >= 0 ? "+" : ""}${changePct}% at ${Math.round(close).toLocaleString("en-IN")}, ${dma.join(", ")}.` });
+    reasons.push({ tag: "Trend", text: `The index is ${chg5 >= 0 ? "up" : "down"} ${Math.abs(chg5).toFixed(1)}% over the last five sessions — ${direction === "Sideways" ? "no clear directional edge (range-bound)" : `${direction.toLowerCase()} structure intact`}.` });
+  } else {
+    reasons.push({ tag: "Index", text: "Live index data was unavailable; direction is inferred from breadth and headline flow." });
+  }
+
+  // Breadth from the latest committed scan (advancers, above-DMA %).
+  try {
+    const scan = JSON.parse(await readFile(path.resolve("docs/data/scanner-results.json"), "utf8"));
+    const mm = scan.marketMood || {};
+    if (Number.isFinite(mm.advancersPct)) {
+      reasons.push({ tag: "Breadth", text: `Market breadth is ${(mm.label || "mixed").toLowerCase()} — ${mm.advancersPct}% of scanned NSE stocks advancing, ${mm.aboveSma50Pct ?? "?"}% above their 50-DMA.` });
+      if (!asOf) {
+        if (mm.advancersPct >= 60) direction = "Uptrend";
+        else if (mm.advancersPct <= 40) direction = "Downtrend";
+      }
+    }
+  } catch {
+    // scan file not present in this checkout — skip the breadth reason.
+  }
+
+  // News-driven drivers (the "why"): the most essential recent catalysts.
+  for (const item of (feed && feed.news) || []) {
+    if (reasons.length >= 6) break;
+    if (item.importance !== "High" && item.importance !== "Medium") continue;
+    const text = item.impact || item.summary || item.headline || item.title;
+    if (text) reasons.push({ tag: item.catalystType || "News", text: String(text).slice(0, 190) });
+  }
+
+  // Sector leadership as a fallback reason.
+  const sectors = (feed && feed.sectors) || [];
+  if (reasons.length < 5 && sectors.length) {
+    reasons.push({ tag: "Sectors", text: `${sectors[0].name} is leading the tape${sectors.length > 1 ? `, ${sectors.at(-1).name} lagging` : ""}.` });
+  }
+
+  const five = reasons.slice(0, 5);
+  while (five.length < 5) {
+    five.push({ tag: "Note", text: "Few fresh market-wide catalysts today — treat the move as low-conviction and let price and volume confirm." });
+  }
+
+  const mood = direction === "Uptrend" ? "advancing" : direction === "Downtrend" ? "under pressure" : "range-bound";
+  return {
+    direction,
+    changePct,
+    close: close != null ? Math.round(close) : null,
+    asOf,
+    headline: `Indian market is ${mood} today.`,
+    reasons: five,
+    disclaimer: "A rules-based read of index price, market breadth and headline flow — not a forecast or trading advice.",
+  };
+}
+
 // ------------------------------------------------------------------- main
 let payload = null;
 let method = null;
@@ -612,11 +720,15 @@ if (!payload) {
   }
 }
 
+const marketDirection = await analyzeMarketDirection(payload);
+console.log(`Market direction: ${marketDirection.direction}${marketDirection.changePct != null ? ` (${marketDirection.changePct >= 0 ? "+" : ""}${marketDirection.changePct}%)` : ""} with ${marketDirection.reasons.length} reasons.`);
+
 const result = {
   status: "live",
   method,
   generatedAt: today.toISOString(),
   model: method === "rss-deterministic" ? null : model,
+  marketDirection,
   ...payload,
 };
 

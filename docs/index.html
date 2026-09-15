@@ -1802,6 +1802,41 @@
       .source-link:hover {
         text-decoration: underline;
       }
+      .market-direction {
+        margin-top: 18px;
+        padding: 20px 22px;
+        border-radius: 18px;
+        border: 1px solid #e6ece9;
+        background: #fff;
+      }
+      .market-direction.up { border-color: #bfe6d1; background: #f4fbf7; }
+      .market-direction.down { border-color: #f2cdcd; background: #fdf5f5; }
+      .market-direction.flat { border-color: #f0e2bb; background: #fdfaf1; }
+      .market-direction .md-head {
+        display: flex; justify-content: space-between; align-items: flex-start; gap: 14px; flex-wrap: wrap;
+      }
+      .market-direction .md-head h2 { margin: 4px 0 0; font-size: 20px; color: #14251f; }
+      .md-badge {
+        display: inline-flex; flex-direction: column; align-items: flex-end;
+        padding: 8px 14px; border-radius: 13px; font-weight: 800; font-size: 15px; color: #fff; white-space: nowrap;
+      }
+      .md-badge.up { background: #1a9e64; }
+      .md-badge.down { background: #cf4444; }
+      .md-badge.flat { background: #c79418; }
+      .md-badge small { font-weight: 600; font-size: 11px; opacity: .92; margin-top: 2px; }
+      .md-badge .md-arrow { font-size: 13px; margin-right: 5px; }
+      .md-reasons { list-style: none; margin: 18px 0 0; padding: 0; display: grid; gap: 11px; }
+      .md-reason { display: flex; gap: 12px; align-items: flex-start; }
+      .md-num {
+        flex: none; width: 24px; height: 24px; border-radius: 50%; background: #14251f; color: #fff;
+        font-size: 12px; font-weight: 800; display: grid; place-items: center; margin-top: 1px;
+      }
+      .md-reason .md-tag {
+        display: inline-block; font-size: 10px; font-weight: 800; letter-spacing: .5px; text-transform: uppercase;
+        color: #0aa879; background: #e3f4ec; padding: 2px 8px; border-radius: 6px; margin-bottom: 3px;
+      }
+      .md-reason p { margin: 0; font-size: 14px; line-height: 1.5; color: #33423c; }
+      .md-foot { margin: 16px 0 0; font-size: 11px; color: #8798a1; }
       .intel-disclaimer {
         margin-top: 20px;
         padding: 15px 17px;
@@ -3122,6 +3157,20 @@
         newsFilter = filter;
         news();
       }
+      function marketDirectionPanel() {
+        const d = marketIntel && marketIntel.marketDirection;
+        if (!d || !Array.isArray(d.reasons) || !d.reasons.length) return "";
+        const dir = String(d.direction || "Sideways");
+        const cls = dir === "Uptrend" ? "up" : dir === "Downtrend" ? "down" : "flat";
+        const arrow = dir === "Uptrend" ? "▲" : dir === "Downtrend" ? "▼" : "▬";
+        const chg = d.changePct != null ? `${d.changePct >= 0 ? "+" : ""}${d.changePct}%` : "";
+        const idx = d.close != null ? `Nifty 50 ${Number(d.close).toLocaleString("en-IN")}${chg ? ` · ${chg}` : ""}` : chg;
+        const reasons = d.reasons
+          .slice(0, 5)
+          .map((r, i) => `<li class="md-reason"><span class="md-num">${i + 1}</span><div><span class="md-tag">${escapeHTML(r.tag || "Reason")}</span><p>${escapeHTML(r.text || "")}</p></div></li>`)
+          .join("");
+        return `<section class="card market-direction ${cls}"><div class="md-head"><div><div class="intel-kicker">WHY THE MARKET MOVED${d.asOf ? ` · ${escapeHTML(d.asOf)}` : ""}</div><h2>${escapeHTML(d.headline || "Market direction")}</h2></div><div class="md-badge ${cls}"><span><span class="md-arrow">${arrow}</span>${escapeHTML(dir)}</span>${idx ? `<small>${escapeHTML(idx)}</small>` : ""}</div></div><ol class="md-reasons">${reasons}</ol><p class="md-foot">${escapeHTML(d.disclaimer || "")}</p></section>`;
+      }
       function news() {
         if (!marketIntel) {
           app.innerHTML =
@@ -3165,6 +3214,7 @@
             '<button class="btn" onclick="loadIntelligence(true)">Check latest feed</button>',
           ) +
           `<section class="intel-page-head"><article class="card intel-lead"><div class="intel-kicker">${intelSourceLabel()} <span class="intel-status ${statusClass}">${intelStatus()}</span></div><h2>${escapeHTML(marketIntel.marketMood || "Indian market briefing")}</h2><p>${escapeHTML(marketIntel.marketSummary || "No market summary is available.")}</p><div class="news-footer"><span>${generated}</span><span>${escapeHTML(String(marketIntel.sources?.length || 0))} sources</span></div></article><aside class="card intel-focus"><div class="intel-kicker">TODAY'S RESEARCH FOCUS</div><h3>Price reaction first</h3><p>${escapeHTML(marketIntel.dailyFocus || "Confirm news with price, volume and primary filings.")}</p></aside></section>` +
+          marketDirectionPanel() +
           `<div class="section-head"><h2>Sector heat</h2><span class="muted">Evidence-weighted, not a recommendation</span></div><section class="sector-grid">${
             sectors.length
               ? sectors

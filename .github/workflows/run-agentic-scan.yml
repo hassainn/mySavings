@@ -12,8 +12,12 @@ on:
           - "0"
           - "1"
   schedule:
+    # Post-close early read (16:15 / 16:50 IST) — data may not be fully settled.
     - cron: "45 10 * * 1-5"
     - cron: "20 11 * * 1-5"
+    # Evening full scan (19:30 / 20:05 IST) — settled EOD data, the primary run.
+    - cron: "0 14 * * 1-5"
+    - cron: "35 14 * * 1-5"
 
 permissions:
   contents: write
@@ -51,7 +55,7 @@ jobs:
         run: |
           if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
             echo "index=${{ inputs.partition }}" >> "$GITHUB_OUTPUT"
-          elif [ "${{ github.event.schedule }}" = "20 11 * * 1-5" ]; then
+          elif [ "${{ github.event.schedule }}" = "20 11 * * 1-5" ] || [ "${{ github.event.schedule }}" = "35 14 * * 1-5" ]; then
             echo "index=1" >> "$GITHUB_OUTPUT"
           else
             echo "index=0" >> "$GITHUB_OUTPUT"
