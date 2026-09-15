@@ -1,0 +1,38 @@
+name: Refresh NSE symbols
+
+on:
+  workflow_dispatch:
+  schedule:
+    # Monthly, 1st at 01:00 UTC — the NSE equity list changes slowly (new listings).
+    - cron: "0 1 1 * *"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: nse-symbols
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Rebuild symbol map
+        run: node scripts/generate-nse-symbols.mjs
+
+      - name: Publish
+        shell: bash
+        run: |
+          git config user.name "alpha-swing-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add docs/data/nse-symbols.json
+          if git diff --cached --quiet; then
+            echo "No symbol changes to publish."
+            exit 0
+          fi
+          git commit -m "Refresh NSE symbol map"
+          git pull --rebase origin main
+          git push origin HEAD:main

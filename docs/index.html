@@ -1837,6 +1837,11 @@
       }
       .md-reason p { margin: 0; font-size: 14px; line-height: 1.5; color: #33423c; }
       .md-foot { margin: 16px 0 0; font-size: 11px; color: #8798a1; }
+      .table-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; margin-top: 8px; }
+      .returns-table { min-width: 580px; }
+      .returns-table small { font-weight: 400; margin-left: 5px; }
+      .returns-table td .up, .returns-table td .down { font-weight: 600; }
+      b.negative, .kpi b.negative { color: #cf4444; }
       .intel-disclaimer {
         margin-top: 20px;
         padding: 15px 17px;
@@ -2497,6 +2502,9 @@
         <button class="nav" data-page="paper">
           <span class="nav-icon">↗</span>Paper trading
         </button>
+        <button class="nav" data-page="returns">
+          <span class="nav-icon">₹</span>Returns
+        </button>
         <button class="nav" data-page="journal">
           <span class="nav-icon">✎</span>Journal
         </button>
@@ -2534,6 +2542,7 @@
           <button data-page="strategist">AI Strategist</button>
           <button data-page="market">Market health</button>
           <button data-page="journal">Trade journal</button>
+          <button data-page="returns">Returns tracker</button>
           <button data-page="backtest">Backtest</button>
           <button data-page="settings">Settings</button>
         </div>
@@ -2645,6 +2654,11 @@
       let journalEntries = JSON.parse(
         localStorage.getItem("alpha-journal") || "[]",
       );
+      let holdings = (() => { try { return JSON.parse(localStorage.getItem("alpha-holdings") || "[]"); } catch { return []; } })();
+      let nseSymbols = null;
+      let symbolsLoading = false;
+      let holdingPx = {};
+      let returnsFetching = false;
       let currentPage = "overview";
       let marketIntel = null;
       let newsFilter = "all";
@@ -3504,6 +3518,133 @@
           q = r > 0 ? Math.floor((c * p) / 100 / r) : 0;
         riskResult.innerHTML = `<span>Risk amount<b>₹${((c * p) / 100).toLocaleString("en-IN")}</b></span><span>Quantity<b>${q}</b></span><span>Position value<b>₹${(q * e).toLocaleString("en-IN")}</b></span><span>2R target<b>₹${(e + 2 * r).toLocaleString("en-IN")}</b></span>`;
       };
+      const inrSigned = (n) => (Number(n) >= 0 ? "+₹" : "-₹") + Math.round(Math.abs(Number(n) || 0)).toLocaleString("en-IN");
+      const isoDay = (d) => new Date(d).toISOString().slice(0, 10);
+      async function loadSymbolMap() {
+        if (nseSymbols || symbolsLoading) return nseSymbols;
+        symbolsLoading = true;
+        try {
+          const r = await fetch(`${DATA_ROOT}/nse-symbols.json`, { cache: "force-cache" });
+          if (r.ok) { const j = await r.json(); nseSymbols = j.symbols || {}; }
+        } catch {}
+        symbolsLoading = false;
+        if (currentPage === "returns") returnsView();
+        return nseSymbols;
+      }
+      async function fetchHoldingPrices(h) {
+        const from = new Date(h.buyDate);
+        from.setDate(from.getDate() - 7);
+        const url = `https://api.upstox.com/v3/historical-candle/${encodeURIComponent(h.key)}/days/1/${isoDay(new Date())}/${isoDay(from)}`;
+        const r = await fetch(url, { headers: { Accept: "application/json" } });
+        if (!r.ok) throw new Error("price " + r.status);
+        const b = await r.json();
+        const candles = (b.data?.candles || [])
+          .map((c) => ({ date: String(c[0]).slice(0, 10), close: Number(c[4]) }))
+          .filter((c) => Number.isFinite(c.close))
+          .sort((a, b) => a.date.localeCompare(b.date));
+        if (!candles.length) throw new Error("no data");
+        const latest = candles[candles.length - 1];
+        const entryC = candles.find((c) => c.date >= h.buyDate) || latest;
+        return { entry: entryC.close, entryDate: entryC.date, latest: latest.close, latestDate: latest.date };
+      }
+      async function refreshReturns() {
+        if (returnsFetching || !holdings.length) return;
+        const pending = holdings.filter((h) => !holdingPx[h.id]);
+        if (!pending.length) return; // nothing to fetch — avoids a re-render loop
+        returnsFetching = true;
+        await Promise.all(pending.map(async (h) => {
+          try { holdingPx[h.id] = await fetchHoldingPrices(h); }
+          catch (e) { holdingPx[h.id] = { err: String(e.message || "failed") }; }
+        }));
+        returnsFetching = false;
+        if (currentPage === "returns") returnsView();
+      }
+      function forceReturns() { holdingPx = {}; returnsView(); }
+      async function addHolding(e) {
+        e.preventDefault();
+        await loadSymbolMap();
+        const sym = (document.getElementById("hSymbol").value || "").trim().toUpperCase();
+        const info = nseSymbols && nseSymbols[sym];
+        if (!info) return toastMsg("Unknown NSE symbol: " + (sym || "—"));
+        const buyDate = document.getElementById("hDate").value;
+        if (!buyDate) return toastMsg("Pick a buy date");
+        if (buyDate > isoDay(new Date())) return toastMsg("Buy date can't be in the future");
+        const qty = Number(document.getElementById("hQty").value);
+        if (!(qty > 0)) return toastMsg("Enter a valid quantity");
+        const entryRaw = document.getElementById("hEntry").value;
+        const entry = entryRaw ? Number(entryRaw) : null;
+        const h = { id: "h" + Date.now() + Math.random().toString(36).slice(2, 6), symbol: sym, key: info.k, name: info.n, buyDate, qty, entry, addedAt: new Date().toISOString() };
+        holdings.unshift(h);
+        localStorage.setItem("alpha-holdings", JSON.stringify(holdings));
+        returnsView();
+        try { holdingPx[h.id] = await fetchHoldingPrices(h); }
+        catch (err) { holdingPx[h.id] = { err: String(err.message || "failed") }; }
+        if (currentPage === "returns") returnsView();
+        toastMsg("Added " + sym);
+      }
+      function removeHolding(id) {
+        holdings = holdings.filter((h) => h.id !== id);
+        localStorage.setItem("alpha-holdings", JSON.stringify(holdings));
+        delete holdingPx[id];
+        returnsView();
+      }
+      function returnsRows() {
+        return holdings.map((h) => {
+          const px = holdingPx[h.id] || {};
+          const eff = h.entry != null ? h.entry : px.entry;
+          const now = px.latest;
+          const invested = eff != null ? eff * h.qty : null;
+          const value = now != null ? now * h.qty : null;
+          const pnl = invested != null && value != null ? value - invested : null;
+          const ret = invested && value != null ? (value / invested - 1) * 100 : null;
+          const days = Math.max(0, Math.round((Date.now() - new Date(h.buyDate).getTime()) / 86400000));
+          return { h, eff, now, invested, value, pnl, ret, days, err: px.err, pending: !px.latest && !px.err };
+        });
+      }
+      function periodReport(rows, keyLen, label) {
+        const groups = {};
+        for (const r of rows) {
+          if (r.invested == null || r.value == null) continue;
+          const key = r.h.buyDate.slice(0, keyLen);
+          groups[key] = groups[key] || { key, invested: 0, value: 0, n: 0, win: 0 };
+          groups[key].invested += r.invested;
+          groups[key].value += r.value;
+          groups[key].n += 1;
+          if (r.pnl > 0) groups[key].win += 1;
+        }
+        const list = Object.values(groups).sort((a, b) => b.key.localeCompare(a.key));
+        if (!list.length) return "";
+        const body = list.map((g) => {
+          const ret = g.invested ? (g.value / g.invested - 1) * 100 : 0;
+          const pnl = g.value - g.invested;
+          return `<tr><td><b>${g.key}</b></td><td>${g.n}</td><td>${inrRound(g.invested)}</td><td>${inrRound(g.value)}</td><td class="${pnl >= 0 ? "up" : "down"}">${inrSigned(pnl)}</td><td class="${ret >= 0 ? "up" : "down"}">${ret >= 0 ? "+" : ""}${ret.toFixed(1)}%</td><td>${Math.round((g.win / g.n) * 100)}%</td></tr>`;
+        }).join("");
+        return `<div class="section-head"><h2>${label}</h2></div><div class="table-wrap"><table class="table returns-table"><tr><th>${keyLen === 7 ? "Month" : "Year"}</th><th>Trades</th><th>Invested</th><th>Value</th><th>P&L</th><th>Return</th><th>Win %</th></tr>${body}</table></div>`;
+      }
+      function returnsView() {
+        loadSymbolMap();
+        const rows = returnsRows();
+        const done = rows.filter((r) => r.invested != null && r.value != null);
+        const invested = done.reduce((s, r) => s + r.invested, 0);
+        const value = done.reduce((s, r) => s + r.value, 0);
+        const pnl = value - invested;
+        const ret = invested ? (value / invested - 1) * 100 : 0;
+        const today = isoDay(new Date());
+        const kpis = done.length
+          ? `<section class="kpi-grid"><div class="card kpi"><small>Invested</small><b>${inrRound(invested)}</b></div><div class="card kpi"><small>Current value</small><b>${inrRound(value)}</b></div><div class="card kpi"><small>Total P&L</small><b class="${pnl >= 0 ? "positive" : "negative"}">${inrSigned(pnl)}</b></div><div class="card kpi"><small>Return</small><b class="${ret >= 0 ? "positive" : "negative"}">${ret >= 0 ? "+" : ""}${ret.toFixed(1)}%</b></div></section>`
+          : "";
+        const form = `<section class="card"><h3>Log a buy</h3><p class="muted" style="margin:0 0 12px">Any NSE stock. Backdate the buy to test past entries — the real close on that date becomes your entry price (leave entry blank to auto-fill). Live end-of-day returns from Upstox public data.</p><form class="form-grid" onsubmit="addHolding(event)"><label>Symbol<input id="hSymbol" list="nseSymList" required placeholder="RELIANCE" autocomplete="off"></label><label>Buy date<input id="hDate" type="date" required max="${today}" value="${today}"></label><label>Quantity<input id="hQty" type="number" min="1" required placeholder="10"></label><label>Entry price (optional)<input id="hEntry" type="number" step="0.05" placeholder="close on buy date"></label><button class="btn full">Add &amp; fetch return</button></form><datalist id="nseSymList">${nseSymbols ? Object.keys(nseSymbols).map((s) => `<option value="${s}"></option>`).join("") : ""}</datalist></section>`;
+        const table = holdings.length
+          ? `<section class="card"><div class="section-head"><h2>Holdings</h2><button onclick="forceReturns()">Refresh prices</button></div><div class="table-wrap"><table class="table returns-table"><tr><th>Stock</th><th>Buy date</th><th>Qty</th><th>Entry</th><th>Now</th><th>Return</th><th>P&amp;L</th><th>Days</th><th></th></tr>${rows.map((r) => {
+              const retCell = r.ret != null ? `<span class="${r.ret >= 0 ? "up" : "down"}">${r.ret >= 0 ? "+" : ""}${r.ret.toFixed(1)}%</span>` : r.err ? `<span class="down">n/a</span>` : `<span class="muted">…</span>`;
+              const pnlCell = r.pnl != null ? `<span class="${r.pnl >= 0 ? "up" : "down"}">${inrSigned(r.pnl)}</span>` : "—";
+              return `<tr><td><b>${r.h.symbol}</b><small class="muted">${escapeHTML((r.h.name || "").slice(0, 22))}</small></td><td>${r.h.buyDate}</td><td>${r.h.qty}</td><td>${r.eff != null ? inrRound(r.eff) : "—"}</td><td>${r.now != null ? inrRound(r.now) : "—"}</td><td>${retCell}</td><td>${pnlCell}</td><td>${r.days}</td><td><button class="remove" onclick="removeHolding('${r.h.id}')">Remove</button></td></tr>`;
+            }).join("")}</table></div></section>`
+          : `<div class="notice">No holdings yet. Log a buy above to track its real return.</div>`;
+        const reports = done.length ? `<section class="card">${periodReport(rows, 7, "Month-wise report")}${periodReport(rows, 4, "Year-wise report")}</section>` : holdings.length ? `<div class="notice">Fetching end-of-day prices to build the month and year reports…</div>` : "";
+        app.innerHTML = title("Returns") + kpis + form + table + reports + `<div class="intel-disclaimer">Returns use Upstox end-of-day closes (public data) and exclude brokerage, taxes and slippage. Past performance does not predict future results. Not investment advice.</div>`;
+        refreshReturns();
+      }
       function page(x) {
         currentPage = x;
         ({
@@ -3514,6 +3655,7 @@
           market,
           news,
           paper,
+          returns: returnsView,
           journal,
           backtest,
           settings,
@@ -3524,7 +3666,7 @@
           .forEach((b) => b.classList.toggle("active", b.dataset.page === x));
         moreButton.classList.toggle(
           "active",
-          ["strategist", "news", "market", "journal", "backtest", "settings"].includes(x),
+          ["strategist", "news", "market", "returns", "journal", "backtest", "settings"].includes(x),
         );
         window.scrollTo({ top: 0, behavior: "smooth" });
       }
