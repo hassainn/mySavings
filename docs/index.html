@@ -1860,6 +1860,12 @@
       .strat-flags { display: flex; flex-wrap: wrap; gap: 7px; margin-top: 10px; }
       .strat-flags .flag { font-size: 12px; font-weight: 600; padding: 4px 11px; border-radius: 8px; background: #e3f4ec; color: #0a5c3e; }
       .strat-flags .flag.off { background: #f0f2f1; color: #98a29b; }
+      .fund-table { min-width: 700px; }
+      .fund-table tr[onclick] { cursor: pointer; }
+      .fund-table tr[onclick]:hover td { background: #f5f9f7; }
+      .fund-table tr.fund-best td { background: #eefaf3; }
+      .fund-table tr.fund-best:hover td { background: #e4f6ec; }
+      .sym-best { color: #12925f; }
       .intel-disclaimer {
         margin-top: 20px;
         padding: 15px 17px;
@@ -2523,6 +2529,9 @@
         <button class="nav" data-page="returns">
           <span class="nav-icon">₹</span>Returns
         </button>
+        <button class="nav" data-page="fundamentals">
+          <span class="nav-icon">⊞</span>Fundamentals
+        </button>
         <button class="nav" data-page="journal">
           <span class="nav-icon">✎</span>Journal
         </button>
@@ -2565,6 +2574,7 @@
           <button data-page="market">Market health</button>
           <button data-page="journal">Trade journal</button>
           <button data-page="returns">Returns tracker</button>
+          <button data-page="fundamentals">Fundamentals</button>
           <button data-page="backtest">Backtest</button>
           <button data-page="settings">Settings</button>
         </div>
@@ -3832,6 +3842,57 @@
         app.innerHTML = title("Returns") + kpis + form + table + reports + `<div class="intel-disclaimer">Returns use Upstox end-of-day closes (public data) and exclude brokerage, taxes and slippage. Past performance does not predict future results. Not investment advice.</div>`;
         refreshReturns();
       }
+      function fyQuarter(label) {
+        const q = { Mar: 4, Jun: 1, Sep: 2, Dec: 3 };
+        const parts = String(label || "").split(" ");
+        const mon = parts[0], yr = Number(parts[1]);
+        if (!q[mon] || !yr) return label || "—";
+        const fy = mon === "Mar" ? yr : yr + 1;
+        return `Q${q[mon]} FY${String(fy).slice(-2)}`;
+      }
+      function fundScore(f) {
+        let s = 0;
+        if (f.growthQualified === "Yes") s += 2; else if (f.growthQualified === "Partial") s += 1;
+        const eg = f.epsGrowth && f.epsGrowth.length ? f.epsGrowth[f.epsGrowth.length - 1].yoy : null;
+        if (eg != null && eg >= 25) s += 1;
+        if (f.salesGrowthYoY != null && f.salesGrowthYoY >= 15) s += 1;
+        return s;
+      }
+      function techScoreFor(sym) {
+        const sig = scanFeed && Array.isArray(scanFeed.signals) ? scanFeed.signals.find((s) => s.symbol === sym) : null;
+        const grade = sig?.grade || "—";
+        const score = grade === "A+" ? 3 : grade === "A" ? 2 : grade === "B" ? 1 : 0;
+        return { score, grade, sig };
+      }
+      function fundamentalsView() {
+        if (!fundamentals) {
+          app.innerHTML = title("Fundamentals") + '<div class="notice">Loading quarterly fundamentals…</div>';
+          loadFundamentals().then(() => { if (currentPage === "fundamentals") fundamentalsView(); });
+          return;
+        }
+        const entries = Object.keys(fundamentals.symbols || {})
+          .map((sym) => ({ sym, f: fundamentals.symbols[sym] }))
+          .filter((x) => x.f && x.f.epsNow != null);
+        const rows = entries.map(({ sym, f }) => {
+          const fs = fundScore(f);
+          const t = techScoreFor(sym);
+          return { sym, f, fs, t, combined: fs + t.score, best: fs >= 3 && t.score >= 2 };
+        }).sort((a, b) => b.combined - a.combined || (b.f.salesGrowthYoY || 0) - (a.f.salesGrowthYoY || 0));
+        const g = (v) => (v == null ? "—" : `${v >= 0 ? "+" : ""}${v}%`);
+        const cls = (v) => (v == null ? "" : v >= 0 ? "up" : "down");
+        const inr = (v) => (v == null ? "—" : Number(v).toLocaleString("en-IN"));
+        const latestQ = rows[0]?.f.latestQuarter, priorQ = rows[0]?.f.priorYearQuarter;
+        const bestCount = rows.filter((r) => r.best).length;
+        const body = rows.map((r) => {
+          const f = r.f;
+          const eg = f.epsGrowth && f.epsGrowth.length ? f.epsGrowth[f.epsGrowth.length - 1].yoy : null;
+          return `<tr class="${r.best ? "fund-best" : ""}" onclick="detail('${r.sym}')"><td><b class="${r.best ? "sym-best" : ""}">${r.best ? "● " : ""}${r.sym}</b></td><td>${escapeHTML(f.basis || "—")}</td><td>${f.epsNow ?? "—"} vs ${f.epsPrior ?? "—"}</td><td class="${cls(eg)}">${g(eg)}</td><td>${inr(f.revNow)} vs ${inr(f.revPrior)}</td><td class="${cls(f.salesGrowthYoY)}">${g(f.salesGrowthYoY)}</td><td>${r.t.grade}</td><td><b>${r.combined}</b>/8</td></tr>`;
+        }).join("");
+        app.innerHTML = title("Fundamentals") +
+          `<section class="card"><p style="margin:0 0 6px">Latest quarterly growth is <b>${fyQuarter(latestQ)} (${escapeHTML(latestQ || "")})</b> versus <b>${fyQuarter(priorQ)}</b>.</p><p class="muted" style="margin:0">EPS and revenue year-on-year for the scan's top breakout stocks. <b class="sym-best">● green</b> = strong on fundamentals AND technicals (${bestCount} of ${rows.length}). Tap a row for the full stock view.</p></section>` +
+          `<section class="card"><div class="table-wrap"><table class="table returns-table fund-table"><tr><th>Symbol</th><th>Basis</th><th>EPS</th><th>EPS YoY</th><th>Revenue (₹cr)</th><th>Rev YoY</th><th>Tech</th><th>Score</th></tr>${body || '<tr><td colspan="8" class="muted">No fundamentals parsed yet — the refresh runs after each scan.</td></tr>'}</table></div></section>` +
+          `<div class="intel-disclaimer">Fundamentals scraped from screener.in (consolidated where available); technical grade from the daily scan. Score = fundamentals (0–5) + technicals (0–3). Educational — verify before acting. Not investment advice.</div>`;
+      }
       function page(x) {
         currentPage = x;
         ({
@@ -3843,6 +3904,7 @@
           news,
           paper,
           returns: returnsView,
+          fundamentals: fundamentalsView,
           journal,
           backtest,
           settings,
@@ -3853,7 +3915,7 @@
           .forEach((b) => b.classList.toggle("active", b.dataset.page === x));
         moreButton.classList.toggle(
           "active",
-          ["strategist", "news", "market", "returns", "journal", "backtest", "settings"].includes(x),
+          ["strategist", "news", "market", "returns", "fundamentals", "journal", "backtest", "settings"].includes(x),
         );
         window.scrollTo({ top: 0, behavior: "smooth" });
       }

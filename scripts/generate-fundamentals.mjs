@@ -67,9 +67,16 @@ async function fetchCompany(sym) {
       const ttmEps = eps && eps.length >= 4 ? round(eps.slice(-4).reduce((a, b) => a + b, 0)) : null;
       const twoQtrStrong = epsGrowth.length >= 2 && epsGrowth.slice(-2).every((e) => e.yoy != null && e.yoy >= 25);
       const growthQualified = twoQtrStrong && salesG != null && salesG >= 15 ? "Yes" : epsGrowth.some((e) => e.yoy >= 25) ? "Partial" : "No";
+      const at = (a, back) => (a && a.length > back ? a[a.length - 1 - back] : null);
       return {
-        latestQuarter: heads[li] || null,
+        basis: url.includes("consolidated") ? "Consolidated" : "Standalone",
+        latestQuarter: heads.length ? heads[heads.length - 1] : null,
+        priorYearQuarter: heads.length >= 5 ? heads[heads.length - 5] : null,
         eps: last(eps),
+        epsNow: at(eps, 0),
+        epsPrior: at(eps, 4),
+        revNow: at(sales, 0),
+        revPrior: at(sales, 4),
         ttmEps,
         epsGrowth,
         salesGrowthYoY: salesG,
