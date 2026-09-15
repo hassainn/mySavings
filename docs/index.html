@@ -3073,14 +3073,29 @@
         if (currentPage === "overview") overview();
       }
       window.applyMember = applyMember;
+      function paperSummary() {
+        const capital = Number(localStorage.getItem("alpha-capital")) || 500000;
+        const deployed = positions.reduce((n, p) => n + p.entry * p.qty, 0);
+        const risk = positions.reduce((n, p) => n + Math.max(0, p.entry - p.stop) * p.qty, 0);
+        return {
+          capital,
+          deployed,
+          risk,
+          cash: Math.max(0, capital - deployed),
+          count: positions.length,
+          deployedPct: capital > 0 ? Math.round((deployed / capital) * 100) : 0,
+        };
+      }
+      const inrRound = (n) => "₹" + Math.round(Number(n) || 0).toLocaleString("en-IN");
       function overview() {
         const name = memberName();
+        const ps = paperSummary();
         app.innerHTML =
           title(
             `${timeGreeting()}${name ? `, ${escapeHTML(name)}` : ""}`,
             '<button class="btn" onclick="openStockModal()">＋ Add stock</button>',
           ) +
-          `<section class="card portfolio-hero"><div class="portfolio-top"><span>PAPER PORTFOLIO</span><span class="live-chip">● Market closed</span></div><div class="portfolio-value"><strong>₹5,00,000</strong><span>+1.74%</span></div><div class="portfolio-stats"><div><small>Today's gain</small><b>₹2,344.11</b></div><div><small>Open risk</small><b>₹0.00</b></div><div><small>Buying power</small><b>₹5,00,000</b></div></div>${spark(true, true)}</section>${strategistPreview()}${agenticPreview()}${briefingPreview()}<div class="overview-grid"><div><div class="section-head"><h2>Top setups</h2><button onclick="page('scanner')">View scanner →</button></div><section class="setup-strip">${S.slice(
+          `<section class="card portfolio-hero"><div class="portfolio-top"><span>PAPER PORTFOLIO</span><span class="live-chip">● Market closed</span></div><div class="portfolio-value"><strong>${inrRound(ps.capital)}</strong><span>${ps.count ? ps.deployedPct + "% deployed" : "Fully in cash"}</span></div><div class="portfolio-stats"><div><small>Deployed</small><b>${inrRound(ps.deployed)}</b></div><div><small>Open risk</small><b>${inrRound(ps.risk)}</b></div><div><small>Buying power</small><b>${inrRound(ps.cash)}</b></div></div>${spark(true, true)}</section>${strategistPreview()}${agenticPreview()}${briefingPreview()}<div class="overview-grid"><div><div class="section-head"><h2>Top setups</h2><button onclick="page('scanner')">View scanner →</button></div><section class="setup-strip">${S.slice(
             0,
             3,
           )
@@ -3334,7 +3349,7 @@
       function settings() {
         app.innerHTML =
           title("Settings") +
-          `<section class="card settings"><h3>Trading preferences</h3><label>Default risk per trade (%)</label><input id="defaultRisk" type="number" value="${localStorage.getItem("alpha-risk") || 0.5}" step="0.1"><label>Market-data provider</label><input value="Upstox — configuration required" disabled><label>AI news provider</label><input value="Gemini 3.8 Flash — ${intelStatus()}" disabled><p><button class="btn" onclick="saveSettings()">Save preferences</button> <button class="mini" onclick="openModal('riskModal')">Open risk calculator</button></p></section>`;
+          `<section class="card settings"><h3>Trading preferences</h3><label>Default risk per trade (%)</label><input id="defaultRisk" type="number" value="${localStorage.getItem("alpha-risk") || 0.5}" step="0.1"><label>Paper starting capital (₹)</label><input id="startCapital" type="number" min="0" step="1000" value="${Number(localStorage.getItem("alpha-capital")) || 500000}"><label>Market-data provider</label><input value="Upstox — configuration required" disabled><label>AI news provider</label><input value="Gemini 3.8 Flash — ${intelStatus()}" disabled><p><button class="btn" onclick="saveSettings()">Save preferences</button> <button class="mini" onclick="openModal('riskModal')">Open risk calculator</button></p></section>`;
       }
       function openModal(id) {
         document.getElementById(id).classList.add("open");
@@ -3476,6 +3491,7 @@
       }
       function saveSettings() {
         localStorage.setItem("alpha-risk", defaultRisk.value);
+        localStorage.setItem("alpha-capital", String(Number(startCapital.value) || 500000));
         toastMsg("Preferences saved");
       }
       riskForm.onsubmit = (event) => {
