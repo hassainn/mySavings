@@ -1,0 +1,41 @@
+name: Refresh fundamentals
+
+on:
+  workflow_dispatch:
+  schedule:
+    # Weekday evening, after the 19:30/20:05 IST scan commits its breakouts.
+    - cron: "10 15 * * 1-5"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: fundamentals
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    env:
+      FUND_MAX: "45"
+      FUND_SPACING_MS: "1100"
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Scrape screener.in for the top breakout stocks
+        run: node scripts/generate-fundamentals.mjs
+
+      - name: Publish
+        shell: bash
+        run: |
+          git config user.name "alpha-swing-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add docs/data/fundamentals.json
+          if git diff --cached --quiet; then
+            echo "No fundamentals changes to publish."
+            exit 0
+          fi
+          git commit -m "Refresh stock fundamentals"
+          git pull --rebase origin main
+          git push origin HEAD:main

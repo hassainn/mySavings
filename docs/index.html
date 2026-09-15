@@ -1842,6 +1842,24 @@
       .returns-table small { font-weight: 400; margin-left: 5px; }
       .returns-table td .up, .returns-table td .down { font-weight: 600; }
       b.negative, .kpi b.negative { color: #cf4444; }
+      .global-search { position: relative; flex: 1 1 auto; max-width: 360px; margin: 0 12px; }
+      .global-search input { width: 100%; box-sizing: border-box; height: 38px; padding: 0 14px; border: 1px solid #e2e9e5; border-radius: 11px; background: #f7faf8; font: inherit; font-size: 14px; color: #14251f; }
+      .global-search input:focus { outline: none; border-color: #1fcf96; background: #fff; }
+      .search-results { position: absolute; top: 44px; left: 0; right: 0; z-index: 500; background: #fff; border: 1px solid #e2e9e5; border-radius: 13px; box-shadow: 0 20px 50px rgba(20,30,25,.16); max-height: 62vh; overflow-y: auto; }
+      .search-item { display: flex; flex-direction: column; align-items: flex-start; gap: 1px; width: 100%; text-align: left; padding: 10px 14px; background: none; border: 0; border-bottom: 1px solid #f0f3f1; cursor: pointer; }
+      .search-item:hover { background: #f2f9f5; }
+      .search-item b { font-size: 14px; color: #14251f; }
+      .search-item small { color: #6b756f; font-size: 12px; }
+      .search-empty, .search-more { padding: 12px 14px; font-size: 12.5px; color: #8798a1; }
+      .search-more { border-top: 1px solid #f0f3f1; }
+      @media (max-width: 640px) { .status span { display: none; } .global-search { margin: 0 8px; } }
+      .fund-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); gap: 10px; margin-top: 10px; }
+      .fund-grid .fund-cell { background: #f5f8f6; border-radius: 10px; padding: 10px 12px; }
+      .fund-grid .fund-cell small { color: #6b756f; font-size: 11px; display: block; }
+      .fund-grid .fund-cell b { font-size: 16px; color: #14251f; }
+      .strat-flags { display: flex; flex-wrap: wrap; gap: 7px; margin-top: 10px; }
+      .strat-flags .flag { font-size: 12px; font-weight: 600; padding: 4px 11px; border-radius: 8px; background: #e3f4ec; color: #0a5c3e; }
+      .strat-flags .flag.off { background: #f0f2f1; color: #98a29b; }
       .intel-disclaimer {
         margin-top: 20px;
         padding: 15px 17px;
@@ -2518,6 +2536,10 @@
       <main class="main">
         <header class="top">
           <div class="status">● NSE · India <span>Market closed</span></div>
+          <div class="global-search">
+            <input id="globalSearch" type="search" placeholder="Search any NSE stock…" autocomplete="off" aria-label="Search any NSE stock" oninput="onGlobalSearch(this.value)" onfocus="onGlobalSearch(this.value)" onblur="setTimeout(closeSearch,180)" onkeydown="if(event.key==='Escape')closeSearch()">
+            <div class="search-results" id="searchResults" hidden></div>
+          </div>
           <div class="avatar">HS</div>
         </header>
         <div class="wrap" id="app"></div>
@@ -2656,6 +2678,8 @@
       );
       let holdings = (() => { try { return JSON.parse(localStorage.getItem("alpha-holdings") || "[]"); } catch { return []; } })();
       let nseSymbols = null;
+      let fundamentals = null;
+      let fundamentalsLoading = false;
       let symbolsLoading = false;
       let holdingPx = {};
       let returnsFetching = false;
@@ -3121,6 +3145,40 @@
               "",
             )}</section><div class="section-head"><h2>Watchlist</h2><button onclick="page('watchlist')">Manage →</button></div><div class="rows">${watchPreview()}</div></div>${marketMoodPanel()}</div>`;
       }
+      function closeSearch() {
+        const box = document.getElementById("searchResults");
+        if (box) { box.hidden = true; box.innerHTML = ""; }
+      }
+      function onGlobalSearch(q) {
+        loadSymbolMap();
+        const box = document.getElementById("searchResults");
+        if (!box) return;
+        const query = (q || "").trim().toUpperCase();
+        if (!query) { box.hidden = true; box.innerHTML = ""; return; }
+        if (!nseSymbols) { box.hidden = false; box.innerHTML = '<div class="search-empty">Loading stock list…</div>'; return; }
+        const matches = [];
+        for (const sym in nseSymbols) {
+          const name = (nseSymbols[sym].n || "").toUpperCase();
+          let rank = -1;
+          if (sym === query) rank = 0;
+          else if (sym.startsWith(query)) rank = 1;
+          else if (sym.includes(query)) rank = 2;
+          else if (name.includes(query)) rank = 3;
+          if (rank >= 0) matches.push({ sym, name: nseSymbols[sym].n, rank });
+        }
+        matches.sort((a, b) => a.rank - b.rank || a.sym.localeCompare(b.sym));
+        const top = matches.slice(0, 10);
+        box.innerHTML = top.length
+          ? top.map((m) => `<button class="search-item" onmousedown="event.preventDefault()" onclick="openSearchResult('${m.sym}')"><b>${m.sym}</b><small>${escapeHTML((m.name || "").slice(0, 34))}</small></button>`).join("") + (matches.length > top.length ? `<div class="search-more">${matches.length - top.length} more — keep typing</div>` : "")
+          : `<div class="search-empty">No NSE stock matches “${escapeHTML(q)}”.</div>`;
+        box.hidden = false;
+      }
+      function openSearchResult(sym) {
+        closeSearch();
+        const inp = document.getElementById("globalSearch");
+        if (inp) inp.value = "";
+        detail(sym);
+      }
       function detail(symbol) {
         const saved = list.find((item) => item.s === symbol);
         const x = S.find((item) => item[0] === symbol) || [
@@ -3139,6 +3197,135 @@
           .querySelectorAll("[data-page]")
           .forEach((b) => b.classList.remove("active"));
         mobileMenu.classList.remove("open");
+        enrichDetail(symbol);
+      }
+      let detailPrice = {};
+      async function loadFundamentals() {
+        if (fundamentals || fundamentalsLoading) return fundamentals;
+        fundamentalsLoading = true;
+        try {
+          const r = await fetch(`${DATA_ROOT}/fundamentals.json`, { cache: "no-store" });
+          if (r.ok) fundamentals = await r.json();
+        } catch {}
+        fundamentalsLoading = false;
+        return fundamentals;
+      }
+      function fundamentalsCard(sym) {
+        const f = fundamentals && fundamentals.symbols && fundamentals.symbols[sym];
+        if (!f) {
+          const cells = [["EPS (TTM)", "—"], ["EPS YoY", "—"], ["Sales YoY", "—"], ["Profit YoY", "—"], ["ROE", "—"], ["P / E", "—"]];
+          return `<div class="fund-grid">${cells.map((c) => `<div class="fund-cell"><small>${c[0]}</small><b>${c[1]}</b></div>`).join("")}</div><p class="muted" style="margin-top:12px;font-size:12px">Fundamentals are scraped from screener.in for the top breakout stocks after each scan. ${escapeHTML(sym)} isn't in the latest set${fundamentals ? "." : " (loading…)."}</p>`;
+        }
+        const g = (v) => (v == null ? "—" : `${v >= 0 ? "+" : ""}${v}%`);
+        const cls = (v) => (v == null ? "" : v >= 0 ? "up" : "down");
+        const latestEps = f.epsGrowth && f.epsGrowth.length ? f.epsGrowth[f.epsGrowth.length - 1].yoy : null;
+        const cells = [
+          ["EPS (TTM)", f.ttmEps != null ? f.ttmEps : f.eps != null ? f.eps : "—"],
+          ["EPS YoY", `<span class="${cls(latestEps)}">${g(latestEps)}</span>`],
+          ["Sales YoY", `<span class="${cls(f.salesGrowthYoY)}">${g(f.salesGrowthYoY)}</span>`],
+          ["Profit YoY", `<span class="${cls(f.profitGrowthYoY)}">${g(f.profitGrowthYoY)}</span>`],
+          ["ROE", f.roe != null ? f.roe + "%" : "—"],
+          ["P / E", f.pe != null ? f.pe : "—"],
+        ];
+        const trend = f.epsGrowth && f.epsGrowth.length ? f.epsGrowth.map((e) => `${escapeHTML(e.q)}: <b class="${e.yoy >= 0 ? "up" : "down"}">${e.yoy >= 0 ? "+" : ""}${e.yoy}%</b>`).join(" · ") : "";
+        return `<div class="fund-grid">${cells.map((c) => `<div class="fund-cell"><small>${c[0]}</small><b>${c[1]}</b></div>`).join("")}</div>`
+          + (trend ? `<p class="muted" style="margin-top:12px;font-size:12.5px"><b>EPS YoY by quarter</b> — ${trend}</p>` : "")
+          + `<div class="strat-flags" style="margin-top:10px"><span class="flag ${f.growthQualified === "No" ? "off" : ""}">Growth qualified: ${escapeHTML(f.growthQualified || "—")}</span></div>`
+          + `<p class="muted" style="margin-top:10px;font-size:11px">Source: screener.in${f.latestQuarter ? ` · latest ${escapeHTML(f.latestQuarter)}` : ""}. Educational — verify before acting.</p>`;
+      }
+      function analyzeStock(rows) {
+        const closes = rows.map((r) => r.c), vols = rows.map((r) => r.v), n = closes.length;
+        const close = closes[n - 1], prev = closes[n - 2] ?? close;
+        const changePct = prev ? (close / prev - 1) * 100 : 0;
+        const sma = (p) => (n >= p ? closes.slice(-p).reduce((a, b) => a + b, 0) / p : null);
+        const sma20 = sma(20), sma50 = sma(50), sma150 = sma(150), sma200 = sma(200);
+        const sma50Past = n > 60 ? closes.slice(-60, -10).reduce((a, b) => a + b, 0) / 50 : null;
+        const rising = sma50Past != null && sma50 != null && sma50 > sma50Past;
+        const win = closes.slice(-252), hi252 = Math.max(...win), lo252 = Math.min(...win);
+        const pctFromHigh = hi252 ? (close / hi252 - 1) * 100 : 0;
+        const prior20High = Math.max(...rows.slice(-21, -1).map((r) => r.h));
+        const breakout20 = close > prior20High;
+        const avgVol20 = n > 21 ? vols.slice(-21, -1).reduce((a, b) => a + b, 0) / 20 : 0;
+        const rvol = avgVol20 ? vols[n - 1] / avgVol20 : 0;
+        let g = 0, l = 0;
+        for (let i = Math.max(1, n - 14); i < n; i++) { const d = closes[i] - closes[i - 1]; if (d > 0) g += d; else l -= d; }
+        const rsi = l === 0 ? 100 : 100 - 100 / (1 + (g / 14) / (l / 14));
+        const rules = [close > sma150 && close > sma200, sma150 > sma200, rising, sma50 > sma150 && sma50 > sma200, close > sma50, lo252 > 0 && close >= lo252 * 1.3, hi252 > 0 && close >= hi252 * 0.75];
+        const trendScore = rules.filter(Boolean).length;
+        const stage2 = close > sma50 && sma50 > sma150 && sma150 > sma200 && rising;
+        return { close, changePct, asOf: rows[n - 1].date, sma20, sma50, sma150, sma200, rising, hi252, lo252, pctFromHigh, breakout20, rvol, rsi, trendScore, stage2 };
+      }
+      function techCard(t) {
+        const flags = [
+          ["Above 50 & 200-DMA", t.sma50 != null && t.sma200 != null && t.close > t.sma50 && t.close > t.sma200],
+          ["Stage 2 uptrend", t.stage2],
+          ["20-day breakout", t.breakout20],
+          ["Near 52-wk high", t.pctFromHigh >= -8],
+          ["Volume surge", t.rvol >= 1.5],
+          ["RSI 55–72", t.rsi >= 55 && t.rsi <= 72],
+          [`Trend ${t.trendScore}/7`, t.trendScore >= 6],
+        ];
+        const summary = t.stage2 ? "Stage 2 advancing — a valid uptrend base for breakout strategies." : t.sma200 != null && t.close > t.sma200 ? "Above the 200-DMA — constructive; wait for a clean base and breakout." : "Below the 200-DMA — not a confirmed uptrend; avoid breakout longs.";
+        const rowsHtml = [
+          ["Close vs 20-DMA", t.sma20 != null ? `${t.close >= t.sma20 ? "above" : "below"} · ${inrRound(t.sma20)}` : "—"],
+          ["Close vs 50-DMA", t.sma50 != null ? `${t.close >= t.sma50 ? "above" : "below"} · ${inrRound(t.sma50)}` : "—"],
+          ["Close vs 200-DMA", t.sma200 != null ? `${t.close >= t.sma200 ? "above" : "below"} · ${inrRound(t.sma200)}` : "—"],
+          ["From 52-wk high", `${t.pctFromHigh >= 0 ? "+" : ""}${t.pctFromHigh.toFixed(1)}%`],
+          ["RSI (14)", Math.round(t.rsi)],
+          ["Relative volume", t.rvol ? `${t.rvol.toFixed(2)}×` : "—"],
+        ].map((r) => `<div><span>${r[0]}</span><b>${r[1]}</b></div>`).join("");
+        return `<p style="margin:0 0 4px">${summary}</p><div class="strat-flags">${flags.map((f) => `<span class="flag ${f[1] ? "" : "off"}">${f[1] ? "✓" : "·"} ${f[0]}</span>`).join("")}</div><div class="quality-list" style="margin-top:14px">${rowsHtml}</div>`;
+      }
+      function scannerDetailCard(sig) {
+        const p = sig.sepa || {};
+        const patterns = (sig.patterns || []).map((x) => `<span class="flag">${escapeHTML(String(x))}</span>`).join("") || '<span class="muted">—</span>';
+        return `<section class="card"><div class="section-head"><h2>Scanner setup · Grade ${escapeHTML(sig.grade || "—")}</h2><span class="muted">Confidence ${sig.confidence ?? "—"}</span></div><div class="strat-flags">${patterns}</div><div class="quality-list" style="margin-top:14px"><div><span>State</span><b>${escapeHTML(sig.state || "—")}</b></div><div><span>Trend template</span><b>${p.trendScore ?? "—"} / 8</b></div><div><span>RS rating</span><b>${p.rsRating ?? "—"}</b></div><div><span>Stage</span><b>${escapeHTML(p.stageName || "—")}</b></div><div><span>Entry / Stop / Target</span><b>${sig.entryTrigger ? inrRound(sig.entryTrigger) : "—"} / ${sig.stop ? inrRound(sig.stop) : "—"} / ${sig.target2R ? inrRound(sig.target2R) : "—"}</b></div></div></section>`;
+      }
+      function addReturnFromDetail(sym) {
+        page("returns");
+        setTimeout(() => { const s = document.getElementById("hSymbol"); if (s) s.value = sym; const q = document.getElementById("hQty"); if (q) q.focus(); }, 80);
+      }
+      async function enrichDetail(symbol) {
+        const sym = String(symbol || "").toUpperCase();
+        const sig = scanFeed && Array.isArray(scanFeed.signals) ? scanFeed.signals.find((s) => s.symbol === sym) : null;
+        let info = nseSymbols && nseSymbols[sym];
+        const name = (info && info.n) || sig?.name || list.find((i) => i.s === sym)?.n || sym;
+        const watched = list.some((item) => item.s === sym);
+        const safeName = escapeHTML(name).replace(/['\\]/g, "");
+        app.innerHTML =
+          `<div class="title"><div><small>STOCK</small><h1>${escapeHTML(sym)}</h1><span class="muted">${escapeHTML(name)}</span></div><button class="mini" onclick="page('overview')">← Back</button></div>` +
+          `<section class="card"><div style="display:flex;justify-content:space-between;align-items:flex-start;gap:14px;flex-wrap:wrap"><div><div class="detail-price" id="dPrice">₹—</div><div id="dChange" class="muted">Fetching live end-of-day price…</div><small class="muted" id="dAsOf"></small></div><div class="detail-actions"><button class="btn" id="dPaper" onclick="prefillPaper('${sym}','')">Paper buy</button> <button class="mini" onclick="addReturnFromDetail('${sym}')">Log to Returns</button> <button class="mini" onclick="${watched ? `removeBySymbol('${sym}')` : `quickAdd('${sym}','${safeName}')`}">${watched ? "Remove from watchlist" : "Add to watchlist"}</button></div></div></section>` +
+          `<div class="overview-grid"><section class="card"><small>TECHNICAL READ &amp; STRATEGIES</small><div id="dTech" style="margin-top:8px"><p class="muted">Analysing price structure…</p></div></section><section class="card"><small>FUNDAMENTALS</small><div id="dFund" style="margin-top:8px">${fundamentalsCard(sym)}</div></section></div>` +
+          (sig ? scannerDetailCard(sig) : "") +
+          stockNewsFor(sym);
+        loadFundamentals().then(() => { const fe = document.getElementById("dFund"); if (fe) fe.innerHTML = fundamentalsCard(sym); });
+        if (!info && !symbolsLoading) { await loadSymbolMap(); info = nseSymbols && nseSymbols[sym]; }
+        const key = (info && info.k) || sig?.instrumentKey;
+        const techEl = () => document.getElementById("dTech");
+        if (!key) {
+          const c = document.getElementById("dChange"); if (c) c.textContent = "Live price unavailable for this symbol.";
+          if (techEl()) techEl().innerHTML = '<p class="muted">No price key available for this symbol.</p>';
+          return;
+        }
+        try {
+          const from = new Date(); from.setUTCDate(from.getUTCDate() - 420);
+          const url = `https://api.upstox.com/v3/historical-candle/${encodeURIComponent(key)}/days/1/${isoDay(new Date())}/${isoDay(from)}`;
+          const r = await fetch(url, { headers: { Accept: "application/json" } });
+          if (!r.ok) throw new Error("price " + r.status);
+          const b = await r.json();
+          const rows = (b.data?.candles || []).map((c) => ({ date: String(c[0]).slice(0, 10), o: +c[1], h: +c[2], l: +c[3], c: +c[4], v: +c[5] })).filter((x) => Number.isFinite(x.c)).sort((a, b) => a.date.localeCompare(b.date));
+          if (!rows.length) throw new Error("no data");
+          const t = analyzeStock(rows);
+          detailPrice[sym] = t.close;
+          const pEl = document.getElementById("dPrice"); if (pEl) pEl.textContent = inrRound(t.close);
+          const cEl = document.getElementById("dChange"); if (cEl) { cEl.textContent = `${t.changePct >= 0 ? "+" : ""}${t.changePct.toFixed(2)}% on the day`; cEl.className = t.changePct >= 0 ? "up" : "down"; }
+          const aEl = document.getElementById("dAsOf"); if (aEl) aEl.textContent = "NSE · EOD close " + t.asOf;
+          const paper = document.getElementById("dPaper"); if (paper) paper.setAttribute("onclick", `prefillPaper('${sym}','${t.close}')`);
+          if (techEl()) techEl().innerHTML = techCard(t);
+        } catch (e) {
+          const c = document.getElementById("dChange"); if (c) c.textContent = "Live price unavailable.";
+          if (techEl()) techEl().innerHTML = '<p class="muted">Could not load price data for this stock.</p>';
+        }
       }
       function prefillPaper(symbol, price) {
         page("paper");
