@@ -1,17 +1,47 @@
 {
   "status": "live",
   "method": "rss-deterministic",
-  "generatedAt": "2026-09-14T15:53:35.245Z",
+  "generatedAt": "2026-09-15T08:41:30.311Z",
   "model": null,
-  "marketMood": "Mixed headline tone",
-  "marketSummary": "14 market and stock updates from Indian financial media in the last few sessions; 0 flagged essential for swing traders (4 positive, 4 negative). Headline sentiment is a first read — confirm with price and volume.",
+  "marketMood": "Constructive headline tone",
+  "marketSummary": "14 market and stock updates from Indian financial media in the last few sessions; 4 flagged essential for swing traders (5 positive, 2 negative). Headline sentiment is a first read — confirm with price and volume.",
   "dailyFocus": "Trade the reaction, not the headline: wait for price to clear the pivot on above-average volume, and size every entry with a defined stop.",
   "sectors": [
     {
-      "name": "Energy & oil",
+      "name": "Banking & financials",
       "momentum": "Leading",
       "score": 86,
-      "reason": "5 recent headlines in the feed window (3 positive, 1 negative).",
+      "reason": "4 recent headlines in the feed window (2 positive, 0 negative).",
+      "catalysts": [
+        "Recent news flow"
+      ],
+      "risks": [
+        "Headline risk",
+        "Confirm with price and volume"
+      ],
+      "relatedStocks": []
+    },
+    {
+      "name": "Energy & oil",
+      "momentum": "Weakening",
+      "score": 47,
+      "reason": "3 recent headlines in the feed window (0 positive, 1 negative).",
+      "catalysts": [
+        "Recent news flow"
+      ],
+      "risks": [
+        "Headline risk",
+        "Confirm with price and volume"
+      ],
+      "relatedStocks": [
+        "HAL"
+      ]
+    },
+    {
+      "name": "Auto",
+      "momentum": "Improving",
+      "score": 68,
+      "reason": "2 recent headlines in the feed window (1 positive, 0 negative).",
       "catalysts": [
         "Recent news flow"
       ],
@@ -23,9 +53,9 @@
     },
     {
       "name": "IT services",
-      "momentum": "Weakening",
-      "score": 50,
-      "reason": "4 recent headlines in the feed window (0 positive, 1 negative).",
+      "momentum": "Mixed",
+      "score": 56,
+      "reason": "2 recent headlines in the feed window (0 positive, 0 negative).",
       "catalysts": [
         "Recent news flow"
       ],
@@ -37,9 +67,9 @@
     },
     {
       "name": "Defence & aerospace",
-      "momentum": "Mixed",
-      "score": 53,
-      "reason": "1 recent headline in the feed window (0 positive, 0 negative).",
+      "momentum": "Weakening",
+      "score": 41,
+      "reason": "1 recent headline in the feed window (0 positive, 1 negative).",
       "catalysts": [
         "Recent news flow"
       ],
@@ -51,36 +81,6 @@
         "HAL",
         "BEL",
         "COCHINSHIP"
-      ]
-    },
-    {
-      "name": "Banking & financials",
-      "momentum": "Mixed",
-      "score": 53,
-      "reason": "1 recent headline in the feed window (0 positive, 0 negative).",
-      "catalysts": [
-        "Recent news flow"
-      ],
-      "risks": [
-        "Headline risk",
-        "Confirm with price and volume"
-      ],
-      "relatedStocks": []
-    },
-    {
-      "name": "Consumer & retail",
-      "momentum": "Mixed",
-      "score": 53,
-      "reason": "1 recent headline in the feed window (0 positive, 0 negative).",
-      "catalysts": [
-        "Recent news flow"
-      ],
-      "risks": [
-        "Headline risk",
-        "Confirm with price and volume"
-      ],
-      "relatedStocks": [
-        "TRENT"
       ]
     },
     {
@@ -101,258 +101,258 @@
   ],
   "news": [
     {
-      "category": "market",
-      "symbol": "NIFTY",
-      "headline": "Nifty may reach 26,200 by December 2026 as earnings cuts, market risks ease: BofA Securities",
-      "summary": "The brokerage said five of the eight risks it had identified as drivers of market volatility have either materialised or been absorbed by markets",
+      "category": "stock",
+      "symbol": "HAL",
+      "headline": "Shriram Finance, Hindustan Aeronautics, Siemens Energy shares fall nearly 4%, among top Nifty 100 laggards",
+      "summary": "Shares of Shriram Finance, Hindustan Aeronautics Limited, and Siemens Energy India Limited lagged in Tuesday's trading session due to profit booking and weak market sentiment.",
       "sentiment": "Negative",
-      "importance": "Medium",
+      "importance": "High",
       "catalystType": "Earnings",
       "timeHorizon": "Today",
       "impact": "Earnings-driven move — expect a volatility expansion; confirm with volume before acting on the base.",
-      "sourceName": "Hindu BusinessLine Markets",
-      "sourceUrl": "https://www.thehindubusinessline.com/markets/nifty-may-reach-26200-by-december-2026-as-earnings-cuts-market-risks-ease-bofa-securities/article71465945.ece",
-      "publishedAt": "2026-09-14T11:33:47.000Z"
+      "sourceName": "LiveMint Markets",
+      "sourceUrl": "https://www.livemint.com/market/stock-market-news/shriram-finance-hindustan-aeronautics-siemens-energy-shares-fall-nearly-4-among-top-nifty-100-laggards-11789459288755.html",
+      "publishedAt": "2026-09-15T08:09:01.000Z"
     },
     {
       "category": "stock",
       "symbol": "NSE",
-      "headline": "Gold Falls as Traders Eye Impact of Higher Oil on Fed Rate Path",
-      "summary": "Gold fell as continued disruptions to oil supplies from the Middle East reinforced bets on a series of Federal Reserve rate hikes this year.",
+      "headline": "NSE IPO jackpot: 10 PSUs could pocket Rs 12,802 crore from stake sale",
+      "summary": "NSE’s IPO could deliver a massive windfall to 10 public-sector shareholders, which together could make a profit of around Rs 12,802 crore by selling their shares at the upper price band of Rs 1,785. State Bank of India stands to gain the most, with a potential profit of nearly Rs 2,849 crore, follow",
+      "sentiment": "Positive",
+      "importance": "High",
+      "catalystType": "Earnings",
+      "timeHorizon": "Today",
+      "impact": "Earnings-driven move — expect a volatility expansion; confirm with volume before acting on the base.",
+      "sourceName": "Economic Times Markets",
+      "sourceUrl": "https://economictimes.indiatimes.com/markets/ipos/fpos/nse-ipo-jackpot-10-psus-could-pocket-rs-12802-crore-from-stake-sale/articleshow/134255369.cms",
+      "publishedAt": "2026-09-15T07:35:56.000Z"
+    },
+    {
+      "category": "stock",
+      "symbol": "NSE",
+      "headline": "NSE IPO set to open on September 17; GMP signals 11% listing gain",
+      "summary": "The Rs 22,561.57-crore NSE IPO is set to open for subscription on September 17 and close on September 21, with the issue currently commanding an 11% grey-market premium, signalling strong investor interest. The IPO is entirely an OFS of 12.64 crore shares, with proceeds going to existing shareholder",
+      "sentiment": "Positive",
+      "importance": "High",
+      "catalystType": "Block deal",
+      "timeHorizon": "Today",
+      "impact": "Ownership/supply change — watch the price reaction near support and resistance.",
+      "sourceName": "Economic Times Markets",
+      "sourceUrl": "https://economictimes.indiatimes.com/markets/ipos/fpos/nse-ipo-set-to-open-on-september-17-gmp-signals-11-listing-gain/articleshow/134254563.cms",
+      "publishedAt": "2026-09-15T06:56:17.000Z"
+    },
+    {
+      "category": "stock",
+      "symbol": "NSE",
+      "headline": "Hero Motors IPO: Can EV momentum offset muted revenue growth and capacity drag?",
+      "summary": "Hero Motors is betting on shift towards higher-value powertrain and EV components, ahead of its IPO opening this week.",
+      "sentiment": "Neutral",
+      "importance": "High",
+      "catalystType": "Earnings",
+      "timeHorizon": "Today",
+      "impact": "Earnings-driven move — expect a volatility expansion; confirm with volume before acting on the base.",
+      "sourceName": "LiveMint Markets",
+      "sourceUrl": "https://www.livemint.com/market/ipo/hero-motors-ipo-can-ev-momentum-offset-muted-revenue-growth-and-capacity-drag-11789447459741.html",
+      "publishedAt": "2026-09-15T06:42:56.000Z"
+    },
+    {
+      "category": "stock",
+      "symbol": "NSE",
+      "headline": "Coforge shares fall over 3%. What are Jefferies, Emkay saying after Chairman, independent director exit?",
+      "summary": "Coforge shares fell after independent director and NRC chairperson DK Singh resigned, days after chairman OP Bhatt stepped down, raising concerns over the board changes. However, the company reiterated its FY27 guidance, retaining its targets of 20.5–21% consolidated EBITDA margin.",
       "sentiment": "Negative",
+      "importance": "Medium",
+      "catalystType": "Guidance",
+      "timeHorizon": "Today",
+      "impact": "Guidance/capex news reframes the trend; confirm it with price structure, not the headline.",
+      "sourceName": "Economic Times Markets",
+      "sourceUrl": "https://economictimes.indiatimes.com/markets/stocks/news/coforge-shares-fall-over-3-what-are-jefferies-emkay-saying-after-chairman-independent-director-exit/articleshow/134256354.cms",
+      "publishedAt": "2026-09-15T08:25:27.000Z"
+    },
+    {
+      "category": "market",
+      "symbol": "NIFTY",
+      "headline": "Sensex today | Stock Market Live: Sensex down over 300 pts, Nifty slips below 23,280 as Crude, Fed fears drag markets into red",
+      "summary": "Sensex, Nifty, Share Prices Live Updates: Markets reversed their morning gains by midday on Tuesday. At 1.30 pm, Sensex fell 305.03 pts or 0.41% to 74,476.73. Nifty 50 declined 119.35 pts or 0.51% to 23,278.75.",
+      "sentiment": "Positive",
       "importance": "Medium",
       "catalystType": "Other",
       "timeHorizon": "Today",
       "impact": "Review the source and the price/volume reaction before acting.",
-      "sourceName": "LiveMint Markets",
-      "sourceUrl": "https://www.livemint.com/market/gold-falls-as-traders-eye-impact-of-higher-oil-on-fed-rate-path-11789381368276.html",
-      "publishedAt": "2026-09-14T10:22:47.000Z"
+      "sourceName": "Hindu BusinessLine Markets",
+      "sourceUrl": "https://www.thehindubusinessline.com/markets/sensex-nifty50-today-stock-market-live-updates-15th-september-2026/article71466165.ece",
+      "publishedAt": "2026-09-15T08:09:34.000Z"
+    },
+    {
+      "category": "market",
+      "symbol": "NSE",
+      "headline": "From borrowed rules to a bespoke rulebook: Can IFSCA create an international market conduct regime?",
+      "summary": "The IFSCA announced on August 25, 2026, the implementation of new market abuse regulations, which will replace existing SEBI guidelines for the GIFT-IFSC securities market. These regulations are designed to comprehensively combat insider trading and manipulation, employing international language and",
+      "sentiment": "Neutral",
+      "importance": "Medium",
+      "catalystType": "Regulatory",
+      "timeHorizon": "Today",
+      "impact": "Policy/regulatory catalyst — can reprice the whole group; check breadth first.",
+      "sourceName": "Economic Times Markets",
+      "sourceUrl": "https://economictimes.indiatimes.com/markets/stocks/news/from-borrowed-rules-to-a-bespoke-rulebook-can-ifsca-create-an-international-market-conduct-regime/articleshow/134255601.cms",
+      "publishedAt": "2026-09-15T07:49:04.000Z"
     },
     {
       "category": "stock",
       "symbol": "NSE",
-      "headline": "Will Wall Street crash today? Nasdaq futures tumble nearly 2% as AI stocks plunge",
-      "summary": "Nasdaq futures fell as OpenAI and Anthropic leaders urged slower AI development for safety. Investor Michael Burry criticized these warnings, labeling them self-serving hype intended to maintain incumbent dominance, causing market anxiety regarding AI and chip stock valuations.",
-      "sentiment": "Negative",
+      "headline": "Broadening inflation, Fed prompts traders to ramp up October India rate hike bets",
+      "summary": "Traders are increasingly anticipating an October interest rate hike from the Reserve Bank of India, influenced by rising oil prices and expanding inflation. This potential adjustment is further compounded by an expected hike from the Federal Reserve, prompting analysts at Citi and Deutsche Bank to r",
+      "sentiment": "Neutral",
       "importance": "Medium",
       "catalystType": "Other",
       "timeHorizon": "Today",
       "impact": "Review the source and the price/volume reaction before acting.",
       "sourceName": "Economic Times Markets",
-      "sourceUrl": "https://economictimes.indiatimes.com/markets/us-stocks/wall-street-guide/will-wall-street-crash-today-nasdaq-futures-tumble-nearly-2-as-ai-stocks-plunge/articleshow/134238659.cms",
-      "publishedAt": "2026-09-14T10:12:46.000Z"
+      "sourceUrl": "https://economictimes.indiatimes.com/markets/stocks/news/broadening-inflation-fed-prompts-traders-to-ramp-up-october-india-rate-hike-bets/articleshow/134255510.cms",
+      "publishedAt": "2026-09-15T07:42:10.000Z"
     },
     {
       "category": "stock",
       "symbol": "NSE",
-      "headline": "Gold falls on growing Fed rate hike bets ahead of policy meeting",
-      "summary": "Spot gold down 0.9% at $4,308.24 per ounce by 0907 GMT; traders see 89% chance of US hike this week",
-      "sentiment": "Negative",
+      "headline": "Tata Chemicals lead Tata Group rally amid Tata Sons listing prospects",
+      "summary": "Tata Consultancy Services, Tata Chemicals, Tata Investment Corporation, TMPV, Tata Motors, Tata Elxsi and other Tata Group stocks traded in the green on Tuesday following the RBI decision",
+      "sentiment": "Positive",
       "importance": "Medium",
       "catalystType": "Regulatory",
       "timeHorizon": "Today",
       "impact": "Policy/regulatory catalyst — can reprice the whole group; check breadth first.",
       "sourceName": "Hindu BusinessLine Markets",
-      "sourceUrl": "https://www.thehindubusinessline.com/markets/gold/gold-slips-as-oil-rally-fans-rate-hike-bets-ahead-of-fed-meeting/article71465512.ece",
-      "publishedAt": "2026-09-14T10:00:00.000Z"
+      "sourceUrl": "https://www.thehindubusinessline.com/markets/tata-chemicals-lead-tata-group-rally-amid-tata-sons-listing-prospects/article71467121.ece",
+      "publishedAt": "2026-09-15T07:32:23.000Z"
+    },
+    {
+      "category": "market",
+      "symbol": "NIFTY",
+      "headline": "IT stocks couldn’t save Nifty as crude, Fed fears drag markets into red",
+      "summary": "Broad market breadth on the BSE confirmed the negative tone: of 4,513 stocks traded, 2,884 declined against 1,376 advances and 253 unchanged.",
+      "sentiment": "Neutral",
+      "importance": "Medium",
+      "catalystType": "Other",
+      "timeHorizon": "Today",
+      "impact": "Review the source and the price/volume reaction before acting.",
+      "sourceName": "Hindu BusinessLine Markets",
+      "sourceUrl": "https://www.thehindubusinessline.com/markets/stock-markets/it-stocks-couldnt-save-nifty-as-crude-fed-fears-drag-markets-into-red/article71467100.ece",
+      "publishedAt": "2026-09-15T07:16:23.000Z"
     },
     {
       "category": "sector",
       "symbol": "NSE",
-      "headline": "3,400% stock returns in 10 yrs; from ₹1 lakh to ₹35 lakh - Defence company announces business expansion in South Africa",
-      "summary": "Solar Industries India has announced the acquisition of Omnia Holdings, aiming to strengthen its global presence in explosives and agricultural solutions. This move follows a remarkable 3,400% increase in stock value over ten years, making it a potential hot deal for investors.",
+      "headline": "AU Small Finance Bank bolsters top deck with two senior hires",
+      "summary": "Anil Agarwal and Amol Padhye’s appointments aim to boost AU Small Finance Bank’s operational capabilities and risk management as it prepares to become a Universal Bank after recent regulatory approval.",
+      "sentiment": "Neutral",
+      "importance": "Medium",
+      "catalystType": "Regulatory",
+      "timeHorizon": "Today",
+      "impact": "Policy/regulatory catalyst — can reprice the whole group; check breadth first.",
+      "sourceName": "Hindu BusinessLine Markets",
+      "sourceUrl": "https://www.thehindubusinessline.com/markets/stock-markets/au-small-finance-bank-bolsters-top-deck-with-two-senior-hires/article71466997.ece",
+      "publishedAt": "2026-09-15T07:11:02.000Z"
+    },
+    {
+      "category": "stock",
+      "symbol": "NSE",
+      "headline": "ICICI Securities says buy this NBFC stock, sees 59% upside after an 80% jump in 6 months - Check target price",
+      "summary": "The NBFC stock, Aye Finance, which has delivered a solid return of more than 80% in the last six months, appears to be ready for a further rally due to a formidable presence in India’s mass-affluent lending market, according to the brokerage firm.",
+      "sentiment": "Positive",
+      "importance": "Medium",
+      "catalystType": "Rating change",
+      "timeHorizon": "Today",
+      "impact": "Analyst re-rating shifts sentiment; treat it as context, not a trigger.",
+      "sourceName": "LiveMint Markets",
+      "sourceUrl": "https://www.livemint.com/market/stock-market-news/icici-securities-says-buy-this-nbfc-stock-sees-59-upside-after-an-80-jump-in-6-months-check-target-price-11789453421587.html",
+      "publishedAt": "2026-09-15T06:56:55.000Z"
+    },
+    {
+      "category": "market",
+      "symbol": "NSE",
+      "headline": "Bond market turmoil puts Fed Rate decision under spotlight",
+      "summary": "A global bond market selloff has put the Federal Reserve’s rate decision under the spotlight, with investors weighing the risks of another hike against a pause. Persistent inflation, rising oil prices, fiscal deficits and elevated Treasury yields have heightened concerns over the term premium and th",
       "sentiment": "Neutral",
       "importance": "Medium",
       "catalystType": "Guidance",
       "timeHorizon": "Today",
       "impact": "Guidance/capex news reframes the trend; confirm it with price structure, not the headline.",
-      "sourceName": "LiveMint Markets",
-      "sourceUrl": "https://www.livemint.com/market/stock-market-news/3400-stock-returns-in-10-yrs-from-1-lakh-to-35-lakh-defence-company-announces-business-expansion-in-south-africa-11789376907765.html",
-      "publishedAt": "2026-09-14T09:56:51.000Z"
-    },
-    {
-      "category": "market",
-      "symbol": "NIFTY",
-      "headline": "BofA turns bullish on Nifty after 2 years, cautious on small, midcaps. Here's what it expects now",
-      "summary": "BofA Securities has turned constructive on the Nifty after two years, seeing 12% upside to 26,200 by December 2026. The brokerage said five of eight earlier risks have played out, while primary market issuances, Fed rate hikes and AI disruption remain concerns. It also turned cautious on small- and ",
-      "sentiment": "Neutral",
-      "importance": "Medium",
-      "catalystType": "Rating change",
-      "timeHorizon": "Today",
-      "impact": "Analyst re-rating shifts sentiment; treat it as context, not a trigger.",
       "sourceName": "Economic Times Markets",
-      "sourceUrl": "https://economictimes.indiatimes.com/markets/stocks/news/bofa-turns-bullish-on-nifty-after-2-years-cautious-on-small-midcaps-heres-what-it-expects-now/articleshow/134237764.cms",
-      "publishedAt": "2026-09-14T09:26:16.000Z"
+      "sourceUrl": "https://economictimes.indiatimes.com/markets/us-stocks/news/bond-market-turmoil-puts-fed-rate-decision-under-spotlight/articleshow/134254468.cms",
+      "publishedAt": "2026-09-15T06:51:04.000Z"
     },
     {
-      "category": "market",
+      "category": "stock",
       "symbol": "NSE",
-      "headline": "Global Market: Euronext, Deutsche Boerse shares rise on renewed merger talks",
-      "summary": "Euronext and Deutsche Boerse shares rose around 2% after Euronext CEO Stephane Boujnah said a potential combination could make strategic sense. His comments revived merger speculation between Europe’s two largest exchange groups, though no talks are currently underway.",
-      "sentiment": "Positive",
+      "headline": "Solar Industries shares crash 9% after acquisition of South Africa’s Omnia Holdings for Rs 12,951 crore",
+      "summary": "Solar Industries shares fell sharply on Tuesday after the company announced the Rs 12,951 crore acquisition of South Africa’s Omnia Holdings in an all-cash deal. The transaction, subject to regulatory and shareholder approvals, is expected to strengthen Solar’s global explosives and blasting busines",
+      "sentiment": "Neutral",
       "importance": "Medium",
       "catalystType": "Ownership",
       "timeHorizon": "Today",
       "impact": "M&A/stake change can reprice the name; wait for the structure to settle.",
       "sourceName": "Economic Times Markets",
-      "sourceUrl": "https://economictimes.indiatimes.com/markets/us-stocks/news/global-market-euronext-deutsche-boerse-shares-rise-on-renewed-merger-talks/articleshow/134237341.cms",
-      "publishedAt": "2026-09-14T09:04:12.000Z"
-    },
-    {
-      "category": "market",
-      "symbol": "NSE",
-      "headline": "Global Market | ECB may need more rate hikes as Iran war raises inflation risks: Kazaks",
-      "summary": "The European Central Bank may need to raise interest rates further to contain inflation as higher fuel costs linked to the Iran conflict risk feeding into wages and consumer prices. Policymaker Martins Kazaks said gradual tightening remains possible.",
-      "sentiment": "Neutral",
-      "importance": "Medium",
-      "catalystType": "Other",
-      "timeHorizon": "Today",
-      "impact": "Review the source and the price/volume reaction before acting.",
-      "sourceName": "Economic Times Markets",
-      "sourceUrl": "https://economictimes.indiatimes.com/markets/us-stocks/wall-street-guide/global-market-ecb-may-need-more-rate-hikes-as-iran-war-raises-inflation-risks-kazaks/articleshow/134237351.cms",
-      "publishedAt": "2026-09-14T09:03:06.000Z"
-    },
-    {
-      "category": "stock",
-      "symbol": "NSE",
-      "headline": "MSE facilitates its first tokenised corporate bond under SEBI’s Demat 2.0 pilot",
-      "summary": "Bond issued by IIFL Finance Ltd through MSE’s Electronic Bond Platform, with Trust Investment Advisors Pvt Ltd serving as arranger",
-      "sentiment": "Neutral",
-      "importance": "Medium",
-      "catalystType": "Regulatory",
-      "timeHorizon": "Today",
-      "impact": "Policy/regulatory catalyst — can reprice the whole group; check breadth first.",
-      "sourceName": "Hindu BusinessLine Markets",
-      "sourceUrl": "https://www.thehindubusinessline.com/markets/mse-facilitates-indias-first-tokenised-corporate-bond-under-sebis-demat-20-pilot/article71456088.ece",
-      "publishedAt": "2026-09-14T08:42:04.000Z"
-    },
-    {
-      "category": "market",
-      "symbol": "NSE",
-      "headline": "Global Market: European shares subdued as tech stocks slide, oil prices surge",
-      "summary": "European shares traded subdued as technology stocks slid on concerns over the pace of artificial intelligence development, while a sharp rise in oil prices weighed on risk appetite. Investors also turned their attention to the US Federal Reserve’s policy decision, with markets increasingly pricing i",
-      "sentiment": "Mixed",
-      "importance": "Medium",
-      "catalystType": "Regulatory",
-      "timeHorizon": "Today",
-      "impact": "Policy/regulatory catalyst — can reprice the whole group; check breadth first.",
-      "sourceName": "Economic Times Markets",
-      "sourceUrl": "https://economictimes.indiatimes.com/markets/us-stocks/news/global-market-european-shares-subdued-as-tech-stocks-slide-oil-prices-surge/articleshow/134236833.cms",
-      "publishedAt": "2026-09-14T08:28:18.000Z"
-    },
-    {
-      "category": "stock",
-      "symbol": "NSE",
-      "headline": "Gold, silver prices retreat as oil prices surge, inflation and rate-hike concerns mount",
-      "summary": "Gold and silver prices declined on September 14, 2026, as surging oil prices and expectations of a US Federal Reserve rate hike fueled inflation concerns. Concurrently, oil prices rose 4% due to supply fears amid Middle East tensions.",
-      "sentiment": "Positive",
-      "importance": "Low",
-      "catalystType": "Other",
-      "timeHorizon": "Today",
-      "impact": "Review the source and the price/volume reaction before acting.",
-      "sourceName": "Economic Times Markets",
-      "sourceUrl": "https://economictimes.indiatimes.com/markets/commodities/news/gold-silver-prices-retreat-as-oil-prices-surge-inflation-and-rate-hike-concerns-mount/articleshow/134243425.cms",
-      "publishedAt": "2026-09-14T15:07:07.000Z"
-    },
-    {
-      "category": "market",
-      "symbol": "NSE",
-      "headline": "Bond market shock: 10-year US Treasury yield tops 5% as oil spike puts Federal Reserve on rate-hike path",
-      "summary": "US bond yields climbed significantly on Monday, surpassing 5%. Crude oil prices jumped, reviving inflation concerns among investors. This surge pushed markets to anticipate another Federal Reserve interest rate hike. Resilient economic growth and government borrowing also contributed to rising yield",
-      "sentiment": "Positive",
-      "importance": "Low",
-      "catalystType": "Other",
-      "timeHorizon": "Today",
-      "impact": "Review the source and the price/volume reaction before acting.",
-      "sourceName": "Economic Times Markets",
-      "sourceUrl": "https://economictimes.indiatimes.com/markets/us-stocks/wall-street-guide/bond-market-shock-10-year-us-yield-tops-5-as-oil-at-108-puts-fed-on-rate-hike-path/articleshow/134242764.cms",
-      "publishedAt": "2026-09-14T14:15:07.000Z"
-    },
-    {
-      "category": "stock",
-      "symbol": "NSE",
-      "headline": "Oil surges on report Saudi pipeline will take weeks to reopen",
-      "summary": "Brent rises about 5% toward $110 a barrel, before paring gains slightly",
-      "sentiment": "Positive",
-      "importance": "Low",
-      "catalystType": "Other",
-      "timeHorizon": "Today",
-      "impact": "Review the source and the price/volume reaction before acting.",
-      "sourceName": "Hindu BusinessLine Markets",
-      "sourceUrl": "https://www.thehindubusinessline.com/markets/commodities/oil-surges-on-report-saudi-pipeline-will-take-weeks-to-reopen/article71466154.ece",
-      "publishedAt": "2026-09-14T14:00:49.000Z"
-    },
-    {
-      "category": "market",
-      "symbol": "NIFTY",
-      "headline": "Nifty 50 crashes over 10% YTD | Will it continue to bleed or green will be seen? Decoded",
-      "summary": "Last time when the Nifty 50 delivered negative return was way abck in 2015, when the 50-stock index gave 3% negative return",
-      "sentiment": "Neutral",
-      "importance": "Low",
-      "catalystType": "Other",
-      "timeHorizon": "Today",
-      "impact": "Review the source and the price/volume reaction before acting.",
-      "sourceName": "LiveMint Markets",
-      "sourceUrl": "https://www.livemint.com/market/stock-market-news/nifty-50-crashes-over-10-ytd-will-it-continue-to-bleed-or-green-will-be-seen-decoded-11789380725124.html",
-      "publishedAt": "2026-09-14T12:00:53.000Z"
+      "sourceUrl": "https://economictimes.indiatimes.com/markets/stocks/news/solar-industries-shares-crash-9-after-acquisition-of-south-africas-omnia-holdings-for-rs-12951-crore/articleshow/134254076.cms",
+      "publishedAt": "2026-09-15T06:27:15.000Z"
     }
   ],
   "sources": [
     {
-      "title": "Hindu BusinessLine Markets",
-      "url": "https://www.thehindubusinessline.com/markets/nifty-may-reach-26200-by-december-2026-as-earnings-cuts-market-risks-ease-bofa-securities/article71465945.ece"
+      "title": "LiveMint Markets",
+      "url": "https://www.livemint.com/market/stock-market-news/shriram-finance-hindustan-aeronautics-siemens-energy-shares-fall-nearly-4-among-top-nifty-100-laggards-11789459288755.html"
+    },
+    {
+      "title": "Economic Times Markets",
+      "url": "https://economictimes.indiatimes.com/markets/ipos/fpos/nse-ipo-jackpot-10-psus-could-pocket-rs-12802-crore-from-stake-sale/articleshow/134255369.cms"
+    },
+    {
+      "title": "Economic Times Markets",
+      "url": "https://economictimes.indiatimes.com/markets/ipos/fpos/nse-ipo-set-to-open-on-september-17-gmp-signals-11-listing-gain/articleshow/134254563.cms"
     },
     {
       "title": "LiveMint Markets",
-      "url": "https://www.livemint.com/market/gold-falls-as-traders-eye-impact-of-higher-oil-on-fed-rate-path-11789381368276.html"
+      "url": "https://www.livemint.com/market/ipo/hero-motors-ipo-can-ev-momentum-offset-muted-revenue-growth-and-capacity-drag-11789447459741.html"
     },
     {
       "title": "Economic Times Markets",
-      "url": "https://economictimes.indiatimes.com/markets/us-stocks/wall-street-guide/will-wall-street-crash-today-nasdaq-futures-tumble-nearly-2-as-ai-stocks-plunge/articleshow/134238659.cms"
+      "url": "https://economictimes.indiatimes.com/markets/stocks/news/coforge-shares-fall-over-3-what-are-jefferies-emkay-saying-after-chairman-independent-director-exit/articleshow/134256354.cms"
     },
     {
       "title": "Hindu BusinessLine Markets",
-      "url": "https://www.thehindubusinessline.com/markets/gold/gold-slips-as-oil-rally-fans-rate-hike-bets-ahead-of-fed-meeting/article71465512.ece"
+      "url": "https://www.thehindubusinessline.com/markets/sensex-nifty50-today-stock-market-live-updates-15th-september-2026/article71466165.ece"
+    },
+    {
+      "title": "Economic Times Markets",
+      "url": "https://economictimes.indiatimes.com/markets/stocks/news/from-borrowed-rules-to-a-bespoke-rulebook-can-ifsca-create-an-international-market-conduct-regime/articleshow/134255601.cms"
+    },
+    {
+      "title": "Economic Times Markets",
+      "url": "https://economictimes.indiatimes.com/markets/stocks/news/broadening-inflation-fed-prompts-traders-to-ramp-up-october-india-rate-hike-bets/articleshow/134255510.cms"
+    },
+    {
+      "title": "Hindu BusinessLine Markets",
+      "url": "https://www.thehindubusinessline.com/markets/tata-chemicals-lead-tata-group-rally-amid-tata-sons-listing-prospects/article71467121.ece"
+    },
+    {
+      "title": "Hindu BusinessLine Markets",
+      "url": "https://www.thehindubusinessline.com/markets/stock-markets/it-stocks-couldnt-save-nifty-as-crude-fed-fears-drag-markets-into-red/article71467100.ece"
+    },
+    {
+      "title": "Hindu BusinessLine Markets",
+      "url": "https://www.thehindubusinessline.com/markets/stock-markets/au-small-finance-bank-bolsters-top-deck-with-two-senior-hires/article71466997.ece"
     },
     {
       "title": "LiveMint Markets",
-      "url": "https://www.livemint.com/market/stock-market-news/3400-stock-returns-in-10-yrs-from-1-lakh-to-35-lakh-defence-company-announces-business-expansion-in-south-africa-11789376907765.html"
+      "url": "https://www.livemint.com/market/stock-market-news/icici-securities-says-buy-this-nbfc-stock-sees-59-upside-after-an-80-jump-in-6-months-check-target-price-11789453421587.html"
     },
     {
       "title": "Economic Times Markets",
-      "url": "https://economictimes.indiatimes.com/markets/stocks/news/bofa-turns-bullish-on-nifty-after-2-years-cautious-on-small-midcaps-heres-what-it-expects-now/articleshow/134237764.cms"
+      "url": "https://economictimes.indiatimes.com/markets/us-stocks/news/bond-market-turmoil-puts-fed-rate-decision-under-spotlight/articleshow/134254468.cms"
     },
     {
       "title": "Economic Times Markets",
-      "url": "https://economictimes.indiatimes.com/markets/us-stocks/news/global-market-euronext-deutsche-boerse-shares-rise-on-renewed-merger-talks/articleshow/134237341.cms"
-    },
-    {
-      "title": "Economic Times Markets",
-      "url": "https://economictimes.indiatimes.com/markets/us-stocks/wall-street-guide/global-market-ecb-may-need-more-rate-hikes-as-iran-war-raises-inflation-risks-kazaks/articleshow/134237351.cms"
-    },
-    {
-      "title": "Hindu BusinessLine Markets",
-      "url": "https://www.thehindubusinessline.com/markets/mse-facilitates-indias-first-tokenised-corporate-bond-under-sebis-demat-20-pilot/article71456088.ece"
-    },
-    {
-      "title": "Economic Times Markets",
-      "url": "https://economictimes.indiatimes.com/markets/us-stocks/news/global-market-european-shares-subdued-as-tech-stocks-slide-oil-prices-surge/articleshow/134236833.cms"
-    },
-    {
-      "title": "Economic Times Markets",
-      "url": "https://economictimes.indiatimes.com/markets/commodities/news/gold-silver-prices-retreat-as-oil-prices-surge-inflation-and-rate-hike-concerns-mount/articleshow/134243425.cms"
-    },
-    {
-      "title": "Economic Times Markets",
-      "url": "https://economictimes.indiatimes.com/markets/us-stocks/wall-street-guide/bond-market-shock-10-year-us-yield-tops-5-as-oil-at-108-puts-fed-on-rate-hike-path/articleshow/134242764.cms"
-    },
-    {
-      "title": "Hindu BusinessLine Markets",
-      "url": "https://www.thehindubusinessline.com/markets/commodities/oil-surges-on-report-saudi-pipeline-will-take-weeks-to-reopen/article71466154.ece"
-    },
-    {
-      "title": "LiveMint Markets",
-      "url": "https://www.livemint.com/market/stock-market-news/nifty-50-crashes-over-10-ytd-will-it-continue-to-bleed-or-green-will-be-seen-decoded-11789380725124.html"
+      "url": "https://economictimes.indiatimes.com/markets/stocks/news/solar-industries-shares-crash-9-after-acquisition-of-south-africas-omnia-holdings-for-rs-12951-crore/articleshow/134254076.cms"
     }
   ],
   "disclaimer": "AI-generated research summary. Verify source articles and exchange filings before making investment decisions. Not investment advice."
