@@ -3,8 +3,8 @@ name: Refresh fundamentals
 on:
   workflow_dispatch:
   schedule:
-    # Weekday evening, after the 19:30/20:05 IST scan commits its breakouts.
-    - cron: "10 15 * * 1-5"
+    # Daily, ~20:00 IST — after the ~7:30 PM scan commits its top breakouts.
+    - cron: "30 14 * * *"
 
 permissions:
   contents: write
