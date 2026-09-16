@@ -1,8 +1,8 @@
 {
   "status": "live",
-  "method": "rss-deterministic",
-  "generatedAt": "2026-09-16T08:36:00.466Z",
-  "model": null,
+  "method": "gemini-grounded",
+  "generatedAt": "2026-09-16T14:12:08.927Z",
+  "model": "gemini-3.8-flash",
   "marketDirection": {
     "direction": "Downtrend",
     "changePct": -1.19,
@@ -23,364 +23,233 @@
         "text": "Market breadth is cautious — 34.9% of scanned NSE stocks advancing, 37.5% above their 50-DMA."
       },
       {
-        "tag": "Earnings",
-        "text": "Earnings-driven move — expect a volatility expansion; confirm with volume before acting on the base."
+        "tag": "Macro/flows",
+        "text": "Oversold mean reversion provides intraday relief, but swing long additions should remain selective until index clears overhead supply at 23,400."
       },
       {
-        "tag": "Guidance",
-        "text": "Guidance/capex news reframes the trend; confirm it with price structure, not the headline."
+        "tag": "Block deal",
+        "text": "Heavy supply overhang and distribution volume invalidate short-term base structure; avoid long setups until accumulation evidence emerges."
       }
     ],
     "disclaimer": "A rules-based read of index price, market breadth and headline flow — not a forecast or trading advice."
   },
-  "marketMood": "Constructive headline tone",
-  "marketSummary": "14 market and stock updates from Indian financial media in the last few sessions; 6 flagged essential for swing traders (4 positive, 2 negative). Headline sentiment is a first read — confirm with price and volume.",
-  "dailyFocus": "Trade the reaction, not the headline: wait for price to clear the pivot on above-average volume, and size every entry with a defined stop.",
+  "marketMood": "Cautious Rebound",
+  "marketSummary": "Indian benchmark indices snapped a multi-session losing streak on September 16, 2026, with the Nifty 50 rising 0.53% to settle at 23,241.80 and the Sensex gaining 332 points to 74,336.45. The technical bounce arrived after Nifty tagged a five-month intraday low of 23,118.60 on Tuesday amid elevated crude prices and persistent FII outflows. Volatility contracted ahead of the US Federal Reserve's interest rate decision, with India VIX slipping 2.26% to 13.13. Sectoral performance saw strong leadership from Fintech following NPCI's UPI MDR policy notification, and Private Banks anchored by HDFC Bank's leadership succession clarity, while Defence and Heavy Industrials consolidated following recent valuation resets and large corporate transactions.",
+  "dailyFocus": "Swing setups are heavily bifurcated: avoid chasing extended breakdowns in high-multiple capital goods and defence names; prioritize tight base consolidations near key moving averages in fintech and select private banking leaders with fresh macro catalysts.",
   "sectors": [
     {
-      "name": "IT services",
+      "name": "Fintech & Digital Payments",
       "momentum": "Leading",
-      "score": 86,
-      "reason": "5 recent headlines in the feed window (2 positive, 0 negative).",
+      "score": 78,
+      "reason": "Regulatory tailwind from NPCI introducing merchant discount rates (MDR) on UPI P2M transactions above ₹2,000 expands top-line monetisation potential and triggered decisive multi-month breakouts on heavy turnover.",
       "catalysts": [
-        "Recent news flow"
+        "NPCI 0.4% UPI MDR framework effective October 15, 2026",
+        "Expanding merchant soundbox and cross-sell credit deployment"
       ],
       "risks": [
-        "Headline risk",
-        "Confirm with price and volume"
-      ],
-      "relatedStocks": []
-    },
-    {
-      "name": "Consumer & retail",
-      "momentum": "Leading",
-      "score": 71,
-      "reason": "3 recent headlines in the feed window (2 positive, 1 negative).",
-      "catalysts": [
-        "Recent news flow"
-      ],
-      "risks": [
-        "Headline risk",
-        "Confirm with price and volume"
+        "Merchant churn or pushback on payment processing fees",
+        "Potential RBI follow-up clarifications on interchange caps"
       ],
       "relatedStocks": [
-        "TRENT"
+        "PAYTM"
       ]
     },
     {
-      "name": "Energy & oil",
-      "momentum": "Weakening",
-      "score": 44,
-      "reason": "2 recent headlines in the feed window (0 positive, 1 negative).",
+      "name": "Power Equipment & Capital Goods",
+      "momentum": "Improving",
+      "score": 70,
+      "reason": "Benefiting from multi-year capex expansion in domestic grid transmission, transformer bottlenecks, and commercial execution of India Semiconductor Mission packaging units.",
       "catalysts": [
-        "Recent news flow"
+        "Commercial commissioning of new transformer capacities (e.g. Sehore 45,000 MVA expansion)",
+        "Upcoming SEMICON India global CEO roundtable"
       ],
       "risks": [
-        "Headline risk",
-        "Confirm with price and volume"
+        "High forward PE valuations limiting breakout follow-through",
+        "Raw material volatility in copper and CRGO electrical steel"
       ],
       "relatedStocks": [
         "CGPOWER"
       ]
     },
     {
-      "name": "Metals & mining",
-      "momentum": "Improving",
-      "score": 65,
-      "reason": "1 recent headline in the feed window (1 positive, 0 negative).",
+      "name": "Defence & Aerospace",
+      "momentum": "Mixed",
+      "score": 62,
+      "reason": "Long-term order backlogs remain rock-solid above 2.5x book-to-bill, but near-term momentum is stalling due to lower FY27 margin guidance from shipbuilders and profit booking following sharp year-to-date runs.",
       "catalysts": [
-        "Recent news flow"
+        "MoD Positive Indigenisation lists and fast-tracked platform deliveries",
+        "Sustained quarterly electronic subsystem orders from armed forces"
       ],
       "risks": [
-        "Headline risk",
-        "Confirm with price and volume"
+        "Shipyard execution delays and margin contraction from fixed-price contracts",
+        "Institutional distribution in Tier-1 defence PSUs"
       ],
-      "relatedStocks": []
+      "relatedStocks": [
+        "HAL",
+        "BEL",
+        "COCHINSHIP"
+      ]
     },
     {
-      "name": "Banking & financials",
-      "momentum": "Mixed",
-      "score": 53,
-      "reason": "1 recent headline in the feed window (0 positive, 0 negative).",
+      "name": "Retail & Apparel",
+      "momentum": "Weakening",
+      "score": 48,
+      "reason": "Pockets of solid volume expansion are overshadowed by decelerating same-store-sales growth and post-earnings valuation compression across apparel and retail flagships.",
       "catalysts": [
-        "Recent news flow"
+        "Footprint expansion milestones (Zudio crossing 1,000 stores)",
+        "Festive demand ramp-up heading into Q3"
       ],
       "risks": [
-        "Headline risk",
-        "Confirm with price and volume"
+        "Margin compression from competitive discounting",
+        "Consolidation below medium-term moving averages"
       ],
-      "relatedStocks": []
-    },
-    {
-      "name": "Pharma & healthcare",
-      "momentum": "Mixed",
-      "score": 53,
-      "reason": "1 recent headline in the feed window (0 positive, 0 negative).",
-      "catalysts": [
-        "Recent news flow"
-      ],
-      "risks": [
-        "Headline risk",
-        "Confirm with price and volume"
-      ],
-      "relatedStocks": []
+      "relatedStocks": [
+        "TRENT"
+      ]
     }
   ],
   "news": [
     {
-      "category": "stock",
-      "symbol": "NSE",
-      "headline": "Happy Forgings' order book muscle drives investor confidence",
-      "summary": "Happy Forgings saw a decent start to FY27. In the June quarter (Q1FY27), volumes grew 23% year-on-year, aiding the 27% revenue growth. The management expects domestic demand to be robust and exports momentum to improve as the year progresses. It expects high-teens volume growth in FY27.",
+      "category": "market",
+      "symbol": "NIFTY50",
+      "headline": "Nifty 50 Stages 120-Point Pullback Rebound to 23,240 as India VIX Cools Ahead of US Fed Verdict",
+      "summary": "Benchmark Nifty 50 snapped a three-day slide, closing 0.53% higher at 23,241.80 on September 16, 2026, recovering from Tuesday's five-month low of 23,118.60. Market breadth tilted positive with 37 Nifty advances, led by banking and FMCG, while India VIX dropped 2.26% to 13.13 as global traders positioned for the FOMC rate decision.",
       "sentiment": "Neutral",
       "importance": "High",
-      "catalystType": "Earnings",
+      "catalystType": "Macro/flows",
       "timeHorizon": "Today",
-      "impact": "Earnings-driven move — expect a volatility expansion; confirm with volume before acting on the base.",
-      "sourceName": "LiveMint Markets",
-      "sourceUrl": "https://www.livemint.com/market/mark-to-market/happy-forgings-stock-hits-52-week-high-order-book-margin-expansion-11789543359122.html",
-      "publishedAt": "2026-09-16T08:10:58.000Z"
+      "impact": "Oversold mean reversion provides intraday relief, but swing long additions should remain selective until index clears overhead supply at 23,400.",
+      "sourceName": "NDTV Profit",
+      "sourceUrl": "https://www.ndtvprofit.com/markets/nifty-rises-sensex-jumps-over-400-points-three-reasons-why-stock-market-is-rising-september-16-2026",
+      "publishedAt": "2026-09-16T11:00:00Z"
+    },
+    {
+      "category": "stock",
+      "symbol": "BGV",
+      "headline": "Peak XV and Sequoia Capital Sell 1.69% Stake in Billionbrains Garage Ventures in ₹1,999 Cr Block Deal",
+      "summary": "Peak XV Partners and Sequoia Capital offloaded 10.41 crore shares (1.69% equity) worth ~₹1,999 crore in Billionbrains Garage Ventures (parent of Groww) on September 16, 2026. The counter slid 4.65% to ₹188.40 on the NSE as block volumes surged to 15.28 crore shares, creating sharp immediate market supply.",
+      "sentiment": "Negative",
+      "importance": "High",
+      "catalystType": "Block deal",
+      "timeHorizon": "Today",
+      "impact": "Heavy supply overhang and distribution volume invalidate short-term base structure; avoid long setups until accumulation evidence emerges.",
+      "sourceName": "Upstox",
+      "sourceUrl": "https://upstox.com/news/market-news/stocks/nifty50-sensex-today-16-september-2026",
+      "publishedAt": "2026-09-16T10:00:00Z"
+    },
+    {
+      "category": "stock",
+      "symbol": "PAYTM",
+      "headline": "NPCI Introduces 0.4% UPI MDR on Merchant Payments Above ₹2,000 Starting October 15",
+      "summary": "Fintech counters surged on September 16 after the National Payments Corporation of India (NPCI) notified a Merchant Discount Rate (MDR) of up to 0.4% on UPI merchant (P2M) transactions exceeding ₹2,000, effective October 15, 2026. Shares of One97 Communications jumped over 7% intraday to print a fresh 52-week high of ₹1,856.50 on heavy exchange volume.",
+      "sentiment": "Positive",
+      "importance": "High",
+      "catalystType": "Regulatory",
+      "timeHorizon": "This week",
+      "impact": "Decisive multi-month high breakout on surging volume triggers momentum continuation; watch for orderly base pullbacks toward ₹1,800 for swing entries.",
+      "sourceName": "The Times of India",
+      "sourceUrl": "https://timesofindia.indiatimes.com/business/india-business/stock-market-live-updates-today-sensex-nifty-paytm-up-16-september-2026",
+      "publishedAt": "2026-09-16T08:52:00Z"
+    },
+    {
+      "category": "stock",
+      "symbol": "BEL",
+      "headline": "BEL Backlog Anchored at 2.6x Revenue as Follow-On Domestic Electronic Contracts Mount",
+      "summary": "Bharat Electronics continues to absorb strong contract flow following its late-August ₹730 crore order intake and a newly disclosed ₹585.76 crore sub-contract from Data Patterns for radar electronics. Jefferies and Motilal Oswal reiterated bullish coverage with target valuations pegged at 45x forward EPS, citing domestic defence electronics content visibility.",
+      "sentiment": "Positive",
+      "importance": "High",
+      "catalystType": "Order win",
+      "timeHorizon": "This week",
+      "impact": "Pullback into the ₹380-₹390 range tests the lower boundary of its multi-week consolidation box; look for an inside-day pivot for entry.",
+      "sourceName": "Mint",
+      "sourceUrl": "https://www.livemint.com/market/stock-market-news/solar-industries-bharat-electronics-and-cg-power-shares-fall-up-to-10-today-what-s-driving-the-sell-off-11726388421045.html",
+      "publishedAt": "2026-09-15T09:39:00Z"
+    },
+    {
+      "category": "stock",
+      "symbol": "HAL",
+      "headline": "HAL Set to Hand Over Three Aviation Platforms to Defence Ministry Amid Production Ramp-Up",
+      "summary": "Hindustan Aeronautics Limited is scheduled to deliver three major indigenous aviation platforms to the Centre during the current week of September 15-18, 2026, advancing domestic pilot training and light utility capabilities. The handover reinforces execution velocity against HAL's multi-year order book exceeding ₹2.5 lakh crore.",
+      "sentiment": "Positive",
+      "importance": "High",
+      "catalystType": "Order win",
+      "timeHorizon": "This week",
+      "impact": "Delivery milestones reinforce price stability above the ₹4,850 support shelf, keeping continuation setups toward previous highs technically intact.",
+      "sourceName": "The Week",
+      "sourceUrl": "https://www.theweek.in/news/defence/2026/09/15/hal-to-hand-over-three-major-aviation-platforms-to-the-centre-this-week.html",
+      "publishedAt": "2026-09-15T08:29:00Z"
+    },
+    {
+      "category": "stock",
+      "symbol": "COCHINSHIP",
+      "headline": "Cochin Shipyard Moderates FY27 Margin Guidance to ~14% Despite ₹1,800 Cr JV with Drydocks World",
+      "summary": "In an analyst briefing and BSE filing on September 10-11, 2026, Cochin Shipyard management guided FY27 EBITDA margins down to ~14% (versus 17% in Q1) due to normalising high-margin historical contracts, triggering a steep 9% slide. The guidance came alongside the formal execution of a 50:50 joint venture with DP World's Drydocks World Dubai to operate the Kochi ISRF facility via a slump sale valued at ₹1,800 crore.",
+      "sentiment": "Mixed",
+      "importance": "High",
+      "catalystType": "Guidance",
+      "timeHorizon": "This week",
+      "impact": "Earnings guidance downgrade produced a gap-down breakdown; avoid bottom-fishing until the ₹1,350-₹1,380 support band completes volume drying.",
+      "sourceName": "CNBC TV18",
+      "sourceUrl": "https://www.tradingview.com/news/cnbctv:667114267094b:0/",
+      "publishedAt": "2026-09-11T07:12:00Z"
     },
     {
       "category": "stock",
       "symbol": "CGPOWER",
-      "headline": "GE Vernova, CG Power, other power capex stocks tumble up to 16% in 2 days amid global AI caution. What's ahead?",
-      "summary": "Power capex stocks such as GE Vernova T&D India, CG Power, Hitachi Energy and TD Power Systems fell up to 16% over two sessions amid growing caution around AI development. The stocks had rallied sharply in 2026 on expectations of rising power demand from India’s data centre boom, making them vulnera",
-      "sentiment": "Negative",
-      "importance": "High",
-      "catalystType": "Guidance",
-      "timeHorizon": "Today",
-      "impact": "Guidance/capex news reframes the trend; confirm it with price structure, not the headline.",
-      "sourceName": "Economic Times Markets",
-      "sourceUrl": "https://economictimes.indiatimes.com/markets/stocks/news/ge-vernova-cg-power-other-power-capex-stocks-tumble-up-to-16-in-2-days-amid-global-ai-caution-whats-ahead/articleshow/134281372.cms",
-      "publishedAt": "2026-09-16T07:40:52.000Z"
-    },
-    {
-      "category": "stock",
-      "symbol": "NSE",
-      "headline": "Younger investors drive new-age IPO participation as institutional demand powers subscriptions: HDFC Securities",
-      "summary": "Half of all IPO investors on HDFC SKY are below the age of 35, compared with just over a quarter on InvestRight, according to the report",
-      "sentiment": "Neutral",
-      "importance": "High",
-      "catalystType": "Earnings",
-      "timeHorizon": "Today",
-      "impact": "Earnings-driven move — expect a volatility expansion; confirm with volume before acting on the base.",
-      "sourceName": "Hindu BusinessLine Markets",
-      "sourceUrl": "https://www.thehindubusinessline.com/markets/younger-investors-drive-new-age-ipo-participation-as-institutional-demand-powers-subscriptions-hdfc-securities/article71471511.ece",
-      "publishedAt": "2026-09-16T07:32:28.000Z"
-    },
-    {
-      "category": "stock",
-      "symbol": "NSE",
-      "headline": "Raymond shares slump 6% after strong run | Key support levels to watch",
-      "summary": "Raymond shares fell around 6% on 16 September due to profit-taking after a recent rally. The stock opened at ₹996.10 and hit a high of ₹1,060. Experts suggest the bullish trend will remain as long as it stays above ₹870, but near-term profit booking is possible.",
-      "sentiment": "Mixed",
-      "importance": "High",
-      "catalystType": "Earnings",
-      "timeHorizon": "Today",
-      "impact": "Earnings-driven move — expect a volatility expansion; confirm with volume before acting on the base.",
-      "sourceName": "LiveMint Markets",
-      "sourceUrl": "https://www.livemint.com/market/stock-market-news/raymond-shares-slump-6-after-strong-run-key-support-levels-to-watch-11789539463468.html",
-      "publishedAt": "2026-09-16T06:44:33.000Z"
-    },
-    {
-      "category": "stock",
-      "symbol": "NSE",
-      "headline": "Gold futures rise to ₹1.51 lakh/10 gm on firm spot demand",
-      "summary": "On MCX, the yellow metal contract for the October delivery traded higher by ₹803, or 0.53%, at ₹1,51,612 per 10 grams in a business turnover of 775 lots.",
-      "sentiment": "Positive",
-      "importance": "High",
-      "catalystType": "Order win",
-      "timeHorizon": "Today",
-      "impact": "Order-book catalyst — watch for a volume-backed breakout at the pivot.",
-      "sourceName": "Hindu BusinessLine Markets",
-      "sourceUrl": "https://www.thehindubusinessline.com/markets/gold/gold-futures-rise-to-151-lakh10-gm-on-firm-spot-demand/article71471336.ece",
-      "publishedAt": "2026-09-16T06:31:08.000Z"
-    },
-    {
-      "category": "stock",
-      "symbol": "NSE",
-      "headline": "ITC shares edge higher after rise in select cigarette brands, experts see 10% rally in short term | Target, outlook",
-      "summary": "ITC share price: Experts believe there is buzz for an improved PAT and margins in the upcoming quarterly earnings after the rise in price of select cigarette brands",
-      "sentiment": "Positive",
-      "importance": "High",
-      "catalystType": "Earnings",
-      "timeHorizon": "Today",
-      "impact": "Earnings-driven move — expect a volatility expansion; confirm with volume before acting on the base.",
-      "sourceName": "LiveMint Markets",
-      "sourceUrl": "https://www.livemint.com/market/stock-market-news/itc-shares-edge-higher-after-rise-in-select-cigarette-brands-experts-see-10-rally-in-short-term-target-outlook-11789536356887.html",
-      "publishedAt": "2026-09-16T05:56:12.000Z"
-    },
-    {
-      "category": "market",
-      "symbol": "NSE",
-      "headline": "Inevitable inching closer: US Fed may raise rates after 3 years. What it means for Indian stock market",
-      "summary": "The US Federal Reserve is widely expected to raise interest rates for the first time in three years, as persistent inflation, higher oil prices and rising bond yields add to pressure on policymakers. The move could have implications for Indian equities, the rupee, bond yields, gold and foreign inves",
-      "sentiment": "Neutral",
-      "importance": "Medium",
-      "catalystType": "Other",
-      "timeHorizon": "Today",
-      "impact": "Review the source and the price/volume reaction before acting.",
-      "sourceName": "Economic Times Stocks",
-      "sourceUrl": "https://economictimes.indiatimes.com/markets/stocks/news/inevitable-inching-closer-us-fed-may-raise-rates-after-3-years-what-it-means-for-indian-stock-market/articleshow/134282239.cms",
-      "publishedAt": "2026-09-16T08:16:57.000Z"
-    },
-    {
-      "category": "market",
-      "symbol": "NIFTY",
-      "headline": "Sensex today | Stock Market Live: Sensex rises over 400 pts, Nifty crosses 23,250; IT drags while metals, FMCG shine ahead of Fed call",
-      "summary": "Sensex, Nifty, Share Prices LIVE: Rising US bond yields, Brent crude near $108 a barrel and escalating West Asia tensions could keep Indian equities under selling pressure on Wednesday.",
+      "headline": "CG Power Schedules IIFL Institutional Meet for September 25; Ramps Up Sehore Power Transformer Plant",
+      "summary": "CG Power filed an intimation under SEBI LODR Regulation 30 on September 16, 2026, scheduling a one-on-one institutional investor meet with IIFL Institutional Equities on September 25. This comes on the back of operationalising its 45,000 MVA greenfield power transformer manufacturing plant in Sehore, MP, and initial commercial production shipments from its Sanand OSAT chip facility.",
       "sentiment": "Positive",
       "importance": "Medium",
-      "catalystType": "Other",
-      "timeHorizon": "Today",
-      "impact": "Review the source and the price/volume reaction before acting.",
-      "sourceName": "Hindu BusinessLine Markets",
-      "sourceUrl": "https://www.thehindubusinessline.com/markets/sensex-nifty50-today-stock-market-live-updates-16th-september-2026/article71468722.ece",
-      "publishedAt": "2026-09-16T07:48:47.000Z"
+      "catalystType": "Corporate action",
+      "timeHorizon": "Watch",
+      "impact": "Consolidation above ₹850 support builds a multi-week base ahead of the September 25 institutional meet; watch for volume pickup on any breakout attempt above ₹910.",
+      "sourceName": "ScanX",
+      "sourceUrl": "https://scanx.trade/news/cg-power-schedules-analyst-meet-with-iifl-on-september-25",
+      "publishedAt": "2026-09-16T05:20:00Z"
     },
     {
       "category": "stock",
-      "symbol": "NSE",
-      "headline": "SEBI is said to ease arbitrage fund rules to aid auction",
-      "summary": "Under the previous system, price swings in the final 30 minutes could create temporary gaps between cash shares and futures, giving arbitrage desks time to step in and close them",
-      "sentiment": "Neutral",
+      "symbol": "HDFCBANK",
+      "headline": "HDFC Bank Submits Two CEO Candidates to RBI, Anchoring Private Bank Index Stability",
+      "summary": "HDFC Bank rose 0.75% on Wednesday after formally submitting two candidates to the RBI for its upcoming MD & CEO leadership transition. The succession clarity spurred institutional accumulation, leading Nifty Bank to a 0.76% advance and stabilizing the broader index.",
+      "sentiment": "Positive",
       "importance": "Medium",
       "catalystType": "Regulatory",
-      "timeHorizon": "Today",
-      "impact": "Policy/regulatory catalyst — can reprice the whole group; check breadth first.",
-      "sourceName": "Hindu BusinessLine Markets",
-      "sourceUrl": "https://www.thehindubusinessline.com/markets/sebi-is-said-to-ease-arbitrage-fund-rules-to-aid-auction/article71471523.ece",
-      "publishedAt": "2026-09-16T07:48:23.000Z"
+      "timeHorizon": "This week",
+      "impact": "Leadership clarity provides base stability for the index heavyweight, supporting private banking sector swing setups from key moving averages.",
+      "sourceName": "Mint",
+      "sourceUrl": "https://www.livemint.com/market/stock-market-news/solar-industries-bharat-electronics-and-cg-power-shares-fall-up-to-10-today-what-s-driving-the-sell-off-11726388421045.html",
+      "publishedAt": "2026-09-15T09:39:00Z"
     },
     {
-      "category": "market",
-      "symbol": "NIFTY",
-      "headline": "Sensex, Nifty hold morning gains at midday; IT drags as metals, FMCG shine ahead of Fed call",
-      "summary": "Broader market breadth on the BSE painted a cautious picture. Of 4,358 stocks traded, 2,331 declined against 1,791 advances, with 236 unchanged.",
-      "sentiment": "Positive",
-      "importance": "Medium",
-      "catalystType": "Other",
-      "timeHorizon": "Today",
-      "impact": "Review the source and the price/volume reaction before acting.",
-      "sourceName": "Hindu BusinessLine Markets",
-      "sourceUrl": "https://www.thehindubusinessline.com/markets/stock-markets/sensex-nifty-hold-morning-gains-at-midday-it-drags-as-metals-fmcg-shine-ahead-of-fed-call/article71471537.ece",
-      "publishedAt": "2026-09-16T07:37:45.000Z"
-    },
-    {
-      "category": "market",
-      "symbol": "NSE",
-      "headline": "Domestic pharma market sustains growth momentum, but margins remain key",
-      "summary": "Domestic pharma growth remained strong in August, led by price hikes and new launches, but weak volumes and US tariff uncertainty mean a sustained margin recovery will be crucial for sector performance.",
+      "category": "stock",
+      "symbol": "SOLARINDS",
+      "headline": "Solar Industries Swings 12% Following $1.355 Billion Acquisition of South Africa's Omnia",
+      "summary": "Solar Industries experienced wide intraday volatility on September 15-16, 2026, tagging an all-time high of ₹22,700 before falling over 10% after its offshore subsidiary agreed to acquire South Africa-based Omnia Holdings in an all-cash transaction valued at $1.355 billion (₹12,951 crore).",
       "sentiment": "Mixed",
       "importance": "Medium",
-      "catalystType": "Regulatory",
-      "timeHorizon": "Today",
-      "impact": "Policy/regulatory catalyst — can reprice the whole group; check breadth first.",
-      "sourceName": "LiveMint Markets",
-      "sourceUrl": "https://www.livemint.com/market/mark-to-market/indian-pharma-market-ipm-pharma-stocks-domestic-pharma-dr-reddy-s-laboratories-sun-pharma-ajanta-pharma-glenmark-11789538290089.html",
-      "publishedAt": "2026-09-16T07:26:12.000Z"
+      "catalystType": "Corporate action",
+      "timeHorizon": "This week",
+      "impact": "Wide-range reversal candle on elevated volume signals supply absorption; avoid chasing breakouts until price constructs a fresh contraction base.",
+      "sourceName": "TradingView",
+      "sourceUrl": "https://www.tradingview.com/news/solar-industries-bharat-electronics-and-cg-power-shares-fall-up-to-10-today-what-s-driving-the-sell-off/",
+      "publishedAt": "2026-09-15T09:39:00Z"
     },
     {
       "category": "stock",
-      "symbol": "NSE",
-      "headline": "SEBI is said to ease arbitrage mutual fund rules to aid closing auction session",
-      "summary": "SEBI is said to allow arbitrage mutual funds to temporarily carry unhedged positions of as much as 1% of their plans worth a total of ₹3 lakh crore.",
-      "sentiment": "Neutral",
+      "symbol": "TRENT",
+      "headline": "Trent Discloses Landmark 1,000th Zudio Store Milestone Amid Base Consolidation",
+      "summary": "Tata Group retail major Trent Limited announced via exchange filings that its flagship value-fashion format Zudio has officially crossed the 1,000-store mark across India. The stock consolidated in the ₹2,750-₹2,850 range after adjusting for post-Q1 valuation multiples and slower luxury format additions.",
+      "sentiment": "Positive",
       "importance": "Medium",
-      "catalystType": "Regulatory",
-      "timeHorizon": "Today",
-      "impact": "Policy/regulatory catalyst — can reprice the whole group; check breadth first.",
-      "sourceName": "LiveMint Markets",
-      "sourceUrl": "https://www.livemint.com/market/stock-market-news/sebi-is-said-to-ease-arbitrage-mutual-fund-rules-to-aid-closing-auction-session-11789542014003.html",
-      "publishedAt": "2026-09-16T07:15:34.000Z"
-    },
-    {
-      "category": "stock",
-      "symbol": "NSE",
-      "headline": "Chipotle stock slides 6%: What’s behind the selloff?",
-      "summary": "Chipotle shares fell nearly 6% on Tuesday, underperforming major restaurant peers. Broader market weakness, concerns over restaurant traffic, consumer spending and profit-taking weighed on investor sentiment.",
-      "sentiment": "Negative",
-      "importance": "Medium",
-      "catalystType": "Earnings",
-      "timeHorizon": "Today",
-      "impact": "Earnings-driven move — expect a volatility expansion; confirm with volume before acting on the base.",
-      "sourceName": "Economic Times Markets",
-      "sourceUrl": "https://economictimes.indiatimes.com/markets/us-stocks/news/chipotle-stock-slides-6-whats-behind-the-selloff/slideshow/134281001.cms",
-      "publishedAt": "2026-09-16T06:45:19.000Z"
-    },
-    {
-      "category": "market",
-      "symbol": "NSE",
-      "headline": "US Market: Fed’s Warsh faces tough rate call as inflation remains sticky",
-      "summary": "Federal Reserve Chair Kevin Warsh is under pressure to balance persistent inflation with calls from President Donald Trump for lower or unchanged interest rates. Markets expect the Fed to raise rates at Wednesday’s meeting as inflation remains above its 2% target. The Fed’s preferred inflation gauge",
-      "sentiment": "Neutral",
-      "importance": "Medium",
-      "catalystType": "Other",
-      "timeHorizon": "Today",
-      "impact": "Review the source and the price/volume reaction before acting.",
-      "sourceName": "Economic Times Markets",
-      "sourceUrl": "https://economictimes.indiatimes.com/markets/us-stocks/news/us-market-feds-warsh-faces-tough-rate-call-as-inflation-remains-sticky/articleshow/134280309.cms",
-      "publishedAt": "2026-09-16T06:44:12.000Z"
+      "catalystType": "Corporate action",
+      "timeHorizon": "This week",
+      "impact": "Tight multi-session price consolidation around ₹2,800 is shaping the right side of a base; wait for a high-volume trigger above ₹2,880.",
+      "sourceName": "The Economic Times",
+      "sourceUrl": "https://economictimes.indiatimes.com/trent-ltd/stocks/companyid-2364.cms",
+      "publishedAt": "2026-09-11T17:58:00Z"
     }
   ],
-  "sources": [
-    {
-      "title": "LiveMint Markets",
-      "url": "https://www.livemint.com/market/mark-to-market/happy-forgings-stock-hits-52-week-high-order-book-margin-expansion-11789543359122.html"
-    },
-    {
-      "title": "Economic Times Markets",
-      "url": "https://economictimes.indiatimes.com/markets/stocks/news/ge-vernova-cg-power-other-power-capex-stocks-tumble-up-to-16-in-2-days-amid-global-ai-caution-whats-ahead/articleshow/134281372.cms"
-    },
-    {
-      "title": "Hindu BusinessLine Markets",
-      "url": "https://www.thehindubusinessline.com/markets/younger-investors-drive-new-age-ipo-participation-as-institutional-demand-powers-subscriptions-hdfc-securities/article71471511.ece"
-    },
-    {
-      "title": "LiveMint Markets",
-      "url": "https://www.livemint.com/market/stock-market-news/raymond-shares-slump-6-after-strong-run-key-support-levels-to-watch-11789539463468.html"
-    },
-    {
-      "title": "Hindu BusinessLine Markets",
-      "url": "https://www.thehindubusinessline.com/markets/gold/gold-futures-rise-to-151-lakh10-gm-on-firm-spot-demand/article71471336.ece"
-    },
-    {
-      "title": "LiveMint Markets",
-      "url": "https://www.livemint.com/market/stock-market-news/itc-shares-edge-higher-after-rise-in-select-cigarette-brands-experts-see-10-rally-in-short-term-target-outlook-11789536356887.html"
-    },
-    {
-      "title": "Economic Times Stocks",
-      "url": "https://economictimes.indiatimes.com/markets/stocks/news/inevitable-inching-closer-us-fed-may-raise-rates-after-3-years-what-it-means-for-indian-stock-market/articleshow/134282239.cms"
-    },
-    {
-      "title": "Hindu BusinessLine Markets",
-      "url": "https://www.thehindubusinessline.com/markets/sensex-nifty50-today-stock-market-live-updates-16th-september-2026/article71468722.ece"
-    },
-    {
-      "title": "Hindu BusinessLine Markets",
-      "url": "https://www.thehindubusinessline.com/markets/sebi-is-said-to-ease-arbitrage-fund-rules-to-aid-auction/article71471523.ece"
-    },
-    {
-      "title": "Hindu BusinessLine Markets",
-      "url": "https://www.thehindubusinessline.com/markets/stock-markets/sensex-nifty-hold-morning-gains-at-midday-it-drags-as-metals-fmcg-shine-ahead-of-fed-call/article71471537.ece"
-    },
-    {
-      "title": "LiveMint Markets",
-      "url": "https://www.livemint.com/market/mark-to-market/indian-pharma-market-ipm-pharma-stocks-domestic-pharma-dr-reddy-s-laboratories-sun-pharma-ajanta-pharma-glenmark-11789538290089.html"
-    },
-    {
-      "title": "LiveMint Markets",
-      "url": "https://www.livemint.com/market/stock-market-news/sebi-is-said-to-ease-arbitrage-mutual-fund-rules-to-aid-closing-auction-session-11789542014003.html"
-    },
-    {
-      "title": "Economic Times Markets",
-      "url": "https://economictimes.indiatimes.com/markets/us-stocks/news/chipotle-stock-slides-6-whats-behind-the-selloff/slideshow/134281001.cms"
-    },
-    {
-      "title": "Economic Times Markets",
-      "url": "https://economictimes.indiatimes.com/markets/us-stocks/news/us-market-feds-warsh-faces-tough-rate-call-as-inflation-remains-sticky/articleshow/134280309.cms"
-    }
-  ],
-  "disclaimer": "AI-generated research summary. Verify source articles and exchange filings before making investment decisions. Not investment advice."
+  "disclaimer": "This intelligence report is compiled for swing trading research and technical setup tracking purposes only. It does not constitute investment advice, stock recommendations, or buy/sell calls. Market participants should verify exchange filings independently and consult a SEBI-registered financial advisor before entering positions.",
+  "sources": []
 }
