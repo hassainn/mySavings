@@ -1,24 +1,173 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-09-16T17:09:51.815Z",
+  "generatedAt": "2026-09-16T17:49:13.942Z",
   "sessionDate": "2026-09-16",
   "status": "ready",
-  "scanGeneratedAt": "2026-09-15T14:38:26.919Z",
+  "scanGeneratedAt": "2026-09-16T17:49:01.221Z",
   "gate": "WEAK",
-  "breadthScore": 40,
+  "breadthScore": 33,
   "verdict": "No new buys. Observe and protect capital.",
-  "ideas": [],
+  "ideas": [
+    {
+      "symbol": "AMDIND",
+      "name": "AMD INDUSTRIES",
+      "pattern": "20-day breakout",
+      "confidence": 99,
+      "state": "Watch",
+      "scanState": "Triggered",
+      "asOf": "2026-09-15T00:00:00+05:30",
+      "close": 69.64,
+      "entryTrigger": 65.27,
+      "stop": 55.95,
+      "target2R": 83.89,
+      "evidence": [
+        "Price above EMA21, SMA50 and SMA200",
+        "Close cleared the prior 20-session high",
+        "New trailing-year price high",
+        "21.8× 20-day average volume"
+      ]
+    },
+    {
+      "symbol": "ARROWGREEN",
+      "name": "ARROW GREENTECH",
+      "pattern": "SEPA breakout",
+      "confidence": 99,
+      "state": "Watch",
+      "scanState": "Triggered",
+      "asOf": "2026-09-15T00:00:00+05:30",
+      "close": 838.55,
+      "entryTrigger": 829.83,
+      "stop": 759.99,
+      "target2R": 969.51,
+      "evidence": [
+        "Price above EMA21, SMA50 and SMA200",
+        "Close cleared the prior 20-session high",
+        "New trailing-year price high",
+        "10.31× 20-day average volume"
+      ]
+    },
+    {
+      "symbol": "BODALCHEM",
+      "name": "Bodal Chemicals",
+      "pattern": "Double bottom",
+      "confidence": 99,
+      "state": "Watch",
+      "scanState": "Armed",
+      "asOf": "2026-09-15T00:00:00+05:30",
+      "close": 176.66,
+      "entryTrigger": 189.87,
+      "stop": 162.06,
+      "target2R": 245.5,
+      "evidence": [
+        "Price above EMA21, SMA50 and SMA200",
+        "MACD is above signal and zero line",
+        "Two aligned swing lows with neckline pressure",
+        "Flagpole advanced 231% then paused in a tight 16.8% flag"
+      ]
+    },
+    {
+      "symbol": "CASHIETF",
+      "name": "ICICI Pru BSE Liquid Rate ETF",
+      "pattern": "Near breakout",
+      "confidence": 99,
+      "state": "Watch",
+      "scanState": "Armed",
+      "asOf": "2026-09-15T00:00:00+05:30",
+      "close": 1079.56,
+      "entryTrigger": 1100.38,
+      "stop": 1099.08,
+      "target2R": 1102.98,
+      "evidence": [
+        "Price above EMA21, SMA50 and SMA200",
+        "Within 1.5% of the 20-session pivot",
+        "2.13× 20-day average volume",
+        "MACD is above signal and zero line"
+      ]
+    },
+    {
+      "symbol": "CEIGALL",
+      "name": "CEIGALL INDIA LIMITED",
+      "pattern": "Double bottom",
+      "confidence": 99,
+      "state": "Watch",
+      "scanState": "Armed",
+      "asOf": "2026-09-15T00:00:00+05:30",
+      "close": 382.25,
+      "entryTrigger": 406.11,
+      "stop": 379.81,
+      "target2R": 458.71,
+      "evidence": [
+        "Price above EMA21, SMA50 and SMA200",
+        "MACD is above signal and zero line",
+        "Two aligned swing lows with neckline pressure",
+        "Rounded cup 23.2% deep with a 3.3% handle in the upper half of the base"
+      ]
+    },
+    {
+      "symbol": "CPCAP",
+      "name": "CAREER POINT",
+      "pattern": "Near breakout",
+      "confidence": 99,
+      "state": "Watch",
+      "scanState": "Armed",
+      "asOf": "2026-09-15T00:00:00+05:30",
+      "close": 140.17,
+      "entryTrigger": 142.14,
+      "stop": 126.31,
+      "target2R": 173.8,
+      "evidence": [
+        "Price above EMA21, SMA50 and SMA200",
+        "Within 1.5% of the 20-session pivot",
+        "2.67× 20-day average volume",
+        "RSI 70 supports momentum without extreme extension"
+      ]
+    },
+    {
+      "symbol": "DYNAMATECH",
+      "name": "Dynamatic Technologies",
+      "pattern": "Double bottom",
+      "confidence": 99,
+      "state": "Watch",
+      "scanState": "Armed",
+      "asOf": "2026-09-15T00:00:00+05:30",
+      "close": 12071,
+      "entryTrigger": 12312.3,
+      "stop": 11471.01,
+      "target2R": 13994.87,
+      "evidence": [
+        "Price above EMA21, SMA50 and SMA200",
+        "1.33× 20-day average volume",
+        "RSI 63 supports momentum without extreme extension",
+        "MACD is above signal and zero line"
+      ]
+    },
+    {
+      "symbol": "GAYAPROJ",
+      "name": "GAYATRI PROJECTS",
+      "pattern": "SEPA breakout",
+      "confidence": 99,
+      "state": "Watch",
+      "scanState": "Triggered",
+      "asOf": "2026-09-15T00:00:00+05:30",
+      "close": 26.15,
+      "entryTrigger": 26.07,
+      "stop": 23.6,
+      "target2R": 30.99,
+      "evidence": [
+        "Price above EMA21, SMA50 and SMA200",
+        "Close cleared the prior 20-session high",
+        "New trailing-year price high",
+        "3.56× 20-day average volume"
+      ]
+    }
+  ],
   "cautions": [
     {
-      "symbol": "SEAMECLTD",
-      "reason": "Double bottom"
+      "symbol": "LIQUIDPLUS",
+      "reason": "Near breakout"
     },
     {
-      "symbol": "LIQUIDSHRI",
-      "reason": "20-day breakout"
-    },
-    {
-      "symbol": "SPLPETRO",
+      "symbol": "TALBROAUTO",
       "reason": "Double bottom"
     },
     {
@@ -26,26 +175,30 @@
       "reason": "Double bottom"
     },
     {
-      "symbol": "CAPLIPOINT",
+      "symbol": "SOMANYCERA",
       "reason": "Double bottom"
     },
     {
-      "symbol": "MITCON",
-      "reason": "Double bottom"
-    },
-    {
-      "symbol": "INOXINDIA",
+      "symbol": "SEAMECLTD",
       "reason": "Double bottom"
     },
     {
       "symbol": "EDELWEISS",
+      "reason": "Double bottom"
+    },
+    {
+      "symbol": "WELCORP",
+      "reason": "Double bottom"
+    },
+    {
+      "symbol": "BIRLACABLE",
       "reason": "Double bottom"
     }
   ],
   "observations": [],
   "previousSession": "2026-09-15",
   "intelligenceGeneratedAt": "2026-09-16T14:12:08.927Z",
-  "commentary": "With market breadth subdued at 40 and the deterministic gate registering WEAK, William O'Neil's market direction model demands a defensive posture. A single-session technical rebound to 23,241 after retesting five-month lows fails to exhibit institutional follow-through or confirmed accumulation. Stan Weinstein's Stage Analysis requires caution when broad indices struggle beneath declining moving averages, as breakout failure rates multiply in compromised environments. Mark Minervini's progressive exposure doctrine mandates strict capital preservation, prioritizing cash until verified Stage 2 leaders emerge on heavy volume alongside expanding breadth. Respecting the overarching market trend remains paramount; maintaining dry powder and refining watchlists is the disciplined approach until market health confirms genuine leadership.",
+  "commentary": "With market breadth sitting at a frail 33% and the deterministic gate flagged WEAK, strict defensive discipline must govern all exposure. William O'Neil and Stan Weinstein both cautioned that three out of four equities inevitably succumb to prevailing market pressure during distribution phases. Jesse Livermore advocated sitting tight when general market tailwinds are absent, while Mark Minervini demands progressive exposure—only scaling when breakouts deliver positive feedback. In this tape, even verified Stage 2 pivots face elevated risk of whipsaw. Position sizes must remain curtailed, cash levels respected, and stop-loss boundaries rigidly enforced at initial support.",
   "commentaryStatus": "available",
   "limitations": [
     "Daily scan observations are not fills or performance results.",
@@ -54,8 +207,95 @@
   ],
   "model": "gemini-3.8-flash",
   "analysis": {
-    "analyst": "Minervini SEPA / O'Neil CANSLIM / Weinstein Stage Analysis",
-    "bySymbol": {}
+    "analyst": "Minervini SEPA, O'Neil CANSLIM & Weinstein Stage Analysis",
+    "bySymbol": {
+      "AMDIND": {
+        "stage": "Stage 2 advancing",
+        "technical": "Cleared a 20-day breakout pivot to fresh trailing-year highs on an explosive 21.8x volume expansion. The price trades cleanly above rising 21-EMA, 50-SMA, and 200-SMA, confirming powerful momentum, though history shows sharp volatility.",
+        "epsGrowth": [
+          "Q1 FY27 +518%",
+          "Q4 FY26 Turnaround",
+          "Q3 FY26 Loss"
+        ],
+        "revenueGrowth": "+41%",
+        "earningsTrend": "Accelerating",
+        "growthQualified": "Yes",
+        "fundamental": "Packaging turnaround delivering sharp margin expansion (OPM 15.2% vs 9.4% YoY). However, trailing ROCE of 1.4% and negative historical ROE (-2.6%) reflect cyclical recovery rather than entrenched institutional quality.",
+        "verdict": "Constructive",
+        "risk": "Breakdown below the 55.95 stop level voids the breakout pattern; cut immediately to protect capital."
+      },
+      "ARROWGREEN": {
+        "stage": "Stage 2 advancing",
+        "technical": "Textbook SEPA breakout clearing multi-week resistance to new 52-week highs on 10.3x average volume. Strong relative strength line outperformance, riding smoothly above its upward-sloping 21-day EMA, 50-day SMA, and 200-day SMA.",
+        "epsGrowth": [
+          "Q1 FY27 +151%",
+          "Q4 FY26 +88%",
+          "Q3 FY26 +65%"
+        ],
+        "revenueGrowth": "+111%",
+        "earningsTrend": "Accelerating",
+        "growthQualified": "Yes",
+        "fundamental": "Pristine CANSLIM fundamentals driven by green packaging demand. Delivers superior capital allocation with a 29.6% ROCE, 21.2% ROE, negligible debt, and robust cash flow generation.",
+        "verdict": "Leading",
+        "risk": "A close below the 759.99 stop or heavy institutional distribution through the 21-day EMA aborts the advance."
+      },
+      "BODALCHEM": {
+        "stage": "Stage 2 advancing",
+        "technical": "Constructing a double bottom inside a tight 16.8% flag handle following an explosive 231% run. Price is supported above rising 21-EMA and 50-SMA lines with MACD confirmed above signal and zero.",
+        "epsGrowth": [
+          "Q1 FY27 +219%",
+          "Q4 FY26 +121%",
+          "Q3 FY26 +40%"
+        ],
+        "revenueGrowth": "+56%",
+        "earningsTrend": "Accelerating",
+        "growthQualified": "Yes",
+        "fundamental": "Substantial operational turnaround with gross margins widening to 7.2%. Ramping benzene derivative utilization and scheduled debt repayment of ₹150–175 crores provide meaningful fundamental tailwinds.",
+        "verdict": "Constructive",
+        "risk": "Breaching the 162.06 base floor invalidates the double-bottom consolidation; enforce hard risk discipline."
+      },
+      "CASHIETF": {
+        "stage": "Unclear",
+        "technical": "Trades virtually flat at par with non-existent directional volatility. As a money-market cash proxy, it possesses no equity relative strength, Stage 2 characteristics, or pivot expansion.",
+        "epsGrowth": [
+          "not verified"
+        ],
+        "revenueGrowth": "not verified",
+        "earningsTrend": "Not verified",
+        "growthQualified": "Not verified",
+        "fundamental": "not verified",
+        "verdict": "Avoid",
+        "risk": "Overnight cash yield vehicle; offers zero alpha or breakout equity upside, representing dead trading capital."
+      },
+      "CEIGALL": {
+        "stage": "Stage 2 advancing",
+        "technical": "Forming a 23.2% deep double bottom with a tight 3.3% handle near the neckline. Moving averages align positively above SMA200, though volume on recent consolidation remains pedestrian.",
+        "epsGrowth": [
+          "Q1 FY27 +18%",
+          "Q4 FY26 +14%"
+        ],
+        "revenueGrowth": "+16%",
+        "earningsTrend": "Steady",
+        "growthQualified": "Partial",
+        "fundamental": "EPC player with a 17.3% ROCE, 12.8% operating margin, and manageable 0.61x debt-to-equity. However, quarterly net profit growth (+18.2%) falls short of the 25% CANSLIM threshold.",
+        "verdict": "Watch",
+        "risk": "A break beneath 379.81 violates handle support and invalidates the cup-and-handle recovery thesis."
+      },
+      "CPCAP": {
+        "stage": "Stage 1 base",
+        "technical": "Base-building action within a Stage 1 structure hovering 1.5% below its 20-session pivot. Volume expansion of 2.67x is constructive, but long-term overhead supply continues to impede clear breakout velocity.",
+        "epsGrowth": [
+          "Q1 FY27 +13%",
+          "Q4 FY26 +6%"
+        ],
+        "revenueGrowth": "-0.1%",
+        "earningsTrend": "Decelerating",
+        "growthQualified": "No",
+        "fundamental": "Education financing NBFC boasting an elevated ROCE of 46.7% and zero promoter pledge. However, flat revenue (-0.1%) and decelerating profit expansion violate strict CANSLIM standards.",
+        "verdict": "Watch",
+        "risk": "A dip below 126.31 breaks consolidation support, signaling base failure and requiring immediate trade exit."
+      }
+    }
   },
   "history": [
     {
