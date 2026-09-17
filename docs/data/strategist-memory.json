@@ -379,6 +379,208 @@
         }
       ],
       "observations": []
+    },
+    {
+      "sessionDate": "2026-09-17",
+      "generatedAt": "2026-09-17T07:59:07.592Z",
+      "gate": "WEAK",
+      "verdict": "No new buys. Observe and protect capital.",
+      "ideas": [
+        {
+          "symbol": "AMDIND",
+          "name": "AMD INDUSTRIES",
+          "pattern": "20-day breakout",
+          "confidence": 99,
+          "state": "Watch",
+          "scanState": "Triggered",
+          "asOf": "2026-09-15T00:00:00+05:30",
+          "close": 69.64,
+          "entryTrigger": 65.27,
+          "stop": 55.95,
+          "target2R": 83.89,
+          "evidence": [
+            "Price above EMA21, SMA50 and SMA200",
+            "Close cleared the prior 20-session high",
+            "New trailing-year price high",
+            "21.8× 20-day average volume"
+          ]
+        },
+        {
+          "symbol": "ARROWGREEN",
+          "name": "ARROW GREENTECH",
+          "pattern": "SEPA breakout",
+          "confidence": 99,
+          "state": "Watch",
+          "scanState": "Triggered",
+          "asOf": "2026-09-15T00:00:00+05:30",
+          "close": 838.55,
+          "entryTrigger": 829.83,
+          "stop": 759.99,
+          "target2R": 969.51,
+          "evidence": [
+            "Price above EMA21, SMA50 and SMA200",
+            "Close cleared the prior 20-session high",
+            "New trailing-year price high",
+            "10.31× 20-day average volume"
+          ]
+        },
+        {
+          "symbol": "BODALCHEM",
+          "name": "Bodal Chemicals",
+          "pattern": "Double bottom",
+          "confidence": 99,
+          "state": "Watch",
+          "scanState": "Armed",
+          "asOf": "2026-09-15T00:00:00+05:30",
+          "close": 176.66,
+          "entryTrigger": 189.87,
+          "stop": 162.06,
+          "target2R": 245.5,
+          "evidence": [
+            "Price above EMA21, SMA50 and SMA200",
+            "MACD is above signal and zero line",
+            "Two aligned swing lows with neckline pressure",
+            "Flagpole advanced 231% then paused in a tight 16.8% flag"
+          ]
+        },
+        {
+          "symbol": "CASHIETF",
+          "name": "ICICI Pru BSE Liquid Rate ETF",
+          "pattern": "Near breakout",
+          "confidence": 99,
+          "state": "Watch",
+          "scanState": "Armed",
+          "asOf": "2026-09-15T00:00:00+05:30",
+          "close": 1079.56,
+          "entryTrigger": 1100.38,
+          "stop": 1099.08,
+          "target2R": 1102.98,
+          "evidence": [
+            "Price above EMA21, SMA50 and SMA200",
+            "Within 1.5% of the 20-session pivot",
+            "2.13× 20-day average volume",
+            "MACD is above signal and zero line"
+          ]
+        },
+        {
+          "symbol": "CEIGALL",
+          "name": "CEIGALL INDIA LIMITED",
+          "pattern": "Double bottom",
+          "confidence": 99,
+          "state": "Watch",
+          "scanState": "Armed",
+          "asOf": "2026-09-15T00:00:00+05:30",
+          "close": 382.25,
+          "entryTrigger": 406.11,
+          "stop": 379.81,
+          "target2R": 458.71,
+          "evidence": [
+            "Price above EMA21, SMA50 and SMA200",
+            "MACD is above signal and zero line",
+            "Two aligned swing lows with neckline pressure",
+            "Rounded cup 23.2% deep with a 3.3% handle in the upper half of the base"
+          ]
+        },
+        {
+          "symbol": "CPCAP",
+          "name": "CAREER POINT",
+          "pattern": "Near breakout",
+          "confidence": 99,
+          "state": "Watch",
+          "scanState": "Armed",
+          "asOf": "2026-09-15T00:00:00+05:30",
+          "close": 140.17,
+          "entryTrigger": 142.14,
+          "stop": 126.31,
+          "target2R": 173.8,
+          "evidence": [
+            "Price above EMA21, SMA50 and SMA200",
+            "Within 1.5% of the 20-session pivot",
+            "2.67× 20-day average volume",
+            "RSI 70 supports momentum without extreme extension"
+          ]
+        },
+        {
+          "symbol": "DYNAMATECH",
+          "name": "Dynamatic Technologies",
+          "pattern": "Double bottom",
+          "confidence": 99,
+          "state": "Watch",
+          "scanState": "Armed",
+          "asOf": "2026-09-15T00:00:00+05:30",
+          "close": 12071,
+          "entryTrigger": 12312.3,
+          "stop": 11471.01,
+          "target2R": 13994.87,
+          "evidence": [
+            "Price above EMA21, SMA50 and SMA200",
+            "1.33× 20-day average volume",
+            "RSI 63 supports momentum without extreme extension",
+            "MACD is above signal and zero line"
+          ]
+        },
+        {
+          "symbol": "GAYAPROJ",
+          "name": "GAYATRI PROJECTS",
+          "pattern": "SEPA breakout",
+          "confidence": 99,
+          "state": "Watch",
+          "scanState": "Triggered",
+          "asOf": "2026-09-15T00:00:00+05:30",
+          "close": 26.15,
+          "entryTrigger": 26.07,
+          "stop": 23.6,
+          "target2R": 30.99,
+          "evidence": [
+            "Price above EMA21, SMA50 and SMA200",
+            "Close cleared the prior 20-session high",
+            "New trailing-year price high",
+            "3.56× 20-day average volume"
+          ]
+        }
+      ],
+      "observations": [
+        {
+          "symbol": "AMDIND",
+          "previousState": "Watch",
+          "observation": "No newer scan observation; outcome unknown."
+        },
+        {
+          "symbol": "ARROWGREEN",
+          "previousState": "Watch",
+          "observation": "No newer scan observation; outcome unknown."
+        },
+        {
+          "symbol": "BODALCHEM",
+          "previousState": "Watch",
+          "observation": "No newer scan observation; outcome unknown."
+        },
+        {
+          "symbol": "CASHIETF",
+          "previousState": "Watch",
+          "observation": "No newer scan observation; outcome unknown."
+        },
+        {
+          "symbol": "CEIGALL",
+          "previousState": "Watch",
+          "observation": "No newer scan observation; outcome unknown."
+        },
+        {
+          "symbol": "CPCAP",
+          "previousState": "Watch",
+          "observation": "No newer scan observation; outcome unknown."
+        },
+        {
+          "symbol": "DYNAMATECH",
+          "previousState": "Watch",
+          "observation": "No newer scan observation; outcome unknown."
+        },
+        {
+          "symbol": "GAYAPROJ",
+          "previousState": "Watch",
+          "observation": "No newer scan observation; outcome unknown."
+        }
+      ]
     }
   ]
 }
