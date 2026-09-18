@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-09-17T17:50:53.489Z",
-  "sessionDate": "2026-09-17",
+  "generatedAt": "2026-09-18T07:37:39.978Z",
+  "sessionDate": "2026-09-18",
   "status": "ready",
   "scanGeneratedAt": "2026-09-17T17:50:39.783Z",
   "gate": "WEAK",
@@ -197,49 +197,49 @@
   ],
   "observations": [
     {
+      "symbol": "AAREYDRUGS",
+      "previousState": "Watch",
+      "observation": "No newer scan observation; outcome unknown."
+    },
+    {
+      "symbol": "ACE",
+      "previousState": "Watch",
+      "observation": "No newer scan observation; outcome unknown."
+    },
+    {
+      "symbol": "AEGISLOG",
+      "previousState": "Watch",
+      "observation": "No newer scan observation; outcome unknown."
+    },
+    {
       "symbol": "AMDIND",
       "previousState": "Watch",
-      "observation": "Latest scanned close 63.66; scanner state Armed. This is not an executed trade or an intraday stop/target check."
+      "observation": "No newer scan observation; outcome unknown."
+    },
+    {
+      "symbol": "ANANDRATHI",
+      "previousState": "Watch",
+      "observation": "No newer scan observation; outcome unknown."
     },
     {
       "symbol": "ARROWGREEN",
       "previousState": "Watch",
-      "observation": "Latest scanned close 907.45; scanner state Triggered. This is not an executed trade or an intraday stop/target check."
+      "observation": "No newer scan observation; outcome unknown."
     },
     {
-      "symbol": "BODALCHEM",
-      "previousState": "Watch",
-      "observation": "Latest scanned close 173.46; scanner state Caution. This is not an executed trade or an intraday stop/target check."
-    },
-    {
-      "symbol": "CASHIETF",
-      "previousState": "Watch",
-      "observation": "Latest scanned close 1079.68; scanner state Armed. This is not an executed trade or an intraday stop/target check."
-    },
-    {
-      "symbol": "CEIGALL",
-      "previousState": "Watch",
-      "observation": "Latest scanned close 386.8; scanner state Armed. This is not an executed trade or an intraday stop/target check."
-    },
-    {
-      "symbol": "CPCAP",
+      "symbol": "BHAGYANGR",
       "previousState": "Watch",
       "observation": "No newer scan observation; outcome unknown."
     },
     {
-      "symbol": "DYNAMATECH",
-      "previousState": "Watch",
-      "observation": "No newer scan observation; outcome unknown."
-    },
-    {
-      "symbol": "GAYAPROJ",
+      "symbol": "BIL",
       "previousState": "Watch",
       "observation": "No newer scan observation; outcome unknown."
     }
   ],
-  "previousSession": "2026-09-16",
+  "previousSession": "2026-09-17",
   "intelligenceGeneratedAt": "2026-09-17T14:17:55.731Z",
-  "commentary": "With market breadth deteriorating to a weak 39% and the deterministic gate flagged WEAK, Stan Weinstein and William O'Neil market-direction rules demand defensive caution. While the Nifty 50 trades resiliently at 23,270 and India VIX has cooled to 12.14, sluggish market-wide participation indicates a hostile backdrop where most breakouts falter. Jesse Livermore warned never to fight general market head-currents; Mark Minervini's progressive exposure dictates keeping powder dry. Capital must only be considered for genuine Stage 2 leaders printing exceptional earnings acceleration and volume confirmation, while strictly capping decelerating or fundamentally deficient names at Watch or Avoid until breadth confirms an institutional uptrend.",
+  "commentary": "With market breadth deteriorating to a weak score of 39 despite index-level resilience at 23,270, Stan Weinstein's market-timing rules mandate defensive posture and strict capital preservation. While DII liquidity creates localized bounces, William O'Neil's CANSLIM principles warn that three out of four stocks track the broader market tide. When breadth breaks down under institutional distribution, breakout failure rates multiply. Mark Minervini's progressive exposure rule dictates keeping position sizes small, raising cash, and strictly limiting new entries to pristine Stage 2 setups displaying asymmetric reward-to-risk. Until breadth re-expands above key moving averages, defensive stops and aggressive risk containment remain paramount.",
   "commentaryStatus": "available",
   "limitations": [
     "Daily scan observations are not fills or performance results.",
@@ -251,94 +251,91 @@
     "analyst": "Minervini SEPA, O'Neil CANSLIM & Weinstein Stage Analysis",
     "bySymbol": {
       "AAREYDRUGS": {
-        "stage": "Stage 1 base",
-        "technical": "Trading above key daily moving averages (EMA21, SMA50, SMA200) within 1.5% of its 20-session pivot at 101.39 on 2x average volume. MACD is positive, but price action lacks a structured multi-week base or relative strength leadership.",
+        "stage": "Stage 2 advancing",
+        "technical": "Trading above rising 21-day EMA, 50-day SMA, and 200-day SMA. Price is within 1.5% of its 20-session pivot accompanied by 2× average volume, showing constructive price compaction.",
         "epsGrowth": [
           "Q1 FY27 -25%",
-          "Q4 FY26 -34%",
-          "Q3 FY26 not verified"
+          "Q4 FY26 not verified"
         ],
         "revenueGrowth": "-56%",
         "earningsTrend": "Negative",
         "growthQualified": "No",
-        "fundamental": "Fundamentals breach core CANSLIM standards. Q1 FY27 revenue dropped 56.3% YoY to ₹44.6 Cr while net profit declined 25.3% to ₹1.0 Cr. Return profile is anemic with ROCE at 5.58% and ROE at 2.75%.",
-        "verdict": "Avoid",
-        "risk": "A breakdown below 92.26 invalidates the pivot structure; cut immediately to protect capital against severe downside drift in deteriorating fundamentals."
+        "fundamental": "Fundamentals fail CANSLIM criteria. Q1 FY27 net sales collapsed 56% YoY and PAT fell 25% YoY to ₹1.02 crore. ROE remains poor at 2.75% with low interest coverage.",
+        "verdict": "Watch",
+        "risk": "Fails below entry trigger 101.39; exit strictly at stop loss 92.26 on base breakdown."
       },
       "ACE": {
         "stage": "Stage 2 advancing",
-        "technical": "Classic double-bottom pattern clearing neckline pressure at 1197.20 above rising 50-day and 200-day SMAs. Bullish candle engulfs prior selling on 1.16x average volume, showing constructive accumulation.",
+        "technical": "Classic Stage 2 continuation above key moving averages. Forming a solid double bottom base with neckline pressure, supported by expanding 1.16× volume and a decisive bullish engulfing daily bar.",
         "epsGrowth": [
           "Q1 FY27 +22%",
-          "Q4 FY26 +16%",
-          "Q3 FY26 +14%"
+          "Q4 FY26 +2%"
         ],
         "revenueGrowth": "+20%",
         "earningsTrend": "Accelerating",
         "growthQualified": "Partial",
-        "fundamental": "Domestic leader in mobile cranes with >60% market share. Robust operational execution generated 20.5% sales growth to ₹785.7 Cr and 22.3% PAT growth. Exceptional capital efficiency with ROCE at 31.6%, ROE at 22.8%, and virtually zero debt.",
+        "fundamental": "Robust industrial demand lifted Q1 FY27 consolidated revenue 20.5% YoY and net profit 22.3% YoY. Excellent operational efficiency with ROCE exceeding 31% and negligible balance sheet leverage.",
         "verdict": "Constructive",
-        "risk": "Failure below 1111.18 breaches the pattern low and EMA support; exit decisively to prevent compounded portfolio drag."
+        "risk": "Pattern breaks below double-bottom swing support; enforce stop immediately at 1111.18."
       },
       "AEGISLOG": {
         "stage": "Stage 2 advancing",
-        "technical": "High tight flag consolidation perched cleanly above rising EMA21, SMA50, and SMA200. Entry trigger at 1499.30 is backed by 2.15x average volume and an RSI of 55, reflecting controlled institutional absorption without extended froth.",
+        "technical": "Superb leadership structure displaying a High Tight Flag pattern above all key moving averages. Breakout momentum is supported by 2.15× volume expansion, pristine relative strength, and healthy RSI at 55.",
         "epsGrowth": [
-          "Q1 FY27 +210%",
-          "Q4 FY26 +46%",
-          "Q3 FY26 +35%"
+          "Q1 FY27 +269%",
+          "Q4 FY26 +56%",
+          "Q3 FY26 +45%"
         ],
         "revenueGrowth": "+37%",
         "earningsTrend": "Accelerating",
         "growthQualified": "Yes",
-        "fundamental": "Exemplary CANSLIM profile. Massive operational scale in LPG terminalling and distribution drove Q1 FY27 PAT up 210% to ₹544 Cr on ₹2,357 Cr revenue (+37.1% YoY). Margins expanded sharply to 34.8% alongside multi-port capacity additions.",
+        "fundamental": "Phenomenal CANSLIM profile. Q1 FY27 consolidated profit surged 212% YoY and revenue climbed 37% on record LPG volumes. Strong balance sheet with ROCE near 20% and expanding cash reserves.",
         "verdict": "Leading",
-        "risk": "Violation of 1376.44 support breaches the flag base; disciplined Minervini risk management requires immediate exit."
+        "risk": "Reversal back into flag consolidation invalidates setup; cut losses strictly at 1376.44."
       },
       "AMDIND": {
         "stage": "Stage 2 advancing",
-        "technical": "Double bottom breakout attempt above 74.46 over key moving averages on 3.16x volume expansion. Momentum is positive with RSI at 67, but microcap liquidity introduces erratic execution slippage.",
+        "technical": "Clearing an intermediate base within a Stage 2 trend, positioning above all major EMAs and SMAs. The breakout attempt is backed by heavy 3.16× volume expansion and positive MACD confirmation.",
         "epsGrowth": [
           "Q1 FY27 +503%",
-          "Q4 FY26 +3050%",
-          "Q3 FY26 -130%"
+          "Q4 FY26 >100%"
         ],
-        "revenueGrowth": "+41%",
-        "earningsTrend": "Decelerating",
+        "revenueGrowth": "+40%",
+        "earningsTrend": "Accelerating",
         "growthQualified": "Yes",
-        "fundamental": "Delivered sharp Q1 turnaround PAT of ₹9.1 Cr on ₹122 Cr revenue (+40.8% YoY). However, long-term fundamentals remain fragile with ROCE at 1.43%, negative ROE (-2.64%), and low interest coverage, falling short of elite institutional quality.",
-        "verdict": "Watch",
-        "risk": "A drop below 64.10 breaches the structural swing low and invalidates the base; exit immediately to manage risk."
+        "fundamental": "Explosive turnaround with Q1 FY27 net profit surging over 500% YoY to ₹9.12 crore and sales up 40%. However, low historical ROCE (1.43%) warrants scrutiny regarding earnings sustainability.",
+        "verdict": "Constructive",
+        "risk": "Thesis invalidates if price undercuts double bottom low; maintain hard stop at 64.10."
       },
       "ANANDRATHI": {
         "stage": "Stage 2 advancing",
-        "technical": "Constructive double bottom consolidation retesting the 2257.25 pivot above rising 50-day and 200-day SMAs. Volume expanding at 1.41x with RSI 56, demonstrating firm relative strength against a soft market backdrop.",
+        "technical": "Constructive double bottom consolidation above rising 21 EMA, 50 SMA, and 200 SMA. Volume expanded 1.41× on pivot approach, maintaining exceptional relative strength near all-time highs.",
         "epsGrowth": [
           "Q1 FY27 +24%",
-          "Q4 FY26 +41%",
-          "Q3 FY26 +32%"
+          "Q4 FY26 +25%",
+          "Q3 FY26 +33%"
         ],
         "revenueGrowth": "+18%",
-        "earningsTrend": "Decelerating",
+        "earningsTrend": "Steady",
         "growthQualified": "Partial",
-        "fundamental": "Premier wealth distributor with AUM crossing ₹1 lakh crore. Outstanding balance sheet strength with zero debt, ROCE of 57.5%, and ROE of 45.3%. Q1 FY27 PAT rose 24% YoY to ₹116 Cr, but EPS growth moderated from prior quarters.",
-        "verdict": "Watch",
-        "risk": "A break beneath 2168.14 invalidates the double bottom trough; mandatory stop execution prevents deeper drawdown."
+        "fundamental": "High-quality compounding fundamentals with AUM surpassing ₹1 lakh crore. Q1 FY27 PAT grew 23.5% YoY with 34% net margins, zero debt, and outstanding ROE above 40%.",
+        "verdict": "Constructive",
+        "risk": "Neckline rejection violates base symmetry; execute disciplined Minervini stop at 2168.14."
       },
       "ARROWGREEN": {
         "stage": "Stage 2 advancing",
-        "technical": "Textbook SEPA breakout into new 52-week highs at 884.73, clearing 20-session resistance on exceptional 9.82x volume. Price rides cleanly above rising moving averages, exhibiting powerful institutional demand.",
+        "technical": "High-velocity SEPA breakout printing new 52-week highs on explosive 9.82× 20-day average volume. Structural alignment is robust across all key moving averages with steep relative-strength outperformance.",
         "epsGrowth": [
-          "Q1 FY27 +152%",
-          "Q4 FY26 -35%",
-          "Q3 FY26 +56%"
+          "Q1 FY27 +184%",
+          "Q4 FY26 -25%",
+          "Q3 FY26 +30%"
         ],
         "revenueGrowth": "+111%",
         "earningsTrend": "Accelerating",
         "growthQualified": "Partial",
-        "fundamental": "High Tech anti-counterfeiting solutions drove explosive Q1 FY27 revenue growth (+111% YoY to ₹87.8 Cr) and net profit growth (+151% YoY to ₹27.4 Cr). Operating margins rebounded to 41.4% with ROCE reaching 29.6% and negligible debt.",
+        "fundamental": "Dramatic operational turnaround in Q1 FY27, with revenue jumping 111% YoY to ₹87.8 crore and standalone PAT leaping 184%. Return ratios are superior with ROE near 40% and negligible debt.",
         "verdict": "Constructive",
-        "risk": "A close below 800.89 shatters the breakout bar; stop out immediately to preserve capital against false breakout risk."
+        "risk": "Breakout failure below the breakout bar low terminates trade; enforce stop at 800.89."
       }
     }
   },
@@ -365,6 +362,11 @@
     },
     {
       "sessionDate": "2026-09-17",
+      "gate": "WEAK",
+      "verdict": "No new buys. Observe and protect capital."
+    },
+    {
+      "sessionDate": "2026-09-18",
       "gate": "WEAK",
       "verdict": "No new buys. Observe and protect capital."
     }
