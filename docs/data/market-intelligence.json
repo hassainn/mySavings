@@ -1,139 +1,136 @@
 {
   "status": "live",
   "method": "gemini-grounded",
-  "generatedAt": "2026-09-17T14:17:55.731Z",
+  "generatedAt": "2026-09-18T08:15:35.194Z",
   "model": "gemini-3.8-flash",
   "marketDirection": {
     "direction": "Downtrend",
-    "changePct": 0.43,
-    "close": 23218,
-    "asOf": "2026-09-16",
+    "changePct": 0.23,
+    "close": 23271,
+    "asOf": "2026-09-17",
     "headline": "Indian market is under pressure today.",
     "reasons": [
       {
         "tag": "Index",
-        "text": "Nifty 50 closed +0.43% at 23,218, below its 20-DMA, below the 50-DMA (falling), below the 200-DMA."
+        "text": "Nifty 50 closed +0.23% at 23,271, below its 20-DMA, below the 50-DMA (falling), below the 200-DMA."
       },
       {
         "tag": "Trend",
-        "text": "The index is down 1.8% over the last five sessions — downtrend structure intact."
+        "text": "The index is down 0.7% over the last five sessions — downtrend structure intact."
       },
       {
         "tag": "Breadth",
-        "text": "Market breadth is defensive — 22.9% of scanned NSE stocks advancing, 32.8% above their 50-DMA."
+        "text": "Market breadth is cautious — 39.3% of scanned NSE stocks advancing, 32.7% above their 50-DMA."
       },
       {
         "tag": "Order win",
-        "text": "Triggers fresh volume interest near ₹390-₹395 support, reinforcing odds of a base-breakout continuation toward previous swing highs."
+        "text": "Triggers fresh buying interest at ascending base support, improving odds of a breakout toward retesting swing highs."
       },
       {
-        "tag": "Ownership",
-        "text": "Eases holding-level leadership overhang across Tata Group tickers, helping Trent defend its critical ₹2,700-₹2,730 support pocket."
+        "tag": "Other",
+        "text": "Capex commitment supports multi-week accumulation setup near moving average clusters on prospects of enhanced long-term reserve replacement."
       }
     ],
     "disclaimer": "A rules-based read of index price, market breadth and headline flow — not a forecast or trading advice."
   },
-  "marketMood": "Cautiously Bullish",
-  "marketSummary": "The Nifty 50 gained 53 points (+0.23%) to close at 23,270.60, while India VIX dropped 7.82% to 12.14, signalling volatility compression after the US Federal Reserve delivered an expected 25 bps rate hike. Domestic Institutional Investors provided strong liquidity support with net inflows of ₹3,908 crore against FII net sales of ₹2,032 crore. Sectoral leadership was led by Nifty Pharma (+1.66%), Nifty Realty (+1.45%), and a technical bounce in the Nifty India Defence index (+1.30%) following a five-session pullback.",
-  "dailyFocus": "Track base consolidation and volume expansion across large-cap Defence names (BEL, HAL) post fresh contract awards, alongside Pharma breakouts led by commercial product approvals. Watch Tata group counters following board decisions on the Tata Sons listing roadmap.",
+  "marketMood": "Cautiously Bullish / Range-bound Consolidation",
+  "marketSummary": "Nifty 50 trades marginally higher near 23,310–23,350 as easing Brent crude pressures and stable Asian market cues offset sustained FII distribution and overhead resistance at the 23,400 mark. Sectoral breadth remains constructive across broader midcaps, with defence PSUs, capital goods, and real estate spearheading base breakouts, while IT and select heavyweights exert counterbalancing drag.",
+  "dailyFocus": "Track execution follow-through and order-flow momentum in Defence (HAL, BEL) and Capital Goods (CGPOWER), while monitoring margin-compression stabilization in shipbuilding (COCHINSHIP) and consolidation support in Trent.",
   "sectors": [
     {
-      "name": "Pharmaceuticals & Healthcare",
+      "name": "Defence & Aerospace",
       "momentum": "Leading",
       "score": 84,
-      "reason": "Nifty Pharma surged 1.66% to 26,579.25, demonstrating sustained relative strength over the broader indices driven by proprietary formulation rollouts and defensive institutional allocations.",
+      "reason": "Sustained domestic procurement momentum, key platform deliveries (LCA Tejas/HTT-40), and steady electronics order inflows reinforce multi-week base breakout structures across tier-1 PSU names.",
       "catalysts": [
-        "First-in-India commercial launch of cenobamate (NeuCeno) by Alkem Labs",
-        "Broad-based buying across large caps like Dr. Reddy's and Gland Pharma",
-        "Defensive rotation amidst global interest rate reassessments"
+        "IAF delivery milestone ceremonies boosting execution visibility",
+        "Continuous fresh contract inflows from MoD"
       ],
       "risks": [
-        "US FDA inspection observations at key domestic manufacturing facilities",
-        "Currency volatility against the US Dollar"
+        "High multiples leading to sharp profit taking on operational delays",
+        "Subsystem import dependency"
       ],
       "relatedStocks": [
-        "ALKEM",
-        "DRREDDY",
-        "GLAND",
-        "CIPLA"
-      ]
-    },
-    {
-      "name": "Defence & Aerospace",
-      "momentum": "Improving",
-      "score": 77,
-      "reason": "Snapped a sharp five-session decline of 8.69% with a 1.30% rebound as fresh order announcements and the MoD's ₹1.10 lakh crore procurement pipeline brought institutional dip-buyers back to primary pivots.",
-      "catalysts": [
-        "BEL bagging ₹648 crore in fresh defence electronic and radar systems orders",
-        "MoD DAC Acceptance of Necessity pipeline exceeding ₹1.10 lakh crore",
-        "Delivery schedules for GE engines advancing HAL's Tejas Mk1A timeline"
-      ],
-      "risks": [
-        "Overhead supply from short-term trapped swing longs",
-        "Execution lags in lumpy multi-year defence supply contracts"
-      ],
-      "relatedStocks": [
-        "BEL",
         "HAL",
-        "COCHINSHIP",
-        "BDL"
+        "BEL",
+        "BDL",
+        "COCHINSHIP"
       ]
     },
     {
-      "name": "Realty & Infrastructure",
+      "name": "Capital Goods & Power Infrastructure",
       "momentum": "Improving",
-      "score": 72,
-      "reason": "Nifty Realty advanced 1.45%, staging a solid technical rebound off multi-week support bands on steady domestic pre-sales booking numbers.",
+      "score": 78,
+      "reason": "Heavy T&D equipment demand and national semiconductor rollout milestones (India Semiconductor Mission / Semicon 2026) keep electrical equipment leaders on constructive accumulation trajectories.",
       "catalysts": [
-        "Robust festive-quarter booking momentum across Tier-1 developers",
-        "Stabilisation in domestic borrowing costs as RBI tightening bets remain muted"
+        "Grid capex acceleration and transformer plant expansions",
+        "Commercial scaling of indigenous OSAT and packaging facilities"
       ],
       "risks": [
-        "Inventory pileup in high-end urban micro-markets",
-        "Rising land acquisition and construction input costs"
-      ],
-      "relatedStocks": [
-        "DLF",
-        "GODREJPROP",
-        "OBEROIRLTY"
-      ]
-    },
-    {
-      "name": "Capital Goods & Power Systems",
-      "momentum": "Mixed",
-      "score": 64,
-      "reason": "Heavy electrical and transmission players are attempting multi-day base formation near their 50-day moving averages, supported by domestic power capex.",
-      "catalysts": [
-        "SEMICON India traction and outsourced assembly investments",
-        "Substation and transformer capacity additions across state utilities"
-      ],
-      "risks": [
-        "High valuation multiples demanding flawless quarterly margin delivery",
-        "Global supply chain delays in specialised silicon components"
+        "Elevated commodity raw-material costs",
+        "Supply-chain lead times for specialized components"
       ],
       "relatedStocks": [
         "CGPOWER",
-        "BHEL",
+        "DIAPOWER",
         "SIEMENS"
       ]
     },
     {
-      "name": "Consumer Discretionary & Retail",
-      "momentum": "Weakening",
-      "score": 52,
-      "reason": "Frontline retail leaders remain trapped below intermediate exponential moving averages as the market digests multiple quarters of valuation expansion.",
+      "name": "Realty & Urban Development",
+      "momentum": "Improving",
+      "score": 72,
+      "reason": "Accelerating redevelopment project mandates across key metro clusters provide multi-year Gross Development Value (GDV) additions, maintaining sector outperformance.",
       "catalysts": [
-        "Store footprint addition in value-apparel formats heading into festive quarters",
-        "Bernstein reiterating long-term growth triggers in Tier-2/3 retail expansion"
+        "Large residential society redevelopment project additions",
+        "Strong pre-sales collections and inventory absorption"
       ],
       "risks": [
-        "Persistent trading below 50-DMA and 100-DMA moving averages",
-        "Discretionary demand moderation in mid-premium apparel segments"
+        "Local regulatory clearance timelines",
+        "Construction input cost inflation"
+      ],
+      "relatedStocks": [
+        "PURVA",
+        "BRIGADE",
+        "DLF"
+      ]
+    },
+    {
+      "name": "Oil & Gas / Energy",
+      "momentum": "Mixed",
+      "score": 58,
+      "reason": "Large multi-year upstream capex and renewable gas JVs are balanced against volatile international crude pricing and refining margin moderation.",
+      "catalysts": [
+        "Aggressive deepwater block exploration plans",
+        "Expansion into compressed biogas (CBG) joint ventures"
+      ],
+      "risks": [
+        "Crude oil price shocks",
+        "Offshore drilling execution hazards"
+      ],
+      "relatedStocks": [
+        "OIL",
+        "PETRONET",
+        "ONGC"
+      ]
+    },
+    {
+      "name": "Retail & Consumer Discretionary",
+      "momentum": "Mixed",
+      "score": 54,
+      "reason": "Selective institutional accumulation in high-growth fashion retail counters is counterweighted by sector-wide multiple compression and post-corporate action range consolidation.",
+      "catalysts": [
+        "Store footprint expansion across value-fashion and lifestyle concepts",
+        "Festive season demand pickup"
+      ],
+      "risks": [
+        "Same-store sales growth deceleration",
+        "Elevated price-to-earnings valuations requiring steady 20%+ compounding"
       ],
       "relatedStocks": [
         "TRENT",
-        "DMART",
-        "ABFRL"
+        "TITAN",
+        "DMART"
       ]
     }
   ],
@@ -141,144 +138,144 @@
     {
       "category": "stock",
       "symbol": "BEL",
-      "headline": "Bharat Electronics Secures ₹648 Crore Defence Orders for IR Jammers and AI Solutions",
-      "summary": "Navratna defence PSU Bharat Electronics announced under SEBI LODR Regulation 30 that it has secured additional orders worth ₹648 crore since August 26, 2026. The contracts encompass laser-based IR jammers, advanced communication equipment, AI-based software solutions, and transmitter-receiver modules, fortifying its standalone order backlog past ₹72,250 crore.",
+      "headline": "Bharat Electronics Bags Fresh Orders Worth Rs 648 Crore for Defence Electronics",
+      "summary": "Bharat Electronics Limited announced new order wins totaling Rs 648 crore covering defense electronic systems and allied supplies, further expanding its multi-year executable order pipeline.",
       "sentiment": "Positive",
       "importance": "High",
       "catalystType": "Order win",
-      "timeHorizon": "Today",
-      "impact": "Triggers fresh volume interest near ₹390-₹395 support, reinforcing odds of a base-breakout continuation toward previous swing highs.",
-      "sourceName": "Business Standard",
-      "sourceUrl": "https://www.business-standard.com/markets/news/bel-receives-orders-worth-rs-648-crore-126091700648_1.html",
-      "publishedAt": "2026-09-17T11:57:00Z"
+      "timeHorizon": "This week",
+      "impact": "Triggers fresh buying interest at ascending base support, improving odds of a breakout toward retesting swing highs.",
+      "sourceName": "Trendlyne",
+      "sourceUrl": "https://trendlyne.com/stock-market-today/",
+      "publishedAt": "2026-09-18T05:30:00Z"
     },
     {
       "category": "stock",
-      "symbol": "TRENT",
-      "headline": "Tata Sons Board Clears Listing Roadmap and Reappoints Chairman N Chandrasekaran",
-      "summary": "Tata Sons' board resolved by majority vote to approve a five-year term extension for Executive Chairman N Chandrasekaran until 2032 and cleared the company's mandatory listing roadmap, despite dissent recorded by Tata Trusts Chairman Noel Tata. The decision sparked buying across core Tata Group equities.",
+      "symbol": "OIL",
+      "headline": "Oil India Unveils Rs 15,000 Crore Three-Year Capex Program for Deepwater Exploration",
+      "summary": "The Chairperson of Oil India announced a capital expenditure blueprint of Rs 15,000 crore dedicated over the next three years to step up drilling in prospective deepwater offshore basins.",
       "sentiment": "Positive",
       "importance": "High",
-      "catalystType": "Ownership",
+      "catalystType": "Other",
       "timeHorizon": "This week",
-      "impact": "Eases holding-level leadership overhang across Tata Group tickers, helping Trent defend its critical ₹2,700-₹2,730 support pocket.",
-      "sourceName": "Reuters",
-      "sourceUrl": "https://www.reuters.com/world/india/tata-sons-board-approves-fresh-five-year-term-chairman-chandrasekaran-source-2026-09-17/",
-      "publishedAt": "2026-09-17T11:36:00Z"
-    },
-    {
-      "category": "market",
-      "symbol": "NSE",
-      "headline": "NSE Opens ₹22,562 Crore Public Issue with Anchor Allocation of ₹6,250 Crore",
-      "summary": "The National Stock Exchange of India opened its landmark ₹22,561.57 crore IPO for subscription from September 17 to September 21, 2026, in a price band of ₹1,700-₹1,785 per share via 100% OFS. The anchor book closed at over ₹6,250 crore with institutional participation, including a ₹450 crore allocation to LIC, while tentative BSE listing is scheduled for September 24.",
-      "sentiment": "Positive",
-      "importance": "High",
-      "catalystType": "Corporate action",
-      "timeHorizon": "This week",
-      "impact": "Heightens liquidity rotation into capital market proxies and exchange-linked financials while anchoring broad market risk appetite.",
-      "sourceName": "The Economic Times",
-      "sourceUrl": "https://economictimes.indiatimes.com/markets/ipos/fpos/nse-ipo-opens-today-anchor-book-lic-allotment/articleshow/133801245.cms",
-      "publishedAt": "2026-09-17T10:55:00Z"
+      "impact": "Capex commitment supports multi-week accumulation setup near moving average clusters on prospects of enhanced long-term reserve replacement.",
+      "sourceName": "Trendlyne",
+      "sourceUrl": "https://trendlyne.com/stock-market-today/",
+      "publishedAt": "2026-09-18T05:30:00Z"
     },
     {
       "category": "stock",
       "symbol": "HAL",
-      "headline": "Hindustan Aeronautics Bounces 1.5% as MoD Procurement Drive Counters Execution Lags",
-      "summary": "Hindustan Aeronautics shares gained 1.5% to ₹4,940 on September 17, participating in a broader defence pullback. Sentiment was bolstered by the Defence Acquisition Council's ₹1.10 lakh crore Acceptance of Necessity sanction and progress on GE Aerospace F404 engine shipments supporting the Tejas Mk1A programme.",
+      "headline": "HAL Hands Over LCA Tejas Trainers, HTT-40 and Dhruv NG Helicopters in Major Induction Event",
+      "summary": "Hindustan Aeronautics Limited transfers Tejas FOC twin-seater trainers and initial HTT-40 basic trainer aircraft to the IAF, alongside Dhruv NG units to Pawan Hans, proving key delivery milestones under MoD contracts.",
       "sentiment": "Positive",
       "importance": "High",
-      "catalystType": "Order win",
-      "timeHorizon": "This week",
-      "impact": "Stock confirms an undercut-and-rally off the ₹4,800 demand line; clearing ₹5,050 resistance opens room for a base completion setup.",
-      "sourceName": "Business Standard",
-      "sourceUrl": "https://www.business-standard.com/markets/news/defence-stocks-rebound-hal-bel-gain-126091700432_1.html",
-      "publishedAt": "2026-09-17T09:18:00Z"
-    },
-    {
-      "category": "stock",
-      "symbol": "ALKEM",
-      "headline": "Alkem Laboratories Launches Novel Anti-Seizure Drug NeuCeno in India",
-      "summary": "Alkem Laboratories rolled out NeuCeno (cenobamate) across India for the management of partial-onset seizures in adults. Cenobamate is introduced for the first time domestically, with trial data indicating up to a 78% reduction in seizure frequency and 30% seizure freedom in maintenance phases.",
-      "sentiment": "Positive",
-      "importance": "High",
-      "catalystType": "Corporate action",
-      "timeHorizon": "Today",
-      "impact": "Drives momentum breakout in Alkem (+3.35%) and pulls peers higher, confirming pharmaceutical sector leadership.",
-      "sourceName": "Business Standard",
-      "sourceUrl": "https://www.business-standard.com/markets/capital-market-news/alkem-launches-anti-seizure-medication-neuceno-in-india-126091600987_1.html",
-      "publishedAt": "2026-09-16T12:20:00Z"
-    },
-    {
-      "category": "market",
-      "symbol": "NIFTY50",
-      "headline": "India VIX Slumps 7.8% to 12.14 as US Fed Delivers 25 bps Hike with Moderate Stance",
-      "summary": "NSE India VIX dropped 7.82% to 12.14 on September 17 after the US Federal Reserve raised the target policy rate by 25 bps to 3.75%-4.00%. The Nifty 50 absorbed initial volatility to settle above 23,270, underpinned by persistent domestic mutual fund net purchases of ₹3,908 crore.",
-      "sentiment": "Positive",
-      "importance": "Medium",
-      "catalystType": "Macro/flows",
-      "timeHorizon": "This week",
-      "impact": "Volatility crush reduces option premiums and creates a stable tape for multi-day swing breakout follow-throughs above 23,300.",
-      "sourceName": "Business Standard",
-      "sourceUrl": "https://www.business-standard.com/markets/capital-market-news/barometers-trade-sideways-nifty-ends-above-23250-126091700862_1.html",
-      "publishedAt": "2026-09-17T11:01:00Z"
-    },
-    {
-      "category": "sector",
-      "symbol": "NIFTYDEF",
-      "headline": "Nifty India Defence Index Gains 1.3% Snapping Five-Day Losing Streak",
-      "summary": "The Nifty India Defence index rebounded 1.30% to 9,248 on September 17, reversing a cumulative five-day drop of 8.69%. The rebound saw broad accumulation across Paras Defence (+4.5%), Data Patterns (+4.2%), BEML (+3.6%), and Bharat Electronics (+2.0%), reflecting institutional dip-buying at structural support.",
-      "sentiment": "Positive",
-      "importance": "Medium",
-      "catalystType": "Macro/flows",
-      "timeHorizon": "This week",
-      "impact": "Halts aggressive distribution across Tier-1 defence charts, enabling swing traders to look for right-side base development.",
-      "sourceName": "Business Standard",
-      "sourceUrl": "https://www.business-standard.com/markets/news/defence-stocks-slide-for-fifth-straight-session-126091600574_1.html",
-      "publishedAt": "2026-09-17T09:48:00Z"
-    },
-    {
-      "category": "stock",
-      "symbol": "CGPOWER",
-      "headline": "CG Power Rallies 3.5% Towards 50-DMA Ahead of Institutional Meet on September 25",
-      "summary": "CG Power and Industrial Solutions jumped 3.48% intraday to touch ₹883.45 on heavy turnover, outperforming benchmark capital goods peers. In an exchange disclosure under SEBI LODR Regulation 30, the company scheduled a one-on-one institutional investor meet organised by IIFL Institutional Equities for September 25, 2026.",
-      "sentiment": "Positive",
-      "importance": "Medium",
       "catalystType": "Other",
-      "timeHorizon": "Watch",
-      "impact": "Approaching key resistance near ₹900; institutional interaction scheduled for September 25 could determine the breakout follow-through.",
-      "sourceName": "Mint",
-      "sourceUrl": "https://www.livemint.com/market/mark-to-market/cg-power-industrial-solutions-shares-rally-technical-test-11789145201.html",
-      "publishedAt": "2026-09-17T08:30:00Z"
+      "timeHorizon": "Today",
+      "impact": "Validates manufacturing turnaround cadence, providing momentum traders a concrete fundamental cushion above key moving averages.",
+      "sourceName": "The Economic Times",
+      "sourceUrl": "https://economictimes.indiatimes.com/news/defence/hal-to-hand-over-tejas-trainers-htt-40-aircraft-and-dhruv-ng-helicopters-to-iaf-pawan-hans/articleshow/134308967.cms",
+      "publishedAt": "2026-09-17T10:33:10Z"
     },
     {
       "category": "stock",
       "symbol": "COCHINSHIP",
-      "headline": "Cochin Shipyard Stabilises Ahead of September 18 Ex-Dividend Cut-Off",
-      "summary": "Cochin Shipyard held above ₹1,480 on September 17, the final day for investors under the T+1 settlement regime to secure eligibility for the company's ₹1.50 per share dividend (record date: Friday, September 18, 2026). The counter saw bottom-fishing after falling over 11% in the prior 30 sessions.",
-      "sentiment": "Neutral",
+      "headline": "Cochin Shipyard Faces Selling Pressure After Guidance Signals Margin Moderation",
+      "summary": "Shares of Cochin Shipyard slipped following management remarks pointing to normalized EBITDA margin targets over the next two financial years, despite steady order backlog and Drydocks World ship-repair JV potential.",
+      "sentiment": "Negative",
+      "importance": "High",
+      "catalystType": "Guidance",
+      "timeHorizon": "This week",
+      "impact": "Breaks minor pivot support; swing setups require patient watch until base building and volume absorption emerge at lower demand zones.",
+      "sourceName": "The Economic Times",
+      "sourceUrl": "https://economictimes.indiatimes.com",
+      "publishedAt": "2026-09-17T06:00:00Z"
+    },
+    {
+      "category": "stock",
+      "symbol": "PURVA",
+      "headline": "Puravankara Secures Society Redevelopment Mandates with Rs 2,600 Crore GDV",
+      "summary": "Puravankara Limited won redevelopment execution rights for three housing societies carrying an estimated Gross Development Value (GDV) of Rs 2,600 crore, significantly expanding its Mumbai footprint.",
+      "sentiment": "Positive",
+      "importance": "High",
+      "catalystType": "Order win",
+      "timeHorizon": "This week",
+      "impact": "Substantial GDV expansion enhances chart setup for a range-breakout attempt above recent consolidation highs.",
+      "sourceName": "Trendlyne",
+      "sourceUrl": "https://trendlyne.com/stock-market-today/",
+      "publishedAt": "2026-09-17T04:30:00Z"
+    },
+    {
+      "category": "stock",
+      "symbol": "PETRONET",
+      "headline": "Petronet LNG to Establish Compressed Biogas JV with Gruner Renewable with Rs 1,200 Cr Outlay",
+      "summary": "Petronet LNG plans to form a joint venture with Gruner Renewable to set up 10 Compressed Biogas (CBG) processing plants entailing an estimated capital expenditure of Rs 1,200 crore.",
+      "sentiment": "Positive",
       "importance": "Medium",
-      "catalystType": "Corporate action",
-      "timeHorizon": "Today",
-      "impact": "Ex-dividend price adjustment on September 18 will test whether the ₹1,450-₹1,475 shelf can serve as the launchpad for a multi-week cup pattern.",
-      "sourceName": "Business Standard",
-      "sourceUrl": "https://www.business-standard.com/markets/news/defence-stocks-slide-for-fifth-straight-session-126091600574_1.html",
-      "publishedAt": "2026-09-16T08:01:00Z"
+      "catalystType": "Other",
+      "timeHorizon": "Watch",
+      "impact": "Green energy diversification provides medium-term thematic tailwind without disturbing immediate technical range boundaries.",
+      "sourceName": "Trendlyne",
+      "sourceUrl": "https://trendlyne.com/stock-market-today/",
+      "publishedAt": "2026-09-18T05:30:00Z"
     },
     {
       "category": "market",
-      "symbol": "ECONOMY",
-      "headline": "Union Cabinet Raises Mandatory EPFO Wage Ceiling to ₹25,000 Per Month",
-      "summary": "The Union Cabinet approved increasing the statutory wage ceiling for mandatory Employees' Provident Fund Organisation coverage from ₹15,000 to ₹25,000 per month, effective September 17, 2026. The reform brings over 51 lakh formal sector workers into statutory retirement and insurance coverage.",
+      "symbol": "NIFTY",
+      "headline": "Nifty 50 Faces Stiff Resistance Around 23,400 Level Amid Mixed Global Cues",
+      "summary": "Nifty opened positively above 23,330 before encountering intraday resistance around 23,400, reflecting rangebound derivative positioning ahead of key central bank policy decisions.",
+      "sentiment": "Neutral",
+      "importance": "Medium",
+      "catalystType": "Macro/flows",
+      "timeHorizon": "Today",
+      "impact": "Capped upside on the benchmark favors selective stock-specific breakout setups over aggressive index long swings.",
+      "sourceName": "TradingView",
+      "sourceUrl": "https://www.tradingview.com",
+      "publishedAt": "2026-09-17T22:41:00Z"
+    },
+    {
+      "category": "stock",
+      "symbol": "EMAMILTD",
+      "headline": "Emami Board Approves Rs 282 Crore Equity Share Buyback",
+      "summary": "FMCG major Emami announced that its board has formally approved a share buyback program aggregating up to Rs 282 crore for 59.4 lakh equity shares via the tender route.",
       "sentiment": "Positive",
-      "importance": "Low",
-      "catalystType": "Regulatory",
+      "importance": "Medium",
+      "catalystType": "Corporate action",
+      "timeHorizon": "This week",
+      "impact": "Buyback floor price provides immediate downside support, stabilizing the stock for a potential reversal swing off horizontal support.",
+      "sourceName": "Trendlyne",
+      "sourceUrl": "https://trendlyne.com/stock-market-today/",
+      "publishedAt": "2026-09-17T14:30:00Z"
+    },
+    {
+      "category": "stock",
+      "symbol": "TRENT",
+      "headline": "Trent Consolidates Around Key Averages as Brokerages Reiterate Long-Term Multi-Driver Growth",
+      "summary": "Trent traded in a defined range near Rs 2,780–2,800 following its post-corporate action adjustment, supported by positive institutional research notes citing Westside and Zudio as twin earnings drivers.",
+      "sentiment": "Neutral",
+      "importance": "Medium",
+      "catalystType": "Rating change",
       "timeHorizon": "Watch",
-      "impact": "Long-term institutional tailwind for domestic contractual savings and retirement fund inflows into Indian equities, though immediate trading impact is muted.",
-      "sourceName": "Press Information Bureau",
-      "sourceUrl": "https://pib.gov.in/PressReleasePage.aspx?PRID=2055610",
-      "publishedAt": "2026-09-16T09:39:00Z"
+      "impact": "Tightening daily price action within a secondary consolidation base offers potential low-volatility swing contraction setups.",
+      "sourceName": "5paisa",
+      "sourceUrl": "https://www.5paisa.com",
+      "publishedAt": "2026-09-17T12:37:00Z"
+    },
+    {
+      "category": "stock",
+      "symbol": "CGPOWER",
+      "headline": "CG Power Highlights Semiconductor and Grid Equipment Expansion Amid Semicon India 2026",
+      "summary": "CG Power and Industrial Solutions gains industry attention at Semicon India 2026, driven by operational ramp-up at its Sanand OSAT joint venture and transformer plant capacity expansion at Sehore.",
+      "sentiment": "Positive",
+      "importance": "Medium",
+      "catalystType": "Other",
+      "timeHorizon": "This week",
+      "impact": "Maintains structural uptrend integrity within a broader multi-week rounding base, offering favourable risk-reward entries near support.",
+      "sourceName": "Business Today",
+      "sourceUrl": "https://www.businesstoday.in",
+      "publishedAt": "2026-09-17T08:00:00Z"
     }
   ],
-  "disclaimer": "This document is prepared solely for technical research and swing-trading discussion by Alpha Swing AI. It does not constitute investment advice, financial promotion, or a recommendation to buy, sell, or hold any security. Trading equities and derivatives involves substantial risk of capital loss.",
+  "disclaimer": "This intelligence summary is curated strictly for educational and swing-trading analytical purposes. It does not constitute investment advice, financial endorsement, or any recommendation to buy or sell securities. Traders must manage position sizes and risk strictly based on their individual trade plans.",
   "sources": []
 }
