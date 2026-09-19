@@ -786,9 +786,9 @@
     },
     {
       "sessionDate": "2026-09-19",
-      "generatedAt": "2026-09-19T16:44:47.658Z",
-      "gate": "WEAK",
-      "verdict": "No new buys. Observe and protect capital.",
+      "generatedAt": "2026-09-19T17:00:48.971Z",
+      "gate": "CAUTION",
+      "verdict": "Watch only. Wait for broader confirmation.",
       "ideas": [
         {
           "symbol": "AAREYDRUGS",
@@ -807,6 +807,25 @@
             "Within 1.5% of the 20-session pivot",
             "1.21× 20-day average volume",
             "MACD is above signal and zero line"
+          ]
+        },
+        {
+          "symbol": "ABCAPITAL",
+          "name": "Aditya Birla Capital",
+          "pattern": "Double bottom",
+          "confidence": 99,
+          "state": "Watch",
+          "scanState": "Armed",
+          "asOf": "2026-09-18T00:00:00+05:30",
+          "close": 410.05,
+          "entryTrigger": 431.13,
+          "stop": 410.13,
+          "target2R": 473.13,
+          "evidence": [
+            "Price above EMA21, SMA50 and SMA200",
+            "1.77× 20-day average volume",
+            "RSI 52 supports momentum without extreme extension",
+            "Two aligned swing lows with neckline pressure"
           ]
         },
         {
@@ -845,6 +864,25 @@
             "Close cleared the prior 20-session high",
             "New trailing-year price high",
             "2.87× 20-day average volume"
+          ]
+        },
+        {
+          "symbol": "ACMESOLAR",
+          "name": "ACME SOLAR HOLDINGS LTD",
+          "pattern": "SEPA breakout",
+          "confidence": 99,
+          "state": "Watch",
+          "scanState": "Triggered",
+          "asOf": "2026-09-18T00:00:00+05:30",
+          "close": 435.25,
+          "entryTrigger": 430.93,
+          "stop": 394.55,
+          "target2R": 503.69,
+          "evidence": [
+            "Price above EMA21, SMA50 and SMA200",
+            "Close cleared the prior 20-session high",
+            "New trailing-year price high",
+            "4.89× 20-day average volume"
           ]
         },
         {
@@ -903,44 +941,6 @@
             "RSI 62 supports momentum without extreme extension",
             "MACD is above signal and zero line"
           ]
-        },
-        {
-          "symbol": "ALIVUS",
-          "name": "Glenmark Life Science",
-          "pattern": "Double bottom",
-          "confidence": 99,
-          "state": "Watch",
-          "scanState": "Armed",
-          "asOf": "2026-09-18T00:00:00+05:30",
-          "close": 1430.8,
-          "entryTrigger": 1495.29,
-          "stop": 1374.84,
-          "target2R": 1736.21,
-          "evidence": [
-            "Price above EMA21, SMA50 and SMA200",
-            "1.67× 20-day average volume",
-            "RSI 61 supports momentum without extreme extension",
-            "Two aligned swing lows with neckline pressure"
-          ]
-        },
-        {
-          "symbol": "ANUHPHR",
-          "name": "ANUH PHARMA LIMITED",
-          "pattern": "Double bottom",
-          "confidence": 99,
-          "state": "Watch",
-          "scanState": "Armed",
-          "asOf": "2026-09-18T00:00:00+05:30",
-          "close": 93.48,
-          "entryTrigger": 99.6,
-          "stop": 88.43,
-          "target2R": 121.95,
-          "evidence": [
-            "Price above EMA21, SMA50 and SMA200",
-            "RSI 62 supports momentum without extreme extension",
-            "MACD is above signal and zero line",
-            "Two aligned swing lows with neckline pressure"
-          ]
         }
       ],
       "observations": [
@@ -977,12 +977,12 @@
         {
           "symbol": "BHAGYANGR",
           "previousState": "Watch",
-          "observation": "No newer scan observation; outcome unknown."
+          "observation": "Latest scanned close 446.7; scanner state Armed. This is not an executed trade or an intraday stop/target check."
         },
         {
           "symbol": "BIRLACABLE",
           "previousState": "Watch",
-          "observation": "No newer scan observation; outcome unknown."
+          "observation": "Latest scanned close 409.5; scanner state Armed. This is not an executed trade or an intraday stop/target check."
         }
       ]
     }
