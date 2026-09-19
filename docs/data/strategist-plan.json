@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-09-18T17:17:17.674Z",
-  "sessionDate": "2026-09-18",
+  "generatedAt": "2026-09-19T08:53:39.097Z",
+  "sessionDate": "2026-09-19",
   "status": "ready",
   "scanGeneratedAt": "2026-09-18T17:17:00.778Z",
   "gate": "WEAK",
@@ -199,47 +199,47 @@
     {
       "symbol": "AAREYDRUGS",
       "previousState": "Watch",
-      "observation": "Latest scanned close 101.72; scanner state Triggered. This is not an executed trade or an intraday stop/target check."
+      "observation": "No newer scan observation; outcome unknown."
     },
     {
       "symbol": "ACE",
       "previousState": "Watch",
-      "observation": "Latest scanned close 1205.6; scanner state Triggered. This is not an executed trade or an intraday stop/target check."
+      "observation": "No newer scan observation; outcome unknown."
     },
     {
-      "symbol": "AEGISLOG",
+      "symbol": "ANUHPHR",
       "previousState": "Watch",
       "observation": "No newer scan observation; outcome unknown."
     },
     {
-      "symbol": "AMDIND",
+      "symbol": "AONELIQUID",
       "previousState": "Watch",
       "observation": "No newer scan observation; outcome unknown."
     },
     {
-      "symbol": "ANANDRATHI",
+      "symbol": "ARTEMISMED",
       "previousState": "Watch",
       "observation": "No newer scan observation; outcome unknown."
     },
     {
-      "symbol": "ARROWGREEN",
+      "symbol": "BBTCL",
       "previousState": "Watch",
-      "observation": "Latest scanned close 902.5; scanner state Armed. This is not an executed trade or an intraday stop/target check."
+      "observation": "No newer scan observation; outcome unknown."
     },
     {
       "symbol": "BHAGYANGR",
       "previousState": "Watch",
-      "observation": "Latest scanned close 446.5; scanner state Triggered. This is not an executed trade or an intraday stop/target check."
+      "observation": "No newer scan observation; outcome unknown."
     },
     {
-      "symbol": "BIL",
+      "symbol": "BIRLACABLE",
       "previousState": "Watch",
-      "observation": "Latest scanned close 1023.45; scanner state Caution. This is not an executed trade or an intraday stop/target check."
+      "observation": "No newer scan observation; outcome unknown."
     }
   ],
-  "previousSession": "2026-09-17",
-  "intelligenceGeneratedAt": "2026-09-18T13:36:23.800Z",
-  "commentary": "Market breadth remains defensive at 43 with the scanner gate flagged as WEAK, demanding strict adherence to William O'Neil’s market-direction discipline: never force exposure when the general market lacks confirmed uptrend thrust. Stan Weinstein’s stage framework teaches that sustainable breakouts require a rising institutional tide, not isolated micro-cap spurts. While the benchmark index holds above 23,300 support and volatility subsides, Jesse Livermore’s rule must govern—sit tight and preserve capital until genuine leadership asserts itself. Exposure should remain strictly progressive, restricted to elite Stage 2 bases showing confirmed CANSLIM earnings acceleration, while adhering to unwavering stop discipline.",
+  "previousSession": "2026-09-18",
+  "intelligenceGeneratedAt": "2026-09-19T08:53:02.515Z",
+  "commentary": "Market breadth remains fragile at 43 with a WEAK deterministic gate, demanding strict adherence to O'Neil and Weinstein market-direction rules. While the Nifty 50 stabilizes above the 23,200 support zone with net institutional buying, poor broader participation implies elevated failure rates for traditional pivot breakouts. In this environment, Stan Weinstein's Stage discipline permits only elite Stage 2 advancing names with verifiable relative strength, while William O'Neil’s CANSLIM method commands progressive exposure and capital defense. Until market breadth confirms a sustained accumulation regime, traders must reject non-equity instruments and earnings laggards, reserving active focus strictly for setups supported by verified institutional volume and accelerating bottom-line growth.",
   "commentaryStatus": "available",
   "limitations": [
     "Daily scan observations are not fills or performance results.",
@@ -248,95 +248,93 @@
   ],
   "model": "gemini-3.8-flash",
   "analysis": {
-    "analyst": "Minervini SEPA, O'Neil CANSLIM, Weinstein Stage Analysis & Livermore Discipline",
+    "analyst": "Minervini SEPA, O'Neil CANSLIM & Weinstein Stage Analysis",
     "bySymbol": {
       "AAREYDRUGS": {
         "stage": "Stage 2 advancing",
-        "technical": "Clearing prior 20-day high to notch fresh 52-week highs above rising 21-day EMA, 50-day SMA, and 200-day SMA. However, historical moves exhibit sharp churn without tight VCP structural symmetry.",
+        "technical": "Cleared its 20-session high to reach fresh 52-week peaks above rising EMA21, SMA50, and SMA200 with positive MACD. However, the absence of strong volume expansion signals speculative retail momentum rather than institutional accumulation.",
         "epsGrowth": [
-          "Q1 FY27 -26%",
-          "Q4 FY26 +44%",
-          "Q3 FY26 -46%"
+          "Q1 FY27 -25.6%"
         ],
-        "revenueGrowth": "-56%",
-        "earningsTrend": "Negative",
+        "revenueGrowth": "-56.3%",
+        "earningsTrend": "Decelerating",
         "growthQualified": "No",
-        "fundamental": "API and chemical trading player showing severe topline contraction (-56% YoY) with razor-thin operating margins (~2%) and subdued ROE (2.8%). Low interest coverage and erratic profitability fail CANSLIM investment-grade standards.",
+        "fundamental": "Fundamentals deteriorate with Q1 FY27 sales dropping 56.3% YoY and standalone PAT falling 25.6%. Thin operating margins (~0.6%) and low ROE (~3.0%) thoroughly violate CANSLIM standards.",
         "verdict": "Watch",
-        "risk": "Thesis fails on a drop below the 92.51 stop; breakdown through the 50-day moving average mandates immediate liquidation."
+        "risk": "Fails on a drop below the 92.51 stop level. Minervini discipline mandates immediate cutting of losses given deteriorating underlying business fundamentals."
       },
       "ACE": {
         "stage": "Stage 2 advancing",
-        "technical": "Textbook SEPA breakout clearing 20-day resistance on 2.26× volume expansion to fresh highs. Meets all 8 Minervini Trend Template criteria with moving averages stacked constructively in sequence.",
+        "technical": "Textbook SEPA breakout clearing 20-session highs on heavy 2.26× average volume to hit new 52-week highs. Price holds cleanly above rising 21, 50, and 200-day moving averages, confirming strong relative strength.",
         "epsGrowth": [
-          "Q1 FY27 +22%",
-          "Q4 FY26 +27%",
-          "Q3 FY26 +26%"
+          "Q1 FY27 +22.3%",
+          "Q4 FY26 -6.5%",
+          "Q3 FY26 +4.2%"
         ],
-        "revenueGrowth": "+21%",
-        "earningsTrend": "Steady",
+        "revenueGrowth": "+20.5%",
+        "earningsTrend": "Accelerating",
         "growthQualified": "Partial",
-        "fundamental": "Dominant mobile crane leader (~63% market share) delivering consistent 20%+ sales and net profit growth. Strong balance sheet with minimal debt, 22.8% ROE, and 31.6% ROCE provide solid CANSLIM credentials.",
+        "fundamental": "Solid turnaround in growth with Q1 FY27 revenue up 20.5% and PAT up 22.3% YoY. Holds dominant domestic market share (60%+ in cranes), an almost debt-free balance sheet, and robust 31.6% ROCE.",
         "verdict": "Constructive",
-        "risk": "Breakout fails below 1108.84 stop; violation of the 21-day EMA on heavy volume requires prompt risk reduction."
+        "risk": "Thesis invalidates below the 1108.84 stop level. Honor the stop promptly if volume falters amid general market weakness."
       },
       "ANUHPHR": {
         "stage": "Stage 2 advancing",
-        "technical": "Constructing a double-bottom pattern above the rising 21 EMA, 50 SMA, and 200 SMA. Volume expanded 1.16× on the turn, though upper-wick resistance reflects lingering overhead supply.",
+        "technical": "Constructing a double-bottom base above its 21-day EMA, 50-day SMA, and 200-day SMA with RSI at 62. Volume is modestly supportive at 1.16×, though decisive high-volume clearance of overhead supply remains pending.",
         "epsGrowth": [
-          "Q1 FY27 +38%",
-          "Q4 FY26 -6%",
-          "Q3 FY26 -15%"
+          "Q1 FY27 +37.6%",
+          "Q4 FY26 -6.2%",
+          "Q3 FY26 +30.1%"
         ],
-        "revenueGrowth": "+4%",
+        "revenueGrowth": "+3.9%",
         "earningsTrend": "Accelerating",
-        "growthQualified": "Partial",
-        "fundamental": "Q1 FY27 net profit rebounded sharply (+38% YoY), but topline growth remains sluggish at +4%. ROCE sits around 15% with zero debt, yet multi-quarter sales momentum is not fully established.",
+        "growthQualified": "No",
+        "fundamental": "Q1 FY27 PAT accelerated +37.6% YoY on margin expansion, though revenue grew only 3.9%. Zero debt, 71.8% promoter holding, and 19.2% ROCE provide support, but subdued sales growth caps CANSLIM qualification.",
         "verdict": "Watch",
-        "risk": "Setup invalidates if price slips below the 88.33 stop; close below the 50-day SMA voids the double-bottom base."
+        "risk": "Violated on a breakdown below the 88.33 support pivot. Exit immediately if price loses the 50-day moving average."
       },
       "AONELIQUID": {
         "stage": "Unclear",
-        "technical": "Displays nominal staircase ticks typical of overnight cash repo instruments. Lacks genuine equity volatility, consolidation structure, and institutional accumulation characteristics required for SEPA or Darvas breakout trading.",
+        "technical": "Price exhibits linear daily drift reflecting accrued overnight interest rather than an equity supply-demand dynamic. SEPA trend templates, base patterns, and breakout rules do not apply to liquid debt funds.",
         "epsGrowth": [
           "not verified"
         ],
         "revenueGrowth": "not verified",
         "earningsTrend": "Not verified",
-        "growthQualified": "No",
-        "fundamental": "Angel One Nifty 1D Rate Liquid ETF is a debt-based money-market fund tracking overnight collateralized borrowing rates. Equities-based CANSLIM growth, EPS, sales margins, and ROE metrics are completely inapplicable.",
+        "growthQualified": "Not verified",
+        "fundamental": "Not an operating equity; this is an Angel One mutual fund ETF investing in overnight tri-party repos (TREPS). Standard CANSLIM metrics (EPS, sales growth, ROCE, margins) are not applicable.",
         "verdict": "Avoid",
-        "risk": "Not an equity candidate. Instrument stop at 1077.66 reflects cash NAV management, not tradable equity momentum."
+        "risk": "Risk is opportunity cost and equity cash-drag rather than principal volatility. Not suitable for momentum or trend-following equity strategies."
       },
       "ARTEMISMED": {
         "stage": "Stage 2 advancing",
-        "technical": "Formed a textbook double bottom clearing neckline resistance with a strong bullish engulfing bar. Price is tracking above rising 21 EMA, 50 SMA, and 200 SMA with steady relative strength.",
+        "technical": "Resolving a double-bottom continuation structure above rising EMA21, SMA50, and SMA200. Formed a bullish engulfing reversal candle, signaling clean supply absorption around the 362.36 neckline pivot.",
         "epsGrowth": [
-          "Q1 FY27 +47%",
-          "Q4 FY26 +38%",
-          "Q3 FY26 +26%"
+          "Q1 FY27 +48.3%",
+          "Q4 FY26 +32.1%",
+          "Q3 FY26 +8.1%"
         ],
-        "revenueGrowth": "+15%",
+        "revenueGrowth": "+12.7%",
         "earningsTrend": "Accelerating",
-        "growthQualified": "Yes",
-        "fundamental": "Tertiary healthcare operator demonstrating pristine CANSLIM earnings acceleration from 26% to 47% alongside 15% revenue expansion. Net margins widened to 11% with manageable debt and solid backing from Apollo Tyres Group.",
+        "growthQualified": "Partial",
+        "fundamental": "Exceptional earnings acceleration over three straight quarters (+8% to +32% to +48%). Expansion driven by Gurugram ARPOB growth and international patient revenue, supported by low 0.2x leverage and 20%+ operating margins.",
         "verdict": "Leading",
-        "risk": "Pattern breaks down on a close below 332.85; failure to hold the 50-day average requires immediate discipline."
+        "risk": "Pattern fails if price drops under the 332.85 base stop. Enforce disciplined capital defense if broader market headwinds trigger an undercut."
       },
       "BBTCL": {
         "stage": "Stage 2 advancing",
-        "technical": "Double-bottom neckline retest holding above rising 21-day EMA, 50-day SMA, and 200-day SMA. However, recent candles reflect slight doji indecision near recent swing highs that requires volume absorption.",
+        "technical": "Forming a double-bottom base above the EMA21, SMA50, and SMA200 moving-average cluster. A three-candle reversal established support, though indecision candles at the 262.26 pivot indicate ongoing supply digestion.",
         "epsGrowth": [
-          "Q1 FY27 +652%",
-          "Q4 FY26 +396%",
-          "Q3 FY26 +25%"
+          "Q1 FY27 +512%",
+          "Q4 FY26 Turnaround",
+          "Q3 FY26 Turnaround"
         ],
-        "revenueGrowth": "+19%",
+        "revenueGrowth": "+19.0%",
         "earningsTrend": "Accelerating",
         "growthQualified": "Yes",
-        "fundamental": "Automated packaging manufacturer showing explosive earnings growth off base operational leverage. High promoter ownership (73.8%), zero promoter pledge, and healthy 18.2% ROE satisfy core CANSLIM institutional criteria.",
+        "fundamental": "Strong turnaround from FY25 losses into sustained profitability, with Q1 FY27 revenue rising 19% YoY and net profit soaring five-fold to ₹15.1 Cr. OPM expanded to ~18-19% with a healthy 14.5% ROCE.",
         "verdict": "Constructive",
-        "risk": "Base structure fails below 242.93 stop; exit if price undercuts the ascending 50-day SMA on heavy volume."
+        "risk": "Breaks down on a violation of the 242.93 support level. Minervini risk protocol requires prompt liquidation at the designated stop."
       }
     }
   },
@@ -368,6 +366,11 @@
     },
     {
       "sessionDate": "2026-09-18",
+      "gate": "WEAK",
+      "verdict": "No new buys. Observe and protect capital."
+    },
+    {
+      "sessionDate": "2026-09-19",
       "gate": "WEAK",
       "verdict": "No new buys. Observe and protect capital."
     }
