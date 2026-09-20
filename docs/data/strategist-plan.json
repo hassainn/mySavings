@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-09-20T09:23:24.772Z",
+  "generatedAt": "2026-09-20T09:26:42.292Z",
   "sessionDate": "2026-09-20",
   "status": "ready",
   "scanGeneratedAt": "2026-09-19T17:00:33.101Z",
@@ -239,7 +239,7 @@
   ],
   "previousSession": "2026-09-19",
   "intelligenceGeneratedAt": "2026-09-20T09:22:47.985Z",
-  "commentary": "With market breadth resting at a neutral 49 and the deterministic gate flashing CAUTION, Stan Weinstein's Stage discipline and William O'Neil's market-direction rules demand defensive vigilance. While major benchmarks consolidate above primary moving averages, underlying rotation is stark: capital is aggressively concentrating into domestic capex, engineering, and infrastructure themes while retail-heavy sectors face distribution. Under SEPA and CANSLIM tenets, a cautious market environment prohibits aggressive chasing and requires progressive exposure. We only engage Stage 2 setups exhibiting pristine volume accumulation and confirmed earnings acceleration, while enforcing immediate stop discipline to protect principal.",
+  "commentary": "With market breadth at 49% and the regime gate at CAUTION, the broader indices are navigating a rotational, choppy consolidation rather than an aggressive market-wide markup. Stan Weinstein's stage discipline warns against aggressive broad-based exposure when market participation is divided. William O'Neil's market-direction framework dictates a defensive, selective posture: employ progressive exposure and commit capital exclusively to elite Stage 2 leaders displaying verified EPS acceleration and heavy volume demand, while swiftly disqualifying lagging fundamentals and non-equity instruments. In cautious conditions, strict preservation of capital and tight stops take precedence over aggressive position sizing.",
   "commentaryStatus": "available",
   "limitations": [
     "Daily scan observations are not fills or performance results.",
@@ -248,93 +248,90 @@
   ],
   "model": "gemini-3.8-flash",
   "analysis": {
-    "analyst": "Minervini SEPA, O'Neil CANSLIM, Weinstein Stage Analysis & Darvas Box Disciplines",
+    "analyst": "Minervini SEPA, O'Neil CANSLIM & Weinstein Stage Analysis",
     "bySymbol": {
       "AAREYDRUGS": {
         "stage": "Stage 1 base",
-        "technical": "Consolidating near its 20-session pivot above rising EMA21, SMA50, and SMA200 on 1.21× volume. However, relative strength remains mediocre compared to broader market leaders, displaying erratic volume signatures without convincing institutional accumulation.",
+        "technical": "Price trades above its 21, 50, and 200-day moving averages, hovering within 1.5% of the 103.06 pivot on light 1.21x volume. While technically consolidating near 52-week highs, the setup lacks decisive institutional accumulation and demonstrates weak relative strength compared to industry leaders.",
         "epsGrowth": [
-          "Q1 FY27 -25%",
-          "Q4 FY26 +232%",
-          "Q3 FY26 -15%"
+          "Q1 FY27 -26%",
+          "Q4 FY26 not verified"
         ],
         "revenueGrowth": "-56%",
         "earningsTrend": "Negative",
         "growthQualified": "No",
-        "fundamental": "Operating primarily in low-margin chemical and solvent trading, operating margins remain razor-thin at ~1.5% with poor ROE near 2.9%. Top-line contracted 56% YoY in Q1 FY27, while promoter holding has steadily declined to 37.7% without institutional support.",
+        "fundamental": "Severe CANSLIM deterioration. Standalone Q1 FY27 revenue sank 56.3% YoY to ₹44.63 Cr while net profit contracted 25.6% YoY to ₹1.02 Cr. Operating margins remain compressed at ~2.9% with a subdued ROCE of ~5.6%, leaving the elevated P/E without earnings support.",
         "verdict": "Avoid",
-        "risk": "A breakdown below the 94.11 pivot stop invalidates base stability; exit immediately to prevent severe capital erosion."
+        "risk": "Fails decisively below the 94.11 stop. Strict Minervini discipline mandates immediate liquidation if price breaks beneath base support."
       },
       "ABCAPITAL": {
         "stage": "Stage 2 advancing",
-        "technical": "Forming a constructive double-bottom base above rising EMA21, SMA50, and SMA200 moving averages, testing neckline resistance at 431.13. Volume expanded 1.77× on the right side of the pattern with an RSI of 52 confirming steady institutional accumulation.",
+        "technical": "Carving a constructive double-bottom base with neckline trigger pressure at 431.13. Volume is constructive at 1.77x average as price maintains solid footing above rising 21-day EMA, 50-day SMA, and 200-day SMA. RSI at 52 confirms healthy, unextended momentum.",
         "epsGrowth": [
           "Q1 FY27 +32%",
-          "Q4 FY26 +14%"
+          "Q4 FY26 +17%"
         ],
         "revenueGrowth": "+28%",
         "earningsTrend": "Accelerating",
         "growthQualified": "Partial",
-        "fundamental": "Aditya Birla Capital exhibits strong lending and NBFC momentum, reporting 28% YoY consolidated revenue growth and a 45% YoY jump in net profit (EPS up 32%). Recent capital raises have fortified solvency and balance-sheet capacity.",
+        "fundamental": "Solid top and bottom-line expansion with Q1 FY27 consolidated sales rising ~28% YoY and net profit expanding ~45% to ₹1,175 Cr. ROCE stands near 8.7%, financial leverage is stable with debt-to-equity near 4.9x, and promoter shares remain 100% unpledged.",
         "verdict": "Constructive",
-        "risk": "A violation of the swing pivot low at 410.13 negates the double-bottom pattern; cut losses strictly."
+        "risk": "Thesis invalidates below 410.13. Minervini rules require an immediate exit if the double-bottom pivot fails to hold on pullbacks."
       },
       "ABSLLIQUID": {
         "stage": "Unclear",
-        "technical": "Aditya Birla Sun Life CRISIL Liquid Overnight ETF is an overnight cash instrument pegged near NAV 1,000; classic chart breakout patterns, trend templates, and relative strength metrics are entirely inapplicable.",
+        "technical": "ABSLLIQUID is an overnight cash ETF, not an operating common stock. Technical moving average alignment around 1006 merely tracks linear overnight yield accrual rather than genuine institutional momentum, volume accumulation, or Stage 2 relative strength.",
         "epsGrowth": [
           "not verified"
         ],
         "revenueGrowth": "not verified",
         "earningsTrend": "Not verified",
         "growthQualified": "No",
-        "fundamental": "Passively managed debt ETF holding 1-day Tri-Party Repos (TREPS) to provide risk-free liquidity and trading margin collateral; it holds zero operating corporate equity fundamentals.",
+        "fundamental": "Fundamentally a cash equivalent tracking the CRISIL Liquid Overnight Index. Corporate financial parameters such as sales growth, quarterly EPS acceleration, operating margins, ROCE, and leverage are inapplicable to this money-market vehicle.",
         "verdict": "Avoid",
-        "risk": "Ineligible for equity breakout models; redeem cash units at par if allocated mistakenly, observing the 1,000.26 scanner floor."
+        "risk": "Negligible capital risk; exit below 1000.26 stop. Inappropriate candidate for growth, momentum, or CANSLIM breakout strategies."
       },
       "ACE": {
         "stage": "Stage 2 advancing",
-        "technical": "Displays a textbook SEPA breakout clearing 20-session resistance to mark fresh trailing-year highs on 2.87× volume. The stock trades in clean alignment above rising EMA21, SMA50, and SMA200 moving averages, demonstrating market leadership relative strength.",
+        "technical": "Displays a textbook SEPA Stage 2 breakout to new trailing-year highs at 1214.41 on 2.87x volume. Decisive clearance of the prior 20-session high above ascending 21, 50, and 200-day moving averages demonstrates dominant relative strength and institutional accumulation.",
         "epsGrowth": [
           "Q1 FY27 +22%",
-          "Q4 FY26 +1%"
+          "Q4 FY26 +4%"
         ],
-        "revenueGrowth": "+19%",
+        "revenueGrowth": "+20%",
         "earningsTrend": "Accelerating",
         "growthQualified": "Partial",
-        "fundamental": "World leader in pick-and-carry cranes benefiting from surging domestic industrial capex. Q1 FY27 revenue grew 19% YoY with net profit up 22.3% and EBITDA margins near 20%; boasts a virtually debt-free balance sheet and >25% return ratios.",
+        "fundamental": "Dominant mobile crane manufacturer holding ~63% domestic market share. Q1 FY27 revenue rose 20.5% YoY to ₹786 Cr, driving PAT up 22.3% YoY to ₹119.5 Cr. Balance sheet is virtually debt-free with superior capital efficiency (ROCE 31.6%, ROE 22.8%).",
         "verdict": "Constructive",
-        "risk": "A reversal closing below the 1123.57 breakout base invalidates institutional sponsorship; execute an immediate loss cut."
+        "risk": "Breakout fails below 1123.57. Minervini discipline requires prompt liquidation if the breakout gives way to heavy selling volume."
       },
       "ACMESOLAR": {
         "stage": "Stage 2 advancing",
-        "technical": "High-momentum SEPA breakout clearing prior 20-session highs to establish a new trailing-year peak on explosive 4.89× volume. Price structure sits comfortably above rising EMA21, SMA50, and SMA200 averages, signaling aggressive institutional buying.",
+        "technical": "High-velocity SEPA breakout to new 52-week highs at 430.93 powered by exceptional 4.89x volume. Price cleared overhead resistance cleanly, positioned well above its rising EMA21, SMA50, and SMA200, signaling powerful institutional sponsorship.",
         "epsGrowth": [
-          "Q1 FY27 +55%",
-          "Q4 FY26 +13%",
-          "Q3 FY26 +2%"
+          "Q1 FY27 +72%",
+          "Q4 FY26 -3%"
         ],
         "revenueGrowth": "+68%",
         "earningsTrend": "Accelerating",
         "growthQualified": "Partial",
-        "fundamental": "Renewable IPP scaling operational capacity; Q1 FY27 revenue leaped 68% YoY with PAT surging 80% (EPS +55%) driven by new BESS commercialization. High operating margins buffer the capital-intensive debt profile typical of green utility developers.",
+        "fundamental": "Renewable IPP showing rapid operational expansion. Q1 FY27 revenue surged 67.8% YoY to ₹858 Cr as net profit jumped 80% to ₹235 Cr. Operating margins exceeded 80%; though leverage remains elevated due to utility capex, battery storage expansion is driving momentum.",
         "verdict": "Constructive",
-        "risk": "A fall below the 394.55 breakout pivot invalidates the momentum thrust; exit promptly to avoid sharp pullback drawdowns."
+        "risk": "Setup invalidates below 394.55. Cut losses immediately if price falls back inside the pivot base on distribution."
       },
       "ACUTAAS": {
         "stage": "Stage 2 advancing",
-        "technical": "Tight consolidation within 1.5% of its 20-session pivot at 3743.74, trending smoothly above rising EMA21, SMA50, and SMA200 lines. Volume expanded 1.81× with an RSI of 58 reflecting steady base-building without overhead extension.",
+        "technical": "Robust Stage 2 structure tightly coiled within 1.5% of its 3743.74 pivot on 1.81x volume. Price holds smoothly above upward-sloping EMA21, SMA50, and SMA200. RSI at 58 reflects unexhausted upside momentum and outstanding sector relative strength.",
         "epsGrowth": [
           "Q1 FY27 +68%",
-          "Q4 FY26 +197%",
-          "Q3 FY26 +106%"
+          "Q4 FY26 +41%"
         ],
-        "revenueGrowth": "+59%",
-        "earningsTrend": "Decelerating",
+        "revenueGrowth": "+60%",
+        "earningsTrend": "Accelerating",
         "growthQualified": "Yes",
-        "fundamental": "Specialty chemicals manufacturer (formerly Ami Organics) expanding into CDMO, semiconductor, and battery electrolyte chemistry. Boasts solid ROCE >30% and ~36% operating margins, but YoY EPS growth rate decelerated from Q4's extreme peak.",
-        "verdict": "Watch",
-        "risk": "Failure to hold support at 3495.75 terminates the near-breakout pattern; cut losses strictly under SEPA risk-management discipline."
+        "fundamental": "Exemplary CANSLIM fundamentals. Q1 FY27 EPS surged 67.7% YoY to ₹9.07 following a 40.8% rise in Q4, alongside 59.9% sales growth to ₹331 Cr. Maintains an elite operating profile with ~31% operating margin, 31.6% ROCE, 24% ROE, and a net-cash balance sheet.",
+        "verdict": "Leading",
+        "risk": "Thesis invalidates below 3495.75. Minervini discipline mandates cutting the position without hesitation if pivot support breaks."
       }
     }
   },
