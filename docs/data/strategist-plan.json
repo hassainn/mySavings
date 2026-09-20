@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-09-19T17:00:48.971Z",
-  "sessionDate": "2026-09-19",
+  "generatedAt": "2026-09-20T09:23:24.772Z",
+  "sessionDate": "2026-09-20",
   "status": "ready",
   "scanGeneratedAt": "2026-09-19T17:00:33.101Z",
   "gate": "CAUTION",
@@ -199,47 +199,47 @@
     {
       "symbol": "AAREYDRUGS",
       "previousState": "Watch",
-      "observation": "Latest scanned close 102.13; scanner state Armed. This is not an executed trade or an intraday stop/target check."
+      "observation": "No newer scan observation; outcome unknown."
+    },
+    {
+      "symbol": "ABCAPITAL",
+      "previousState": "Watch",
+      "observation": "No newer scan observation; outcome unknown."
+    },
+    {
+      "symbol": "ABSLLIQUID",
+      "previousState": "Watch",
+      "observation": "No newer scan observation; outcome unknown."
     },
     {
       "symbol": "ACE",
       "previousState": "Watch",
-      "observation": "Latest scanned close 1229.2; scanner state Triggered. This is not an executed trade or an intraday stop/target check."
+      "observation": "No newer scan observation; outcome unknown."
     },
     {
-      "symbol": "ANUHPHR",
-      "previousState": "Watch",
-      "observation": "Latest scanned close 93.48; scanner state Armed. This is not an executed trade or an intraday stop/target check."
-    },
-    {
-      "symbol": "AONELIQUID",
-      "previousState": "Watch",
-      "observation": "Latest scanned close 1077.58; scanner state Armed. This is not an executed trade or an intraday stop/target check."
-    },
-    {
-      "symbol": "ARTEMISMED",
+      "symbol": "ACMESOLAR",
       "previousState": "Watch",
       "observation": "No newer scan observation; outcome unknown."
     },
     {
-      "symbol": "BBTCL",
+      "symbol": "ACUTAAS",
       "previousState": "Watch",
       "observation": "No newer scan observation; outcome unknown."
     },
     {
-      "symbol": "BHAGYANGR",
+      "symbol": "ADANIPORTS",
       "previousState": "Watch",
-      "observation": "Latest scanned close 446.7; scanner state Armed. This is not an executed trade or an intraday stop/target check."
+      "observation": "No newer scan observation; outcome unknown."
     },
     {
-      "symbol": "BIRLACABLE",
+      "symbol": "AEGISLOG",
       "previousState": "Watch",
-      "observation": "Latest scanned close 409.5; scanner state Armed. This is not an executed trade or an intraday stop/target check."
+      "observation": "No newer scan observation; outcome unknown."
     }
   ],
-  "previousSession": "2026-09-18",
-  "intelligenceGeneratedAt": "2026-09-19T08:53:02.515Z",
-  "commentary": "With the Nifty 50 steadying at 23,346, the broader tape remains under a CAUTION gate with breadth score at 49. In Stan Weinstein's Stage Analysis and William O'Neil's market-direction discipline, this represents an indecisive rally attempt where selective stock-picking supersedes broad market exposure. Institutional accumulation is evident in pockets like capital goods and solar infrastructure, yet general participation is split. SEPA protocol demands defensive posture: do not chase extended moves, insist on genuine earnings acceleration, buy strictly at low-cheat or proper pivot breakouts, and keep risk strictly bounded by pre-set stops until breadth expands into broad confirmation.",
+  "previousSession": "2026-09-19",
+  "intelligenceGeneratedAt": "2026-09-20T09:22:47.985Z",
+  "commentary": "With market breadth resting at a neutral 49 and the deterministic gate flashing CAUTION, Stan Weinstein's Stage discipline and William O'Neil's market-direction rules demand defensive vigilance. While major benchmarks consolidate above primary moving averages, underlying rotation is stark: capital is aggressively concentrating into domestic capex, engineering, and infrastructure themes while retail-heavy sectors face distribution. Under SEPA and CANSLIM tenets, a cautious market environment prohibits aggressive chasing and requires progressive exposure. We only engage Stage 2 setups exhibiting pristine volume accumulation and confirmed earnings acceleration, while enforcing immediate stop discipline to protect principal.",
   "commentaryStatus": "available",
   "limitations": [
     "Daily scan observations are not fills or performance results.",
@@ -248,103 +248,97 @@
   ],
   "model": "gemini-3.8-flash",
   "analysis": {
-    "analyst": "SEPA / CANSLIM / Stage Analysis Composite",
+    "analyst": "Minervini SEPA, O'Neil CANSLIM, Weinstein Stage Analysis & Darvas Box Disciplines",
     "bySymbol": {
       "AAREYDRUGS": {
         "stage": "Stage 1 base",
-        "technical": "Consolidating near its 20-session pivot of 103.06, holding above the 21 EMA, 50 SMA, and 200 SMA on 1.21x volume. Relative strength is emerging from a multi-month base, but lacks the explosive signature of true Stage 2 leaders.",
+        "technical": "Consolidating near its 20-session pivot above rising EMA21, SMA50, and SMA200 on 1.21× volume. However, relative strength remains mediocre compared to broader market leaders, displaying erratic volume signatures without convincing institutional accumulation.",
         "epsGrowth": [
-          "Q1 FY27 -25.5%",
-          "Q4 FY26 +35.0%"
+          "Q1 FY27 -25%",
+          "Q4 FY26 +232%",
+          "Q3 FY26 -15%"
         ],
-        "revenueGrowth": "-56.3%",
+        "revenueGrowth": "-56%",
         "earningsTrend": "Negative",
         "growthQualified": "No",
-        "fundamental": "Severe top-line contraction with Q1 FY27 revenue sinking 56.3% YoY and net profit sliding 25.5% YoY. Weak ROE of ~2.8% and poor interest coverage fail CANSLIM standards, despite modest debt and recent promoter stake accretion to 42.8%.",
-        "verdict": "Watch",
-        "risk": "A breakdown below the 94.11 stop level or a breach of the 50-day moving average invalidates the base pattern; exit promptly without hesitation."
+        "fundamental": "Operating primarily in low-margin chemical and solvent trading, operating margins remain razor-thin at ~1.5% with poor ROE near 2.9%. Top-line contracted 56% YoY in Q1 FY27, while promoter holding has steadily declined to 37.7% without institutional support.",
+        "verdict": "Avoid",
+        "risk": "A breakdown below the 94.11 pivot stop invalidates base stability; exit immediately to prevent severe capital erosion."
       },
       "ABCAPITAL": {
         "stage": "Stage 2 advancing",
-        "technical": "Forming a constructive double bottom base with neckline pivot pressure at 431.13. Price tracks above rising 21 EMA, 50 SMA, and 200 SMA on solid 1.77x volume. RSI at 52 shows accumulation without overhead momentum exhaustion.",
+        "technical": "Forming a constructive double-bottom base above rising EMA21, SMA50, and SMA200 moving averages, testing neckline resistance at 431.13. Volume expanded 1.77× on the right side of the pattern with an RSI of 52 confirming steady institutional accumulation.",
         "epsGrowth": [
-          "Q1 FY27 +39.4%",
-          "Q4 FY26 +21.1%",
-          "Q3 FY26 +24.3%"
+          "Q1 FY27 +32%",
+          "Q4 FY26 +14%"
         ],
-        "revenueGrowth": "+28.2%",
+        "revenueGrowth": "+28%",
         "earningsTrend": "Accelerating",
         "growthQualified": "Partial",
-        "fundamental": "Strong diversified financials franchise posting revenue growth of 28.2% YoY and net profit jumping 40.1% YoY to ₹1,224 Cr. Supported by expanding life insurance and lending books, with ROE steady at 12%.",
+        "fundamental": "Aditya Birla Capital exhibits strong lending and NBFC momentum, reporting 28% YoY consolidated revenue growth and a 45% YoY jump in net profit (EPS up 32%). Recent capital raises have fortified solvency and balance-sheet capacity.",
         "verdict": "Constructive",
-        "risk": "Failure to clear neckline resistance at 431.13; close below the swing pivot stop at 410.13 damages the short-term structure."
+        "risk": "A violation of the swing pivot low at 410.13 negates the double-bottom pattern; cut losses strictly."
       },
       "ABSLLIQUID": {
         "stage": "Unclear",
-        "technical": "Overnight liquid debt ETF displaying flat, algorithmic price action. Completely lacks Stage 2 advance, volatility contraction, CANSLIM volume expansion, or momentum characteristics required for directional equity trading.",
+        "technical": "Aditya Birla Sun Life CRISIL Liquid Overnight ETF is an overnight cash instrument pegged near NAV 1,000; classic chart breakout patterns, trend templates, and relative strength metrics are entirely inapplicable.",
         "epsGrowth": [
           "not verified"
         ],
         "revenueGrowth": "not verified",
         "earningsTrend": "Not verified",
         "growthQualified": "No",
-        "fundamental": "Cash management instrument holding overnight sovereign and money-market repo instruments. Operates with zero corporate earnings, sales, profit margins, or ROE/ROCE. Entirely inapplicable to CANSLIM or SEPA equity models.",
+        "fundamental": "Passively managed debt ETF holding 1-day Tri-Party Repos (TREPS) to provide risk-free liquidity and trading margin collateral; it holds zero operating corporate equity fundamentals.",
         "verdict": "Avoid",
-        "risk": "Holding cash surrogates for breakout momentum causes total opportunity cost; exit immediately to allocate capital into verifiable Stage 2 equity leaders."
+        "risk": "Ineligible for equity breakout models; redeem cash units at par if allocated mistakenly, observing the 1,000.26 scanner floor."
       },
       "ACE": {
         "stage": "Stage 2 advancing",
-        "technical": "Classic SEPA breakout printing fresh 52-week highs on 2.87x volume expansion. Price is properly aligned above rising 21 EMA, 50 SMA, and 200 SMA, displaying superior sector relative strength.",
+        "technical": "Displays a textbook SEPA breakout clearing 20-session resistance to mark fresh trailing-year highs on 2.87× volume. The stock trades in clean alignment above rising EMA21, SMA50, and SMA200 moving averages, demonstrating market leadership relative strength.",
         "epsGrowth": [
-          "Q1 FY27 +22.3%",
-          "Q4 FY26 +21.8%",
-          "Q3 FY26 +20.5%"
+          "Q1 FY27 +22%",
+          "Q4 FY26 +1%"
         ],
-        "revenueGrowth": "+20.5%",
+        "revenueGrowth": "+19%",
         "earningsTrend": "Accelerating",
         "growthQualified": "Partial",
-        "fundamental": "Dominant market leader in mobile cranes (63% market share). Boasts virtually debt-free balance sheet, stellar 31.6% ROCE, and 22.8% ROE. Q1 FY27 net profit rose 22.3% on 20.5% revenue expansion.",
+        "fundamental": "World leader in pick-and-carry cranes benefiting from surging domestic industrial capex. Q1 FY27 revenue grew 19% YoY with net profit up 22.3% and EBITDA margins near 20%; boasts a virtually debt-free balance sheet and >25% return ratios.",
         "verdict": "Constructive",
-        "risk": "Thesis aborts on a breakdown below the 1,123.57 pivot stop or heavy-volume distribution breaking through the rising 50-day SMA."
+        "risk": "A reversal closing below the 1123.57 breakout base invalidates institutional sponsorship; execute an immediate loss cut."
       },
       "ACMESOLAR": {
         "stage": "Stage 2 advancing",
-        "technical": "High-powered SEPA breakout to fresh 52-week highs backed by 4.89x average volume. Trading cleanly above 21 EMA, 50 SMA, and 200 SMA, indicating strong institutional sponsorship.",
+        "technical": "High-momentum SEPA breakout clearing prior 20-session highs to establish a new trailing-year peak on explosive 4.89× volume. Price structure sits comfortably above rising EMA21, SMA50, and SMA200 averages, signaling aggressive institutional buying.",
         "epsGrowth": [
-          "Q1 FY27 +50.0%",
-          "Q4 FY26 -4.5%",
-          "Q3 FY26 -5.0%"
+          "Q1 FY27 +55%",
+          "Q4 FY26 +13%",
+          "Q3 FY26 +2%"
         ],
-        "revenueGrowth": "+67.8%",
+        "revenueGrowth": "+68%",
         "earningsTrend": "Accelerating",
         "growthQualified": "Partial",
-        "fundamental": "Pure-play renewable IPP showing massive Q1 FY27 operational turnaround, with revenue surging 67.8% YoY to ₹858 Cr and net profit rising 64.8% YoY to ₹235 Cr. Capital-intensive debt profile offset by aggressive operational capacity ramp.",
+        "fundamental": "Renewable IPP scaling operational capacity; Q1 FY27 revenue leaped 68% YoY with PAT surging 80% (EPS +55%) driven by new BESS commercialization. High operating margins buffer the capital-intensive debt profile typical of green utility developers.",
         "verdict": "Constructive",
-        "risk": "Thesis invalidates if price reverses below the 394.55 stop level or experiences a failed breakout trap under 430.93."
+        "risk": "A fall below the 394.55 breakout pivot invalidates the momentum thrust; exit promptly to avoid sharp pullback drawdowns."
       },
       "ACUTAAS": {
         "stage": "Stage 2 advancing",
-        "technical": "Setting up within 1.5% of its 3,743.74 pivot on 1.81x volume. Trajectory holds firmly above upward-sloping 21 EMA, 50 SMA, and 200 SMA with RSI at 58 showing constructive consolidation.",
+        "technical": "Tight consolidation within 1.5% of its 20-session pivot at 3743.74, trending smoothly above rising EMA21, SMA50, and SMA200 lines. Volume expanded 1.81× with an RSI of 58 reflecting steady base-building without overhead extension.",
         "epsGrowth": [
-          "Q1 FY27 +67.7%",
-          "Q4 FY26 +110.9%",
-          "Q3 FY26 +140.3%"
+          "Q1 FY27 +68%",
+          "Q4 FY26 +197%",
+          "Q3 FY26 +106%"
         ],
-        "revenueGrowth": "+59.1%",
+        "revenueGrowth": "+59%",
         "earningsTrend": "Decelerating",
         "growthQualified": "Yes",
-        "fundamental": "Specialty chemical producer scaling into semiconductor photoresists and battery additives. Superb capital efficiency with ROCE of 31.6% and ROE of 24.0%. Q1 FY27 sales surged 59.1% with net profit up 67.7%.",
+        "fundamental": "Specialty chemicals manufacturer (formerly Ami Organics) expanding into CDMO, semiconductor, and battery electrolyte chemistry. Boasts solid ROCE >30% and ~36% operating margins, but YoY EPS growth rate decelerated from Q4's extreme peak.",
         "verdict": "Watch",
-        "risk": "Capped at Watch due to decelerating YoY EPS rate; cut losses if the stock breaks below the 3,495.75 stop level."
+        "risk": "Failure to hold support at 3495.75 terminates the near-breakout pattern; cut losses strictly under SEPA risk-management discipline."
       }
     }
   },
   "history": [
-    {
-      "sessionDate": "2026-09-13",
-      "gate": "UNAVAILABLE",
-      "verdict": "Watch only. A fresh, complete scanner feed is required."
-    },
     {
       "sessionDate": "2026-09-14",
       "gate": "WEAK",
@@ -372,6 +366,11 @@
     },
     {
       "sessionDate": "2026-09-19",
+      "gate": "CAUTION",
+      "verdict": "Watch only. Wait for broader confirmation."
+    },
+    {
+      "sessionDate": "2026-09-20",
       "gate": "CAUTION",
       "verdict": "Watch only. Wait for broader confirmation."
     }
