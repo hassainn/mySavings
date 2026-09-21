@@ -250,6 +250,101 @@ function detectHighTightFlag(candles) {
   return { active: false };
 }
 
+// ---- 2026 swing playbook detectors (Livermore · Vibha Jha · trend-pullback) ----
+
+// Jesse Livermore pivotal-point breakout: price penetrates a long, tight
+// consolidation on expanding volume with prompt follow-through (a strong close
+// in the top of the bar). A poke above the pivot that closes back below it is
+// flagged as a stall — Livermore's "danger signal" to stand aside.
+function detectPivotalBreakout(candles) {
+  const n = candles.length;
+  if (n < 40) return { active: false };
+  const last = candles[n - 1];
+  const barRange = Math.max(last.high - last.low, Number.EPSILON);
+  const closeTop = (last.close - last.low) / barRange >= 0.6;
+  const bullishBar = last.close > last.open;
+  for (let baseLen = 15; baseLen <= 40; baseLen += 1) {
+    const base = candles.slice(n - 1 - baseLen, n - 1);
+    if (base.length < baseLen) continue;
+    const pivot = highest(base.map((c) => c.high));
+    const floor = lowest(base.map((c) => c.low));
+    if (!(pivot > 0)) continue;
+    const rangePct = (pivot - floor) / pivot;
+    if (rangePct > 0.2) continue; // a genuine tight base, not a wide swing
+    const baseVol = mean(base.map((c) => c.volume));
+    const volExpansion = baseVol > 0 ? last.volume / baseVol : 0;
+    if (last.close > pivot && bullishBar && closeTop && volExpansion >= 1.5) {
+      return {
+        active: true,
+        pivot,
+        floor,
+        baseSessions: baseLen,
+        volExpansion: round(volExpansion),
+        rangePct: round(rangePct * 100, 1),
+      };
+    }
+  }
+  // Danger signal: poked above a base pivot in the last 5 sessions then failed.
+  const priorBase = candles.slice(n - 26, n - 6);
+  if (priorBase.length >= 15) {
+    const pivot = highest(priorBase.map((c) => c.high));
+    const poked = candles.slice(-5).some((c) => c.high > pivot);
+    if (poked && last.close < pivot) return { active: false, stall: true, pivot };
+  }
+  return { active: false };
+}
+
+// Vibha Jha "3-up" reversal: after a pullback toward the 21-EMA / 50-DMA line,
+// three consecutive higher highs AND higher lows resume the advance, ideally on
+// rising volume — her early-trend re-entry inside a healthy uptrend.
+function detectPowerTrend3(candles, closes, ema21) {
+  const n = candles.length;
+  if (n < 60 || !(ema21 > 0)) return { active: false };
+  const c1 = candles[n - 1];
+  const c2 = candles[n - 2];
+  const c3 = candles[n - 3];
+  const threeUp =
+    c1.high > c2.high && c2.high > c3.high &&
+    c1.low > c2.low && c2.low > c3.low &&
+    c1.close > c1.open;
+  if (!threeUp) return { active: false };
+  const sma50v = sma(closes, 50);
+  const sma200v = sma(closes, 200);
+  const uptrend = sma50v != null && sma200v != null && c1.close > sma50v && sma50v > sma200v;
+  if (!uptrend) return { active: false };
+  // A real pullback preceded the thrust: a recent low tagged the 21-EMA / 50-DMA.
+  const recent = candles.slice(-15, -3);
+  const pulledBack = recent.some((c) => c.low <= ema21 * 1.03 || (sma50v && c.low <= sma50v * 1.03));
+  if (!pulledBack) return { active: false };
+  const avgVol = mean(candles.slice(-21, -1).map((c) => c.volume));
+  const risingVol = avgVol > 0 && c1.volume >= avgVol;
+  return { active: true, thrustLow: round(lowest([c1.low, c2.low, c3.low])), risingVol };
+}
+
+// Trend-continuation pullback buy near highs: a leader that eased back to its
+// rising 21-EMA on lighter volume, then printed a bullish reclaim candle. Stop
+// sits below the pullback swing low; target is the prior high / 2R.
+function detectTrendPullbackBuy(candles, closes, ema21, high52) {
+  const n = candles.length;
+  if (n < 60 || !(ema21 > 0)) return { active: false };
+  const last = candles[n - 1];
+  const prior = candles[n - 2];
+  const sma50v = sma(closes, 50);
+  const uptrend = sma50v != null && last.close > sma50v && last.close > ema21;
+  if (!uptrend) return { active: false };
+  const nearHigh = high52 > 0 && last.close >= high52 * 0.9; // leadership, not a deep correction
+  if (!nearHigh) return { active: false };
+  const window = candles.slice(-10, -1);
+  if (!window.length) return { active: false };
+  const tagged = window.some((c) => c.low <= ema21 * 1.02); // pullback reached the line
+  if (!tagged) return { active: false };
+  const reclaim = last.close > last.open && last.close >= prior.high; // bullish confirmation
+  if (!reclaim) return { active: false };
+  const avgVol = mean(candles.slice(-30, -1).map((c) => c.volume));
+  const lightVolume = avgVol > 0 && mean(window.map((c) => c.volume)) <= avgVol * 0.95;
+  return { active: true, ema21: round(ema21), pullbackLow: round(lowest(window.map((c) => c.low))), lightVolume };
+}
+
 function detectCandlestickPatterns(candles) {
   if (candles.length < 3) return [];
   const current = candles.at(-1);
@@ -539,6 +634,8 @@ function analyze(instrument, candles, benchMomByDate = null) {
   const closes = candles.map((x) => x.close);
   const volumes = candles.map((x) => x.volume);
   const ema21 = emaSeries(closes, 21).at(-1);
+  const ema10 = emaSeries(closes, 10).at(-1);
+  const ema20 = emaSeries(closes, 20).at(-1);
   const ema12Series = emaSeries(closes, 12);
   const ema26Series = emaSeries(closes, 26);
   const macdSeries = ema12Series.map((value, index) => value - ema26Series[index]);
@@ -557,6 +654,9 @@ function analyze(instrument, candles, benchMomByDate = null) {
   const darvas = detectDarvas(candles);
   const cupHandle = detectCupAndHandle(candles);
   const highTightFlag = detectHighTightFlag(candles);
+  const pivotalBreakout = detectPivotalBreakout(candles);
+  const powerTrend3 = detectPowerTrend3(candles, closes, ema21);
+  const trendPullback = detectTrendPullbackBuy(candles, closes, ema21, high52);
   const candlestickPatterns = detectCandlestickPatterns(candles);
   const tags = [];
   const evidence = [];
@@ -583,6 +683,27 @@ function analyze(instrument, candles, benchMomByDate = null) {
   if (highTightFlag.active) {
     tags.push("High tight flag");
     evidence.push(`Flagpole advanced ${highTightFlag.advancePct}% then paused in a tight ${highTightFlag.flagDepthPct}% flag`);
+    score += 12;
+  }
+  if (pivotalBreakout.active) {
+    tags.push("Pivotal breakout");
+    evidence.push(`Cleared a ${pivotalBreakout.baseSessions}-session pivot on ${pivotalBreakout.volExpansion}× base volume with a strong close (Livermore)`);
+    score += 16;
+  } else if (pivotalBreakout.stall) {
+    tags.push("Breakout stall");
+    evidence.push("Poked above the pivot then closed back below it — Livermore danger signal");
+    score -= 6;
+  }
+  if (powerTrend3.active) {
+    tags.push("Power trend (3-up)");
+    evidence.push("Three higher highs and higher lows off a 21-EMA / 50-DMA pullback (Vibha Jha 3-up)");
+    if (powerTrend3.risingVol) evidence.push("Up-thrust carried above-average volume");
+    score += 12;
+  }
+  if (trendPullback.active) {
+    tags.push("Trend pullback buy");
+    evidence.push("Leader eased to the rising 21-EMA near highs, then a bullish reclaim candle");
+    if (trendPullback.lightVolume) evidence.push("Pullback ran on lighter-than-average volume");
     score += 12;
   }
   for (const pattern of candlestickPatterns) {
@@ -637,7 +758,7 @@ function analyze(instrument, candles, benchMomByDate = null) {
   if (swing.freshBuy) { tags.push("Swing TSL buy"); evidence.push("Fresh swing trailing-stop buy crossover"); score += 6; }
   else if (swing.state === "Buy") { tags.push("Swing TSL long"); }
 
-  const actionablePatterns = ["20-day breakout", "52-week high", "Double bottom", "VCP", "Darvas box", "Cup & handle", "High tight flag", "SEPA breakout", "Super-performer", "Near breakout"];
+  const actionablePatterns = ["20-day breakout", "52-week high", "Double bottom", "VCP", "Darvas box", "Cup & handle", "High tight flag", "SEPA breakout", "Super-performer", "Near breakout", "Pivotal breakout", "Power trend (3-up)", "Trend pullback buy"];
   const candlePatternNames = candlestickPatterns.map((pattern) => `Candle · ${pattern.name}`);
   const meaningful = tags.some((tag) => actionablePatterns.includes(tag)) || candlestickPatterns.length > 0;
   if (!meaningful) return null;
@@ -657,7 +778,7 @@ function analyze(instrument, candles, benchMomByDate = null) {
     else if ((stage2 || sepaBreakout || hasLongStructure) && confidence >= 70) grade = "B";
   }
 
-  const pivotCandidates = [priorHigh20, doubleBottom.neckline, vcp.pivot, darvas.ceiling, cupHandle.pivot, highTightFlag.pivot].filter(Number.isFinite);
+  const pivotCandidates = [priorHigh20, doubleBottom.neckline, vcp.pivot, darvas.ceiling, cupHandle.pivot, highTightFlag.pivot, pivotalBreakout.pivot].filter(Number.isFinite);
   const entryTrigger = Math.max(...pivotCandidates) * 1.001;
   const structuralLow = lowest(candles.slice(-10).map((x) => x.low));
   const stop = Math.max(structuralLow, entryTrigger - atr14 * 2);
@@ -684,6 +805,16 @@ function analyze(instrument, candles, benchMomByDate = null) {
     stop: bearishCaution && !hasLongStructure ? null : round(stop),
     target2R: bearishCaution && !hasLongStructure ? null : round(target),
     riskReward: bearishCaution && !hasLongStructure ? null : risk > 0 ? 2 : null,
+    // Trade-management overlay drawn from the elite swing playbook: risk ~1% per
+    // trade, move the stop to break-even once price clears +1R (Ultimate
+    // masterclass), then trim on a close below the 10-EMA and exit the remainder
+    // below the 20-EMA (Martin Luk staged exit).
+    manage: {
+      riskPerTradePct: 1,
+      breakevenAt1R: bearishCaution && !hasLongStructure ? null : round(entryTrigger + risk),
+      trimBelowEma10: round(ema10),
+      exitBelowEma20: round(ema20),
+    },
     indicators: {
       ema21: round(ema21), sma50: round(sma50), sma150: round(sma150), sma200: round(sma200),
       rsi14: round(rsi14, 1), macd: round(macd), atr14: round(atr14),
@@ -836,6 +967,7 @@ const partitionResult = {
   marketMood: summarizeBreadth(breadthCounts),
   strategyLibrary: [
     "SEPA breakout", "Super-performer", "Stage 2", "Trend template", "Swing TSL buy",
+    "Pivotal breakout", "Power trend (3-up)", "Trend pullback buy", "Staged 10/20-EMA exit",
     "20-day breakout", "52-week high", "Cup & handle", "High tight flag",
     "Double bottom", "VCP", "Darvas box", "MACD momentum",
     "Candle · Bullish engulfing", "Candle · Bearish engulfing",

@@ -51,6 +51,9 @@ The scanner runs after the NSE cash session and reads the daily Upstox instrumen
 - Minervini SEPA layer: 8-point Trend Template, 4-stage classification, RS-percentile vs the Nifty 500 benchmark, Stage-2 "SEPA breakout" and strict "Super-performer" gates (RS>=95, >=2x 50-day volume, <=2.5% past pivot, RSI floor, within 10% of the 52-week high, close in the top 25% of range, tight T3/T1 base)
 - A+/A/B/C setup grade tiered from that confluence (A+ = super-performer or a near-perfect Stage-2 8/8 breakout; A = Stage-2 trend-template breakout with strong RS; B = solid structure), filterable on the scan page
 - swing high/low trailing-stop (TSL) buy/exit state, per the Accurate Swing Trading System
+- Livermore pivotal breakout: a long, tight consolidation penetrated on >=1.5x base volume with a strong close in the top of the bar (a failed poke back below the pivot is flagged as a "Breakout stall" danger signal)
+- Vibha Jha "3-up" power trend: three consecutive higher highs and higher lows resuming an uptrend after a pullback to the 21-EMA / 50-DMA, ideally on rising volume
+- Trend pullback buy at highs: a leader that eased back to its rising 21-EMA on lighter volume, then a bullish reclaim candle (stop below the pullback swing low, target the prior high / 2R)
 - 20-day and 52-week breakouts
 - cup-and-handle bases (rounded cup, shallow upper-half handle, volume dry-up, buy pivot)
 - high tight flags (near-vertical flagpole into a tight consolidation)
@@ -63,7 +66,7 @@ The scanner runs after the NSE cash session and reads the daily Upstox instrumen
 - bearish engulfing, evening star, shooting star, dark cloud cover and bearish harami
 - doji and inside-bar context
 
-Every result includes the evidence, candle bias, an entry trigger when a long plan is valid, structural stop, 2R reference target and a small symbol-specific historical check. Strong bearish candle reversals become **Caution** signals and do not fabricate a long entry plan. The 1–99 confidence value measures indicator agreement; it is **not a promised win rate**. No market strategy can honestly guarantee 99% wins.
+Every result includes the evidence, candle bias, an entry trigger when a long plan is valid, structural stop, 2R reference target, a small symbol-specific historical check, and a trade-management overlay (`manage`): risk ~1% per trade, move the stop to break-even once price clears +1R, then trim on a close below the 10-EMA and exit the remainder below the 20-EMA (staged-exit discipline from top swing traders). Strong bearish candle reversals become **Caution** signals and do not fabricate a long entry plan. The 1–99 confidence value measures indicator agreement; it is **not a promised win rate**. No market strategy can honestly guarantee 99% wins.
 
 The dashboard market-mood panel is calculated from the percentage of scanned NSE equities advancing, above SMA50 and above SMA200. Gemini commentary remains separate supporting research and never overrides the price-breadth calculation.
 
