@@ -4,20 +4,22 @@ on:
   workflow_dispatch:
     inputs:
       partition:
-        description: "Universe slice to scan (run the other slice after 35 minutes)"
+        description: "Which universe slice(s) to scan"
         required: true
-        default: "0"
+        default: "both"
         type: choice
         options:
+          - "both"
           - "0"
           - "1"
   schedule:
-    # Daily ~7:30 PM IST refresh. Partition 0 at 18:45 IST (13:15 UTC), partition 1
-    # at 19:15 IST (13:45 UTC); each slice takes ~12 min, so the merged scan lands
-    # around 19:30 IST / 7:30 PM. EOD data is settled by evening. Runs every day —
-    # on weekends it simply re-publishes Friday's close with a fresh timestamp.
-    - cron: "15 13 * * *"
-    - cron: "45 13 * * *"
+    # ONE daily run that scans both slices back-to-back, so it lands well before
+    # 9 PM IST. GitHub delays scheduled workflows by hours at busy UTC minutes, so
+    # this fires early (11:10 UTC = 16:40 IST, ~1h after the 15:30 IST close once
+    # EOD candles have settled). Even with a 3-4h GitHub delay the merged scan
+    # publishes by ~8-8:30 PM IST. A single job removes the old two-cron rebase
+    # race that failed one slice most days. Weekends simply re-stamp Friday's close.
+    - cron: "10 11 * * *"
 
 permissions:
   contents: write
@@ -29,7 +31,7 @@ concurrency:
 jobs:
   scan:
     runs-on: ubuntu-latest
-    timeout-minutes: 45
+    timeout-minutes: 55
     env:
       UPSTOX_ACCESS_TOKEN: ${{ secrets.UPSTOX_ACCESS_TOKEN }}
       MAX_INSTRUMENTS: "1850"
@@ -49,23 +51,25 @@ jobs:
             echo "UPSTOX_ACCESS_TOKEN is not configured; keeping the existing scan."
           fi
 
-      - name: Select rate-safe universe slice
-        id: partition
+      - name: Scan NSE cash universe (both slices)
+        if: steps.upstox.outputs.configured == 'true'
         shell: bash
         run: |
+          SEL="both"
           if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
-            echo "index=${{ inputs.partition }}" >> "$GITHUB_OUTPUT"
-          elif [ "${{ github.event.schedule }}" = "45 13 * * *" ]; then
-            echo "index=1" >> "$GITHUB_OUTPUT"
-          else
-            echo "index=0" >> "$GITHUB_OUTPUT"
+            SEL="${{ inputs.partition }}"
           fi
-
-      - name: Scan NSE cash universe
-        if: steps.upstox.outputs.configured == 'true'
-        env:
-          PARTITION_INDEX: ${{ steps.partition.outputs.index }}
-        run: node scripts/scan-upstox-universe.mjs
+          echo "Scanning selection: $SEL"
+          if [ "$SEL" = "both" ] || [ "$SEL" = "0" ]; then
+            echo "::group::Partition 0/2"
+            PARTITION_INDEX=0 node scripts/scan-upstox-universe.mjs
+            echo "::endgroup::"
+          fi
+          if [ "$SEL" = "both" ] || [ "$SEL" = "1" ]; then
+            echo "::group::Partition 1/2"
+            PARTITION_INDEX=1 node scripts/scan-upstox-universe.mjs
+            echo "::endgroup::"
+          fi
 
       - name: Publish ranked signals
         if: steps.upstox.outputs.configured == 'true'
@@ -79,5 +83,16 @@ jobs:
             exit 0
           fi
           git commit -m "Refresh NSE agentic scan"
-          git pull --rebase origin main
-          git push origin HEAD:main
+          # Retry against a moving main (strategist/news/fundamentals also push);
+          # -X ours keeps our freshly generated scan on any data-file conflict.
+          for attempt in 1 2 3 4 5; do
+            if git pull --rebase -X ours origin main && git push origin HEAD:main; then
+              echo "Published on attempt $attempt."
+              exit 0
+            fi
+            echo "Publish attempt $attempt failed; re-syncing and retrying..."
+            git rebase --abort 2>/dev/null || true
+            sleep 7
+          done
+          echo "Failed to publish scanner results after retries."
+          exit 1
