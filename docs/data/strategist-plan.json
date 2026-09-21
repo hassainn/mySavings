@@ -1,9 +1,9 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-09-21T15:55:06.126Z",
+  "generatedAt": "2026-09-21T17:34:46.100Z",
   "sessionDate": "2026-09-21",
   "status": "ready",
-  "scanGeneratedAt": "2026-09-20T17:00:36.192Z",
+  "scanGeneratedAt": "2026-09-21T17:34:33.960Z",
   "gate": "CAUTION",
   "breadthScore": 49,
   "verdict": "Watch only. Wait for broader confirmation.",
@@ -25,6 +25,25 @@
         "Within 1.5% of the 20-session pivot",
         "1.21× 20-day average volume",
         "MACD is above signal and zero line"
+      ]
+    },
+    {
+      "symbol": "ABBOTINDIA",
+      "name": "Abbott India",
+      "pattern": "20-day breakout",
+      "confidence": 99,
+      "state": "Watch",
+      "scanState": "Armed",
+      "asOf": "2026-09-18T00:00:00+05:30",
+      "close": 27270,
+      "entryTrigger": 28968.94,
+      "stop": 27801.08,
+      "target2R": 31304.65,
+      "evidence": [
+        "Price above EMA21, SMA50 and SMA200",
+        "Close cleared the prior 20-session high",
+        "5.07× 20-day average volume",
+        "RSI 63 supports momentum without extreme extension"
       ]
     },
     {
@@ -140,25 +159,6 @@
         "1.71× 20-day average volume",
         "RSI 62 supports momentum without extreme extension"
       ]
-    },
-    {
-      "symbol": "AEGISLOG",
-      "name": "Aegis Logistics",
-      "pattern": "Double bottom",
-      "confidence": 99,
-      "state": "Watch",
-      "scanState": "Armed",
-      "asOf": "2026-09-18T00:00:00+05:30",
-      "close": 1415.4,
-      "entryTrigger": 1499.3,
-      "stop": 1369.08,
-      "target2R": 1759.73,
-      "evidence": [
-        "Price above EMA21, SMA50 and SMA200",
-        "1.59× 20-day average volume",
-        "RSI 62 supports momentum without extreme extension",
-        "MACD is above signal and zero line"
-      ]
     }
   ],
   "cautions": [
@@ -167,31 +167,31 @@
       "reason": "20-day breakout"
     },
     {
+      "symbol": "ARFIN",
+      "reason": "Double bottom"
+    },
+    {
       "symbol": "DHARMAJ",
       "reason": "Near breakout"
+    },
+    {
+      "symbol": "AJANTPHARM",
+      "reason": "Double bottom"
     },
     {
       "symbol": "GPTHEALTH",
       "reason": "SEPA breakout"
     },
     {
+      "symbol": "HARSHA",
+      "reason": "Double bottom"
+    },
+    {
       "symbol": "QUADFUTURE",
       "reason": "Near breakout"
     },
     {
-      "symbol": "LAURUSLABS",
-      "reason": "Near breakout"
-    },
-    {
-      "symbol": "LIQUIDSHRI",
-      "reason": "20-day breakout"
-    },
-    {
-      "symbol": "NITIRAJ",
-      "reason": "Double bottom"
-    },
-    {
-      "symbol": "INDSWFTLAB",
+      "symbol": "SMLMAH",
       "reason": "Double bottom"
     }
   ],
@@ -239,7 +239,7 @@
   ],
   "previousSession": "2026-09-20",
   "intelligenceGeneratedAt": "2026-09-21T15:54:03.056Z",
-  "commentary": "Nifty's relief bounce snaps a six-week slide, yet internal breadth remains anemic at 49 under a CAUTION regime. With the Nifty Midcap and Smallcap indices lagging (-0.29% and -0.07%), the rally is narrowly sustained by defensives while crude lingers over $100. In Stan Weinstein's framework, an advancing index masking broad-market divergence warns against aggressive capital deployment; William O'Neil's CANSLIM similarly dictates keeping cash levels elevated until genuine accumulation emerges across leading growth names. Strict risk discipline governs this posture: no chasing extended pivots, keeping stops tight, and executing progressive exposure only when verified Stage 2 leaders demonstrate sustained institutional volume and accelerating quarterly earnings.",
+  "commentary": "With the deterministic gate at CAUTION and breadth score at 49, market direction demands strict discipline. While the Nifty 50 snapped a six-week losing streak on large-cap defensives, mid- and small-cap indices closed lower, displaying distribution divergence. As William O'Neil warned, three out of four stocks follow the general market trend; breakouts during market divergences fail at elevated rates. Stan Weinstein's stage discipline dictates honoring Stage 2 leaders while ruthlessly avoiding laggards or non-equity instruments. In this tape, Mark Minervini's progressive exposure rule is paramount: initiate small pilot positions in high-volume breakouts only, demand immediate traction, and enforce uncompromising stop discipline at the scanner's risk thresholds.",
   "commentaryStatus": "available",
   "limitations": [
     "Daily scan observations are not fills or performance results.",
@@ -251,88 +251,92 @@
     "analyst": "Minervini SEPA, O'Neil CANSLIM & Weinstein Stage Analysis",
     "bySymbol": {
       "AAREYDRUGS": {
-        "stage": "Stage 1 base",
-        "technical": "Price trades above key averages (EMA21, SMA50, SMA200) within 1.5% of its 20-session pivot on modest 1.21x volume. Relative strength is sluggish, and the price action lacks the tight volatility contraction pattern characteristic of institutional accumulation.",
+        "stage": "Stage 2 advancing",
+        "technical": "Price trades above its rising 21 EMA, 50 SMA, and 200 SMA, hovering within 1.5% of its 103.06 pivot on modest volume (1.21x). However, price action shows loose volatility without a clean Minervini VCP contraction, and relative strength remains sluggish compared to true market leaders.",
         "epsGrowth": [
-          "Q1 FY27 -25.6%",
-          "Q4 FY26 not verified"
+          "Q1 FY27 -20%",
+          "Q4 FY26 +232%",
+          "not verified"
         ],
-        "revenueGrowth": "-56.3%",
+        "revenueGrowth": "-56%",
         "earningsTrend": "Negative",
         "growthQualified": "No",
-        "fundamental": "Severe CANSLIM deterioration: Q1 FY27 revenue fell 56.3% YoY while net profit dropped 25.6%. Sub-par 3% ROE, thin 5.6% ROCE, and razor-thin operating margins (2–3%) highlight weak operational fundamentals despite minimal debt.",
+        "fundamental": "Small-cap pharmaceutical trader suffers from wafer-thin operating margins (~2-3%), low ROE (~3-5%), and a 56% top-line collapse in Q1 FY27. Unreliable profitability, high beta, and lack of institutional sponsorship fail CANSLIM and SEPA fundamental criteria.",
         "verdict": "Avoid",
-        "risk": "Thesis fails below 94.11 pivot support (-8.7%). Sell decisively on breach to prevent capital erosion."
+        "risk": "Break below the 94.11 stop invalidates the pivot setup; cut losses immediately to prevent compounding drawdowns in an illiquid microcap."
+      },
+      "ABBOTINDIA": {
+        "stage": "Stage 2 advancing",
+        "technical": "Stage 2 advancing profile marked by a decisive 20-session breakout at 28,968.94 on massive institutional accumulation (5.07x volume). Price sits properly aligned above upward-sloping EMA21, SMA50, and SMA200. RSI at 63 confirms healthy momentum without technical extension.",
+        "epsGrowth": [
+          "Q1 FY27 +17%",
+          "Q4 FY26 +8%",
+          "Q3 FY26 +4%"
+        ],
+        "revenueGrowth": "+4%",
+        "earningsTrend": "Accelerating",
+        "growthQualified": "No",
+        "fundamental": "Impeccable balance sheet with zero debt, high return on capital (ROCE > 40%), and strong MNC institutional pedigree. However, top-line growth (+4%) and EPS growth (+17%) fall short of CANSLIM's 25% minimum hurdle rate.",
+        "verdict": "Watch",
+        "risk": "Close below 27,801.08 stop violates the breakout level; respect the stop to guard against institutional distribution in a cautious market."
       },
       "ABCAPITAL": {
         "stage": "Stage 2 advancing",
-        "technical": "Constructive Stage 2 structure holding firmly above rising 21 EMA, 50 SMA, and 200 SMA. The stock formed a double-bottom base with neckline pressure, supported by expanding 1.77x volume and an unextended RSI of 52.",
+        "technical": "Constructing a double-bottom pattern above rising 21 EMA, 50 SMA, and 200 SMA, pressing against neckline resistance at 431.13. Volume expanded to 1.77x on recent up-days, with RSI at 52 reflecting calm, orderly base accumulation rather than frantic chasing.",
         "epsGrowth": [
-          "Q1 FY27 +40.0%",
-          "Q4 FY26 +30.0%"
+          "Q1 FY27 +12%",
+          "Q4 FY26 +14%",
+          "Q3 FY26 +11%"
         ],
-        "revenueGrowth": "+29.0%",
-        "earningsTrend": "Accelerating",
-        "growthQualified": "Yes",
-        "fundamental": "Stellar CANSLIM profile: Q1 FY27 consolidated revenue grew 29% YoY with PAT surging 40% YoY, accelerating from Q4 FY26's 30% profit growth. Strong lending expansion, declining credit costs, and healthy capital ratios reflect high institutional sponsorship.",
-        "verdict": "Leading",
-        "risk": "Fails on a close below swing low support at 410.13 (-4.9%). Exit swiftly per Minervini risk rules."
+        "revenueGrowth": "+29%",
+        "earningsTrend": "Steady",
+        "growthQualified": "Partial",
+        "fundamental": "Supported by robust lending expansion with NBFC AUM up 28% and housing finance surging 50%, driving 29% revenue growth in Q1 FY27. However, moderate ROE (~12%) and steady but sub-25% EPS growth prevent a top-tier CANSLIM rating.",
+        "verdict": "Constructive",
+        "risk": "Drop below 410.13 stop breaks swing-low support and violates neckline integrity, requiring immediate loss execution."
       },
       "ABSLLIQUID": {
         "stage": "Unclear",
-        "technical": "ABSLLIQUID is an exchange-traded fund tracking overnight TREPS collateral, rendering traditional chart patterns, SEPA breakouts, VCPs, and relative strength metrics completely non-applicable.",
+        "technical": "Debt ETF trading in an ultra-tight, yield-driven band near 1,006. While technically above moving averages due to daily interest accrual, standard equity trend templates, VCP contractions, and breakout setups are wholly inapplicable.",
         "epsGrowth": [
           "not verified"
         ],
         "revenueGrowth": "not verified",
         "earningsTrend": "Not verified",
         "growthQualified": "Not verified",
-        "fundamental": "Not verified. As a short-term cash management debt ETF, it has no corporate revenues, earnings, operating margins, ROE/ROCE, or CANSLIM growth variables.",
+        "fundamental": "Exchange-traded overnight fund investing in tri-party repo (TREPS) and overnight debt securities. It has zero corporate sales, earnings, operating margins, or equity ownership metrics.",
         "verdict": "Avoid",
-        "risk": "Invalid setup if traded for equity appreciation; strictly an overnight cash park yielding repo rates."
+        "risk": "Severe opportunity cost relative to equity momentum; serves solely as a cash-parking vehicle, not an active swing trading instrument."
       },
       "ACE": {
         "stage": "Stage 2 advancing",
-        "technical": "Classic SEPA breakout to fresh 52-week highs on a substantial 2.87x volume expansion. The stock cleanly broke out above its 20-session resistance and all moving averages, displaying standout relative strength against a declining small-cap index.",
+        "technical": "Textbook SEPA Stage 2 continuation breakout to new 52-week highs, clearing the 1,214.41 pivot on strong 2.87x volume expansion. Moving averages are in pristine bullish sequence (EMA21 > SMA50 > SMA200), showing leading relative strength against declining midcaps.",
         "epsGrowth": [
-          "Q1 FY27 +22.3%",
-          "Q4 FY26 -6.5%"
+          "Q1 FY27 +22%",
+          "Q4 FY26 -7%",
+          "Q3 FY26 +4%"
         ],
-        "revenueGrowth": "+19.5%",
+        "revenueGrowth": "+20%",
         "earningsTrend": "Accelerating",
         "growthQualified": "Partial",
-        "fundamental": "Strong industrial momentum: Q1 FY27 revenue rose 19.5% YoY with PAT rebounding 22.3% YoY and EBITDA margins expanding above 20.5%. High ROCE (31.6%), negligible debt, and a dominant 63% crane market share support the profile.",
+        "fundamental": "Dominant 63% domestic crane market share with operating margins expanding to 20.4%. Q1 FY27 revenue rose 20% with PAT up 22%. Near-zero debt, 31% ROCE, and tailwinds in infrastructure and defense support the growth narrative.",
         "verdict": "Constructive",
-        "risk": "Thesis invalidates if price slips back below the 1,123.57 breakout pivot (-7.5%). Honor stop loss immediately."
+        "risk": "A break back below the 1,123.57 stop signals a false breakout; execute strict stop-loss discipline to protect trading capital."
       },
       "ACMESOLAR": {
         "stage": "Stage 2 advancing",
-        "technical": "Powerful Stage 2 SEPA breakout to new trailing-year highs on 4.89x average volume. Moving averages (EMA21, SMA50, SMA200) are aligned in an active markup phase, showing institutional demand and superior relative strength.",
+        "technical": "High-conviction Stage 2 SEPA breakout to new 52-week highs, clearing 430.93 on tremendous institutional demand (4.89x average volume). Moving averages are stacked positively, displaying standout relative strength while broader mid/small-caps soften.",
         "epsGrowth": [
-          "Q1 FY27 +79.9%",
-          "Q4 FY26 +13.3%"
+          "Q1 FY27 +50%",
+          "Q4 FY26 +13%",
+          "Q3 FY26 +1%"
         ],
-        "revenueGrowth": "+67.8%",
+        "revenueGrowth": "+68%",
         "earningsTrend": "Accelerating",
         "growthQualified": "Partial",
-        "fundamental": "Rapid top-line expansion: Q1 FY27 revenue jumped 67.8% YoY with net profit up 79.9% YoY, driven by massive project commissioning and battery storage additions. Ongoing debt deleveraging via QIP proceeds supports balance-sheet flexibility.",
+        "fundamental": "Renewable energy IPP demonstrating explosive growth: Q1 FY27 sales grew 68% and PAT surged 65% on capacity additions. Capital intensity keeps debt high, but rapid capacity execution and rising operating margins provide strong fundamental momentum.",
         "verdict": "Constructive",
-        "risk": "Breakout fails if price falls below the 394.55 pivot base (-8.4%). Cut losses to maintain asymmetry."
-      },
-      "ACUTAAS": {
-        "stage": "Stage 2 advancing",
-        "technical": "Constructive Stage 2 uptrend with price hovering within 1.5% of its 20-session pivot above rising EMA21, SMA50, and SMA200. Volume is healthy at 1.81x with RSI 58, indicating steady consolidation.",
-        "epsGrowth": [
-          "Q1 FY27 +67.7%",
-          "Q4 FY26 +110.9%",
-          "Q3 FY26 +140.3%"
-        ],
-        "revenueGrowth": "+47.3%",
-        "earningsTrend": "Decelerating",
-        "growthQualified": "Yes",
-        "fundamental": "High-quality specialty chemicals fundamentals: Q1 FY27 revenue climbed 47.3% YoY with PAT rising 67.7%, backed by robust 31.6% ROCE and ~24% ROE. However, YoY EPS expansion slowed from triple digits, capping the setup at Watch under CANSLIM rules.",
-        "verdict": "Watch",
-        "risk": "Thesis fails if price drops below 3,495.75 pivot support (-6.6%). Enforce strict stop-loss discipline."
+        "risk": "Violation of the 394.55 stop level invalidates the breakout; exit immediately without hesitation per Minervini risk rules."
       }
     }
   },

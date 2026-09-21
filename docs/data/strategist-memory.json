@@ -1190,7 +1190,7 @@
     },
     {
       "sessionDate": "2026-09-21",
-      "generatedAt": "2026-09-21T15:55:06.126Z",
+      "generatedAt": "2026-09-21T17:34:46.100Z",
       "gate": "CAUTION",
       "verdict": "Watch only. Wait for broader confirmation.",
       "ideas": [
@@ -1211,6 +1211,25 @@
             "Within 1.5% of the 20-session pivot",
             "1.21× 20-day average volume",
             "MACD is above signal and zero line"
+          ]
+        },
+        {
+          "symbol": "ABBOTINDIA",
+          "name": "Abbott India",
+          "pattern": "20-day breakout",
+          "confidence": 99,
+          "state": "Watch",
+          "scanState": "Armed",
+          "asOf": "2026-09-18T00:00:00+05:30",
+          "close": 27270,
+          "entryTrigger": 28968.94,
+          "stop": 27801.08,
+          "target2R": 31304.65,
+          "evidence": [
+            "Price above EMA21, SMA50 and SMA200",
+            "Close cleared the prior 20-session high",
+            "5.07× 20-day average volume",
+            "RSI 63 supports momentum without extreme extension"
           ]
         },
         {
@@ -1325,25 +1344,6 @@
             "Close cleared the prior 20-session high",
             "1.71× 20-day average volume",
             "RSI 62 supports momentum without extreme extension"
-          ]
-        },
-        {
-          "symbol": "AEGISLOG",
-          "name": "Aegis Logistics",
-          "pattern": "Double bottom",
-          "confidence": 99,
-          "state": "Watch",
-          "scanState": "Armed",
-          "asOf": "2026-09-18T00:00:00+05:30",
-          "close": 1415.4,
-          "entryTrigger": 1499.3,
-          "stop": 1369.08,
-          "target2R": 1759.73,
-          "evidence": [
-            "Price above EMA21, SMA50 and SMA200",
-            "1.59× 20-day average volume",
-            "RSI 62 supports momentum without extreme extension",
-            "MACD is above signal and zero line"
           ]
         }
       ],
