@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-09-21T08:12:52.804Z",
+  "generatedAt": "2026-09-21T08:58:09.645Z",
   "sessionDate": "2026-09-21",
   "status": "ready",
   "scanGeneratedAt": "2026-09-20T17:00:36.192Z",
@@ -238,8 +238,8 @@
     }
   ],
   "previousSession": "2026-09-20",
-  "intelligenceGeneratedAt": "2026-09-20T09:22:47.985Z",
-  "commentary": "Market breadth registers at a cautious 49 with the technical gate set to CAUTION, demanding strict Livermore patience and O'Neil market-direction discipline. Rather than broad-based advance, capital is rotating selectively into domestic industrial capex, specialized manufacturing, and clean power infrastructure. In Weinstein Stage 2 terms, benchmark indices are holding above long-term technical floors, but underlying divergences require progressive exposure and zero tolerance on stops. Legendary trading discipline dictates avoiding non-equity instruments, discarding fundamentally decaying laggards, and reserving fresh capital strictly for verified Stage 2 leaders breaking out on heavy institutional accumulation and accelerating earnings.",
+  "intelligenceGeneratedAt": "2026-09-21T08:57:33.168Z",
+  "commentary": "With Nifty staging a tentative rebound around 23,350–23,415 after six consecutive weekly declines, market breadth at 49 dictates strict CANSLIM and Stage Analysis discipline. Under Stan Weinstein's rules, an index struggling below intermediate overhead resistance under a 'Caution' gate prohibits aggressive positioning; progressive exposure must be strictly enforced. As William O'Neil emphasized, durable market uptrends require broad institutional accumulation across leading industry sectors, not narrow defensive rotations. Until market participation broadens and major indices confirm a clear follow-through, cash preservation remains primary. Only setups demonstrating textbook Stage 2 volume breakouts and accelerating quarterly earnings warrant tactical deployment, while Minervini-style stop discipline remains non-negotiable.",
   "commentaryStatus": "available",
   "limitations": [
     "Daily scan observations are not fills or performance results.",
@@ -248,93 +248,95 @@
   ],
   "model": "gemini-3.8-flash",
   "analysis": {
-    "analyst": "Minervini SEPA, O'Neil CANSLIM, Weinstein Stage Analysis, Darvas Box & Livermore Discipline",
+    "analyst": "Minervini SEPA, O'Neil CANSLIM & Weinstein Stage Analysis",
     "bySymbol": {
       "AAREYDRUGS": {
         "stage": "Stage 1 base",
-        "technical": "Price holds above its EMA21, SMA50, and SMA200, within 1.5% of its 20-session pivot with positive MACD. However, volume expansion of 1.21× is lackluster, and lack of overhead clearance limits relative-strength momentum.",
+        "technical": "Price tests a 20-session pivot at 103.06 above key moving averages, but 1.21x volume lacks the institutional conviction required for a SEPA breakout. Base action remains loose without proper volatility contraction.",
         "epsGrowth": [
-          "Q1 FY27 -25.6%",
-          "not verified"
+          "Q1 FY27 -25%",
+          "Q4 FY26 +75%",
+          "Q3 FY26 not verified"
         ],
-        "revenueGrowth": "-56.3%",
+        "revenueGrowth": "-56%",
         "earningsTrend": "Negative",
         "growthQualified": "No",
-        "fundamental": "Operating performance deteriorated sharply in Q1 FY27, with sales plunging 56.3% YoY and net profit dropping 25.6% YoY. Depressed ROCE of 5.6%, poor 3-year ROE of 3.1%, and declining promoter holdings fail CANSLIM investment standards.",
+        "fundamental": "Q1 FY27 net sales plunged 56% YoY and PAT dropped 25.5% to ₹1.02 Cr. An anemic ~5.6% ROCE and deteriorating top-line violate CANSLIM fundamentals, signaling operational stagnation despite modest leverage.",
         "verdict": "Avoid",
-        "risk": "Thesis fails if price breaks below the 94.11 stop; exit promptly if support below the 50-day average gives way."
+        "risk": "A break below the 94.11 stop breaches the 50-day average, invalidating the base; cut losses instantly without hesitation."
       },
       "ABCAPITAL": {
         "stage": "Stage 2 advancing",
-        "technical": "Forming a constructive double-bottom base above a rising 50-day and 200-day moving average. Volume expanded to 1.77× 20-day average on the neckline test, while an RSI of 52 reflects steady accumulation without technical extension.",
+        "technical": "Clearing a double-bottom pivot at 431.13 on 1.77x volume. Price sits comfortably above rising 21 EMA, 50 SMA, and 200 SMA. RSI at 52 demonstrates fresh momentum with ample headroom before extension.",
         "epsGrowth": [
-          "Q1 FY27 +40.1%",
-          "Q4 FY26 +16.9%"
+          "Q1 FY27 +40%",
+          "Q4 FY26 +30%",
+          "Q3 FY26 +41%"
         ],
-        "revenueGrowth": "+27.9%",
+        "revenueGrowth": "+29%",
         "earningsTrend": "Accelerating",
-        "growthQualified": "Partial",
-        "fundamental": "Consolidated PAT accelerated 40.1% YoY to ₹1,174.7 Cr in Q1 FY27 on 27.9% revenue growth, powered by 28% NBFC and 50% housing finance AUM expansion. High leverage is normal for financial operations, alongside 10.8% ROE.",
-        "verdict": "Constructive",
-        "risk": "Fails on a close below 410.13; honor the stop if neckline resistance induces a sharp double-bottom reversal."
+        "growthQualified": "Yes",
+        "fundamental": "Lending AUM expanded 32% YoY to ₹2.19 lakh Cr as housing finance surged 50%. Q1 FY27 PAT rose 40% alongside 29% revenue growth, backed by a ₹4,000 Cr capital raise and sound asset quality.",
+        "verdict": "Leading",
+        "risk": "Failure below 410.13 violates double-bottom support; execute immediate stop discipline if banking and financial sector headwinds resume."
       },
       "ABSLLIQUID": {
         "stage": "Unclear",
-        "technical": "An overnight money-market cash ETF lacking authentic Stage 2 equity price discovery, VCP compression, base structure, or relative-strength leadership.",
+        "technical": "Displays a synthetic near-breakout trigger at 1006 with 1.76x volume. Because it tracks an overnight debt index, price movement is tightly pinned near ₹1,000 NAV, lacking Stage 2 price trend or true relative strength.",
         "epsGrowth": [
           "not verified"
         ],
         "revenueGrowth": "not verified",
         "earningsTrend": "Not verified",
         "growthQualified": "Not verified",
-        "fundamental": "not verified",
+        "fundamental": "Aditya Birla Sun Life CRISIL Liquid Overnight ETF holds overnight TREPS and repo instruments for cash management. It possesses no corporate earnings, revenue, or business operations, rendering CANSLIM analysis inapplicable.",
         "verdict": "Avoid",
-        "risk": "Ineligible for growth capital allocation; risk discipline mandates immediate omission from equity momentum strategies."
+        "risk": "Stop at 1000.26 reflects cash-equivalent volatility; completely unsuitable for equity swing trading or momentum-based capital growth."
       },
       "ACE": {
         "stage": "Stage 2 advancing",
-        "technical": "Textbook SEPA breakout clearing a 20-session pivot to fresh 52-week highs on 2.87× volume. Moving averages are stacked in bullish alignment (price > EMA21 > SMA50 > SMA200), confirming potent Stage 2 institutional sponsorship.",
+        "technical": "Stage 2 SEPA breakout clearing 20-session resistance to trailing-year highs at 1214.41 on 2.87x volume. Trend template is flawless, with price holding well above rising 21 EMA, 50 SMA, and 200 SMA.",
         "epsGrowth": [
-          "Q1 FY27 +22.3%",
-          "Q4 FY26 -6.5%",
-          "Q3 FY26 +14.5%"
+          "Q1 FY27 +22%",
+          "Q4 FY26 -6%",
+          "Q3 FY26 +4%"
         ],
-        "revenueGrowth": "+20.5%",
+        "revenueGrowth": "+21%",
         "earningsTrend": "Accelerating",
         "growthQualified": "Partial",
-        "fundamental": "Dominant mobile crane manufacturer with 63% domestic market share. Q1 FY27 net profit accelerated 22.3% YoY to ₹119.5 Cr on 20.5% sales expansion. Superb capital efficiency marked by 31.6% ROCE, 22.8% ROE, and virtually debt-free balance sheet.",
+        "fundamental": "Commands 63% domestic crane market share with a debt-free balance sheet, ~23% ROE, and ~29% ROCE. Operating margins expanded to 20.5% while Q1 FY27 profit surged 22% alongside the KATO Works JV rollout.",
         "verdict": "Constructive",
-        "risk": "Setup aborts if price breaks below 1123.57; cut losses immediately if the breakout pivot fails to hold."
+        "risk": "Drop below 1123.57 breaches breakout support; exit promptly if infrastructure order momentum stalls or raw material inflation bites."
       },
       "ACMESOLAR": {
         "stage": "Stage 2 advancing",
-        "technical": "Powerful SEPA breakout printing new trailing-year highs on explosive 4.89× 20-day average volume. Price is stacked cleanly above rising EMA21, SMA50, and SMA200, demonstrating standout relative strength and accumulation.",
+        "technical": "High-volume SEPA breakout to new trailing-year highs at 430.93 on a massive 4.89x volume surge. Moving averages are in textbook bullish alignment, confirming aggressive institutional accumulation and top-decile relative strength.",
         "epsGrowth": [
-          "Q1 FY27 +71.8%",
-          "Q4 FY26 +12.7%",
-          "Q3 FY26 +1.5%"
+          "Q1 FY27 +80%",
+          "Q4 FY26 +23%",
+          "Q3 FY26 +84%"
         ],
-        "revenueGrowth": "+67.8%",
+        "revenueGrowth": "+68%",
         "earningsTrend": "Accelerating",
         "growthQualified": "Partial",
-        "fundamental": "Stellar Q1 FY27 execution with sales rising 67.8% YoY to ₹858 Cr and EPS surging 71.8% YoY to ₹3.71, driven by rapid battery energy storage capacity commissioning. High debt is typical of utilities, balanced by robust cash generation.",
-        "verdict": "Leading",
-        "risk": "Pattern failure occurs on a breakdown below 394.55; enforce the stop without hesitation if breakout volume reverses."
+        "fundamental": "Renewable capacity additions drove Q1 FY27 sales up 68% YoY and net profit up 80% to ₹235 Cr with an 86% operating margin. High debt load (D/E ~3.8x) is balanced by strong project-level cash generation.",
+        "verdict": "Constructive",
+        "risk": "Breach of 394.55 invalidates the pivot breakout; cut position immediately if execution bottlenecks or heavy financing costs threaten cash flows."
       },
       "ACUTAAS": {
         "stage": "Stage 2 advancing",
-        "technical": "Consolidating tightly within 1.5% of its 20-session pivot above upward-sloping EMA21, SMA50, and SMA200. Volume running at 1.81× and RSI at 58 indicate healthy pre-breakout contraction characteristics.",
+        "technical": "Consolidating tightly within 1.5% of 3743.74 pivot on 1.81x volume above upward-sloping EMA21, SMA50, and SMA200. Displays textbook VCP characteristics with RSI 58 indicating an orderly supply absorption phase.",
         "epsGrowth": [
-          "Q1 FY27 +67.7%",
-          "Q4 FY26 +106.3%",
-          "Q3 FY26 +16.2%"
+          "Q1 FY27 +68%",
+          "Q4 FY26 +114%",
+          "Q3 FY26 +134%"
         ],
-        "revenueGrowth": "+59.1%",
+        "revenueGrowth": "+59%",
         "earningsTrend": "Decelerating",
         "growthQualified": "Yes",
-        "fundamental": "Robust specialty pharma and CDMO ramp generated 59.1% YoY revenue growth to ₹330 Cr in Q1 FY27. OPM remains strong at 34.3% and ROE stands at 22.6% with negligible leverage. However, EPS YoY growth decelerated from Q4's 106% pace.",
+        "fundamental": "Pharma intermediate and specialty chemical provider (formerly Ami Organics) holds 35% EBITDA margins, negligible debt, and 31% ROCE. Strong Q1 sales (+59%), though YoY profit growth decelerated from triple digits.",
         "verdict": "Watch",
-        "risk": "Thesis invalidates below 3495.75; exit decisively if pivot base support fails, keeping drawdowns minimal."
+        "risk": "Violation of 3495.75 breaks pattern support; exit strictly if sequential margin contractions indicate further deceleration in intermediate demand."
       }
     }
   },
