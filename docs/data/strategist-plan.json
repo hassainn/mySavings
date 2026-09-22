@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-09-22T15:53:57.586Z",
+  "generatedAt": "2026-09-22T17:05:13.451Z",
   "sessionDate": "2026-09-22",
   "status": "ready",
   "scanGeneratedAt": "2026-09-22T15:53:40.175Z",
@@ -239,7 +239,7 @@
   ],
   "previousSession": "2026-09-21",
   "intelligenceGeneratedAt": "2026-09-22T14:02:26.791Z",
-  "commentary": "With the deterministic market gate flagged WEAK and breadth subdued at 42, William O'Neil's market-direction discipline mandates defensive capital preservation and progressive exposure. Stan Weinstein's stage framework reminds us never to fight broad market tides, as three out of four equities mirror benchmark trajectories. While high-beta pockets like Defence and EMS show relative resilience, institutional divergence—marked by ongoing FII distribution offset by domestic bids—creates choppy follow-through. Legendary discipline dictates withholding aggressive breakout buys until the general market confirms an accumulation trend. Only setups displaying uncompromised Stage 2 technical structure alongside accelerating CANSLIM earnings warrant tactical inclusion, strictly managed with tight, non-negotiable stop-losses.",
+  "commentary": "With market breadth deteriorating to a weak score of 42 and the Nifty 50 sliding beneath late-session selling, disciplined operators must heed William O'Neil's primary directive: three out of four stocks track general market direction. Stan Weinstein's stage discipline similarly mandates capital preservation when index distribution mounts and FII outflows persist. While domestic institutional buying provides selective absorption in focused themes, broad leadership is absent. Under Mark Minervini's SEPA protocol, exposure must remain progressive and tightly gated. Traders should avoid forcing secondary breakouts in a hostile tape, keeping powder dry until broad Stage 2 accumulation is confirmed across market breadth.",
   "commentaryStatus": "available",
   "limitations": [
     "Daily scan observations are not fills or performance results.",
@@ -248,92 +248,91 @@
   ],
   "model": "gemini-3.8-flash",
   "analysis": {
-    "analyst": "Minervini SEPA, O'Neil CANSLIM & Weinstein Stage Analysis",
+    "analyst": "Minervini SEPA, O'Neil CANSLIM, Weinstein Stage Analysis & Darvas Box Discipline",
     "bySymbol": {
       "20MICRONS": {
         "stage": "Stage 2 advancing",
-        "technical": "Price holds constructively above rising 21-EMA, 50-SMA, and 200-SMA [1.1.6]. A double-bottom base with neckline resistance at 233.76 is forming on 2.58x volume. Three higher highs off the 21-EMA confirm short-term swing momentum, though overhead supply requires sustained institutional volume.",
+        "technical": "Price trades above rising 21-EMA, 50-DMA, and 200-DMA, forming a double-bottom structure with a 3-up sequence. Volume expanded 2.58x average, showing accumulation at the pivot, though broader relative strength remains mid-tier.",
         "epsGrowth": [
-          "Q1 FY27 +5.3%",
-          "Q4 FY26 +5.5%"
+          "Q1 FY27 +5%",
+          "not verified"
         ],
-        "revenueGrowth": "-1.0%",
+        "revenueGrowth": "-1%",
         "earningsTrend": "Steady",
         "growthQualified": "No",
-        "fundamental": "Operating margin is stable at 12.6% with healthy ROCE of 17.3% and low leverage. However, topline contraction (-1.0% YoY) and single-digit PAT growth fail CANSLIM's 25% threshold, reflecting a lack of institutional-grade operational acceleration.",
+        "fundamental": "Micronized mineral leader exhibits respectable return metrics with 17.3% ROCE and 14.5% ROE. However, top-line contraction of 1% and single-digit profit growth fail CANSLIM benchmarks.",
         "verdict": "Watch",
-        "risk": "Thesis fails on a break below the 214.70 swing low; cut immediately if the double-bottom base breaks down on volume."
+        "risk": "Thesis fails if price breaks beneath the 214.70 swing low; enforce immediate stop discipline without hesitation."
       },
       "3MINDIA": {
         "stage": "Stage 2 advancing",
-        "technical": "Trading above its 21-EMA, 50-SMA, and 200-SMA, the stock is pressing within 1.5% of its 37,337 pivot. A constructive consolidation pattern with RSI at 63 demonstrates healthy momentum without overextension. Relative strength remains resilient against broader index weakness.",
+        "technical": "Classic Stage 2 structure holding comfortably above 21-EMA, 50-DMA, and 200-DMA. Consolidating tightly within 1.5% of its 20-session pivot with constructive RSI at 63 on slightly above-average volume.",
         "epsGrowth": [
-          "Q1 FY27 +31.2%",
-          "Q4 FY26 +20.0%"
+          "Q1 FY27 -0.4%",
+          "not verified"
         ],
-        "revenueGrowth": "+19.0%",
-        "earningsTrend": "Accelerating",
+        "revenueGrowth": "+19%",
+        "earningsTrend": "Decelerating",
         "growthQualified": "Partial",
-        "fundamental": "MNC pedigree with zero net debt, 36.5% ROCE, and 29% ROE. Q1 revenue expanded 19.0% YoY and reported PAT rose 31.2%, though aided by a ₹73 Cr land sale. Core operational margins faced slight pressure, warranting close scrutiny.",
-        "verdict": "Constructive",
-        "risk": "Violation of the 35,593.73 pivot support invalidates the near-breakout setup; execute Minervini stop discipline immediately."
+        "fundamental": "Premium multinational balance sheet with zero net debt and elite capital efficiency (ROCE 50%, ROE 30%). While revenue expanded 19%, net profit growth stalled at -0.4%, failing bottom-line acceleration criteria.",
+        "verdict": "Watch",
+        "risk": "Decisive close below 35,593.73 pivot base invalidates the consolidation thesis; exit swiftly to preserve capital."
       },
       "63MOONS": {
         "stage": "Stage 1 base",
-        "technical": "Price trades above key moving averages with a double-bottom pattern targeting the 958.91 pivot. Momentum indicators are stretched with RSI at 71. Despite a technical base, persistent volume distribution and sharp overhead resistance limit the asymmetry of the trade.",
+        "technical": "Price bounced above its moving-average stack to print a double bottom with RSI at 71. However, heavy overhead distribution and volatile base churning weaken structural Stage 2 credibility.",
         "epsGrowth": [
-          "Q1 FY27 -1729%",
-          "Q4 FY26 +105%"
+          "Q1 FY27 Negative",
+          "Q4 FY26 Negative"
         ],
-        "revenueGrowth": "+350.4%",
+        "revenueGrowth": "not verified",
         "earningsTrend": "Negative",
         "growthQualified": "No",
-        "fundamental": "Despite explosive revenue growth from a low base (+350.4% YoY), operating profit collapsed to -₹71.7 Cr and net loss widened to -₹47.6 Cr. Negative margins and inconsistent returns severely violate CANSLIM quality filters.",
+        "fundamental": "Fundamental metrics remain deficient for CANSLIM leadership, with negative return ratios (ROCE -3.7%, ROE -2.0%) and ongoing operational unprofitability despite an almost debt-free balance sheet.",
         "verdict": "Avoid",
-        "risk": "Failure to hold the 873.20 stop invalidates the pivot structure; exit to prevent severe drawdowns in unprofitable microcaps."
+        "risk": "Pattern fails on a breach of the 873.20 stop; speculative low-quality names require zero tolerance on breakdowns."
       },
       "AAREYDRUGS": {
-        "stage": "Stage 2 advancing",
-        "technical": "Consolidating near 52-week highs, hovering within 1.5% of the 103.60 pivot. Price remains above 21-EMA, 50-SMA, and 200-SMA with positive MACD alignment. However, thin microcap liquidity and extended momentum heighten whipsaw vulnerability.",
+        "stage": "Stage 1 base",
+        "technical": "Hovering within 1.5% of a 20-session breakout pivot above key moving averages with positive MACD. However, micro-cap liquidity and jagged base characteristics elevate false-breakout hazards.",
         "epsGrowth": [
-          "Q1 FY27 -25.6%",
+          "Q1 FY27 -26%",
           "not verified"
         ],
-        "revenueGrowth": "-56.3%",
+        "revenueGrowth": "-56%",
         "earningsTrend": "Negative",
         "growthQualified": "No",
-        "fundamental": "Fundamentals are deteriorating sharply with latest quarterly revenue falling 56.3% YoY and net profit dropping 25.6%. Low ROCE of 5.6% and poor capital efficiency indicate this technical move lacks fundamental institutional backing.",
+        "fundamental": "Deep fundamental deterioration with quarterly sales plunging 56% YoY and net profits tumbling 26%. Weak ROCE of 5.6% highlights lack of operational moat and zero institutional sponsorship.",
         "verdict": "Avoid",
-        "risk": "A breach below 94.71 invalidates the breakout attempt; enforce strict stop discipline given sharp underlying fundamental erosion."
+        "risk": "Invalidation triggers immediately below 94.71; honor Minervini's rule to cut micro-cap breakdowns unconditionally."
       },
       "AARTIPHARM": {
         "stage": "Stage 2 advancing",
-        "technical": "Exhibiting textbook Stage 2 characteristics above all major moving averages. A double-bottom neckline breakout is underway at 933.53 on massive 4.75x volume accumulation, with a bullish engulfing body confirming decisive institutional demand.",
+        "technical": "Exceptional volume surge (4.75x 20-day average) driving a bullish engulfing breakout from a double-bottom base. Price cleanly clears key moving averages, exhibiting powerful relative strength and accumulation.",
         "epsGrowth": [
-          "Q1 FY27 +54.0%",
-          "Q4 FY26 -31.0%",
-          "Q3 FY26 -35.0%"
+          "Q1 FY27 +65%",
+          "not verified"
         ],
-        "revenueGrowth": "+38.7%",
+        "revenueGrowth": "+39%",
         "earningsTrend": "Accelerating",
         "growthQualified": "Partial",
-        "fundamental": "Turnaround thesis confirmed as Q1 revenue surged 38.7% YoY to ₹536 Cr and PAT jumped 53.8% to ₹76.1 Cr, reversing prior declines. Manageable debt and expanding operating margins signal an early-cycle recovery in specialty pharmaceuticals.",
+        "fundamental": "Explosive operational inflection driven by CDMO capacity expansion and ₹149 cr capex. Q1 FY27 net profit jumped 65.4% YoY on 38.7% sales growth, though 10.7% ROCE requires multi-quarter improvement.",
         "verdict": "Constructive",
-        "risk": "Thesis fails if price slips back below the 860.84 swing low; cut losses quickly on any reversal."
+        "risk": "Thesis fails if price slices through the 860.84 support level; execute risk cutoff promptly."
       },
       "ABDL": {
         "stage": "Stage 2 advancing",
-        "technical": "Trading comfortably above 21-EMA, 50-SMA, and 200-SMA, ABDL is coiled within 1.5% of the 712.41 breakout trigger. RSI at 67 and positive MACD confirm constructive momentum, yet volume confirmation on the trigger remains essential.",
+        "technical": "Clear Stage 2 posture above rising 21-EMA, 50-DMA, and 200-DMA, coiling within 1.5% of a fresh pivot with supportive RSI (67) and positive MACD histogram.",
         "epsGrowth": [
-          "Q1 FY27 -13.0%",
-          "Q4 FY26 +15.0%"
+          "Q1 FY27 -13%",
+          "not verified"
         ],
-        "revenueGrowth": "+6.1%",
+        "revenueGrowth": "+6%",
         "earningsTrend": "Decelerating",
         "growthQualified": "No",
-        "fundamental": "Strong spirits franchise with ROCE of 18.4% and ROE of 14.3%. However, high valuation (P/E ~81x), elevated debtor days (168), and sluggish revenue growth (+6.1%) alongside a 13% profit contraction fail CANSLIM benchmarks.",
+        "fundamental": "Spirits heavyweight with healthy 18.4% ROCE, yet Q1 net profit contracted 13% YoY alongside modest 6% revenue growth. Stretched debtor days (168 days) and high P/E (81x) urge caution.",
         "verdict": "Watch",
-        "risk": "A breakdown below 673.47 invalidates the near-breakout pivot; cut losses immediately to protect capital."
+        "risk": "Failure below 673.47 breaches the swing support; cut position immediately per disciplined risk management."
       }
     }
   },
