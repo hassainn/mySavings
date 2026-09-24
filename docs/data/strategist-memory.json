@@ -1793,6 +1793,208 @@
           "observation": "Latest scanned close 458.65; scanner state Armed. This is not an executed trade or an intraday stop/target check."
         }
       ]
+    },
+    {
+      "sessionDate": "2026-09-24",
+      "generatedAt": "2026-09-24T07:49:36.831Z",
+      "gate": "WEAK",
+      "verdict": "No new buys. Observe and protect capital.",
+      "ideas": [
+        {
+          "symbol": "AAREYDRUGS",
+          "name": "AAREY DRUGS & PHARM LTD",
+          "pattern": "Near breakout",
+          "confidence": 99,
+          "state": "Watch",
+          "scanState": "Armed",
+          "asOf": "2026-09-22T00:00:00+05:30",
+          "close": 102.52,
+          "entryTrigger": 104.09,
+          "stop": 95.68,
+          "target2R": 120.93,
+          "evidence": [
+            "Price above EMA21, SMA50 and SMA200",
+            "Within 1.5% of the 20-session pivot",
+            "1.23× 20-day average volume",
+            "MACD is above signal and zero line"
+          ]
+        },
+        {
+          "symbol": "AARTIPHARM",
+          "name": "Aarti Pharmalabs",
+          "pattern": "Near breakout",
+          "confidence": 99,
+          "state": "Watch",
+          "scanState": "Armed",
+          "asOf": "2026-09-22T00:00:00+05:30",
+          "close": 883.75,
+          "entryTrigger": 933.53,
+          "stop": 857.38,
+          "target2R": 1085.83,
+          "evidence": [
+            "Price above EMA21, SMA50 and SMA200",
+            "Within 1.5% of the 20-session pivot",
+            "2.31× 20-day average volume",
+            "RSI 54 supports momentum without extreme extension"
+          ]
+        },
+        {
+          "symbol": "ACMESOLAR",
+          "name": "ACME SOLAR HOLDINGS LTD",
+          "pattern": "Near breakout",
+          "confidence": 99,
+          "state": "Watch",
+          "scanState": "Armed",
+          "asOf": "2026-09-22T00:00:00+05:30",
+          "close": 458.65,
+          "entryTrigger": 464.91,
+          "stop": 425.12,
+          "target2R": 544.5,
+          "evidence": [
+            "Price above EMA21, SMA50 and SMA200",
+            "Within 1.5% of the 20-session pivot",
+            "1.37× 20-day average volume",
+            "RSI 72 supports momentum without extreme extension"
+          ]
+        },
+        {
+          "symbol": "AEGISLOG",
+          "name": "Aegis Logistics",
+          "pattern": "Double bottom",
+          "confidence": 99,
+          "state": "Watch",
+          "scanState": "Armed",
+          "asOf": "2026-09-22T00:00:00+05:30",
+          "close": 1424.5,
+          "entryTrigger": 1501.7,
+          "stop": 1358.19,
+          "target2R": 1788.73,
+          "evidence": [
+            "Price above EMA21, SMA50 and SMA200",
+            "2.43× 20-day average volume",
+            "RSI 68 supports momentum without extreme extension",
+            "MACD is above signal and zero line"
+          ]
+        },
+        {
+          "symbol": "AGI",
+          "name": "AGI Greenpac",
+          "pattern": "20-day breakout",
+          "confidence": 99,
+          "state": "Watch",
+          "scanState": "Triggered",
+          "asOf": "2026-09-22T00:00:00+05:30",
+          "close": 845.7,
+          "entryTrigger": 824.82,
+          "stop": 752.56,
+          "target2R": 969.35,
+          "evidence": [
+            "Price above EMA21, SMA50 and SMA200",
+            "Close cleared the prior 20-session high",
+            "2× 20-day average volume",
+            "RSI 60 supports momentum without extreme extension"
+          ]
+        },
+        {
+          "symbol": "AHCL",
+          "name": "ANLON HEALTHCARE LIMITED",
+          "pattern": "SEPA breakout",
+          "confidence": 99,
+          "state": "Watch",
+          "scanState": "Triggered",
+          "asOf": "2026-09-22T00:00:00+05:30",
+          "close": 28.86,
+          "entryTrigger": 27.51,
+          "stop": 23.93,
+          "target2R": 34.66,
+          "evidence": [
+            "Price above EMA21, SMA50 and SMA200",
+            "Close cleared the prior 20-session high",
+            "New trailing-year price high",
+            "1.78× 20-day average volume"
+          ]
+        },
+        {
+          "symbol": "ALKALI",
+          "name": "Alkali Metals",
+          "pattern": "20-day breakout",
+          "confidence": 99,
+          "state": "Watch",
+          "scanState": "Triggered",
+          "asOf": "2026-09-22T00:00:00+05:30",
+          "close": 103.2,
+          "entryTrigger": 103.1,
+          "stop": 86.05,
+          "target2R": 137.21,
+          "evidence": [
+            "Price above EMA21, SMA50 and SMA200",
+            "Close cleared the prior 20-session high",
+            "3.22× 20-day average volume",
+            "MACD is above signal and zero line"
+          ]
+        },
+        {
+          "symbol": "ANUHPHR",
+          "name": "ANUH PHARMA LIMITED",
+          "pattern": "Double bottom",
+          "confidence": 99,
+          "state": "Watch",
+          "scanState": "Armed",
+          "asOf": "2026-09-22T00:00:00+05:30",
+          "close": 93.48,
+          "entryTrigger": 99.6,
+          "stop": 88.24,
+          "target2R": 122.32,
+          "evidence": [
+            "Price above EMA21, SMA50 and SMA200",
+            "RSI 65 supports momentum without extreme extension",
+            "MACD is above signal and zero line",
+            "Two aligned swing lows with neckline pressure"
+          ]
+        }
+      ],
+      "observations": [
+        {
+          "symbol": "AAREYDRUGS",
+          "previousState": "Watch",
+          "observation": "No newer scan observation; outcome unknown."
+        },
+        {
+          "symbol": "AARTIPHARM",
+          "previousState": "Watch",
+          "observation": "No newer scan observation; outcome unknown."
+        },
+        {
+          "symbol": "ACMESOLAR",
+          "previousState": "Watch",
+          "observation": "No newer scan observation; outcome unknown."
+        },
+        {
+          "symbol": "AEGISLOG",
+          "previousState": "Watch",
+          "observation": "No newer scan observation; outcome unknown."
+        },
+        {
+          "symbol": "AGI",
+          "previousState": "Watch",
+          "observation": "No newer scan observation; outcome unknown."
+        },
+        {
+          "symbol": "AHCL",
+          "previousState": "Watch",
+          "observation": "No newer scan observation; outcome unknown."
+        },
+        {
+          "symbol": "ALKALI",
+          "previousState": "Watch",
+          "observation": "No newer scan observation; outcome unknown."
+        },
+        {
+          "symbol": "ANUHPHR",
+          "previousState": "Watch",
+          "observation": "No newer scan observation; outcome unknown."
+        }
+      ]
     }
   ]
 }
