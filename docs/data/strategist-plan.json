@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-09-24T17:23:03.681Z",
-  "sessionDate": "2026-09-24",
+  "generatedAt": "2026-09-25T08:11:52.805Z",
+  "sessionDate": "2026-09-25",
   "status": "ready",
   "scanGeneratedAt": "2026-09-24T16:16:24.885Z",
   "gate": "CAUTION",
@@ -199,150 +199,54 @@
     {
       "symbol": "AAREYDRUGS",
       "previousState": "Watch",
-      "observation": "Latest scanned close 102.63; scanner state Armed. This is not an executed trade or an intraday stop/target check."
+      "observation": "No newer scan observation; outcome unknown."
     },
     {
       "symbol": "AARTIPHARM",
       "previousState": "Watch",
-      "observation": "Latest scanned close 940.1; scanner state Triggered. This is not an executed trade or an intraday stop/target check."
+      "observation": "No newer scan observation; outcome unknown."
+    },
+    {
+      "symbol": "ABDL",
+      "previousState": "Watch",
+      "observation": "No newer scan observation; outcome unknown."
+    },
+    {
+      "symbol": "ACE",
+      "previousState": "Watch",
+      "observation": "No newer scan observation; outcome unknown."
     },
     {
       "symbol": "ACMESOLAR",
       "previousState": "Watch",
-      "observation": "Latest scanned close 452.3; scanner state Armed. This is not an executed trade or an intraday stop/target check."
+      "observation": "No newer scan observation; outcome unknown."
     },
     {
-      "symbol": "AEGISLOG",
+      "symbol": "ADANIPORTS",
       "previousState": "Watch",
       "observation": "No newer scan observation; outcome unknown."
     },
     {
-      "symbol": "AGI",
+      "symbol": "ADVANCE",
       "previousState": "Watch",
       "observation": "No newer scan observation; outcome unknown."
     },
     {
-      "symbol": "AHCL",
-      "previousState": "Watch",
-      "observation": "Latest scanned close 29.68; scanner state Triggered. This is not an executed trade or an intraday stop/target check."
-    },
-    {
-      "symbol": "ALKALI",
-      "previousState": "Watch",
-      "observation": "No newer scan observation; outcome unknown."
-    },
-    {
-      "symbol": "ANUHPHR",
+      "symbol": "AEROFLEX",
       "previousState": "Watch",
       "observation": "No newer scan observation; outcome unknown."
     }
   ],
-  "previousSession": "2026-09-23",
+  "previousSession": "2026-09-24",
   "intelligenceGeneratedAt": "2026-09-24T14:12:45.737Z",
-  "commentary": "Market breadth at 52 coupled with the Nifty falling 1.64% on surging bond yields and crude spikes signals institutional distribution under O'Neil's market-direction framework. Stan Weinstein's stage analysis mandates defensiveness when the general tide shifts, as broad market pressure significantly degrades breakout success rates. Minervini's progressive exposure rule dictates curtailing risk, deferring aggressive buys, and strictly enforcing stop-loss discipline until confirmed accumulation days return.",
-  "commentaryStatus": "available",
+  "commentary": null,
+  "commentaryStatus": "unavailable",
   "limitations": [
     "Daily scan observations are not fills or performance results.",
     "Price levels are scanner references, not live quotes.",
     "No broker orders are submitted."
   ],
-  "model": "gemini-3.8-flash",
-  "analysis": {
-    "analyst": "Minervini SEPA, O'Neil CANSLIM & Weinstein Stage Analysis",
-    "bySymbol": {
-      "AAREYDRUGS": {
-        "stage": "Stage 2 advancing",
-        "technical": "Price trades above 21-day EMA, 50-day SMA, and 200-day SMA, hovering within 1.5% of its 104.09 pivot on 1.46x average volume with positive MACD momentum.",
-        "epsGrowth": [
-          "Q1 FY27 -25.5%",
-          "Q4 FY26 not verified"
-        ],
-        "revenueGrowth": "-56.3%",
-        "earningsTrend": "Negative",
-        "growthQualified": "No",
-        "fundamental": "Fundamentals are deteriorating sharply, with Q1 revenue contracting 56.3% YoY and net profit dropping 25.5% YoY. Subdued multi-year ROE of ~3% fails CANSLIM filters despite low debt.",
-        "verdict": "Avoid",
-        "risk": "Fails below the 95.67 stop loss. Negative earnings and falling revenue leave the stock vulnerable to severe selling."
-      },
-      "AARTIPHARM": {
-        "stage": "Stage 2 advancing",
-        "technical": "Stage 2 breakout clearing a 20-session high at 933.53 on massive 4.62x volume expansion. RSI at 64 shows constructive momentum without overextension.",
-        "epsGrowth": [
-          "Q1 FY27 +53.8%",
-          "Q4 FY26 +18.2%"
-        ],
-        "revenueGrowth": "+38.7%",
-        "earningsTrend": "Accelerating",
-        "growthQualified": "Partial",
-        "fundamental": "Strong quarterly performance with net profit surging 53.8% YoY and sales expanding 38.7% YoY. Healthy operating margins near 20% and moderate leverage support the setup.",
-        "verdict": "Constructive",
-        "risk": "Thesis invalid below 849.72 stop. Re-entering the prior consolidation range would confirm a false breakout in a weak tape."
-      },
-      "ABDL": {
-        "stage": "Stage 2 advancing",
-        "technical": "Displays heavy volume (5.43x 20-day average) near its 712.41 pivot, holding well above rising 21, 50, and 200 moving averages with bullish MACD alignment.",
-        "epsGrowth": [
-          "Q1 FY27 -12.9%",
-          "Q4 FY26 -29.3%"
-        ],
-        "revenueGrowth": "+1.9%",
-        "earningsTrend": "Negative",
-        "growthQualified": "No",
-        "fundamental": "Operational growth remains sluggish as Q1 net profit contracted 13% YoY and sales inched up only 1.9% YoY. High debtor days (168 days) further pressure liquidity.",
-        "verdict": "Watch",
-        "risk": "Violated if price slides under 671.04. Negative earnings growth caps setup quality to Watch under CANSLIM rules."
-      },
-      "ACE": {
-        "stage": "Stage 2 advancing",
-        "technical": "Consolidating tightly within 1.5% of its 1269.27 pivot, sustained above rising EMA21, SMA50, and SMA200 with MACD above signal and swing low support.",
-        "epsGrowth": [
-          "Q1 FY27 +22.3%",
-          "Q4 FY26 +19.5%"
-        ],
-        "revenueGrowth": "+18.9%",
-        "earningsTrend": "Accelerating",
-        "growthQualified": "Partial",
-        "fundamental": "Solid industrial demand drove Q1 standalone sales up 18.9% YoY and net profit up 22.3% YoY. EBITDA margins hold above 20% alongside negligible balance sheet leverage.",
-        "verdict": "Constructive",
-        "risk": "Thesis breaks below 1178.43. Overhead market selling could stall momentum at the neckline pivot."
-      },
-      "ACMESOLAR": {
-        "stage": "Stage 2 advancing",
-        "technical": "Double bottom base pressing the 477.38 neckline pivot. Holds firmly above 21/50/200 moving averages; RSI at 71 reflects strong relative strength during market decline.",
-        "epsGrowth": [
-          "Q1 FY27 +50.0%",
-          "Q4 FY26 -4.5%",
-          "Q3 FY26 -5.0%"
-        ],
-        "revenueGrowth": "+67.9%",
-        "earningsTrend": "Accelerating",
-        "growthQualified": "Partial",
-        "fundamental": "Turnaround characteristics evident as Q1 revenue jumped 67.9% YoY and EPS surged 50% YoY. Renewable generation expansion improves cash flow, though capital intensity keeps debt high.",
-        "verdict": "Constructive",
-        "risk": "Thesis fails on a drop below 436.05. Capital-intensive project execution carries sensitivity to broader risk-off liquidation."
-      },
-      "ADANIPORTS": {
-        "stage": "Stage 2 advancing",
-        "technical": "Constructive Stage 2 structure above rising 21, 50, and 200 MAs, hovering within 1.5% of 1892.99 pivot. RSI at 69 reflects steady institutional accumulation.",
-        "epsGrowth": [
-          "Q1 FY27 +9.2%",
-          "Q4 FY26 +14.5%"
-        ],
-        "revenueGrowth": "+18.6%",
-        "earningsTrend": "Decelerating",
-        "growthQualified": "Partial",
-        "fundamental": "Volume expansion drove Q1 revenue up 18.6% YoY and EBITDA up 19%. However, net profit growth decelerated to 9.2% YoY, capping CANSLIM momentum.",
-        "verdict": "Watch",
-        "risk": "Stop triggers below 1812.38. Decelerating earnings growth prevents a leadership rating under strict CANSLIM C+A criteria."
-      }
-    }
-  },
   "history": [
-    {
-      "sessionDate": "2026-09-18",
-      "gate": "WEAK",
-      "verdict": "No new buys. Observe and protect capital."
-    },
     {
       "sessionDate": "2026-09-19",
       "gate": "CAUTION",
@@ -370,6 +274,11 @@
     },
     {
       "sessionDate": "2026-09-24",
+      "gate": "CAUTION",
+      "verdict": "Watch only. Wait for broader confirmation."
+    },
+    {
+      "sessionDate": "2026-09-25",
       "gate": "CAUTION",
       "verdict": "Watch only. Wait for broader confirmation."
     }
