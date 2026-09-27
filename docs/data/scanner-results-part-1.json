@@ -2,8 +2,8 @@
   "schemaVersion": 2,
   "status": "partition_complete",
   "provider": "Upstox",
-  "generatedAt": "2026-09-26T15:26:58.494Z",
-  "methodologyUpdatedAt": "2026-09-26T15:26:58.494Z",
+  "generatedAt": "2026-09-27T16:12:09.986Z",
+  "methodologyUpdatedAt": "2026-09-27T16:12:09.986Z",
   "partition": {
     "index": 1,
     "count": 2
@@ -7654,8 +7654,8 @@
         "pctBelow52High": 12.31
       },
       "validation": {
-        "sampleSize": 2,
-        "winRate": 50,
+        "sampleSize": 1,
+        "winRate": 100,
         "method": "2R before 1R stop within 10 sessions"
       }
     },

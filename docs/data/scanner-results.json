@@ -2,25 +2,25 @@
   "schemaVersion": 2,
   "status": "live",
   "provider": "Upstox",
-  "generatedAt": "2026-09-26T15:26:58.494Z",
-  "methodologyUpdatedAt": "2026-09-26T15:26:58.494Z",
+  "generatedAt": "2026-09-27T16:12:09.986Z",
+  "methodologyUpdatedAt": "2026-09-27T16:12:09.986Z",
   "universe": {
     "name": "NSE normal cash equities",
     "eligible": 2680,
     "requested": 2680,
-    "scanned": 2679,
-    "failed": 1,
+    "scanned": 2680,
+    "failed": 0,
     "truncated": false,
     "partitionsComplete": 2,
     "partitionsRequired": 2
   },
   "summary": {
-    "qualified": 1510,
+    "qualified": 1511,
     "armed": 329,
     "triggered": 29,
-    "cautions": 295,
+    "cautions": 296,
     "highConfidence": 389,
-    "candlestickSignals": 1030,
+    "candlestickSignals": 1031,
     "sepaBreakouts": 33,
     "superPerformers": 0,
     "gradeAPlus": 15,
@@ -28,13 +28,13 @@
     "gradeB": 398
   },
   "marketMood": {
-    "evaluated": 2295,
+    "evaluated": 2296,
     "advancers": 1178,
     "aboveSma50": 809,
     "aboveSma200": 1059,
-    "totalChange": 713.8886432026763,
+    "totalChange": 712.9235849664035,
     "advancersPct": 51.3,
-    "aboveSma50Pct": 35.3,
+    "aboveSma50Pct": 35.2,
     "aboveSma200Pct": 46.1,
     "averageChangePct": 0.31,
     "score": 44,
@@ -15843,8 +15843,8 @@
         "pctBelow52High": 12.31
       },
       "validation": {
-        "sampleSize": 2,
-        "winRate": 50,
+        "sampleSize": 1,
+        "winRate": 100,
         "method": "2R before 1R stop within 10 sessions"
       }
     },
@@ -19070,11 +19070,6 @@
       }
     }
   ],
-  "failures": [
-    {
-      "symbol": "BYKE",
-      "reason": "fetch failed"
-    }
-  ],
+  "failures": [],
   "disclaimer": "Confidence is a deterministic confluence score, not a win-rate promise. Backtest samples are symbol-specific, exclude costs and slippage, and do not predict future returns. Confirm price, liquidity and risk before acting."
 }

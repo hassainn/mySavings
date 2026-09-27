@@ -2,8 +2,8 @@
   "schemaVersion": 2,
   "status": "partition_complete",
   "provider": "Upstox",
-  "generatedAt": "2026-09-26T15:14:50.525Z",
-  "methodologyUpdatedAt": "2026-09-26T15:14:50.525Z",
+  "generatedAt": "2026-09-27T15:55:51.077Z",
+  "methodologyUpdatedAt": "2026-09-27T15:55:51.077Z",
   "partition": {
     "index": 0,
     "count": 2
@@ -12,17 +12,17 @@
     "name": "NSE normal cash equities",
     "eligible": 2680,
     "requested": 1340,
-    "scanned": 1339,
-    "failed": 1,
+    "scanned": 1340,
+    "failed": 0,
     "truncated": false
   },
   "summary": {
-    "qualified": 767,
+    "qualified": 768,
     "armed": 175,
     "triggered": 10,
-    "cautions": 148,
+    "cautions": 149,
     "highConfidence": 200,
-    "candlestickSignals": 530,
+    "candlestickSignals": 531,
     "sepaBreakouts": 12,
     "superPerformers": 0,
     "gradeAPlus": 5,
@@ -30,15 +30,15 @@
     "gradeB": 206
   },
   "marketMood": {
-    "evaluated": 1154,
+    "evaluated": 1155,
     "advancers": 571,
     "aboveSma50": 396,
     "aboveSma200": 524,
-    "totalChange": 306.83750602260125,
-    "advancersPct": 49.5,
+    "totalChange": 305.8724477863284,
+    "advancersPct": 49.4,
     "aboveSma50Pct": 34.3,
     "aboveSma200Pct": 45.4,
-    "averageChangePct": 0.27,
+    "averageChangePct": 0.26,
     "score": 42,
     "label": "Cautious",
     "tone": "cautious",
@@ -18677,11 +18677,6 @@
       }
     }
   ],
-  "failures": [
-    {
-      "symbol": "BYKE",
-      "reason": "fetch failed"
-    }
-  ],
+  "failures": [],
   "disclaimer": "Confidence is a deterministic confluence score, not a win-rate promise. Backtest samples are symbol-specific, exclude costs and slippage, and do not predict future returns. Confirm price, liquidity and risk before acting."
 }
