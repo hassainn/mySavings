@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-09-28T19:06:51.376Z",
+  "generatedAt": "2026-09-28T19:44:33.643Z",
   "sessionDate": "2026-09-29",
   "status": "ready",
   "scanGeneratedAt": "2026-09-28T19:06:35.019Z",
@@ -239,7 +239,7 @@
   ],
   "previousSession": "2026-09-28",
   "intelligenceGeneratedAt": "2026-09-28T18:10:10.488Z",
-  "commentary": "Market direction is the ultimate headwind: with Nifty slicing 1.56% below pivotal swing support on heavy institutional distribution and market breadth languishing at 28, Stan Weinstein and William O'Neil dictate defensive positioning. In a weak tape with India VIX spiking, breakouts have high failure rates. Jesse Livermore cautioned against fighting the broader tide, while Mark Minervini's SEPA framework demands progressive exposure—preserving capital and sitting in cash until a confirmed follow-through day occurs. A few Stage 2 names display resilient relative strength, but overall exposure must remain throttled until market breadth repairs.",
+  "commentary": "With the Nifty breaching critical support and market breadth deteriorating to a frail 28%, William O'Neil's market-direction principle is paramount: three out of four equities inevitably succumb to general market distribution. Stan Weinstein's stage discipline warns that even constructive Stage 2 breakouts face elevated failure rates when institutional liquidity contracts amid macroeconomic headwinds. In a weak tape, capital preservation takes precedence over aggressive deployment. Mark Minervini's progressive exposure rules dictate maintaining predominantly cash positions, restricting watchlists strictly to resilient leaders demonstrating powerful relative strength divergence, and honoring stops without hesitation. Cash remains an active, defensive tactical allocation.",
   "commentaryStatus": "available",
   "limitations": [
     "Daily scan observations are not fills or performance results.",
@@ -248,94 +248,95 @@
   ],
   "model": "gemini-3.8-flash",
   "analysis": {
-    "analyst": "Minervini SEPA, O'Neil CANSLIM, Weinstein Stage Analysis & Livermore Discipline",
+    "analyst": "SEPA (Minervini) | CANSLIM (O'Neil) | Stage Analysis (Weinstein) | Darvas Box & Livermore Discipline",
     "bySymbol": {
       "ACE": {
         "stage": "Stage 2 advancing",
-        "technical": "Satisfies Minervini Trend Template above rising 21 EMA, 50 SMA, and 200 SMA. Forms a constructive double bottom / cup with handle (12.8% deep, 5.6% handle) testing pivot resistance at ₹1269.27 with constructive MACD momentum.",
+        "technical": "Consolidating in a clean 12.8% cup with a shallow 5.6% upper-half handle. Price commands the rising EMA21, SMA50, and SMA200 with positive MACD momentum. Relative strength is robust against a collapsing benchmark, positioning near its 1269.27 neckline pivot.",
         "epsGrowth": [
-          "Q1 FY27 +22%",
-          "Q4 FY26 -6%",
-          "Q3 FY26 +4%"
+          "Q1 FY27 +22.3%",
+          "Q4 FY26 -6.5%",
+          "Q3 FY26 +4.3%"
         ],
-        "revenueGrowth": "+20%",
+        "revenueGrowth": "+19.5%",
         "earningsTrend": "Accelerating",
         "growthQualified": "Partial",
-        "fundamental": "Leading domestic crane manufacturer displays healthy 20% revenue growth and zero debt with robust ROCE (~28%), though gross margin compression kept latest EPS expansion below the 25% CANSLIM threshold.",
-        "verdict": "Watch",
-        "risk": "Fails on a breakdown below handle support or the lower double-bottom pivot at ₹1188.57; stop out immediately."
+        "fundamental": "Domestic crane leader with over 60% market share. Generates 32% ROCE, expanding 20.5% EBITDA margins, and zero net debt. KATO Works JV expands high-tonnage exports, though latest EPS growth (+22.3%) lands slightly under the strict 25% threshold.",
+        "verdict": "Constructive",
+        "risk": "A breakdown below 1188.57 or failure to absorb selling at the 1269 pivot invalidates the setup; strict stop discipline applies."
       },
       "AEGISVOPAK": {
-        "stage": "Stage 2 advancing",
-        "technical": "Maintains Stage 2 posture above rising 50 and 200 SMAs, but poked above the ₹321.27 pivot and closed back below—a textbook Livermore danger signal warning of breakout failure in a weak market.",
+        "stage": "Stage 1 base",
+        "technical": "Base structure remains incomplete above long-term averages. The brief poke above the 321.27 pivot followed by a lower close triggers Jesse Livermore's danger signal, indicating supply overhead and an absence of institutional breakout accumulation.",
         "epsGrowth": [
-          "Q1 FY27 +30%",
-          "Q4 FY26 +50%",
-          "Q3 FY26 +18%"
+          "Q1 FY27 -7.0%",
+          "Q4 FY26 +18.0%",
+          "Q3 FY26 +15.0%"
         ],
-        "revenueGrowth": "+12%",
-        "earningsTrend": "Decelerating",
-        "growthQualified": "Partial",
-        "fundamental": "Liquid and gas logistics operator exhibits elevated operating margins (~74%), but deceleration in sales growth (+12%) and high debt leverage (cash flows cover only 19% of debt) fall short of CANSLIM standards.",
+        "revenueGrowth": "+12.4%",
+        "earningsTrend": "Negative",
+        "growthQualified": "No",
+        "fundamental": "Operates valuable liquid and gas logistics infrastructure, but high valuation (P/E >100x), modest ROCE (~7.6%), and recent net profit contraction (-7% YoY) fail core CANSLIM criteria.",
         "verdict": "Watch",
-        "risk": "Pattern breaks down on a close below the swing base support at ₹290.68; enforce strict stop loss."
+        "risk": "Violation of the 290.68 stop confirms pattern failure; failed pivot clearance requires standing aside immediately."
       },
       "AETHER": {
         "stage": "Stage 2 advancing",
-        "technical": "Constructive Stage 2 advance above upward-sloping EMAs and 200 SMA. Carves a double-bottom base approaching the ₹1799.80 neckline, displaying steady relative strength with RSI at 64 during broader market liquidation.",
+        "technical": "Constructing a constructive double-bottom pattern testing overhead neckline resistance at 1799.80. Trades firmly above rising 21 EMA, 50 SMA, and 200 SMA with MACD above zero. Relative strength line is hitting new highs ahead of price, signaling institutional accumulation.",
         "epsGrowth": [
-          "Q1 FY27 +33%",
-          "Q4 FY26 +38%",
-          "Q3 FY26 +49%"
+          "Q1 FY27 +28.0%",
+          "Q4 FY26 +7.0%",
+          "Q3 FY26 +49.0%"
         ],
-        "revenueGrowth": "+29%",
-        "earningsTrend": "Decelerating",
-        "growthQualified": "Yes",
-        "fundamental": "Specialty chemical producer benefits from exclusive multi-year contracts, delivering 29% sales growth and 19% net margins; however, quarterly EPS growth is decelerating and stock carries rich valuation (P/E ~96x).",
-        "verdict": "Watch",
-        "risk": "Thesis invalidates if price penetrates beneath the swing low of ₹1670.91; execute SEPA stop discipline without hesitation."
+        "revenueGrowth": "+27.2%",
+        "earningsTrend": "Accelerating",
+        "growthQualified": "Partial",
+        "fundamental": "Specialty chemicals producer benefiting from 10-year exclusive supply contracts. Demonstrates healthy 31% operating margins and low debt, though working capital remains extended (179 days) and multi-quarter earnings consistency is developing.",
+        "verdict": "Constructive",
+        "risk": "A close below the 1670.91 stop level terminates the setup; general market weakness could induce sharp pivot failure."
       },
       "AHCL": {
         "stage": "Stage 2 advancing",
-        "technical": "Powerful Stage 2 expansion clearing 20-day highs to fresh multi-month peaks above rising 21 EMA and 50 SMA. Price demonstrates exceptional relative strength against the collapsing Nifty benchmark.",
+        "technical": "Breaking out to fresh 52-week highs on a 20-day high clearance at 34.69. Moving averages are in bullish Stage 2 alignment (EMA21 > SMA50 > SMA200), though volume conviction requires close monitoring given small-cap liquidity.",
         "epsGrowth": [
-          "Q1 FY27 +88%",
-          "Q4 FY26 +35%"
+          "Q1 FY27 +115.0%",
+          "Q4 FY26 -25.2%",
+          "Q3 FY26 +45.0%"
         ],
-        "revenueGrowth": "+163%",
+        "revenueGrowth": "+72.1%",
         "earningsTrend": "Accelerating",
-        "growthQualified": "Yes",
-        "fundamental": "Pharma intermediates manufacturer shows explosive operational acceleration with 163% top-line surge, strong 14x interest coverage, and stable 70% promoter stake, satisfying CANSLIM C+A acceleration criteria.",
-        "verdict": "Constructive",
-        "risk": "Breakout fails if price re-enters consolidation below support at ₹29.38; cut loss decisively to prevent deep drawdown."
+        "growthQualified": "Partial",
+        "fundamental": "API and intermediate manufacturer scaling via the Remember India Healthlinks acquisition. Delivers strong 20.8% ROCE and modest 0.35 D/E, but faces gross margin compression from raw material inflation and high debtor days (220 days).",
+        "verdict": "Watch",
+        "risk": "A breach of the 29.38 stop terminates the breakout; high volatility demands strict risk limits."
       },
       "AONELIQUID": {
         "stage": "Unclear",
-        "technical": "Inapplicable. Overnight liquid exchange-traded fund reflecting fractional daily interest accruals; the 20-day breakout is an artifact of interest compounding rather than institutional accumulation or a Darvas box breakout.",
+        "technical": "Shows an artificial flat-line 20-day high breakout driven entirely by accrued interest in an overnight cash fund. Moving average alignment reflects pure cash-equivalent mathematics rather than institutional Stage 2 accumulation.",
         "epsGrowth": [
           "not verified"
         ],
         "revenueGrowth": "not verified",
         "earningsTrend": "Not verified",
-        "growthQualified": "No",
-        "fundamental": "not verified",
+        "growthQualified": "Not verified",
+        "fundamental": "Angel One Nifty 1D Rate Liquid ETF is an open-ended debt exchange-traded fund tracking overnight money-market repo rates. CANSLIM earnings metrics, OPM, ROCE, and balance sheet operating dynamics are entirely inapplicable.",
         "verdict": "Avoid",
-        "risk": "Capital loss risk is negligible, but total opportunity cost makes this entirely invalid for equity growth trading."
+        "risk": "Opportunity cost and cash drag; equity trend frameworks do not apply to money-market cash instruments."
       },
       "ARROWGREEN": {
         "stage": "Stage 2 advancing",
-        "technical": "Textbook Stage 2 configuration above rising key moving averages with MACD positive and RSI at 65. Forming a double-bottom base pressing against the ₹953.70 pivot with resilient relative strength.",
+        "technical": "Exceptional technical setup in a Stage 2 advance. Forming a tight double bottom beneath 953.70 with clean moving-average alignment (EMA21, SMA50, SMA200). Demonstrating standout relative strength divergence by pressing 52-week highs during a severe general market selloff.",
         "epsGrowth": [
-          "Q1 FY27 +151%",
-          "Q4 FY26 -35%",
-          "Q3 FY26 +4%"
+          "Q1 FY27 +151.7%",
+          "Q4 FY26 +27.6%",
+          "Q3 FY26 +3.4%"
         ],
-        "revenueGrowth": "+111%",
+        "revenueGrowth": "+111.2%",
         "earningsTrend": "Accelerating",
-        "growthQualified": "Partial",
-        "fundamental": "Water-soluble films and packaging innovator posted triple-digit top- and bottom-line acceleration in Q1, backed by a virtually debt-free balance sheet, 41% EBITDA margins, and a superior 27% ROCE.",
-        "verdict": "Constructive",
-        "risk": "Setup is compromised if price breaks beneath the secondary swing floor at ₹856.75; cut loss immediately."
+        "growthQualified": "Yes",
+        "fundamental": "High-margin High-Tech Products segment drove an explosive +151% EPS and +111% revenue leap in Q1 FY27. Operating margin widened to 40.9%, ROCE reaches 29.6%, and the company is essentially debt-free with D/E of 0.01.",
+        "verdict": "Leading",
+        "risk": "Failure to hold the 856.75 structural swing stop invalidates the pivot; severe market headwinds require defensive position sizing."
       }
     }
   },
