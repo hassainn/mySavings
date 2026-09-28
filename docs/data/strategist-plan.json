@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-09-28T08:58:31.948Z",
+  "generatedAt": "2026-09-28T09:48:10.707Z",
   "sessionDate": "2026-09-28",
   "status": "ready",
   "scanGeneratedAt": "2026-09-27T16:12:09.986Z",
@@ -238,8 +238,8 @@
     }
   ],
   "previousSession": "2026-09-27",
-  "intelligenceGeneratedAt": "2026-09-27T10:07:21.603Z",
-  "commentary": "With market breadth deteriorating to a weak 44 reading and major indices pinned beneath falling 20- and 50-day moving averages, Stan Weinstein's stage discipline and William O'Neil's market-direction rules dictate defensive caution. Heavy institutional distribution via persistent FII selling offsets domestic liquidity, raising failure rates for generic breakouts. In a corrective or range-bound tape, Minervini progressive exposure dictates limiting risk and demanding asymmetric reward. While most setups falter when the general market gate is weak, true Stage 2 leaders displaying resilient relative strength, explosive accumulation volume, and accelerating quarterly earnings deserve vigilant tracking. Strictly honor stops at the scanner's specified levels without hesitation.",
+  "intelligenceGeneratedAt": "2026-09-28T09:47:25.064Z",
+  "commentary": "With market breadth deteriorating to a weak score of 44 and benchmark indices succumbing to intense distribution, William O’Neil’s cardinal rule takes center stage: three out of four stocks inevitably follow the market's trend. The sharp breach of key index supports driven by crude spikes and relentless FII liquidations signals severe institutional de-risking. Stan Weinstein’s stage framework warns that Stage 2 breakouts face elevated failure rates in a declining tape. Under Mark Minervini’s progressive exposure discipline, capital preservation is paramount. New risk must be strictly curtailed, stop-losses kept deterministic, and cash preserved until index accumulation days confirm a genuine market bottom and relative strength leaders decouple sustainably.",
   "commentaryStatus": "available",
   "limitations": [
     "Daily scan observations are not fills or performance results.",
@@ -248,90 +248,91 @@
   ],
   "model": "gemini-3.8-flash",
   "analysis": {
-    "analyst": "SEPA / CANSLIM / Stage Analysis / Darvas Box Disciplines",
+    "analyst": "Minervini SEPA, O'Neil CANSLIM, Weinstein Stage Analysis & Darvas Box Discipline",
     "bySymbol": {
       "AAATECH": {
-        "stage": "Stage 2 advancing",
-        "technical": "Cleared a 20-session high on exceptional 10.93x volume expansion, signaling institutional accumulation. RSI at 64 provides constructive momentum without overbought extension, while MACD is positive above signal and zero. However, micro-cap liquidity requires strict adherence to pivot boundaries.",
+        "stage": "Stage 1 base",
+        "technical": "Price cleared the 20-session high on massive 10.93× volume with RSI at 64. However, the breakout emerges from an immature Stage 1 base lacking a defined multi-contraction VCP. Relative strength remains nascent during broad market distribution.",
         "epsGrowth": [
-          "Q1 FY27 +6%",
-          "Q4 FY26 +13%"
+          "Q1 FY27 +6.3%",
+          "not verified"
         ],
-        "revenueGrowth": "+2%",
-        "earningsTrend": "Decelerating",
+        "revenueGrowth": "+3.2%",
+        "earningsTrend": "Steady",
         "growthQualified": "No",
-        "fundamental": "Subdued operating momentum with Q1 PAT rising only 6% YoY on sluggish 2% revenue growth. Low ROE of 10.1% and modest promoter holding (34.4%) fall short of CANSLIM standards. Low leverage aids solvency, but absent earnings acceleration caps institutional interest.",
+        "fundamental": "AAA Technologies is virtually debt-free, but revenue growth of +3.2% and ROE of 6.7% fall well below CANSLIM standards. Low promoter holding of 34.4% and stretching working capital days limit institutional sponsorship interest.",
         "verdict": "Watch",
-        "risk": "Thesis fails below the 91.81 stop. Exit immediately if volume dissipates and price slips back into the base range."
+        "risk": "Thesis fails if price slips back below the breakout level; enforce the deterministic stop at 91.81."
       },
       "AAREYDRUGS": {
         "stage": "Stage 1 base",
-        "technical": "Tracing a double bottom within a 26.6% deep cup and 5.7% handle in the upper half of its base. Price holds above key moving averages with RSI at 65, but heavy overhead supply looms at prior highs.",
+        "technical": "Price trades above key averages in a 26.6% deep double-bottom base with a 5.7% handle. However, overhead supply remains heavy and the setup lacks institutional volume conviction amidst deteriorating general market conditions.",
         "epsGrowth": [
-          "Q1 FY27 -26%"
+          "Q1 FY27 -25.6%",
+          "not verified"
         ],
-        "revenueGrowth": "-56%",
+        "revenueGrowth": "-56.3%",
         "earningsTrend": "Negative",
         "growthQualified": "No",
-        "fundamental": "Severe operational deterioration as Q1 revenues halved (-56% YoY) and net profit fell 26%. Margins remain razor-thin near 1%, while 3-year average ROE is a meager 3.1%. Fails CANSLIM C-and-A criteria entirely.",
+        "fundamental": "Severe operational contraction disqualifies the setup under CANSLIM. Q1 FY27 sales dropped 56.3% and profit contracted 25.6% YoY. TTM ROE sits near a dismal 3.1%, while high multiples reflect speculative rather than institutional interest.",
         "verdict": "Avoid",
-        "risk": "Violation of the 95.61 handle stop invalidates the setup. Cut quickly to prevent catastrophic downside in a fundamentally declining business."
+        "risk": "Pattern fails if handle support disintegrates below 95.61; cut losses immediately."
       },
       "ACE": {
         "stage": "Stage 2 advancing",
-        "technical": "Textbook Stage 2 profile, etching a compact 12.8% cup with a tight 4.4% handle in the upper half of its structure. Price is neatly stacked above EMA21, SMA50, and SMA200 with MACD confirming upward thrust toward the 1,269.27 pivot.",
+        "technical": "Classic Stage 2 uptrend above rising 50-day and 200-day moving averages. An orderly 12.8% cup with a tight 4.4% handle forms an actionable pivot, exhibiting quiet volume on pullbacks and resilient relative strength.",
         "epsGrowth": [
-          "Q1 FY27 +22%",
-          "Q4 FY26 +12%"
+          "Q1 FY27 +22.3%",
+          "Q4 FY26 +18.5%"
         ],
-        "revenueGrowth": "+20%",
-        "earningsTrend": "Accelerating",
+        "revenueGrowth": "+18.9%",
+        "earningsTrend": "Steady",
         "growthQualified": "Partial",
-        "fundamental": "Dominant capital goods leader holding over 60% domestic crane market share. Debt-free balance sheet, strong 31.6% ROCE, and 22.8% ROE provide pristine institutional quality, reinforced by manufacturing capex and infrastructure tailwinds.",
+        "fundamental": "Driven by infrastructure capex, Q1 FY27 revenue expanded +18.9% and PAT grew +22.3% YoY. Operating margins held steady at 14.9%, backed by high ROCE (>20%) and negligible net debt, fulfilling core CANSLIM criteria.",
         "verdict": "Constructive",
-        "risk": "Thesis breaks below the 1,189.87 handle swing stop. In a weak tape, never chase beyond the deterministic pivot."
+        "risk": "Setup invalidates if price breaks below handle support; honor the stop strictly at 1189.87."
       },
       "ACMESOLAR": {
         "stage": "Stage 2 advancing",
-        "technical": "Constructive double-bottom consolidation riding above EMA21, SMA50, and SMA200. RSI at 61 and positive MACD reflect steady accumulation, with price exerting pressure on the 477.38 neckline trigger as supply contracts.",
+        "technical": "Double-bottom base holding above rising 21-day EMA and major moving averages. RSI at 61 reflects constructive accumulation without extension, showing solid relative strength as institutional money seeks defensive utility and energy plays.",
         "epsGrowth": [
-          "Q1 FY27 +72%",
-          "Q4 FY26 +22%"
+          "Q1 FY27 +71.8%",
+          "not verified"
         ],
-        "revenueGrowth": "+63%",
+        "revenueGrowth": "+67.8%",
         "earningsTrend": "Accelerating",
         "growthQualified": "Partial",
-        "fundamental": "Strong operating torque powered by rapid battery storage (BESS) commissioning and >85% blended EBITDA margins. Promoter holding is high at 71.4%, though aggressive capex targets and capital intensity demand vigilant margin monitoring.",
+        "fundamental": "Explosive Q1 FY27 performance with revenue up +67.8% and EPS jumping +71.8% YoY, bolstered by rapid battery energy storage (BESS) expansion and 87% EBITDA margins. High leverage is partially alleviated by recent QIP proceeds.",
         "verdict": "Constructive",
-        "risk": "Breakdown below the 436.83 neckline low destroys base integrity. Cut promptly to preserve capital given high debt service requirements."
+        "risk": "Breakout fails if price undercuts double bottom support; cut exposure at 436.83."
       },
       "ADVANCE": {
         "stage": "Stage 2 advancing",
-        "technical": "Tight consolidation within 1.5% of its 20-session pivot on expanding volume (1.99x). Price tracks above EMA21, SMA50, and SMA200 with RSI at 57, indicating coiled price action ahead of the 141.64 trigger.",
+        "technical": "Tight consolidation within 1.5% of its 20-session pivot on double average volume. Moving averages are aligned in Stage 2 sequence and RSI at 57 reflects controlled pressure inside an emerging Darvas box.",
         "epsGrowth": [
-          "Q1 FY27 +152%",
-          "Q4 FY26 +422%"
+          "Q1 FY27 +152.2%",
+          "Q4 FY26 +421.7%"
         ],
-        "revenueGrowth": "+96%",
-        "earningsTrend": "Decelerating",
+        "revenueGrowth": "+95.9%",
+        "earningsTrend": "Accelerating",
         "growthQualified": "Yes",
-        "fundamental": "Triple-digit earnings expansion with Q1 revenue jumping 96% and PAT surging 152%. Solid 19.6% ROCE, conservative debt (D/E 0.32), and zero promoter pledge support the growth thesis, though working capital cycles are lengthening.",
-        "verdict": "Watch",
-        "risk": "A close below 130.78 terminates the breakout thesis. Apply Minervini stop discipline without hesitation in small-cap territory."
+        "fundamental": "Exceptional CANSLIM credentials with revenue surging +95.9% and net profit leaping +152.2% in Q1 FY27. Return on capital is strong with ROCE at 19.6% and ROE at 17.2%, though working capital requires ongoing monitoring.",
+        "verdict": "Leading",
+        "risk": "Thesis collapses if price violates the consolidation shelf; respect the stop at 130.78."
       },
       "AETHER": {
         "stage": "Stage 2 advancing",
-        "technical": "Pristine SEPA breakout to new 52-week highs on massive 8.13x volume expansion, confirming powerful institutional demand. Upward-sloping EMA21, SMA50, and SMA200 demonstrate clear Stage 2 leadership and superior relative strength versus the broader market.",
+        "technical": "High-powered SEPA breakout to a fresh 52-week high on 8.13× average volume despite severe market distribution. All key moving averages are in textbook bullish alignment, demonstrating premier relative-strength leadership.",
         "epsGrowth": [
-          "Q1 FY27 +33%",
-          "Q4 FY26 +18%"
+          "Q1 FY27 +33.5%",
+          "Q4 FY26 +21.4%"
         ],
-        "revenueGrowth": "+27%",
+        "revenueGrowth": "+27.3%",
         "earningsTrend": "Accelerating",
         "growthQualified": "Partial",
-        "fundamental": "High-margin specialty chemical and CRAMS manufacturer benefiting from commercialization of advanced semiconductor chemistries. Low leverage (D/E 0.18), zero promoter pledging, and accelerating bottom-line growth satisfy core CANSLIM institutional criteria.",
+        "fundamental": "Strong contract manufacturing demand boosted Q1 FY27 revenue by +27.3% and profit by +33.5% YoY, maintaining industry-leading ~30% EBITDA margins. Debt-to-equity is minimal at 0.14 with zero promoter share pledging.",
         "verdict": "Leading",
-        "risk": "Thesis fails if price slips back below the 1,596.97 breakout pivot. Exit immediately if the breakout encounters high-volume institutional rejection."
+        "risk": "Breakout thesis fails on a reversal back into the prior range; exit below 1596.97."
       }
     }
   },
