@@ -1,11 +1,11 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-09-29T16:32:01.025Z",
+  "generatedAt": "2026-09-29T17:16:53.178Z",
   "sessionDate": "2026-09-29",
   "status": "ready",
-  "scanGeneratedAt": "2026-09-28T19:06:35.019Z",
+  "scanGeneratedAt": "2026-09-29T17:16:37.928Z",
   "gate": "WEAK",
-  "breadthScore": 28,
+  "breadthScore": 27,
   "verdict": "No new buys. Observe and protect capital.",
   "ideas": [
     {
@@ -35,13 +35,13 @@
       "state": "Watch",
       "scanState": "Armed",
       "asOf": "2026-09-28T00:00:00+05:30",
-      "close": 297.55,
+      "close": 298.55,
       "entryTrigger": 321.27,
       "stop": 290.68,
       "target2R": 382.46,
       "evidence": [
         "Price above EMA21, SMA50 and SMA200",
-        "RSI 56 supports momentum without extreme extension",
+        "RSI 57 supports momentum without extreme extension",
         "Two aligned swing lows with neckline pressure",
         "Poked above the pivot then closed back below it — Livermore danger signal"
       ]
@@ -85,25 +85,6 @@
       ]
     },
     {
-      "symbol": "AONELIQUID",
-      "name": "AONEAMC - AONELIQUID",
-      "pattern": "20-day breakout",
-      "confidence": 99,
-      "state": "Watch",
-      "scanState": "Armed",
-      "asOf": "2026-09-28T00:00:00+05:30",
-      "close": 1078.74,
-      "entryTrigger": 1079.67,
-      "stop": 1079.22,
-      "target2R": 1080.56,
-      "evidence": [
-        "Price above EMA21, SMA50 and SMA200",
-        "Close cleared the prior 20-session high",
-        "MACD is above signal and zero line",
-        "Tight 30-session box near its ceiling"
-      ]
-    },
-    {
       "symbol": "ARROWGREEN",
       "name": "ARROW GREENTECH",
       "pattern": "Double bottom",
@@ -111,13 +92,13 @@
       "state": "Watch",
       "scanState": "Armed",
       "asOf": "2026-09-28T00:00:00+05:30",
-      "close": 881.1,
+      "close": 891.85,
       "entryTrigger": 953.7,
       "stop": 856.75,
       "target2R": 1147.6,
       "evidence": [
         "Price above EMA21, SMA50 and SMA200",
-        "RSI 65 supports momentum without extreme extension",
+        "RSI 68 supports momentum without extreme extension",
         "MACD is above signal and zero line",
         "Two aligned swing lows with neckline pressure"
       ]
@@ -159,6 +140,25 @@
         "Two aligned swing lows with neckline pressure",
         "Flagpole advanced 97% then paused in a tight 18.9% flag"
       ]
+    },
+    {
+      "symbol": "AXISCADES",
+      "name": "AXISCADES TECHNOLOGIES",
+      "pattern": "Double bottom",
+      "confidence": 99,
+      "state": "Watch",
+      "scanState": "Armed",
+      "asOf": "2026-09-28T00:00:00+05:30",
+      "close": 1879.5,
+      "entryTrigger": 1986.98,
+      "stop": 1798.31,
+      "target2R": 2364.33,
+      "evidence": [
+        "Price above EMA21, SMA50 and SMA200",
+        "1.29× 20-day average volume",
+        "RSI 57 supports momentum without extreme extension",
+        "MACD is above signal and zero line"
+      ]
     }
   ],
   "cautions": [
@@ -179,7 +179,7 @@
       "reason": "Near breakout"
     },
     {
-      "symbol": "MAHSEAMLES",
+      "symbol": "VETO",
       "reason": "Double bottom"
     },
     {
@@ -187,11 +187,11 @@
       "reason": "Double bottom"
     },
     {
-      "symbol": "JSWINFRA",
+      "symbol": "RPGLIFE",
       "reason": "Double bottom"
     },
     {
-      "symbol": "STLNETWORK",
+      "symbol": "JSWINFRA",
       "reason": "Double bottom"
     }
   ],
@@ -204,7 +204,7 @@
     {
       "symbol": "AAREYDRUGS",
       "previousState": "Watch",
-      "observation": "Latest scanned close 99.5; scanner state Armed. This is not an executed trade or an intraday stop/target check."
+      "observation": "Latest scanned close 99.53; scanner state Armed. This is not an executed trade or an intraday stop/target check."
     },
     {
       "symbol": "ACE",
@@ -239,7 +239,7 @@
   ],
   "previousSession": "2026-09-28",
   "intelligenceGeneratedAt": "2026-09-29T16:31:09.186Z",
-  "commentary": "With market breadth deteriorating to a fragile 28 and the scanner gate signaling WEAK, Stan Weinstein and William O'Neil enforce strict capital preservation. In an environment where the general market corrects under elevated crude and yields, three out of four stocks succumb to downward drag. Failed breakouts multiply in adverse tape conditions. Jesse Livermore taught that sitting tight in cash is an active trading decision. Mark Minervini's progressive exposure rules dictate that new buys be severely restricted to confirmed Stage 2 leaders displaying accelerating earnings and pristine VCP pivots, while keeping position sizes modest and cutting losses ruthlessly at predetermined stop triggers.",
+  "commentary": "With market breadth deteriorating to a weak score of 27 and benchmark indices stalling near overhead resistance amid rising oil and yields, the broader environment reflects an O'Neil 'Market in Correction' and Weinstein Stage 4 headwinds for speculative issues. In defensive consolidations like this, Jesse Livermore's cardinal rule dominates: never force trades into broad-market teeth. Capital is selectively hiding in capital goods and defensive healthcare, but false breakouts proliferate when general market pressure mounts. We employ strict progressive exposure, requiring Minervini-style tight risk-stops (sub-5–8%) and rigorous CANSLIM earnings qualification. Cash remains a valid, high-yielding tactical hedge until market follow-through emerges.",
   "commentaryStatus": "available",
   "limitations": [
     "Daily scan observations are not fills or performance results.",
@@ -248,93 +248,92 @@
   ],
   "model": "gemini-3.8-flash",
   "analysis": {
-    "analyst": "Minervini SEPA, O'Neil CANSLIM, Weinstein Stage Analysis & Darvas Box",
+    "analyst": "Minervini SEPA, O'Neil CANSLIM, Weinstein Stage Analysis, Darvas Box & Livermore",
     "bySymbol": {
       "ACE": {
         "stage": "Stage 2 advancing",
-        "technical": "Forming an orderly double bottom with a cup depth of 12.8% and a tight 5.6% handle in the upper half. Price holds firmly above rising 21 EMA, 50 SMA, and 200 SMA, meeting Minervini Trend Template standards. Volume dry-up in the handle demonstrates constructive VCP characteristics ahead of the 1,269.27 neckline pivot.",
+        "technical": "Meets Minervini Trend Template above rising 21 EMA, 50 SMA, and 200 SMA. Cup-with-handle structure spans 12.8% depth with a tight 5.6% handle. Neckline pressure near 1,269 suggests base completion, though volume requires confirmation on pivot breakout.",
         "epsGrowth": [
-          "Q1 FY27 +22.3%",
-          "Q4 FY26 -6.5%",
-          "Q3 FY26 +22.0%"
+          "Q1 FY27 +21.6%",
+          "Q4 FY26 -6.5%"
         ],
-        "revenueGrowth": "+18.9%",
+        "revenueGrowth": "+20.5%",
         "earningsTrend": "Accelerating",
         "growthQualified": "Partial",
-        "fundamental": "Commands over 60% domestic market share in mobile and tower cranes. Q1 FY27 operating profit margin expanded to 14.9% with ROCE above 32% and negligible debt (D/E 0.01). However, sub-25% EPS growth in recent quarters keeps CANSLIM fundamental qualification partial.",
+        "fundamental": "World pick-and-carry crane leader (63% market share). High financial health with negligible debt, 31.6% ROCE, and 22.8% ROE. Operating margins remain steady at ~15%, driven by heavy domestic infrastructure, defence, and manufacturing capex tailwinds.",
         "verdict": "Constructive",
-        "risk": "Thesis invalidates if price breaks 1,188.57 handle support; cut losses immediately to honor strict SEPA risk control."
+        "risk": "Breakdown below 1188.57 breaches the handle low and 50 SMA support; cut immediately to protect capital against broader market downdrafts."
       },
       "AEGISVOPAK": {
         "stage": "Stage 2 advancing",
-        "technical": "While trading above major moving averages, the stock poked above the 321.27 pivot and immediately closed back below it. This failed breakout constitutes Jesse Livermore's classic danger signal, indicating lack of follow-through demand despite a multi-month double-bottom structure.",
+        "technical": "Maintains price above major moving averages, but failed after briefly piercing pivot—a classic Livermore danger signal. Double-bottom base lacks tight VCP contraction, reflecting institutional hesitation and distribution near the 321 neckline.",
         "epsGrowth": [
           "Q1 FY27 -7.0%",
-          "Q4 FY26 +18.4%"
+          "Q4 FY26 +22.2%"
         ],
         "revenueGrowth": "+12.4%",
         "earningsTrend": "Negative",
         "growthQualified": "No",
-        "fundamental": "Operates high-margin terminal infrastructure (EBITDA margin ~76.7%), but Q1 FY27 net profit contracted 7.0% YoY due to geopolitical disruptions weighing on gas segment throughput. Sub-par ROCE of 7.6% and a lofty P/E of 120 fail CANSLIM's C+A growth acceleration tests.",
+        "fundamental": "Operates essential port storage terminals in LPG and liquids via Aegis-Royal Vopak JV. However, earnings contraction, low return ratios (7.6% ROCE), capitalized interest concerns, and an excessive ~110x P/E multiple clash with CANSLIM standards.",
         "verdict": "Avoid",
-        "risk": "Livermore pivot failure combined with negative earnings trend; breakdown below 290.68 confirms distribution and requires full exit."
+        "risk": "Failure under 290.68 confirms an upthrust failure; exit instantly to avert deeper institutional liquidation."
       },
       "AETHER": {
         "stage": "Stage 2 advancing",
-        "technical": "Classic Stage 2 advance trading firmly above rising 21 EMA, 50 SMA, and 200 SMA. Fulfills Minervini's Trend Template, carving out a double-bottom base with neckline resistance at 1,799.80. RSI at 64 and positive MACD confirm underlying accumulation and dominant relative strength against a weak benchmark.",
+        "technical": "Textbook Stage 2 continuation above ascending moving averages. Formed a constructive double-bottom base with RSI at 64 and positive MACD. Neckline pivot near 1,800 shows tight price action, exhibiting classic SEPA contraction prior to breakout.",
         "epsGrowth": [
           "Q1 FY27 +33.5%",
-          "Q4 FY26 +28.1%",
-          "Q3 FY26 +24.5%"
+          "Q4 FY26 +7.0%",
+          "Q3 FY26 +49.0%"
         ],
         "revenueGrowth": "+27.3%",
         "earningsTrend": "Accelerating",
-        "growthQualified": "Yes",
-        "fundamental": "Exemplary CANSLIM fundamentals: Q1 FY27 net profit surged 33.5% YoY on 27.3% sales growth, driven by a 31% operating margin. Long-term contract manufacturing partnerships with Dow Chemical and Baker Hughes provide strong revenue predictability alongside a nearly unleveraged balance sheet.",
-        "verdict": "Leading",
-        "risk": "Setup invalidates if the base breaks below 1,670.91 pivot support; execute stop immediately to guard against broader market contagion."
+        "growthQualified": "Partial",
+        "fundamental": "Specialty chemicals leader scaling CRAMS/exclusive contract manufacturing (now >46% of mix) and new semiconductor materials. Site 5 ramp drives 31% EBITDA margins, offsetting moderate ROE (9.7%) and heavy 179-day working capital cycle.",
+        "verdict": "Constructive",
+        "risk": "A break below 1670.91 compromises the double-bottom support; trigger immediate stop discipline to curb multiple compression risks."
       },
       "AHCL": {
         "stage": "Stage 2 advancing",
-        "technical": "Powerful Stage 2 momentum breakout, clearing 20-session resistance and striking a new 52-week high. Moving averages are stacked favorably (price > EMA21 > SMA50 > SMA200) with MACD above zero, confirming strong Darvas-box breakout characteristics and top-tier relative strength.",
+        "technical": "Classic Darvas box breakout to new 52-week highs, clearing a 20-day range on strong relative momentum above key moving averages. However, micro-cap structure and ASM surveillance elevate whipsaw and liquidity risk.",
         "epsGrowth": [
-          "Q1 FY27 +87.6%",
+          "Q1 FY27 +88.0%",
           "Q4 FY26 +39.0%"
         ],
-        "revenueGrowth": "+162.9%",
+        "revenueGrowth": "+163.0%",
         "earningsTrend": "Accelerating",
         "growthQualified": "Yes",
-        "fundamental": "Exceptional top-line hyper-growth (+163% YoY) driven by API capacity expansions and acquisitions. Net profit expanded 87.6% YoY with ROCE at 20.8% and ROE at 18.4%. Raw material cost pressures on margins are expected to normalize as new capacities commercialize.",
-        "verdict": "Leading",
-        "risk": "A breakdown below 29.38 invalidates the 20-day breakout; trigger stop discipline to eliminate capital erosion."
-      },
-      "AONELIQUID": {
-        "stage": "Unclear",
-        "technical": "Consolidates in a hairline range along moving averages. However, because this is an exchange-traded debt instrument tracking overnight repo rates rather than an operating corporate entity, standard Darvas box breakouts and SEPA momentum rules are functionally inapplicable.",
-        "epsGrowth": [
-          "not verified"
-        ],
-        "revenueGrowth": "not verified",
-        "earningsTrend": "Not verified",
-        "growthQualified": "Not verified",
-        "fundamental": "not verified",
-        "verdict": "Avoid",
-        "risk": "Cash equivalent instrument tracking overnight tri-party repo yields; incapable of generating equity capital gains or CANSLIM alpha."
+        "fundamental": "Rapidly expanding pharma intermediate and API producer delivering explosive quarterly revenue and net profit growth. Low debt and expanding scale support fundamentals, though earnings quality and margin volatility warrant close institutional scrutiny.",
+        "verdict": "Watch",
+        "risk": "Violation of 29.38 voids the 20-day breakout level; execute stop immediately given ASM Stage 1 volatility and low liquidity."
       },
       "ARROWGREEN": {
         "stage": "Stage 2 advancing",
-        "technical": "Constructive double-bottom continuation structure sustaining above rising 21 EMA, 50 SMA, and 200 SMA. RSI at 65 indicates strong underlying momentum without overbought exhaustion. The 953.70 neckline provides a well-defined pivot point under Minervini and Darvas breakout criteria.",
+        "technical": "Demonstrates Stage 2 leadership above 21 EMA, 50 SMA, and 200 SMA. Developing a constructive double-bottom consolidation with RSI at 68. MACD remains above zero, indicating latent accumulation ahead of the 953.70 pivot.",
         "epsGrowth": [
-          "Q1 FY27 +151.2%",
-          "Q4 FY26 -24.8%",
-          "Q3 FY26 +3.4%"
+          "Q1 FY27 +151.7%",
+          "Q4 FY26 -34.7%"
         ],
         "revenueGrowth": "+111.2%",
         "earningsTrend": "Accelerating",
         "growthQualified": "Partial",
-        "fundamental": "Dramatically improved Q1 FY27 performance with net profit up 151.2% YoY and revenue up 111.2%. Operating margins expanded to 41% with ROCE of 29.6% and negligible leverage. However, a negative Q4 FY26 restricts qualification to partial pending another 25%+ quarter.",
+        "fundamental": "Dominant domestic manufacturer of water-soluble green packaging films with high-margin intellectual property division. High-quality balance sheet with virtually zero debt, 29.6% ROCE, and 21.2% ROE; benefiting from global sustainability regulations.",
         "verdict": "Constructive",
-        "risk": "Pattern thesis fails on a breach below the 856.75 swing low; exit without hesitation to enforce stop discipline."
+        "risk": "Breaching 856.75 invalidates the double-bottom pivot support; exit swiftly per Minervini risk rules to avoid sharp small-cap drawdowns."
+      },
+      "ARTEMISMED": {
+        "stage": "Stage 2 advancing",
+        "technical": "Forming a powerful Stage 2 double-bottom breakout on 1.57x volume expansion, confirming genuine institutional sponsorship. Price action respects rising 50 SMA and 21 EMA with strong relative strength and RSI at 61.",
+        "epsGrowth": [
+          "Q1 FY27 +46.7%",
+          "Q4 FY26 +38.0%"
+        ],
+        "revenueGrowth": "+15.0%",
+        "earningsTrend": "Accelerating",
+        "growthQualified": "Yes",
+        "fundamental": "Tertiary healthcare hospital chain enjoying rising bed occupancy, expanding ARPOB, and high-margin international patient volumes. Operating margins above 20%, 14.5% ROCE, and manageable debt backed by Apollo Tyres promoter pedigree.",
+        "verdict": "Leading",
+        "risk": "A drop below 344.61 violates pivot floor support; enforce stop immediately to curtail downside if defensive rotation stumbles."
       }
     }
   },
