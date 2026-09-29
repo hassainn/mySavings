@@ -1,7 +1,7 @@
 {
   "status": "live",
   "method": "gemini-grounded",
-  "generatedAt": "2026-09-29T09:50:20.315Z",
+  "generatedAt": "2026-09-29T16:31:09.186Z",
   "model": "gemini-3.8-flash",
   "marketDirection": {
     "direction": "Downtrend",
@@ -23,75 +23,93 @@
         "text": "Market breadth is defensive — 17.3% of scanned NSE stocks advancing, 27.6% above their 50-DMA."
       },
       {
-        "tag": "Macro/flows",
-        "text": "Widespread index weakness demands higher conviction thresholds and tighter trailing stops on ongoing swing breakout candidates."
+        "tag": "Order win",
+        "text": "Expands revenue visibility into civil leasing frameworks, offering fundamental support for a swing retest of upper consolidation resistance."
       },
       {
-        "tag": "Index change",
-        "text": "Traders should watch for end-of-day volume spikes and volatility near closing prints as benchmark-tracking index funds complete rebalancing execution."
+        "tag": "Other",
+        "text": "Resolves the single largest operational drag on HAL's multi-year execution curve, improving risk-reward for swing continuation setups."
       }
     ],
     "disclaimer": "A rules-based read of index price, market breadth and headline flow — not a forecast or trading advice."
   },
-  "marketMood": "Risk-Off Consolidation",
-  "marketSummary": "Indian benchmark indices are experiencing pronounced risk-off pressure, with Nifty 50 testing support around the 22,600–22,750 band and Sensex shedding over 1,000 points over consecutive sessions. Elevated Brent crude prices hovering above $105/barrel, mounting Middle Eastern geopolitical frictions, and persistent FII liquidation have triggered broad profit-taking across banking, NBFCs, and extended consumer discretionary counters. In contrast, defensive pockets and capital goods segments—particularly power transmission, cables, and select private defence consortia—continue to display relative strength against widespread market weakness.",
-  "dailyFocus": "Execute strict capital preservation and avoid chasing breakouts until index volatility cools. Focus on stocks displaying strong relative strength (RS) against the Nifty, passive flow dislocations (notably BSE replacing Wipro in the Nifty 50 rebalancing), and emerging structural shifts in defence procurement favouring private-sector consortia over single PSU suppliers.",
+  "marketMood": "Cautious",
+  "marketSummary": "Indian benchmark indices are navigating a phase of defensive consolidation, with Nifty 50 hovering near the 22,700–23,000 zone amid pressure from elevated crude oil prices ($102–$106/bbl), firm global bond yields, and currency volatility. Capital flows show distinct bifurcation: high-valuation consumer discretionary and IT face corrective pressure, while Defence PSUs, heavy electricals, and capital goods continue to find institutional accumulation on the back of sovereign order visibility and domestic manufacturing milestones.",
+  "dailyFocus": "Prioritize high-relative-strength swing setups in Defence and Capital Goods showing tight consolidation near support or breakout pivots on confirmed order wins (HAL, BEL, CGPOWER). Avoid aggressive long exposure in extended consumer discretionary names pending earnings clarity.",
   "sectors": [
     {
-      "name": "Capital Goods & Electrical Equipment",
+      "name": "Defence & Shipbuilding",
       "momentum": "Leading",
-      "score": 82,
-      "reason": "Displaying standout relative strength amid broader index declines, underpinned by robust domestic grid expansion, high HV/EHV transformer demand, and expanding order backlogs.",
+      "score": 86,
+      "reason": "Sustained domestic and export order inflows, multi-year order book cover (>3x revenue), and resolving engine supply chain bottlenecks support structural base breakouts.",
       "catalysts": [
-        "Aggressive national grid capex commitments",
-        "Semiconductor OSAT commercialisation and industrial automation demand",
-        "Sustained pricing power in industrial motors and heavy electrical machinery"
+        "Fresh ₹2,491 Cr civil/defence helicopter MoU for HAL",
+        "Continuous incremental order additions for BEL totaling ₹648 Cr",
+        "International design acquisition and partnership expansion by Cochin Shipyard"
       ],
       "risks": [
-        "Raw material inflation in copper and electrical steel",
-        "Execution bottlenecks on large EPC deliveries"
-      ],
-      "relatedStocks": [
-        "CGPOWER",
-        "SIEMENS",
-        "ABB",
-        "KEI"
-      ]
-    },
-    {
-      "name": "Defence & Aerospace",
-      "momentum": "Mixed",
-      "score": 64,
-      "reason": "Sector momentum is diverging sharply: pure PSU platform assemblers face headline drag from private-consortium competition, while electronics and subsystems suppliers gain fresh multi-year revenue visibility.",
-      "catalysts": [
-        "Shortlisting for the ₹15,000-crore AMCA fifth-generation fighter prototype program",
-        "Easing supply bottlenecks for GE F404 jet engines",
-        "Steady stream of domestic radar, electronic warfare, and naval vessel contracts"
-      ],
-      "risks": [
-        "Exclusion of traditional PSUs from major prototype competitions",
-        "Long gestation periods and contract award delays"
+        "IAF integration and weapon-separation flight testing delays",
+        "Extended valuation multiples vulnerable to broader market risk-off"
       ],
       "relatedStocks": [
         "HAL",
         "BEL",
         "COCHINSHIP",
-        "DATAPATTNS",
-        "BHARATFORG"
+        "BDL",
+        "MAZDOCK"
+      ]
+    },
+    {
+      "name": "Heavy Electricals & Power Equipment",
+      "momentum": "Improving",
+      "score": 78,
+      "reason": "Expanding domestic transmission capex, grid modernization orders, and nascent commercialization of domestic semiconductor packaging lines driving high institutional interest.",
+      "catalysts": [
+        "CG Semi G1 OSAT plant achieving commercial deliveries at Sanand",
+        "Greenfield transformer capacity additions coming online to satisfy high backlog"
+      ],
+      "risks": [
+        "Raw material inflation in copper and core electrical steel",
+        "Execution slippages in high-tech packaging joint ventures"
+      ],
+      "relatedStocks": [
+        "CGPOWER",
+        "BHEL",
+        "SIEMENS",
+        "ABB"
+      ]
+    },
+    {
+      "name": "Energy & Upstream Oil & Gas",
+      "momentum": "Improving",
+      "score": 72,
+      "reason": "Geopolitical risk premia pushing Brent crude above $102/bbl, providing strong net-realization tailwinds and defensive dividend yields.",
+      "catalysts": [
+        "Crude oil price strength driven by Middle East supply risk",
+        "Consistent institutional rotation into cash-rich state-owned upstream producers"
+      ],
+      "risks": [
+        "Potential windfall tax adjustments by the government",
+        "Sudden demand destruction if global macro growth decelerates"
+      ],
+      "relatedStocks": [
+        "ONGC",
+        "OIL",
+        "COALINDIA"
       ]
     },
     {
       "name": "Retail & Consumer Discretionary",
       "momentum": "Weakening",
-      "score": 48,
-      "reason": "High-valuation multi-bagger retail leaders are encountering base-building friction as market participants digest slower like-for-like sales growth, high inflation headwinds, and corporate holdco restructuring headlines.",
+      "score": 46,
+      "reason": "Valuation compression and pre-earnings de-risking leading to breakdowns below short-term moving averages despite long-term footprint expansion.",
       "catalysts": [
-        "Value fashion footprint expansion beyond 1,000 stores",
-        "Upcoming festive season demand rebound"
+        "Approaching festive quarter demand recovery",
+        "Footprint expansion milestones across value-fashion formats"
       ],
       "risks": [
-        "Compression in revenue per square foot during rapid Tier-2/3 expansion",
-        "Extended base breakdown if broader market correction accelerates"
+        "Multiple compression from elevated P/E levels (>75x)",
+        "Insider trading window closures ahead of Q2 results subduing volume"
       ],
       "relatedStocks": [
         "TRENT",
@@ -100,196 +118,167 @@
       ]
     },
     {
-      "name": "Banking & Financial Services",
+      "name": "Information Technology",
       "momentum": "Weakening",
       "score": 38,
-      "reason": "Heavyweights in private and PSU banking are leading index drawdowns due to FII outflows, hardening global yields, and margin compression concerns.",
+      "reason": "Under sustained selling pressure driven by higher-for-longer global interest rate expectations, visa scrutiny, and subdued discretionary enterprise tech budgets.",
       "catalysts": [
-        "Credit growth stabilising in productive capex segments",
-        "Attractive valuation support at key technical moving averages"
+        "Selective AI engineering contract awards"
       ],
       "risks": [
-        "Unfavourable risk-reward driven by macro liquidity tightening",
-        "Net interest margin pressure as deposit repricing lingers"
+        "Cross-currency headwinds and US IT spending delays",
+        "Index weight reduction by foreign institutional portfolios"
       ],
       "relatedStocks": [
-        "HDFCBANK",
-        "ICICIBANK",
-        "SBIN",
-        "BAJFINANCE"
+        "INFY",
+        "TCS",
+        "HCLTECH",
+        "WIPRO"
       ]
     }
   ],
   "news": [
     {
-      "category": "market",
-      "symbol": "NIFTY",
-      "headline": "Benchmark Nifty Slips Toward 22,600 as Brent Crude Tops $105 Amid Macro Headwinds",
-      "summary": "Intensifying geopolitical tensions and sharp crude price increases triggered broad-based institutional de-risking, dragging the Nifty below its 50-day moving average and deteriorating market breadth across mid-and small-cap counters.",
-      "sentiment": "Negative",
-      "importance": "High",
-      "catalystType": "Macro/flows",
-      "timeHorizon": "Today",
-      "impact": "Widespread index weakness demands higher conviction thresholds and tighter trailing stops on ongoing swing breakout candidates.",
-      "sourceName": "The Economic Times",
-      "sourceUrl": "https://economictimes.indiatimes.com/markets/stocks/news/share-market-nifty-sensex-live-updates-29-september-2026/articleshow/134549339.cms",
-      "publishedAt": "2026-09-29T09:14:00Z"
-    },
-    {
-      "category": "stock",
-      "symbol": "BSE",
-      "headline": "BSE Ltd Replaces Wipro in Nifty 50 Index Effective September 30",
-      "summary": "BSE enters the benchmark Nifty 50 index replacing Wipro following the semi-annual rebalancing, triggering an estimated $700M+ in mandatory passive index fund buying at the close of trading on September 29, 2026.",
-      "sentiment": "Positive",
-      "importance": "High",
-      "catalystType": "Index change",
-      "timeHorizon": "Today",
-      "impact": "Traders should watch for end-of-day volume spikes and volatility near closing prints as benchmark-tracking index funds complete rebalancing execution.",
-      "sourceName": "The Economic Times",
-      "sourceUrl": "https://economictimes.indiatimes.com/markets/stocks/news/bse-shares-rise-2-ahead-of-nifty-50-entry-tomorrow-top-brokerages-share-mixed-outlook/articleshow/134559591.cms",
-      "publishedAt": "2026-09-29T07:45:00Z"
-    },
-    {
       "category": "stock",
       "symbol": "HAL",
-      "headline": "HAL Excluded from AMCA Fifth-Gen Fighter Prototype Phase on Technical Grounds",
-      "summary": "Defence Secretary Rajesh Kumar Singh confirmed at the NDTV Defence Summit that Hindustan Aeronautics Limited failed to qualify on routine technical criteria for the ₹15,000-crore AMCA prototype development, leaving the program to private consortia.",
-      "sentiment": "Negative",
-      "importance": "High",
-      "catalystType": "Other",
-      "timeHorizon": "This week",
-      "impact": "Shakes the multi-year monopoly perception on fighter production; expect short-term distribution as the stock tests lower base boundaries.",
-      "sourceName": "Military Watch Magazine",
-      "sourceUrl": "https://militarywatchmagazine.com/article/india-hal-excluded-amca-fighter-prototypes",
-      "publishedAt": "2026-09-28T20:30:00Z"
-    },
-    {
-      "category": "stock",
-      "symbol": "HAL",
-      "headline": "GE Aerospace Accelerates F404 Engine Supply to HAL with 12 Deliveries by December",
-      "summary": "GE Aerospace has ramped up shipments of F404-IN20 powerplants, scheduling four engines per month through December 2026 to help HAL clear approximately 27-30 completed Tejas Mk1A airframes awaiting engines.",
-      "sentiment": "Positive",
-      "importance": "High",
-      "catalystType": "Guidance",
-      "timeHorizon": "This week",
-      "impact": "Provides a fundamental downside buffer against the AMCA exclusion news by securing revenue recognition schedules for grounded airframes into Q4.",
-      "sourceName": "Defence News India",
-      "sourceUrl": "https://defencenewsindia.com/hal-expects-12-more-ge-f404-engines-by-december/",
-      "publishedAt": "2026-09-28T19:40:00Z"
-    },
-    {
-      "category": "stock",
-      "symbol": "TRENT",
-      "headline": "Tata Trusts Propose Amalgamation into Tata Sons to Shed NBFC Tag and Avoid IPO",
-      "summary": "Tata Trusts proposed merging Tata Electronics Systems Solutions and Tata Consulting Engineers into Tata Sons to exceed 60% operating income, removing its upper-layer NBFC classification and averting a mandatory public listing.",
-      "sentiment": "Neutral",
-      "importance": "High",
-      "catalystType": "Corporate action",
-      "timeHorizon": "This week",
-      "impact": "Tempered speculative holdco discount unwind across Tata names; Trent is likely to consolidate as focus shifts back to organic operating margins.",
-      "sourceName": "Mint",
-      "sourceUrl": "https://www.livemint.com/companies/news/tata-trusts-moots-two-mergers-to-avoid-tata-sons-listing-11790601143063.html",
-      "publishedAt": "2026-09-28T16:04:00Z"
-    },
-    {
-      "category": "stock",
-      "symbol": "BEL",
-      "headline": "BEL Shortlisted in L&T-Led Consortium for AMCA Fifth-Gen Fighter Prototype Program",
-      "summary": "Bharat Electronics Limited, partnered with Larsen & Toubro and Dynamatic Technologies, has emerged as one of three qualified bidder groups for India's ₹15,000-crore AMCA prototype contract, with final bids due October 30, 2026.",
+      "headline": "HAL Signs ₹2,491 Crore Helicopter Programme MoU with SkyPulse at GIFT City",
+      "summary": "Hindustan Aeronautics Limited has entered into a strategic Memorandum of Understanding with SkyPulse Solutions IFSC Private Limited for a proposed 30-helicopter programme valued at ₹2,491 crore, encompassing financing, leasing, deployment, and lifecycle maintenance for civil and parapublic aviation.",
       "sentiment": "Positive",
       "importance": "High",
       "catalystType": "Order win",
       "timeHorizon": "This week",
-      "impact": "Reinforces BEL's tier-1 systems integration role in next-gen platforms, presenting constructive accumulation setups against weak market tape.",
-      "sourceName": "SSBCrack",
-      "sourceUrl": "https://ssbcrack.com/hal-fails-to-qualify-for-amca-prototype-programme/",
-      "publishedAt": "2026-09-28T13:30:00Z"
+      "impact": "Expands revenue visibility into civil leasing frameworks, offering fundamental support for a swing retest of upper consolidation resistance.",
+      "sourceName": "Indian Masterminds",
+      "sourceUrl": "https://indianmasterminds.com",
+      "publishedAt": "2026-09-28T09:30:00Z"
     },
     {
       "category": "stock",
-      "symbol": "WIPRO",
-      "headline": "Wipro Moves to Nifty Next 50 as Index Exclusion Takes Effect",
-      "summary": "Wipro ceases trading as a Nifty 50 constituent on September 29, 2026, transitioning to the Nifty Next 50 after trailing free-float market capitalisation criteria, resulting in substantial passive ETF portfolio rebalancing outflows.",
-      "sentiment": "Negative",
-      "importance": "Medium",
-      "catalystType": "Index change",
-      "timeHorizon": "Today",
-      "impact": "Anticipate lingering price overhang until mechanical selling absorption settles post-close.",
-      "sourceName": "The Times of India",
-      "sourceUrl": "https://timesofindia.indiatimes.com/business/india-business/bse-enters-nifty50-wipro-exits-what-changes-from-september-30/articleshow/134547820.cms",
-      "publishedAt": "2026-09-29T08:10:00Z"
+      "symbol": "HAL",
+      "headline": "GE F404 Engine Bottleneck Eases for HAL Tejas Mk1A as Dispatches Touch 10 Units",
+      "summary": "GE Aerospace has accelerated F404 engine dispatches with 10 units delivered and 12 more committed by year-end, clearing the production logjam for 27 assembled Tejas Mk1A airframes and placing initial Indian Air Force squad deliveries on schedule for FY27.",
+      "sentiment": "Positive",
+      "importance": "High",
+      "catalystType": "Other",
+      "timeHorizon": "This week",
+      "impact": "Resolves the single largest operational drag on HAL's multi-year execution curve, improving risk-reward for swing continuation setups.",
+      "sourceName": "NDTV Profit",
+      "sourceUrl": "https://ndtvprofit.com",
+      "publishedAt": "2026-09-26T06:45:00Z"
     },
     {
       "category": "stock",
       "symbol": "COCHINSHIP",
-      "headline": "Cochin Shipyard to Acquire 23% Stake in Dutch Ship Designer Conoship for €2.3M",
-      "summary": "CSL has executed share purchase and shareholder agreements to acquire a 23% equity stake in Netherlands-based Conoship International Holding BV following DIPAM approval, accelerating entry into European coastal and green vessel designs.",
+      "headline": "Cochin Shipyard Executes Share Purchase Pact for 23% Stake in Dutch Firm Conoship",
+      "summary": "Cochin Shipyard Limited signed definitive agreements to acquire a 23% equity stake in Netherlands-based naval architect Conoship International Holding B.V. for €2.3 million (~₹25 crore) following DIPAM approval, securing intellectual property for green coastal vessels and European short-sea shipping designs.",
       "sentiment": "Positive",
-      "importance": "Medium",
+      "importance": "High",
       "catalystType": "Corporate action",
       "timeHorizon": "This week",
-      "impact": "Strategic technology acquisition enhances long-term export margins and offers a constructive support level on multi-week chart consolidations.",
+      "impact": "Direct ownership of European green vessel designs strengthens high-margin export tender capabilities, providing upside momentum to base-building price action.",
       "sourceName": "PSU Watch",
-      "sourceUrl": "https://psuwatch.com/defence-watch/cochin-shipyard-acquires-conoship-stake",
-      "publishedAt": "2026-09-24T05:24:00Z"
-    },
-    {
-      "category": "stock",
-      "symbol": "BEL",
-      "headline": "BEL Bolsters Order Pipeline with ₹648-Crore Contract Wins and CDAC Strategic Tie-up",
-      "summary": "Bharat Electronics announced incremental contracts valued at ₹648 crore for laser IR jammers, communication suites, and AI applications, alongside an MoU with C-DAC to develop indigenous sovereign data center infrastructure.",
-      "sentiment": "Positive",
-      "importance": "Medium",
-      "catalystType": "Order win",
-      "timeHorizon": "Watch",
-      "impact": "Supports steady EPS compounding trajectory, cushioning technical pullbacks toward the 50-day exponential moving average.",
-      "sourceName": "BEL Corporate Communications",
-      "sourceUrl": "https://bel-india.in/archives-news-bel-september-2026/",
-      "publishedAt": "2026-09-21T05:30:00Z"
+      "sourceUrl": "https://psuwatch.com",
+      "publishedAt": "2026-09-25T10:21:00Z"
     },
     {
       "category": "stock",
       "symbol": "CGPOWER",
-      "headline": "CG Power Commences Commercial Production at Sanand OSAT Unit Amid Transformer Expansion",
-      "summary": "CG Power subsidiary CG Semi has commenced commercial operations at its ₹7,600-crore Sanand G1 OSAT packaging facility, while the parent advances its 45,000 MVA power transformer capacity additions to address long lead-time grid demand.",
+      "headline": "CG Power Accelerates Sanand OSAT Production and Dispatches First Sehore Transformers",
+      "summary": "CG Power and Industrial Solutions' semiconductor packaging subsidiary CG Semi is scaling up commercial output from its Sanand G1 facility toward an annualized target of $500 million, while its newly commissioned ₹792 crore greenfield plant at Sehore completed its first commercial transformer dispatches.",
       "sentiment": "Positive",
+      "importance": "High",
+      "catalystType": "Corporate action",
+      "timeHorizon": "This week",
+      "impact": "Dual operational ramp-up in high-voltage grid equipment and semiconductor backend packaging provides fundamental validation as the stock consolidates near ₹880.",
+      "sourceName": "Digitimes",
+      "sourceUrl": "https://digitimes.com",
+      "publishedAt": "2026-09-23T04:30:00Z"
+    },
+    {
+      "category": "stock",
+      "symbol": "BEL",
+      "headline": "Bharat Electronics Bags Additional Defence Orders Totaling ₹648 Crore",
+      "summary": "Bharat Electronics Limited disclosed securing fresh contracts worth ₹648 crore, spanning laser-based IR jammers, secure tactical communication equipment, thermal imagers, and AI-enabled defense software solutions, taking incremental order additions since late August to robust multi-thousand crore levels.",
+      "sentiment": "Positive",
+      "importance": "High",
+      "catalystType": "Order win",
+      "timeHorizon": "This week",
+      "impact": "Reinforces consistent top-line visibility above ₹28,000 Cr annualized run-rate, establishing solid swing support near the ₹395–₹400 accumulation band.",
+      "sourceName": "The Economic Times",
+      "sourceUrl": "https://economictimes.indiatimes.com",
+      "publishedAt": "2026-09-18T05:28:00Z"
+    },
+    {
+      "category": "market",
+      "symbol": "NIFTY",
+      "headline": "Crude Oil Surge Above $102 and Yield Hardening Pressure Broad Indian Equities",
+      "summary": "Spiking Brent crude oil prices and dollar strength to ₹95.88 pushed the benchmark Nifty 50 into a test of the 22,700 technical support zone, forcing broad risk-off unwinding across rate-sensitive sectors and discretionary consumption counters.",
+      "sentiment": "Negative",
       "importance": "Medium",
-      "catalystType": "Other",
-      "timeHorizon": "Watch",
-      "impact": "Drives structural re-rating potential over a multi-month horizon; watch for volume-backed expansion above immediate resistance.",
-      "sourceName": "Sahi Markets",
-      "sourceUrl": "https://www.sahi.com/news/cg-power-semiconductor-sanand-growth-2026",
-      "publishedAt": "2026-09-18T03:46:00Z"
+      "catalystType": "Macro/flows",
+      "timeHorizon": "Today",
+      "impact": "Macro headwinds demand tighter stop-loss placement on breakout attempts and skew swing opportunities toward low-beta defense and upstream beneficiaries.",
+      "sourceName": "The Economic Times",
+      "sourceUrl": "https://economictimes.indiatimes.com",
+      "publishedAt": "2026-09-29T10:46:00Z"
     },
     {
       "category": "stock",
       "symbol": "TRENT",
-      "headline": "Trent Closes Insider Trading Window from September 24 Ahead of Q2 FY27 Earnings",
-      "summary": "Trent notified exchanges that its trading window for dealing in company securities remains closed from September 24, 2026, until 48 hours post declaration of Q2 FY27 financial results.",
+      "headline": "Trent Closes Trading Window Ahead of Q2 FY27 Results Amid Technical Support Test",
+      "summary": "Trent Limited announced the mandatory closure of its insider trading window effective late September ahead of board consideration of Q2 FY27 financial results; the stock tests key horizontal support near ₹2,600–₹2,620 after crossing its 1,000-store milestone in value fashion brand Zudio.",
       "sentiment": "Neutral",
-      "importance": "Low",
+      "importance": "Medium",
       "catalystType": "Corporate action",
       "timeHorizon": "Watch",
-      "impact": "Anticipate subdued insider and management-linked volume as the stock forms an extended base awaiting quarterly operating numbers.",
-      "sourceName": "Trendlyne",
-      "sourceUrl": "https://trendlyne.com/equity/500251/TRENT/trent-ltd/",
-      "publishedAt": "2026-09-24T06:30:00Z"
+      "impact": "Subdued near-term volume expected inside the trading window blackout; swing traders should monitor whether ₹2,590–₹2,610 base support holds against valuation headwinds.",
+      "sourceName": "Investing.com India",
+      "sourceUrl": "https://in.investing.com",
+      "publishedAt": "2026-09-28T16:00:00Z"
+    },
+    {
+      "category": "stock",
+      "symbol": "ANUPAMRAS",
+      "headline": "Institutional Block Deals Executed in Anupam Rasayan Totaling Over ₹160 Crore",
+      "summary": "Large block trades unfolded on the NSE/BSE secondary windows with Plutus Wealth Management and major institutional hands exchanging over 20 lakh equity shares in chemical manufacturer Anupam Rasayan at an average price near ₹723–₹727.",
+      "sentiment": "Mixed",
+      "importance": "Medium",
+      "catalystType": "Block deal",
+      "timeHorizon": "Watch",
+      "impact": "High-volume institutional hand exchange at established support levels typically leads to several sessions of volatility before directional base expansion.",
+      "sourceName": "ScanX",
+      "sourceUrl": "https://scanx.trade",
+      "publishedAt": "2026-09-28T15:30:00Z"
     },
     {
       "category": "stock",
       "symbol": "COCHINSHIP",
-      "headline": "Cochin Shipyard Lays Keel for First Next-Generation Missile Vessel for Indian Navy",
-      "summary": "CSL achieved a key construction milestone with the formal keel laying of Ship BY-531, the lead vessel of six Next Generation Missile Vessels under its ₹9,800-crore defence contract.",
+      "headline": "Cochin Shipyard and Synergy Marine Group Sign MoU for Joint Shipbuilding and Conversions",
+      "summary": "Cochin Shipyard has signed a bilateral MoU with Singapore-based Synergy Marine Group in Kochi to jointly identify and execute commercial ship construction, large vessel conversions, and specialized marine engineering projects in Indian waters.",
       "sentiment": "Positive",
-      "importance": "Low",
+      "importance": "Medium",
       "catalystType": "Order win",
       "timeHorizon": "Watch",
-      "impact": "Highlights steady execution pacing on high-margin naval contracts without immediate short-term trading volatility.",
-      "sourceName": "Cochin Shipyard Disclosures",
-      "sourceUrl": "https://cochinshipyard.in/news/keel-laying-ngmv-september-2026",
-      "publishedAt": "2026-09-19T04:30:00Z"
+      "impact": "Broadens commercial yard capacity utilization beyond naval defense pipelines, reinforcing high-volume support on multi-week charts.",
+      "sourceName": "The Hindu",
+      "sourceUrl": "https://thehindu.com",
+      "publishedAt": "2026-09-26T06:42:00Z"
+    },
+    {
+      "category": "market",
+      "symbol": "NIFTY",
+      "headline": "SEBI Overhauls Portfolio Managers Regulations, Approves IPO Direct Access and PRIM",
+      "summary": "At its board meeting, SEBI unveiled comprehensive new Portfolio Managers Regulations 2026, permitting PMS entities direct access to primary IPO issues, foreign securities, and launching PRIM for direct mutual fund investments, while easing compliance overhead across asset managers.",
+      "sentiment": "Positive",
+      "importance": "Medium",
+      "catalystType": "Regulatory",
+      "timeHorizon": "This week",
+      "impact": "Enhances domestic institutional capital deployment velocity into mid-cap IPOs and secondary market equity bases over coming settlement cycles.",
+      "sourceName": "The Hindu",
+      "sourceUrl": "https://thehindu.com",
+      "publishedAt": "2026-09-24T16:31:00Z"
     }
   ],
-  "disclaimer": "Alpha Swing AI provides structured market data and analytical research for educational and swing-trading tracking purposes only. We are not a SEBI-registered investment advisor or research analyst entity. Nothing herein constitutes investment advice, financial guidance, or buy/sell recommendations. Please exercise prudent risk management and consult a licensed financial advisor before executing trades.",
+  "disclaimer": "Alpha Swing AI provides market research and technical observations for educational and informational purposes only. Nothing contained herein constitutes investment advice, financial advisory services, or an offer or solicitation to buy or sell securities. Trading financial instruments involves substantial risk of loss and is not suitable for every investor. Users should conduct independent due diligence and consult a SEBI-registered financial advisor before executing any transactions.",
   "sources": []
 }
