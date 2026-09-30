@@ -1,139 +1,112 @@
 {
   "status": "live",
   "method": "gemini-grounded",
-  "generatedAt": "2026-09-29T16:31:09.186Z",
+  "generatedAt": "2026-09-30T09:42:41.920Z",
   "model": "gemini-3.8-flash",
   "marketDirection": {
     "direction": "Downtrend",
-    "changePct": -1.56,
-    "close": 22780,
-    "asOf": "2026-09-28",
+    "changePct": -0.28,
+    "close": 22716,
+    "asOf": "2026-09-29",
     "headline": "Indian market is under pressure today.",
     "reasons": [
       {
         "tag": "Index",
-        "text": "Nifty 50 closed -1.56% at 22,780, below its 20-DMA, below the 50-DMA (falling), below the 200-DMA."
+        "text": "Nifty 50 closed -0.28% at 22,716, below its 20-DMA, below the 50-DMA (falling), below the 200-DMA."
       },
       {
         "tag": "Trend",
-        "text": "The index is down 2.7% over the last five sessions — downtrend structure intact."
+        "text": "The index is down 2.6% over the last five sessions — downtrend structure intact."
       },
       {
         "tag": "Breadth",
-        "text": "Market breadth is defensive — 17.3% of scanned NSE stocks advancing, 27.6% above their 50-DMA."
+        "text": "Market breadth is defensive — 15.7% of scanned NSE stocks advancing, 27.1% above their 50-DMA."
       },
       {
-        "tag": "Order win",
-        "text": "Expands revenue visibility into civil leasing frameworks, offering fundamental support for a swing retest of upper consolidation resistance."
+        "tag": "Rating change",
+        "text": "Improves setup odds for a multi-week base breakout above overhead resistance as revenue recognition fears recede."
       },
       {
-        "tag": "Other",
-        "text": "Resolves the single largest operational drag on HAL's multi-year execution curve, improving risk-reward for swing continuation setups."
+        "tag": "Corporate action",
+        "text": "Sharp volume surge causes momentum extension; look for a multi-day consolidation or flag formation before chasing."
       }
     ],
     "disclaimer": "A rules-based read of index price, market breadth and headline flow — not a forecast or trading advice."
   },
-  "marketMood": "Cautious",
-  "marketSummary": "Indian benchmark indices are navigating a phase of defensive consolidation, with Nifty 50 hovering near the 22,700–23,000 zone amid pressure from elevated crude oil prices ($102–$106/bbl), firm global bond yields, and currency volatility. Capital flows show distinct bifurcation: high-valuation consumer discretionary and IT face corrective pressure, while Defence PSUs, heavy electricals, and capital goods continue to find institutional accumulation on the back of sovereign order visibility and domestic manufacturing milestones.",
-  "dailyFocus": "Prioritize high-relative-strength swing setups in Defence and Capital Goods showing tight consolidation near support or breakout pivots on confirmed order wins (HAL, BEL, CGPOWER). Avoid aggressive long exposure in extended consumer discretionary names pending earnings clarity.",
+  "marketMood": "Cautiously Optimistic Rebound",
+  "marketSummary": "Nifty trades higher above 22,750 as domestic equities stage a selective rebound led by IT, capital goods, and railway PSUs, despite lingering macro headwinds from elevated crude oil and persistent foreign institutional outflows. High-beta swing themes are witnessing distinct divergence, with heavy institutional rebalancing tied to the semi-annual Nifty 50 reconstitutions and stock-specific catalysts dictating volume expansion.",
+  "dailyFocus": "Track post-rebalance volatility absorption in index-inclusion names, continuation setups in defense and railway engineering counters following execution milestones, and volume contractions near technical support levels across watchlist leaders ahead of Q2 FY27 earnings season.",
   "sectors": [
     {
-      "name": "Defence & Shipbuilding",
+      "name": "Defence & Aerospace",
       "momentum": "Leading",
-      "score": 86,
-      "reason": "Sustained domestic and export order inflows, multi-year order book cover (>3x revenue), and resolving engine supply chain bottlenecks support structural base breakouts.",
+      "score": 88,
+      "reason": "Sustained order accretion, positive delivery visibility on key military aviation programs, and expanding shipyard throughput keep institutional accumulation strong at base support zones.",
       "catalysts": [
-        "Fresh ₹2,491 Cr civil/defence helicopter MoU for HAL",
-        "Continuous incremental order additions for BEL totaling ₹648 Cr",
-        "International design acquisition and partnership expansion by Cochin Shipyard"
+        "Accelerated Tejas Mk1A delivery timelines from HAL CMD",
+        "Over ₹1.10 lakh crore in DAC procurement clearances filtering into tenders",
+        "Commercial and naval vessel delivery ramp-ups at key shipyards"
       ],
       "risks": [
-        "IAF integration and weapon-separation flight testing delays",
-        "Extended valuation multiples vulnerable to broader market risk-off"
+        "Supply chain bottlenecks for specialized avionics and engines",
+        "High trailing valuation multiples leaving setups sensitive to margin slippages"
       ],
       "relatedStocks": [
         "HAL",
         "BEL",
-        "COCHINSHIP",
-        "BDL",
-        "MAZDOCK"
+        "COCHINSHIP"
       ]
     },
     {
-      "name": "Heavy Electricals & Power Equipment",
+      "name": "Railways & Heavy Infrastructure",
       "momentum": "Improving",
-      "score": 78,
-      "reason": "Expanding domestic transmission capex, grid modernization orders, and nascent commercialization of domestic semiconductor packaging lines driving high institutional interest.",
+      "score": 79,
+      "reason": "Heavy volume breakout in railway construction and engineering PSUs alongside digital signaling and data infrastructure contract awards.",
       "catalysts": [
-        "CG Semi G1 OSAT plant achieving commercial deliveries at Sanand",
-        "Greenfield transformer capacity additions coming online to satisfy high backlog"
+        "RailTel multi-crore cloud and data center infra modernization tenders",
+        "Sustained budgetary allocations toward high-speed and freight track corridors"
       ],
       "risks": [
-        "Raw material inflation in copper and core electrical steel",
-        "Execution slippages in high-tech packaging joint ventures"
+        "Periodic execution and working-capital drag in turnkey government EPC projects"
+      ],
+      "relatedStocks": [
+        "IRCON",
+        "RITES",
+        "RAILTEL",
+        "STLNETWORK"
+      ]
+    },
+    {
+      "name": "Capital Goods & Power Equipment",
+      "momentum": "Improving",
+      "score": 75,
+      "reason": "Multibagger backlogs across transformer manufacturers, pump makers, and power equipment firms supported by export orders and OSAT semiconductor commercialization.",
+      "catalysts": [
+        "Strong export order momentum in specialized industrial pumps and transformers",
+        "Operational scale-up at Sanand semiconductor packaging facilities"
+      ],
+      "risks": [
+        "Raw material inflation impacting fixed-price execution contracts"
       ],
       "relatedStocks": [
         "CGPOWER",
-        "BHEL",
-        "SIEMENS",
-        "ABB"
-      ]
-    },
-    {
-      "name": "Energy & Upstream Oil & Gas",
-      "momentum": "Improving",
-      "score": 72,
-      "reason": "Geopolitical risk premia pushing Brent crude above $102/bbl, providing strong net-realization tailwinds and defensive dividend yields.",
-      "catalysts": [
-        "Crude oil price strength driven by Middle East supply risk",
-        "Consistent institutional rotation into cash-rich state-owned upstream producers"
-      ],
-      "risks": [
-        "Potential windfall tax adjustments by the government",
-        "Sudden demand destruction if global macro growth decelerates"
-      ],
-      "relatedStocks": [
-        "ONGC",
-        "OIL",
-        "COALINDIA"
+        "KSB"
       ]
     },
     {
       "name": "Retail & Consumer Discretionary",
-      "momentum": "Weakening",
-      "score": 46,
-      "reason": "Valuation compression and pre-earnings de-risking leading to breakdowns below short-term moving averages despite long-term footprint expansion.",
+      "momentum": "Mixed",
+      "score": 64,
+      "reason": "Consolidation phase within secondary bases following relentless multi-month rallies; festive demand expectations balancing rich historical valuation multiples.",
       "catalysts": [
-        "Approaching festive quarter demand recovery",
-        "Footprint expansion milestones across value-fashion formats"
+        "Rapid footprint expansion crossing key store-count milestones ahead of Q3 festivals",
+        "Strong like-for-like sales across value-fashion brands"
       ],
       "risks": [
-        "Multiple compression from elevated P/E levels (>75x)",
-        "Insider trading window closures ahead of Q2 results subduing volume"
+        "Valuation compression if high same-store sales growth faces festive season slowdown"
       ],
       "relatedStocks": [
-        "TRENT",
-        "DMART",
-        "ABFRL"
-      ]
-    },
-    {
-      "name": "Information Technology",
-      "momentum": "Weakening",
-      "score": 38,
-      "reason": "Under sustained selling pressure driven by higher-for-longer global interest rate expectations, visa scrutiny, and subdued discretionary enterprise tech budgets.",
-      "catalysts": [
-        "Selective AI engineering contract awards"
-      ],
-      "risks": [
-        "Cross-currency headwinds and US IT spending delays",
-        "Index weight reduction by foreign institutional portfolios"
-      ],
-      "relatedStocks": [
-        "INFY",
-        "TCS",
-        "HCLTECH",
-        "WIPRO"
+        "TRENT"
       ]
     }
   ],
@@ -141,144 +114,144 @@
     {
       "category": "stock",
       "symbol": "HAL",
-      "headline": "HAL Signs ₹2,491 Crore Helicopter Programme MoU with SkyPulse at GIFT City",
-      "summary": "Hindustan Aeronautics Limited has entered into a strategic Memorandum of Understanding with SkyPulse Solutions IFSC Private Limited for a proposed 30-helicopter programme valued at ₹2,491 crore, encompassing financing, leasing, deployment, and lifecycle maintenance for civil and parapublic aviation.",
+      "headline": "Jefferies Reaffirms Buy on HAL as Tejas Mk1A Delivery Milestones Accelerate Order Monetization",
+      "summary": "Jefferies maintained its Buy rating on Hindustan Aeronautics Ltd with a price target of ₹6,800, emphasizing that the Tejas Mk1A fighter jet program—which constitutes approximately 43% of the company's backlog—is nearing a major execution re-rating. HAL CMD confirmed plans to deliver 10 aircraft during the current fiscal year (ahead of previous consensus estimates of five), with 24 airframes structurally ready.",
       "sentiment": "Positive",
       "importance": "High",
-      "catalystType": "Order win",
+      "catalystType": "Rating change",
       "timeHorizon": "This week",
-      "impact": "Expands revenue visibility into civil leasing frameworks, offering fundamental support for a swing retest of upper consolidation resistance.",
-      "sourceName": "Indian Masterminds",
-      "sourceUrl": "https://indianmasterminds.com",
-      "publishedAt": "2026-09-28T09:30:00Z"
-    },
-    {
-      "category": "stock",
-      "symbol": "HAL",
-      "headline": "GE F404 Engine Bottleneck Eases for HAL Tejas Mk1A as Dispatches Touch 10 Units",
-      "summary": "GE Aerospace has accelerated F404 engine dispatches with 10 units delivered and 12 more committed by year-end, clearing the production logjam for 27 assembled Tejas Mk1A airframes and placing initial Indian Air Force squad deliveries on schedule for FY27.",
-      "sentiment": "Positive",
-      "importance": "High",
-      "catalystType": "Other",
-      "timeHorizon": "This week",
-      "impact": "Resolves the single largest operational drag on HAL's multi-year execution curve, improving risk-reward for swing continuation setups.",
-      "sourceName": "NDTV Profit",
-      "sourceUrl": "https://ndtvprofit.com",
-      "publishedAt": "2026-09-26T06:45:00Z"
-    },
-    {
-      "category": "stock",
-      "symbol": "COCHINSHIP",
-      "headline": "Cochin Shipyard Executes Share Purchase Pact for 23% Stake in Dutch Firm Conoship",
-      "summary": "Cochin Shipyard Limited signed definitive agreements to acquire a 23% equity stake in Netherlands-based naval architect Conoship International Holding B.V. for €2.3 million (~₹25 crore) following DIPAM approval, securing intellectual property for green coastal vessels and European short-sea shipping designs.",
-      "sentiment": "Positive",
-      "importance": "High",
-      "catalystType": "Corporate action",
-      "timeHorizon": "This week",
-      "impact": "Direct ownership of European green vessel designs strengthens high-margin export tender capabilities, providing upside momentum to base-building price action.",
-      "sourceName": "PSU Watch",
-      "sourceUrl": "https://psuwatch.com",
-      "publishedAt": "2026-09-25T10:21:00Z"
-    },
-    {
-      "category": "stock",
-      "symbol": "CGPOWER",
-      "headline": "CG Power Accelerates Sanand OSAT Production and Dispatches First Sehore Transformers",
-      "summary": "CG Power and Industrial Solutions' semiconductor packaging subsidiary CG Semi is scaling up commercial output from its Sanand G1 facility toward an annualized target of $500 million, while its newly commissioned ₹792 crore greenfield plant at Sehore completed its first commercial transformer dispatches.",
-      "sentiment": "Positive",
-      "importance": "High",
-      "catalystType": "Corporate action",
-      "timeHorizon": "This week",
-      "impact": "Dual operational ramp-up in high-voltage grid equipment and semiconductor backend packaging provides fundamental validation as the stock consolidates near ₹880.",
-      "sourceName": "Digitimes",
-      "sourceUrl": "https://digitimes.com",
-      "publishedAt": "2026-09-23T04:30:00Z"
-    },
-    {
-      "category": "stock",
-      "symbol": "BEL",
-      "headline": "Bharat Electronics Bags Additional Defence Orders Totaling ₹648 Crore",
-      "summary": "Bharat Electronics Limited disclosed securing fresh contracts worth ₹648 crore, spanning laser-based IR jammers, secure tactical communication equipment, thermal imagers, and AI-enabled defense software solutions, taking incremental order additions since late August to robust multi-thousand crore levels.",
-      "sentiment": "Positive",
-      "importance": "High",
-      "catalystType": "Order win",
-      "timeHorizon": "This week",
-      "impact": "Reinforces consistent top-line visibility above ₹28,000 Cr annualized run-rate, establishing solid swing support near the ₹395–₹400 accumulation band.",
+      "impact": "Improves setup odds for a multi-week base breakout above overhead resistance as revenue recognition fears recede.",
       "sourceName": "The Economic Times",
-      "sourceUrl": "https://economictimes.indiatimes.com",
-      "publishedAt": "2026-09-18T05:28:00Z"
+      "sourceUrl": "https://economictimes.indiatimes.com/markets/stocks/news/re-rating-on-cars-for-hal-shares-as-tejas-mk1a-aircraft-deliveries-near-jefferies/articleshow/134587453.cms",
+      "publishedAt": "2026-09-30T08:31:05Z"
     },
     {
-      "category": "market",
-      "symbol": "NIFTY",
-      "headline": "Crude Oil Surge Above $102 and Yield Hardening Pressure Broad Indian Equities",
-      "summary": "Spiking Brent crude oil prices and dollar strength to ₹95.88 pushed the benchmark Nifty 50 into a test of the 22,700 technical support zone, forcing broad risk-off unwinding across rate-sensitive sectors and discretionary consumption counters.",
-      "sentiment": "Negative",
-      "importance": "Medium",
-      "catalystType": "Macro/flows",
+      "category": "stock",
+      "symbol": "SUNTV",
+      "headline": "Sun TV Surges 20% on Market Speculation of Sports Division De-Merger; Exchange Queries Company",
+      "summary": "Sun TV Network recorded its sharpest intraday rally in nine years, rising up to 20% on exceptionally high volumes following unconfirmed reports regarding the potential de-merger and separate value unlocking of its sports and cricket franchise division. BSE has formally issued a clarification notice to the broadcaster regarding the news.",
+      "sentiment": "Positive",
+      "importance": "High",
+      "catalystType": "Corporate action",
       "timeHorizon": "Today",
-      "impact": "Macro headwinds demand tighter stop-loss placement on breakout attempts and skew swing opportunities toward low-beta defense and upstream beneficiaries.",
+      "impact": "Sharp volume surge causes momentum extension; look for a multi-day consolidation or flag formation before chasing.",
+      "sourceName": "Business Standard",
+      "sourceUrl": "https://www.business-standard.com/markets/news/sun-tv-zooms-20-sees-sharpest-intraday-rally-in-9-years-up-45-in-7-days-126093000673_1.html",
+      "publishedAt": "2026-09-30T07:59:00Z"
+    },
+    {
+      "category": "stock",
+      "symbol": "AVALON",
+      "headline": "Avalon Technologies Slips 6% Following ₹883 Crore Promoter Group Block Sale",
+      "summary": "Shares of electronics manufacturing services firm Avalon Technologies dropped nearly 6% on September 30 after a large block deal involving 4.05 million shares (6.06% equity) was executed at an average price of ₹2,180.85 per share. Promoter entities, including Bhaskar Srinivasan and family trusts, were the reported sellers, prompting an exchange clarification.",
+      "sentiment": "Negative",
+      "importance": "High",
+      "catalystType": "Block deal",
+      "timeHorizon": "Today",
+      "impact": "Creates instant resistance at the ₹2,180 block level, testing base support and demanding a pause on breakout entries.",
       "sourceName": "The Economic Times",
-      "sourceUrl": "https://economictimes.indiatimes.com",
-      "publishedAt": "2026-09-29T10:46:00Z"
+      "sourceUrl": "https://economictimes.indiatimes.com/markets/stocks/news/avalon-tech-shares-fall-6-after-rs-883-crore-block-deal-3-promoter-entities-likely-sellers/articleshow/134587453.cms",
+      "publishedAt": "2026-09-30T06:02:00Z"
+    },
+    {
+      "category": "stock",
+      "symbol": "BSE",
+      "headline": "BSE Debuts in Nifty 50 Amid ₹2,186 Crore Institutional Block Offloading",
+      "summary": "BSE Limited officially entered the benchmark Nifty 50 index on September 30, replacing Wipro under NSE's semi-annual index reconstitution. Despite anticipated passive ETF inflows of roughly $657 million, the stock dropped 4% intraday following large institutional block disposals by Goldman Sachs and BNP Paribas totaling over 6.8 million shares.",
+      "sentiment": "Mixed",
+      "importance": "High",
+      "catalystType": "Index change",
+      "timeHorizon": "Today",
+      "impact": "Triggers heavy turnover and volatility; swing setups must wait for institutional supply overhang to be fully absorbed.",
+      "sourceName": "The Economic Times",
+      "sourceUrl": "https://economictimes.indiatimes.com/markets/stocks/news/bse-enters-nifty-50-stock-drops-4-after-goldman-sachs-bnp-paribas-sell-shares-worth-rs-2186-crore/articleshow/134587453.cms",
+      "publishedAt": "2026-09-30T06:00:00Z"
+    },
+    {
+      "category": "stock",
+      "symbol": "KSB",
+      "headline": "KSB Bags ₹118 Crore Export Order for Boiler Feed Pump Packages from Dangote Projects",
+      "summary": "Industrial pump manufacturer KSB secured a $12.4 million (approx. ₹118 crore) international export order from Dangote Projects Free Zone Enterprise to supply 18 specialized boiler feed pump packages. Deliveries are scheduled between September 2027 and March 2028, expanding the company's order book past ₹2,744 crore.",
+      "sentiment": "Positive",
+      "importance": "High",
+      "catalystType": "Order win",
+      "timeHorizon": "This week",
+      "impact": "Sparks a 7-10% gap-and-go volume thrust that tests previous consolidation highs, validating the intermediate breakout attempt.",
+      "sourceName": "Livemint",
+      "sourceUrl": "https://www.livemint.com/market/stock-market-news/ksb-share-price-jumps-10-after-rs-118-crore-international-order-check-details-share-performance-11727676648347.html",
+      "publishedAt": "2026-09-30T05:07:00Z"
+    },
+    {
+      "category": "stock",
+      "symbol": "STLNETWORK",
+      "headline": "STL Networks Emerges L1 Bidder for ₹249.8 Crore RailTel Cloud Infrastructure Project",
+      "summary": "STL Networks Limited submitted a regulatory filing informing exchanges that it has emerged as the lowest (L1) bidder for a ₹249.8 crore domestic contract from RailTel Corporation of India. The project encompasses end-to-end design, supply, installation, migration, and commissioning of cloud and disaster recovery infrastructure.",
+      "sentiment": "Positive",
+      "importance": "Medium",
+      "catalystType": "Order win",
+      "timeHorizon": "This week",
+      "impact": "Triggers a 5% volume spike off lower swing boundaries, enhancing base-reversal probabilities toward key moving averages.",
+      "sourceName": "The Economic Times",
+      "sourceUrl": "https://economictimes.indiatimes.com/markets/stocks/news/stl-networks-shares-jump-5-after-emerging-as-l1-bidder-for-railtel-contract-worth-rs-250-crore/articleshow/134587453.cms",
+      "publishedAt": "2026-09-30T06:18:28Z"
     },
     {
       "category": "stock",
       "symbol": "TRENT",
-      "headline": "Trent Closes Trading Window Ahead of Q2 FY27 Results Amid Technical Support Test",
-      "summary": "Trent Limited announced the mandatory closure of its insider trading window effective late September ahead of board consideration of Q2 FY27 financial results; the stock tests key horizontal support near ₹2,600–₹2,620 after crossing its 1,000-store milestone in value fashion brand Zudio.",
+      "headline": "Trent Consolidates Around ₹2,640 Support After Crossing 1,000 Zudio Outlets Milestone",
+      "summary": "Tata Group retail heavyweight Trent Limited trades steady near ₹2,640 following a brief 5% pullback last week. Market focus remains on aggressive physical retail scaling after its flagship value-fashion format, Zudio, officially surpassed 1,000 stores across 300 Indian cities ahead of the upcoming Q3 festive shopping surge.",
       "sentiment": "Neutral",
       "importance": "Medium",
-      "catalystType": "Corporate action",
+      "catalystType": "Other",
       "timeHorizon": "Watch",
-      "impact": "Subdued near-term volume expected inside the trading window blackout; swing traders should monitor whether ₹2,590–₹2,610 base support holds against valuation headwinds.",
-      "sourceName": "Investing.com India",
-      "sourceUrl": "https://in.investing.com",
-      "publishedAt": "2026-09-28T16:00:00Z"
-    },
-    {
-      "category": "stock",
-      "symbol": "ANUPAMRAS",
-      "headline": "Institutional Block Deals Executed in Anupam Rasayan Totaling Over ₹160 Crore",
-      "summary": "Large block trades unfolded on the NSE/BSE secondary windows with Plutus Wealth Management and major institutional hands exchanging over 20 lakh equity shares in chemical manufacturer Anupam Rasayan at an average price near ₹723–₹727.",
-      "sentiment": "Mixed",
-      "importance": "Medium",
-      "catalystType": "Block deal",
-      "timeHorizon": "Watch",
-      "impact": "High-volume institutional hand exchange at established support levels typically leads to several sessions of volatility before directional base expansion.",
-      "sourceName": "ScanX",
-      "sourceUrl": "https://scanx.trade",
-      "publishedAt": "2026-09-28T15:30:00Z"
+      "impact": "Consolidation above the ₹2,600 pivot preserves base structure; constructive for lower-risk swing entries if volume contracts.",
+      "sourceName": "Livemint",
+      "sourceUrl": "https://www.livemint.com/market/mark-to-market/trent-share-price-today-30-sep-2026-live-nse-bse-rates-technical-analysis-and-expert-forecasts-11727685600000.html",
+      "publishedAt": "2026-09-30T04:00:00Z"
     },
     {
       "category": "stock",
       "symbol": "COCHINSHIP",
-      "headline": "Cochin Shipyard and Synergy Marine Group Sign MoU for Joint Shipbuilding and Conversions",
-      "summary": "Cochin Shipyard has signed a bilateral MoU with Singapore-based Synergy Marine Group in Kochi to jointly identify and execute commercial ship construction, large vessel conversions, and specialized marine engineering projects in Indian waters.",
+      "headline": "Cochin Shipyard Subsidiary Delivers Third 70T ASD Tug to Adani's Ocean Sparkle; AGM Concluded",
+      "summary": "Cochin Shipyard's wholly owned unit UCSL completed the on-time delivery of the third 70-tonne Bollard Pull Tug to Ocean Sparkle Limited (Adani Group), achieving completion within 47 days of launch. Separately, CSL concluded its 54th AGM on September 29, reinforcing its capacity expansion roadmap including the 50:50 ISRF joint venture with DP World's Drydocks World.",
+      "sentiment": "Positive",
+      "importance": "Medium",
+      "catalystType": "Other",
+      "timeHorizon": "This week",
+      "impact": "Disciplined turnaround and delivery milestones support defense-shipbuilding accumulation at multi-week horizontal support.",
+      "sourceName": "India Shipping News",
+      "sourceUrl": "https://indiashippingnews.com/ucsl-delivers-third-70t-bollard-pull-tug-to-ocean-sparkle-limited/",
+      "publishedAt": "2026-09-30T03:30:00Z"
+    },
+    {
+      "category": "stock",
+      "symbol": "CGPOWER",
+      "headline": "CG Power Closes Trading Window Ahead of Q2 FY27 Earnings as OSAT Unit Ramps Operations",
+      "summary": "CG Power and Industrial Solutions notified exchanges that its trading window will remain closed from September 30, 2026, until 48 hours post Q2 FY27 earnings publication. The market continues to assess the commercial progress of its ₹7,600 crore Sanand OSAT semiconductor packaging plant alongside 45% YoY standalone order book expansion in power systems.",
+      "sentiment": "Neutral",
+      "importance": "Medium",
+      "catalystType": "Earnings",
+      "timeHorizon": "Watch",
+      "impact": "Trading window closure typically prompts range-bound volatility contraction ahead of official quarterly earnings dates.",
+      "sourceName": "BSE India",
+      "sourceUrl": "https://www.bseindia.com/stock-share-price/cg-power-and-industrial-solutions-ltd/cgpower/500093/corporate-announcements/",
+      "publishedAt": "2026-09-28T12:20:03Z"
+    },
+    {
+      "category": "stock",
+      "symbol": "BEL",
+      "headline": "Bharat Electronics Backlog Comfort Bolstered by Steady Defense Inflows and ₹50,000 Cr Pipeline",
+      "summary": "Following cumulative order wins exceeding ₹648 crore in recent weeks across IR jammers and AI electronic warfare subsystems, brokerage desks reiterated positive stances on Bharat Electronics, highlighting a robust ₹50,000 crore tender pipeline over the coming four quarters supported by DAC clearances.",
       "sentiment": "Positive",
       "importance": "Medium",
       "catalystType": "Order win",
       "timeHorizon": "Watch",
-      "impact": "Broadens commercial yard capacity utilization beyond naval defense pipelines, reinforcing high-volume support on multi-week charts.",
-      "sourceName": "The Hindu",
-      "sourceUrl": "https://thehindu.com",
-      "publishedAt": "2026-09-26T06:42:00Z"
-    },
-    {
-      "category": "market",
-      "symbol": "NIFTY",
-      "headline": "SEBI Overhauls Portfolio Managers Regulations, Approves IPO Direct Access and PRIM",
-      "summary": "At its board meeting, SEBI unveiled comprehensive new Portfolio Managers Regulations 2026, permitting PMS entities direct access to primary IPO issues, foreign securities, and launching PRIM for direct mutual fund investments, while easing compliance overhead across asset managers.",
-      "sentiment": "Positive",
-      "importance": "Medium",
-      "catalystType": "Regulatory",
-      "timeHorizon": "This week",
-      "impact": "Enhances domestic institutional capital deployment velocity into mid-cap IPOs and secondary market equity bases over coming settlement cycles.",
-      "sourceName": "The Hindu",
-      "sourceUrl": "https://thehindu.com",
-      "publishedAt": "2026-09-24T16:31:00Z"
+      "impact": "Provides defensive downside buffering, keeping the counter tightly coiled within its primary ₹390-₹410 accumulation band.",
+      "sourceName": "The Economic Times",
+      "sourceUrl": "https://economictimes.indiatimes.com/markets/stocks/news/bel-shares-in-focus-as-psu-receives-orders-worth-rs-648-crore-since-late-august-whats-ahead-after-183-rally-in-3-years/articleshow/134325014.cms",
+      "publishedAt": "2026-09-18T03:29:09Z"
     }
   ],
-  "disclaimer": "Alpha Swing AI provides market research and technical observations for educational and informational purposes only. Nothing contained herein constitutes investment advice, financial advisory services, or an offer or solicitation to buy or sell securities. Trading financial instruments involves substantial risk of loss and is not suitable for every investor. Users should conduct independent due diligence and consult a SEBI-registered financial advisor before executing any transactions.",
+  "disclaimer": "Alpha Swing AI is a market intelligence and research compilation workspace designed for technical and swing-trading analysis. This information is strictly for educational purposes and should not be construed as investment, financial, or trading advice, nor as a buy, sell, or target call on any security. Indian equity trading involves substantial risk of loss. Always consult a SEBI-registered investment advisor before making financial decisions.",
   "sources": []
 }
