@@ -1,7 +1,7 @@
 {
   "status": "live",
   "method": "gemini-grounded",
-  "generatedAt": "2026-10-02T09:46:43.508Z",
+  "generatedAt": "2026-10-02T16:16:30.110Z",
   "model": "gemini-3.8-flash",
   "marketDirection": {
     "direction": "Downtrend",
@@ -23,52 +23,51 @@
         "text": "Market breadth is cautious — 45.2% of scanned NSE stocks advancing, 27.1% above their 50-DMA."
       },
       {
-        "tag": "Guidance",
-        "text": "Decisive relative outperformance versus the broader auto index positions the stock to test overhead resistance on high volume."
+        "tag": "Macro/flows",
+        "text": "Elevates breakout failure risk across large caps, requiring swing traders to demand tighter volume dry-ups before taking continuation entries."
       },
       {
-        "tag": "Macro/flows",
-        "text": "Broad index range contraction increases false-breakout risk; swing setups require strict stock-specific volume expansion."
+        "tag": "Order win",
+        "text": "Serves as an immediate structural catalyst to support accumulation at key base support levels and could catalyze a Stage 1 base breakout."
       }
     ],
     "disclaimer": "A rules-based read of index price, market breadth and headline flow — not a forecast or trading advice."
   },
-  "marketMood": "Cautious / Rangebound with Sectoral Divergence",
-  "marketSummary": "Indian benchmark indices closed lower on Thursday, October 1, ahead of the Gandhi Jayanti holiday, marking a four-session losing streak for headline indices. The Nifty 50 slipped 0.88% to settle at 22,421.95, while the BSE Sensex closed down 0.79% at 71,909.70 amid sustained FII net selling of ₹9,484.22 crore, largely cushioned by ₹10,041.84 crore in DII cash-market absorption. Elevated Brent crude oil hovering around $102/bbl and pressure on USD/INR near 96.30 continue to test swing breakout follow-through across broad large-caps. However, decisive relative strength remains visible in power transmission and capital goods equipment following the Cabinet's ₹1.86 lakh crore Green Energy Corridor-3 rollout, while defence and auto names exhibit sharp stock-specific base consolidations ahead of Q2 FY27 earnings season.",
-  "dailyFocus": "Track post-holiday gap setups on Monday, October 5, focusing on capital goods and electrical equipment names breaking out on the GEC-3 policy trigger, alongside auto leaders printing strong festive dispatches, while closely observing critical multi-week support pivots in high-beta defence and retail leaders.",
+  "marketMood": "Cautious / Risk-Off",
+  "marketSummary": "Indian equities enter October under pressure as the benchmark Nifty 50 slipped 198.50 points (-0.88%) to settle at 22,421.95 and Sensex dropped 570.59 points (-0.79%) to 71,909.70 on October 1, followed by a trading holiday on October 2 for Mahatma Gandhi Jayanti. Relentless FII net outflows exceeding ₹10,000 crore, firmer US Treasury yields, and elevated crude oil prices have weighed heavily on index heavyweights and broad-market breadth. While benchmark indices are testing lower range boundaries, capital goods, transmission plays, and selective defence PSUs continue to show resilient multi-week base consolidations backed by large order inflows.",
+  "dailyFocus": "Swing setups are experiencing selective dispersion: prioritize capital goods and power T&D beneficiaries tied to the government's ₹1.86 lakh crore Green Energy Corridor announcement, while exercising caution on high-multiple retail and extended defence names awaiting fresh base breakouts.",
   "sectors": [
     {
-      "name": "Power Transmission & Capital Goods",
+      "name": "Power T&D & Heavy Electricals",
       "momentum": "Leading",
       "score": 88,
-      "reason": "Clear fundamental catalyst driven by the government's ₹1.86 lakh crore PM DHARA / Green Energy Corridor-3 approval, giving transformer, switchgear, and EPC equipment manufacturers a multi-year visibility tailwind.",
+      "reason": "Clear fundamental tailwinds and institutional accumulation following the government's ₹1.86 lakh crore Green Energy Corridor (PM Dhara) push, supporting multi-quarter order-book visibility for equipment and EPC vendors.",
       "catalysts": [
-        "Government approval of GEC Phase-3 outlay of ₹1.86 lakh crore through FY33",
-        "Record order books and commercial commissioning of new greenfield capacity (e.g., Sehore plant)"
+        "Government approval and capex push for ₹1.86 lakh crore Green Energy Corridor",
+        "Rising grid integration requirements for commercial renewable installations and BESS"
       ],
       "risks": [
-        "Elevated valuations leaving slim tolerance for quarterly margin or delivery slippages",
-        "Raw material cost volatility in copper and CRGO electrical steel"
+        "Supply chain lead times for high-voltage transformers and components",
+        "Broad-market valuation de-rating during ongoing foreign capital outflows"
       ],
       "relatedStocks": [
         "CGPOWER",
-        "POWERGRID",
-        "ABB",
-        "SIEMENS"
+        "LT",
+        "POWERGRID"
       ]
     },
     {
-      "name": "Aerospace & Defence",
+      "name": "Defence & Aerospace",
       "momentum": "Improving",
-      "score": 74,
-      "reason": "Order execution milestones and consortia bidding for the ₹15,000 crore AMCA prototype programme are stabilizing major PSU and private defence suppliers after months of base consolidation.",
+      "score": 76,
+      "reason": "Defence PSUs are consolidating in wide bases following strong multi-month rallies; fresh platform deliveries and recurring order disclosures are helping stabilize swing support levels.",
       "catalysts": [
-        "Commencement of LCA Tejas Mk1A engine testing and serial deliveries to the IAF",
-        "AMCA prototype project bidding submission deadline set for October 30, 2026"
+        "Defence Acquisition Council (DAC) project approvals pipeline",
+        "Execution ramp-ups and platform deliveries across indigenous aerospace and electronics"
       ],
       "risks": [
-        "Engine supply bottlenecks from foreign OEM suppliers",
-        "Technical disqualification risks on next-generation manufacturing bids"
+        "Rich trailing price multiples and slower pace of lumpy order finalizations",
+        "Short-term margin normalization flagged in shipbuilding segments"
       ],
       "relatedStocks": [
         "HAL",
@@ -78,187 +77,182 @@
       ]
     },
     {
-      "name": "Automotive & Auto Ancillaries",
-      "momentum": "Mixed",
-      "score": 62,
-      "reason": "September auto dispatch data showed stark divergence: passenger vehicle leaders and premium 2W exporters posted double-digit growth ahead of the festive season, whereas domestic commercial tractors and commuter segments faced rural drag.",
+      "name": "Specialty Retail & Consumption",
+      "momentum": "Weakening",
+      "score": 45,
+      "reason": "Retail high-flyers have faced severe multiple compression as revenue per square foot and same-store sales growth showed signs of deceleration amid cautious discretionary consumption.",
       "catalysts": [
-        "Festive season channel inventory build-up and strong utility vehicle order books",
-        "Export recovery across key overseas two-wheeler and commercial vehicle markets"
+        "Upcoming festive season demand pickup across Tier-2/Tier-3 apparel formats",
+        "Aggressive store footprint expansions across value fashion"
       ],
       "risks": [
-        "Sluggish rural domestic demand in entry-level two-wheelers and tractors",
-        "Discounting pressures impacting EBITDA margins"
+        "Store cannibalization and declining same-store revenue growth",
+        "Trading window closures and earnings volatility ahead of Q2 results"
       ],
       "relatedStocks": [
-        "MARUTI",
-        "TATAMOTORS",
-        "TVSMOTOR",
-        "BAJAJ-AUTO"
+        "TRENT"
       ]
     },
     {
-      "name": "Retail & Consumption",
-      "momentum": "Weakening",
-      "score": 45,
-      "reason": "Retail and discretionary leaders continue to undergo corrective price-volume distribution and test critical base supports following aggressive multi-quarter run-ups.",
+      "name": "Exchange & Market Infrastructure",
+      "momentum": "Mixed",
+      "score": 62,
+      "reason": "Regulatory dynamics are driving stock-specific divergence between exchanges, highlighted by new derivative product clearances against regulatory scrutiny on self-listing frameworks.",
       "catalysts": [
-        "Upcoming festive festive quarter footfall recovery and store network expansions",
-        "Q2 FY27 earnings previews testing same-store-sales-growth stability"
+        "SEBI approval for corporate bond index futures to expand institutional volume",
+        "Passive index inclusion inflows into exchange equities"
       ],
       "risks": [
-        "Breakdown below primary horizontal multi-week moving average support shelves",
-        "Intensifying competitive discounting in value fashion"
+        "SEBI review panels addressing exchange conflict-of-interest and self-listing rules",
+        "Regulatory friction impacting retail derivatives turnover volumes"
       ],
       "relatedStocks": [
-        "TRENT",
-        "DMART",
-        "V2RETAIL"
+        "BSE"
       ]
     }
   ],
   "news": [
     {
-      "category": "stock",
-      "symbol": "MARUTI",
-      "headline": "Maruti Suzuki September Sales Jump 24.4% YoY to 2.36 Lakh Units on Robust SUV Dispatches",
-      "summary": "Maruti Suzuki delivered an upbeat September 2026 auto sales performance, dispatching 2,36,013 units (+24.4% YoY). The company registered record quarterly domestic sales of 5.56 lakh units and cited 95,000 pending orders for Brezza alongside strong export volume momentum, strongly leading the four-wheeler pack.",
-      "sentiment": "Positive",
-      "importance": "High",
-      "catalystType": "Guidance",
-      "timeHorizon": "This week",
-      "impact": "Decisive relative outperformance versus the broader auto index positions the stock to test overhead resistance on high volume.",
-      "sourceName": "NDTV Profit",
-      "sourceUrl": "https://www.ndtvprofit.com/markets",
-      "publishedAt": "2026-10-01T18:35:00Z"
-    },
-    {
       "category": "market",
       "symbol": "NIFTY",
-      "headline": "FIIs Offload ₹9,484 Crore as Nifty Slips for 4th Day; DIIs Absorb ₹10,042 Crore Before Market Holiday",
-      "summary": "Provisional exchange data for October 1 showed foreign institutional investors sold net equities worth ₹9,484.22 crore in cash markets, extending heavy offloading across large-caps. Domestic institutional investors matched the selling by purchasing ₹10,041.84 crore net, holding the Nifty above its immediate psychological floor of 22,400.",
-      "sentiment": "Neutral",
+      "headline": "FIIs Offload Over ₹10,000 Crore as Nifty Drops Below 22,500 Ahead of Market Holiday",
+      "summary": "The Nifty 50 surrendered 198.50 points (-0.88%) to 22,421.95 and the Sensex slid 570 points on October 1, marking four straight down sessions driven by intense foreign institutional selling topping ₹10,148 crore, escalating geopolitical conflict in the Middle East, and surging crude prices.",
+      "sentiment": "Negative",
       "importance": "High",
       "catalystType": "Macro/flows",
-      "timeHorizon": "Today",
-      "impact": "Broad index range contraction increases false-breakout risk; swing setups require strict stock-specific volume expansion.",
-      "sourceName": "National Stock Exchange of India",
-      "sourceUrl": "https://www.nseindia.com/reports/fii-dii",
-      "publishedAt": "2026-10-01T17:30:00Z"
-    },
-    {
-      "category": "sector",
-      "symbol": "CGPOWER",
-      "headline": "Cabinet Clears ₹1.86 Lakh Crore Green Energy Corridor Phase-3; CG Power & Grid Equipment Makers In Focus",
-      "summary": "The Government of India approved a massive capital outlay of ₹1.86 lakh crore for the Green Energy Corridor Phase-3 (PM DHARA scheme) to evacuate 135 GW of renewable power and add 50 GWh battery storage by FY33. Nomura and JPMorgan highlighted CG Power, GE Vernova T&D, and Hitachi Energy as prime beneficiaries due to surging domestic demand for ultra-high voltage power transformers and switchgear.",
-      "sentiment": "Positive",
-      "importance": "High",
-      "catalystType": "Regulatory",
       "timeHorizon": "This week",
-      "impact": "A high-volume opening push above the ₹910–₹920 resistance band would confirm a multi-week cup-style base breakout.",
-      "sourceName": "NDTV Profit",
-      "sourceUrl": "https://www.ndtvprofit.com/markets/indias-rs-186-lakh-crore-green-energy-corridor-to-trigger-order-supercycle-for-epcs-jpmorgans-top-picks",
-      "publishedAt": "2026-10-01T13:19:00Z"
-    },
-    {
-      "category": "stock",
-      "symbol": "SUNTV",
-      "headline": "Sun TV Surges 20% on Market Buzz of Sports Division Demerger; Exchange Clarification Awaited",
-      "summary": "Sun TV Network witnessed heavy intraday accumulation, locking into a 20% rally with volumes spiking to multi-year highs amid market reports of a potential corporate demerger of its valuable sports and franchise entertainment assets. BSE and NSE have formally sought official clarification from the company.",
-      "sentiment": "Positive",
-      "importance": "High",
-      "catalystType": "Corporate action",
-      "timeHorizon": "This week",
-      "impact": "Wide-range high-volume bar creates an impulse momentum base, but official corporate disclosure is required to prevent a sharp mean reversion.",
+      "impact": "Elevates breakout failure risk across large caps, requiring swing traders to demand tighter volume dry-ups before taking continuation entries.",
       "sourceName": "Business Standard",
-      "sourceUrl": "https://www.business-standard.com/markets/news/sun-tv-zooms-20-sees-sharpest-intraday-rally-in-9-years-up-45-in-7-days-126093000676_1.html",
-      "publishedAt": "2026-09-30T13:29:00Z"
-    },
-    {
-      "category": "stock",
-      "symbol": "HAL",
-      "headline": "Jefferies Reaffirms Buy on HAL Citing Tejas Mk1A Delivery Visibility; 24 Airframes Ready",
-      "summary": "Jefferies retained a Buy rating on Hindustan Aeronautics with a target of ₹6,800, emphasizing that the Tejas Mk1A fighter—which constitutes roughly 43% of HAL's order backlog—is reaching a key operational inflection. Testing is well advanced with 24 airframes assembled and 10 GE engines delivered, addressing lingering multi-quarter execution concerns.",
-      "sentiment": "Positive",
-      "importance": "High",
-      "catalystType": "Guidance",
-      "timeHorizon": "This week",
-      "impact": "Sustained trading above ₹4,750 on expanding delivery clarity could trigger an ascending triangle continuation pattern.",
-      "sourceName": "The Economic Times",
-      "sourceUrl": "https://economictimes.indiatimes.com/markets/stocks/news",
-      "publishedAt": "2026-09-30T09:15:00Z"
-    },
-    {
-      "category": "stock",
-      "symbol": "BEL",
-      "headline": "BEL Shortlisted for AMCA Stealth Fighter Consortium; Secures Further ₹648 Crore Defence Orders",
-      "summary": "The Ministry of Defence shortlisted the L&T–Bharat Electronics–Dynamatic Technologies consortium as one of three qualified bidders for the ₹15,000 crore AMCA prototype programme ahead of the October 30 bidding deadline. Additionally, BEL disclosed fresh domestic defence contracts worth ₹648 crore for laser IR jammers and AI-enabled EW systems.",
-      "sentiment": "Positive",
-      "importance": "High",
-      "catalystType": "Order win",
-      "timeHorizon": "This week",
-      "impact": "Validates the primary support base near ₹440, offering setup criteria for a swing test toward ₹465 if volume confirms.",
-      "sourceName": "Business Standard",
-      "sourceUrl": "https://www.business-standard.com/markets/news",
-      "publishedAt": "2026-09-28T10:30:00Z"
-    },
-    {
-      "category": "sector",
-      "symbol": "TATAMOTORS",
-      "headline": "September Auto Dispatches Reveal M&M and Tata PV Strength as Commercial Tractors Decline",
-      "summary": "September 2026 automotive dispatches highlighted strength in SUVs and PVs, with Tata Motors and M&M posting solid PV volume increases of 14-15% YoY. Conversely, tractor volumes dropped 21% for M&M and 17% for Escorts Kubota, reflecting subdued farm equipment purchases ahead of Kharif harvesting.",
-      "sentiment": "Mixed",
-      "importance": "Medium",
-      "catalystType": "Macro/flows",
-      "timeHorizon": "This week",
-      "impact": "Dispersion favors long setups in pure-play PV and premium two-wheeler leaders over diversified commercial/tractor OEMs.",
-      "sourceName": "NDTV Profit",
-      "sourceUrl": "https://www.ndtvprofit.com/auto/september-auto-sales-who-sold-the-most-vehicles",
-      "publishedAt": "2026-10-02T07:00:00Z"
-    },
-    {
-      "category": "stock",
-      "symbol": "TRENT",
-      "headline": "Trent Tests Critical ₹2,580–₹2,600 Structural Support as Post-Bonus Consolidation Deepens",
-      "summary": "Trent traded lower for the week ending October 1, settling at ₹2,574 and testing the key technical demand threshold between ₹2,580 and ₹2,520. Following its earlier 1:2 bonus share transition, institutional volume participation has slowed ahead of anticipated Q2 FY27 earnings commentary and festive retail trends.",
-      "sentiment": "Neutral",
-      "importance": "Medium",
-      "catalystType": "Other",
-      "timeHorizon": "Watch",
-      "impact": "Holding the ₹2,520–₹2,580 floor could establish the handle portion of a larger base, whereas a daily close below ₹2,520 signals protracted consolidation.",
-      "sourceName": "Investing.com",
-      "sourceUrl": "https://www.investing.com/equities/trent-historical-data",
+      "sourceUrl": "https://www.business-standard.com/markets/news/stock-market-close-october-1-sensex-nifty-crude-oil-fii-outflows-126100100780_1.html",
       "publishedAt": "2026-10-01T16:00:00Z"
     },
     {
       "category": "stock",
-      "symbol": "TATASTEEL",
-      "headline": "NCLT Approves Tata Steel Scheme of Amalgamation; Favourable ITAT Ruling Reduces ₹427 Cr Tax Risk",
-      "summary": "Tata Steel announced that the NCLT Mumbai Bench sanctioned the Scheme of Amalgamation with its wholly-owned subsidiary Rujuvalika Investments. Concurrently, the Income Tax Appellate Tribunal (ITAT) upheld an interest expenditure deduction that reduces company tax exposure by approximately ₹427 crore.",
+      "symbol": "CGPOWER",
+      "headline": "Nomura & JPMorgan Highlight CG Power as Key Beneficiary of ₹1.86 Lakh Crore Green Energy Corridor",
+      "summary": "Brokerage research desks including Nomura and JPMorgan singled out CG Power & Industrial Solutions among primary beneficiaries of India's newly approved ₹1.86 lakh crore Green Energy Corridor (PM Dhara) initiative. The programme targets major upgrades to intra-state and inter-state transmission systems and battery storage integration, offering multi-year revenue runway for domestic transmission equipment makers.",
       "sentiment": "Positive",
-      "importance": "Medium",
-      "catalystType": "Regulatory",
-      "timeHorizon": "Watch",
-      "impact": "Positive legal clarity provides downside support, though recovery swings will remain bounded by metal sector cyclicality.",
-      "sourceName": "CNBC TV18",
-      "sourceUrl": "https://www.cnbctv18.com/market",
-      "publishedAt": "2026-10-01T15:20:00Z"
+      "importance": "High",
+      "catalystType": "Order win",
+      "timeHorizon": "This week",
+      "impact": "Serves as an immediate structural catalyst to support accumulation at key base support levels and could catalyze a Stage 1 base breakout.",
+      "sourceName": "The Financial Express",
+      "sourceUrl": "https://www.financialexpress.com/market/pm-dhara-nomura-says-ge-vernova-hitachi-amp-cg-power-to-benefit-from-rs-1-86-lk-cr-scheme-3995831/",
+      "publishedAt": "2026-10-01T10:38:00Z"
     },
     {
       "category": "stock",
-      "symbol": "COCHINSHIP",
-      "headline": "Cochin Shipyard Accelerates Drydocks World 50:50 Ship Repair JV After OFS Supply Absorption",
-      "summary": "Following the government's 5% OFS stake sale absorption, Cochin Shipyard continues operational consolidation of its 50:50 joint venture with Drydocks World to scale up Kochi's International Ship Repair Facility (ISRF). Segmental shipbuilding performance remained resilient with 59.5% YoY revenue growth in recent quarters.",
+      "symbol": "LT",
+      "headline": "L&T Bags ₹797 Crore Ammonia Revamp Contract from Rashtriya Chemicals & Fertilizers",
+      "summary": "State-run Rashtriya Chemicals & Fertilizers (RCF) awarded Larsen & Toubro a ₹797 crore contract to execute an ammonia plant revamping project. The award complements L&T's ongoing order momentum across domestic grid modernizations and industrial EPC segments heading into Q2.",
+      "sentiment": "Positive",
+      "importance": "High",
+      "catalystType": "Order win",
+      "timeHorizon": "This week",
+      "impact": "Adds incremental order flow support to L&T's broad consolidation pattern, defending key technical swing pivots.",
+      "sourceName": "Business Standard",
+      "sourceUrl": "https://www.business-standard.com/companies/news/rcf-awards-ammonia-revamp-order-to-lt-126093000845_1.html",
+      "publishedAt": "2026-09-30T17:59:00Z"
+    },
+    {
+      "category": "market",
+      "symbol": "BSE",
+      "headline": "SEBI Approves NSE Corporate Bond Index Futures; Sets Panel on Self-Listing Norms",
+      "summary": "Markets regulator SEBI approved the introduction of cash-settled Corporate Bond Index Futures on the National Stock Exchange to deepen debt derivative liquidity. Separately, SEBI has moved to establish an expert committee to review exchange self-listing rules in the aftermath of NSE's BSE debut, sending BSE shares down over 2%.",
+      "sentiment": "Mixed",
+      "importance": "High",
+      "catalystType": "Regulatory",
+      "timeHorizon": "This week",
+      "impact": "Triggers headline-driven volatility in listed exchange shares, testing support bands around BSE's recent post-listing base.",
+      "sourceName": "NDTV Profit",
+      "sourceUrl": "https://www.ndtvprofit.com/markets/bse-stock-falls-over-2-percent-after-sebi-mulls-panel-to-revisit-self-listing-rules",
+      "publishedAt": "2026-09-28T13:33:00Z"
+    },
+    {
+      "category": "stock",
+      "symbol": "HAL",
+      "headline": "HAL Delivers Tejas Trainers, HTT-40 and Dhruv-NG as ₹1.10 Lakh Crore DAC Pipeline Looms",
+      "summary": "Hindustan Aeronautics handed over its final batch of LCA Tejas twin-seat trainer jets and the first series-production HTT-40 basic trainers to the Indian Air Force, alongside Dhruv-NG helicopters to Pawan Hans. The milestone follows the Defence Acquisition Council's ₹1.10 lakh crore procurement approvals, where HAL is positioned as a primary contractor for multi-role helicopters and aircraft systems.",
+      "sentiment": "Positive",
+      "importance": "High",
+      "catalystType": "Order win",
+      "timeHorizon": "This week",
+      "impact": "Delivery execution reinforces multi-year revenue conversion credibility, helping the stock hold its 50-day moving average consolidation floor.",
+      "sourceName": "The Economic Times",
+      "sourceUrl": "https://economictimes.indiatimes.com/markets/stocks/news/hal-shares-rise-2-as-firm-hands-over-3-aerospace-platforms-to-iaf-what-is-goldman-sachs-saying/articleshow/113568798.cms",
+      "publishedAt": "2026-09-21T09:30:00Z"
+    },
+    {
+      "category": "stock",
+      "symbol": "HINDALCO",
+      "headline": "Hindalco Formally Terminates AluChem Acquisition Deal via Exchange Filing",
+      "summary": "Hindalco Industries announced the formal termination of the proposed acquisition of US-based AluChem by its wholly-owned step-down unit Aditya Holdings LLC on October 1, 2026, ending multi-quarter delays without altering its overarching specialty alumina strategy.",
+      "sentiment": "Neutral",
+      "importance": "Medium",
+      "catalystType": "Corporate action",
+      "timeHorizon": "This week",
+      "impact": "Removes an overhang of unresolved cross-border capital outlay, preserving balance sheet cash for domestic upstream expansion.",
+      "sourceName": "Business Today",
+      "sourceUrl": "https://www.businesstoday.in/markets/company-results/story/hindalco-terminates-aluchem-acquisition-deal-after-extended-delays-451298-2026-10-02",
+      "publishedAt": "2026-10-02T05:30:00Z"
+    },
+    {
+      "category": "stock",
+      "symbol": "TRENT",
+      "headline": "Trent Closes Insider Trading Window as Zudio Surpasses 1,000-Store Milestone Ahead of Q2",
+      "summary": "Tata Group fashion giant Trent confirmed that its value fashion chain Zudio has surpassed 1,000 stores across 300 cities. Meanwhile, the company closed its trading window from September 24 ahead of Q2 financial results, with markets closely eyeing store productivity following Q1's multiple de-rating.",
       "sentiment": "Neutral",
       "importance": "Medium",
       "catalystType": "Corporate action",
       "timeHorizon": "Watch",
-      "impact": "Price is constructing a post-OFS secondary base near ₹1,350; swing traders should wait for base tightness before anticipating resistance tests.",
+      "impact": "Keeps price action bound in a wide digestion zone until Q2 earnings provide definitive evidence on same-store sales stabilization.",
       "sourceName": "Business Standard",
-      "sourceUrl": "https://www.business-standard.com/company/cochin-shipyard-50929/news",
-      "publishedAt": "2026-09-25T11:00:00Z"
+      "sourceUrl": "https://www.business-standard.com/markets/news/trent-q2-update-zudio-milestone-store-expansion-126092500123_1.html",
+      "publishedAt": "2026-09-25T03:53:00Z"
+    },
+    {
+      "category": "stock",
+      "symbol": "BEL",
+      "headline": "Bharat Electronics Discloses ₹648 Crore Fresh Defence Inflows Across Electronic Systems",
+      "summary": "Bharat Electronics Limited announced fresh domestic orders aggregating to ₹648 crore under Regulation 30 disclosures, covering military communications, electro-optics, and subsystem components, and signed an MoU with NIRNAYA Systems for emerging IT solutions.",
+      "sentiment": "Positive",
+      "importance": "Medium",
+      "catalystType": "Order win",
+      "timeHorizon": "Watch",
+      "impact": "Maintains an active order replenishment narrative, assisting the counter to build the right-hand side of a multi-week cup pattern.",
+      "sourceName": "The Financial Express",
+      "sourceUrl": "https://www.financialexpress.com/market/bel-bags-fresh-defence-orders-worth-rs-847-crore-3945892/",
+      "publishedAt": "2026-09-18T08:30:00Z"
+    },
+    {
+      "category": "stock",
+      "symbol": "COCHINSHIP",
+      "headline": "Cochin Shipyard Finalizes 50:50 Ship Repair JV with Drydocks World for Kochi Facility",
+      "summary": "Cochin Shipyard and DP World subsidiary Drydocks World formalized a 50:50 joint venture to scale operations at the International Ship Repair Facility (ISRF) in Kochi. The agreement seeks to capitalize on growing commercial vessel traffic, offering cushion against near-term moderation in shipbuilding EBITDA margins.",
+      "sentiment": "Positive",
+      "importance": "Medium",
+      "catalystType": "Corporate action",
+      "timeHorizon": "Watch",
+      "impact": "Provides longer-term fundamental support beneath the stock's current consolidation shelf near key horizontal support.",
+      "sourceName": "Mint",
+      "sourceUrl": "https://www.livemint.com/market/stock-market-news/cochin-shipyard-drydocks-world-jv-bets-on-global-fleets-for-india-ship-repair-push-11726117854652.html",
+      "publishedAt": "2026-09-12T08:00:00Z"
+    },
+    {
+      "category": "stock",
+      "symbol": "CGPOWER",
+      "headline": "CG Power Closes Trading Window Effective September 30 Ahead of Q2 Financial Review",
+      "summary": "CG Power informed exchanges that its trading window for designated persons has been closed effective September 30 until 48 hours after the declaration of Q2 FY27 unaudited financial results, keeping market focus on execution milestones at its Sanand semiconductor packaging facility.",
+      "sentiment": "Neutral",
+      "importance": "Low",
+      "catalystType": "Corporate action",
+      "timeHorizon": "Watch",
+      "impact": "Restricts insider transactions ahead of earnings, keeping near-term price swings purely driven by technical and sector order news.",
+      "sourceName": "BSE India",
+      "sourceUrl": "https://www.bseindia.com/stock-share-price/cg-power-and-industrial-solutions-ltd/cgpower/500093/corp-announcements/",
+      "publishedAt": "2026-09-28T19:19:00Z"
     }
   ],
-  "disclaimer": "Alpha Swing AI provides market research, structural trend identification, and pattern analysis for educational and technical screening purposes only. This workspace is not a SEBI-registered advisory service and does not offer buy, sell, or target recommendations. Swing trading in equities and derivatives involves substantial risk of capital loss.",
+  "disclaimer": "Alpha Swing AI is a technical and research analysis workspace for educational and information purposes only. Nothing contained herein constitutes investment, legal, tax, or financial advice, nor an endorsement, recommendation, or solicitation to buy or sell any security. Equity and derivative swing trading involve substantial capital risk; traders should formulate independent risk management strategies and consult a certified SEBI-registered advisor before executing trades.",
   "sources": []
 }
