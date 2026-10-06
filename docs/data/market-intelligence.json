@@ -1,7 +1,7 @@
 {
   "status": "live",
-  "method": "rss-gemini",
-  "generatedAt": "2026-10-06T10:18:30.313Z",
+  "method": "gemini-grounded",
+  "generatedAt": "2026-10-06T17:11:21.958Z",
   "model": "gemini-3.8-flash",
   "marketDirection": {
     "direction": "Downtrend",
@@ -23,272 +23,264 @@
         "text": "Market breadth is cautious — 49% of scanned NSE stocks advancing, 23.7% above their 50-DMA."
       },
       {
-        "tag": "Guidance",
-        "text": "Massive volume expansion on operational milestone provides strong continuation momentum for multi-day swing setups."
+        "tag": "Order win",
+        "text": "Substantial capacity and order-execution visibility solidifies support along HAL's multi-week consolidation floor for a potential upward base resolution."
       },
       {
         "tag": "Guidance",
-        "text": "Double-digit earnings guidance acts as an accumulation catalyst, encouraging base breakout attempts in the stock."
+        "text": "Triggers a high-volume base breakout above the 50-day moving average, creating constructive swing continuation odds towards previous swing highs."
       }
     ],
     "disclaimer": "A rules-based read of index price, market breadth and headline flow — not a forecast or trading advice."
   },
-  "marketMood": "Cautiously Bullish",
-  "marketSummary": "Indian equities display strong momentum ahead of the upcoming RBI MPC rate decision, with benchmark indices clearing short-term resistance. Strength is primarily concentrated in consumption, retail, and FMCG names driven by robust early Q2 business updates, while banking contends with margin contraction concerns and IPO newsflow gathers momentum.",
-  "dailyFocus": "Prioritise high-volume momentum breakouts backed by strong Q2 operational updates in consumer and retail names; keep risk managed against rate-hike sensitivity in financials.",
+  "marketMood": "Cautiously Bullish Relief Rally",
+  "marketSummary": "Indian equities extended their relief bounce for a second consecutive session on Tuesday, October 6, 2026, with the Nifty 50 rallying 220.35 points (+0.98%) to close at 22,776.10 and the Sensex jumping 685.34 points (+0.95%) to settle at 73,067.81. Market breadth expanded to 2:1 advances as Brent crude futures dropped back below $100 per barrel ($98.59/bbl), alleviating immediate current-account and inflation stresses. Price action was led by massive base-breakout momentum in retail and discretionary consumption following strong Q2 business updates, alongside firm accumulation in private banks and aerospace/defense names. However, swing participants remain cautious ahead of the RBI Monetary Policy Committee decision scheduled for October 7, where interest rate policy and liquidity guidance will dictate follow-through above multi-week resistance.",
+  "dailyFocus": "Track volume-backed multi-week breakouts triggered by provisional Q2 business updates (such as TRENT clearing intermediate resistance) and domestic defense expansion announcements (HAL, BEL). Keep position sizes measured into the RBI MPC decision on Wednesday, monitoring whether Nifty can decisively sustain above the 22,750–22,800 hurdle.",
   "sectors": [
     {
-      "name": "Retail & Consumer Discretionary",
+      "name": "Consumer Discretionary & Retail",
       "momentum": "Leading",
       "score": 88,
-      "reason": "Outstanding Q2 operational updates, store-count milestones, and triple-digit segment expansion across key apparel and e-commerce players.",
+      "reason": "Explosive volume breakout triggered by Trent's strong Q2 provisional numbers and aggressive store footprint expansion, sparking rotation into festive consumption plays.",
       "catalysts": [
-        "Trent crossing 1,000 Zudio stores with strong Q2 update",
-        "E-commerce volume expansion in Nykaa and Meesho"
+        "Q2 revenue acceleration ahead of pre-festive season",
+        "Aggressive tier-2/3 store rollouts crossing major milestones",
+        "Crude cool-off easing input and logistics costs"
       ],
       "risks": [
-        "Elevated valuations after sharp single-session extensions"
+        "Valuation multiple saturation at 52-week highs",
+        "Discretionary demand divergence between apparel and staples"
       ],
       "relatedStocks": [
         "TRENT",
-        "NYKAA",
-        "MEESHO"
-      ]
-    },
-    {
-      "name": "FMCG & Personal Care",
-      "momentum": "Improving",
-      "score": 78,
-      "reason": "Positive pre-quarterly updates signaling double-digit revenue and PAT trajectory, backed by margin recovery.",
-      "catalysts": [
-        "Dabur projecting double-digit consolidated revenue and PAT growth",
-        "Honasa posting strong Q2 revenue and margin improvement cues"
-      ],
-      "risks": [
-        "Cost pressures on selective sub-segments"
-      ],
-      "relatedStocks": [
-        "DABUR",
+        "DMART",
         "HONASA",
-        "MARICO"
+        "NYKAA"
       ]
     },
     {
-      "name": "Telecom & Digital Conglomerates",
-      "momentum": "Improving",
-      "score": 72,
-      "reason": "Clarity on Jio Platforms' mega-IPO valuation and launch timeline providing strong corporate action support.",
+      "name": "Aerospace & Defence",
+      "momentum": "Leading",
+      "score": 84,
+      "reason": "Substantial manufacturing capacity additions and MoD capital equipment allocations reaffirm multi-year order visibility and domestic indigenisation support across PSU defense champions.",
       "catalysts": [
-        "Jio Platforms targeting ~₹11 lakh crore valuation with potential mid-October launch"
+        "MoD announcement of second Shakti helicopter engine plant at HAL Koraput",
+        "Sustained naval electronic warfare and weapon systems orders for BEL and subsystem suppliers",
+        "Mid-October final IAF induction review for Tejas Mk1A"
       ],
       "risks": [
-        "Valuation lower than preliminary peak market estimates"
+        "Supply-chain lead times for imported subcomponents",
+        "Consolidation pullbacks in names near elevated MWPL thresholds"
       ],
       "relatedStocks": [
-        "RELIANCE"
+        "HAL",
+        "BEL",
+        "COCHINSHIP"
       ]
     },
     {
       "name": "Banking & Financial Services",
-      "momentum": "Mixed",
-      "score": 54,
-      "reason": "Robust deposit-aided credit growth counterbalanced by narrowing net interest margins and expected RBI tightening.",
+      "momentum": "Improving",
+      "score": 76,
+      "reason": "Private banking heavyweights staged a sharp reversal off multi-week demand zones following robust Q2 credit growth updates from Kotak Mahindra Bank and Axis Bank.",
       "catalysts": [
-        "Healthy credit demand and stable asset quality in large private lenders"
+        "Q2 loan advances surging >20% YoY across top private lenders",
+        "Deposit mobilization supported by FCNR(B) inflows and healthy liquidity buffers",
+        "Short-covering ahead of RBI policy announcement"
       ],
       "risks": [
-        "Margin contraction and potential 25 bps RBI rate hike"
+        "Potential 25 bps repo rate hike or hawkish liquidity guidance from RBI MPC on Oct 7",
+        "Margin compression from competitive deposit repricing"
       ],
       "relatedStocks": [
-        "HDFCBANK",
-        "ICICIBANK",
-        "KOTAKBANK"
+        "KOTAKBANK",
+        "AXISBANK",
+        "INDUSINDBK",
+        "HDFCBANK"
+      ]
+    },
+    {
+      "name": "Capital Goods & Power Infrastructure",
+      "momentum": "Improving",
+      "score": 72,
+      "reason": "Structural demand from transmission grid modernization, industrial electrification, and domestic semiconductor capex continues to support base formations in equipment leaders.",
+      "catalysts": [
+        "Greenfield transformer and EHV switchgear capacity commissioning",
+        "State and central government transmission line allocations",
+        "National semiconductor mission commercial production milestones"
+      ],
+      "risks": [
+        "Working capital elongation and higher domestic steel/copper prices",
+        "Profit-taking after multi-month re-rating cycles"
+      ],
+      "relatedStocks": [
+        "CGPOWER",
+        "LT",
+        "SIEMENS"
+      ]
+    },
+    {
+      "name": "Information Technology",
+      "momentum": "Weakening",
+      "score": 42,
+      "reason": "IT counters lagged the broader market rally, weighed by persistent caution on discretionary US tech spending and elevated global bond yields.",
+      "catalysts": [
+        "Select enterprise AI pipeline disclosures ahead of upcoming Q2 earnings calls",
+        "Weakness in the Indian rupee supporting realization margins"
+      ],
+      "risks": [
+        "Prolonged decision-making cycles in US and European BFSI verticals",
+        "Further multiple derating if tier-1 tech revenue guidance disappoints"
+      ],
+      "relatedStocks": [
+        "TECHM",
+        "INFY",
+        "TCS"
       ]
     }
   ],
   "news": [
     {
       "category": "stock",
+      "symbol": "HAL",
+      "headline": "Defence Minister inaugurates HAL Koraput's 2,000th aero-engine; announces ₹218-cr Shakti engine expansion",
+      "summary": "Defence Minister Rajnath Singh visited HAL Koraput Division on October 6, 2026, marking the rollout of its 2,000th aero-engine. He announced a ₹218-crore second production line for Shakti helicopter engines to manufacture up to 100 engines annually by 2028-29, alongside a ₹335-crore AL-31FP engine capacity expansion from 30 to 50 units per year.",
+      "sentiment": "Positive",
+      "importance": "High",
+      "catalystType": "Order win",
+      "timeHorizon": "This week",
+      "impact": "Substantial capacity and order-execution visibility solidifies support along HAL's multi-week consolidation floor for a potential upward base resolution.",
+      "sourceName": "Business Standard",
+      "sourceUrl": "https://www.business-standard.com/india-news/hal-to-set-up-new-shakti-engine-production-line-at-odisha-facility-126100601243_1.html",
+      "publishedAt": "2026-10-06T14:48:00Z"
+    },
+    {
+      "category": "stock",
       "symbol": "TRENT",
-      "headline": "LIC mints Rs 531 crore in one day as Trent shares rally 13%; insurance behemoth’s stake value nears Rs 4,700 cr",
-      "summary": "Trent surged 13% after reporting a strong Q2 business update and crossing the 1,000 Zudio store milestone, adding over ₹17,540 crore to its market cap.",
+      "headline": "Trent surges 13% on blowout Q2 update as standalone revenue jumps 23% and Zudio hits 1,000 stores",
+      "summary": "Tata Group retailer Trent surged 12.64% to an intraday high of ₹2,909 on the NSE following its Q2 FY27 provisional update. Standalone revenue from operations grew 23% YoY to ₹5,788 crore, while Trent crossed a landmark milestone by opening its 1,000th Zudio store, taking total network footprint to 1,342 stores.",
       "sentiment": "Positive",
       "importance": "High",
       "catalystType": "Guidance",
-      "timeHorizon": "This week",
-      "impact": "Massive volume expansion on operational milestone provides strong continuation momentum for multi-day swing setups.",
-      "sourceName": "Economic Times Markets",
-      "sourceUrl": "https://economictimes.indiatimes.com/markets/stocks/news/lic-mints-rs-531-crore-in-one-day-as-trent-shares-rally-13-insurance-behemoths-stake-value-nears-rs-4700-cr/articleshow/134730569.cms",
-      "publishedAt": "2026-10-06T08:56:56.000Z"
-    },
-    {
-      "category": "stock",
-      "symbol": "DABUR",
-      "headline": "Dabur shares rise 4% as firm sees double-digit Q2 growth; FMCG set for strong performance",
-      "summary": "Dabur rallied 4% after guiding for double-digit consolidated revenue and PAT growth in Q2FY27, led by acceleration in its India FMCG and Food & Beverages segments.",
-      "sentiment": "Positive",
-      "importance": "High",
-      "catalystType": "Guidance",
-      "timeHorizon": "This week",
-      "impact": "Double-digit earnings guidance acts as an accumulation catalyst, encouraging base breakout attempts in the stock.",
-      "sourceName": "Economic Times Markets",
-      "sourceUrl": "https://economictimes.indiatimes.com/markets/stocks/news/dabur-shares-rise-4-as-firm-sees-double-digit-q2-growth-fmcg-set-for-strong-performance/articleshow/134730433.cms",
-      "publishedAt": "2026-10-06T08:53:51.000Z"
-    },
-    {
-      "category": "stock",
-      "symbol": "RELIANCE",
-      "headline": "Ambani’s Jio said to seek about Rs 11 lakh crore valuation in IPO",
-      "summary": "Jio Platforms is seeking an IPO valuation of approximately ₹11 lakh crore ($114B) with plans to launch in mid-October and list before October 30.",
-      "sentiment": "Positive",
-      "importance": "High",
-      "catalystType": "Corporate action",
-      "timeHorizon": "This week",
-      "impact": "Imminent mega-IPO timeline provides strong valuation support and holding-company upside for parent Reliance.",
-      "sourceName": "Economic Times Markets",
-      "sourceUrl": "https://economictimes.indiatimes.com/markets/ipos/fpos/ambanis-jio-said-to-seek-about-rs-11-lakh-crore-valuation-in-ipo/articleshow/134727599.cms",
-      "publishedAt": "2026-10-06T07:49:19.000Z"
-    },
-    {
-      "category": "stock",
-      "symbol": "HONASA",
-      "headline": "Honasa surges 8% after flagging strong Q2 revenue, margin improvement",
-      "summary": "Honasa Consumer surged over 8% after guiding for strong Q2 revenue growth accompanied by margin improvements.",
-      "sentiment": "Positive",
-      "importance": "High",
-      "catalystType": "Guidance",
-      "timeHorizon": "This week",
-      "impact": "Strong gap-up accompanied by operational margin improvement supports multi-day swing continuation above previous pivot levels.",
-      "sourceName": "Hindu BusinessLine Markets",
-      "sourceUrl": "https://www.thehindubusinessline.com/markets/stock-markets/honasa-surges-8-after-flagging-strong-q2-revenue-margin-improvement/article71550317.ece",
-      "publishedAt": "2026-10-06T07:03:35.000Z"
-    },
-    {
-      "category": "stock",
-      "symbol": "TATACHEM",
-      "headline": "Supreme Court stay lifts Tata Chemicals off day’s low",
-      "summary": "Supreme Court granted an interim stay restraining the Gujarat government from coercive action against Tata Chemicals in an ongoing land-rights dispute.",
-      "sentiment": "Positive",
-      "importance": "Medium",
-      "catalystType": "Regulatory",
       "timeHorizon": "Today",
-      "impact": "Immediate legal relief removes an overhang, opening a high-probability mean-reversion bounce setup.",
-      "sourceName": "Hindu BusinessLine Markets",
-      "sourceUrl": "https://www.thehindubusinessline.com/markets/stock-markets/supreme-court-stay-lifts-tata-chemicals-off-days-low/article71550859.ece",
-      "publishedAt": "2026-10-06T09:53:32.000Z"
+      "impact": "Triggers a high-volume base breakout above the 50-day moving average, creating constructive swing continuation odds towards previous swing highs.",
+      "sourceName": "The Economic Times",
+      "sourceUrl": "https://economictimes.indiatimes.com/markets/stocks/news/lic-mints-rs-531-crore-in-one-day-as-trent-shares-rally-13-insurance-behemoths-stake-value-nears-rs-4700-cr/articleshow/134730979.cms",
+      "publishedAt": "2026-10-06T08:56:00Z"
     },
     {
       "category": "stock",
-      "symbol": "MOLBIO",
-      "headline": "Motilal Oswal initiates coverage on Molbio Diagnostics stock with Buy, sees 21% upside. Here's why",
-      "summary": "Motilal Oswal initiated coverage on newly-listed Molbio Diagnostics with a Buy rating and target price of ₹1,800, implying 21% upside.",
+      "symbol": "KOTAKBANK",
+      "headline": "Kotak Mahindra Bank jumps 4% after Q2 advances climb 25% YoY and deposits expand 23%",
+      "summary": "Kotak Mahindra Bank gained 3.82% to ₹431.85 following its Q2 FY27 business update. Period-end net advances grew 24.7% YoY to ₹5,770 billion (up 12.7% QoQ), while total deposits rose 23.2% YoY to ₹6,510 billion, supported by strong retail lending traction and FCNR(B) swap deposits.",
       "sentiment": "Positive",
-      "importance": "Medium",
+      "importance": "High",
+      "catalystType": "Guidance",
+      "timeHorizon": "Today",
+      "impact": "Strong volume-backed thrust off lower consolidation boundaries marks an early swing reversal setup ahead of full quarterly financial releases.",
+      "sourceName": "The Economic Times",
+      "sourceUrl": "https://economictimes.indiatimes.com/markets/stocks/news/kotak-mahindra-bank-shares-jump-4-as-q2-net-advances-rise-25-yoy-deposits-up-23/articleshow/134718049.cms",
+      "publishedAt": "2026-10-06T03:30:00Z"
+    },
+    {
+      "category": "stock",
+      "symbol": "DMART",
+      "headline": "Avenue Supermarts drops 6% as Citi and Goldman Sachs reiterate sell calls despite 18.4% Q2 revenue growth",
+      "summary": "Avenue Supermarts dropped over 6% following its provisional Q2 FY27 update showing standalone revenue up 18.4% YoY to ₹19,206 crore with 15 store additions (reaching 518 stores). Global brokerages highlighted slowing same-store sales growth and margin pressure in FMCG categories ahead of DMart's full audited board meeting on October 10, 2026.",
+      "sentiment": "Negative",
+      "importance": "High",
       "catalystType": "Rating change",
-      "timeHorizon": "Watch",
-      "impact": "Fresh institutional coverage initiation provides fundamental tailwind to an established post-listing uptrend.",
-      "sourceName": "Economic Times Markets",
-      "sourceUrl": "https://economictimes.indiatimes.com/markets/stocks/news/motilal-oswal-initiates-coverage-on-molbio-diagnostics-stock-with-buy-sees-21-upside-heres-why/articleshow/134729418.cms",
-      "publishedAt": "2026-10-06T08:30:56.000Z"
+      "timeHorizon": "This week",
+      "impact": "Breakdown below intermediate horizontal swing support signals elevated downside risk; avoid long breakout setups pending October 10 earnings validation.",
+      "sourceName": "The Economic Times",
+      "sourceUrl": "https://economictimes.indiatimes.com/markets/stocks/news/dmart-falls-6-7-as-citi-goldman-retain-sell-call/articleshow/134719602.cms",
+      "publishedAt": "2026-10-06T02:00:00Z"
     },
     {
       "category": "market",
-      "symbol": "MICROCAP250",
-      "headline": "MFs kept buying these 10 microcaps for 2 straight quarters; stocks surge up to 70% in 3 months",
-      "summary": "Domestic mutual funds increased stakes in 64 Nifty Microcap 250 firms across two straight quarters, triggering 25%-68% gains in top institutional picks.",
-      "sentiment": "Positive",
-      "importance": "Medium",
-      "catalystType": "Ownership",
-      "timeHorizon": "Watch",
-      "impact": "Multi-quarter DII accumulation reinforces strong institutional sponsorship for swing candidates in emerging small-cap themes.",
-      "sourceName": "Economic Times Markets",
-      "sourceUrl": "https://economictimes.indiatimes.com/markets/stocks/news/mfs-kept-buying-these-10-microcaps-for-2-straight-quarters-stocks-surge-up-to-70-in-3-months/slideshow/134730010.cms",
-      "publishedAt": "2026-10-06T08:22:47.000Z"
-    },
-    {
-      "category": "stock",
-      "symbol": "MEESHO",
-      "headline": "Meesho shares jump 6% as content commerce NMV grows 152% in Q2. Buy, sell or hold the stock?",
-      "summary": "Meesho shares rose 6% after reporting 152% YoY growth in Content Commerce NMV for Q2, despite mixed broker ratings.",
-      "sentiment": "Positive",
-      "importance": "Medium",
-      "catalystType": "Guidance",
+      "symbol": "NIFTY50",
+      "headline": "RBI Monetary Policy Committee decision slated for October 7 amid inflation and crude scrutiny",
+      "summary": "The RBI's six-member MPC concludes its three-day bi-monthly review on Wednesday, October 7, 2026, with Governor Sanjay Malhotra announcing the policy rate decision at 10:00 AM IST. While benchmark repo rates currently sit at 5.25%, markets remain divided on whether the central bank will keep rates unchanged or deliver a precautionary 25 bps hike.",
+      "sentiment": "Neutral",
+      "importance": "High",
+      "catalystType": "Macro/flows",
       "timeHorizon": "This week",
-      "impact": "Triple-digit business growth metric creates bullish momentum, though divergent broker stances warrant monitoring near key supply zones.",
-      "sourceName": "Economic Times Markets",
-      "sourceUrl": "https://economictimes.indiatimes.com/markets/stocks/news/meesho-shares-jump-6-as-content-commerce-nmv-grows-152-in-q2-buy-sell-or-hold-the-stock/articleshow/134728099.cms",
-      "publishedAt": "2026-10-06T08:01:12.000Z"
+      "impact": "Serves as the primary binary macro catalyst determining whether benchmark indices confirm breakout follow-through above 22,800 or revert into chop.",
+      "sourceName": "Livemint",
+      "sourceUrl": "https://www.livemint.com/market/stock-market-news/rbi-mpc-meeting-oct-2026-dates-outcome-announcement-time-when-where-to-watch-live-speech-of-guv-sanjay-malhotra-11791240683073.html",
+      "publishedAt": "2026-10-05T12:00:00Z"
+    },
+    {
+      "category": "market",
+      "symbol": "NIFTY50",
+      "headline": "Sensex rallies 685 points, Nifty reclaims 22,700 as Brent crude retreats below $100/bbl",
+      "summary": "Dalal Street recorded broad-based gains on October 6, 2026, as S&P BSE Sensex climbed 685.34 points (+0.95%) to 73,067.81 and Nifty settled at 22,776.10 (+0.98%). A retreat in Brent crude oil futures to $98.59/bbl alleviated import inflation concerns, helping Nifty Midcap advance over 1% with advancing shares doubling declining counters.",
+      "sentiment": "Positive",
+      "importance": "Medium",
+      "catalystType": "Macro/flows",
+      "timeHorizon": "Today",
+      "impact": "Confirms an emerging two-day higher-low pivot off oversold territory, improving the probability of swing breakout setups in high-beta names.",
+      "sourceName": "The Hindu",
+      "sourceUrl": "https://www.thehindu.com/business/markets/stock-markets-surge-for-second-day-as-oil-drops-below-100-per-barrel/article68725832.ece",
+      "publishedAt": "2026-10-06T11:30:00Z"
     },
     {
       "category": "stock",
-      "symbol": "MOBIKWIK",
-      "headline": "One MobiKwik Systems shares rise 14% on 31x volume surge - Will bullish momentum continue? Support, resistance levels",
-      "summary": "One MobiKwik Systems surged nearly 14% on extreme volume exceeding 30 times its one-week daily average.",
+      "symbol": "BEL",
+      "headline": "Defence procurement momentum accelerates with fresh naval systems and radar contracts",
+      "summary": "The Ministry of Defence announced a ₹661.50 crore contract with BrahMos Aerospace on October 6, 2026, for fire control systems and launchers with >68% indigenous content, providing ancillary sub-tier demand to electronics supplier Bharat Electronics Limited. BEL has accumulated over ₹75,600 crore in order backlog across avionics, radar, and EW systems.",
       "sentiment": "Positive",
+      "importance": "Medium",
+      "catalystType": "Order win",
+      "timeHorizon": "This week",
+      "impact": "Steady order inflow maintains support near the stock's 20-day moving average, keeping the multi-week cup-shaped base structure constructive.",
+      "sourceName": "NDTV Profit",
+      "sourceUrl": "https://www.ndtvprofit.com/india/defence-boost-mod-signs-contract-with-brahmos-aerospace-for-fire-control-system-and-launchers-for-indian-navy-1049929",
+      "publishedAt": "2026-10-06T09:28:00Z"
+    },
+    {
+      "category": "stock",
+      "symbol": "CGPOWER",
+      "headline": "CG Power advances high-voltage transformer and OSAT semiconductor expansion roadmap",
+      "summary": "CG Power and Industrial Solutions continues operational scale-up across its recently commissioned S3 Unit-II EHV switchgear facility in Nashik and ongoing ₹712-crore greenfield power transformer expansion. Market attention is centered on execution delivery and the commercial timeline of its Sanand OSAT semiconductor facility under the India Semiconductor Mission.",
+      "sentiment": "Neutral",
       "importance": "Medium",
       "catalystType": "Other",
-      "timeHorizon": "This week",
-      "impact": "Exceptional volume expansion signals strong institutional accumulation, warranting momentum breakout tracking.",
-      "sourceName": "LiveMint Markets",
-      "sourceUrl": "https://www.livemint.com/market/stock-market-news/mobikwik-share-price-jumps-14-on-31x-volume-surge-will-bullish-momentum-continue-check-support-resistance-levels-11791269490280.html",
-      "publishedAt": "2026-10-06T07:56:27.000Z"
+      "timeHorizon": "Watch",
+      "impact": "Stock remains locked in a tight high-level consolidation range; wait for a volume breakout above overhead resistance before establishing swing exposure.",
+      "sourceName": "The Economic Times",
+      "sourceUrl": "https://economictimes.indiatimes.com/cg-power-and-industrial-solutions-ltd/stocks/companyid-13532.cms",
+      "publishedAt": "2026-10-06T06:00:00Z"
     },
     {
       "category": "stock",
-      "symbol": "NYKAA",
-      "headline": "Nykaa's Q2 business update brings a fresh bout of optimism",
-      "summary": "Nykaa extended gains to 5% following its Q2 business update, taking YTD gains to 28% amid positive operating metrics.",
-      "sentiment": "Positive",
+      "symbol": "POLICYBZR",
+      "headline": "PB Fintech rebounds 2.5% to ₹1,034 after sharp 48% sell-off pushes stock near IPO benchmark",
+      "summary": "PB Fintech rebounded 2.5% to settle at ₹1,034 after a 7-session plunge that eliminated ~₹42,000 crore in market cap following IRDAI's proposed draft caps on insurance distributor commissions. Buying re-emerged near the ₹980 IPO issue level after the Insurance Brokers Association made representations to the government regarding intermediary commission structures.",
+      "sentiment": "Mixed",
       "importance": "Medium",
-      "catalystType": "Guidance",
+      "catalystType": "Regulatory",
       "timeHorizon": "This week",
-      "impact": "Sustained post-update price traction improves swing structure toward testing higher range resistance.",
-      "sourceName": "LiveMint Markets",
-      "sourceUrl": "https://www.livemint.com/market/mark-to-market/nykaa-q2-business-update-nykaa-share-price-beauty-personal-care-india-11791268138208.html",
-      "publishedAt": "2026-10-06T07:14:48.000Z"
+      "impact": "Technical mean-reversion bounce off multi-year support; high volatility remains, necessitating strict stop-loss adherence before considering base patterns.",
+      "sourceName": "The Economic Times",
+      "sourceUrl": "https://economictimes.indiatimes.com/markets/stocks/news/pb-fintech-loses-rs-42000-cr-in-7-sessions-hits-32-month-low/articleshow/134720356.cms",
+      "publishedAt": "2026-10-06T00:56:18Z"
+    },
+    {
+      "category": "stock",
+      "symbol": "COCHINSHIP",
+      "headline": "Cochin Shipyard consolidates near ₹1,282 as MWPL reaches 81.7% near F&O restriction threshold",
+      "summary": "Cochin Shipyard traded flat at ₹1,282 on Tuesday, hovering within a secondary basing phase following its September MoU with Synergy Marine Group for vessel repair and conversions. Derivative market data showed the counter's Market Wide Position Limit (MWPL) touching 81.73%, placing it on watch for potential F&O ban inclusion if open interest exceeds 95%.",
+      "sentiment": "Neutral",
+      "importance": "Low",
+      "catalystType": "Other",
+      "timeHorizon": "Watch",
+      "impact": "Contracting daily range and elevated open interest indicate sideways price action; wait for base contraction and volume dry-up before hunting entry pivots.",
+      "sourceName": "5paisa",
+      "sourceUrl": "https://www.5paisa.com/share-market-today/nse-fo-ban-list",
+      "publishedAt": "2026-10-06T09:00:00Z"
     }
   ],
-  "sources": [
-    {
-      "title": "Economic Times Markets",
-      "url": "https://economictimes.indiatimes.com/markets/stocks/news/lic-mints-rs-531-crore-in-one-day-as-trent-shares-rally-13-insurance-behemoths-stake-value-nears-rs-4700-cr/articleshow/134730569.cms"
-    },
-    {
-      "title": "Economic Times Markets",
-      "url": "https://economictimes.indiatimes.com/markets/stocks/news/dabur-shares-rise-4-as-firm-sees-double-digit-q2-growth-fmcg-set-for-strong-performance/articleshow/134730433.cms"
-    },
-    {
-      "title": "Economic Times Markets",
-      "url": "https://economictimes.indiatimes.com/markets/ipos/fpos/ambanis-jio-said-to-seek-about-rs-11-lakh-crore-valuation-in-ipo/articleshow/134727599.cms"
-    },
-    {
-      "title": "Hindu BusinessLine Markets",
-      "url": "https://www.thehindubusinessline.com/markets/stock-markets/honasa-surges-8-after-flagging-strong-q2-revenue-margin-improvement/article71550317.ece"
-    },
-    {
-      "title": "Hindu BusinessLine Markets",
-      "url": "https://www.thehindubusinessline.com/markets/stock-markets/supreme-court-stay-lifts-tata-chemicals-off-days-low/article71550859.ece"
-    },
-    {
-      "title": "Economic Times Markets",
-      "url": "https://economictimes.indiatimes.com/markets/stocks/news/motilal-oswal-initiates-coverage-on-molbio-diagnostics-stock-with-buy-sees-21-upside-heres-why/articleshow/134729418.cms"
-    },
-    {
-      "title": "Economic Times Markets",
-      "url": "https://economictimes.indiatimes.com/markets/stocks/news/mfs-kept-buying-these-10-microcaps-for-2-straight-quarters-stocks-surge-up-to-70-in-3-months/slideshow/134730010.cms"
-    },
-    {
-      "title": "Economic Times Markets",
-      "url": "https://economictimes.indiatimes.com/markets/stocks/news/meesho-shares-jump-6-as-content-commerce-nmv-grows-152-in-q2-buy-sell-or-hold-the-stock/articleshow/134728099.cms"
-    },
-    {
-      "title": "LiveMint Markets",
-      "url": "https://www.livemint.com/market/stock-market-news/mobikwik-share-price-jumps-14-on-31x-volume-surge-will-bullish-momentum-continue-check-support-resistance-levels-11791269490280.html"
-    },
-    {
-      "title": "LiveMint Markets",
-      "url": "https://www.livemint.com/market/mark-to-market/nykaa-q2-business-update-nykaa-share-price-beauty-personal-care-india-11791268138208.html"
-    }
-  ],
-  "disclaimer": "Alpha Swing AI provides technical and market event analysis for informational and educational purposes only. It does not constitute investment advice, financial guidance, or buy/sell recommendations. Swing trading involves substantial risk of capital loss."
+  "disclaimer": "Alpha Swing AI provides market analysis, technical commentary, and publicly sourced factual summaries strictly for informational and educational purposes. Nothing contained herein constitutes investment advice, financial guidance, or a recommendation to buy, sell, or hold any security, derivative, or financial instrument. Securities trading involves substantial risk of loss. Always consult a SEBI-registered financial advisor before executing trades.",
+  "sources": []
 }
