@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-06T09:26:32.362Z",
+  "generatedAt": "2026-10-06T10:20:26.928Z",
   "sessionDate": "2026-10-06",
   "status": "ready",
   "scanGeneratedAt": "2026-10-05T20:04:16.127Z",
@@ -197,8 +197,8 @@
   ],
   "observations": [],
   "previousSession": "2026-10-05",
-  "intelligenceGeneratedAt": "2026-10-05T10:27:23.936Z",
-  "commentary": "With market breadth deteriorating to a weak score of 36 and the market gate flagged WEAK ahead of the RBI policy decision and earnings kick-off, seasoned CANSLIM and Weinstein discipline demands defensive posture. In an unconfirmed market environment, distribution days accumulate and broad index beta carries adverse risk-reward. As Livermore cautioned, the general market trend is the primary headwind. Capital preservation requires reducing progressive exposure, ignoring cash-equivalent instruments that clutter scans, and demanding the strictest dual qualification: Stage 2 structural alignment coupled with explosive, accelerating earnings. Only true leadership setups showing high relative strength and tight VCP contraction deserve capital when the market pivot arrives.",
+  "intelligenceGeneratedAt": "2026-10-06T10:18:30.313Z",
+  "commentary": "With market breadth deteriorating to a weak score of 36 and the scanner gate flagged WEAK, seasoned discipline demands strict defensive adherence to Stan Weinstein's stage analysis and William O'Neil's market-direction rules. Although headline benchmarks attempt resistance breakouts ahead of the RBI MPC policy decision, narrow participation and diverging market internals warn against aggressive long exposure. As Jesse Livermore stressed, trading against the general market tide invites failure. In this selective environment, capital preservation takes precedence: exposure must remain progressive and restricted solely to high-conviction Stage 2 candidates exhibiting verified earnings acceleration and tight pivots, with stops executed unconditionally at predetermined levels.",
   "commentaryStatus": "available",
   "limitations": [
     "Daily scan observations are not fills or performance results.",
@@ -207,89 +207,93 @@
   ],
   "model": "gemini-3.8-flash",
   "analysis": {
-    "analyst": "Minervini SEPA, O'Neil CANSLIM & Weinstein Stage Analysis",
+    "analyst": "Minervini SEPA, O'Neil CANSLIM & Weinstein Stage Analysis Frameworks",
     "bySymbol": {
       "AAREYDRUGS": {
-        "stage": "Stage 1 base",
-        "technical": "Constructing a double-bottom base with a 26.6% cup depth and 6.5% handle above rising EMAs, while RSI at 68 reflects short-term recovery momentum. However, relative strength remains subpar against true market leaders.",
+        "stage": "Stage 2 advancing",
+        "technical": "Forming a cup-with-handle and double-bottom pattern above rising 50 and 200-day moving averages. Price tests the 107.96 neckline trigger with RSI at 68, but volume expansion remains subdued.",
         "epsGrowth": [
-          "Q1 FY27 -25.6%",
-          "not verified"
+          "Q1 FY25 -25.5%",
+          "Q4 FY24 +14.6%",
+          "Q3 FY24 -52.4%"
         ],
         "revenueGrowth": "-56.3%",
         "earningsTrend": "Negative",
         "growthQualified": "No",
-        "fundamental": "Severe CANSLIM failure: Q1 FY27 net profit sank 25.6% YoY alongside a 56.3% top-line plunge. A meager 3-year average ROE near 3.1%, low interest coverage, and declining promoter holdings warn of weak underlying quality.",
-        "verdict": "Avoid",
-        "risk": "Thesis invalidates below the 99.56 swing low; cut immediately if the 50-day moving average fails."
+        "fundamental": "Fails CANSLIM quality filters. Operating margins remain razor-thin at ~3%, ROE is negligible at 2.8%, and sales contracted 56.3% YoY. Promoters hold 37.7% unpledged, but earnings contraction prevents institutional backing.",
+        "verdict": "Watch",
+        "risk": "Thesis invalidates below the 99.56 neckline swing pivot; enforce strict Minervini stop discipline against severe fundamental deterioration."
       },
       "ABSLLIQUID": {
         "stage": "Unclear",
-        "technical": "Flatline NAV progression reflecting overnight repo yields rather than equity demand. The apparent pivot near 1006 is a mechanical artifact of interest accrual, completely devoid of VCP or true volume characteristics.",
+        "technical": "Overnight liquid ETF displaying fractional micro-variations near 1006. Volume surges represent treasury cash management rather than institutional equity accumulation; SEPA trend templates and VCP patterns do not apply.",
         "epsGrowth": [
           "not verified"
         ],
         "revenueGrowth": "not verified",
         "earningsTrend": "Not verified",
         "growthQualified": "Not verified",
-        "fundamental": "An exchange-traded overnight debt fund holding sovereign repos and TREPS. Fundamental corporate metrics such as sales growth, operating margins, ROE, and earnings acceleration are entirely inapplicable.",
+        "fundamental": "Not verified. Overnight debt fund vehicle; standard CANSLIM metrics such as EPS growth, sales expansion, ROCE, and promoter holdings are structurally non-applicable.",
         "verdict": "Avoid",
-        "risk": "Not an equity vehicle; holding represents an opportunity cost against active Stage 2 growth leadership."
+        "risk": "Poses extreme opportunity cost for equity momentum strategies; structural invalidation trigger at 1003.83."
       },
       "ACE": {
         "stage": "Stage 2 advancing",
-        "technical": "Demonstrates strong Stage 2 leadership above ascending 21-EMA, 50-SMA, and 200-SMA. Formed a double-bottom continuation base with neck-line pressure and RSI at 71 confirming strong underlying sponsorship.",
+        "technical": "High-quality Stage 2 leader clearing a double bottom pivot at 1269.27. Strong alignment above rising 21-EMA, 50-SMA, and 200-SMA, backed by a firm RSI at 71 reflecting notable relative strength.",
         "epsGrowth": [
-          "Q1 FY27 +22.3%",
-          "Q4 FY26 +18.5%"
+          "Q1 FY25 +22.5%",
+          "Q4 FY24 +29.3%",
+          "Q3 FY24 +22.2%"
         ],
-        "revenueGrowth": "+18.9%",
+        "revenueGrowth": "+12.8%",
         "earningsTrend": "Steady",
         "growthQualified": "Partial",
-        "fundamental": "Dominates mobile and tower cranes with >60% domestic market share. Standalone Q1 FY27 sales grew 18.9% YoY and PAT expanded 22.3%. Zero net debt, expanding margins, and strong infrastructure capex support the thesis.",
+        "fundamental": "Dominant industrial player holding 63% crane market share. Delivers 31.6% ROCE and 22.8% ROE with a virtually debt-free balance sheet and 65.4% unpledged promoter ownership, indicating solid institutional sponsorship.",
         "verdict": "Constructive",
-        "risk": "Pattern breaks down if price breaches 1184.07 support; exit decisively to prevent capital erosion."
+        "risk": "Setup fails on a breakdown below 1184.07; execute a prompt stop loss to cap risk within standard trade management guidelines."
       },
       "ADFFOODS": {
         "stage": "Stage 2 advancing",
-        "technical": "Trading constructively above rising 21-EMA and major moving averages, consolidating within 1.5% of its 20-session pivot. RSI at 61 displays healthy non-extended momentum, though volume expansion remains moderate.",
+        "technical": "Consolidating tightly near its 331.08 20-session breakout pivot, positioned comfortably above rising 21-EMA, 50-SMA, and 200-SMA. RSI 61 shows calm momentum, though 1.38x volume requires heavier institutional confirmation.",
         "epsGrowth": [
-          "Q1 FY27 +13.4%",
-          "Q4 FY26 +18.2%"
+          "Q1 FY25 +7.6%",
+          "Q4 FY24 +24.8%",
+          "Q3 FY24 +10.2%"
         ],
-        "revenueGrowth": "+25.9%",
+        "revenueGrowth": "+8.1%",
         "earningsTrend": "Decelerating",
-        "growthQualified": "Partial",
-        "fundamental": "Q1 FY27 consolidated sales climbed 25.9% YoY driven by international expansion, but PAT growth decelerated to 13.4% due to elevated freight disruptions. ROCE is sound near 21.8% with manageable leverage.",
+        "growthQualified": "No",
+        "fundamental": "Packaged food exporter with respectable 21.8% ROCE and 17.7% ROE on a clean balance sheet. However, latest quarterly EPS growth slowed markedly to 7.6%, missing O'Neil's 25% CANSLIM threshold.",
         "verdict": "Watch",
-        "risk": "Stop failure triggers below 309.43 base pivot; cut immediately if the rising 50-day SMA violates."
+        "risk": "Breakout thesis fails below the 309.43 support pivot; exit promptly to honor capital protection rules."
       },
       "AEROFLEX": {
         "stage": "Stage 2 advancing",
-        "technical": "Textbook Stage 2 growth leader. Reclaimed the rising 21-EMA after a constructive pullback, completing a double bottom on 1.8× volume expansion with RSI re-energizing near prior highs.",
+        "technical": "Exemplary Stage 2 breakout candidate emerging from a double bottom base at 584.73 on 1.8x volume. Orderly pullback to the rising 21-EMA followed by a decisive bullish reclaim candle signals institutional accumulation.",
         "epsGrowth": [
-          "Q1 FY27 +158.2%",
-          "Q4 FY26 +57.1%"
+          "Q1 FY25 +162.1%",
+          "Q4 FY24 +74.2%",
+          "Q3 FY24 +48.0%"
         ],
         "revenueGrowth": "+72.4%",
         "earningsTrend": "Accelerating",
         "growthQualified": "Yes",
-        "fundamental": "Exceptional CANSLIM credentials: Q1 FY27 net profit surged 162% YoY on 72.4% top-line growth, powered by data-center liquid cooling demand. Maintains pristine balance sheet (0.01 D/E) and robust 23% EBITDA margins.",
+        "fundamental": "Textbook CANSLIM profile marked by rapid acceleration: EPS surged 162.1% YoY alongside 72.4% top-line growth. Backed by 18.9% ROCE, negligible debt (8.9 Cr), and 65.5% unpledged promoter stake with prominent marquee sponsorship.",
         "verdict": "Leading",
-        "risk": "Pattern thesis invalidates below the 525.74 swing low; adhere strictly to stop-loss discipline."
+        "risk": "Pattern fails if price drops below 525.74; implement immediate stop discipline to avoid broader corrective drawdown."
       },
       "AONELIQUID": {
         "stage": "Unclear",
-        "technical": "Shows nominal algorithmic price climbing tied to daily interest accrual rather than institutional accumulation. Standard chart breakouts and box theories do not apply to money-market vehicles.",
+        "technical": "Overnight liquid ETF printing a narrow 20-day high near 1080.67. Instrument exhibits zero price expansion volatility or volume character; outside the realm of Minervini or Darvas momentum frameworks.",
         "epsGrowth": [
           "not verified"
         ],
         "revenueGrowth": "not verified",
         "earningsTrend": "Not verified",
         "growthQualified": "Not verified",
-        "fundamental": "Liquid rate ETF allocating to overnight tri-party repos and short-term sovereign paper. It possesses no operating metrics, earnings power, return on equity, or corporate fundamentals.",
+        "fundamental": "Not verified. Overnight debt ETF; fundamental equity metrics such as revenue, operating margins, leverage ratios, and promoter holdings are completely inapplicable.",
         "verdict": "Avoid",
-        "risk": "Inapplicable for equity momentum systems; serves strictly as an idle cash parking facility."
+        "risk": "Severe drag on active equity risk capital; operational exit level sits below 1080.22."
       }
     }
   },
