@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-06T17:34:11.077Z",
-  "sessionDate": "2026-10-06",
+  "generatedAt": "2026-10-06T18:30:10.874Z",
+  "sessionDate": "2026-10-07",
   "status": "ready",
   "scanGeneratedAt": "2026-10-06T17:33:54.241Z",
   "gate": "WEAK",
@@ -195,118 +195,58 @@
       "reason": "Double bottom"
     }
   ],
-  "observations": [],
-  "previousSession": "2026-10-05",
+  "observations": [
+    {
+      "symbol": "AAREYDRUGS",
+      "previousState": "Watch",
+      "observation": "No newer scan observation; outcome unknown."
+    },
+    {
+      "symbol": "ACE",
+      "previousState": "Watch",
+      "observation": "No newer scan observation; outcome unknown."
+    },
+    {
+      "symbol": "ADFFOODS",
+      "previousState": "Watch",
+      "observation": "No newer scan observation; outcome unknown."
+    },
+    {
+      "symbol": "AEROFLEX",
+      "previousState": "Watch",
+      "observation": "No newer scan observation; outcome unknown."
+    },
+    {
+      "symbol": "APARINDS",
+      "previousState": "Watch",
+      "observation": "No newer scan observation; outcome unknown."
+    },
+    {
+      "symbol": "ARSSBL",
+      "previousState": "Watch",
+      "observation": "No newer scan observation; outcome unknown."
+    },
+    {
+      "symbol": "ATLANTAELE",
+      "previousState": "Watch",
+      "observation": "No newer scan observation; outcome unknown."
+    },
+    {
+      "symbol": "AVADHSUGAR",
+      "previousState": "Watch",
+      "observation": "No newer scan observation; outcome unknown."
+    }
+  ],
+  "previousSession": "2026-10-06",
   "intelligenceGeneratedAt": "2026-10-06T17:11:21.958Z",
-  "commentary": "Market breadth remains defensive at 36 despite the two-day relief rally back toward Nifty 22,776, keeping our deterministic market gate in WEAK status. In Stan Weinstein's stage discipline and William O'Neil's market-direction framework, aggressive exposure during unconfirmed rally attempts carries poor asymmetry. While headline indices cheered lower crude, the pending RBI policy decision warrants tactical restraint. True market leaders decouple from broader hesitation by printing Stage 2 breakouts backed by pristine CANSLIM fundamentals, yet overall exposure must be metered progressively until distribution days subside and the market earns a confirmed uptrend.",
-  "commentaryStatus": "available",
+  "commentary": null,
+  "commentaryStatus": "unavailable",
   "limitations": [
     "Daily scan observations are not fills or performance results.",
     "Price levels are scanner references, not live quotes.",
     "No broker orders are submitted."
   ],
-  "model": "gemini-3.8-flash",
-  "analysis": {
-    "analyst": "Minervini SEPA, O'Neil CANSLIM & Weinstein Stage Analysis",
-    "bySymbol": {
-      "AAREYDRUGS": {
-        "stage": "Stage 1 base",
-        "technical": "Price trades above the 21-EMA, 50-SMA, and 200-SMA, carving a 26.6% deep cup with a 6.5% handle. However, overhead supply remains heavy and relative strength lags broader market leaders significantly, lacking true institutional accumulation volume on up-weeks.",
-        "epsGrowth": [
-          "Q1 FY27 -25.6%",
-          "Q4 FY26 -12.4%",
-          "Q3 FY26 -18.2%"
-        ],
-        "revenueGrowth": "-56.3%",
-        "earningsTrend": "Negative",
-        "growthQualified": "No",
-        "fundamental": "Fundamentals fail CANSLIM standards. Q1 FY27 net sales collapsed 56.3% YoY with net profit declining 25.6%. Low ROCE of ~5.6%, poor interest coverage, rising short-term borrowings to Rs 49 Cr, and unconfirmed receivables signal substantial operational and balance-sheet fragility.",
-        "verdict": "Avoid",
-        "risk": "Thesis fails below handle support at 99.56. Minervini discipline mandates immediate exit to prevent capital erosion in low-liquidity turnaround attempts."
-      },
-      "ACE": {
-        "stage": "Stage 2 advancing",
-        "technical": "Trading firmly in Stage 2 above rising 21, 50, and 200 EMAs. Formed a constructive double bottom base with neckline pressure at 1269.27; recovered over half of the prior distribution candle with RSI at 71 confirming healthy momentum.",
-        "epsGrowth": [
-          "Q1 FY27 +22.3%",
-          "Q4 FY26 +18.5%",
-          "Q3 FY26 +21.0%"
-        ],
-        "revenueGrowth": "+19.5%",
-        "earningsTrend": "Steady",
-        "growthQualified": "Partial",
-        "fundamental": "Solid CANSLIM profile. Q1 FY27 revenues grew 19.5% YoY to INR 840 Cr with EPS climbing 22.3%. Sustains >60% domestic crane market share, healthy operating margins of ~20.5%, and negligible leverage, though EPS growth falls just short of the 25% threshold.",
-        "verdict": "Constructive",
-        "risk": "Violations below 1184.07 negate the double bottom swing low. Cut exposure immediately if infra capex momentum falters."
-      },
-      "ADFFOODS": {
-        "stage": "Stage 2 advancing",
-        "technical": "Consolidating tightly within 1.5% of its 20-session pivot at 331.08, hovering cleanly above rising 21-EMA, 50-SMA, and 200-SMA. Volume expanded to 1.38x 20-day average, showing constructive accumulation, with RSI 60 indicating coiled energy without overextension.",
-        "epsGrowth": [
-          "Q1 FY27 +13.5%",
-          "Q4 FY26 +15.2%",
-          "Q3 FY26 +12.8%"
-        ],
-        "revenueGrowth": "+25.9%",
-        "earningsTrend": "Steady",
-        "growthQualified": "Partial",
-        "fundamental": "Healthy top-line acceleration with Q1 FY27 sales up 25.9% YoY to INR 167.3 Cr, though net profit grew at a milder 13.5% YoY due to elevated freight costs. Strong ROCE (>21%) and minimal leverage provide robust fundamental stability.",
-        "verdict": "Constructive",
-        "risk": "Break below 309.43 violates the base floor and 50-SMA support; close position swiftly to preserve trading capital."
-      },
-      "AEROFLEX": {
-        "stage": "Stage 2 advancing",
-        "technical": "Exemplary Stage 2 leader clearing a classic double bottom at 584.73 on 1.8x volume. Successfully retested the rising 21-EMA near all-time highs before printing a strong reclaim candle, exhibiting top-decile relative strength.",
-        "epsGrowth": [
-          "Q1 FY27 +35.8%",
-          "Q4 FY26 +28.4%",
-          "Q3 FY26 +26.1%"
-        ],
-        "revenueGrowth": "+31.1%",
-        "earningsTrend": "Accelerating",
-        "growthQualified": "Yes",
-        "fundamental": "Pristine CANSLIM numbers. Q1 FY27 net profit jumped 35.8% YoY on 31.1% revenue expansion to INR 145 Cr. High return on capital (ROCE >25%), zero net debt, and widening EBITDA margins confirm genuine institutional quality.",
-        "verdict": "Leading",
-        "risk": "Thesis invalidates on a drop beneath 525.74 base support. Strictly cut losses if volume fails to sustain the breakout."
-      },
-      "APARINDS": {
-        "stage": "Stage 2 advancing",
-        "technical": "Powerful Stage 2 advance with pristine Minervini trend template alignment. Rebounded sharply off the rising 21-EMA after forming a shallow double bottom neckline at 19284.26, flashing exceptional institutional accumulation and market-leading relative strength.",
-        "epsGrowth": [
-          "Q1 FY27 +77.8%",
-          "Q4 FY26 +34.2%",
-          "Q3 FY26 +28.5%"
-        ],
-        "revenueGrowth": "+29.1%",
-        "earningsTrend": "Accelerating",
-        "growthQualified": "Yes",
-        "fundamental": "Top-tier CANSLIM engine. Q1 FY27 EPS surged 77.8% YoY on 29.1% revenue growth to INR 6,591 Cr, driven by high-margin HTLS conductor exports and a massive INR 10,190 Cr order book. High ROCE of ~32% underpins exceptional fundamental power.",
-        "verdict": "Leading",
-        "risk": "Breach below 17506.69 violates structural swing support and the 50-SMA; exit promptly in line with capital preservation rules."
-      },
-      "ARSSBL": {
-        "stage": "Stage 2 advancing",
-        "technical": "Stage 2 advancing breakout clearing a 20-day Darvas box pivot at 593.19 on explosive volume (2.16x 20-day average). RSI 71 and expanding MACD histogram above zero confirm aggressive institutional sponsorship and rapid upward momentum.",
-        "epsGrowth": [
-          "Q1 FY27 +70.8%",
-          "Q4 FY26 +46.5%",
-          "Q3 FY26 +35.2%"
-        ],
-        "revenueGrowth": "+22.4%",
-        "earningsTrend": "Accelerating",
-        "growthQualified": "Yes",
-        "fundamental": "Robust earnings acceleration. Q1 FY27 PAT rose 70.8% YoY on a 22.4% revenue increase to INR 246 Cr. Demonstrates strong profitability, ROCE near 20%, and expanding retail/HNI broking margins, fully qualifying CANSLIM growth criteria.",
-        "verdict": "Leading",
-        "risk": "Thesis fails below breakout pivot support at 555.55; enforce strict stop discipline to guard against broad market liquidity contractions."
-      }
-    }
-  },
   "history": [
-    {
-      "sessionDate": "2026-09-30",
-      "gate": "WEAK",
-      "verdict": "No new buys. Observe and protect capital."
-    },
     {
       "sessionDate": "2026-10-01",
       "gate": "WEAK",
@@ -334,6 +274,11 @@
     },
     {
       "sessionDate": "2026-10-06",
+      "gate": "WEAK",
+      "verdict": "No new buys. Observe and protect capital."
+    },
+    {
+      "sessionDate": "2026-10-07",
       "gate": "WEAK",
       "verdict": "No new buys. Observe and protect capital."
     }
