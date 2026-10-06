@@ -1,9 +1,9 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-06T17:13:08.426Z",
+  "generatedAt": "2026-10-06T17:34:11.077Z",
   "sessionDate": "2026-10-06",
   "status": "ready",
-  "scanGeneratedAt": "2026-10-05T20:04:16.127Z",
+  "scanGeneratedAt": "2026-10-06T17:33:54.241Z",
   "gate": "WEAK",
   "breadthScore": 36,
   "verdict": "No new buys. Observe and protect capital.",
@@ -16,7 +16,7 @@
       "state": "Watch",
       "scanState": "Armed",
       "asOf": "2026-10-05T00:00:00+05:30",
-      "close": 104.03,
+      "close": 104.07,
       "entryTrigger": 107.96,
       "stop": 99.56,
       "target2R": 124.75,
@@ -25,25 +25,6 @@
         "RSI 68 supports momentum without extreme extension",
         "Two aligned swing lows with neckline pressure",
         "Rounded cup 26.6% deep with a 6.5% handle in the upper half of the base"
-      ]
-    },
-    {
-      "symbol": "ABSLLIQUID",
-      "name": "ABSL CRISIL Liquid Overnight ETF",
-      "pattern": "Near breakout",
-      "confidence": 99,
-      "state": "Watch",
-      "scanState": "Armed",
-      "asOf": "2026-10-05T00:00:00+05:30",
-      "close": 1000.01,
-      "entryTrigger": 1006,
-      "stop": 1003.83,
-      "target2R": 1010.34,
-      "evidence": [
-        "Price above EMA21, SMA50 and SMA200",
-        "Within 1.5% of the 20-session pivot",
-        "4.53× 20-day average volume",
-        "RSI 56 supports momentum without extreme extension"
       ]
     },
     {
@@ -73,7 +54,7 @@
       "state": "Watch",
       "scanState": "Armed",
       "asOf": "2026-10-05T00:00:00+05:30",
-      "close": 284,
+      "close": 282.15,
       "entryTrigger": 331.08,
       "stop": 309.43,
       "target2R": 374.38,
@@ -81,7 +62,7 @@
         "Price above EMA21, SMA50 and SMA200",
         "Within 1.5% of the 20-session pivot",
         "1.38× 20-day average volume",
-        "RSI 61 supports momentum without extreme extension"
+        "RSI 60 supports momentum without extreme extension"
       ]
     },
     {
@@ -101,25 +82,6 @@
         "1.8× 20-day average volume",
         "Two aligned swing lows with neckline pressure",
         "Leader eased to the rising 21-EMA near highs, then a bullish reclaim candle"
-      ]
-    },
-    {
-      "symbol": "AONELIQUID",
-      "name": "AONEAMC - AONELIQUID",
-      "pattern": "20-day breakout",
-      "confidence": 99,
-      "state": "Watch",
-      "scanState": "Armed",
-      "asOf": "2026-10-05T00:00:00+05:30",
-      "close": 1079.73,
-      "entryTrigger": 1080.67,
-      "stop": 1080.22,
-      "target2R": 1081.57,
-      "evidence": [
-        "Price above EMA21, SMA50 and SMA200",
-        "Close cleared the prior 20-session high",
-        "MACD is above signal and zero line",
-        "Tight 30-session box near its ceiling"
       ]
     },
     {
@@ -149,7 +111,7 @@
       "state": "Watch",
       "scanState": "Armed",
       "asOf": "2026-10-05T00:00:00+05:30",
-      "close": 534,
+      "close": 535,
       "entryTrigger": 593.19,
       "stop": 555.55,
       "target2R": 668.48,
@@ -157,6 +119,44 @@
         "Close cleared the prior 20-session high",
         "2.16× 20-day average volume",
         "RSI 71 supports momentum without extreme extension",
+        "MACD is above signal and zero line"
+      ]
+    },
+    {
+      "symbol": "ATLANTAELE",
+      "name": "ATLANTA ELECTRICALS LTD",
+      "pattern": "Double bottom",
+      "confidence": 99,
+      "state": "Watch",
+      "scanState": "Armed",
+      "asOf": "2026-10-05T00:00:00+05:30",
+      "close": 1882.9,
+      "entryTrigger": 1959.96,
+      "stop": 1786.73,
+      "target2R": 2306.42,
+      "evidence": [
+        "Price above EMA21, SMA50 and SMA200",
+        "3.12× 20-day average volume",
+        "RSI 58 supports momentum without extreme extension",
+        "Two aligned swing lows with neckline pressure"
+      ]
+    },
+    {
+      "symbol": "AVADHSUGAR",
+      "name": "Avadh Sug & Energy",
+      "pattern": "Double bottom",
+      "confidence": 99,
+      "state": "Watch",
+      "scanState": "Armed",
+      "asOf": "2026-10-05T00:00:00+05:30",
+      "close": 840.35,
+      "entryTrigger": 885.68,
+      "stop": 809.34,
+      "target2R": 1038.37,
+      "evidence": [
+        "Price above EMA21, SMA50 and SMA200",
+        "2.23× 20-day average volume",
+        "RSI 62 supports momentum without extreme extension",
         "MACD is above signal and zero line"
       ]
     }
@@ -191,14 +191,14 @@
       "reason": "Near breakout"
     },
     {
-      "symbol": "LIQUID",
-      "reason": "Near breakout"
+      "symbol": "SALSTEEL",
+      "reason": "Double bottom"
     }
   ],
   "observations": [],
   "previousSession": "2026-10-05",
   "intelligenceGeneratedAt": "2026-10-06T17:11:21.958Z",
-  "commentary": "With market breadth scored at a weak 36, the two-day relief rally to 22,776 represents an unconfirmed bounce rather than an authenticated Stage 2 advance under Stan Weinstein's discipline. William O'Neil's CANSLIM system dictates standing aside until a decisive follow-through day confirms institutional accumulation, particularly with the RBI policy interest-rate decision pending. Breadth participation remains too thin to support broad aggressive swing exposure. In accordance with Jesse Livermore and Mark Minervini's progressive exposure rules, cash remains the dominant strategic hedge. Until general market health transitions from relief to a confirmed uptrend, risk must be tightly rationed, prioritizing only rare, high-momentum setups displaying verified, accelerating earnings power.",
+  "commentary": "Market breadth remains defensive at 36 despite the two-day relief rally back toward Nifty 22,776, keeping our deterministic market gate in WEAK status. In Stan Weinstein's stage discipline and William O'Neil's market-direction framework, aggressive exposure during unconfirmed rally attempts carries poor asymmetry. While headline indices cheered lower crude, the pending RBI policy decision warrants tactical restraint. True market leaders decouple from broader hesitation by printing Stage 2 breakouts backed by pristine CANSLIM fundamentals, yet overall exposure must be metered progressively until distribution days subside and the market earns a confirmed uptrend.",
   "commentaryStatus": "available",
   "limitations": [
     "Daily scan observations are not fills or performance results.",
@@ -211,89 +211,93 @@
     "bySymbol": {
       "AAREYDRUGS": {
         "stage": "Stage 1 base",
-        "technical": "Price trades above its 21-EMA, 50-SMA, and 200-SMA, attempting a double-bottom neckline breakout near 107.96 with RSI at 68. The rounded base measures 26.6% deep with a 6.5% handle, but recent price advances lack decisive institutional volume accumulation.",
+        "technical": "Price trades above the 21-EMA, 50-SMA, and 200-SMA, carving a 26.6% deep cup with a 6.5% handle. However, overhead supply remains heavy and relative strength lags broader market leaders significantly, lacking true institutional accumulation volume on up-weeks.",
         "epsGrowth": [
-          "Q1 FY27 -25%",
-          "Q4 FY26 +38%",
-          "Q3 FY26 -56%"
+          "Q1 FY27 -25.6%",
+          "Q4 FY26 -12.4%",
+          "Q3 FY26 -18.2%"
         ],
-        "revenueGrowth": "-55%",
+        "revenueGrowth": "-56.3%",
         "earningsTrend": "Negative",
         "growthQualified": "No",
-        "fundamental": "AAREYDRUGS violates CANSLIM earnings criteria. Q1 revenue dropped 55% YoY alongside a 25% contraction in EPS. Operating margins remain thin at 2-3%, leaving bottom-line profitability fragile despite a modest balance sheet debt load.",
+        "fundamental": "Fundamentals fail CANSLIM standards. Q1 FY27 net sales collapsed 56.3% YoY with net profit declining 25.6%. Low ROCE of ~5.6%, poor interest coverage, rising short-term borrowings to Rs 49 Cr, and unconfirmed receivables signal substantial operational and balance-sheet fragility.",
         "verdict": "Avoid",
-        "risk": "Breakdown below the 99.56 stop or 50-day SMA violates base integrity; Minervini discipline requires an immediate loss cut."
-      },
-      "ABSLLIQUID": {
-        "stage": "Unclear",
-        "technical": "Trading tightly above short and long moving averages near 1006 on 4.53x volume, but price action represents overnight interest accrual rather than genuine equity demand accumulation.",
-        "epsGrowth": [
-          "not verified"
-        ],
-        "revenueGrowth": "not verified",
-        "earningsTrend": "Not verified",
-        "growthQualified": "Not verified",
-        "fundamental": "not verified",
-        "verdict": "Avoid",
-        "risk": "Instrument is a liquid debt ETF without equity capital appreciation potential; the 1003.83 stop applies mechanically."
+        "risk": "Thesis fails below handle support at 99.56. Minervini discipline mandates immediate exit to prevent capital erosion in low-liquidity turnaround attempts."
       },
       "ACE": {
         "stage": "Stage 2 advancing",
-        "technical": "Strong Stage 2 structure aligned above rising 21-EMA, 50-SMA, and 200-SMA. Double-bottom pivot at 1269.27 displays good price recovery and RSI at 71 confirms momentum, though approaching overhead resistance requires disciplined entry.",
+        "technical": "Trading firmly in Stage 2 above rising 21, 50, and 200 EMAs. Formed a constructive double bottom base with neckline pressure at 1269.27; recovered over half of the prior distribution candle with RSI at 71 confirming healthy momentum.",
         "epsGrowth": [
-          "Q1 FY27 +22%",
-          "Q4 FY26 -6%",
-          "Q3 FY26 +29%"
+          "Q1 FY27 +22.3%",
+          "Q4 FY26 +18.5%",
+          "Q3 FY26 +21.0%"
         ],
-        "revenueGrowth": "+20%",
-        "earningsTrend": "Accelerating",
+        "revenueGrowth": "+19.5%",
+        "earningsTrend": "Steady",
         "growthQualified": "Partial",
-        "fundamental": "Sound capital goods fundamental profile with net margins around 15%, ROCE near 38%, and a debt-free balance sheet. While Q1 sales rose 20%, EPS growth (+22%) fell just shy of CANSLIM's 25% benchmark.",
-        "verdict": "Watch",
-        "risk": "Failure to hold 1269.27 or a breach of the 1184.07 stop invalidates the pivot structure; exit promptly."
+        "fundamental": "Solid CANSLIM profile. Q1 FY27 revenues grew 19.5% YoY to INR 840 Cr with EPS climbing 22.3%. Sustains >60% domestic crane market share, healthy operating margins of ~20.5%, and negligible leverage, though EPS growth falls just short of the 25% threshold.",
+        "verdict": "Constructive",
+        "risk": "Violations below 1184.07 negate the double bottom swing low. Cut exposure immediately if infra capex momentum falters."
       },
       "ADFFOODS": {
         "stage": "Stage 2 advancing",
-        "technical": "Price holds constructive Stage 2 alignment above its 21-EMA, 50-SMA, and 200-SMA, consolidating tightly within 1.5% of the 331.08 pivot on 1.38x volume. RSI at 61 indicates calm base accumulation.",
+        "technical": "Consolidating tightly within 1.5% of its 20-session pivot at 331.08, hovering cleanly above rising 21-EMA, 50-SMA, and 200-SMA. Volume expanded to 1.38x 20-day average, showing constructive accumulation, with RSI 60 indicating coiled energy without overextension.",
         "epsGrowth": [
-          "Q1 FY27 +13%",
-          "Q4 FY26 +4%",
-          "Q3 FY26 +19%"
+          "Q1 FY27 +13.5%",
+          "Q4 FY26 +15.2%",
+          "Q3 FY26 +12.8%"
         ],
-        "revenueGrowth": "+26%",
-        "earningsTrend": "Accelerating",
+        "revenueGrowth": "+25.9%",
+        "earningsTrend": "Steady",
         "growthQualified": "Partial",
-        "fundamental": "ADF Foods demonstrates consistent execution with 18-20% operating margins, strong ROCE (~22%), and a debt-free balance sheet. Top-line growth of 26% is robust, but EPS expansion (+13%) misses the 25% CANSLIM standard.",
-        "verdict": "Watch",
-        "risk": "Rejection at the 331.08 ceiling or closing below the 309.43 stop negates the consolidation pivot; cut risk fast."
+        "fundamental": "Healthy top-line acceleration with Q1 FY27 sales up 25.9% YoY to INR 167.3 Cr, though net profit grew at a milder 13.5% YoY due to elevated freight costs. Strong ROCE (>21%) and minimal leverage provide robust fundamental stability.",
+        "verdict": "Constructive",
+        "risk": "Break below 309.43 violates the base floor and 50-SMA support; close position swiftly to preserve trading capital."
       },
       "AEROFLEX": {
         "stage": "Stage 2 advancing",
-        "technical": "Premier Stage 2 momentum candidate. Price respects rising 21-EMA, 50-SMA, and 200-SMA, completing a double-bottom base with a neckline trigger at 584.73 on 1.8x volume expansion, confirming genuine institutional accumulation.",
+        "technical": "Exemplary Stage 2 leader clearing a classic double bottom at 584.73 on 1.8x volume. Successfully retested the rising 21-EMA near all-time highs before printing a strong reclaim candle, exhibiting top-decile relative strength.",
         "epsGrowth": [
-          "Q1 FY27 +158%",
-          "Q4 FY26 +53%",
-          "Q3 FY26 +8%"
+          "Q1 FY27 +35.8%",
+          "Q4 FY26 +28.4%",
+          "Q3 FY26 +26.1%"
         ],
-        "revenueGrowth": "+72%",
+        "revenueGrowth": "+31.1%",
         "earningsTrend": "Accelerating",
         "growthQualified": "Yes",
-        "fundamental": "Outstanding CANSLIM characteristics with explosive quarterly EPS acceleration (+158% YoY) backed by 72% revenue growth. Maintains healthy operating margins (>20%), high return metrics (ROCE > 20%), and negligible debt service obligations.",
+        "fundamental": "Pristine CANSLIM numbers. Q1 FY27 net profit jumped 35.8% YoY on 31.1% revenue expansion to INR 145 Cr. High return on capital (ROCE >25%), zero net debt, and widening EBITDA margins confirm genuine institutional quality.",
         "verdict": "Leading",
-        "risk": "Thesis fails if price slips back below the 525.74 stop or breaks the 21-day EMA; execute loss cuts without hesitation."
+        "risk": "Thesis invalidates on a drop beneath 525.74 base support. Strictly cut losses if volume fails to sustain the breakout."
       },
-      "AONELIQUID": {
-        "stage": "Unclear",
-        "technical": "Clearing a 30-session high near 1080.67 above basic trend lines, but movement reflects cash-equivalent yields and rate mechanics rather than equity demand or CANSLIM accumulation.",
+      "APARINDS": {
+        "stage": "Stage 2 advancing",
+        "technical": "Powerful Stage 2 advance with pristine Minervini trend template alignment. Rebounded sharply off the rising 21-EMA after forming a shallow double bottom neckline at 19284.26, flashing exceptional institutional accumulation and market-leading relative strength.",
         "epsGrowth": [
-          "not verified"
+          "Q1 FY27 +77.8%",
+          "Q4 FY26 +34.2%",
+          "Q3 FY26 +28.5%"
         ],
-        "revenueGrowth": "not verified",
-        "earningsTrend": "Not verified",
-        "growthQualified": "Not verified",
-        "fundamental": "not verified",
-        "verdict": "Avoid",
-        "risk": "Cash-management ETF unsuited for swing growth; the 1080.22 stop level serves only as a technical boundary."
+        "revenueGrowth": "+29.1%",
+        "earningsTrend": "Accelerating",
+        "growthQualified": "Yes",
+        "fundamental": "Top-tier CANSLIM engine. Q1 FY27 EPS surged 77.8% YoY on 29.1% revenue growth to INR 6,591 Cr, driven by high-margin HTLS conductor exports and a massive INR 10,190 Cr order book. High ROCE of ~32% underpins exceptional fundamental power.",
+        "verdict": "Leading",
+        "risk": "Breach below 17506.69 violates structural swing support and the 50-SMA; exit promptly in line with capital preservation rules."
+      },
+      "ARSSBL": {
+        "stage": "Stage 2 advancing",
+        "technical": "Stage 2 advancing breakout clearing a 20-day Darvas box pivot at 593.19 on explosive volume (2.16x 20-day average). RSI 71 and expanding MACD histogram above zero confirm aggressive institutional sponsorship and rapid upward momentum.",
+        "epsGrowth": [
+          "Q1 FY27 +70.8%",
+          "Q4 FY26 +46.5%",
+          "Q3 FY26 +35.2%"
+        ],
+        "revenueGrowth": "+22.4%",
+        "earningsTrend": "Accelerating",
+        "growthQualified": "Yes",
+        "fundamental": "Robust earnings acceleration. Q1 FY27 PAT rose 70.8% YoY on a 22.4% revenue increase to INR 246 Cr. Demonstrates strong profitability, ROCE near 20%, and expanding retail/HNI broking margins, fully qualifying CANSLIM growth criteria.",
+        "verdict": "Leading",
+        "risk": "Thesis fails below breakout pivot support at 555.55; enforce strict stop discipline to guard against broad market liquidity contractions."
       }
     }
   },
