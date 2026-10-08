@@ -4629,6 +4629,208 @@
           "observation": "Latest scanned close 563.85; scanner state Armed. This is not an executed trade or an intraday stop/target check."
         }
       ]
+    },
+    {
+      "sessionDate": "2026-10-09",
+      "generatedAt": "2026-10-08T18:55:31.824Z",
+      "gate": "WEAK",
+      "verdict": "No new buys. Observe and protect capital.",
+      "ideas": [
+        {
+          "symbol": "AAREYDRUGS",
+          "name": "AAREY DRUGS & PHARM LTD",
+          "pattern": "Near breakout",
+          "confidence": 99,
+          "state": "Watch",
+          "scanState": "Armed",
+          "asOf": "2026-10-07T00:00:00+05:30",
+          "close": 108.81,
+          "entryTrigger": 109.09,
+          "stop": 100.37,
+          "target2R": 126.53,
+          "evidence": [
+            "Price above EMA21, SMA50 and SMA200",
+            "Within 1.5% of the 20-session pivot",
+            "2× 20-day average volume",
+            "MACD is above signal and zero line"
+          ]
+        },
+        {
+          "symbol": "ADANIGREEN",
+          "name": "Adani Green",
+          "pattern": "SEPA breakout",
+          "confidence": 99,
+          "state": "Watch",
+          "scanState": "Armed",
+          "asOf": "2026-10-07T00:00:00+05:30",
+          "close": 1341.4,
+          "entryTrigger": 1633.13,
+          "stop": 1552.3,
+          "target2R": 1794.79,
+          "evidence": [
+            "Price above EMA21, SMA50 and SMA200",
+            "Close cleared the prior 20-session high",
+            "4.16× 20-day average volume",
+            "RSI 62 supports momentum without extreme extension"
+          ]
+        },
+        {
+          "symbol": "ADFFOODS",
+          "name": "ADF FOODS LIMITED",
+          "pattern": "Double bottom",
+          "confidence": 99,
+          "state": "Watch",
+          "scanState": "Armed",
+          "asOf": "2026-10-07T00:00:00+05:30",
+          "close": 291.7,
+          "entryTrigger": 322.27,
+          "stop": 302.23,
+          "target2R": 362.36,
+          "evidence": [
+            "Price above EMA21, SMA50 and SMA200",
+            "1.67× 20-day average volume",
+            "RSI 71 supports momentum without extreme extension",
+            "MACD is above signal and zero line"
+          ]
+        },
+        {
+          "symbol": "AEGISLOG",
+          "name": "Aegis Logistics",
+          "pattern": "Double bottom",
+          "confidence": 99,
+          "state": "Watch",
+          "scanState": "Armed",
+          "asOf": "2026-10-07T00:00:00+05:30",
+          "close": 1460.2,
+          "entryTrigger": 1530.23,
+          "stop": 1386.46,
+          "target2R": 1817.77,
+          "evidence": [
+            "Price above EMA21, SMA50 and SMA200",
+            "1.74× 20-day average volume",
+            "RSI 57 supports momentum without extreme extension",
+            "MACD is above signal and zero line"
+          ]
+        },
+        {
+          "symbol": "AEROFLEX",
+          "name": "AEROFLEX INDUSTRIES LTD",
+          "pattern": "Double bottom",
+          "confidence": 99,
+          "state": "Watch",
+          "scanState": "Armed",
+          "asOf": "2026-10-07T00:00:00+05:30",
+          "close": 563.85,
+          "entryTrigger": 584.73,
+          "stop": 535.29,
+          "target2R": 683.62,
+          "evidence": [
+            "Price above EMA21, SMA50 and SMA200",
+            "MACD is above signal and zero line",
+            "Two aligned swing lows with neckline pressure",
+            "Long lower wick shows rejection from the session low"
+          ]
+        },
+        {
+          "symbol": "AETHER",
+          "name": "Aether Industries",
+          "pattern": "Near breakout",
+          "confidence": 99,
+          "state": "Watch",
+          "scanState": "Armed",
+          "asOf": "2026-10-07T00:00:00+05:30",
+          "close": 1787.6,
+          "entryTrigger": 1815.91,
+          "stop": 1688.21,
+          "target2R": 2071.31,
+          "evidence": [
+            "Price above EMA21, SMA50 and SMA200",
+            "Within 1.5% of the 20-session pivot",
+            "RSI 71 supports momentum without extreme extension",
+            "MACD is above signal and zero line"
+          ]
+        },
+        {
+          "symbol": "AKUMS",
+          "name": "AKUMS DRUGS AND PHARMA L",
+          "pattern": "Double bottom",
+          "confidence": 99,
+          "state": "Watch",
+          "scanState": "Armed",
+          "asOf": "2026-10-07T00:00:00+05:30",
+          "close": 822.55,
+          "entryTrigger": 839.64,
+          "stop": 796.3,
+          "target2R": 926.32,
+          "evidence": [
+            "Price above EMA21, SMA50 and SMA200",
+            "RSI 64 supports momentum without extreme extension",
+            "Two aligned swing lows with neckline pressure",
+            "Leader eased to the rising 21-EMA near highs, then a bullish reclaim candle"
+          ]
+        },
+        {
+          "symbol": "APOLLO",
+          "name": "Apollo Micro Systems",
+          "pattern": "Double bottom",
+          "confidence": 99,
+          "state": "Watch",
+          "scanState": "Armed",
+          "asOf": "2026-10-07T00:00:00+05:30",
+          "close": 414.75,
+          "entryTrigger": 428.38,
+          "stop": 397.16,
+          "target2R": 490.82,
+          "evidence": [
+            "Price above EMA21, SMA50 and SMA200",
+            "RSI 70 supports momentum without extreme extension",
+            "MACD is above signal and zero line",
+            "Two aligned swing lows with neckline pressure"
+          ]
+        }
+      ],
+      "observations": [
+        {
+          "symbol": "AAREYDRUGS",
+          "previousState": "Watch",
+          "observation": "No newer scan observation; outcome unknown."
+        },
+        {
+          "symbol": "ADANIGREEN",
+          "previousState": "Watch",
+          "observation": "No newer scan observation; outcome unknown."
+        },
+        {
+          "symbol": "ADFFOODS",
+          "previousState": "Watch",
+          "observation": "No newer scan observation; outcome unknown."
+        },
+        {
+          "symbol": "AEGISLOG",
+          "previousState": "Watch",
+          "observation": "No newer scan observation; outcome unknown."
+        },
+        {
+          "symbol": "AEROFLEX",
+          "previousState": "Watch",
+          "observation": "No newer scan observation; outcome unknown."
+        },
+        {
+          "symbol": "AETHER",
+          "previousState": "Watch",
+          "observation": "No newer scan observation; outcome unknown."
+        },
+        {
+          "symbol": "AKUMS",
+          "previousState": "Watch",
+          "observation": "No newer scan observation; outcome unknown."
+        },
+        {
+          "symbol": "APOLLO",
+          "previousState": "Watch",
+          "observation": "No newer scan observation; outcome unknown."
+        }
+      ]
     }
   ]
 }
