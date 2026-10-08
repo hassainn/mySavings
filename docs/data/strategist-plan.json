@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-08T09:30:14.485Z",
+  "generatedAt": "2026-10-08T10:36:43.727Z",
   "sessionDate": "2026-10-08",
   "status": "ready",
   "scanGeneratedAt": "2026-10-07T18:11:50.044Z",
@@ -238,14 +238,104 @@
     }
   ],
   "previousSession": "2026-10-07",
-  "intelligenceGeneratedAt": "2026-10-07T17:49:24.083Z",
-  "commentary": null,
-  "commentaryStatus": "unavailable",
+  "intelligenceGeneratedAt": "2026-10-08T10:35:34.527Z",
+  "commentary": "With market breadth deteriorating to a caution score of 46 following the RBI's 25 bps repo rate hike and persistent FII cash outflows surpassing ₹6,100 crore, benchmark indices are undergoing confirmed distribution below 22,400. In strict accordance with Stan Weinstein's stage analysis and William O'Neil's market-direction rules, aggressive capital commitment must be curtailed. When market averages face institutional selling, breakout failure rates multiply even for Stage 2 structures. Discipline requires Mark Minervini's progressive exposure strategy: keep position sizes defensive, enforce strict stop discipline, and demand accelerating CANSLIM earnings before committing risk capital.",
+  "commentaryStatus": "available",
   "limitations": [
     "Daily scan observations are not fills or performance results.",
     "Price levels are scanner references, not live quotes.",
     "No broker orders are submitted."
   ],
+  "model": "gemini-3.8-flash",
+  "analysis": {
+    "analyst": "Minervini SEPA, O'Neil CANSLIM, Weinstein Stage Analysis & Darvas Box Discipline",
+    "bySymbol": {
+      "AAREYDRUGS": {
+        "stage": "Stage 1 base",
+        "technical": "Consolidates in a tight 30-session Darvas box near pivot resistance, holding above rising 21-EMA, 50-SMA, and 200-SMA. Dual swing lows indicate supply absorption, but the setup lacks relative strength leadership in a hostile tape.",
+        "epsGrowth": [
+          "Q1 FY27 -25.6%",
+          "not verified"
+        ],
+        "revenueGrowth": "-56.3%",
+        "earningsTrend": "Negative",
+        "growthQualified": "No",
+        "fundamental": "Severely impaired CANSLIM profile as Q1 revenue collapsed 56.3% YoY and net profit dropped 25.6% to ₹1.02 Cr. Weak multi-year ROE near 3.1% and fragile interest coverage provide no institutional cushion.",
+        "verdict": "Avoid",
+        "risk": "Thesis fails on a breakdown below 99.05 stop; cut immediately as poor fundamentals increase down-gap risk."
+      },
+      "ABDL": {
+        "stage": "Stage 1 base",
+        "technical": "Forms a double bottom above rising 21-EMA, 50-SMA, and 200-SMA, pressing neckline resistance. RSI at 70 and MACD above zero reflect positive momentum, but breakout execution is vulnerable to broad market distribution.",
+        "epsGrowth": [
+          "Q1 FY27 -18.7%",
+          "Q4 FY26 -52.0%"
+        ],
+        "revenueGrowth": "+6.1%",
+        "earningsTrend": "Negative",
+        "growthQualified": "No",
+        "fundamental": "Q1 FY27 revenue rose modestly by 6.1% YoY to ₹978.9 Cr, but net profit contracted 18.7% to ₹45.4 Cr due to margin compression. Subdued ROE and negative earnings momentum fail CANSLIM standards.",
+        "verdict": "Watch",
+        "risk": "Stop strictly at 693.33; close below violates the double-bottom base floor, requiring swift liquidation."
+      },
+      "ACE": {
+        "stage": "Stage 2 advancing",
+        "technical": "Displays constructive Stage 2 advancing structure within 1.5% of its 20-session pivot. Two aligned swing lows provide a tight base above rising 21-EMA and 50-SMA, with MACD supporting continuation.",
+        "epsGrowth": [
+          "Q1 FY27 +22.3%",
+          "Q4 FY26 +6.5%"
+        ],
+        "revenueGrowth": "+20.5%",
+        "earningsTrend": "Accelerating",
+        "growthQualified": "Partial",
+        "fundamental": "Operational revenue grew 20.5% YoY to ₹785.7 Cr with net profit advancing 22.3% to ₹119.5 Cr. Healthy operating margins near 14.9%, debt-free status, and robust ROCE of 31.6% provide solid fundamental support.",
+        "verdict": "Constructive",
+        "risk": "Invalidated if price breaches 1,184.64 stop; close below the swing low violates base integrity, triggering immediate exit."
+      },
+      "ACMESOLAR": {
+        "stage": "Stage 2 advancing",
+        "technical": "Exhibits Stage 2 power, pulling back constructively to the rising 21-EMA near recent highs before producing a bullish reclaim candle. RSI at 63 reflects unextended strength, with price well above 50-SMA and 200-SMA.",
+        "epsGrowth": [
+          "Q1 FY27 +71.8%",
+          "Q4 FY26 +13.3%"
+        ],
+        "revenueGrowth": "+67.8%",
+        "earningsTrend": "Accelerating",
+        "growthQualified": "Partial",
+        "fundamental": "Outstanding Q1 FY27 expansion with revenue jumping 67.8% YoY to ₹857.5 Cr and net profit surging 79.9% to ₹235.3 Cr, driven by battery storage integration and record CUF. Expanding margins offset balance sheet leverage.",
+        "verdict": "Constructive",
+        "risk": "Thesis fails on a drop below 435.78 stop; breach of the 21-EMA invalidates the reclaim pattern."
+      },
+      "ADANIPORTS": {
+        "stage": "Stage 2 advancing",
+        "technical": "Large-cap leader respecting Stage 2 uptrend, rebounding off its rising 21-EMA with two aligned swing lows. Price sits above all key moving averages, though RSI at 58 indicates consolidation rather than explosive leadership.",
+        "epsGrowth": [
+          "Q1 FY27 +9.2%",
+          "Q4 FY26 +76.2%"
+        ],
+        "revenueGrowth": "+18.6%",
+        "earningsTrend": "Decelerating",
+        "growthQualified": "Partial",
+        "fundamental": "Q1 FY27 revenue rose 18.6% YoY to ₹10,820.8 Cr with strong 60% EBITDA margins. However, net profit growth moderated to 9.2% YoY, and elevated debt of ₹56,776 Cr warrants caution under tighter monetary conditions.",
+        "verdict": "Watch",
+        "risk": "Violated on a break below 1,771.57 stop; breach of recent swing lows signals institutional liquidation."
+      },
+      "ADFFOODS": {
+        "stage": "Stage 2 advancing",
+        "technical": "Cleared prior 20-session highs on an explosive SEPA breakout backed by 4.45× 20-day average volume. Moving averages are stacked positively above rising 21-EMA, 50-SMA, and 200-SMA with positive MACD.",
+        "epsGrowth": [
+          "Q1 FY27 +13.5%",
+          "not verified"
+        ],
+        "revenueGrowth": "+23.9%",
+        "earningsTrend": "Decelerating",
+        "growthQualified": "Partial",
+        "fundamental": "Sales expanded 23.9% YoY to ₹168.4 Cr on robust packaged ethnic food demand, but PAT growth decelerated to 13.5% YoY to ₹17.3 Cr. Clean balance sheet and strong ROCE of 21.8% maintain operational stability.",
+        "verdict": "Watch",
+        "risk": "Breakout fails if price slips below 308.38 stop; cut losses immediately to avoid holding a failed breakout."
+      }
+    }
+  },
   "history": [
     {
       "sessionDate": "2026-10-02",
