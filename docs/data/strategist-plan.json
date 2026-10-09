@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-09T17:47:29.151Z",
+  "generatedAt": "2026-10-09T18:25:58.497Z",
   "sessionDate": "2026-10-09",
   "status": "ready",
   "scanGeneratedAt": "2026-10-09T17:47:16.491Z",
@@ -239,107 +239,13 @@
   ],
   "previousSession": "2026-10-08",
   "intelligenceGeneratedAt": "2026-10-09T17:26:35.942Z",
-  "commentary": "With market breadth deteriorating to a weak score of 20 following the Reserve Bank of India's surprise rate hike to 5.50%, Stan Weinstein and William O'Neil demand strict capital preservation. Although the Nifty staged a +1.30% relief bounce back to 22,520 on short covering, underlying market pressure dictates that genuine Stage 2 breakouts will face high failure rates. Minervini's progressive exposure rule requires keeping position sizes small and holding elevated cash until market follow-through is confirmed.",
-  "commentaryStatus": "available",
+  "commentary": null,
+  "commentaryStatus": "unavailable",
   "limitations": [
     "Daily scan observations are not fills or performance results.",
     "Price levels are scanner references, not live quotes.",
     "No broker orders are submitted."
   ],
-  "model": "gemini-3.8-flash",
-  "analysis": {
-    "analyst": "Minervini SEPA, O'Neil CANSLIM & Weinstein Stage Analysis",
-    "bySymbol": {
-      "21STCENMGM": {
-        "stage": "Unclear",
-        "technical": "Price cleared a 20-day high on an 8.83x volume surge with RSI at 67, crossing above moving averages. However, the multi-year chart shows erratic microcap whipsaws rather than a clean Stage 2 base.",
-        "epsGrowth": [
-          "Q1 FY27 +295%",
-          "Q4 FY26 Negative",
-          "Q3 FY26 Negative"
-        ],
-        "revenueGrowth": "+194%",
-        "earningsTrend": "Negative",
-        "growthQualified": "No",
-        "fundamental": "Capital markets and proprietary trading firm with highly volatile earnings driven by mark-to-market swings rather than steady operating profits. Prior quarters suffered steep net losses, failing CANSLIM institutional criteria.",
-        "verdict": "Avoid",
-        "risk": "Fails below stop trigger at 44.16. Highly illiquid trading firm prone to sharp gap-downs."
-      },
-      "ADFFOODS": {
-        "stage": "Stage 2 advancing",
-        "technical": "Forms a constructive double-bottom base with neckline pressure at 319.92, trading cleanly above 21-EMA, 50-SMA, and 200-SMA with constructive momentum (RSI 66).",
-        "epsGrowth": [
-          "Q1 FY27 +13%",
-          "Q4 FY26 +18%",
-          "Q3 FY26 +15%"
-        ],
-        "revenueGrowth": "+25.9%",
-        "earningsTrend": "Decelerating",
-        "growthQualified": "Partial",
-        "fundamental": "Virtually debt-free ethnic and packaged food exporter showing steady international distribution and ROCE of ~22%. However, freight inflation has kept EPS growth below the 25% CANSLIM threshold.",
-        "verdict": "Watch",
-        "risk": "Cut immediately if price falls below 299.59, violating the double-bottom pivot support."
-      },
-      "ARFIN": {
-        "stage": "Stage 2 advancing",
-        "technical": "Explosive 20-day breakout to fresh 52-week highs on 8.79x average volume. Well-aligned above rising 21, 50, and 200 daily moving averages in classic Minervini trend template format.",
-        "epsGrowth": [
-          "Q1 FY27 +277%",
-          "Q4 FY26 +178%",
-          "Q3 FY26 +372%"
-        ],
-        "revenueGrowth": "+95%",
-        "earningsTrend": "Accelerating",
-        "growthQualified": "Yes",
-        "fundamental": "Non-ferrous metal processor demonstrating powerful operating leverage with quarterly profit surging 277% on near-doubling top-line growth. Thin operating margins (~4.5–7%) carry commodity exposure but meet CANSLIM velocity benchmarks.",
-        "verdict": "Leading",
-        "risk": "Exit if trade slips below 94.12, cutting losses immediately if the breakout falters."
-      },
-      "AVADHSUGAR": {
-        "stage": "Stage 1 base",
-        "technical": "Consolidating near 20-day pivot on 2.91x volume, holding above its 50-day and 200-day moving averages, but lacking an authoritative Stage 2 expansion structure.",
-        "epsGrowth": [
-          "Q1 FY27 Turnaround",
-          "Q4 FY26 -22%",
-          "Q3 FY26 +148%"
-        ],
-        "revenueGrowth": "+8.7%",
-        "earningsTrend": "Decelerating",
-        "growthQualified": "No",
-        "fundamental": "Integrated sugar and ethanol producer subject to seasonal cane cycles and price regulation. Modest revenue growth of 8.7% and nominal quarterly net profit fall short of O'Neil's C-criterion.",
-        "verdict": "Watch",
-        "risk": "Thesis invalid below 889.46. Sugar seasonality makes trailing stops critical."
-      },
-      "CASHIETF": {
-        "stage": "Unclear",
-        "technical": "Displays artificial technical tightness along its short-term moving averages, reflecting daily overnight rate accrual rather than supply-demand market accumulation.",
-        "epsGrowth": [
-          "not verified"
-        ],
-        "revenueGrowth": "not verified",
-        "earningsTrend": "Not verified",
-        "growthQualified": "Not verified",
-        "fundamental": "Debt-market exchange-traded fund tracking overnight interbank rates (BSE Liquid Rate Index). Possesses no corporate earnings, revenue, or operating cash flows; unsuitable for growth equity screening.",
-        "verdict": "Avoid",
-        "risk": "Capital parking vehicle; irrelevance to equity breakout models is the chief risk."
-      },
-      "CEIGALL": {
-        "stage": "Stage 2 advancing",
-        "technical": "Developing a 24.6% deep cup-with-handle/double-bottom pattern with handle contraction near 396.40, supported by above-average volume (2.4x) above rising key moving averages.",
-        "epsGrowth": [
-          "Q1 FY27 +18%",
-          "Q4 FY26 +39%",
-          "Q3 FY26 +26%"
-        ],
-        "revenueGrowth": "+15.7%",
-        "earningsTrend": "Decelerating",
-        "growthQualified": "Partial",
-        "fundamental": "Infrastructure and EPC player boasting healthy order execution, ~15% operating margins, and strong ROE (>20%). However, EPS growth decelerated from +39% to +18%, capping the CANSLIM rating.",
-        "verdict": "Watch",
-        "risk": "Hard stop at 369.15. Thesis breaks if handle support fails to hold."
-      }
-    }
-  },
   "history": [
     {
       "sessionDate": "2026-10-03",
