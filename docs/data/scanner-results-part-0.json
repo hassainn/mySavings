@@ -2,8 +2,8 @@
   "schemaVersion": 2,
   "status": "partition_complete",
   "provider": "Upstox",
-  "generatedAt": "2026-10-10T16:28:14.058Z",
-  "methodologyUpdatedAt": "2026-10-10T16:28:14.058Z",
+  "generatedAt": "2026-10-11T17:00:30.235Z",
+  "methodologyUpdatedAt": "2026-10-11T17:00:30.235Z",
   "partition": {
     "index": 0,
     "count": 2
@@ -12,32 +12,32 @@
     "name": "NSE normal cash equities",
     "eligible": 2702,
     "requested": 1351,
-    "scanned": 1351,
-    "failed": 0,
+    "scanned": 1349,
+    "failed": 2,
     "truncated": false
   },
   "summary": {
-    "qualified": 724,
-    "armed": 101,
+    "qualified": 722,
+    "armed": 100,
     "triggered": 3,
     "cautions": 128,
-    "highConfidence": 118,
+    "highConfidence": 117,
     "candlestickSignals": 560,
     "sepaBreakouts": 2,
     "superPerformers": 0,
     "gradeAPlus": 2,
     "gradeA": 0,
-    "gradeB": 119
+    "gradeB": 118
   },
   "marketMood": {
-    "evaluated": 1165,
-    "advancers": 718,
-    "aboveSma50": 227,
-    "aboveSma200": 422,
-    "totalChange": 613.1242316880307,
-    "advancersPct": 61.6,
-    "aboveSma50Pct": 19.5,
-    "aboveSma200Pct": 36.2,
+    "evaluated": 1163,
+    "advancers": 717,
+    "aboveSma50": 226,
+    "aboveSma200": 420,
+    "totalChange": 613.5641868010877,
+    "advancersPct": 61.7,
+    "aboveSma50Pct": 19.4,
+    "aboveSma200Pct": 36.1,
     "averageChangePct": 0.53,
     "score": 38,
     "label": "Cautious",
@@ -1454,8 +1454,8 @@
         "pctBelow52High": 16.52
       },
       "validation": {
-        "sampleSize": 8,
-        "winRate": 88,
+        "sampleSize": 7,
+        "winRate": 86,
         "method": "2R before 1R stop within 10 sessions"
       }
     },
@@ -5799,79 +5799,6 @@
       "validation": {
         "sampleSize": 0,
         "winRate": null,
-        "method": "2R before 1R stop within 10 sessions"
-      }
-    },
-    {
-      "symbol": "SHIVAUM",
-      "name": "SHIV AUM STEELS LIMITED",
-      "instrumentKey": "NSE_EQ|INE719F01016",
-      "asOf": "2026-10-09T00:00:00+05:30",
-      "close": 552.75,
-      "changePct": 0.23,
-      "confidence": 90,
-      "grade": "B",
-      "state": "Armed",
-      "bias": "bullish",
-      "primaryPattern": "Double bottom",
-      "patterns": [
-        "Trend template",
-        "MACD positive",
-        "Double bottom",
-        "Breakout stall",
-        "Power trend (3-up)",
-        "Golden trend",
-        "Stage 2",
-        "Trend template 7/8",
-        "Swing TSL long"
-      ],
-      "candlestickPatterns": [],
-      "evidence": [
-        "Price above EMA21, SMA50 and SMA200",
-        "MACD is above signal and zero line",
-        "Two aligned swing lows with neckline pressure",
-        "Poked above the pivot then closed back below it — Livermore danger signal",
-        "Three higher highs and higher lows off a 21-EMA / 50-DMA pullback (Vibha Jha 3-up)",
-        "Stage 2 advancing, above rising 50/150/200 DMA",
-        "Minervini trend template 7/8"
-      ],
-      "entryTrigger": 564.46,
-      "stop": 532.24,
-      "target2R": 628.92,
-      "riskReward": 2,
-      "manage": {
-        "riskPerTradePct": 1,
-        "breakevenAt1R": 596.69,
-        "trimBelowEma10": 542.5,
-        "exitBelowEma20": 521.25
-      },
-      "indicators": {
-        "ema21": 519.37,
-        "sma50": 470.75,
-        "sma150": 389.55,
-        "sma200": 367.06,
-        "rsi14": 86.9,
-        "macd": 27.34,
-        "atr14": 16.11,
-        "relativeVolume": 0.02,
-        "rsRating": null
-      },
-      "sepa": {
-        "stage": 2,
-        "stageName": "Stage 2 advancing",
-        "trendScore": 7,
-        "rsRating": null,
-        "sepaBreakout": false,
-        "superPerformer": false,
-        "swingState": "Buy",
-        "swingFreshBuy": false,
-        "extensionPct": -1.98,
-        "rvol50": 0.03,
-        "pctBelow52High": 1.98
-      },
-      "validation": {
-        "sampleSize": 1,
-        "winRate": 100,
         "method": "2R before 1R stop within 10 sessions"
       }
     },
@@ -18564,8 +18491,83 @@
         "winRate": null,
         "method": "2R before 1R stop within 10 sessions"
       }
+    },
+    {
+      "symbol": "CEATLTD",
+      "name": "CEAT",
+      "instrumentKey": "NSE_EQ|INE482A01020",
+      "asOf": "2026-10-09T00:00:00+05:30",
+      "close": 3262.3,
+      "changePct": 1.12,
+      "confidence": 68,
+      "grade": "C",
+      "state": "Watch",
+      "bias": "bullish",
+      "primaryPattern": "Candle · Bullish harami",
+      "patterns": [
+        "Candle · Bullish harami"
+      ],
+      "candlestickPatterns": [
+        {
+          "name": "Bullish harami",
+          "bias": "bullish",
+          "strength": 3,
+          "note": "Small real body formed inside the prior real body"
+        }
+      ],
+      "evidence": [
+        "Small real body formed inside the prior real body"
+      ],
+      "entryTrigger": 3867.86,
+      "stop": 3709.49,
+      "target2R": 4184.61,
+      "riskReward": 2,
+      "manage": {
+        "riskPerTradePct": 1,
+        "breakevenAt1R": 4026.24,
+        "trimBelowEma10": 3290.08,
+        "exitBelowEma20": 3323.99
+      },
+      "indicators": {
+        "ema21": 3327.37,
+        "sma50": 3454.17,
+        "sma150": 3453.65,
+        "sma200": 3543.34,
+        "rsi14": 31,
+        "macd": -46.88,
+        "atr14": 79.19,
+        "relativeVolume": 0.54,
+        "rsRating": 13
+      },
+      "sepa": {
+        "stage": 1,
+        "stageName": "Stage 1 base",
+        "trendScore": 0,
+        "rsRating": 13,
+        "sepaBreakout": false,
+        "superPerformer": false,
+        "swingState": "Sell",
+        "swingFreshBuy": false,
+        "extensionPct": -7.56,
+        "rvol50": 0.42,
+        "pctBelow52High": 26.49
+      },
+      "validation": {
+        "sampleSize": 4,
+        "winRate": 50,
+        "method": "2R before 1R stop within 10 sessions"
+      }
     }
   ],
-  "failures": [],
+  "failures": [
+    {
+      "symbol": "SHIVAUM",
+      "reason": "fetch failed"
+    },
+    {
+      "symbol": "SMLMAH",
+      "reason": "fetch failed"
+    }
+  ],
   "disclaimer": "Confidence is a deterministic confluence score, not a win-rate promise. Backtest samples are symbol-specific, exclude costs and slippage, and do not predict future returns. Confirm price, liquidity and risk before acting."
 }

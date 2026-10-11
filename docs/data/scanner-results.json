@@ -2,39 +2,39 @@
   "schemaVersion": 2,
   "status": "live",
   "provider": "Upstox",
-  "generatedAt": "2026-10-10T16:42:30.397Z",
-  "methodologyUpdatedAt": "2026-10-10T16:42:30.397Z",
+  "generatedAt": "2026-10-11T17:12:33.600Z",
+  "methodologyUpdatedAt": "2026-10-11T17:12:33.600Z",
   "universe": {
     "name": "NSE normal cash equities",
     "eligible": 2702,
     "requested": 2702,
-    "scanned": 2702,
-    "failed": 0,
+    "scanned": 2700,
+    "failed": 2,
     "truncated": false,
     "partitionsComplete": 2,
     "partitionsRequired": 2
   },
   "summary": {
-    "qualified": 1454,
-    "armed": 220,
+    "qualified": 1452,
+    "armed": 219,
     "triggered": 9,
     "cautions": 281,
-    "highConfidence": 251,
+    "highConfidence": 250,
     "candlestickSignals": 1108,
     "sepaBreakouts": 8,
     "superPerformers": 0,
     "gradeAPlus": 4,
     "gradeA": 6,
-    "gradeB": 253
+    "gradeB": 252
   },
   "marketMood": {
-    "evaluated": 2318,
-    "advancers": 1459,
-    "aboveSma50": 486,
-    "aboveSma200": 851,
-    "totalChange": 1390.8423465717601,
-    "advancersPct": 62.9,
-    "aboveSma50Pct": 21,
+    "evaluated": 2316,
+    "advancers": 1458,
+    "aboveSma50": 485,
+    "aboveSma200": 849,
+    "totalChange": 1391.282301684817,
+    "advancersPct": 63,
+    "aboveSma50Pct": 20.9,
     "aboveSma200Pct": 36.7,
     "averageChangePct": 0.6,
     "score": 40,
@@ -3176,8 +3176,8 @@
         "pctBelow52High": 16.52
       },
       "validation": {
-        "sampleSize": 8,
-        "winRate": 88,
+        "sampleSize": 7,
+        "winRate": 86,
         "method": "2R before 1R stop within 10 sessions"
       }
     },
@@ -13397,79 +13397,6 @@
       }
     },
     {
-      "symbol": "SHIVAUM",
-      "name": "SHIV AUM STEELS LIMITED",
-      "instrumentKey": "NSE_EQ|INE719F01016",
-      "asOf": "2026-10-09T00:00:00+05:30",
-      "close": 552.75,
-      "changePct": 0.23,
-      "confidence": 90,
-      "grade": "B",
-      "state": "Armed",
-      "bias": "bullish",
-      "primaryPattern": "Double bottom",
-      "patterns": [
-        "Trend template",
-        "MACD positive",
-        "Double bottom",
-        "Breakout stall",
-        "Power trend (3-up)",
-        "Golden trend",
-        "Stage 2",
-        "Trend template 7/8",
-        "Swing TSL long"
-      ],
-      "candlestickPatterns": [],
-      "evidence": [
-        "Price above EMA21, SMA50 and SMA200",
-        "MACD is above signal and zero line",
-        "Two aligned swing lows with neckline pressure",
-        "Poked above the pivot then closed back below it — Livermore danger signal",
-        "Three higher highs and higher lows off a 21-EMA / 50-DMA pullback (Vibha Jha 3-up)",
-        "Stage 2 advancing, above rising 50/150/200 DMA",
-        "Minervini trend template 7/8"
-      ],
-      "entryTrigger": 564.46,
-      "stop": 532.24,
-      "target2R": 628.92,
-      "riskReward": 2,
-      "manage": {
-        "riskPerTradePct": 1,
-        "breakevenAt1R": 596.69,
-        "trimBelowEma10": 542.5,
-        "exitBelowEma20": 521.25
-      },
-      "indicators": {
-        "ema21": 519.37,
-        "sma50": 470.75,
-        "sma150": 389.55,
-        "sma200": 367.06,
-        "rsi14": 86.9,
-        "macd": 27.34,
-        "atr14": 16.11,
-        "relativeVolume": 0.02,
-        "rsRating": null
-      },
-      "sepa": {
-        "stage": 2,
-        "stageName": "Stage 2 advancing",
-        "trendScore": 7,
-        "rsRating": null,
-        "sepaBreakout": false,
-        "superPerformer": false,
-        "swingState": "Buy",
-        "swingFreshBuy": false,
-        "extensionPct": -1.98,
-        "rvol50": 0.03,
-        "pctBelow52High": 1.98
-      },
-      "validation": {
-        "sampleSize": 1,
-        "winRate": 100,
-        "method": "2R before 1R stop within 10 sessions"
-      }
-    },
-    {
       "symbol": "DMCC",
       "name": "DMCC Speciality Chemicals",
       "instrumentKey": "NSE_EQ|INE505A01010",
@@ -19017,8 +18944,92 @@
         "winRate": 50,
         "method": "2R before 1R stop within 10 sessions"
       }
+    },
+    {
+      "symbol": "PANSARI",
+      "name": "PANSARI DEVELOPERS LTD",
+      "instrumentKey": "NSE_EQ|INE697V01011",
+      "asOf": "2026-10-09T00:00:00+05:30",
+      "close": 257.15,
+      "changePct": -3.67,
+      "confidence": 80,
+      "grade": "C",
+      "state": "Caution",
+      "bias": "bearish",
+      "primaryPattern": "Candle · Evening star",
+      "patterns": [
+        "Candle · Evening star",
+        "Candle · Bearish engulfing"
+      ],
+      "candlestickPatterns": [
+        {
+          "name": "Evening star",
+          "bias": "bearish",
+          "strength": 5,
+          "note": "Three-candle reversal closed below the first candle midpoint"
+        },
+        {
+          "name": "Bearish engulfing",
+          "bias": "bearish",
+          "strength": 4,
+          "note": "Bearish real body fully covered the prior bullish body"
+        }
+      ],
+      "evidence": [
+        "1.49× 20-day average volume",
+        "Three-candle reversal closed below the first candle midpoint",
+        "Bearish real body fully covered the prior bullish body"
+      ],
+      "entryTrigger": null,
+      "stop": null,
+      "target2R": null,
+      "riskReward": null,
+      "manage": {
+        "riskPerTradePct": 1,
+        "breakevenAt1R": null,
+        "trimBelowEma10": 268.73,
+        "exitBelowEma20": 276.98
+      },
+      "indicators": {
+        "ema21": 277.75,
+        "sma50": 299.96,
+        "sma150": 298.42,
+        "sma200": 299.42,
+        "rsi14": 34,
+        "macd": -10.89,
+        "atr14": 14.83,
+        "relativeVolume": 1.49,
+        "rsRating": 0
+      },
+      "sepa": {
+        "stage": 1,
+        "stageName": "Stage 1 base",
+        "trendScore": 1,
+        "rsRating": 0,
+        "sepaBreakout": false,
+        "superPerformer": false,
+        "swingState": "Sell",
+        "swingFreshBuy": false,
+        "extensionPct": -15.16,
+        "rvol50": 0.28,
+        "pctBelow52High": 33.88
+      },
+      "validation": {
+        "sampleSize": 2,
+        "winRate": 50,
+        "method": "2R before 1R stop within 10 sessions"
+      }
     }
   ],
-  "failures": [],
+  "failures": [
+    {
+      "symbol": "SHIVAUM",
+      "reason": "fetch failed"
+    },
+    {
+      "symbol": "SMLMAH",
+      "reason": "fetch failed"
+    }
+  ],
   "disclaimer": "Confidence is a deterministic confluence score, not a win-rate promise. Backtest samples are symbol-specific, exclude costs and slippage, and do not predict future returns. Confirm price, liquidity and risk before acting."
 }
