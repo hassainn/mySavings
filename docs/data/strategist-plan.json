@@ -1,9 +1,9 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-11T11:00:13.064Z",
+  "generatedAt": "2026-10-11T17:12:45.534Z",
   "sessionDate": "2026-10-11",
   "status": "ready",
-  "scanGeneratedAt": "2026-10-10T16:42:30.397Z",
+  "scanGeneratedAt": "2026-10-11T17:12:33.600Z",
   "gate": "WEAK",
   "breadthScore": 40,
   "verdict": "No new buys. Observe and protect capital.",
@@ -239,13 +239,107 @@
   ],
   "previousSession": "2026-10-10",
   "intelligenceGeneratedAt": "2026-10-11T10:56:11.301Z",
-  "commentary": null,
-  "commentaryStatus": "unavailable",
+  "commentary": "The Nifty 50 staged an intraday rebound off 22,179.90, but market breadth remains fragile at 40/100 under a WEAK deterministic gate. Stan Weinstein's stage discipline and William O'Neil's market-direction rules demand defensive vigilance: counter-trend bounces within ongoing corrections are prone to failure until resistance at 22,750–23,000 is reclaimed on a confirmed follow-through day. In accordance with Mark Minervini's progressive exposure rules, overall capital exposure should remain restrained. While individual Stage 2 setups with volume expansion are emerging, strict stop-loss adherence and high CANSLIM earnings acceleration hurdles must gate any pilot positioning.",
+  "commentaryStatus": "available",
   "limitations": [
     "Daily scan observations are not fills or performance results.",
     "Price levels are scanner references, not live quotes.",
     "No broker orders are submitted."
   ],
+  "model": "gemini-3.8-flash",
+  "analysis": {
+    "analyst": "Minervini SEPA, O'Neil CANSLIM, Weinstein Stage Analysis & Livermore Discipline",
+    "bySymbol": {
+      "21STCENMGM": {
+        "stage": "Stage 2 advancing",
+        "technical": "Price cleared a 20-session high at 46.54 on 5.21x volume, holding above the 21-day EMA and 50/200-day SMAs. However, micro-cap volatility and loose consolidation degrade base structure quality.",
+        "epsGrowth": [
+          "Q1 FY27 +295%",
+          "Q4 FY26 Negative",
+          "Q3 FY26 Negative"
+        ],
+        "revenueGrowth": "+194%",
+        "earningsTrend": "Negative",
+        "growthQualified": "Partial",
+        "fundamental": "Engaged in securities broking with erratic revenue swings. Despite Q1 net profit reaching ₹9 Cr, prior quarters posted heavy operating losses. Pending tax disputes and lack of institutional sponsorship fail CANSLIM standards.",
+        "verdict": "Watch",
+        "risk": "Thesis invalidates below the 43.96 stop; exit immediately if price re-enters the 20-day base."
+      },
+      "ABDL": {
+        "stage": "Stage 2 advancing",
+        "technical": "Forming a double bottom pivot near 754.55 above the 21-day EMA and 50/200-day SMAs with RSI at 65. However, post-IPO overhead supply requires heavy volume confirmation to absorb resistance.",
+        "epsGrowth": [
+          "Q1 FY27 -13%",
+          "Q4 FY26 +15%",
+          "Q3 FY26 +23%"
+        ],
+        "revenueGrowth": "+5%",
+        "earningsTrend": "Decelerating",
+        "growthQualified": "No",
+        "fundamental": "Major spirits manufacturer (Officer's Choice), but Q1 net profit dropped 13% YoY and sales grew just 5%. High TTM valuation near 89x P/E lacks requisite bottom-line acceleration.",
+        "verdict": "Watch",
+        "risk": "Fails below the 690.43 stop; cut losses if the double-bottom support breaks down."
+      },
+      "ADANIPORTS": {
+        "stage": "Stage 2 advancing",
+        "technical": "Key index leader rebounding off its rising 21-day EMA toward a 1,861.56 double bottom pivot on 4.47x volume. Remains firmly aligned above ascending 50-day and 200-day SMAs.",
+        "epsGrowth": [
+          "Q1 FY27 +9%",
+          "Q4 FY26 +6%",
+          "Q3 FY26 +8%"
+        ],
+        "revenueGrowth": "+19%",
+        "earningsTrend": "Steady",
+        "growthQualified": "Partial",
+        "fundamental": "Dominant port operator with 60% EBITDA margins and 14% ROCE. Steady cash flows comfortably support net debt-to-EBITDA of 1.9x, though EPS growth trails the CANSLIM 25% target.",
+        "verdict": "Constructive",
+        "risk": "Violated if price closes below 1762.75; cut risk if the 21-day EMA falters."
+      },
+      "AONELIQUID": {
+        "stage": "Unclear",
+        "technical": "Displays artificial stair-step action reflecting daily accrued interest. Lacks true equity supply-demand dynamics, VCP consolidation, or SEPA breakout characteristics.",
+        "epsGrowth": [
+          "not verified"
+        ],
+        "revenueGrowth": "not verified",
+        "earningsTrend": "Not verified",
+        "growthQualified": "Not verified",
+        "fundamental": "Debt exchange-traded fund investing in overnight tri-party repos (TREPS) to match the Nifty 1D Rate Index; corporate operating metrics are entirely inapplicable to equity screening.",
+        "verdict": "Avoid",
+        "risk": "Zero equity appreciation potential; unsuitable vehicle for momentum or growth strategies."
+      },
+      "ARFIN": {
+        "stage": "Stage 2 advancing",
+        "technical": "Cleared double bottom resistance at 112.80 backed by 4.34x average volume. RSI at 71 confirms strong price momentum, with price action trending well above rising 21-day EMA and 50-day SMA.",
+        "epsGrowth": [
+          "Q1 FY27 +300%",
+          "Q4 FY26 +1233%",
+          "Q3 FY26 +67%"
+        ],
+        "revenueGrowth": "+96%",
+        "earningsTrend": "Accelerating",
+        "growthQualified": "Yes",
+        "fundamental": "Aluminium recycler posting explosive revenue (+96%) and EPS expansion. Promoters own 69.8% with zero pledged shares, though thin 4.8% operating margins demand ongoing volume scale.",
+        "verdict": "Leading",
+        "risk": "Setup fails on breach of 102.07; exit promptly if base breakout reverses on heavy selling."
+      },
+      "ARIS": {
+        "stage": "Stage 2 advancing",
+        "technical": "Constructive double bottom breakout at 153.40 with price above EMA21, SMA50, and SMA200. Orderly volume expansion at 1.57x and RSI at 56 show steady institutional accumulation.",
+        "epsGrowth": [
+          "Q1 FY27 +280%",
+          "Q4 FY26 +936%",
+          "Q3 FY26 +260%"
+        ],
+        "revenueGrowth": "+37%",
+        "earningsTrend": "Accelerating",
+        "growthQualified": "Yes",
+        "fundamental": "B2B procurement platform for infrastructure materials showcasing rapid scaling; Q1 net profit jumped 292% on 37% sales growth, with 11% operating margins and backing from marquee investors.",
+        "verdict": "Leading",
+        "risk": "Invalidates below the 138.10 stop; strictly cut losses if neckline support is violated."
+      }
+    }
+  },
   "history": [
     {
       "sessionDate": "2026-10-05",
