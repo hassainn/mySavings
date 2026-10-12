@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-11T17:12:45.534Z",
-  "sessionDate": "2026-10-11",
+  "generatedAt": "2026-10-12T09:47:43.328Z",
+  "sessionDate": "2026-10-12",
   "status": "ready",
   "scanGeneratedAt": "2026-10-11T17:12:33.600Z",
   "gate": "WEAK",
@@ -237,9 +237,9 @@
       "observation": "No newer scan observation; outcome unknown."
     }
   ],
-  "previousSession": "2026-10-10",
+  "previousSession": "2026-10-11",
   "intelligenceGeneratedAt": "2026-10-11T10:56:11.301Z",
-  "commentary": "The Nifty 50 staged an intraday rebound off 22,179.90, but market breadth remains fragile at 40/100 under a WEAK deterministic gate. Stan Weinstein's stage discipline and William O'Neil's market-direction rules demand defensive vigilance: counter-trend bounces within ongoing corrections are prone to failure until resistance at 22,750–23,000 is reclaimed on a confirmed follow-through day. In accordance with Mark Minervini's progressive exposure rules, overall capital exposure should remain restrained. While individual Stage 2 setups with volume expansion are emerging, strict stop-loss adherence and high CANSLIM earnings acceleration hurdles must gate any pilot positioning.",
+  "commentary": "The Nifty 50's 1.30% technical rebound to 22,520 off 22,180 provides brief relief, but breadth remains anemic with our deterministic gate locked at WEAK (breadth score 40). Through Stan Weinstein's lens, the broader market remains trapped in Stage 4 decline beneath declining moving averages, requiring defensive capital preservation. While DII absorption created a temporary selling climax, William O'Neil's CANSLIM discipline demands a confirmed follow-through day and leadership reclamation above 22,750–23,000 before committing fresh aggressive risk. In Livermore's terms, fighting the prevailing tide invites unnecessary drawdowns. Active exposure must stay strictly curtailed; any tentative swing probes require progressive exposure, tight stops, and uncompromising scrutiny of fundamental earnings acceleration.",
   "commentaryStatus": "available",
   "limitations": [
     "Daily scan observations are not fills or performance results.",
@@ -248,104 +248,95 @@
   ],
   "model": "gemini-3.8-flash",
   "analysis": {
-    "analyst": "Minervini SEPA, O'Neil CANSLIM, Weinstein Stage Analysis & Livermore Discipline",
+    "analyst": "Minervini SEPA, O'Neil CANSLIM, Weinstein Stage Analysis, Darvas & Livermore",
     "bySymbol": {
       "21STCENMGM": {
-        "stage": "Stage 2 advancing",
-        "technical": "Price cleared a 20-session high at 46.54 on 5.21x volume, holding above the 21-day EMA and 50/200-day SMAs. However, micro-cap volatility and loose consolidation degrade base structure quality.",
+        "stage": "Stage 1 base",
+        "technical": "Clearing a 20-session resistance pivot on 5.21x average volume pushes price above its EMA21, SMA50, and SMA200. However, the base is erratic with loose swing lows rather than a tight Minervini VCP. While MACD momentum is positive, relative strength lacks institutional accumulation.",
         "epsGrowth": [
-          "Q1 FY27 +295%",
-          "Q4 FY26 Negative",
-          "Q3 FY26 Negative"
+          "Q1 FY27 +284%",
+          "Q4 FY26 negative",
+          "Q3 FY26 negative"
         ],
-        "revenueGrowth": "+194%",
+        "revenueGrowth": "+190%",
         "earningsTrend": "Negative",
         "growthQualified": "Partial",
-        "fundamental": "Engaged in securities broking with erratic revenue swings. Despite Q1 net profit reaching ₹9 Cr, prior quarters posted heavy operating losses. Pending tax disputes and lack of institutional sponsorship fail CANSLIM standards.",
+        "fundamental": "Capital market trading revenues surged to ₹9.66 crore in Q1 FY27, but erratic quarterly losses, an ROE of -21%, and zero institutional sponsorship demonstrate low CANSLIM fundamental quality. Lack of operating margin stability makes earnings unviable for sustained growth.",
         "verdict": "Watch",
-        "risk": "Thesis invalidates below the 43.96 stop; exit immediately if price re-enters the 20-day base."
+        "risk": "Thesis fails below 43.96 support. Exit immediately if price undercuts the breakout level; volatile penny-stock swings demand tight stop discipline."
       },
       "ABDL": {
         "stage": "Stage 2 advancing",
-        "technical": "Forming a double bottom pivot near 754.55 above the 21-day EMA and 50/200-day SMAs with RSI at 65. However, post-IPO overhead supply requires heavy volume confirmation to absorb resistance.",
+        "technical": "Constructing a double bottom base above its 50-day and 200-day moving averages. Neckline resistance at 754.55 is tested with RSI at 65 and bullish MACD confirmation, showing constructive technical consolidation.",
         "epsGrowth": [
-          "Q1 FY27 -13%",
-          "Q4 FY26 +15%",
-          "Q3 FY26 +23%"
+          "Q1 FY27 -18.7%",
+          "Q4 FY26 +34.8%"
         ],
-        "revenueGrowth": "+5%",
+        "revenueGrowth": "+5.8%",
         "earningsTrend": "Decelerating",
         "growthQualified": "No",
-        "fundamental": "Major spirits manufacturer (Officer's Choice), but Q1 net profit dropped 13% YoY and sales grew just 5%. High TTM valuation near 89x P/E lacks requisite bottom-line acceleration.",
+        "fundamental": "Q1 FY27 net profit contracted 18.7% YoY to ₹45.4 crore due to supply chain disruptions, despite 13% EBITDA margins and post-IPO net debt reduction to 0.65x EBITDA. Muted 5.8% revenue growth fails CANSLIM C-criteria.",
         "verdict": "Watch",
-        "risk": "Fails below the 690.43 stop; cut losses if the double-bottom support breaks down."
+        "risk": "Thesis fails on a close below 690.43 double-bottom support. Cut losses cleanly to prevent severe Stage 3 rollover."
       },
       "ADANIPORTS": {
         "stage": "Stage 2 advancing",
-        "technical": "Key index leader rebounding off its rising 21-day EMA toward a 1,861.56 double bottom pivot on 4.47x volume. Remains firmly aligned above ascending 50-day and 200-day SMAs.",
+        "technical": "Classic Stage 2 leader pulling back orderly to a rising 21-day EMA before reclaiming highs on a bullish double-bottom candle with 4.47x volume. Price remains firmly stacked above upward-trending 50-day and 200-day moving averages.",
         "epsGrowth": [
-          "Q1 FY27 +9%",
-          "Q4 FY26 +6%",
-          "Q3 FY26 +8%"
+          "Q1 FY27 +9.2%",
+          "Q4 FY26 +12.2%"
         ],
-        "revenueGrowth": "+19%",
-        "earningsTrend": "Steady",
+        "revenueGrowth": "+18.6%",
+        "earningsTrend": "Decelerating",
         "growthQualified": "Partial",
-        "fundamental": "Dominant port operator with 60% EBITDA margins and 14% ROCE. Steady cash flows comfortably support net debt-to-EBITDA of 1.9x, though EPS growth trails the CANSLIM 25% target.",
-        "verdict": "Constructive",
-        "risk": "Violated if price closes below 1762.75; cut risk if the 21-day EMA falters."
+        "fundamental": "Solid 18.6% revenue growth driven by international port volume (+80%), with high 60% operating margins and healthy net debt-to-EBITDA at 1.9x. However, EPS growth below 10% falls short of O'Neil's 25% CANSLIM acceleration threshold.",
+        "verdict": "Watch",
+        "risk": "Thesis fails below 1762.75 pivot low. Honor the stop immediately if broad market headwinds break the rising 50-day moving average."
       },
       "AONELIQUID": {
         "stage": "Unclear",
-        "technical": "Displays artificial stair-step action reflecting daily accrued interest. Lacks true equity supply-demand dynamics, VCP consolidation, or SEPA breakout characteristics.",
+        "technical": "An overnight debt ETF reflecting accrued daily repo interest rather than equity demand. Apparent moving-average breakouts and SEPA patterns are structural artifacts of linear NAV appreciation without true trading volume or volatility contraction.",
         "epsGrowth": [
           "not verified"
         ],
         "revenueGrowth": "not verified",
         "earningsTrend": "Not verified",
         "growthQualified": "Not verified",
-        "fundamental": "Debt exchange-traded fund investing in overnight tri-party repos (TREPS) to match the Nifty 1D Rate Index; corporate operating metrics are entirely inapplicable to equity screening.",
+        "fundamental": "not verified",
         "verdict": "Avoid",
-        "risk": "Zero equity appreciation potential; unsuitable vehicle for momentum or growth strategies."
+        "risk": "Thesis is invalid for equity trading. Cash management vehicle unsuitable for CANSLIM or SEPA trend strategies; avoid for equity breakout trades."
       },
       "ARFIN": {
         "stage": "Stage 2 advancing",
-        "technical": "Cleared double bottom resistance at 112.80 backed by 4.34x average volume. RSI at 71 confirms strong price momentum, with price action trending well above rising 21-day EMA and 50-day SMA.",
+        "technical": "Stage 2 advancing structure clearing a double bottom pivot at 112.80 on 4.34x volume expansion. Price rides above rising 21, 50, and 200 EMAs with RSI at 71, exhibiting strong relative strength versus the weak Nifty benchmark.",
         "epsGrowth": [
-          "Q1 FY27 +300%",
-          "Q4 FY26 +1233%",
-          "Q3 FY26 +67%"
+          "Q1 FY27 +276.9%",
+          "Q4 FY26 +246.1%"
         ],
-        "revenueGrowth": "+96%",
+        "revenueGrowth": "+95.5%",
         "earningsTrend": "Accelerating",
         "growthQualified": "Yes",
-        "fundamental": "Aluminium recycler posting explosive revenue (+96%) and EPS expansion. Promoters own 69.8% with zero pledged shares, though thin 4.8% operating margins demand ongoing volume scale.",
+        "fundamental": "Exceptional CANSLIM credentials with Q1 FY27 profit up 277% and sales jumping 95.5% YoY to ₹212.8 crore. Balance sheet is conservative with debt down to ₹17 crore and 69.8% promoter holding, offsetting lean 4.5% metal processing margins.",
         "verdict": "Leading",
-        "risk": "Setup fails on breach of 102.07; exit promptly if base breakout reverses on heavy selling."
+        "risk": "Thesis fails below 102.07 swing low. Cut losses decisively if elevated P/E multiples trigger heavy profit-taking during market drawdowns."
       },
       "ARIS": {
         "stage": "Stage 2 advancing",
-        "technical": "Constructive double bottom breakout at 153.40 with price above EMA21, SMA50, and SMA200. Orderly volume expansion at 1.57x and RSI at 56 show steady institutional accumulation.",
+        "technical": "Constructing a sound double bottom base above its 50-day and 200-day moving averages. Volume expanded 1.57x on the turn with RSI at 56 and MACD positive, signaling steady institutional accumulation off cyclical lows.",
         "epsGrowth": [
-          "Q1 FY27 +280%",
-          "Q4 FY26 +936%",
-          "Q3 FY26 +260%"
+          "Q1 FY27 +410.3%",
+          "Q4 FY26 +1332.0%"
         ],
-        "revenueGrowth": "+37%",
+        "revenueGrowth": "+37.1%",
         "earningsTrend": "Accelerating",
         "growthQualified": "Yes",
-        "fundamental": "B2B procurement platform for infrastructure materials showcasing rapid scaling; Q1 net profit jumped 292% on 37% sales growth, with 11% operating margins and backing from marquee investors.",
+        "fundamental": "Rapidly scaling B2B infrastructure commerce platform, lifting Q1 FY27 net profit by 410% to ₹16.9 crore on 37.1% sales growth. Operating ROCE is sound at 15.6% with zero promoter pledge, providing strong fundamental backing.",
         "verdict": "Leading",
-        "risk": "Invalidates below the 138.10 stop; strictly cut losses if neckline support is violated."
+        "risk": "Thesis fails below 138.10 support. Enforce stop discipline if low market liquidity or B2B working capital cycles degrade price structure."
       }
     }
   },
   "history": [
-    {
-      "sessionDate": "2026-10-05",
-      "gate": "WEAK",
-      "verdict": "No new buys. Observe and protect capital."
-    },
     {
       "sessionDate": "2026-10-06",
       "gate": "WEAK",
@@ -373,6 +364,11 @@
     },
     {
       "sessionDate": "2026-10-11",
+      "gate": "WEAK",
+      "verdict": "No new buys. Observe and protect capital."
+    },
+    {
+      "sessionDate": "2026-10-12",
       "gate": "WEAK",
       "verdict": "No new buys. Observe and protect capital."
     }
