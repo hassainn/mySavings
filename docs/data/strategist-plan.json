@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-12T21:19:56.660Z",
+  "generatedAt": "2026-10-13T09:45:24.379Z",
   "sessionDate": "2026-10-13",
   "status": "ready",
   "scanGeneratedAt": "2026-10-12T20:36:47.633Z",
@@ -239,7 +239,7 @@
   ],
   "previousSession": "2026-10-12",
   "intelligenceGeneratedAt": "2026-10-12T20:17:39.856Z",
-  "commentary": "With market breadth deteriorating to a weak score of 36 and the Nifty 50 pinned in an institutional tug-of-war beneath overhead supply, Stan Weinstein's cardinal rule applies: never fight the market tape. Relentless FII net distribution exceeding ₹13,000 Cr reflects William O'Neil's classic market correction posture, where three out of four individual setups ultimately fail. Although select capital goods and niche manufacturing names are carving Stage 2 pivots on heavy accumulation, Mark Minervini's progressive exposure model dictates maximum defensive caution. We operate with strict stop discipline, small position sizing, and mandatory profit protection until the general market confirms an authentic follow-through day and sustainable institutional breadth.",
+  "commentary": "With market breadth scored at a defensive 36 and the market gate flagged WEAK, William O'Neil's market-direction discipline dictates capital preservation over aggressive deployment. Persistent foreign institutional net selling and macro crude headwinds above $100 keep the headline indices vulnerable to distribution. Stan Weinstein's Stage Analysis reminds us that Stage 2 momentum cannot flourish sustainably without general market tailwinds. Following Mark Minervini's progressive exposure rule, we keep overall portfolio exposure constrained and position sizes strictly controlled. We insist on verified CANSLIM earnings acceleration, pristine volume-supported pivots, and uncompromising stop-loss discipline. In an unconfirmed market, cash remains an active, high-yield tactical position.",
   "commentaryStatus": "available",
   "limitations": [
     "Daily scan observations are not fills or performance results.",
@@ -248,91 +248,90 @@
   ],
   "model": "gemini-3.8-flash",
   "analysis": {
-    "analyst": "Minervini SEPA, O'Neil CANSLIM, Weinstein Stage Analysis & Livermore Discipline",
+    "analyst": "Minervini SEPA, O'Neil CANSLIM, Weinstein Stage Analysis & Darvas Box Theory",
     "bySymbol": {
       "21STCENMGM": {
-        "stage": "Stage 2 advancing",
-        "technical": "Price cleared its 20-session breakout trigger at 46.54 backed by 3.89x volume expansion. All key moving averages (EMA21, SMA50, SMA200) trend upward. However, long-term price action remains erratic, lacking a clean multi-contraction VCP base structure.",
+        "stage": "Unclear",
+        "technical": "Although clearing a 20-session high on 3.9x average volume, the chart lacks a well-defined Weinstein Stage 2 structure. The stock trades erratically as a low-liquidity microcap, leaving SEPA trend alignment fragile and prone to false breakouts.",
         "epsGrowth": [
-          "Q1 FY27 +350%",
-          "Q4 FY26 Negative",
-          "Q3 FY26 Negative"
+          "Negative",
+          "not verified"
         ],
-        "revenueGrowth": "+135%",
+        "revenueGrowth": "not verified",
         "earningsTrend": "Negative",
-        "growthQualified": "Partial",
-        "fundamental": "Q1 FY27 posted ₹10 Cr revenue and ₹9 Cr profit, but preceding quarters suffered recurring operational net losses. As an equity investment/trading vehicle with negative operating cash flows and volatile returns, it lacks institutional CANSLIM earnings reliability.",
-        "verdict": "Watch",
-        "risk": "Failure below the 43.53 stop level breaches the 20-session pivot; exit immediately to prevent deep capital drawdown in this volatile micro-cap."
+        "growthQualified": "No",
+        "fundamental": "Capital markets and trading firm characterized by volatile swings and recurring operational net losses. It completely lacks institutional-grade CANSLIM attributes, stable margins, and consistent return on equity.",
+        "verdict": "Avoid",
+        "risk": "Failure below the 43.53 stop level invalidates the breakout; Minervini discipline requires immediate exit on lack of liquidity."
       },
       "ABSLLIQUID": {
         "stage": "Unclear",
-        "technical": "Passive overnight liquid ETF tracking repo rates. Moving averages are flat around par value, exhibiting no Stage 2 expansion, VCP characteristics, relative strength divergence, or actionable equity breakout mechanics.",
+        "technical": "Aditya Birla Sun Life Liquid Overnight ETF is an overnight cash-management debt vehicle trading near par. Standard equity charting constructs like VCP patterns, Darvas boxes, and relative strength are completely inapplicable.",
         "epsGrowth": [
           "not verified"
         ],
         "revenueGrowth": "not verified",
         "earningsTrend": "Not verified",
         "growthQualified": "Not verified",
-        "fundamental": "not verified",
+        "fundamental": "Exchange-traded open-ended debt fund investing in overnight tri-party repos (TREPS). It possesses no corporate earnings, revenue growth, or operating balance sheet metrics.",
         "verdict": "Avoid",
-        "risk": "Holding cash equivalents entails opportunity risk during market moves; violation of 1005.97 trigger warrants immediate exit as it signals trading friction."
+        "risk": "Inapplicable as an equity growth thesis; closing below 1005.97 reflects negligible tracking drift rather than structural pattern breakdown."
       },
       "ADVANCE": {
         "stage": "Stage 2 advancing",
-        "technical": "Stock cleared a decisive 20-session breakout high at 141.64 propelled by massive 11.4x average volume. Moving averages are aligned in bullish alignment above a rising 50-SMA and 21-EMA, supported by strong RSI momentum at 70.",
+        "technical": "Decisive Stage 2 breakout clearing a 20-session base at 141.64 backed by an exceptional 11.4x volume surge. Moving averages are neatly stacked above the 50-day and 200-day lines with momentum confirmed by RSI 70.",
         "epsGrowth": [
-          "Q1 FY27 +105%",
-          "Q4 FY26 +48%"
+          "Q1 FY27 +152%",
+          "Q4 FY26 +78%"
         ],
         "revenueGrowth": "+96%",
         "earningsTrend": "Accelerating",
         "growthQualified": "Yes",
-        "fundamental": "Q1 FY27 revenue expanded 96% YoY to ₹330 Cr with net profit climbing to ₹22.55 Cr. Delivers a 19.6% ROCE and 17.2% ROE with low leverage and zero promoter pledge, confirming high CANSLIM operational strength.",
+        "fundamental": "Agrochemical manufacturer demonstrating high-octane CANSLIM metrics; Q1 revenue nearly doubled (+96%) while PAT expanded +152% YoY. Supported by a strong 19.6% ROCE and low debt (D/E 0.32).",
         "verdict": "Constructive",
-        "risk": "A daily close below 128.51 invalidates the high-volume pivot structure; cut losses swiftly per Minervini risk management rules."
+        "risk": "A breach below 128.51 voids the pivot; progressive exposure warrants swift exit if market weakness drags price back into base."
       },
       "AEGISLOG": {
         "stage": "Stage 2 advancing",
-        "technical": "Demonstrates textbook market leadership with a clean double-bottom base breakout above 1530.23. The stock successfully held its rising 21-EMA on pullbacks, printing strong accumulation volume and bullish MACD confirmation above the zero line.",
+        "technical": "Established Stage 2 leader carving a constructive double-bottom base, holding the rising 21-EMA near prior highs. Neckline pressure at 1530 shows strong accumulation, with MACD firmly above signal and zero.",
         "epsGrowth": [
-          "Q1 FY27 +269%",
-          "Q4 FY26 +46%"
+          "Q1 FY27 +212%",
+          "Q4 FY26 +35%"
         ],
         "revenueGrowth": "+37%",
         "earningsTrend": "Accelerating",
         "growthQualified": "Yes",
-        "fundamental": "Infrastructure logistics leader showing strong earnings acceleration. Q1 FY27 net profit reached ₹544.8 Cr on ₹2,357 Cr revenue. Supported by 16.3% ROE, expanding operating margins, manageable debt, and zero promoter pledging.",
+        "fundamental": "Premier liquid and LPG terminal infrastructure provider capitalizing on major capacity expansions. Exceptional operating leverage sparked a 212% Q1 net profit surge on 37% sales growth, backed by double-digit ROCE.",
         "verdict": "Leading",
-        "risk": "A breakdown below 1383.96 violates swing-low support and the 21-EMA, requiring strict loss containment regardless of fundamental pedigree."
+        "risk": "Hard stop at 1383.96; thesis fails if price breaks beneath the rising 21-EMA and prior swing low."
       },
       "AEROENTER": {
         "stage": "Stage 2 advancing",
-        "technical": "Formed an aligned double-bottom reversal structure, pushing through its 159.76 trigger on 5.55x volume. Price trades comfortably above rising 21-EMA, 50-SMA, and 200-SMA, confirmed by a constructive 65 RSI reading.",
+        "technical": "Emerging from a double bottom to test neckline resistance at 159.76 on 5.55x average volume. Moving averages are aligned bullishly above the 50-day SMA with supportive RSI at 65.",
         "epsGrowth": [
-          "Q1 FY27 +580%",
-          "Q4 FY26 +116%"
+          "Q1 FY27 +849%",
+          "not verified"
         ],
-        "revenueGrowth": "+135%",
-        "earningsTrend": "Accelerating",
-        "growthQualified": "Yes",
-        "fundamental": "Holding company benefiting from manufacturing gains in its listed subsidiary. Q1 FY27 consolidated revenue reached ₹333 Cr with PAT surging to ₹103 Cr. Backed by virtually zero debt and promoter holding at 52.3% with no pledge.",
-        "verdict": "Constructive",
-        "risk": "Breaching 146.68 undermines the double-bottom base floor; enforce an immediate stop to guard trading principal against false breakout whip."
+        "revenueGrowth": "+148%",
+        "earningsTrend": "Steady",
+        "growthQualified": "Partial",
+        "fundamental": "Industrial platform whose consolidated Q1 earnings headline was significantly magnified by a non-recurring INR 144 Cr divestment of its MRO stake. ROCE stands at 12.6% with minimal debt.",
+        "verdict": "Watch",
+        "risk": "Stop pegged at 146.68; thesis breaks if neckline fails to hold or market sells into one-off earnings gains."
       },
       "AEROFLEX": {
         "stage": "Stage 2 advancing",
-        "technical": "High relative-strength candidate coiling within 1.5% of its 584.73 pivot after completing a multi-week base. The impending breakout is accompanied by powerful 9.3x volume expansion and positive MACD momentum.",
+        "technical": "Tight consolidation within 1.5% of the 584.73 pivot point, supported by an imposing 9.3x volume expansion. Moving averages reflect textbook Minervini SEPA alignment with price commanding strong relative strength above the rising 50-day SMA.",
         "epsGrowth": [
           "Q1 FY27 +158%",
-          "Q4 FY26 +45%"
+          "Q4 FY26 +60%"
         ],
         "revenueGrowth": "+72%",
         "earningsTrend": "Accelerating",
         "growthQualified": "Yes",
-        "fundamental": "Specialized metallic flexible flow and liquid cooling skid supplier. Q1 FY27 revenue rose 72% YoY to ₹145 Cr with PAT reaching ₹18.8 Cr. Boasts 18.9% ROCE, near-zero debt (0.02 D/E), and 65.5% promoter backing.",
+        "fundamental": "Specialty metallic flow solutions producer expanding rapidly into data center liquid cooling. Outstanding CANSLIM profile with Q1 PAT jumping 162% on 72% revenue growth, zero debt, and ROCE above 20%.",
         "verdict": "Leading",
-        "risk": "A drop below 522.61 breaches the 20-session base and rising 21-EMA; execute rapid stop-loss discipline to minimize capital impairment."
+        "risk": "Deterministic stop at 522.61; exit decisively if price violates the rising 50-day moving average."
       }
     }
   },
