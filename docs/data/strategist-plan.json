@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-13T10:38:49.403Z",
+  "generatedAt": "2026-10-13T18:20:20.793Z",
   "sessionDate": "2026-10-13",
   "status": "ready",
   "scanGeneratedAt": "2026-10-12T20:36:47.633Z",
@@ -238,14 +238,103 @@
     }
   ],
   "previousSession": "2026-10-12",
-  "intelligenceGeneratedAt": "2026-10-13T10:36:39.015Z",
-  "commentary": null,
-  "commentaryStatus": "unavailable",
+  "intelligenceGeneratedAt": "2026-10-13T18:18:44.595Z",
+  "commentary": "While frontline benchmarks staged an aggressive 350-point relief rally led by large-cap IT short-covering, anemic breadth score of 36 sounds an explicit caution alarm under O'Neil and Weinstein principles. A single-day index surge does not constitute a confirmed market uptrend when internal breadth lags and broad-market participation remains absent. As Stan Weinstein mandated, sustainable bull moves require broad Stage 2 participation across industry groups rather than isolated index heavyweight rallies. Furthermore, Minervini progressive exposure discipline dictates keeping risk tight, avoiding aggressive capital deployment into unconfirmed breakouts, and demanding strict alignment between Stage 2 technical pivots and accelerating CANSLIM fundamental drivers.",
+  "commentaryStatus": "available",
   "limitations": [
     "Daily scan observations are not fills or performance results.",
     "Price levels are scanner references, not live quotes.",
     "No broker orders are submitted."
   ],
+  "model": "gemini-3.8-flash",
+  "analysis": {
+    "analyst": "Minervini SEPA, O'Neil CANSLIM & Weinstein Stage Analysis",
+    "bySymbol": {
+      "21STCENMGM": {
+        "stage": "Unclear",
+        "technical": "Attempting a 20-day high breakout at 46.54 on 3.89x volume above rising short-term moving averages. However, the price structure lacks institutional sponsorship, characteristic of low-liquidity micro-caps rather than an orderly Minervini VCP base.",
+        "epsGrowth": [
+          "Q4 FY26 -174%",
+          "Q3 FY26 -112%"
+        ],
+        "revenueGrowth": "not verified",
+        "earningsTrend": "Negative",
+        "growthQualified": "No",
+        "fundamental": "Capital market investment firm with recurring net losses, negative TTM ROE (-72%), and erratic top-line trends. Completely fails O'Neil CANSLIM criteria (C and A) due to absence of real operating profitability.",
+        "verdict": "Avoid",
+        "risk": "Thesis fails if price slips below the 43.53 support pivot; exit immediately to preserve capital in illiquid names."
+      },
+      "ABSLLIQUID": {
+        "stage": "Unclear",
+        "technical": "Instrument trades tightly pegged near 1000.00 NAV. Moving-average alignments and momentum indicators reflect debt cash management rather than an equity breakout pattern or Darvas box structure.",
+        "epsGrowth": [
+          "not verified"
+        ],
+        "revenueGrowth": "not verified",
+        "earningsTrend": "Not verified",
+        "growthQualified": "No",
+        "fundamental": "Aditya Birla Sun Life CRISIL Liquid Overnight ETF is an overnight cash-management debt vehicle; CANSLIM and SEPA equity growth fundamentals (EPS, sales growth, operating margins, ROCE) are entirely non-applicable.",
+        "verdict": "Avoid",
+        "risk": "Scanner misclassification artifact; no capital growth setup exists. Exit or reallocate immediately."
+      },
+      "ADVANCE": {
+        "stage": "Stage 2 advancing",
+        "technical": "Clearing a 20-day breakout pivot at 141.64 backed by an explosive 11.4x volume surge. The stock trades cleanly above rising EMA21, SMA50, and SMA200, signaling genuine Stage 2 accumulation.",
+        "epsGrowth": [
+          "Q1 FY27 +76%",
+          "Q4 FY26 +5%"
+        ],
+        "revenueGrowth": "+96%",
+        "earningsTrend": "Accelerating",
+        "growthQualified": "Partial",
+        "fundamental": "Manufacturer of agrochemicals posting a stellar 96% YoY sales jump and 152% net profit gain in Q1 FY27. Supported by healthy ROCE of 19.6% and ROE of 17.2% with moderate valuation multiples.",
+        "verdict": "Constructive",
+        "risk": "A drop below 128.51 breaches the prior swing platform and 21-EMA; cut the position decisively."
+      },
+      "AEGISLOG": {
+        "stage": "Stage 2 advancing",
+        "technical": "Leading liquid/gas infrastructure play setting up a textbook double-bottom base above a rising 30-week average. Rebounded sharply off the rising 21-EMA toward the 1530.23 neckline pivot with constructive MACD momentum.",
+        "epsGrowth": [
+          "Q1 FY27 +214%",
+          "Q4 FY26 +35%"
+        ],
+        "revenueGrowth": "+37%",
+        "earningsTrend": "Accelerating",
+        "growthQualified": "Yes",
+        "fundamental": "Outstanding CANSLIM profile: Q1 FY27 revenue rose 37% to ₹2,357 Cr while net profit spiked over 200%. Strong terminal throughput margins, ROCE of 13.3%, ROE of 16.3%, and sustained institutional sponsorship.",
+        "verdict": "Leading",
+        "risk": "Pattern invalidates on a close below 1383.96 double-bottom swing low, breaking intermediate moving-average support."
+      },
+      "AEROENTER": {
+        "stage": "Stage 2 advancing",
+        "technical": "Constructing a double-bottom base challenging pivot resistance at 159.76 on 5.55x average volume. Price remains firmly supported above its rising EMA21, SMA50, and SMA200 trend template lines.",
+        "epsGrowth": [
+          "Q1 FY27 +849%",
+          "Q4 FY26 +37%"
+        ],
+        "revenueGrowth": "+135%",
+        "earningsTrend": "Accelerating",
+        "growthQualified": "Yes",
+        "fundamental": "Reported headline Q1 net profit rose sixfold to ₹103 Cr on ₹333 Cr revenue, but CANSLIM scrutiny reveals substantial other income (₹144 Cr) masking compressed core operating margins (9%). Virtually debt-free.",
+        "verdict": "Constructive",
+        "risk": "Pattern failure occurs if price violates the 146.68 swing trough; exit immediately given lower core earnings quality."
+      },
+      "AEROFLEX": {
+        "stage": "Stage 2 advancing",
+        "technical": "Textbook Stage 2 leader forming a tight VCP consolidation within 1.5% of its 584.73 breakout pivot. Exceptional demand confirmation evidenced by 9.3x average volume with RSI 63 holding bullish momentum.",
+        "epsGrowth": [
+          "Q1 FY27 +158%",
+          "Q4 FY26 +45%"
+        ],
+        "revenueGrowth": "+72%",
+        "earningsTrend": "Accelerating",
+        "growthQualified": "Yes",
+        "fundamental": "Premier metallic flow solutions manufacturer delivering 72% YoY sales growth and 161% net profit surge. Backed by solid 23% operating margins, 18.9% ROCE, zero net debt, and strong export market penetration.",
+        "verdict": "Leading",
+        "risk": "Failure to clear the 584.73 pivot or a break below 522.61 consolidation floor warrants prompt stop-loss discipline."
+      }
+    }
+  },
   "history": [
     {
       "sessionDate": "2026-10-07",
