@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-14T08:44:54.725Z",
+  "generatedAt": "2026-10-14T14:32:31.966Z",
   "sessionDate": "2026-10-14",
   "status": "ready",
   "scanGeneratedAt": "2026-10-13T18:39:34.470Z",
@@ -238,14 +238,104 @@
     }
   ],
   "previousSession": "2026-10-13",
-  "intelligenceGeneratedAt": "2026-10-14T08:43:33.226Z",
-  "commentary": null,
-  "commentaryStatus": "unavailable",
+  "intelligenceGeneratedAt": "2026-10-14T14:31:06.363Z",
+  "commentary": "With the Nifty falling 0.44% to 22,622.70 amid 13 consecutive sessions of FPI net selling and surging crude ($106–$107), breadth has degraded to a weak 37. Stan Weinstein’s discipline dictates defensive posture during broad index pullbacks, as distribution pressures undercut breakout follow-through. Jesse Livermore and William O'Neil cautioned that leading setups must show uncompromised relative strength and top-tier CANSLIM earnings acceleration while the market corrects. Mark Minervini's progressive exposure rules govern: with the general market gate at WEAK, cash remains the default posture. Only high-conviction Stage 2 candidates displaying genuine volume absorption and verified 25%+ earnings growth deserve monitoring, while non-earning and unconfirmed breakouts must be avoided entirely.",
+  "commentaryStatus": "available",
   "limitations": [
     "Daily scan observations are not fills or performance results.",
     "Price levels are scanner references, not live quotes.",
     "No broker orders are submitted."
   ],
+  "model": "gemini-3.8-flash",
+  "analysis": {
+    "analyst": "SEPA (Minervini), CANSLIM (O'Neil), Stage Analysis (Weinstein), Livermore Tape Discipline",
+    "bySymbol": {
+      "21STCENMGM": {
+        "stage": "Stage 1 base",
+        "technical": "Clearing 20-session resistance on 3.89x volume above moving averages suggests base emergence, but deep prior markdown leaves heavy overhead supply and questionable relative strength.",
+        "epsGrowth": [
+          "Q1 FY27 -76%",
+          "Q4 FY26 negative"
+        ],
+        "revenueGrowth": "-75%",
+        "earningsTrend": "Negative",
+        "growthQualified": "No",
+        "fundamental": "Microcap financial holding entity afflicted by negative EPS (-₹16.41 LTM) and operational losses. Erratic revenue and total absence of institutional backing violate CANSLIM criteria.",
+        "verdict": "Avoid",
+        "risk": "A breakdown below the 43.53 stop triggers immediate exit; lack of earnings support leaves it vulnerable to sharp downside."
+      },
+      "ADVANCE": {
+        "stage": "Stage 2 advancing",
+        "technical": "High-volume 20-session breakout supported by 11.4x 20-day volume. Positioned cleanly above rising EMA21, SMA50, and SMA200 with RSI at 70 showing strong relative price leadership.",
+        "epsGrowth": [
+          "Q1 FY27 +152%",
+          "Q4 FY26 +31%"
+        ],
+        "revenueGrowth": "+96%",
+        "earningsTrend": "Accelerating",
+        "growthQualified": "Yes",
+        "fundamental": "Agrochemical manufacturer demonstrating robust CANSLIM traits with net profit up 152% and revenue surging 96%. Healthy 19.6% ROCE and 17.2% ROE confirm underlying fundamental strength.",
+        "verdict": "Constructive",
+        "risk": "A breach of the 128.51 stop signals a false breakout in a hostile market, demanding immediate loss cutting."
+      },
+      "AEGISLOG": {
+        "stage": "Stage 2 advancing",
+        "technical": "Textbook institutional double bottom pattern above rising 21, 50, and 200 moving averages. Reclaimed 21-day EMA with expanding MACD, confirming orderly supply absorption near highs.",
+        "epsGrowth": [
+          "Q1 FY27 +269%",
+          "Q4 FY26 +32%"
+        ],
+        "revenueGrowth": "+37%",
+        "earningsTrend": "Accelerating",
+        "growthQualified": "Yes",
+        "fundamental": "Premier liquid and LPG logistics operator delivering standout 269% EPS growth and 37% revenue gains. Major terminal expansions across six ports provide sustainable multi-year institutional sponsorship.",
+        "verdict": "Leading",
+        "risk": "A decline below the 1383.96 swing low violates the double bottom structure and mandates an automatic stop-out."
+      },
+      "AEROENTER": {
+        "stage": "Stage 2 advancing",
+        "technical": "Double bottom pattern pressing neckline resistance on 5.55x volume surge. Favorable moving average stack (Price > EMA21 > SMA50 > SMA200) and RSI 65 confirm active Stage 2 accumulation.",
+        "epsGrowth": [
+          "Q1 FY27 +617%",
+          "Q4 FY26 +116%"
+        ],
+        "revenueGrowth": "+135%",
+        "earningsTrend": "Accelerating",
+        "growthQualified": "Yes",
+        "fundamental": "Parent to Aeroflex Industries; quarterly profit surged over 600% on 135% revenue growth. Low debt-to-equity (0.04) and 15.9% ROCE confirm balance-sheet health, though non-operating income requires monitoring.",
+        "verdict": "Constructive",
+        "risk": "A close below the 146.68 pivot invalidates the base pattern and requires strict risk discipline."
+      },
+      "AEROFLEX": {
+        "stage": "Stage 2 advancing",
+        "technical": "Tight consolidation within 1.5% of its 20-session pivot. Massive 9.3x average volume and RSI at 63 above rising EMA21, SMA50, and SMA200 indicate institutional accumulation.",
+        "epsGrowth": [
+          "Q1 FY27 +162%",
+          "Q4 FY26 +35%"
+        ],
+        "revenueGrowth": "+72%",
+        "earningsTrend": "Accelerating",
+        "growthQualified": "Yes",
+        "fundamental": "Manufacturer of metallic flow solutions posting 162% profit growth and 72% sales acceleration. Clean balance sheet (debt/equity 0.02) and 18.9% ROCE meet O'Neil's growth profile.",
+        "verdict": "Constructive",
+        "risk": "Failure to hold the 522.61 stop indicates breakout exhaustion and enforces an immediate capital-preservation exit."
+      },
+      "AETHER": {
+        "stage": "Stage 2 advancing",
+        "technical": "Double bottom formation consolidating above rising EMA21, SMA50, and SMA200. Testing neckline with RSI at 64 and positive MACD indicates constructive base building.",
+        "epsGrowth": [
+          "Q1 FY27 +33%",
+          "Q4 FY26 +15%"
+        ],
+        "revenueGrowth": "+27%",
+        "earningsTrend": "Accelerating",
+        "growthQualified": "Partial",
+        "fundamental": "Specialty chemicals producer benefiting from rising CRAMS and exclusive synthesis contracts. Q1 PAT jumped 33% on 27% sales growth, though ROCE at 11.9% remains moderate.",
+        "verdict": "Watch",
+        "risk": "A drop below the 1676.19 swing stop breaks base symmetry and triggers defensive liquidation."
+      }
+    }
+  },
   "history": [
     {
       "sessionDate": "2026-10-08",
