@@ -1,7 +1,7 @@
 {
   "status": "live",
   "method": "gemini-grounded",
-  "generatedAt": "2026-10-17T08:42:02.664Z",
+  "generatedAt": "2026-10-18T08:57:35.033Z",
   "model": "gemini-3.8-flash",
   "marketDirection": {
     "direction": "Sideways",
@@ -20,57 +20,56 @@
       },
       {
         "tag": "Breadth",
-        "text": "Market breadth is defensive — 33.7% of scanned NSE stocks advancing, 23.2% above their 50-DMA."
+        "text": "Market breadth is cautious — 58.7% of scanned NSE stocks advancing, 24.8% above their 50-DMA."
       },
       {
         "tag": "Earnings",
-        "text": "Primary short-term directional pivot for Bank Nifty; an in-line or better print could catalyze an upside breakout from its multi-week consolidation base."
+        "text": "Steady deposit accretion and core NII growth support a breakout from the recent multi-week consolidation range."
       },
       {
-        "tag": "Macro/flows",
-        "text": "Benchmark reclaim of 23,100 solidifies short-term swing floor, though narrow breadth requires selectivity focused exclusively on high-volume leader breakouts."
+        "tag": "Guidance",
+        "text": "Upward guidance revision acts as a structural floor, providing strong institutional backing for IT base breakouts."
       }
     ],
     "disclaimer": "A rules-based read of index price, market breadth and headline flow — not a forecast or trading advice."
   },
-  "marketMood": "Cautiously Bullish",
-  "marketSummary": "Benchmark indices demonstrated selective strength as the Nifty 50 advanced 148.80 points (+0.65%) to close at 23,146.15 and the Sensex added 413.66 points (+0.56%) to end at 74,729.27, driven by a sharp rally in large-cap IT following strong Q2 prints. Broader markets lagged the frontline advance, with the Nifty Midcap 100 slipping 0.11% and Smallcap 100 easing 0.01%, indicating that institutional accumulation remains concentrated in earnings-backed heavyweights rather than broad-based beta.",
-  "dailyFocus": "Track the reception of HDFC Bank's Q2 earnings following its October 17 board meeting, sustained breakout follow-through in large-cap IT names post-Tech Mahindra results, and base consolidation across capital goods and defence leaders (HAL, BEL, COCHINSHIP) ahead of their late-October to mid-November earnings windows.",
+  "marketMood": "Cautiously Bullish with Sector Rotation",
+  "marketSummary": "Indian benchmark indices are setting up for a high-volatility earnings reaction week after major private lenders HDFC Bank, ICICI Bank, and Axis Bank reported healthy Q2 operational metrics over the weekend. While headline Nifty price action shows consolidation near key psychological levels, market breadth is being driven by heavy Q2 earnings prints, IT guidance revisions, and targeted PSU defence expansions. Swing traders are tracking breakout setups across Private Banking, Defence PSUs, and select Large-cap Consumer discretionary names against the backdrop of persistent FII portfolio rebalancing.",
+  "dailyFocus": "Prioritize high-volume base completions in heavyweights reacting to Q2 results (HDFC Bank, ICICI Bank, Axis Bank), watch post-OFS base stabilization in Defence counters (Cochin Shipyard, HAL, BEL), and monitor pre-earnings accumulation setups ahead of upcoming board meets (CG Power, Trent).",
   "sectors": [
     {
-      "name": "Information Technology",
+      "name": "Banking & Financial Services",
       "momentum": "Leading",
       "score": 88,
-      "reason": "Nifty IT surged 3.92% on Friday, extending a multi-day rally past 10% on expanding volume following strong Q2 profit prints, upbeat deal pipelines, and bonus announcements from majors like Tech Mahindra.",
+      "reason": "Strong Q2 scorecards across tier-1 private banks (HDFC Bank, ICICI Bank, Axis Bank) showing sustained double-digit loan growth, falling credit costs, and resilient asset quality provide solid foundational support for index heavyweights.",
       "catalysts": [
-        "Tech Mahindra Q2 PAT surge (+33% YoY) and 1:1 bonus issue",
-        "Resilient BFSI and enterprise deal conversions across TCS, Infosys, and Wipro",
-        "Accelerating enterprise AI adoption contracts"
+        "HDFC Bank Q2 NII growth and deposit expansion",
+        "ICICI Bank PAT surge of 20% YoY with asset quality improvement",
+        "Axis Bank 38% PAT growth on steep 52% drop in credit provisions"
       ],
       "risks": [
-        "Extended short-term overbought technical conditions",
-        "Discretionary tech budget delays in select European verticals"
+        "Sequential NIM contraction from higher cost of deposits and foreign currency borrowings",
+        "Elevated FII selling in liquid banking majors"
       ],
       "relatedStocks": [
-        "TECHM",
-        "TCS",
-        "INFY",
-        "WIPRO"
+        "HDFCBANK",
+        "ICICIBANK",
+        "AXISBANK"
       ]
     },
     {
       "name": "Aerospace & Defence",
       "momentum": "Improving",
-      "score": 78,
-      "reason": "Steady order flows and long-term domestic indigenisation pipelines continue to provide downside support as leaders test key moving averages and form multi-week constructive bases.",
+      "score": 82,
+      "reason": "Structural multi-year order visibility reinforced by HAL's Maharatna status elevation, production expansion for Sukhoi and Shakti aero-engines, and recurring naval and electronics order inflows across BEL and Cochin Shipyard.",
       "catalysts": [
-        "BEL securing additional defence contracts of Rs 533 crore",
-        "Cochin Shipyard capacity expansion and 40+ export vessel pipeline",
-        "Cabinet/DAC procurements and ASEAN joint-production dialogues"
+        "Maharatna status operational autonomy for HAL enabling up to ₹5,000 Cr strategic capex",
+        "Absorption of the government OFS overhang in Cochin Shipyard",
+        "Continuous domestic defence electronics order flows for BEL"
       ],
       "risks": [
-        "Subdued delivery velocity caused by global engine and tier-1 component bottlenecks",
-        "Rich trailing price-to-earnings multiples limiting valuation expansion"
+        "Lumpy quarterly revenue realization based on milestone deliveries",
+        "Supply-chain bottlenecks in imported propulsion subcomponents"
       ],
       "relatedStocks": [
         "HAL",
@@ -79,60 +78,59 @@
       ]
     },
     {
-      "name": "Capital Goods & Power Equipment",
-      "momentum": "Improving",
-      "score": 74,
-      "reason": "Substantial transmission, rail and industrial capex backlogs keep balance sheets healthy, with leaders absorbing market pullbacks in orderly high-tight bases.",
+      "name": "Information Technology",
+      "momentum": "Mixed",
+      "score": 68,
+      "reason": "Divergent earnings trends where bellwether Infosys raised full-year constant-currency guidance and Wipro announced a 1:1 bonus issue, counterbalanced by softer sequential deal bookings in mid-tier and peer players.",
       "catalysts": [
-        "CG Power upcoming Q2 board meeting on October 23, 2026",
-        "Sustained power grid transmission tendering and industrial electrification demand"
+        "Infosys FY revenue guidance upgrade to 3.75%-4.50%",
+        "Wipro 1:1 bonus share issue boosting retail participation",
+        "Enterprise AI order growth across tier-1 software integrators"
       ],
       "risks": [
-        "Higher working capital cycle days reported across equipment vendors",
-        "Input raw material price fluctuations"
+        "Discretionary tech spending softness across European manufacturing and retail clients",
+        "Upcoming US election volatility and H2 seasonal furlough impact"
+      ],
+      "relatedStocks": [
+        "INFY",
+        "WIPRO",
+        "LTIM"
+      ]
+    },
+    {
+      "name": "Capital Goods & Power Infrastructure",
+      "momentum": "Improving",
+      "score": 75,
+      "reason": "Elevated national grid capex, bulk transformer orders from PGCIL, and semiconductor OSAT progress keep multi-week basing patterns constructive ahead of Q2 earnings releases.",
+      "catalysts": [
+        "CG Power greenfield transformer and switchgear capacity expansions",
+        "Subsidized government backing for domestic semiconductor assembly facilities",
+        "Grid modernization demand driven by renewable energy evacuation"
+      ],
+      "risks": [
+        "Stretched valuation multiples leaving little room for earnings misses",
+        "Working capital cycle expansion across heavy electrical contracts"
       ],
       "relatedStocks": [
         "CGPOWER",
-        "LT",
-        "SIEMENS"
+        "BHEL"
       ]
     },
     {
-      "name": "Retail & Consumer Discretionary",
+      "name": "Consumer & Retail",
       "momentum": "Mixed",
-      "score": 67,
-      "reason": "High-growth fashion and value retail operators are reporting resilient top-line expansion, but broader discretionary demand remains bifurcated heading into peak festive trade.",
+      "score": 62,
+      "reason": "Strong volume expansion and fast footprint additions at Trent and value retail chains clash with selective urban demand moderation and revenue-per-square-foot dilution.",
       "catalysts": [
-        "Trent standalone Q2 revenue growth of 23% YoY to Rs 5,788 crore",
-        "Zudio store count surpassing the 1,000-store operational milestone",
-        "Upcoming festive and wedding season demand uptick"
+        "Trent Q2 standalone revenue jump of ~22.5%-23% YoY",
+        "Festival season footfalls and aggressive Zudio store network rollouts"
       ],
       "risks": [
-        "Moderation in same-store sales growth (SSSG) in mature urban clusters",
-        "Elevated premium valuations leaving little room for margin execution misses"
+        "Cannibalization in saturated metropolitan retail pockets",
+        "High multiples compressing upon any quarterly EBITDA margin contraction"
       ],
       "relatedStocks": [
-        "TRENT",
-        "DMART",
-        "ABFRL"
-      ]
-    },
-    {
-      "name": "Real Estate",
-      "momentum": "Weakening",
-      "score": 52,
-      "reason": "Despite robust collection rates and project pre-sales, revenue recognition lags and margin compression from rising development costs have stalled momentum across key realty charts.",
-      "catalysts": [
-        "Strong quarterly presales velocity and robust operating cash flows reported by leaders like DLF"
-      ],
-      "risks": [
-        "Contraction in reported operating margins due to project completion accounting lags",
-        "Broader market profit-taking weighing on mid-cap property developers"
-      ],
-      "relatedStocks": [
-        "DLF",
-        "GODREJPROP",
-        "OBEROIRLTY"
+        "TRENT"
       ]
     }
   ],
@@ -140,245 +138,172 @@
     {
       "category": "stock",
       "symbol": "HDFCBANK",
-      "headline": "HDFC Bank Board Convenes Today, October 17, to Consider and Approve Q2 FY27 Financial Results",
-      "summary": "HDFC Bank's Board of Directors meets on Saturday, October 17, 2026, to review and approve standalone and consolidated unaudited Q2 FY27 financial results. Consensus estimates anticipate an ~8% to 9% YoY expansion in net interest income alongside steady loan book growth, with deposit accretion and net interest margin trajectory serving as the key focal points for market participants.",
-      "sentiment": "Neutral",
+      "headline": "HDFC Bank Reports Q2 Net Profit of ₹19,510 Cr; Net Interest Income Rises 9.7%",
+      "summary": "HDFC Bank posted a standalone net profit of ₹19,510 crore for the quarter ended September 30, up 4.7% YoY (up 12.6% excluding treasury trading gains). Net interest income rose 9.7% YoY to ₹34,619 crore, supported by an 18.8% growth in deposits and stable credit asset quality.",
+      "sentiment": "Positive",
       "importance": "High",
       "catalystType": "Earnings",
       "timeHorizon": "Today",
-      "impact": "Primary short-term directional pivot for Bank Nifty; an in-line or better print could catalyze an upside breakout from its multi-week consolidation base.",
+      "impact": "Steady deposit accretion and core NII growth support a breakout from the recent multi-week consolidation range.",
       "sourceName": "The Economic Times",
-      "sourceUrl": "https://economictimes.indiatimes.com",
-      "publishedAt": "2026-10-16T12:26:00Z"
-    },
-    {
-      "category": "market",
-      "symbol": "NIFTY50",
-      "headline": "Nifty Reclaims 23,100 Driven by IT Rally; Mid-Cap and Small-Cap Gauges Consolidate",
-      "summary": "The Nifty 50 advanced 0.65% to finish at 23,146.15 on Friday, October 16, capping its strongest weekly run in several months, propelled by near 4% gains in the Nifty IT index. However, the advance remained narrow, with the Nifty Midcap 100 dropping 0.11% and Smallcap 100 dipping 0.01%, underlining divergence between frontline leadership and secondary market breadth.",
-      "sentiment": "Positive",
-      "importance": "High",
-      "catalystType": "Macro/flows",
-      "timeHorizon": "This week",
-      "impact": "Benchmark reclaim of 23,100 solidifies short-term swing floor, though narrow breadth requires selectivity focused exclusively on high-volume leader breakouts.",
-      "sourceName": "Business Standard",
-      "sourceUrl": "https://www.business-standard.com/markets/news/stock-market-close-sensex-gains-for-2nd-day-rises-414-pts-nifty-at-23146-it-index-zooms-4-126101600862_1.html",
-      "publishedAt": "2026-10-16T11:59:00Z"
+      "sourceUrl": "https://m.economictimes.com/markets/stocks/earnings/hdfc-bank-q2-results-net-profit-rises-5-yoy-to-rs-19510-crore-nii-grows-10.jpg",
+      "publishedAt": "2026-10-18T06:30:00Z"
     },
     {
       "category": "stock",
-      "symbol": "TECHM",
-      "headline": "Tech Mahindra Surges Over 7% Post Q2 Net Profit Rise of 33% and 1:1 Bonus Announcement",
-      "summary": "Tech Mahindra posted a 32.7% YoY increase in consolidated net profit to Rs 1,585.6 crore for Q2 FY27 on revenue of Rs 16,180.2 crore (+15.6% YoY). In celebration of its 40th anniversary, the board declared an interim dividend of Rs 15 per share and recommended a 1:1 bonus share issue. Management highlighted consistent deal wins surpassing $1 billion in quarterly run rates.",
+      "symbol": "INFY",
+      "headline": "Infosys Lifts FY Constant-Currency Revenue Guidance to 3.75%-4.50% After Solid Q2",
+      "summary": "Infosys reported a 4.7% YoY rise in Q2 consolidated net profit to ₹6,506 crore on revenues of ₹40,986 crore (up 3.1% QoQ in constant currency). Management raised its full-year revenue growth outlook to 3.75%-4.50% from 3.0%-4.0% backed by $2.4 billion in large deal TCV and declared an interim dividend of ₹21 per share.",
+      "sentiment": "Positive",
+      "importance": "High",
+      "catalystType": "Guidance",
+      "timeHorizon": "This week",
+      "impact": "Upward guidance revision acts as a structural floor, providing strong institutional backing for IT base breakouts.",
+      "sourceName": "Press Trust of India / Rediff",
+      "sourceUrl": "https://www.rediff.com/business/report/infosys-q2-net-profit-rises-4-7-lifts-fy25-revenue-guidance/20241017.htm",
+      "publishedAt": "2026-10-17T16:47:00Z"
+    },
+    {
+      "category": "stock",
+      "symbol": "AXISBANK",
+      "headline": "Axis Bank Q2 Net Profit Jumps 38% YoY to ₹7,003 Cr on 52% Plunge in Provisions",
+      "summary": "Axis Bank delivered a 37.6% YoY jump in standalone Q2 PAT to ₹7,003 crore, driven by a 52.2% reduction in provisions to ₹1,694 crore and an 11.8% YoY expansion in NII to ₹15,371 crore. Gross NPA declined sequentially to 1.16% while net NPA improved to 0.35%.",
       "sentiment": "Positive",
       "importance": "High",
       "catalystType": "Earnings",
-      "timeHorizon": "This week",
-      "impact": "Volume-backed surge confirms high-momentum cup/channel breakout, establishing strong structural support for swing continuation above prior resistance.",
-      "sourceName": "Mint",
-      "sourceUrl": "https://www.livemint.com/market/stock-market-news/tech-mahindra-up-7-after-q2-results-dividend-bonus-shares-announced-buy-sell-or-hold-check-target-prices-ratings-11729053229648.html",
-      "publishedAt": "2026-10-16T11:00:00Z"
+      "timeHorizon": "Today",
+      "impact": "Sharp contraction in credit slippages and provisions offers strong short-term momentum to clear recent overhead supply barriers.",
+      "sourceName": "The Tribune",
+      "sourceUrl": "https://www.tribuneindia.com/news/business/axis-banks-q2-profit-jumps-38-as-provisions-fall-52-asset-quality-improves/",
+      "publishedAt": "2026-10-17T14:30:00Z"
     },
     {
       "category": "stock",
-      "symbol": "RELIANCE",
-      "headline": "Reliance Files Red Herring Prospectus for Jio Platforms IPO Opening October 21",
-      "summary": "Reliance Industries Limited (RIL) submitted the Red Herring Prospectus with the ROC Gujarat for the mega public issue of Jio Platforms, scheduled to open on October 21 and close on October 23, 2026. The issue reserves approximately 12% (roughly Rs 2,500 crore) specifically for eligible RIL retail and institutional shareholders on record as of October 14, 2026.",
+      "symbol": "WIPRO",
+      "headline": "Wipro Recommends 1:1 Bonus Share Issue Alongside 21.2% Surge in Q2 Net Profit",
+      "summary": "Wipro reported a 21.2% YoY increase in consolidated net profit to ₹3,208.8 crore for Q2 FY25 on stable operating execution, while approving a 1:1 bonus equity share issue for eligible shareholders subject to approval, funded via free reserves and securities premium.",
       "sentiment": "Positive",
       "importance": "High",
       "catalystType": "Corporate action",
       "timeHorizon": "This week",
-      "impact": "Parent entity value unlocking serves as an immediate support floor for RIL around multi-month demand zones ahead of subscription kickoff.",
-      "sourceName": "Upstox",
-      "sourceUrl": "https://upstox.com/news/market-news/earnings/q2-results-october-16-dlf-pnb-ltm-bajaj-housing-finance-federal-bank-urban-company-others-to-post-earnings/",
-      "publishedAt": "2026-10-16T10:00:00Z"
+      "impact": "The 1:1 bonus issue catalyst sparks high liquidity and retail momentum to challenge upper trendline resistance.",
+      "sourceName": "Mint",
+      "sourceUrl": "https://www.livemint.com/market/stock-market-news/wipro-bonus-issue-it-majors-board-approves-1-1-issue-of-free-shares-record-date-to-be-fixed-soon-11729163273273.html",
+      "publishedAt": "2026-10-17T11:27:00Z"
+    },
+    {
+      "category": "stock",
+      "symbol": "ICICIBANK",
+      "headline": "ICICI Bank Posts 20.1% YoY Surge in Q2 Net Profit to ₹14,843 Cr; NII Up 17.7%",
+      "summary": "ICICI Bank reported a 20.1% YoY increase in standalone net profit to ₹14,843 crore for Q2, beating consensus forecasts. Net interest income jumped 17.7% YoY to ₹25,339 crore, while gross NPA improved to 1.20% and net NPA to 0.30%, though domestic NIM slightly compressed to 4.18%.",
+      "sentiment": "Positive",
+      "importance": "High",
+      "catalystType": "Earnings",
+      "timeHorizon": "Today",
+      "impact": "Market-beating core operating profit and immaculate asset quality position the stock for high-volume continuation above technical pivot resistance.",
+      "sourceName": "Business Standard",
+      "sourceUrl": "https://www.business-standard.com/companies/quarterly-results/icici-bank-q2-net-rises-20-to-14-843-crore-as-provisions-fall-124101900661_1.html",
+      "publishedAt": "2026-10-17T11:23:00Z"
     },
     {
       "category": "stock",
       "symbol": "COCHINSHIP",
-      "headline": "Cochin Shipyard Prepares Rs 6,000 Crore Expansion Drive in Vallarpadam and Thoothukudi",
-      "summary": "Cochin Shipyard is finalising plans for approximately Rs 6,000 crore of capital expenditure across its Vallarpadam (Kochi) and Thoothukudi facilities to expand steel block fabrication, drydock throughput, and hull building capacity. The move follows recent repeat contract wins for luxury cruise vessels and an expanding pipeline of over 40 global merchant vessel construction orders.",
-      "sentiment": "Positive",
-      "importance": "High",
-      "catalystType": "Other",
-      "timeHorizon": "Watch",
-      "impact": "Long-term capex roadmap reinforces revenue visibility for multi-year backlog execution, providing a strong catalyst to build the right side of its corrective base.",
-      "sourceName": "The Economic Times Supply Chain",
-      "sourceUrl": "https://supplychain.economictimes.indiatimes.com/news/logistics-transport/cochin-shipyard-lines-up-6000-crore-expansion-across-kochi-and-thoothukudi/134916896",
-      "publishedAt": "2026-10-14T00:08:00Z"
-    },
-    {
-      "category": "stock",
-      "symbol": "BEL",
-      "headline": "Bharat Electronics Secures Fresh Defence Equipment Orders Worth Rs 533 Crore",
-      "summary": "Bharat Electronics Limited announced via exchange filings that it has secured additional contracts worth Rs 533 crore covering defence communication equipment, radars, encryption devices, and electro-optical assemblies. This raises cumulative new orders for the current fiscal period well above target run rates, fortifying an existing order book exceeding Rs 75,000 crore.",
-      "sentiment": "Positive",
-      "importance": "High",
-      "catalystType": "Order win",
-      "timeHorizon": "This week",
-      "impact": "Consistent incremental order execution offers immediate support to defend the stock's upper consolidation shelf and 50-day moving average.",
-      "sourceName": "BEL",
-      "sourceUrl": "https://bel-india.in/",
-      "publishedAt": "2026-10-13T16:00:00Z"
-    },
-    {
-      "category": "stock",
-      "symbol": "DLF",
-      "headline": "DLF Reports Q2 FY27 Net Profit Up 10% to Rs 1,301 Crore with Pre-Sales of Rs 3,800 Crore",
-      "summary": "DLF reported consolidated net profit after tax of Rs 1,301.35 crore for Q2 FY27, up 10.3% YoY, while operating cash flows came in at Rs 1,858 crore. The developer logged quarterly new pre-sales bookings of Rs 3,800 crore, although revenue from operations dropped 23.3% YoY to Rs 1,260.58 crore due to completed-contract accounting recognition timing.",
+      "headline": "Government Offloads 5% Stake in Cochin Shipyard via OFS; Non-Retail and Retail Windows Closed",
+      "summary": "The Government of India successfully concluded its Offer for Sale (OFS) of up to 1.315 crore equity shares (5% stake) in Cochin Shipyard at a floor price of ₹1,540 per share, raising over ₹2,000 crore. The non-retail tranche was heavily oversubscribed and retail subscription closed with strong participation.",
       "sentiment": "Neutral",
-      "importance": "Medium",
-      "catalystType": "Earnings",
+      "importance": "High",
+      "catalystType": "Ownership",
       "timeHorizon": "This week",
-      "impact": "Accounting revenue contraction despite robust pre-sales creates mixed post-earnings reaction, likely confining price action inside its existing consolidation range.",
+      "impact": "Clearance of the 5% supply overhang near the ₹1,540 floor establishes a defined swing accumulation zone for base building.",
       "sourceName": "Business Standard",
-      "sourceUrl": "https://www.business-standard.com/companies/quarterly-results/dlf-q2-results-net-profit-rises-11-to-1301-cr-revenue-falls-23-126101601362_1.html",
-      "publishedAt": "2026-10-16T13:51:00Z"
-    },
-    {
-      "category": "stock",
-      "symbol": "HAL",
-      "headline": "Hindustan Aeronautics Delivers 2,000th Aero-Engine; Focus Shifts to Aircraft Supply Chains",
-      "summary": "HAL's Koraput division achieved the milestone delivery of its 2,000th aero-engine while advancing capacity expansions for Shakti and AL-31FP engine lines. Concurrently, industry reports noted delivery constraints on the HTT-40 basic trainer program stemming from Honeywell turboprop engine shipments, with management positioning for production acceleration ahead of its November Q2 earnings release.",
-      "sentiment": "Mixed",
-      "importance": "Medium",
-      "catalystType": "Other",
-      "timeHorizon": "Watch",
-      "impact": "Engine milestone confirms long-term execution capabilities, but delivery delays keep the stock in a sideways base-building phase near its 200-day moving average.",
-      "sourceName": "Halldale Group",
-      "sourceUrl": "https://hal-india.co.in/",
-      "publishedAt": "2026-10-16T13:00:00Z"
+      "sourceUrl": "https://www.business-standard.com/markets/capital-market-news/cochin-shipyard-drops-as-ofs-begins-124101600574_1.html",
+      "publishedAt": "2026-10-16T08:00:00Z"
     },
     {
       "category": "stock",
       "symbol": "CGPOWER",
-      "headline": "CG Power to Hold Board Meeting on October 23 to Consider Q2 FY27 Financial Results",
-      "summary": "CG Power and Industrial Solutions notified exchanges that a meeting of its Board of Directors is scheduled for Friday, October 23, 2026, to review and approve standalone and consolidated unaudited Q2 FY27 results. In accordance with SEBI insider trading guidelines, the trading window for designated persons has remained closed from September 30.",
+      "headline": "CG Power Board to Meet on October 21 to Approve Q2 Results and Review Capex",
+      "summary": "CG Power and Industrial Solutions notified exchanges that its Board of Directors will meet on October 21, 2026, to consider and approve unaudited standalone and consolidated Q2 financial results, as the market monitors updates on its greenfield power transformer and OSAT semiconductor expansions.",
       "sentiment": "Neutral",
+      "importance": "High",
+      "catalystType": "Earnings",
+      "timeHorizon": "This week",
+      "impact": "Scheduled Q2 board meeting creates immediate volatility compression and pre-earnings positioning within its multi-week flag pattern.",
+      "sourceName": "Business Standard",
+      "sourceUrl": "https://www.business-standard.com/markets/news/cg-power-industrial-solutions-ltd-announcements-bse-124101401314_1.html",
+      "publishedAt": "2026-10-14T12:00:00Z"
+    },
+    {
+      "category": "stock",
+      "symbol": "HAL",
+      "headline": "Government Grants Prestigious Maharatna CPSE Status to Hindustan Aeronautics",
+      "summary": "The Ministry of Finance and Department of Public Enterprises officially upgraded Hindustan Aeronautics Limited (HAL) to Maharatna status, making it the 14th CPSE to receive this distinction. The status empowers HAL to undertake strategic investments and joint ventures up to ₹5,000 crore without prior government sanction.",
+      "sentiment": "Positive",
+      "importance": "High",
+      "catalystType": "Regulatory",
+      "timeHorizon": "This week",
+      "impact": "Heightened capital allocation autonomy expands international JV prospects and accelerates institutional base accumulation.",
+      "sourceName": "Press Information Bureau",
+      "sourceUrl": "https://pib.gov.in/PressReleaseIframePage.aspx?PRID=2064615",
+      "publishedAt": "2026-10-14T08:11:00Z"
+    },
+    {
+      "category": "stock",
+      "symbol": "LTIM",
+      "headline": "LTIMindtree Q2 Net Revenue Up 13.6% YoY; Declares ₹25 Interim Dividend as AI Work Expands",
+      "summary": "LTM reported Q2 consolidated revenue of ₹11,807.6 crore (up 13.6% YoY) and an interim dividend of ₹25 per share. While enterprise and business AI revenues surged 47% YoY, overall net order inflow eased sequentially to $1.26 billion, leading to a flat net profit of ₹1,398 crore.",
+      "sentiment": "Mixed",
       "importance": "Medium",
       "catalystType": "Earnings",
       "timeHorizon": "This week",
-      "impact": "Pre-earnings volatility contraction typical of late-stage base structures; breakout confirmation hinges on margin durability and order backlog updates on October 23.",
-      "sourceName": "BSE India",
-      "sourceUrl": "https://www.bseindia.com/stock-share-price/cg-power-and-industrial-solutions-ltd/cgpower/500093/",
-      "publishedAt": "2026-10-14T09:23:00Z"
+      "impact": "Resilient AI-led revenues against slowing order bookings suggest rangebound swing trading between key moving average boundaries.",
+      "sourceName": "The Economic Times",
+      "sourceUrl": "https://economictimes.indiatimes.com/tech/information-tech/ltm-profit-dips-marginally-revenue-up-13-6-yoy/articleshow/134709403.cms",
+      "publishedAt": "2026-10-16T17:09:00Z"
+    },
+    {
+      "category": "stock",
+      "symbol": "BEL",
+      "headline": "Bharat Electronics Backlog Bolstered by Fresh Order Inflows and Safran HAMMER Venture",
+      "summary": "Bharat Electronics Limited announced fresh order wins amounting to over ₹533 crore spanning naval systems, radar upgrades, and communication sets, pushing its order book beyond ₹74,500 crore, alongside execution progress on its Safran JVA for local production of HAMMER precision weapons.",
+      "sentiment": "Positive",
+      "importance": "Medium",
+      "catalystType": "Order win",
+      "timeHorizon": "This week",
+      "impact": "Steady incremental order cadence keeps the stock respecting support along its 50-day moving average.",
+      "sourceName": "Bharat Electronics Limited Filings",
+      "sourceUrl": "https://bel-india.in/news/",
+      "publishedAt": "2026-10-13T10:15:00Z"
     },
     {
       "category": "stock",
       "symbol": "TRENT",
-      "headline": "Trent Q2 Standalone Revenue Expands 23% YoY to Rs 5,788 Crore as Zudio Hits 1,000 Stores",
-      "summary": "In its pre-results corporate update, Trent reported a 23% YoY rise in Q2 FY27 standalone operating revenue to Rs 5,788 crore, compared to Rs 4,724 crore a year prior. The company achieved a landmark store count milestone during the quarter as Zudio opened its 1,000th store, bringing Trent's aggregate store portfolio to 1,342 locations. The board meeting for formal Q2 result adoption is scheduled for October 29, 2026.",
+      "headline": "Trent Board Meeting Set for October 29 Following Strong 22.5% Q2 Revenue Growth Update",
+      "summary": "Trent Limited scheduled its board meeting for October 29 to consider Q2 results after issuing a robust quarterly business update showing standalone revenue grew 22.5% YoY to ₹5,788 crore, with 30 net new fashion stores added to push total store count to 1,342.",
       "sentiment": "Positive",
       "importance": "Medium",
       "catalystType": "Guidance",
       "timeHorizon": "Watch",
-      "impact": "Demonstrated top-line resilience provides underlying support, keeping the stock anchored above swing support as traders eye the formal October 29 earnings print.",
-      "sourceName": "India Infoline",
-      "sourceUrl": "https://www.indiainfoline.com/news/companies/trent-share-price-stock-jumps-11-as-q2-revenue-rises-23-goldman-sachs-raises-target-126100600122_1.html",
-      "publishedAt": "2026-10-06T06:10:00Z"
+      "impact": "Strong volume throughput eases square-foot productivity concerns, setting up a high-level consolidation breakout attempt ahead of October 29.",
+      "sourceName": "The Economic Times",
+      "sourceUrl": "https://economictimes.indiatimes.com/markets/stocks/news/trent-surges-13-to-2-year-high-after-strong-q2-update/articleshow/134444539.cms",
+      "publishedAt": "2026-10-07T05:30:00Z"
+    },
+    {
+      "category": "stock",
+      "symbol": "JIOFIN",
+      "headline": "Jio Financial Q2 Consolidated Revenue Jumps 73% to ₹1,699 Cr Amid Business Expansion",
+      "summary": "Jio Financial Services posted a 73.1% YoY surge in consolidated revenue to ₹1,699.28 crore for Q2, while consolidated net profit fell 51% YoY to ₹340.44 crore due to higher operational investments, employee scaling, and upfront buildout expenses across lending and payments.",
+      "sentiment": "Mixed",
+      "importance": "Low",
+      "catalystType": "Earnings",
+      "timeHorizon": "Watch",
+      "impact": "Aggressive top-line scaling tempered by margin absorption keeps price action anchored within a wide horizontal base.",
+      "sourceName": "NDTV Profit / PTI",
+      "sourceUrl": "https://www.ndtvprofit.com/earnings/jio-financial-services-q2-fy27-results",
+      "publishedAt": "2026-10-15T13:28:00Z"
     }
   ],
-  "disclaimer": "Alpha Swing AI is a financial news aggregation and market analysis service for educational and analytical purposes only. We are not a SEBI-registered investment advisor or research analyst. No content in this report constitutes investment advice, trade recommendations, or price targets. Swing trading involves significant risk of loss; always execute your own risk management and consult a licensed financial advisor.",
-  "sources": [
-    {
-      "title": "economictimes.com",
-      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQETJgiVQ1mRksyqaN18P2EOYim5AEs_6UiKCUc-f4HrYVONSS2dcHlFtVUfrFfpMRmZhLJl9qYE3Il_hDZihjegGEiq-353Yh6nLVjXwYlcxWP1-bbnmg9QPeA1_t63VR1Lb1F38hOXG1cygKoQzoTm6XxwvEaQ8rMaiBsFOrOB2bnEscpCaXkNdpDGGf9uoWgggqd2WpuCJe6DDFKMn4d5oAfqxnEf8iNArXVeyxga7y5rhCGxpuHMx96u5noF_6TWUm0id4Tow_YYlBdQHfdvRyerte9F"
-    },
-    {
-      "title": "financialexpress.com",
-      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF18VueBgsoP2o0aary5g9fJHGHNkVwKtuOIBHjrJi4LCfaQ8jtYfzvNGTgGFznqf5IkZMG6rqrKpR3JDnfw3kEsy6TT-cxJQ9HH6PxSb0qslI6cDs08DjyeqC21ZntCfzoMFee5JZuNgu7z5bwroja9vM6xTpXj8FnvWrstX3oh062Zq1RSox9c3F2OrF0XHc7LjsPk3V7Or28JSaywo9nOtolFGjxnMHfIrNhexgaV8gCtTWMVDZ6rFKdofUO8N4="
-    },
-    {
-      "title": "hdfc.bank.in",
-      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGPrUcGKt4sDq1-Vf5zSw0Rk49Rs_EcEnCh-LPD9i9vABxuq3suPXIfyz-XGUuTqyVgFi41KL-dDSoCirZouRQVTLGMpPuV0DNwkTfBnb621NoYBbPXHEkLdzwLZQWmNN1DmES736eVgCV0V1ffnuWrCPy6pbyojLyjg8njmy8MljqeRFUBfrS3zi6PLWJr6mBMeSxTR6bcsZZ6ZaTfV2z3aROzqCBKlfUDyiAFSHsGBHkjEH31dL94bcvR6dU="
-    },
-    {
-      "title": "livemint.com",
-      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHelwKD9HYpNDpu3X6JyjVcjz9qBKVLftBsJurK9_vzSMlBBt4qe6DQpbZiH_7fIKBr-MMDHegVbLjg1EOrhrOMr6FjtGlDNaBApQqd3xx9ujsyAUPzATLVYswF0DqsazMcrAGLWP8sks2PIWu_B3m3p_MTTc0FlLLWSie-rfS5t5VJhBlcEElkFpxGT_IsgIBgzKwG-_mPuu1pyacEeCMhaEbr-pt1AMUv1qU8kY9wwbUcn-WMWjcr8leVT53IRqFpD5xRNBVbM3IqNNN2eZaTeTx3zsohvSNLPhaQlO8ynmyi3QRNNzOEwt1bp04="
-    },
-    {
-      "title": "business-standard.com",
-      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGXofa_f4osk9IEd9M4d2w4oo42ZQsz3HjEYQyq851uE7DNBLptelD9MOc7EMe5GRRzp0MdjZcA7DAeB1qLF7TC7aKLh-mOR6WixYr9bN1eqfMdXjQVMTUIyukmJ1EufUI34F1cr272QmjLVzkA66d8r45fHkLUwf4Ey0bn2Bu9QCh6O07fu1AlLQh7LwflAEX73pNaEg205yKoWTHgGYydqn_Ac_h4iDiVgOz2T-Wr_N4D5iw9IhTWaIZVABwBtYT4BQEWbQ7UdtsbK-aaOluqTK2UXTEIcoYQnAkHgYkYaifAItk="
-    },
-    {
-      "title": "ndtvprofit.com",
-      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHpLt5VaCp1I-6wM_DG2c79q8xyjtY4rutXEv_GulLXfQ_5Hu8NVRwY_OPHlsq0RCuY0ZGmJrhT844Tl-c_wuIdz5btKmmzerdNVJ70OJFx7hdxxLJrVN_xxrcdgg18amfC5250pk1N0v_lqfJGiY8Cw1ix33CE1vuFXMGBgyBrQPo54gqJxSPeH7Qna_sAbMCS4XMn1GTChYO0i2CI86MgOtAxPnAJuNHL7cHuVYh978lea84R2U9RVmL2IcpmPHLaj2r5SXlBslghXJguJA8ZiLF-R0PrTUgQxNi1yFjHoOZVamtZcnU="
-    },
-    {
-      "title": "tradingview.com",
-      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGpX-YBjYqIwoC7JruPs3TSGjV6xI76jM7Z3PcIO81jbhoOxx5OcRlhv8xDBklrsIuVEKoY3r_SqoCISt3511hBaMW5nBQpjb6WnUF1vUJGOokEf-pcgoddiEjkhCpW7bqOqb57JjmBCBxp7KGjzll05CmDp4azEec_h9loDHP05N-5sjKv3mPWfxJ5o5iSSYjNokPqvUBFLO6k9392yHTa-YW8nQQbC-yozYbCWzQZmxDHLHL-nW29jlbxKnPnEj216-oRtKAv7b8IRI-0kOuptkYoLnUVe_ZBQA=="
-    },
-    {
-      "title": "upstox.com",
-      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFfFzfoxVJqWpP7H5qZ0ycD0gYkt9AZ7-5CvRJWcMsOZ2C_a1O7GNcVNIcj5bnpQKIeGsBvKvTEqa3SYT74pwhcoH4iz4zlBSP9fH3RlxHQwXmxSzgIaGPYQdjLWHF-_vgc0lqucx8q9u3zs4tIg9Jqcd2IwtnIuV7LY8nymZ4g-tgkvY7-3XLqyr1nU-TUkDdVVlUiSgOy754EEs_A6POheBNlN2QTPACo7FnpOXXH9YAsr7zoEMIsJgzBJsvJaH7XKoB-BXsXnpuSy3--GIwo8XQmbWO0wnFqSVKNEWc="
-    },
-    {
-      "title": "trendlyne.com",
-      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEBg0xp_fVD0kZnGwDkWetskYpT5Zjy_s6zp4B8fahvzbO3qF6p6hCHRDbjt-FWkdBo4dGWN9Vpo6ckzoBUCbepICAQz2Giv40wD6meTLx0ZHfL9mM0Cw1T2CghiuIY2B993wbLRDKeKqhYycOiI27TAStN4Zyhba1Xi9-MhwoV3pC2u9iAkkDMkx9UfYZlhpgYv6jVPouV7kVl-mU0TPrxjS2CtzkQUUkspXpawxtlUAD0B0N6vwhK_niFj9vv"
-    },
-    {
-      "title": "bel-india.in",
-      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFySPIOYn4OOSz9UCEs6XvSdzdTIHbY3vDqskqPZ8sN0HylRe2utewHYkFmPjJtVecdR-MoqKGGatI3--PQfiNvE6Q4DWNx_r5K4NjYE2Z6lw=="
-    },
-    {
-      "title": "sahi.com",
-      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFpYbzeQRJLLzIa6E0NAyUIl1jJY2oKsLjB2A7bPS7-1LINWWUZYr-Ogi-krXp0tMarEvdEk_pMyC2uQJTGLfR-2lVX2bdZUN3eZ2sxkf3iHHDE6DbragxZ3w9kZMjEXZpiRRBQ_Imzbq1TI3pCgCKW4iOovrlszfFm0wTKCTUCc3AqwEap6LaNusJ_eZ6jhGVWu8vouh6r9lpDtTKd9JqUhMzg9oc5mfXilBQlbmma"
-    },
-    {
-      "title": "indiatimes.com",
-      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHx2ObwfQcs7Q5JEhGtM5kDUg3jmTz7h0TUPDFjOU0dkIm-aC2OPP_SR-ZbIdr-ctE1jEpsQdWyR-yRe_rfc6GshbjGKLOtQ4K5kgZN4LteN37vEzGcvVCFxJEftDn-vv_F7lv73uC6fPJxkxoKrzqgyEVGoLT4ZT-ZmDIGj3ofHkHi0OqNjvkUo9tO5tpEHAcmH2Giz7OTpBDD-SffasKxVmLlMl37Hvnv8sbkw46OTujGYm6FUEblwXNlsL0ZTTh6D3Fwjf9mlB1L86ep1XKr8g2u4RjtRL0yjenI7ca8I5w7wMmUIHB3Zxp5c3Nr3O33wb1qaRkYYjwc0hg2rU1EIlLmBq93sw=="
-    },
-    {
-      "title": "rediff.com",
-      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH9P7OjfM-5fRdyJLTrjadymZ0CNwMTEMY0Gja6IwFRybIQBAkKrjWtYdkBtXpXcuLqAwCJ4w6KUAHSVDjsRsJRr7X2tOiXXaND61Bu6gTiLM6DtNg6irwzYZw6KpWwc6DuWqxobZOaKXbFWhlhSEMkQFVVVLkhJbHhQixLmMhqM7IJ9-MhidoBs3QIVKXoq-KE5MEyiztkV30qYDWx1A5QoQ6Mtg=="
-    },
-    {
-      "title": "tradingview.com",
-      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH-1Bk4BochQTiUhTAp3iIO2WmSREvJEkJNaHtv51achbxfZLf1tvIxQv3_uLj4g12uRv2NA0zvJYhmi3Sg67S_QVElpFsHB4xKNaqyL1Q6v_JxR84P0UfYHmSp2vvGfCX6SaN3d0xCQhUM7KRaKg=="
-    },
-    {
-      "title": "economictimes.com",
-      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEyAjplQZ7eLJclNJ47ZE-v1vPqEgtqfrFkB6189xONUaxtQytPyyDNl4TQArLabjMJ2yU_xwtzSCjBEILjVVYWoTaKe2tgHZvQrJuQEopvgBcUQ42tXrccAYG8qleeB0n7pjWwzeDkw8By9RCIja2FXo8LuEV0P6xfbIcnqx1mp0H3YPwujbXCd7kthZB6DkfljAx3_zBWM6Eo-BOWhUdqB6oPtLPvxiQuCa1LAMePH_qVtrYB-WQ4q-VSX1-drorCugPr80-NBQRLq3QPVqt-3ezN"
-    },
-    {
-      "title": "urjaglobalinvestment.com",
-      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFRy-u2Dqn9mIWWcCKVLbf0vCfKkzk9PY_laSw_LTGcGSIxIwOwKQd5TllvsztRrjoEGtnZG5L67Xux_7LKZjRczvizjOZSjeAM3lHfp7OXfpHnYwA2h2Zz2AmUbyReNc0eXV5FCGfbyEDPlC0bGWM="
-    },
-    {
-      "title": "cholasecurities.com",
-      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGr7Ur_srxCmydP67sOZnZicO9pNHcs3wsDzI1BweKxUIQPJguY9JFQS2n9WXcw6TDO9yhF0bCZCBKSuGPvDoezUV3QANqDmUchtILDDJgxse4T965kZd1rXVL_mLlsnsG2mtLILKAIsQ3afn6uiP2i_Fqz6F3i25vz8Wbv_2aDWDoKuY0NBKXA3rw="
-    },
-    {
-      "title": "bseindia.com",
-      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGyD8Eyt_gUrdZfiC5lZ4lnKyIGK0dPxFsDeJtyMsBf3iPoI8Ejl7VU2cjGLlyDn_fBCUMW_q8RN5LpjoWZ8suDUm_Di6GxTuWoL8KDPpC-93dM3XwFq7sofOi2UWzGMc_3wYmufGEpRH96txxQ_dMK-bDUm-5SHBcvd5BkGaygXUmYNxseGl_mofJYop7kaKyihQQQRWvj0C3H11dbeazOhPw5Iz5UbZA="
-    },
-    {
-      "title": "youtube.com",
-      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE1we5AlUvmq6AqYWHcrjZ_mJfnX8yvZ4EZgvAZG-ejLqeAG_t4AQc55WfjrQbqLud4rIAbnkT9VI1hHpWWDJ15GC4-VxTx3PA_PIMcndeDMJDwOttfDvESuI74KvGa4KV3"
-    },
-    {
-      "title": "halldale.com",
-      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFadWb8j81eaLU-bG8mHvOF483BN3Kfjyilz89KkGN94_N3Ncevyt0MGfkpaTKHiONFkYiwnEP4yQf7A6pmdBXCVsN4MXQtV8wiQ3Z4IwTdvb_7gCLwpoWR3ZqjyuWbHBvkDBci9Mv2CTwXiI9kyEg__GGhntneVTUaOEy14OHGApO-oxffmcSevw=="
-    },
-    {
-      "title": "perplexity.ai",
-      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGTT49-sjxlmfMSQc4ZbLKZo0xOB7vtpvBggGjJMRnfb8komJvjZ1SOWxis9JETsH-KeDvAocRgTu30ZYZBl7i6W66H7K2-8Pqo9LnTKWpFJUVDhP2rkeogCF35Zcuf277BMkIPiP2FD33kRh46q3BCEucJJHn0MkX0UgbWarMP3LvS0G43J0cBHfwdsO530UFL0TTB"
-    },
-    {
-      "title": "investing.com",
-      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHsgko8ZrD32Y6JKp7GluJ06jmpmvOnilxpC6GNSzWmusVKOQ9m0Par1ad-lJh18i3gt9ttP2C3SmOAfAIm8VnlUDdGQcG7_GoJlVJgSGDCdT6sQXOJqXVZ6fe4JtyADAYC7DhnMOhNnCx2URbdWRjnWNQ_sAEOQRHwNtU7EC4Bx2GtdyPLrbaSrG4goXlorTFa9pPdM5mkGOwA1XpBZ6nlH_fdNFP4cYlCC3lfwwro"
-    },
-    {
-      "title": "indiatimes.com",
-      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE6VxWQ3iq80mxUKPRZppopvtCuGy3gGpB3jg4NwDwwC5AwaupD6r1H5doW4qePIg0w5t2uHD0bze5PHLG6KfEKITYIv_3H9TNoINxuYnODDbkoITlLEi4bM8g5hOVzZdlxa69P9HRfDFFDfC0i1j86c7WFYcZrpKOSXWrcqBuFuPmh09Esu_9neRUHbvzsaMGXN_La9qpKHSWseHYhId3r9ixLBRZXnesWdxC6tG0j-End"
-    },
-    {
-      "title": "tradingview.com",
-      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG0hqxc84FocbqzPbAcyUoc7Vek9imOwanVDWS5mN6s94vWRGRQmwqeRSjT41tWWCMfjfrNMuRsvH1ZoTdQig4oePa0pX7pXioIbkGw1LFsu-Wzc5jme0kwKYqk6uiUhVdCFOHnKy5YfGuDK49F"
-    },
-    {
-      "title": "business-standard.com",
-      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH_27rPXkUScYZaedVkPUsqxetQcu4YQKAvbcH3DF3Dn15pWKcl_NGIGF7K2tjjvMAYQd5dSYUkQabqFOEbqbIbSHRwSzW1gIX_GNKDQZleG8GDZCOKotTEYNXVl5S2NaM7l8nH7EqpzJ8TI3Ik1w0tg30gMaquZO9DP1DmTAU4qW7Jqg3Vr9SleabjSyoTEK0zOHM6L9OLCGYdYPRyQTxjmRAY4wuRzxP8M1ktzf2d8Z7geIx2waD4UhHIg94BRoN5xBLQf915DLPO"
-    }
-  ]
+  "disclaimer": "Alpha Swing AI provides financial market intelligence and analytical commentary for educational and swing-trading workflow evaluation only. Nothing contained herein constitutes investment advice, financial guidance, or an offer or solicitation to buy or sell any security. Market participants must assess their own risk tolerance and conduct independent due diligence before initiating positions.",
+  "sources": []
 }
