@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-19T08:54:47.618Z",
+  "generatedAt": "2026-10-19T16:39:24.663Z",
   "sessionDate": "2026-10-19",
   "status": "ready",
   "scanGeneratedAt": "2026-10-18T14:56:05.979Z",
@@ -238,14 +238,110 @@
     }
   ],
   "previousSession": "2026-10-18",
-  "intelligenceGeneratedAt": "2026-10-19T08:53:33.092Z",
-  "commentary": null,
-  "commentaryStatus": "unavailable",
+  "intelligenceGeneratedAt": "2026-10-19T16:28:12.737Z",
+  "commentary": "With market gate WEAK, breadth deteriorating to 40, and Nifty tumbling 1.11% with 41 declining issues against 9 gainers, general market discipline demands immediate defensive posturing. Stan Weinstein and William O'Neil both emphasize that three out of four stocks follow the market trend; when distribution hits the indices, leading breakout rates collapse. Minervini's progressive exposure rules dictate halting new risk commitments, tightening protective trailing stops, and holding elevated cash until index distribution subsides. High volume near pivots must be treated with utmost skepticism until market direction re-aligns with institutional accumulation.",
+  "commentaryStatus": "available",
   "limitations": [
     "Daily scan observations are not fills or performance results.",
     "Price levels are scanner references, not live quotes.",
     "No broker orders are submitted."
   ],
+  "model": "gemini-3.8-flash",
+  "analysis": {
+    "analyst": "Minervini SEPA, O'Neil CANSLIM & Weinstein Stage Analysis",
+    "bySymbol": {
+      "21STCENMGM": {
+        "stage": "Stage 1 base",
+        "technical": "Attempting a Stage 1 base breakout clearing 20-day highs on 2.59x volume, trading above EMA21, SMA50, and SMA200. However, overhead supply remains dense.",
+        "epsGrowth": [
+          "Q1 FY27 Turned Positive",
+          "Q4 FY26 Loss",
+          "Q3 FY26 Loss"
+        ],
+        "revenueGrowth": "-9.6%",
+        "earningsTrend": "Negative",
+        "growthQualified": "No",
+        "fundamental": "Turned marginally profitable at ₹9.14 Cr after consecutive quarterly losses. Negative top-line contraction and erratic cash flows fail CANSLIM investment-grade institutional sponsorship tests.",
+        "verdict": "Avoid",
+        "risk": "Fails below 42.72 pivot low; micro-cap illiquidity risks severe slippage on adverse volume gaps."
+      },
+      "63MOONS": {
+        "stage": "Stage 1 base",
+        "technical": "Forming a multi-month double bottom base below 958.91 neckline. Moving averages align positively above SMA200 with RSI at 62, yet breakout volume confirmation remains absent.",
+        "epsGrowth": [
+          "Q1 FY27 Negative",
+          "Q4 FY26 Negative",
+          "Q3 FY26 Negative"
+        ],
+        "revenueGrowth": "+351.6%",
+        "earningsTrend": "Negative",
+        "growthQualified": "Partial",
+        "fundamental": "Despite triple-digit headline sales growth from software segment expansions, operating profitability remains deeply negative with persistent quarterly net losses, violating O'Neil's C-criterion.",
+        "verdict": "Watch",
+        "risk": "Pattern breaks below 870.85 swing low; exit immediately if selling volume accelerates."
+      },
+      "AAREYDRUGS": {
+        "stage": "Stage 2 advancing",
+        "technical": "Cleared 20-session resistance into new 52-week highs with RSI at 70, retaining trend alignment above rising EMA21, SMA50, and SMA200.",
+        "epsGrowth": [
+          "Q1 FY27 -25.6%",
+          "Q4 FY26 -18.2%",
+          "Q3 FY26 +12.0%"
+        ],
+        "revenueGrowth": "-56.3%",
+        "earningsTrend": "Decelerating",
+        "growthQualified": "No",
+        "fundamental": "Severe top-line contraction (-56.3% YoY) and falling net profit margins contradict price momentum. Low ROCE (5.6%) and weak institutional interest preclude leadership status.",
+        "verdict": "Watch",
+        "risk": "Thesis invalidates below 100.50; trailing stops must be kept tight given negative earnings momentum."
+      },
+      "AARTIIND": {
+        "stage": "Stage 2 advancing",
+        "technical": "Consolidating constructively within 1.5% of 552.30 pivot. Price holds firmly above SMA50 and SMA200 with volume expanding to 2.23x on test attempts.",
+        "epsGrowth": [
+          "Q1 FY27 +48.0%",
+          "Q4 FY26 +18.2%",
+          "Q3 FY26 -15.4%"
+        ],
+        "revenueGrowth": "+41.0%",
+        "earningsTrend": "Accelerating",
+        "growthQualified": "Partial",
+        "fundamental": "Operational turnaround underway as EBITDA surged 79% YoY on specialty chemical export normalization. Margin expansion supports the recovery, though leverage remains elevated.",
+        "verdict": "Constructive",
+        "risk": "Setup fails on breach of 513.66 support; sell into market weakness if pivot rejection confirms."
+      },
+      "AIIL": {
+        "stage": "Stage 2 advancing",
+        "technical": "Coiling tightly within 1.5% of 608.31 pivot on 4.10x volume surge, sustaining positioning above key moving averages with RSI 56 showing low volatility.",
+        "epsGrowth": [
+          "Q1 FY27 +17.7%",
+          "Q4 FY26 -63.2%",
+          "Q3 FY26 -78.9%"
+        ],
+        "revenueGrowth": "+20.9%",
+        "earningsTrend": "Accelerating",
+        "growthQualified": "Partial",
+        "fundamental": "Significant quarterly net profit inflection to ₹1,110 Cr with revenue up 20.9% YoY. Strong historical ROE (27%) is counterbalanced by equity MTM volatility and regulatory scrutiny.",
+        "verdict": "Constructive",
+        "risk": "Violates structure below 576.89 stop; close out rapidly if NBFC industry selling pressure spreads."
+      },
+      "AJMERA": {
+        "stage": "Stage 2 advancing",
+        "technical": "Stage 2 continuation breakout crossing 131.96 resistance on massive 5.68x volume expansion, backed by RSI 67 and positive MACD histogram alignment.",
+        "epsGrowth": [
+          "Q1 FY27 +12.5%",
+          "Q4 FY26 +14.2%",
+          "Q3 FY26 +8.1%"
+        ],
+        "revenueGrowth": "+22.7%",
+        "earningsTrend": "Steady",
+        "growthQualified": "Partial",
+        "fundamental": "Consistent residential execution driving 22.7% top-line growth with moderate debt-to-equity. However, sub-25% EPS growth holds it back from elite CANSLIM leadership designation.",
+        "verdict": "Constructive",
+        "risk": "Invalidated on a reversal below 122.50 base pivot; enforce strict loss-cutting discipline."
+      }
+    }
+  },
   "history": [
     {
       "sessionDate": "2026-10-13",
