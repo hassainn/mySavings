@@ -1,44 +1,197 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-20T14:20:28.056Z",
+  "generatedAt": "2026-10-20T16:02:28.071Z",
   "sessionDate": "2026-10-20",
   "status": "ready",
-  "scanGeneratedAt": "2026-10-19T17:48:29.677Z",
+  "scanGeneratedAt": "2026-10-20T16:02:10.712Z",
   "gate": "WEAK",
-  "breadthScore": 40,
+  "breadthScore": 23,
   "verdict": "No new buys. Observe and protect capital.",
-  "ideas": [],
+  "ideas": [
+    {
+      "symbol": "21STCENMGM",
+      "name": "21st Century Mgmt Service",
+      "pattern": "20-day breakout",
+      "confidence": 99,
+      "state": "Watch",
+      "scanState": "Triggered",
+      "asOf": "2026-10-19T00:00:00+05:30",
+      "close": 48.45,
+      "entryTrigger": 46.56,
+      "stop": 42.56,
+      "target2R": 54.55,
+      "evidence": [
+        "Price above EMA21, SMA50 and SMA200",
+        "Close cleared the prior 20-session high",
+        "1.89× 20-day average volume",
+        "MACD is above signal and zero line"
+      ]
+    },
+    {
+      "symbol": "AAREYDRUGS",
+      "name": "AAREY DRUGS & PHARM LTD",
+      "pattern": "20-day breakout",
+      "confidence": 99,
+      "state": "Watch",
+      "scanState": "Triggered",
+      "asOf": "2026-10-19T00:00:00+05:30",
+      "close": 113.87,
+      "entryTrigger": 113.61,
+      "stop": 102.59,
+      "target2R": 135.66,
+      "evidence": [
+        "Price above EMA21, SMA50 and SMA200",
+        "Close cleared the prior 20-session high",
+        "New trailing-year price high",
+        "MACD is above signal and zero line"
+      ]
+    },
+    {
+      "symbol": "ATL",
+      "name": "Allcargo Terminals",
+      "pattern": "Double bottom",
+      "confidence": 99,
+      "state": "Watch",
+      "scanState": "Armed",
+      "asOf": "2026-10-19T00:00:00+05:30",
+      "close": 27.88,
+      "entryTrigger": 29.53,
+      "stop": 26.58,
+      "target2R": 35.43,
+      "evidence": [
+        "Price above EMA21, SMA50 and SMA200",
+        "1.78× 20-day average volume",
+        "RSI 67 supports momentum without extreme extension",
+        "MACD is above signal and zero line"
+      ]
+    },
+    {
+      "symbol": "AUSOMENT",
+      "name": "Ausom Enterprise",
+      "pattern": "Near breakout",
+      "confidence": 99,
+      "state": "Watch",
+      "scanState": "Armed",
+      "asOf": "2026-10-19T00:00:00+05:30",
+      "close": 161.25,
+      "entryTrigger": 166.76,
+      "stop": 149.34,
+      "target2R": 201.59,
+      "evidence": [
+        "Price above EMA21, SMA50 and SMA200",
+        "Within 1.5% of the 20-session pivot",
+        "2.76× 20-day average volume",
+        "MACD is above signal and zero line"
+      ]
+    },
+    {
+      "symbol": "AVADHSUGAR",
+      "name": "Avadh Sug & Energy",
+      "pattern": "Double bottom",
+      "confidence": 99,
+      "state": "Watch",
+      "scanState": "Armed",
+      "asOf": "2026-10-19T00:00:00+05:30",
+      "close": 987.55,
+      "entryTrigger": 1024.17,
+      "stop": 923.01,
+      "target2R": 1226.5,
+      "evidence": [
+        "Price above EMA21, SMA50 and SMA200",
+        "MACD is above signal and zero line",
+        "Two aligned swing lows with neckline pressure",
+        "Flagpole advanced 101% then paused in a tight 14% flag"
+      ]
+    },
+    {
+      "symbol": "BIL",
+      "name": "BHARTIYA INTERNATIONAL",
+      "pattern": "Double bottom",
+      "confidence": 99,
+      "state": "Watch",
+      "scanState": "Armed",
+      "asOf": "2026-10-19T00:00:00+05:30",
+      "close": 1057.65,
+      "entryTrigger": 1151.15,
+      "stop": 1058.41,
+      "target2R": 1336.62,
+      "evidence": [
+        "Price above EMA21, SMA50 and SMA200",
+        "RSI 61 supports momentum without extreme extension",
+        "Two aligned swing lows with neckline pressure",
+        "Long lower wick shows rejection from the session low"
+      ]
+    },
+    {
+      "symbol": "CEIGALL",
+      "name": "CEIGALL INDIA LIMITED",
+      "pattern": "Near breakout",
+      "confidence": 99,
+      "state": "Watch",
+      "scanState": "Armed",
+      "asOf": "2026-10-19T00:00:00+05:30",
+      "close": 393.8,
+      "entryTrigger": 396.4,
+      "stop": 369.5,
+      "target2R": 450.18,
+      "evidence": [
+        "Price above EMA21, SMA50 and SMA200",
+        "Within 1.5% of the 20-session pivot",
+        "RSI 63 supports momentum without extreme extension",
+        "MACD is above signal and zero line"
+      ]
+    },
+    {
+      "symbol": "CRAFTSMAN",
+      "name": "Craftsman Automation",
+      "pattern": "Double bottom",
+      "confidence": 99,
+      "state": "Watch",
+      "scanState": "Armed",
+      "asOf": "2026-10-19T00:00:00+05:30",
+      "close": 11158,
+      "entryTrigger": 12011,
+      "stop": 11349.71,
+      "target2R": 13333.57,
+      "evidence": [
+        "Price above EMA21, SMA50 and SMA200",
+        "RSI 64 supports momentum without extreme extension",
+        "MACD is above signal and zero line",
+        "Two aligned swing lows with neckline pressure"
+      ]
+    }
+  ],
   "cautions": [
     {
-      "symbol": "EBGNG",
+      "symbol": "JUSTDIAL",
+      "reason": "20-day breakout"
+    },
+    {
+      "symbol": "GABRIEL",
+      "reason": "Near breakout"
+    },
+    {
+      "symbol": "LIQUIDADD",
+      "reason": "Power trend (3-up)"
+    },
+    {
+      "symbol": "LIQUIDSHRI",
+      "reason": "20-day breakout"
+    },
+    {
+      "symbol": "HAL",
+      "reason": "Near breakout"
+    },
+    {
+      "symbol": "FINEORG",
       "reason": "Double bottom"
     },
     {
-      "symbol": "AVTNPL",
+      "symbol": "VALIANTORG",
       "reason": "Double bottom"
     },
     {
-      "symbol": "MODIS",
-      "reason": "Double bottom"
-    },
-    {
-      "symbol": "DHAMPURSUG",
-      "reason": "Double bottom"
-    },
-    {
-      "symbol": "GROWWLIQID",
-      "reason": "SEPA breakout"
-    },
-    {
-      "symbol": "AURUM",
-      "reason": "Double bottom"
-    },
-    {
-      "symbol": "BHAGERIA",
-      "reason": "Double bottom"
-    },
-    {
-      "symbol": "LOKESHMACH",
+      "symbol": "JAYNECOIND",
       "reason": "Double bottom"
     }
   ],
@@ -46,17 +199,17 @@
     {
       "symbol": "21STCENMGM",
       "previousState": "Watch",
-      "observation": "No newer scan observation; outcome unknown."
+      "observation": "Latest scanned close 48.45; scanner state Triggered. This is not an executed trade or an intraday stop/target check."
     },
     {
       "symbol": "63MOONS",
       "previousState": "Watch",
-      "observation": "No newer scan observation; outcome unknown."
+      "observation": "Latest scanned close 912.6; scanner state Armed. This is not an executed trade or an intraday stop/target check."
     },
     {
       "symbol": "AAREYDRUGS",
       "previousState": "Watch",
-      "observation": "No newer scan observation; outcome unknown."
+      "observation": "Latest scanned close 113.87; scanner state Triggered. This is not an executed trade or an intraday stop/target check."
     },
     {
       "symbol": "AARTIIND",
@@ -76,17 +229,17 @@
     {
       "symbol": "APOLLO",
       "previousState": "Watch",
-      "observation": "No newer scan observation; outcome unknown."
+      "observation": "Latest scanned close 423.8; scanner state Armed. This is not an executed trade or an intraday stop/target check."
     },
     {
       "symbol": "ATL",
       "previousState": "Watch",
-      "observation": "No newer scan observation; outcome unknown."
+      "observation": "Latest scanned close 27.88; scanner state Armed. This is not an executed trade or an intraday stop/target check."
     }
   ],
   "previousSession": "2026-10-19",
   "intelligenceGeneratedAt": "2026-10-20T14:18:46.482Z",
-  "commentary": "With market breadth deteriorating to 40 and the deterministic gate registering WEAK, capital preservation takes precedence over aggressive deployment. Stan Weinstein's stage discipline warns that when benchmark indices experience distribution and slip below key moving averages, breakout failure rates multiply across secondary setups. William O'Neil's market direction ('M' in CANSLIM) dictates caution: persistent institutional selling in benchmark heavyweights overrides isolated stock-level setups. While pockets of relative strength persist in Defence and Capital Goods, Jesse Livermore's cardinal rule demands respecting the general tide. In an adverse or unconfirmed tape, strict exposure management, tightening trailing stops, and holding higher cash reserves represent the only prudent risk-first posture until confirmed accumulation reappears.",
+  "commentary": "With market breadth deteriorating to a weak score of 23 and benchmark indices sliding 1.11% on institutional distribution, both Stan Weinstein and William O'Neil mandate aggressive defensive discipline. When three out of four stocks track general market trend, the CANSLIM 'M' component warns against aggressive buying. Minervini's progressive exposure framework instructs traders to preserve liquidity and restrict new commitments. Although individual setups in capital goods and manufacturing display nascent Stage 2 characteristics, none possess the pristine earnings acceleration and institutional backing required to overcome this compromised market backdrop. Sit tight in cash, enforce strict stops, and wait for confirmed accumulation.",
   "commentaryStatus": "available",
   "limitations": [
     "Daily scan observations are not fills or performance results.",
@@ -95,8 +248,99 @@
   ],
   "model": "gemini-3.8-flash",
   "analysis": {
-    "analyst": "Minervini SEPA, O'Neil CANSLIM, Weinstein Stage Analysis & Livermore Market Discipline",
-    "bySymbol": {}
+    "analyst": "Minervini SEPA, O'Neil CANSLIM & Weinstein Stage Analysis",
+    "bySymbol": {
+      "21STCENMGM": {
+        "stage": "Stage 2 advancing",
+        "technical": "Cleared a 20-day high above rising 21 EMA, 50 SMA, and 200 SMA on 1.89x average volume. MACD is positive. However, overhead historical churn and micro-cap liquidity make continuation volatile.",
+        "epsGrowth": [
+          "Q1 FY27 +296%",
+          "Q4 FY26 -158%",
+          "Q3 FY26 -220%"
+        ],
+        "revenueGrowth": "-57.0%",
+        "earningsTrend": "Negative",
+        "growthQualified": "No",
+        "fundamental": "Turned marginally profitable after three consecutive loss quarters, but top-line revenue collapsed 57%. Return ratios remain deeply negative and business operations rely heavily on volatile proprietary capital market trading.",
+        "verdict": "Watch",
+        "risk": "Fails if price breaches the 42.56 stop level; cut immediately to prevent illiquid downside slippage."
+      },
+      "AAREYDRUGS": {
+        "stage": "Stage 2 advancing",
+        "technical": "Registered fresh 52-week highs on a 20-day breakout above all key moving averages. MACD remains constructive, but price is short-term extended without a tight VCP pivot.",
+        "epsGrowth": [
+          "Q1 FY27 -25.5%",
+          "Q4 FY26 +231.9%",
+          "Q3 FY26 +18.2%"
+        ],
+        "revenueGrowth": "-56.3%",
+        "earningsTrend": "Decelerating",
+        "growthQualified": "No",
+        "fundamental": "Severe top-line contraction of 56.3% YoY and a 25.5% drop in quarterly profit violate CANSLIM parameters. Operating margins remain razor-thin at ~1.5% with weak return on equity.",
+        "verdict": "Watch",
+        "risk": "Thesis invalidates below the 102.59 stop; close out positions promptly to respect basic loss-cutting rules."
+      },
+      "ATL": {
+        "stage": "Stage 1 base",
+        "technical": "Constructing a double bottom base above rising 21 EMA, 50 SMA, and 200 SMA. Volume expanded to 1.78x on the right-side advance, and RSI 67 confirms steady accumulation.",
+        "epsGrowth": [
+          "Q1 FY27 -30.1%",
+          "Q4 FY26 -18.5%",
+          "Q3 FY26 +12.4%"
+        ],
+        "revenueGrowth": "+14.5%",
+        "earningsTrend": "Negative",
+        "growthQualified": "No",
+        "fundamental": "Leading CFS operator with decent operating margins (~23%), but Q1 FY27 net profit tumbled 30% YoY to ₹6.37 Cr. Revenue growth of 14.5% narrowly misses CANSLIM's 15% threshold.",
+        "verdict": "Watch",
+        "risk": "Violated if price breaches 26.58 support; exit instantly on pattern breakdown."
+      },
+      "AUSOMENT": {
+        "stage": "Stage 2 advancing",
+        "technical": "Testing 20-session pivot resistance on strong 2.76x volume. Price maintains structure above rising 21 EMA and 50 SMA, but overhead resistance near 178 looms.",
+        "epsGrowth": [
+          "Q1 FY27 -84.0%",
+          "Q4 FY26 -92.5%",
+          "Q3 FY26 +115.0%"
+        ],
+        "revenueGrowth": "-99.5%",
+        "earningsTrend": "Negative",
+        "growthQualified": "No",
+        "fundamental": "Virtually debt-free, but underlying trading and refining revenue plummeted over 90% YoY with net profit contracting 84%. Reliance on other income fails O'Neil quality screens.",
+        "verdict": "Watch",
+        "risk": "Invalidated on a breakdown below 149.34; immediate capital defense is required."
+      },
+      "AVADHSUGAR": {
+        "stage": "Stage 2 advancing",
+        "technical": "Consolidating a 101% advance within a clean 14% high-tight flag/double bottom. Holds firmly above 21 EMA and 50 SMA with positive MACD momentum.",
+        "epsGrowth": [
+          "Q1 FY27 +102.7%",
+          "Q4 FY26 -22.4%",
+          "Q3 FY26 +147.8%"
+        ],
+        "revenueGrowth": "+8.9%",
+        "earningsTrend": "Decelerating",
+        "growthQualified": "No",
+        "fundamental": "Delivered a minor turnaround to ₹0.23 Cr profit from year-ago loss, but top-line growth is sluggish at 8.9%. Cyclical margins and debt-to-equity of 1.25x limit CANSLIM score.",
+        "verdict": "Watch",
+        "risk": "Setup fails on a close below 923.01 flag support; honor the stop without hesitation."
+      },
+      "BIL": {
+        "stage": "Stage 2 advancing",
+        "technical": "Forming an orderly double bottom base with rising swing lows above 21 EMA and 50 SMA. Long lower wick shows intraday dip buying; RSI 61 reflects unextended momentum.",
+        "epsGrowth": [
+          "Q1 FY27 +150.0%",
+          "Q4 FY26 -158.9%",
+          "Q3 FY26 +770.0%"
+        ],
+        "revenueGrowth": "+33.2%",
+        "earningsTrend": "Decelerating",
+        "growthQualified": "Partial",
+        "fundamental": "Turned around in Q1 FY27 with revenue expanding 33.2% YoY to ₹373 Cr and net profit reaching ₹17.76 Cr. However, Q4 FY26 net loss breaks required consecutive quarterly consistency.",
+        "verdict": "Watch",
+        "risk": "Thesis collapses if price breaks below the 1058.41 double-bottom floor; execute strict stop discipline."
+      }
+    }
   },
   "history": [
     {

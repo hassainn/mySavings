@@ -5667,25 +5667,178 @@
     },
     {
       "sessionDate": "2026-10-20",
-      "generatedAt": "2026-10-20T14:20:28.056Z",
+      "generatedAt": "2026-10-20T16:02:28.071Z",
       "gate": "WEAK",
       "verdict": "No new buys. Observe and protect capital.",
-      "ideas": [],
+      "ideas": [
+        {
+          "symbol": "21STCENMGM",
+          "name": "21st Century Mgmt Service",
+          "pattern": "20-day breakout",
+          "confidence": 99,
+          "state": "Watch",
+          "scanState": "Triggered",
+          "asOf": "2026-10-19T00:00:00+05:30",
+          "close": 48.45,
+          "entryTrigger": 46.56,
+          "stop": 42.56,
+          "target2R": 54.55,
+          "evidence": [
+            "Price above EMA21, SMA50 and SMA200",
+            "Close cleared the prior 20-session high",
+            "1.89× 20-day average volume",
+            "MACD is above signal and zero line"
+          ]
+        },
+        {
+          "symbol": "AAREYDRUGS",
+          "name": "AAREY DRUGS & PHARM LTD",
+          "pattern": "20-day breakout",
+          "confidence": 99,
+          "state": "Watch",
+          "scanState": "Triggered",
+          "asOf": "2026-10-19T00:00:00+05:30",
+          "close": 113.87,
+          "entryTrigger": 113.61,
+          "stop": 102.59,
+          "target2R": 135.66,
+          "evidence": [
+            "Price above EMA21, SMA50 and SMA200",
+            "Close cleared the prior 20-session high",
+            "New trailing-year price high",
+            "MACD is above signal and zero line"
+          ]
+        },
+        {
+          "symbol": "ATL",
+          "name": "Allcargo Terminals",
+          "pattern": "Double bottom",
+          "confidence": 99,
+          "state": "Watch",
+          "scanState": "Armed",
+          "asOf": "2026-10-19T00:00:00+05:30",
+          "close": 27.88,
+          "entryTrigger": 29.53,
+          "stop": 26.58,
+          "target2R": 35.43,
+          "evidence": [
+            "Price above EMA21, SMA50 and SMA200",
+            "1.78× 20-day average volume",
+            "RSI 67 supports momentum without extreme extension",
+            "MACD is above signal and zero line"
+          ]
+        },
+        {
+          "symbol": "AUSOMENT",
+          "name": "Ausom Enterprise",
+          "pattern": "Near breakout",
+          "confidence": 99,
+          "state": "Watch",
+          "scanState": "Armed",
+          "asOf": "2026-10-19T00:00:00+05:30",
+          "close": 161.25,
+          "entryTrigger": 166.76,
+          "stop": 149.34,
+          "target2R": 201.59,
+          "evidence": [
+            "Price above EMA21, SMA50 and SMA200",
+            "Within 1.5% of the 20-session pivot",
+            "2.76× 20-day average volume",
+            "MACD is above signal and zero line"
+          ]
+        },
+        {
+          "symbol": "AVADHSUGAR",
+          "name": "Avadh Sug & Energy",
+          "pattern": "Double bottom",
+          "confidence": 99,
+          "state": "Watch",
+          "scanState": "Armed",
+          "asOf": "2026-10-19T00:00:00+05:30",
+          "close": 987.55,
+          "entryTrigger": 1024.17,
+          "stop": 923.01,
+          "target2R": 1226.5,
+          "evidence": [
+            "Price above EMA21, SMA50 and SMA200",
+            "MACD is above signal and zero line",
+            "Two aligned swing lows with neckline pressure",
+            "Flagpole advanced 101% then paused in a tight 14% flag"
+          ]
+        },
+        {
+          "symbol": "BIL",
+          "name": "BHARTIYA INTERNATIONAL",
+          "pattern": "Double bottom",
+          "confidence": 99,
+          "state": "Watch",
+          "scanState": "Armed",
+          "asOf": "2026-10-19T00:00:00+05:30",
+          "close": 1057.65,
+          "entryTrigger": 1151.15,
+          "stop": 1058.41,
+          "target2R": 1336.62,
+          "evidence": [
+            "Price above EMA21, SMA50 and SMA200",
+            "RSI 61 supports momentum without extreme extension",
+            "Two aligned swing lows with neckline pressure",
+            "Long lower wick shows rejection from the session low"
+          ]
+        },
+        {
+          "symbol": "CEIGALL",
+          "name": "CEIGALL INDIA LIMITED",
+          "pattern": "Near breakout",
+          "confidence": 99,
+          "state": "Watch",
+          "scanState": "Armed",
+          "asOf": "2026-10-19T00:00:00+05:30",
+          "close": 393.8,
+          "entryTrigger": 396.4,
+          "stop": 369.5,
+          "target2R": 450.18,
+          "evidence": [
+            "Price above EMA21, SMA50 and SMA200",
+            "Within 1.5% of the 20-session pivot",
+            "RSI 63 supports momentum without extreme extension",
+            "MACD is above signal and zero line"
+          ]
+        },
+        {
+          "symbol": "CRAFTSMAN",
+          "name": "Craftsman Automation",
+          "pattern": "Double bottom",
+          "confidence": 99,
+          "state": "Watch",
+          "scanState": "Armed",
+          "asOf": "2026-10-19T00:00:00+05:30",
+          "close": 11158,
+          "entryTrigger": 12011,
+          "stop": 11349.71,
+          "target2R": 13333.57,
+          "evidence": [
+            "Price above EMA21, SMA50 and SMA200",
+            "RSI 64 supports momentum without extreme extension",
+            "MACD is above signal and zero line",
+            "Two aligned swing lows with neckline pressure"
+          ]
+        }
+      ],
       "observations": [
         {
           "symbol": "21STCENMGM",
           "previousState": "Watch",
-          "observation": "No newer scan observation; outcome unknown."
+          "observation": "Latest scanned close 48.45; scanner state Triggered. This is not an executed trade or an intraday stop/target check."
         },
         {
           "symbol": "63MOONS",
           "previousState": "Watch",
-          "observation": "No newer scan observation; outcome unknown."
+          "observation": "Latest scanned close 912.6; scanner state Armed. This is not an executed trade or an intraday stop/target check."
         },
         {
           "symbol": "AAREYDRUGS",
           "previousState": "Watch",
-          "observation": "No newer scan observation; outcome unknown."
+          "observation": "Latest scanned close 113.87; scanner state Triggered. This is not an executed trade or an intraday stop/target check."
         },
         {
           "symbol": "AARTIIND",
@@ -5705,12 +5858,12 @@
         {
           "symbol": "APOLLO",
           "previousState": "Watch",
-          "observation": "No newer scan observation; outcome unknown."
+          "observation": "Latest scanned close 423.8; scanner state Armed. This is not an executed trade or an intraday stop/target check."
         },
         {
           "symbol": "ATL",
           "previousState": "Watch",
-          "observation": "No newer scan observation; outcome unknown."
+          "observation": "Latest scanned close 27.88; scanner state Armed. This is not an executed trade or an intraday stop/target check."
         }
       ]
     }
