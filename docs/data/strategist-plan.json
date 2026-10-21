@@ -1,9 +1,9 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-21T14:33:36.083Z",
+  "generatedAt": "2026-10-21T16:20:32.727Z",
   "sessionDate": "2026-10-21",
   "status": "ready",
-  "scanGeneratedAt": "2026-10-20T16:02:10.712Z",
+  "scanGeneratedAt": "2026-10-21T16:20:17.399Z",
   "gate": "WEAK",
   "breadthScore": 23,
   "verdict": "No new buys. Observe and protect capital.",
@@ -239,103 +239,13 @@
   ],
   "previousSession": "2026-10-20",
   "intelligenceGeneratedAt": "2026-10-21T14:29:38.468Z",
-  "commentary": "With market breadth deteriorating to a weak score of 23 and the benchmark facing persistent distribution and FII selling at the 23,000–23,200 ceiling, William O'Neil's market-direction rule dictates severe capital preservation. Under Stan Weinstein's discipline, even pristine Stage 2 breakouts exhibit high failure rates when general indices are under pressure. Cyclical heavyweights face distribution while defensive divergence prevails. In accordance with Jesse Livermore and Mark Minervini's progressive exposure rules, cash remains king: keep position sizes modest, refrain from chasing extended names, and enforce uncompromising, fast stop-loss execution to protect trading capital until broad market confirmation returns.",
-  "commentaryStatus": "available",
+  "commentary": null,
+  "commentaryStatus": "unavailable",
   "limitations": [
     "Daily scan observations are not fills or performance results.",
     "Price levels are scanner references, not live quotes.",
     "No broker orders are submitted."
   ],
-  "model": "gemini-3.8-flash",
-  "analysis": {
-    "analyst": "Minervini SEPA, O'Neil CANSLIM, Weinstein Stage Analysis, Darvas Box, Livermore Discipline",
-    "bySymbol": {
-      "21STCENMGM": {
-        "stage": "Stage 1 base",
-        "technical": "Cleared 20-session high on 1.89× volume above its EMA21, SMA50, and SMA200. However, the move is an erratic breakout from a volatile base lacking genuine institutional sponsorship.",
-        "epsGrowth": [
-          "Q1 FY27 -442%",
-          "Q4 FY26 Negative"
-        ],
-        "revenueGrowth": "-316%",
-        "earningsTrend": "Negative",
-        "growthQualified": "No",
-        "fundamental": "Fundamentals reveal acute operational stress with negative quarterly revenues (-₹7.21 Cr) and expanding net losses (-₹12.87 Cr). Negative ROE (-72.8%) completely violates CANSLIM investment benchmarks.",
-        "verdict": "Avoid",
-        "risk": "Violating the 42.56 stop signals a total failed breakout; liquidate immediately with zero leeway given micro-cap volatility."
-      },
-      "AAREYDRUGS": {
-        "stage": "Stage 2 advancing",
-        "technical": "Achieved a new trailing-year high clearing 20-session resistance on supportive volume. All key moving averages align positively with MACD remaining comfortably above zero.",
-        "epsGrowth": [
-          "Q1 FY27 -25%",
-          "Q4 FY26 +232%"
-        ],
-        "revenueGrowth": "-55%",
-        "earningsTrend": "Decelerating",
-        "growthQualified": "No",
-        "fundamental": "Revenues plunged 55.4% YoY in Q1 FY27 to ₹44.6 Cr while net profit dropped 28.6%. Sub-3% operating margins demonstrate lack of pricing power and CANSLIM earnings acceleration.",
-        "verdict": "Watch",
-        "risk": "A decisive break below 102.59 forfeits the pivot zone and invalidates Stage 2 momentum."
-      },
-      "ATL": {
-        "stage": "Stage 2 advancing",
-        "technical": "Constructing a double bottom with price clearing moving averages on 1.78× average volume. RSI at 67 shows steady underlying accumulation without severe extension.",
-        "epsGrowth": [
-          "Q1 FY27 -30%",
-          "Q4 FY26 +12%"
-        ],
-        "revenueGrowth": "+14.5%",
-        "earningsTrend": "Decelerating",
-        "growthQualified": "No",
-        "fundamental": "Modest top-line growth (+14.5% YoY to ₹214.4 Cr) was undermined by a 30% contraction in Q1 FY27 net profit to ₹6.37 Cr. Margins remain pressured by logistics overhead.",
-        "verdict": "Watch",
-        "risk": "Close below the 26.58 swing support breaches base structure; cut losses without hesitation."
-      },
-      "AUSOMENT": {
-        "stage": "Stage 2 advancing",
-        "technical": "Trading within 1.5% of its 20-session pivot on a 2.76× volume expansion. Price rides cleanly above a rising EMA21, SMA50, and SMA200, signaling genuine accumulation.",
-        "epsGrowth": [
-          "Q1 FY27 +36%",
-          "Q4 FY26 -15%"
-        ],
-        "revenueGrowth": "+485%",
-        "earningsTrend": "Accelerating",
-        "growthQualified": "Partial",
-        "fundamental": "Q1 FY27 consolidated revenue surged 485% YoY to ₹2,787 Cr via refinery consolidation, lifting net profit 36% to ₹20 Cr. Ultra-low leverage (0.05 D/E) is positive, though margins remain thin.",
-        "verdict": "Constructive",
-        "risk": "Failure to push through 166.76 pivot or dropping below 149.34 stop mandates swift capital preservation."
-      },
-      "AVADHSUGAR": {
-        "stage": "Stage 2 advancing",
-        "technical": "Following a 101% advance, the stock formed a tight 14% high-level consolidation flag and double-bottom neckline setup. Moving average alignment confirms intact primary Stage 2 momentum.",
-        "epsGrowth": [
-          "Q1 FY27 +103%",
-          "Q4 FY26 -28%"
-        ],
-        "revenueGrowth": "+8.7%",
-        "earningsTrend": "Accelerating",
-        "growthQualified": "Partial",
-        "fundamental": "Turnaround to profitability in Q1 FY27 (+103% YoY profit) led by distillery and ethanol operations. Sub-10% ROCE and substantial debt burden (₹917 Cr) remain cyclical headwinds.",
-        "verdict": "Constructive",
-        "risk": "A breakdown below 923.01 violates the double bottom's base integrity and triggers immediate discipline."
-      },
-      "BIL": {
-        "stage": "Stage 2 advancing",
-        "technical": "Forming an actionable double bottom above EMA21, SMA50, and SMA200. A prominent lower rejection wick on the recent session and RSI at 61 reflect sustained institutional demand.",
-        "epsGrowth": [
-          "Q1 FY27 +218%",
-          "Q4 FY26 +65%"
-        ],
-        "revenueGrowth": "+33.2%",
-        "earningsTrend": "Accelerating",
-        "growthQualified": "Yes",
-        "fundamental": "Outstanding CANSLIM profile with Q1 FY27 net profit leaping 218% YoY to ₹17.76 Cr alongside 33.2% revenue growth. Zero promoter pledge and an attractive 16.9% ROCE underline robust balance-sheet execution.",
-        "verdict": "Leading",
-        "risk": "Breaching the 1058.41 stop marks base failure; exit immediately to preserve asymmetric risk-reward."
-      }
-    }
-  },
   "history": [
     {
       "sessionDate": "2026-10-15",
