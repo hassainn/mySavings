@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-21T16:20:32.727Z",
+  "generatedAt": "2026-10-21T17:25:24.810Z",
   "sessionDate": "2026-10-21",
   "status": "ready",
   "scanGeneratedAt": "2026-10-21T16:20:17.399Z",
@@ -239,13 +239,104 @@
   ],
   "previousSession": "2026-10-20",
   "intelligenceGeneratedAt": "2026-10-21T14:29:38.468Z",
-  "commentary": null,
-  "commentaryStatus": "unavailable",
+  "commentary": "With market breadth deteriorating to a weak 23% and the deterministic gate flagged WEAK, the macro environment dictates uncompromising defensive discipline under O'Neil and Weinstein models. Severe distribution across cyclicals, capital goods, and defence counters—exacerbated by persistent FII selling and crude headwinds—signals an inhospitable tape for new breakout exposure. In such Stage 3/distributional phases, institutional support dries up and breakout failure rates multiply. Minervini's progressive exposure rules require traders to step back, safeguard capital, and refrain from aggressive capital deployment until the benchmark reclaims the 23,000–23,200 supply zone with expanding accumulation days. Livermore's cardinal rule applies: never fight the general market.",
+  "commentaryStatus": "available",
   "limitations": [
     "Daily scan observations are not fills or performance results.",
     "Price levels are scanner references, not live quotes.",
     "No broker orders are submitted."
   ],
+  "model": "gemini-3.8-flash",
+  "analysis": {
+    "analyst": "Minervini SEPA, O'Neil CANSLIM, Weinstein Stage Analysis & Darvas Box Discipline",
+    "bySymbol": {
+      "21STCENMGM": {
+        "stage": "Stage 2 advancing",
+        "technical": "Price cleared a 20-session high above rising EMA21, SMA50, and SMA200 on 1.89× volume with positive MACD momentum. However, being an illiquid microcap, breakout follow-through is vulnerable to severe whipsaws in a weak market backdrop.",
+        "epsGrowth": [
+          "Q1 FY27 +295%",
+          "Q4 FY26 negative",
+          "Q3 FY26 negative"
+        ],
+        "revenueGrowth": "-238.2%",
+        "earningsTrend": "Negative",
+        "growthQualified": "No",
+        "fundamental": "Operates in capital market proprietary trading and investments with chronic volatility, negative TTM revenue (-238%), and negative ROE (-72.7%). Fails CANSLIM institutional-grade growth and quality benchmarks despite low debt.",
+        "verdict": "Avoid",
+        "risk": "Break below the 42.56 stop or 50-day SMA terminates the breakout thesis; cut losses immediately."
+      },
+      "AAREYDRUGS": {
+        "stage": "Stage 2 advancing",
+        "technical": "Logged a fresh 52-week high and 20-day breakout with price tracking above 21 EMA, 50 SMA, and 200 SMA. MACD is positive, but overhead market distribution and thin institutional sponsorship undermine sustainability.",
+        "epsGrowth": [
+          "not verified"
+        ],
+        "revenueGrowth": "-56.3%",
+        "earningsTrend": "Negative",
+        "growthQualified": "No",
+        "fundamental": "Topline contracted sharply by 56.3% YoY, driving an inflated P/E of 77.3x and weak returns. Core API and solvent operations face margin volatility, failing O'Neil's CANSLIM C-and-A acceleration rules.",
+        "verdict": "Watch",
+        "risk": "Hard stop at 102.59; breakdown beneath EMA21 and 50-day SMA invalidates the momentum setup."
+      },
+      "ATL": {
+        "stage": "Stage 1 base",
+        "technical": "Forming a double-bottom base above rising EMA21, SMA50, and SMA200 on 1.78× volume. RSI at 67 displays constructive momentum, but overhead supply and broad market distribution present resistance near prior swing highs.",
+        "epsGrowth": [
+          "Q1 FY27 -30%",
+          "Q4 FY26 +183%"
+        ],
+        "revenueGrowth": "+14.5%",
+        "earningsTrend": "Decelerating",
+        "growthQualified": "No",
+        "fundamental": "CFS operator generated 14.5% revenue growth, but Q1 net profit contracted 30% YoY due to margin compression. Modest ROE (~12.5%) and weak interest coverage fail strict CANSLIM standards despite solid port positioning.",
+        "verdict": "Watch",
+        "risk": "Thesis fails on a drop below the 26.58 stop; breach of double-bottom lows triggers mandatory exit."
+      },
+      "AUSOMENT": {
+        "stage": "Stage 2 advancing",
+        "technical": "Tightening within 1.5% of a 20-session breakout pivot on 2.76× volume, demonstrating VCP-like contraction above rising 21 EMA, 50 SMA, and 200 SMA. Trend template is constructively aligned.",
+        "epsGrowth": [
+          "Q1 FY27 +36%",
+          "Q4 FY26 -92%"
+        ],
+        "revenueGrowth": "+491%",
+        "earningsTrend": "Accelerating",
+        "growthQualified": "Partial",
+        "fundamental": "Q1 FY27 revenue surged 491% YoY to ₹2,784 Cr with net profit up 33% after consolidating its bullion refining subsidiary. Razor-thin operating margins (~1%) are offset by a debt-free balance sheet and 73.7% promoter stake.",
+        "verdict": "Constructive",
+        "risk": "Violation of the 149.34 stop or loss of the 21 EMA aborts the breakout setup."
+      },
+      "AVADHSUGAR": {
+        "stage": "Stage 2 advancing",
+        "technical": "Consolidating in a tight 14% flag following a 101% run, pressing against double-bottom neckline resistance above rising EMAs and SMA200. MACD is positive, but sector headwinds require strict confirmation.",
+        "epsGrowth": [
+          "Q1 FY27 -99%",
+          "Q4 FY26 -35%"
+        ],
+        "revenueGrowth": "+2.2%",
+        "earningsTrend": "Negative",
+        "growthQualified": "No",
+        "fundamental": "Severe sugar cyclicality eroded earnings, with Q1 net profit collapsing 99% YoY. Weak ROE (5.1%) and elevated debt-to-equity (1.25x) disqualify the counter from CANSLIM leadership reads.",
+        "verdict": "Watch",
+        "risk": "Close below the 923.01 stop invalidates the consolidation flag; cut losses swiftly."
+      },
+      "BIL": {
+        "stage": "Stage 2 advancing",
+        "technical": "Carving a double bottom pressing against neckline resistance with supportive rising EMA21, SMA50, and SMA200. RSI at 61 confirms steady momentum, while a long lower wick marks intraday institutional demand.",
+        "epsGrowth": [
+          "Q1 FY27 +218%",
+          "Q4 FY26 -159%",
+          "Q3 FY26 +793%"
+        ],
+        "revenueGrowth": "+33.8%",
+        "earningsTrend": "Accelerating",
+        "growthQualified": "Partial",
+        "fundamental": "Q1 FY27 revenue rose 33.8% YoY with net profit leaping 218% to ₹17.76 Cr as the real-estate associate turned profitable. High inventory levels and floating-rate debt leverage remain balance-sheet items to monitor.",
+        "verdict": "Constructive",
+        "risk": "Breakdown below the 1058.41 stop level invalidates the double-bottom pattern; cut losses immediately."
+      }
+    }
+  },
   "history": [
     {
       "sessionDate": "2026-10-15",
