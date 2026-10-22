@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-22T16:19:34.189Z",
+  "generatedAt": "2026-10-22T17:23:01.690Z",
   "sessionDate": "2026-10-22",
   "status": "ready",
   "scanGeneratedAt": "2026-10-22T16:19:18.324Z",
@@ -239,7 +239,7 @@
   ],
   "previousSession": "2026-10-21",
   "intelligenceGeneratedAt": "2026-10-22T14:30:53.071Z",
-  "commentary": "With the Nifty 50 surrendering critical support at 24,500 amid relentless institutional distribution exceeding ₹80,000 crore, breadth is severely broken at 18. Both Stan Weinstein's stage doctrine and William O'Neil's market-direction rules emphasize that three out of four equities inevitably succumb to general market downdrafts. In an environment marked by aggressive foreign outflows and moving-average breakdowns, pivot failure rates escalate dramatically. Minervini's SEPA protocol demands defensive discipline: protect capital, reduce position sizing, and insist on confirmed Stage 2 leadership backed by genuine earnings acceleration. Until indices stage a legitimate follow-through day, speculative breakouts must be treated with skepticism, capping actionable setups at a strict watch.",
+  "commentary": "With the deterministic gate flagged WEAK, market breadth collapsed to 18, and the Nifty 50 surrendering pivotal 24,500 support under relentless institutional selling, Stan Weinstein's Stage discipline and William O'Neil's market-direction rules demand defensive capital preservation. In confirmed market corrections, base and breakout failure rates spike sharply. Jesse Livermore famously noted that while true leaders resist broad-market distribution, no individual equity is entirely immune to systemic liquidations. Total exposure must be minimized and cash preserved. Aggressive buying should be curtailed until market breadth establishes a decisive follow-through day. High-relative-strength Stage 2 candidates with accelerating CANSLIM earnings warrant close watchlist tracking, but strict stop discipline remains non-negotiable.",
   "commentaryStatus": "available",
   "limitations": [
     "Daily scan observations are not fills or performance results.",
@@ -248,93 +248,91 @@
   ],
   "model": "gemini-3.8-flash",
   "analysis": {
-    "analyst": "Minervini SEPA, O'Neil CANSLIM, Weinstein Stage Analysis, Darvas Box & Livermore Discipline",
+    "analyst": "Minervini SEPA, O'Neil CANSLIM & Weinstein Stage Analysis",
     "bySymbol": {
       "21STCENMGM": {
-        "stage": "Stage 2 advancing",
-        "technical": "Cleared a 20-session high at 48.50 on 3.19x average volume, trading above rising 21 EMA, 50 SMA, and 200 SMA. MACD is positive above signal and zero lines. However, as a microcap investment vehicle, sharp volatility and erratic volume characteristics elevate whipsaw risks during broader market corrections.",
+        "stage": "Stage 1 base",
+        "technical": "Price cleared a 20-day high on 3.19x volume, reclaiming its 21-EMA, 50-SMA, and 200-SMA. However, the chart shows volatile micro-cap swings rather than an orderly institutional Stage 2 base with classic VCP characteristics.",
         "epsGrowth": [
           "Q1 FY27 +295%",
           "Q4 FY26 Negative",
           "Q3 FY26 Negative"
         ],
         "revenueGrowth": "+194%",
-        "earningsTrend": "Accelerating",
-        "growthQualified": "No",
-        "fundamental": "Capital market investment firm whose financials swing erratically with proprietary trading. Q1 FY27 net profit turned to ₹9 Cr from multi-quarter losses. TTM EPS remains deeply negative (-₹22.9) with negative ROE (-21%). Lacks institutional sponsorship, steady return on capital, and high-quality earnings predictability required by CANSLIM.",
-        "verdict": "Watch",
-        "risk": "A breach below 44.27 invalidates the breakout; exit immediately to prevent capital erosion in an illiquid microcap."
+        "earningsTrend": "Negative",
+        "growthQualified": "Partial",
+        "fundamental": "Capital market investment firm subject to erratic swings from proprietary investment mark-to-market revaluations. Despite a sharp Q1 rebound, negative revenues and net losses in prior quarters fail CANSLIM consistency and earnings stability requirements.",
+        "verdict": "Avoid",
+        "risk": "Fails on a breakdown below 44.27; exit immediately due to extreme micro-cap liquidity and earnings volatility risks."
       },
       "ANANDRATHI": {
         "stage": "Stage 2 advancing",
-        "technical": "Carving out a double-bottom base above rising 21 EMA, 50 SMA, and 200 SMA with RSI at 65. Volume is supportive at 1.6x average on up-days, pressing near the 2,270.67 neckline pivot. Demonstrates constructive relative strength against the falling Nifty benchmark.",
+        "technical": "Carving out a constructive double bottom above rising 21-EMA, 50-SMA, and 200-SMA, pressing neckline resistance at 2270.67 on 1.6x volume. RSI at 65 confirms healthy relative strength against broad-market indices.",
         "epsGrowth": [
           "Q2 FY27 +22%",
-          "Q1 FY27 +24%",
-          "Q4 FY26 +33%"
+          "Q1 FY27 +34%"
         ],
         "revenueGrowth": "+16%",
         "earningsTrend": "Decelerating",
         "growthQualified": "Partial",
-        "fundamental": "Premier wealth manager boasting 57.5% ROCE, 45.3% ROE, and negligible debt. AUM expanded 18% YoY to ₹1.08 lakh crore, driven by robust recurring mutual fund trail fees. While business quality is pristine, EPS growth has decelerated from 33% to 22%, falling short of the 25% CANSLIM acceleration threshold.",
+        "fundamental": "Premier wealth manager benefiting from record quarterly net inflows (₹4,186 crore) and robust AUM expansion. Zero-debt balance sheet with superior ROCE (~57%) and ROE (~45%), though EPS growth moderated slightly from 34% to 22% YoY.",
         "verdict": "Watch",
-        "risk": "Failure below swing stop 2,170.13 fractures neckline structure; cut the trade promptly if selling volume breaches the 50 SMA."
+        "risk": "Thesis invalidates below 2170.13; persistent equity market weakness could suppress mutual fund inflows and AUM-linked fee generation."
       },
       "AONELIQUID": {
         "stage": "Unclear",
-        "technical": "Trading in an ultra-tight, non-directional band tracking daily money-market repo rates. Moving averages are flat and compressed. Lacks classic equity accumulation patterns, Darvas boxes, or volatility contraction, functioning solely as a cash-equivalent vehicle rather than a growth breakout candidate.",
+        "technical": "Price action reflects passive tick-by-tick interest accrual within an ultra-tight band rather than genuine institutional accumulation. Technical momentum indicators are artifacts of mechanical NAV accretion.",
         "epsGrowth": [
           "not verified"
         ],
         "revenueGrowth": "not verified",
         "earningsTrend": "Not verified",
         "growthQualified": "Not verified",
-        "fundamental": "Not verified for equity analysis. AONELIQUID is the Angel One Nifty 1D Rate Liquid ETF, investing in tri-party repo and overnight government securities. It has no corporate earnings, sales, profit margins, or operating balance sheet metrics.",
+        "fundamental": "not verified",
         "verdict": "Avoid",
-        "risk": "Trading below 1,084.93 signals execution slippage or index NAV tracking deviation; exit immediately."
+        "risk": "Instrument is an overnight liquid debt ETF, completely unsuitable for CANSLIM or SEPA equity growth trading models."
       },
       "BBOX": {
         "stage": "Stage 2 advancing",
-        "technical": "Rebounding in a Stage 2 uptrend above its 21 EMA, 50 SMA, and 200 SMA. RSI at 63 and positive MACD reflect emerging momentum toward the 952.95 double-bottom trigger. However, the stock sits under overhead supply from earlier yearly peaks near 1,104.",
+        "technical": "Constructing a solid double bottom base challenging neckline resistance at 952.95. Holds firmly above key EMAs and 200-SMA with an RSI of 63 and positive MACD, displaying resilient relative strength amid broad tape weakness.",
         "epsGrowth": [
-          "Q1 FY27 +13%",
-          "Q4 FY26 +18%",
-          "Q3 FY26 +20%"
+          "Q1 FY26 +59%",
+          "Q4 FY25 +48%"
         ],
-        "revenueGrowth": "+24%",
-        "earningsTrend": "Decelerating",
+        "revenueGrowth": "-2.5%",
+        "earningsTrend": "Accelerating",
         "growthQualified": "Partial",
-        "fundamental": "Global digital infrastructure provider delivering 22.5% ROCE and 21.3% ROE with debt-to-equity reduced to 0.64x. Q1 FY27 revenue grew 24% YoY to ₹1,719 Cr. However, operating margins remain slim at ~7.2% and EPS growth slowed to 13%, failing the CANSLIM 25% minimum growth criterion.",
-        "verdict": "Watch",
-        "risk": "Breakdown below stop 853.29 violates key moving averages; enforce swift stop discipline to avoid getting trapped in base failure."
+        "fundamental": "Operational turnaround has expanded EBITDA margins and propelled strong bottom-line growth (+59% YoY), backed by an almost debt-free balance sheet. However, top-line contraction (-2.5% YoY) prevents full CANSLIM qualification.",
+        "verdict": "Constructive",
+        "risk": "Setup fails on a close below 853.29; honor strict stop parameters against IT infrastructure procurement deferrals."
       },
       "CEIGALL": {
         "stage": "Stage 2 advancing",
-        "technical": "Constructing a double-bottom base above rising 21 EMA, 50 SMA, and 200 SMA. RSI at 60 shows healthy momentum without being overbought, while MACD holds above zero. Price is testing the 396.40 pivot, though broader market turbulence threatens breakout follow-through.",
+        "technical": "Forming a double bottom base testing the 396.4 pivot trigger. The stock trades constructively above rising 21-EMA, 50-SMA, and 200-SMA, demonstrating notable defensive relative strength with an RSI of 60.",
         "epsGrowth": [
-          "Q1 FY27 +35%",
-          "Q4 FY26 +18%"
+          "Q1 FY27 +18%",
+          "Q4 FY26 +78%"
         ],
-        "revenueGrowth": "+16%",
-        "earningsTrend": "Accelerating",
+        "revenueGrowth": "+15.7%",
+        "earningsTrend": "Decelerating",
         "growthQualified": "Partial",
-        "fundamental": "Infrastructure EPC specialist with an asset-light operational model, delivering 17% ROCE and 15% ROE. Q1 FY27 standalone net profit accelerated 35% YoY to ₹75.3 Cr on 16% consolidated top-line growth. Debt was reduced by ₹224 Cr, though sizable contingent liabilities remain a fundamental headwind.",
+        "fundamental": "Robust EPC order book exceeding ₹9,400 crore provides multi-year top-line revenue visibility (+15.7% YoY) with healthy ROCE (~26.8%). However, net profit growth decelerated from 78% to 18% YoY, capping the setup read.",
         "verdict": "Watch",
-        "risk": "A drop below 369.50 breaks the double-bottom swing low; honor the stop-loss rigorously amid elevated market fragility."
+        "risk": "Fails below the 369.5 stop level; input cost inflation and execution bottlenecks represent key downside margin risks."
       },
       "COFORGE": {
         "stage": "Stage 2 advancing",
-        "technical": "Demonstrating top-decile relative strength against a declining market. Trading tightly within 1.5% of its 2,023.22 pivot, holding firmly above upward-trending 21 EMA, 50 SMA, and 200 SMA. MACD remains positive and constructive, signaling institutional sponsorship in a defensive sector.",
+        "technical": "Exhibiting textbook Stage 2 leadership, pressing breakout levels at 2023.22 with RSI and MACD in confirmed bull territory. Shows powerful relative strength against the sliding Nifty, holding tightly above all rising moving averages.",
         "epsGrowth": [
-          "Q1 FY27 +67%",
-          "Q4 FY26 +133%"
+          "Q2 FY27 +86%",
+          "Q1 FY27 +33%"
         ],
-        "revenueGrowth": "+49%",
-        "earningsTrend": "Decelerating",
+        "revenueGrowth": "+32%",
+        "earningsTrend": "Accelerating",
         "growthQualified": "Yes",
-        "fundamental": "Tier-1 IT leader with 22% ROCE, 18.6% ROE, and negligible debt (0.04x D/E). Q1 FY27 gross revenue jumped 49% YoY to ₹5,528 Cr with 16% EBIT margins and a record $2.23B order book. While EPS growth normalized from 133% to 67%, absolute growth comfortably clears CANSLIM thresholds.",
-        "verdict": "Watch",
-        "risk": "A decisive break below 1,897.19 violates the 21 EMA and base support; liquidate without hesitation to protect trading capital."
+        "fundamental": "Elite CANSLIM profile with quarterly revenues up 32% YoY, EBITDA margins widening to 18.3%, and sustained quarterly order intakes over $500M. Cigniti integration and large-deal execution are driving high return on capital.",
+        "verdict": "Leading",
+        "risk": "Setup fails on a close below 1897.19; cut losses quickly if macroeconomic pressure triggers multiple contraction across mid-tier IT."
       }
     }
   },
