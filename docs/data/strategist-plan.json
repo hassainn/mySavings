@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-22T17:23:01.690Z",
-  "sessionDate": "2026-10-22",
+  "generatedAt": "2026-10-23T07:57:14.777Z",
+  "sessionDate": "2026-10-23",
   "status": "ready",
   "scanGeneratedAt": "2026-10-22T16:19:18.324Z",
   "gate": "WEAK",
@@ -199,149 +199,54 @@
     {
       "symbol": "21STCENMGM",
       "previousState": "Watch",
-      "observation": "Latest scanned close 50.87; scanner state Triggered. This is not an executed trade or an intraday stop/target check."
+      "observation": "No newer scan observation; outcome unknown."
     },
     {
-      "symbol": "AAREYDRUGS",
-      "previousState": "Watch",
-      "observation": "Latest scanned close 111.93; scanner state Armed. This is not an executed trade or an intraday stop/target check."
-    },
-    {
-      "symbol": "ATL",
+      "symbol": "ANANDRATHI",
       "previousState": "Watch",
       "observation": "No newer scan observation; outcome unknown."
     },
     {
-      "symbol": "AUSOMENT",
+      "symbol": "AONELIQUID",
       "previousState": "Watch",
-      "observation": "Latest scanned close 156.71; scanner state Caution. This is not an executed trade or an intraday stop/target check."
+      "observation": "No newer scan observation; outcome unknown."
     },
     {
-      "symbol": "AVADHSUGAR",
-      "previousState": "Watch",
-      "observation": "Latest scanned close 946.55; scanner state Caution. This is not an executed trade or an intraday stop/target check."
-    },
-    {
-      "symbol": "BIL",
+      "symbol": "BBOX",
       "previousState": "Watch",
       "observation": "No newer scan observation; outcome unknown."
     },
     {
       "symbol": "CEIGALL",
       "previousState": "Watch",
-      "observation": "Latest scanned close 389.85; scanner state Armed. This is not an executed trade or an intraday stop/target check."
+      "observation": "No newer scan observation; outcome unknown."
     },
     {
-      "symbol": "CRAFTSMAN",
+      "symbol": "COFORGE",
       "previousState": "Watch",
-      "observation": "Latest scanned close 10989; scanner state Caution. This is not an executed trade or an intraday stop/target check."
+      "observation": "No newer scan observation; outcome unknown."
+    },
+    {
+      "symbol": "CUPID",
+      "previousState": "Watch",
+      "observation": "No newer scan observation; outcome unknown."
+    },
+    {
+      "symbol": "DBOL",
+      "previousState": "Watch",
+      "observation": "No newer scan observation; outcome unknown."
     }
   ],
-  "previousSession": "2026-10-21",
+  "previousSession": "2026-10-22",
   "intelligenceGeneratedAt": "2026-10-22T14:30:53.071Z",
-  "commentary": "With the deterministic gate flagged WEAK, market breadth collapsed to 18, and the Nifty 50 surrendering pivotal 24,500 support under relentless institutional selling, Stan Weinstein's Stage discipline and William O'Neil's market-direction rules demand defensive capital preservation. In confirmed market corrections, base and breakout failure rates spike sharply. Jesse Livermore famously noted that while true leaders resist broad-market distribution, no individual equity is entirely immune to systemic liquidations. Total exposure must be minimized and cash preserved. Aggressive buying should be curtailed until market breadth establishes a decisive follow-through day. High-relative-strength Stage 2 candidates with accelerating CANSLIM earnings warrant close watchlist tracking, but strict stop discipline remains non-negotiable.",
-  "commentaryStatus": "available",
+  "commentary": null,
+  "commentaryStatus": "unavailable",
   "limitations": [
     "Daily scan observations are not fills or performance results.",
     "Price levels are scanner references, not live quotes.",
     "No broker orders are submitted."
   ],
-  "model": "gemini-3.8-flash",
-  "analysis": {
-    "analyst": "Minervini SEPA, O'Neil CANSLIM & Weinstein Stage Analysis",
-    "bySymbol": {
-      "21STCENMGM": {
-        "stage": "Stage 1 base",
-        "technical": "Price cleared a 20-day high on 3.19x volume, reclaiming its 21-EMA, 50-SMA, and 200-SMA. However, the chart shows volatile micro-cap swings rather than an orderly institutional Stage 2 base with classic VCP characteristics.",
-        "epsGrowth": [
-          "Q1 FY27 +295%",
-          "Q4 FY26 Negative",
-          "Q3 FY26 Negative"
-        ],
-        "revenueGrowth": "+194%",
-        "earningsTrend": "Negative",
-        "growthQualified": "Partial",
-        "fundamental": "Capital market investment firm subject to erratic swings from proprietary investment mark-to-market revaluations. Despite a sharp Q1 rebound, negative revenues and net losses in prior quarters fail CANSLIM consistency and earnings stability requirements.",
-        "verdict": "Avoid",
-        "risk": "Fails on a breakdown below 44.27; exit immediately due to extreme micro-cap liquidity and earnings volatility risks."
-      },
-      "ANANDRATHI": {
-        "stage": "Stage 2 advancing",
-        "technical": "Carving out a constructive double bottom above rising 21-EMA, 50-SMA, and 200-SMA, pressing neckline resistance at 2270.67 on 1.6x volume. RSI at 65 confirms healthy relative strength against broad-market indices.",
-        "epsGrowth": [
-          "Q2 FY27 +22%",
-          "Q1 FY27 +34%"
-        ],
-        "revenueGrowth": "+16%",
-        "earningsTrend": "Decelerating",
-        "growthQualified": "Partial",
-        "fundamental": "Premier wealth manager benefiting from record quarterly net inflows (₹4,186 crore) and robust AUM expansion. Zero-debt balance sheet with superior ROCE (~57%) and ROE (~45%), though EPS growth moderated slightly from 34% to 22% YoY.",
-        "verdict": "Watch",
-        "risk": "Thesis invalidates below 2170.13; persistent equity market weakness could suppress mutual fund inflows and AUM-linked fee generation."
-      },
-      "AONELIQUID": {
-        "stage": "Unclear",
-        "technical": "Price action reflects passive tick-by-tick interest accrual within an ultra-tight band rather than genuine institutional accumulation. Technical momentum indicators are artifacts of mechanical NAV accretion.",
-        "epsGrowth": [
-          "not verified"
-        ],
-        "revenueGrowth": "not verified",
-        "earningsTrend": "Not verified",
-        "growthQualified": "Not verified",
-        "fundamental": "not verified",
-        "verdict": "Avoid",
-        "risk": "Instrument is an overnight liquid debt ETF, completely unsuitable for CANSLIM or SEPA equity growth trading models."
-      },
-      "BBOX": {
-        "stage": "Stage 2 advancing",
-        "technical": "Constructing a solid double bottom base challenging neckline resistance at 952.95. Holds firmly above key EMAs and 200-SMA with an RSI of 63 and positive MACD, displaying resilient relative strength amid broad tape weakness.",
-        "epsGrowth": [
-          "Q1 FY26 +59%",
-          "Q4 FY25 +48%"
-        ],
-        "revenueGrowth": "-2.5%",
-        "earningsTrend": "Accelerating",
-        "growthQualified": "Partial",
-        "fundamental": "Operational turnaround has expanded EBITDA margins and propelled strong bottom-line growth (+59% YoY), backed by an almost debt-free balance sheet. However, top-line contraction (-2.5% YoY) prevents full CANSLIM qualification.",
-        "verdict": "Constructive",
-        "risk": "Setup fails on a close below 853.29; honor strict stop parameters against IT infrastructure procurement deferrals."
-      },
-      "CEIGALL": {
-        "stage": "Stage 2 advancing",
-        "technical": "Forming a double bottom base testing the 396.4 pivot trigger. The stock trades constructively above rising 21-EMA, 50-SMA, and 200-SMA, demonstrating notable defensive relative strength with an RSI of 60.",
-        "epsGrowth": [
-          "Q1 FY27 +18%",
-          "Q4 FY26 +78%"
-        ],
-        "revenueGrowth": "+15.7%",
-        "earningsTrend": "Decelerating",
-        "growthQualified": "Partial",
-        "fundamental": "Robust EPC order book exceeding ₹9,400 crore provides multi-year top-line revenue visibility (+15.7% YoY) with healthy ROCE (~26.8%). However, net profit growth decelerated from 78% to 18% YoY, capping the setup read.",
-        "verdict": "Watch",
-        "risk": "Fails below the 369.5 stop level; input cost inflation and execution bottlenecks represent key downside margin risks."
-      },
-      "COFORGE": {
-        "stage": "Stage 2 advancing",
-        "technical": "Exhibiting textbook Stage 2 leadership, pressing breakout levels at 2023.22 with RSI and MACD in confirmed bull territory. Shows powerful relative strength against the sliding Nifty, holding tightly above all rising moving averages.",
-        "epsGrowth": [
-          "Q2 FY27 +86%",
-          "Q1 FY27 +33%"
-        ],
-        "revenueGrowth": "+32%",
-        "earningsTrend": "Accelerating",
-        "growthQualified": "Yes",
-        "fundamental": "Elite CANSLIM profile with quarterly revenues up 32% YoY, EBITDA margins widening to 18.3%, and sustained quarterly order intakes over $500M. Cigniti integration and large-deal execution are driving high return on capital.",
-        "verdict": "Leading",
-        "risk": "Setup fails on a close below 1897.19; cut losses quickly if macroeconomic pressure triggers multiple contraction across mid-tier IT."
-      }
-    }
-  },
   "history": [
-    {
-      "sessionDate": "2026-10-16",
-      "gate": "WEAK",
-      "verdict": "No new buys. Observe and protect capital."
-    },
     {
       "sessionDate": "2026-10-17",
       "gate": "WEAK",
@@ -369,6 +274,11 @@
     },
     {
       "sessionDate": "2026-10-22",
+      "gate": "WEAK",
+      "verdict": "No new buys. Observe and protect capital."
+    },
+    {
+      "sessionDate": "2026-10-23",
       "gate": "WEAK",
       "verdict": "No new buys. Observe and protect capital."
     }
