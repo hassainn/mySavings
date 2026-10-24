@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-23T17:19:04.440Z",
-  "sessionDate": "2026-10-23",
+  "generatedAt": "2026-10-24T08:59:49.805Z",
+  "sessionDate": "2026-10-24",
   "status": "ready",
   "scanGeneratedAt": "2026-10-23T16:06:58.920Z",
   "gate": "WEAK",
@@ -197,49 +197,49 @@
   ],
   "observations": [
     {
-      "symbol": "21STCENMGM",
+      "symbol": "63MOONS",
       "previousState": "Watch",
-      "observation": "Latest scanned close 50.57; scanner state Caution. This is not an executed trade or an intraday stop/target check."
+      "observation": "No newer scan observation; outcome unknown."
+    },
+    {
+      "symbol": "ABSLLIQUID",
+      "previousState": "Watch",
+      "observation": "No newer scan observation; outcome unknown."
     },
     {
       "symbol": "ANANDRATHI",
       "previousState": "Watch",
-      "observation": "Latest scanned close 2223; scanner state Armed. This is not an executed trade or an intraday stop/target check."
+      "observation": "No newer scan observation; outcome unknown."
     },
     {
-      "symbol": "AONELIQUID",
+      "symbol": "BAJAJHLDNG",
       "previousState": "Watch",
-      "observation": "Latest scanned close 1082.26; scanner state Armed. This is not an executed trade or an intraday stop/target check."
+      "observation": "No newer scan observation; outcome unknown."
     },
     {
       "symbol": "BBOX",
       "previousState": "Watch",
-      "observation": "Latest scanned close 885; scanner state Armed. This is not an executed trade or an intraday stop/target check."
+      "observation": "No newer scan observation; outcome unknown."
     },
     {
-      "symbol": "CEIGALL",
-      "previousState": "Watch",
-      "observation": "Latest scanned close 376.9; scanner state Armed. This is not an executed trade or an intraday stop/target check."
-    },
-    {
-      "symbol": "COFORGE",
-      "previousState": "Watch",
-      "observation": "Latest scanned close 1908.8; scanner state Caution. This is not an executed trade or an intraday stop/target check."
-    },
-    {
-      "symbol": "CUPID",
+      "symbol": "CHENNPETRO",
       "previousState": "Watch",
       "observation": "No newer scan observation; outcome unknown."
     },
     {
-      "symbol": "DBOL",
+      "symbol": "CRISIL",
+      "previousState": "Watch",
+      "observation": "No newer scan observation; outcome unknown."
+    },
+    {
+      "symbol": "DHANBANK",
       "previousState": "Watch",
       "observation": "No newer scan observation; outcome unknown."
     }
   ],
-  "previousSession": "2026-10-22",
-  "intelligenceGeneratedAt": "2026-10-23T14:14:32.924Z",
-  "commentary": "Market breadth has deteriorated severely to a breadth score of 21, with over 3,000 decliners overwhelming 624 gainers as mid- and small-caps suffer aggressive institutional distribution. In Stan Weinstein’s stage framework and William O’Neil’s CANSLIM market timing, trading under a WEAK gate and an escalating macro shock—crude surging beyond $114 amid Middle East tensions—dictates absolute capital preservation. When broad tape distribution strikes, breakout failure rates spike markedly, irrespective of setup symmetry. Prudent operators must respect the general market direction, cease deploying aggressive risk, enforce swift stop discipline on open exposure, and demand confirmed CANSLIM earnings acceleration before re-engaging. Defense takes total precedence until an authentic follow-through day materializes.",
+  "previousSession": "2026-10-23",
+  "intelligenceGeneratedAt": "2026-10-24T08:58:45.302Z",
+  "commentary": "With market breadth deteriorating to a weak score of 21 and major indices enduring sharp distribution amid surging crude and relentless FII outflows, Stan Weinstein and William O'Neil's market-direction discipline mandates an uncompromising defensive posture. In a market under pressure, institutional distribution severely suppresses breakout success, causing the vast majority of bullish setups to abort or fail. Nicolas Darvas and Jesse Livermore warned against fighting general market headwinds. Mark Minervini's progressive exposure rules dictate keeping exposure constrained, avoiding speculative chasing, and enforcing swift stop discipline. While idiosyncratic relative strength exists in select energy and capital allocation names, capital preservation remains paramount until institutional accumulation and broader market breadth confirm a healthy environment.",
   "commentaryStatus": "available",
   "limitations": [
     "Daily scan observations are not fills or performance results.",
@@ -248,102 +248,95 @@
   ],
   "model": "gemini-3.8-flash",
   "analysis": {
-    "analyst": "Minervini SEPA & O'Neil CANSLIM / Weinstein Stage Analysis",
+    "analyst": "Minervini SEPA, O'Neil CANSLIM & Weinstein Stage Analysis",
     "bySymbol": {
       "63MOONS": {
-        "stage": "Stage 1 base",
-        "technical": "Constructing a double-bottom base pressing neckline pivot resistance at 958.91, holding above EMA21, SMA50, and SMA200. RSI 60 indicates constructive momentum without overextension. While displaying brief relative strength against midcap liquidation, the multi-month pattern remains a wide Stage 1 base lacking canonical VCP contraction.",
+        "stage": "Stage 2 advancing",
+        "technical": "Trading above EMA21, SMA50, and SMA200, carving a double-bottom base with neckline resistance at 958.91 and RSI at 60. Price shows constructive recovery, but multi-year overhead resistance demands substantial volume expansion to clear convincingly.",
         "epsGrowth": [
-          "Q1 FY27 Negative (Loss)",
-          "Q4 FY26 Negative (Loss)",
-          "Q3 FY26 -204%"
+          "Q1 FY27 Negative (Loss ₹39.7 Cr vs ₹3.1 ",
+          "Q4 FY26 -47.0%"
         ],
-        "revenueGrowth": "+350%",
+        "revenueGrowth": "+350.5%",
         "earningsTrend": "Negative",
-        "growthQualified": "No",
-        "fundamental": "Despite strong top-line traction from cybersecurity subsidiaries, 63 Moons remains unprofitable on a consolidated basis (-₹47.6 Cr in Q1 FY27). Sub-zero return metrics (ROE -4.9%, ROCE -3.7%) fail O'Neil's C-and-A CANSLIM thresholds despite low nominal debt, precluding genuine institutional sponsorship.",
+        "growthQualified": "Partial",
+        "fundamental": "Consolidated revenue expanded sharply via cybersecurity subsidiary order additions, but the company remains unprofitable at the net level with negative operating margins and negative ROE (-1.45%). Legal liabilities and NSEL overhangs continue to impair institutional accumulation.",
         "verdict": "Watch",
-        "risk": "Failure below the double-bottom swing pivot and deterministic stop at 862.02 invalidates pattern integrity; cut losses immediately."
+        "risk": "A breach below 862.02 invalidates the double-bottom base support; close below the 50-day average demands an immediate stop-out."
       },
       "ABSLLIQUID": {
         "stage": "Unclear",
-        "technical": "As an overnight liquid ETF, price action is tightly tethered to NAV near 1006. Indicators like RSI 57 and MACD reflect negligible tick variations rather than genuine Stage 2 accumulation. There is no actionable equity momentum or volume-supported breakout structure present.",
+        "technical": "This instrument is an overnight cash management debt ETF pegged tightly around par (₹1000). Moving-average crossovers and breakout signals reflect mechanical calculation noise rather than genuine price discovery, accumulation, or momentum.",
         "epsGrowth": [
           "not verified"
         ],
         "revenueGrowth": "not verified",
         "earningsTrend": "Not verified",
         "growthQualified": "Not verified",
-        "fundamental": "Cash management instrument holding overnight money market paper, not an operating corporate business. It generates overnight yields without corporate earnings, sales growth, operating margins, or ROE/ROCE metrics, placing it outside CANSLIM or SEPA evaluation frameworks.",
+        "fundamental": "Holding overnight TREPS and sovereign repo instruments, standard CANSLIM equity metrics such as revenue growth, earnings expansion, operating margins, and ROE are entirely inapplicable. It functions strictly as a cash-parking vehicle.",
         "verdict": "Avoid",
-        "risk": "Thesis fails if treated as an equity momentum vehicle; exit if price deviates below NAV or the stop of 1005.97."
+        "risk": "Holding an overnight liquid fund for equity breakout appreciation misallocates trading capital; zero directional equity alpha."
       },
       "ANANDRATHI": {
         "stage": "Stage 2 advancing",
-        "technical": "Demonstrating superior relative strength by printing a fresh 20-session high breakout at 2270.67 while the broader market collapses. Price is stacked bullishly above rising EMA21, SMA50, and SMA200. RSI 65 reflects robust demand without entering an overextended blow-off posture.",
+        "technical": "Executing a clean 20-day high breakout at 2,270.67 while remaining well above rising 21 EMA, 50 SMA, and 200 SMA. RSI at 65 confirms robust momentum and standout relative strength during a broad-market midcap liquidation.",
         "epsGrowth": [
-          "Q2 FY27 +23%",
-          "Q1 FY27 +74%",
-          "Q4 FY26 +33%"
+          "Q2 FY27 +22.0%",
+          "Q1 FY27 +23.8%",
+          "Q4 FY26 +32.5%"
         ],
-        "revenueGrowth": "+21%",
+        "revenueGrowth": "+15.7%",
         "earningsTrend": "Decelerating",
         "growthQualified": "Partial",
-        "fundamental": "Premier private wealth manager with exceptional capital efficiency (ROCE 57.5%, ROE 45.3%) and virtually zero debt. Q2 FY27 PAT rose 23% YoY on 21% revenue growth, supported by record mutual fund net inflows, though MTM markdowns decelerated bottom-line expansion from Q1's 74% pace.",
+        "fundamental": "Superior balance sheet quality featuring zero debt, 45.3% ROE, and 57.5% ROCE. However, profit expansion has moderated from 32.5% to 22%, slightly lagging the CANSLIM 25% acceleration threshold and capping setup qualification.",
         "verdict": "Watch",
-        "risk": "Breakdown below the breakout pivot and stop at 2168.95 breaches the 21-EMA; enforce discipline and cut loss immediately."
+        "risk": "A breakdown below pivot support at 2,168.95 invalidates the 20-day breakout; exit immediately to preserve capital."
       },
       "BAJAJHLDNG": {
         "stage": "Stage 2 advancing",
-        "technical": "Testing a 20-session pivot at 11655.64 backed by a 3.3x volume surge, maintaining clean alignment above EMA21, SMA50, and SMA200. RSI at 63 exhibits firm institutional accumulation, but overhead resistance from prior peaks requires disciplined base progression.",
+        "technical": "Consolidating within 1.5% of its 11,655.64 pivot on a massive 3.3× volume surge. Firmly anchored above its 21 EMA, 50 SMA, and 200 SMA, displaying institutional accumulation and strong relative strength against broader weakness.",
         "epsGrowth": [
-          "Q1 FY27 -22%",
-          "Q4 FY26 +49%"
+          "Q1 FY27 +31.8%",
+          "Q4 FY26 +18.5%"
         ],
-        "revenueGrowth": "+24%",
-        "earningsTrend": "Negative",
+        "revenueGrowth": "+21.5%",
+        "earningsTrend": "Accelerating",
         "growthQualified": "Partial",
-        "fundamental": "High-grade holding company holding strategic equity stakes in Bajaj Auto and Finserv with negligible debt. While top-line revenue expanded 24% in Q1 FY27, consolidated PAT contracted 22% YoY due to mark-to-market variations and dividend seasonality, keeping ROE modest around 12%.",
-        "verdict": "Watch",
-        "risk": "Violation of the swing consolidation floor and stop level at 11048.64 invalidates the breakout setup; exit promptly."
+        "fundamental": "Virtually debt-free primary investment holding vehicle for Bajaj Auto and Bajaj Finserv. Top line grew 21.5% with earnings accelerating to 31.8% in Q1, though holding-company structures inherently exhibit lower standalone ROE (11.9%).",
+        "verdict": "Constructive",
+        "risk": "A close below the 11,048.64 support level terminates the breakout setup; enforce stop discipline promptly."
       },
       "BBOX": {
         "stage": "Stage 2 advancing",
-        "technical": "Forming a clean double-bottom base with neckline pressure at 952.95. Strong price support holds well above ascending EMA21, SMA50, and SMA200. RSI 63 confirms consistent buying pressure, revealing distinct relative strength against collapsing mid- and small-cap benchmarks.",
+        "technical": "Building the right side of a double-bottom base with neckline resistance at 952.95, comfortably above key EMA21, SMA50, and SMA200. RSI 63 highlights constructive momentum, though confirmation requires high-volume breakout demand.",
         "epsGrowth": [
-          "Q1 FY27 +18%",
-          "Q4 FY26 +7%"
+          "Q1 FY27 +17.8%",
+          "Q4 FY26 +20.8%"
         ],
-        "revenueGrowth": "+24%",
-        "earningsTrend": "Accelerating",
+        "revenueGrowth": "+23.9%",
+        "earningsTrend": "Decelerating",
         "growthQualified": "Partial",
-        "fundamental": "Global digital integrator securing a $950M order backlog, highlighted by a recent $131M hyperscaler contract. Q1 FY27 net profit grew 18% YoY to ₹56 Cr on 24% revenue expansion (₹1,719 Cr). Expanding operating margins (7.2%) and steady deleveraging support constructive institutional interest.",
-        "verdict": "Constructive",
-        "risk": "A retreat below the double-bottom trough and stop trigger at 854.24 voids the technical pattern; sell without hesitation."
+        "fundamental": "Consolidated sales grew 24% to ₹1,718 Cr backed by an expanding ₹8,986 Cr order book. However, net margins remain lean at 3.3% and EPS growth of ~18% trails CANSLIM's 25% target, capping the rating.",
+        "verdict": "Watch",
+        "risk": "A decline below the 854.24 swing low breaks base symmetry and demands full position closure."
       },
       "CHENNPETRO": {
         "stage": "Stage 2 advancing",
-        "technical": "Rebounding sharply with a bullish engulfing candle on 1.65x volume, testing the double bottom neckline at 1679.18. Price sits firmly above EMA21, SMA50, and SMA200. RSI 60 underlines renewed accumulation, demonstrating standout relative strength amidst broad market liquidation.",
+        "technical": "Constructing a double-bottom continuation setup toward 1,679.18 on 1.65× volume, trading cleanly above 50 and 200 SMAs. Relative strength is resilient, benefiting from sector tailwinds and elevated crude refining margins.",
         "epsGrowth": [
-          "Q2 FY27 +210%",
-          "Q1 FY27 Turnaround (>1000%)",
-          "Q4 FY26 +211%"
+          "Q1 FY27 +1895.0% (Turnaround)",
+          "Q4 FY26 +202.6%"
         ],
-        "revenueGrowth": "+10%",
+        "revenueGrowth": "+84.8%",
         "earningsTrend": "Accelerating",
-        "growthQualified": "Partial",
-        "fundamental": "Explosive earnings powered by surging gross refining margins ($20.41/bbl), driving Q2 FY27 PAT up 210% to ₹2,271 Cr. Supported by a stellar ROCE of 34.9%, ROE of 31.8%, substantial balance-sheet deleveraging, and an attractive P/E multiple under 4x.",
-        "verdict": "Constructive",
-        "risk": "Failure below the double bottom pivot floor and stop at 1497.85 invalidates the structure; cut losses immediately."
+        "growthQualified": "Yes",
+        "fundamental": "Exemplary CANSLIM turnaround profile with quarterly sales jumping 84.8% and earnings surging to ₹1,016 Cr on strong gross refining margins of $8.78/bbl. Navratna status and institutional sponsorship confirm sector leadership.",
+        "verdict": "Leading",
+        "risk": "Violation of the 1,497.85 base floor negates the double-bottom structure; exit immediately without hesitation."
       }
     }
   },
   "history": [
-    {
-      "sessionDate": "2026-10-17",
-      "gate": "WEAK",
-      "verdict": "No new buys. Observe and protect capital."
-    },
     {
       "sessionDate": "2026-10-18",
       "gate": "WEAK",
@@ -371,6 +364,11 @@
     },
     {
       "sessionDate": "2026-10-23",
+      "gate": "WEAK",
+      "verdict": "No new buys. Observe and protect capital."
+    },
+    {
+      "sessionDate": "2026-10-24",
       "gate": "WEAK",
       "verdict": "No new buys. Observe and protect capital."
     }
