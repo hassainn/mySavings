@@ -2,8 +2,8 @@
   "schemaVersion": 2,
   "status": "partition_complete",
   "provider": "Upstox",
-  "generatedAt": "2026-10-24T14:39:35.025Z",
-  "methodologyUpdatedAt": "2026-10-24T14:39:35.025Z",
+  "generatedAt": "2026-10-25T15:07:32.275Z",
+  "methodologyUpdatedAt": "2026-10-25T15:07:32.275Z",
   "partition": {
     "index": 0,
     "count": 2
@@ -7527,8 +7527,8 @@
         "pctBelow52High": 50.1
       },
       "validation": {
-        "sampleSize": 1,
-        "winRate": 0,
+        "sampleSize": 0,
+        "winRate": null,
         "method": "2R before 1R stop within 10 sessions"
       }
     },
@@ -10543,13 +10543,13 @@
         "macd": -12.62,
         "atr14": 12.93,
         "relativeVolume": 0.55,
-        "rsRating": 40
+        "rsRating": 41
       },
       "sepa": {
         "stage": 3,
         "stageName": "Stage 3 top",
         "trendScore": 2,
-        "rsRating": 40,
+        "rsRating": 41,
         "sepaBreakout": false,
         "superPerformer": false,
         "swingState": "Sell",
