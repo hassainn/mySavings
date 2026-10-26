@@ -1,9 +1,9 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-26T16:09:25.828Z",
+  "generatedAt": "2026-10-26T17:43:28.046Z",
   "sessionDate": "2026-10-26",
   "status": "ready",
-  "scanGeneratedAt": "2026-10-25T15:18:12.336Z",
+  "scanGeneratedAt": "2026-10-26T17:43:11.082Z",
   "gate": "WEAK",
   "breadthScore": 14,
   "verdict": "No new buys. Observe and protect capital.",
@@ -239,13 +239,103 @@
   ],
   "previousSession": "2026-10-25",
   "intelligenceGeneratedAt": "2026-10-26T16:07:54.150Z",
-  "commentary": null,
-  "commentaryStatus": "unavailable",
+  "commentary": "A single-session index rebound does not constitute a confirmed market uptrend when underlying breadth remains depressed at a weak reading of 14. William O'Neil's market-direction rules strictly demand waiting for a confirmed Follow-Through Day before committing meaningful risk, while Stan Weinstein's stage discipline warns against buying breakouts when sector participation is narrow. With the deterministic breadth gate WEAK, institutional distribution still overhangs the broader market. Jesse Livermore's timeless wisdom applies: sit tight and preserve capital until general market conditions provide a true tailwind. Progressive exposure must remain severely curtailed, reserving capital strictly for setups where confirmed Stage 2 technical bases align with accelerating CANSLIM earnings.",
+  "commentaryStatus": "available",
   "limitations": [
     "Daily scan observations are not fills or performance results.",
     "Price levels are scanner references, not live quotes.",
     "No broker orders are submitted."
   ],
+  "model": "gemini-3.8-flash",
+  "analysis": {
+    "analyst": "Minervini SEPA | O'Neil CANSLIM | Weinstein Stage Analysis",
+    "bySymbol": {
+      "ANANDRATHI": {
+        "stage": "Stage 2 advancing",
+        "technical": "Consolidating tightly within 1.5% of the 2,270.67 pivot above rising 21, 50, and 200-day moving averages. The 2.08x volume expansion confirms institutional interest, yet overhead supply requires a decisive volume-backed breakout before entering.",
+        "epsGrowth": [
+          "Q2 FY27 -10.4%",
+          "Q1 FY27 +22.8%"
+        ],
+        "revenueGrowth": "+15.7%",
+        "earningsTrend": "Decelerating",
+        "growthQualified": "Partial",
+        "fundamental": "Capital-light wealth management franchise delivering ~35% ROE with zero structural debt. AUM grew 18% YoY, but non-cash ESOP charges dented reported Q2 profit, causing earnings deceleration that breaches CANSLIM standards.",
+        "verdict": "Watch",
+        "risk": "A close below the 2,171.37 stop invalidates the pivot structure; cut loss immediately."
+      },
+      "ANTELOPUS": {
+        "stage": "Stage 2 advancing",
+        "technical": "Orderly Stage 2 advance forming a constructive double bottom above the rising 200 SMA. Right-side accumulation with 4.05x average volume pressing against the 1,292.19 neckline highlights decisive institutional accumulation.",
+        "epsGrowth": [
+          "Q2 FY27 +385.0%",
+          "Q1 FY27 +384.8%"
+        ],
+        "revenueGrowth": "+116.0%",
+        "earningsTrend": "Steady",
+        "growthQualified": "Yes",
+        "fundamental": "Exceptional operational ramp drives ~70% EBITDA margins and a robust 19.9% ROCE. The balance sheet is virtually debt-free with zero promoter pledge, fully underwriting explosive CANSLIM-style earnings expansion.",
+        "verdict": "Leading",
+        "risk": "Failure to clear the neckline and violation of 1,164.98 terminates the setup; cut swiftly."
+      },
+      "CHENNPETRO": {
+        "stage": "Stage 2 advancing",
+        "technical": "Stage 2 turnaround building a multi-week double bottom above rising 50 and 200 SMAs. Price is testing the 1,679.18 trigger with 2.04x volume and RSI 59, reflecting steady accumulation without excessive extension.",
+        "epsGrowth": [
+          "Q2 FY27 +210.0%",
+          "Q1 FY27 +85.0%"
+        ],
+        "revenueGrowth": "+10.2%",
+        "earningsTrend": "Accelerating",
+        "growthQualified": "Partial",
+        "fundamental": "Gross refining margins surged to $20.41/bbl, driving a threefold profit surge and an ROE above 31%. Ongoing debt reduction and attractive dividend yields support the profile, though revenue growth remains below 15%.",
+        "verdict": "Constructive",
+        "risk": "Breakdown below the 1,497.66 support invalidates the double bottom; exit without hesitation."
+      },
+      "CRISIL": {
+        "stage": "Stage 2 advancing",
+        "technical": "Pristine Stage 2 trend template hugging rising 50 and 200-day moving averages. Price consolidates within 1.5% of the 4,876.87 pivot on 1.89x volume, absorbing overhead supply constructively.",
+        "epsGrowth": [
+          "Q3 CY26 +5.9%",
+          "Q2 CY26 +12.3%"
+        ],
+        "revenueGrowth": "+20.2%",
+        "earningsTrend": "Decelerating",
+        "growthQualified": "Partial",
+        "fundamental": "Premier analytical moat backed by S&P Global, featuring zero debt and ROCE exceeding 30%. Healthy 20.2% top-line growth is tempered by decelerating, single-digit net profit expansion that falls short of CANSLIM thresholds.",
+        "verdict": "Watch",
+        "risk": "Violation of the 4,597.26 stop indicates failed absorption; cut loss immediately."
+      },
+      "CYIENT": {
+        "stage": "Stage 2 advancing",
+        "technical": "Stage 2 expansion clearing a 20-session resistance into new 52-week highs on massive 25.29x average volume. While relative strength is standout, the extension warrants caution rather than chasing.",
+        "epsGrowth": [
+          "Q2 FY27 -8.0%",
+          "Q1 FY27 -18.6%"
+        ],
+        "revenueGrowth": "+25.0%",
+        "earningsTrend": "Negative",
+        "growthQualified": "Partial",
+        "fundamental": "Robust 25% revenue expansion driven by aerospace and semiconductor engineering, with debt retired via DLM stake sale. However, negative bottom-line YoY comparisons (-8%) fail CANSLIM's current earnings growth requirement.",
+        "verdict": "Watch",
+        "risk": "Retreat below the 1,112.61 breakout level signals an institutional bull trap; exit immediately."
+      },
+      "DCMSRIND": {
+        "stage": "Stage 1 base",
+        "technical": "Carving a Stage 1 base reversal attempting to turn moving averages positive. Volume reached 3.43x average into the 57.54 trigger with RSI 72, but heavy overhead cyclical supply remains unresolved.",
+        "epsGrowth": [
+          "Q2 FY26 -113.6%",
+          "Q1 FY26 +15.8%"
+        ],
+        "revenueGrowth": "-1.8%",
+        "earningsTrend": "Negative",
+        "growthQualified": "No",
+        "fundamental": "Cyclical sugar and industrial operations suffered quarterly net losses and negative operating margins. Top-line contraction and erratic profitability fail both CANSLIM and Minervini fundamental quality screens.",
+        "verdict": "Avoid",
+        "risk": "A breakdown below 48.88 marks renewed Stage 4 decline; enforce strict stop discipline."
+      }
+    }
+  },
   "history": [
     {
       "sessionDate": "2026-10-20",
