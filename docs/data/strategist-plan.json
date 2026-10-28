@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-28T09:00:07.500Z",
+  "generatedAt": "2026-10-28T09:41:20.837Z",
   "sessionDate": "2026-10-28",
   "status": "ready",
   "scanGeneratedAt": "2026-10-27T17:00:43.141Z",
@@ -238,8 +238,8 @@
     }
   ],
   "previousSession": "2026-10-27",
-  "intelligenceGeneratedAt": "2026-10-27T15:21:26.117Z",
-  "commentary": "With the deterministic market breadth score depressed at 33 and the gate classified as WEAK, overall market exposure must remain defensive. While the headline Nifty holds flat near 22,749 amid geopolitical crude headwinds, selective Stage 2 participation is visible in small-caps. Stan Weinstein's discipline insists on avoiding broad-market complacency: never confuse divergent index churn with a confirmed market uptrend. Mark Minervini's progressive exposure rules require testing the waters strictly with high-conviction, earnings-backed leaders breaking out of sound bases on above-average volume, while enforcing tight stop-loss management. Unless confirmed leadership demonstrates institutional accumulation alongside accelerating quarterly EPS and sales, cash preservation and risk mitigation take precedence over aggressive capital allocation.",
+  "intelligenceGeneratedAt": "2026-10-28T09:40:12.986Z",
+  "commentary": "Market breadth registers an anemic 33% with benchmark indices breaching support levels amid crude climbing past $115/bbl, activating a strict WEAK gate. In Stan Weinstein's stage discipline and William O'Neil's market-direction methodology, attempting aggressive long exposure during unconfirmed market downdrafts is a low-probability endeavor. Distribution days are compounding across major sectors. Mark Minervini's progressive exposure rules dictate standing largely aside, preserving capital, and testing the waters only with reduced position sizes on exceptional relative-strength pivots. We closely track Stage 2 candidates resisting general market selling, but will not scale exposure until market breadth stabilizes and a verified follow-through day emerges.",
   "commentaryStatus": "available",
   "limitations": [
     "Daily scan observations are not fills or performance results.",
@@ -248,91 +248,91 @@
   ],
   "model": "gemini-3.8-flash",
   "analysis": {
-    "analyst": "Minervini SEPA, O'Neil CANSLIM & Weinstein Stage Analysis",
+    "analyst": "Minervini SEPA, O'Neil CANSLIM & Weinstein Stage Analysis Framework",
     "bySymbol": {
       "63MOONS": {
-        "stage": "Stage 2 advancing",
-        "technical": "Completing a double-bottom consolidation above rising 21 EMA, 50 SMA, and 200 SMA. Volume expansion of 1.68× supports the 958.91 pivot challenge with an RSI of 69 showing constructive relative strength, though price is approaching overhead resistance.",
+        "stage": "Stage 1 base",
+        "technical": "Price trades above its 21 EMA, 50 SMA, and 200 SMA, testing a double bottom trigger at 958.91 on 1.68x volume with an RSI of 69. However, the multi-month base lacks clean VCP contraction, and historical price volatility shows weak relative strength compared to genuine market leaders.",
         "epsGrowth": [
-          "Q1 FY27 -203%",
-          "Q4 FY26 -32%"
+          "Q1 FY27 Negative",
+          "Q4 FY26 Negative"
         ],
-        "revenueGrowth": "+40.7%",
+        "revenueGrowth": "+350%",
         "earningsTrend": "Negative",
-        "growthQualified": "Partial",
-        "fundamental": "Despite recent lumpy software revenue expansion, the company remains burdened by net losses and volatile operating margins. Low institutional ownership and persistent negative earnings fail O'Neil's CANSLIM bottom-line requirements.",
-        "verdict": "Watch",
-        "risk": "Fails below the 855.54 support level; exit swiftly on any high-volume distribution day piercing the 50-day moving average."
+        "growthQualified": "No",
+        "fundamental": "Despite a top-line rebound to ₹137 Cr, persistent net losses (-₹47.6 Cr) and negative ROCE of -3.7% violate CANSLIM parameters. O'Neil and Minervini require true institutional sponsorship backed by bottom-line profitability and expanding net margins, which are absent here.",
+        "verdict": "Avoid",
+        "risk": "Fails on a breakdown below 855.54 support; strict stop discipline preserves capital against deteriorating fundamental quality."
       },
       "ACUTAAS": {
         "stage": "Stage 2 advancing",
-        "technical": "Textbook Stage 2 continuation pattern with price tightly compressing within 1.5% of its 3513.41 pivot. Surging 3.62× volume and an RSI of 62 highlight powerful institutional accumulation and classic VCP characteristics.",
+        "technical": "Displays textbook Minervini Trend Template alignment above rising 21 EMA, 50 SMA, and 200 SMA. Compacting into a tight pivot near 3513.41 on strong 3.62x volume expansion. RSI at 62 confirms resilient relative strength decouples positively from a weak general market.",
         "epsGrowth": [
-          "Q2 FY27 +84%",
-          "Q1 FY27 +70%"
+          "Q2 FY27 +71%",
+          "Q1 FY27 +38%"
         ],
-        "revenueGrowth": "+42.7%",
+        "revenueGrowth": "+43%",
         "earningsTrend": "Accelerating",
         "growthQualified": "Yes",
-        "fundamental": "Superb CANSLIM fundamental profile with Q2 net profit soaring 84% on 42.7% sales growth. Negligible debt-to-equity (0.02), zero promoter pledge, and rising institutional sponsorship confirm genuine market leadership.",
+        "fundamental": "Pristine CANSLIM profile with Q2 FY27 PAT up 71.4% to ₹125 Cr and revenue climbing 42.7% to ₹437 Cr. Supported by 31.6% ROCE, 24% ROE, negligible debt, and zero promoter pledging, confirming high-caliber institutional accumulation.",
         "verdict": "Leading",
-        "risk": "Thesis invalidates if price undercuts the 3263.25 pivot support; enforce strict 7–8% maximum stop discipline."
+        "risk": "Setup invalidates on a close beneath the 3263.25 stop; exit immediately if the pivot breakout lacks volume follow-through."
       },
       "ANANDRATHI": {
         "stage": "Stage 2 advancing",
-        "technical": "Well-defined Stage 2 structure trading neatly above the rising 50 and 200 SMAs. The stock is tightly coiled within 1.5% of its 2270.67 pivot with RSI at 64, displaying constructive absorption of supply.",
+        "technical": "Solid Stage 2 uptrend with key moving averages stacked sequentially. Consolidating within 1.5% of its 2270.67 pivot. RSI 64 and positive MACD affirm underlying price strength, though volume has dried up near local highs reflecting cautious institutional sponsorship in a weak tape.",
         "epsGrowth": [
           "Q2 FY27 +22%",
           "Q1 FY27 +24%"
         ],
-        "revenueGrowth": "+16.6%",
-        "earningsTrend": "Steady",
+        "revenueGrowth": "+16%",
+        "earningsTrend": "Decelerating",
         "growthQualified": "Partial",
-        "fundamental": "High-quality franchise commanding ROCE of 57.5% and ROE of 45.3% with virtually zero debt. Consistent ~22% bottom-line expansion just misses the strict 25% CANSLIM hurdle but maintains high business visibility.",
-        "verdict": "Constructive",
-        "risk": "Breach of the 2172.51 stop level marks pattern failure; exit if price loses key 21 EMA support."
+        "fundamental": "Exceptional capital efficiency with ROCE of 57.5%, ROE of 45.3%, and a virtually debt-free balance sheet. However, Q2 FY27 PAT growth slowed to 22% from 24%, falling just short of the 25% CANSLIM acceleration threshold despite solid 16% revenue growth.",
+        "verdict": "Watch",
+        "risk": "Invalidation occurs on a break below the 2172.51 consolidation floor; enforce stop loss to prevent valuation multiple drawdowns."
       },
       "ANTELOPUS": {
         "stage": "Stage 2 advancing",
-        "technical": "Constructive double-bottom base with price pressing against the 1292.19 neckline trigger. Rising 50 SMA and 200 SMA confirm Stage 2 health, complemented by 1.18× volume and a supportive RSI of 60.",
+        "technical": "Clear Stage 2 advance above a rising 30-week moving average. Printing a double bottom pattern with a 1292.19 neckline trigger on 1.18x volume. RSI 60 reflects notable relative strength, but base depth warrants tighter contraction before fresh institutional commitment.",
         "epsGrowth": [
-          "Q1 FY27 +384%",
-          "Q4 FY26 +153%"
+          "Q2 FY27 +385%",
+          "Q1 FY27 +451%"
         ],
         "revenueGrowth": "+116%",
-        "earningsTrend": "Accelerating",
+        "earningsTrend": "Decelerating",
         "growthQualified": "Yes",
-        "fundamental": "Exceptional earnings acceleration driven by rising production volumes and elevated realizations. Operating profit margins exceed 55%, balance sheet remains practically debt-free, and ROCE nears 20%, fulfilling prime CANSLIM growth criteria.",
-        "verdict": "Leading",
-        "risk": "Thesis fails on a drop below the 1157.39 base swing low; respect Minervini's stop discipline immediately."
+        "fundamental": "Hyper-growth driven by increased hydrocarbon volumes and firm realizations; Q2 FY27 PAT jumped 385% to ₹57.3 Cr with sales up 116% to ₹119 Cr. Zero debt and 19.9% ROCE are constructive, though slight quarterly profit deceleration enforces CANSLIM prudence.",
+        "verdict": "Watch",
+        "risk": "Thesis fails if price slips under 1157.39; cut risk ruthlessly per Minervini discipline if crude tailwinds reverse."
       },
       "ATHERENERG": {
         "stage": "Stage 2 advancing",
-        "technical": "Potent SEPA breakout clearing a 20-session high on robust 3.09× volume expansion. Price holds firmly above its 21, 50, and 200 SMAs, with an RSI of 66 indicating solid momentum without being excessively extended.",
+        "technical": "Textbook SEPA breakout clearing 20-session resistance at 1745.74 on a decisive 3.09x volume surge. Moving averages are upward-trending and RSI 66 indicates strong momentum and relative strength against benchmark weakness, highlighting institutional interest.",
         "epsGrowth": [
           "Q2 FY27 Turnaround",
-          "Q1 FY27 Loss narrowed"
+          "Q1 FY27 Negative"
         ],
-        "revenueGrowth": "+62.8%",
+        "revenueGrowth": "+63%",
         "earningsTrend": "Accelerating",
-        "growthQualified": "Yes",
-        "fundamental": "Inflection quarter featuring maiden net profitability of ₹1.26 crore alongside 62.8% YoY revenue growth. Expanding manufacturing scale is positive, though negative historical ROCE warrants progressive position sizing rather than outsized initial exposure.",
+        "growthQualified": "Partial",
+        "fundamental": "Reported its first profitable quarter with Q2 FY27 PAT of ₹1.26 Cr versus a year-ago loss of ₹154 Cr, propelled by 62.8% sales growth to ₹1,464 Cr. Operating margins turned positive, but negative historical ROCE (-19.8%) demands further fundamental validation.",
         "verdict": "Constructive",
-        "risk": "Setup fails if price drops back into base below 1587.34; immediately cut position to contain downside."
+        "risk": "Pattern invalidates on a drop beneath 1587.34; immediately preserve capital if the breakout fails to sustain."
       },
       "CHENNPETRO": {
         "stage": "Stage 2 advancing",
-        "technical": "Double-bottom structure setting up below 1679.18 pivot with price positioned above all key moving averages. Momentum is positive with RSI at 59 and volume tracking 1.16× average, but refining margin cyclicality lingers.",
+        "technical": "Double bottom breakout structure emerging above 21 EMA, 50 SMA, and 200 SMA. Approaching the 1679.18 trigger with RSI 59 and positive MACD. Volume at 1.16x requires a more authoritative surge to confirm high-conviction institutional accumulation at the pivot.",
         "epsGrowth": [
-          "Q2 FY27 +65%",
-          "Q1 FY27 +118%"
+          "Q2 FY27 +212%",
+          "Q1 FY27 +52%"
         ],
-        "revenueGrowth": "+25.9%",
-        "earningsTrend": "Decelerating",
-        "growthQualified": "Yes",
-        "fundamental": "Benefiting from elevated crude spreads, lower leverage (D/E down to 0.18), and healthy cash flows. However, sequential EBITDA contraction and margin compression indicate peak-cycle decelerating growth, capping institutional sponsorship quality.",
-        "verdict": "Watch",
-        "risk": "Pattern failure occurs on a close below 1490.55; enforce rapid capital preservation stop if support yields."
+        "revenueGrowth": "+10%",
+        "earningsTrend": "Accelerating",
+        "growthQualified": "Partial",
+        "fundamental": "Q2 FY27 net profit leaped 212% to ₹2,247 Cr as gross refining margins expanded to $20.41/bbl. However, top-line growth of 10.1% trails CANSLIM's 15% minimum threshold, underscoring cyclical margin-driven gains rather than broad-based volume expansion.",
+        "verdict": "Constructive",
+        "risk": "Setup is compromised below 1490.55 swing low; exit promptly per Minervini risk control to prevent exposure to refining margin reversals."
       }
     }
   },
