@@ -2,208 +2,6 @@
   "schemaVersion": 1,
   "runs": [
     {
-      "sessionDate": "2026-09-30",
-      "generatedAt": "2026-09-30T18:02:23.428Z",
-      "gate": "WEAK",
-      "verdict": "No new buys. Observe and protect capital.",
-      "ideas": [
-        {
-          "symbol": "AAREYDRUGS",
-          "name": "AAREY DRUGS & PHARM LTD",
-          "pattern": "Double bottom",
-          "confidence": 99,
-          "state": "Watch",
-          "scanState": "Armed",
-          "asOf": "2026-09-29T00:00:00+05:30",
-          "close": 99.92,
-          "entryTrigger": 104.09,
-          "stop": 95.95,
-          "target2R": 120.38,
-          "evidence": [
-            "Price above EMA21, SMA50 and SMA200",
-            "RSI 55 supports momentum without extreme extension",
-            "Two aligned swing lows with neckline pressure",
-            "Rounded cup 26.6% deep with a 6.5% handle in the upper half of the base"
-          ]
-        },
-        {
-          "symbol": "AARTIPHARM",
-          "name": "Aarti Pharmalabs",
-          "pattern": "20-day breakout",
-          "confidence": 99,
-          "state": "Watch",
-          "scanState": "Triggered",
-          "asOf": "2026-09-29T00:00:00+05:30",
-          "close": 972.8,
-          "entryTrigger": 962.96,
-          "stop": 869.1,
-          "target2R": 1150.69,
-          "evidence": [
-            "Price above EMA21, SMA50 and SMA200",
-            "Close cleared the prior 20-session high",
-            "New trailing-year price high",
-            "RSI 66 supports momentum without extreme extension"
-          ]
-        },
-        {
-          "symbol": "ABBOTINDIA",
-          "name": "Abbott India",
-          "pattern": "Near breakout",
-          "confidence": 99,
-          "state": "Watch",
-          "scanState": "Armed",
-          "asOf": "2026-09-29T00:00:00+05:30",
-          "close": 27270,
-          "entryTrigger": 28968.94,
-          "stop": 27710.37,
-          "target2R": 31486.08,
-          "evidence": [
-            "Price above EMA21, SMA50 and SMA200",
-            "Within 1.5% of the 20-session pivot",
-            "2.52× 20-day average volume",
-            "RSI 69 supports momentum without extreme extension"
-          ]
-        },
-        {
-          "symbol": "ACE",
-          "name": "Action Const Equip",
-          "pattern": "Double bottom",
-          "confidence": 99,
-          "state": "Watch",
-          "scanState": "Armed",
-          "asOf": "2026-09-29T00:00:00+05:30",
-          "close": 1205.8,
-          "entryTrigger": 1269.27,
-          "stop": 1190.33,
-          "target2R": 1427.15,
-          "evidence": [
-            "Price above EMA21, SMA50 and SMA200",
-            "RSI 72 supports momentum without extreme extension",
-            "MACD is above signal and zero line",
-            "Two aligned swing lows with neckline pressure"
-          ]
-        },
-        {
-          "symbol": "ADANIPORTS",
-          "name": "Adani Port",
-          "pattern": "Near breakout",
-          "confidence": 99,
-          "state": "Watch",
-          "scanState": "Armed",
-          "asOf": "2026-09-29T00:00:00+05:30",
-          "close": 1822,
-          "entryTrigger": 1882.38,
-          "stop": 1790.95,
-          "target2R": 2065.24,
-          "evidence": [
-            "Price above EMA21, SMA50 and SMA200",
-            "Within 1.5% of the 20-session pivot",
-            "1.74× 20-day average volume",
-            "RSI 63 supports momentum without extreme extension"
-          ]
-        },
-        {
-          "symbol": "AEROFLEX",
-          "name": "AEROFLEX INDUSTRIES LTD",
-          "pattern": "Double bottom",
-          "confidence": 99,
-          "state": "Watch",
-          "scanState": "Armed",
-          "asOf": "2026-09-29T00:00:00+05:30",
-          "close": 539.6,
-          "entryTrigger": 584.73,
-          "stop": 528.75,
-          "target2R": 696.71,
-          "evidence": [
-            "Price above EMA21, SMA50 and SMA200",
-            "Two aligned swing lows with neckline pressure",
-            "Leader eased to the rising 21-EMA near highs, then a bullish reclaim candle",
-            "Pullback ran on lighter-than-average volume"
-          ]
-        },
-        {
-          "symbol": "AETHER",
-          "name": "Aether Industries",
-          "pattern": "Double bottom",
-          "confidence": 99,
-          "state": "Watch",
-          "scanState": "Armed",
-          "asOf": "2026-09-29T00:00:00+05:30",
-          "close": 1749.9,
-          "entryTrigger": 1799.8,
-          "stop": 1669.24,
-          "target2R": 2060.91,
-          "evidence": [
-            "Price above EMA21, SMA50 and SMA200",
-            "1.89× 20-day average volume",
-            "RSI 63 supports momentum without extreme extension",
-            "MACD is above signal and zero line"
-          ]
-        },
-        {
-          "symbol": "AHCL",
-          "name": "ANLON HEALTHCARE LIMITED",
-          "pattern": "20-day breakout",
-          "confidence": 99,
-          "state": "Watch",
-          "scanState": "Triggered",
-          "asOf": "2026-09-29T00:00:00+05:30",
-          "close": 36.39,
-          "entryTrigger": 34.69,
-          "stop": 29.17,
-          "target2R": 45.74,
-          "evidence": [
-            "Price above EMA21, SMA50 and SMA200",
-            "Close cleared the prior 20-session high",
-            "New trailing-year price high",
-            "MACD is above signal and zero line"
-          ]
-        }
-      ],
-      "observations": [
-        {
-          "symbol": "ACE",
-          "previousState": "Watch",
-          "observation": "Latest scanned close 1205.8; scanner state Armed. This is not an executed trade or an intraday stop/target check."
-        },
-        {
-          "symbol": "AEGISVOPAK",
-          "previousState": "Watch",
-          "observation": "No newer scan observation; outcome unknown."
-        },
-        {
-          "symbol": "AETHER",
-          "previousState": "Watch",
-          "observation": "Latest scanned close 1749.9; scanner state Armed. This is not an executed trade or an intraday stop/target check."
-        },
-        {
-          "symbol": "AHCL",
-          "previousState": "Watch",
-          "observation": "Latest scanned close 36.39; scanner state Triggered. This is not an executed trade or an intraday stop/target check."
-        },
-        {
-          "symbol": "ARROWGREEN",
-          "previousState": "Watch",
-          "observation": "Latest scanned close 872.5; scanner state Armed. This is not an executed trade or an intraday stop/target check."
-        },
-        {
-          "symbol": "ARTEMISMED",
-          "previousState": "Watch",
-          "observation": "Latest scanned close 366.6; scanner state Armed. This is not an executed trade or an intraday stop/target check."
-        },
-        {
-          "symbol": "AVADHSUGAR",
-          "previousState": "Watch",
-          "observation": "Latest scanned close 793.45; scanner state Armed. This is not an executed trade or an intraday stop/target check."
-        },
-        {
-          "symbol": "AXISCADES",
-          "previousState": "Watch",
-          "observation": "Latest scanned close 2067.4; scanner state Triggered. This is not an executed trade or an intraday stop/target check."
-        }
-      ]
-    },
-    {
       "sessionDate": "2026-10-01",
       "generatedAt": "2026-10-01T18:28:55.889Z",
       "gate": "WEAK",
@@ -5864,6 +5662,208 @@
           "symbol": "ANANDRATHI",
           "previousState": "Watch",
           "observation": "Latest scanned close 2264.6; scanner state Armed. This is not an executed trade or an intraday stop/target check."
+        }
+      ]
+    },
+    {
+      "sessionDate": "2026-10-30",
+      "generatedAt": "2026-10-29T18:34:15.978Z",
+      "gate": "WEAK",
+      "verdict": "No new buys. Observe and protect capital.",
+      "ideas": [
+        {
+          "symbol": "21STCENMGM",
+          "name": "21st Century Mgmt Service",
+          "pattern": "Double bottom",
+          "confidence": 99,
+          "state": "Watch",
+          "scanState": "Armed",
+          "asOf": "2026-10-28T00:00:00+05:30",
+          "close": 52.45,
+          "entryTrigger": 53.46,
+          "stop": 47.58,
+          "target2R": 65.23,
+          "evidence": [
+            "Price above EMA21, SMA50 and SMA200",
+            "2.42× 20-day average volume",
+            "MACD is above signal and zero line",
+            "Two aligned swing lows with neckline pressure"
+          ]
+        },
+        {
+          "symbol": "63MOONS",
+          "name": "63 Moons Technologies",
+          "pattern": "Double bottom",
+          "confidence": 99,
+          "state": "Watch",
+          "scanState": "Armed",
+          "asOf": "2026-10-28T00:00:00+05:30",
+          "close": 932.5,
+          "entryTrigger": 958.91,
+          "stop": 849.29,
+          "target2R": 1178.14,
+          "evidence": [
+            "Price above EMA21, SMA50 and SMA200",
+            "MACD is above signal and zero line",
+            "Two aligned swing lows with neckline pressure",
+            "Leader eased to the rising 21-EMA near highs, then a bullish reclaim candle"
+          ]
+        },
+        {
+          "symbol": "AAATECH",
+          "name": "AAA Technologies",
+          "pattern": "20-day breakout",
+          "confidence": 99,
+          "state": "Watch",
+          "scanState": "Triggered",
+          "asOf": "2026-10-28T00:00:00+05:30",
+          "close": 123.24,
+          "entryTrigger": 121.82,
+          "stop": 102.52,
+          "target2R": 160.43,
+          "evidence": [
+            "Price above EMA21, SMA50 and SMA200",
+            "Close cleared the prior 20-session high",
+            "1.85× 20-day average volume",
+            "RSI 62 supports momentum without extreme extension"
+          ]
+        },
+        {
+          "symbol": "AARTIDRUGS",
+          "name": "Aarti Drugs",
+          "pattern": "SEPA breakout",
+          "confidence": 99,
+          "state": "Watch",
+          "scanState": "Armed",
+          "asOf": "2026-10-28T00:00:00+05:30",
+          "close": 447.9,
+          "entryTrigger": 454.1,
+          "stop": 420.4,
+          "target2R": 521.5,
+          "evidence": [
+            "Price above EMA21, SMA50 and SMA200",
+            "Close cleared the prior 20-session high",
+            "67.7× 20-day average volume",
+            "RSI 62 supports momentum without extreme extension"
+          ]
+        },
+        {
+          "symbol": "ABDL",
+          "name": "ALLIED BLEND N DISTILS L",
+          "pattern": "Double bottom",
+          "confidence": 99,
+          "state": "Watch",
+          "scanState": "Armed",
+          "asOf": "2026-10-28T00:00:00+05:30",
+          "close": 702.2,
+          "entryTrigger": 767.67,
+          "stop": 705.04,
+          "target2R": 892.92,
+          "evidence": [
+            "Price above EMA21, SMA50 and SMA200",
+            "1.46× 20-day average volume",
+            "RSI 52 supports momentum without extreme extension",
+            "Two aligned swing lows with neckline pressure"
+          ]
+        },
+        {
+          "symbol": "ACUTAAS",
+          "name": "ACUTAAS CHEMICALS LIMITED",
+          "pattern": "Double bottom",
+          "confidence": 99,
+          "state": "Watch",
+          "scanState": "Armed",
+          "asOf": "2026-10-28T00:00:00+05:30",
+          "close": 3710,
+          "entryTrigger": 3903.9,
+          "stop": 3555.57,
+          "target2R": 4600.56,
+          "evidence": [
+            "Price above EMA21, SMA50 and SMA200",
+            "3.67× 20-day average volume",
+            "RSI 69 supports momentum without extreme extension",
+            "MACD is above signal and zero line"
+          ]
+        },
+        {
+          "symbol": "AJMERA",
+          "name": "AJMERA REALTY & INF I LTD",
+          "pattern": "20-day breakout",
+          "confidence": 99,
+          "state": "Watch",
+          "scanState": "Triggered",
+          "asOf": "2026-10-28T00:00:00+05:30",
+          "close": 133.8,
+          "entryTrigger": 132.97,
+          "stop": 121.35,
+          "target2R": 156.22,
+          "evidence": [
+            "Close cleared the prior 20-session high",
+            "2.17× 20-day average volume",
+            "MACD is above signal and zero line",
+            "Two aligned swing lows with neckline pressure"
+          ]
+        },
+        {
+          "symbol": "ALIVUS",
+          "name": "Glenmark Life Science",
+          "pattern": "SEPA breakout",
+          "confidence": 99,
+          "state": "Watch",
+          "scanState": "Armed",
+          "asOf": "2026-10-28T00:00:00+05:30",
+          "close": 1399.4,
+          "entryTrigger": 1495.29,
+          "stop": 1385.17,
+          "target2R": 1715.55,
+          "evidence": [
+            "Price above EMA21, SMA50 and SMA200",
+            "Close cleared the prior 20-session high",
+            "1.88× 20-day average volume",
+            "RSI 54 supports momentum without extreme extension"
+          ]
+        }
+      ],
+      "observations": [
+        {
+          "symbol": "21STCENMGM",
+          "previousState": "Watch",
+          "observation": "No newer scan observation; outcome unknown."
+        },
+        {
+          "symbol": "63MOONS",
+          "previousState": "Watch",
+          "observation": "No newer scan observation; outcome unknown."
+        },
+        {
+          "symbol": "AAATECH",
+          "previousState": "Watch",
+          "observation": "No newer scan observation; outcome unknown."
+        },
+        {
+          "symbol": "AARTIDRUGS",
+          "previousState": "Watch",
+          "observation": "No newer scan observation; outcome unknown."
+        },
+        {
+          "symbol": "ABDL",
+          "previousState": "Watch",
+          "observation": "No newer scan observation; outcome unknown."
+        },
+        {
+          "symbol": "ACUTAAS",
+          "previousState": "Watch",
+          "observation": "No newer scan observation; outcome unknown."
+        },
+        {
+          "symbol": "AJMERA",
+          "previousState": "Watch",
+          "observation": "No newer scan observation; outcome unknown."
+        },
+        {
+          "symbol": "ALIVUS",
+          "previousState": "Watch",
+          "observation": "No newer scan observation; outcome unknown."
         }
       ]
     }
