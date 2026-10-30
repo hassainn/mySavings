@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-30T10:02:25.993Z",
+  "generatedAt": "2026-10-30T16:43:21.571Z",
   "sessionDate": "2026-10-30",
   "status": "ready",
   "scanGeneratedAt": "2026-10-29T17:50:10.658Z",
@@ -238,8 +238,8 @@
     }
   ],
   "previousSession": "2026-10-29",
-  "intelligenceGeneratedAt": "2026-10-30T10:01:22.733Z",
-  "commentary": "With market breadth deteriorating to a weak score of 32 despite Nifty reclaiming 23,000, market health displays classic late-stage divergence. Stan Weinstein and William O'Neil caution against aggressive buying when headline indices mask underlying distribution across broader small and mid-caps. Heavy crude prices ($116-$117/bbl) add severe macro friction. In this defensive posture, Minervini's progressive exposure rules dictate keeping cash reserves high, demanding strict confirmation at pivot breakouts, and never compromising on earnings quality. Leaders must show explosive, verified EPS and sales acceleration; any candidate lacking institutional earnings confirmation must be capped at Watch.",
+  "intelligenceGeneratedAt": "2026-10-30T16:42:05.178Z",
+  "commentary": "With market breadth registering a muted 32 under a WEAK scanner gate, defensive discipline is paramount despite the Nifty reclaiming the 23,000 benchmark. Stan Weinstein's stage framework warns against aggressive commitments when breadth diverges from headline indices, favoring only Stage 2 breakouts supported by clear accumulation. William O'Neil's market-direction discipline reminds us that three out of four equities mirror the broader market's undertone. In this environment, we enforce progressive exposure, demand rigorous CANSLIM earnings qualification, and cut losses ruthlessly at predetermined stops.",
   "commentaryStatus": "available",
   "limitations": [
     "Daily scan observations are not fills or performance results.",
@@ -251,88 +251,87 @@
     "analyst": "Minervini SEPA, O'Neil CANSLIM & Weinstein Stage Analysis",
     "bySymbol": {
       "21STCENMGM": {
-        "stage": "Stage 2 advancing",
-        "technical": "Forming a double-bottom base above rising EMA21, SMA50, and SMA200. Volume expanded 2.42x on the swing reclaim with MACD positive, but lacks high-tight consolidation tightness.",
-        "epsGrowth": [
-          "Q2 FY27 profitable",
-          "Q1 FY27 not verified"
-        ],
-        "revenueGrowth": "not verified",
-        "earningsTrend": "Not verified",
-        "growthQualified": "No",
-        "fundamental": "Capital market investment firm with historically erratic revenues and negative operating track record. Turnaround in Q2 FY27 requires sustained operating validation, low institutional float.",
-        "verdict": "Watch",
-        "risk": "Fails on close below 47.58 stop; tight risk discipline essential given speculative small-cap profile."
-      },
-      "63MOONS": {
-        "stage": "Stage 2 advancing",
-        "technical": "Double bottom structure reclaiming the rising 21-EMA near prior highs. Moving averages stacked positively, but price remains prone to wide, loose swings.",
-        "epsGrowth": [
-          "Q2 FY27 -204%",
-          "Q1 FY27 not verified"
-        ],
-        "revenueGrowth": "+350.4%",
-        "earningsTrend": "Negative",
-        "growthQualified": "No",
-        "fundamental": "Despite strong top-line recovery in brokerage software solutions, net bottom-line performance remains severely negative with poor ROE (1.5%) and lack of sustained operational profitability.",
-        "verdict": "Watch",
-        "risk": "Violation of 849.29 stop breaches moving average support, invalidating double-bottom thesis."
-      },
-      "AAATECH": {
-        "stage": "Stage 2 advancing",
-        "technical": "Clearing a 20-day high with 1.85x volume expansion. Price holds above key EMAs with RSI at 62 confirming constructive upward momentum without being overextended.",
+        "stage": "Stage 1 base",
+        "technical": "Price reclaims EMA21, SMA50, and SMA200 on 2.42x volume with MACD crossing into positive territory, testing neckline resistance. Relative strength remains unproven given erratic micro-cap volatility.",
         "epsGrowth": [
           "not verified"
         ],
         "revenueGrowth": "not verified",
-        "earningsTrend": "Not verified",
-        "growthQualified": "Not verified",
-        "fundamental": "IT security firm with CERT-In empanelment and debt-free balance sheet, but sub-10% ROE and modest five-year sales growth lack true CANSLIM institutional momentum.",
+        "earningsTrend": "Negative",
+        "growthQualified": "No",
+        "fundamental": "Micro-cap financial services firm burdened by recurring operational losses, irregular revenue generation, and negative return ratios. It lacks CANSLIM-style institutional sponsorship and operational predictability.",
+        "verdict": "Avoid",
+        "risk": "Thesis fails on a decisive break below 47.58; cut losses immediately without hesitation."
+      },
+      "63MOONS": {
+        "stage": "Stage 2 advancing",
+        "technical": "Double bottom base with price reclaiming the rising 21-EMA and holding above the 50 and 200 SMAs. MACD stays positive, though breakout volume requires further confirmation.",
+        "epsGrowth": [
+          "not verified"
+        ],
+        "revenueGrowth": "not verified",
+        "earningsTrend": "Negative",
+        "growthQualified": "No",
+        "fundamental": "Software vendor supported by subsidiary cybersecurity order flow, yet trailing operating performance remains pressured by net losses and sub-par returns on capital, missing CANSLIM benchmarks.",
         "verdict": "Watch",
-        "risk": "A drop below the 102.52 stop aborts the breakout attempt."
+        "risk": "Setup fails on a breakdown below the 849.29 swing floor; honor strict stop discipline."
+      },
+      "AAATECH": {
+        "stage": "Stage 2 advancing",
+        "technical": "Cleared 20-session resistance on 1.85x volume, trading constructively above EMA21, SMA50, and SMA200. RSI at 62 indicates steady accumulation without near-term overbought exhaustion.",
+        "epsGrowth": [
+          "Q1 FY27 +6%",
+          "not verified"
+        ],
+        "revenueGrowth": "-11%",
+        "earningsTrend": "Decelerating",
+        "growthQualified": "No",
+        "fundamental": "Niche IT security auditor exhibiting respectable operational margins, but top-line revenue contracted 11% YoY while profit grew just 6%, falling short of O'Neil's 25% earnings acceleration threshold.",
+        "verdict": "Watch",
+        "risk": "Thesis invalidates if price drops below 102.52; cut risk immediately to protect capital."
       },
       "AARTIDRUGS": {
         "stage": "Stage 2 advancing",
-        "technical": "High-volume SEPA breakout (67.7x 20-day volume) clearing a 20-day high. Moving averages are in Stage 2 alignment with solid RS momentum.",
+        "technical": "SEPA breakout clearing 20-day highs backed by an extraordinary 67.7x volume surge. The stock is positioned above its 21, 50, and 200-day moving averages with constructive momentum.",
         "epsGrowth": [
           "Q1 FY27 -4.1%",
-          "Q4 FY26 +3.2%"
+          "Q4 FY26 +6.0%",
+          "Q3 FY26 -15.0%"
         ],
         "revenueGrowth": "+19.0%",
         "earningsTrend": "Decelerating",
-        "growthQualified": "No",
-        "fundamental": "API manufacturer registering decent 19% sales expansion, but net earnings contraction (-4.1% YoY) and moderate single-digit margins fail O'Neil's 25% minimum profit growth threshold.",
+        "growthQualified": "Partial",
+        "fundamental": "Leading active pharmaceutical ingredient player showing top-line revival (+19% YoY), but net profit declined 4.1% on input cost inflation and moderate ROCE (~12%), capping CANSLIM quality.",
         "verdict": "Watch",
-        "risk": "Breakdown below 420.40 invalidates the volume breakout and requires instant exit."
+        "risk": "Breaching the 420.40 pivot low invalidates the SEPA breakout; cut losses swiftly."
       },
       "ABDL": {
         "stage": "Stage 2 advancing",
-        "technical": "Double bottom pattern pressing the 767.67 neckline on 1.46x volume. Trades cleanly above rising 21-EMA, 50-SMA, and 200-SMA in Stage 2 posture.",
+        "technical": "Forming an orderly double bottom above the rising 21 EMA, 50 SMA, and 200 SMA on 1.46x volume. RSI at 52 shows quiet accumulation near the pivot.",
         "epsGrowth": [
-          "Q1 FY27 -13%",
-          "Q4 FY26 -48%"
+          "Q2 FY27 +9.7%",
+          "Q1 FY27 -13.0%"
         ],
         "revenueGrowth": "+15.8%",
-        "earningsTrend": "Decelerating",
-        "growthQualified": "No",
-        "fundamental": "Topline volume crossed 10 million cases (+15.8% revenue), but gross margin pressures and negative EPS growth trend keep fundamental qualification capped under CANSLIM rules.",
-        "verdict": "Watch",
-        "risk": "Failure to hold 705.04 stop invalidates the double-bottom base support."
+        "earningsTrend": "Accelerating",
+        "growthQualified": "Partial",
+        "fundamental": "Spirits manufacturer delivering 15.8% revenue growth and record 10M case volumes. Gross margins improved to 45.3%, but EBITDA margins dipped to 12.4%, keeping EPS growth below 25%.",
+        "verdict": "Constructive",
+        "risk": "Thesis breaks down on a close below 705.04; execute disciplined stop exit."
       },
       "ACUTAAS": {
         "stage": "Stage 2 advancing",
-        "technical": "Classic Stage 2 institutional advance breaking out of a double-bottom base on 3.67x volume. Stacking 21-EMA and 50-SMA reflects powerful relative strength.",
+        "technical": "High-velocity double bottom breakout to fresh 52-week highs on 3.67x volume. Exemplary relative strength with RSI at 69 confirms top-tier institutional accumulation above all key moving averages.",
         "epsGrowth": [
-          "Q2 FY27 +73%",
-          "Q1 FY27 +68%",
-          "Q4 FY26 +111%"
+          "Q2 FY27 +71.4%",
+          "Q1 FY27 +70.4%"
         ],
         "revenueGrowth": "+42.7%",
         "earningsTrend": "Accelerating",
         "growthQualified": "Yes",
-        "fundamental": "Elite CANSLIM metrics: consecutive quarters of >60% EPS expansion, 42.7% sales growth, 31.6% ROCE, expanding 34% EBITDA margins, and pristine debt-free balance sheet with high institutional inflows.",
+        "fundamental": "Superb CANSLIM credentials with Q2 FY27 profit up 71.4% and revenue climbing 42.7%. EBITDA margins expanded to 40.3%, propelled by advanced pharma intermediates, CDMO contracts, and semiconductor expansion.",
         "verdict": "Leading",
-        "risk": "A close below the 3555.57 stop indicates pivot failure requiring defensive capital preservation."
+        "risk": "Failure below the 3555.57 swing trigger invalidates the base pivot; cut loss immediately."
       }
     }
   },
