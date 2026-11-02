@@ -5667,25 +5667,178 @@
     },
     {
       "sessionDate": "2026-11-03",
-      "generatedAt": "2026-11-02T20:48:53.998Z",
+      "generatedAt": "2026-11-02T21:08:57.394Z",
       "gate": "WEAK",
       "verdict": "No new buys. Observe and protect capital.",
-      "ideas": [],
+      "ideas": [
+        {
+          "symbol": "21STCENMGM",
+          "name": "21st Century Mgmt Service",
+          "pattern": "20-day breakout",
+          "confidence": 99,
+          "state": "Watch",
+          "scanState": "Triggered",
+          "asOf": "2026-11-02T00:00:00+05:30",
+          "close": 60.71,
+          "entryTrigger": 57.88,
+          "stop": 51.98,
+          "target2R": 69.67,
+          "evidence": [
+            "Price above EMA21, SMA50 and SMA200",
+            "Close cleared the prior 20-session high",
+            "New trailing-year price high",
+            "3.69× 20-day average volume"
+          ]
+        },
+        {
+          "symbol": "63MOONS",
+          "name": "63 Moons Technologies",
+          "pattern": "Near breakout",
+          "confidence": 99,
+          "state": "Watch",
+          "scanState": "Armed",
+          "asOf": "2026-11-02T00:00:00+05:30",
+          "close": 961.5,
+          "entryTrigger": 969.72,
+          "stop": 859.6,
+          "target2R": 1189.95,
+          "evidence": [
+            "Price above EMA21, SMA50 and SMA200",
+            "Within 1.5% of the 20-session pivot",
+            "MACD is above signal and zero line",
+            "Two aligned swing lows with neckline pressure"
+          ]
+        },
+        {
+          "symbol": "AAREYDRUGS",
+          "name": "AAREY DRUGS & PHARM LTD",
+          "pattern": "Double bottom",
+          "confidence": 99,
+          "state": "Watch",
+          "scanState": "Armed",
+          "asOf": "2026-11-02T00:00:00+05:30",
+          "close": 109.25,
+          "entryTrigger": 114.91,
+          "stop": 103.98,
+          "target2R": 136.79,
+          "evidence": [
+            "Price above EMA21, SMA50 and SMA200",
+            "RSI 56 supports momentum without extreme extension",
+            "Two aligned swing lows with neckline pressure",
+            "Long lower wick shows rejection from the session low"
+          ]
+        },
+        {
+          "symbol": "AARTIDRUGS",
+          "name": "Aarti Drugs",
+          "pattern": "Near breakout",
+          "confidence": 99,
+          "state": "Watch",
+          "scanState": "Armed",
+          "asOf": "2026-11-02T00:00:00+05:30",
+          "close": 453.8,
+          "entryTrigger": 458.41,
+          "stop": 420.75,
+          "target2R": 533.72,
+          "evidence": [
+            "Price above EMA21, SMA50 and SMA200",
+            "Within 1.5% of the 20-session pivot",
+            "RSI 63 supports momentum without extreme extension",
+            "MACD is above signal and zero line"
+          ]
+        },
+        {
+          "symbol": "AARTIPHARM",
+          "name": "Aarti Pharmalabs",
+          "pattern": "Double bottom",
+          "confidence": 99,
+          "state": "Watch",
+          "scanState": "Armed",
+          "asOf": "2026-11-02T00:00:00+05:30",
+          "close": 895,
+          "entryTrigger": 1003.4,
+          "stop": 914.95,
+          "target2R": 1180.32,
+          "evidence": [
+            "Price above EMA21, SMA50 and SMA200",
+            "RSI 53 supports momentum without extreme extension",
+            "MACD is above signal and zero line",
+            "Two aligned swing lows with neckline pressure"
+          ]
+        },
+        {
+          "symbol": "ADANIPORTS",
+          "name": "Adani Port",
+          "pattern": "Near breakout",
+          "confidence": 99,
+          "state": "Watch",
+          "scanState": "Armed",
+          "asOf": "2026-11-02T00:00:00+05:30",
+          "close": 1854,
+          "entryTrigger": 1873.87,
+          "stop": 1774.37,
+          "target2R": 2072.87,
+          "evidence": [
+            "Price above EMA21, SMA50 and SMA200",
+            "Within 1.5% of the 20-session pivot",
+            "RSI 66 supports momentum without extreme extension",
+            "MACD is above signal and zero line"
+          ]
+        },
+        {
+          "symbol": "ANANDRATHI",
+          "name": "Anand Rathi Wealth",
+          "pattern": "Near breakout",
+          "confidence": 99,
+          "state": "Watch",
+          "scanState": "Armed",
+          "asOf": "2026-11-02T00:00:00+05:30",
+          "close": 2276.9,
+          "entryTrigger": 2292.29,
+          "stop": 2216.76,
+          "target2R": 2443.35,
+          "evidence": [
+            "Price above EMA21, SMA50 and SMA200",
+            "Within 1.5% of the 20-session pivot",
+            "MACD is above signal and zero line",
+            "Two aligned swing lows with neckline pressure"
+          ]
+        },
+        {
+          "symbol": "APOLLOHOSP",
+          "name": "Apollo Hospitals",
+          "pattern": "20-day breakout",
+          "confidence": 99,
+          "state": "Watch",
+          "scanState": "Armed",
+          "asOf": "2026-11-02T00:00:00+05:30",
+          "close": 8459,
+          "entryTrigger": 9079.57,
+          "stop": 8654.64,
+          "target2R": 9929.43,
+          "evidence": [
+            "Price above EMA21, SMA50 and SMA200",
+            "Close cleared the prior 20-session high",
+            "Three higher highs and higher lows off a 21-EMA / 50-DMA pullback (Vibha Jha 3-up)",
+            "Leader eased to the rising 21-EMA near highs, then a bullish reclaim candle"
+          ]
+        }
+      ],
       "observations": [
         {
           "symbol": "21STCENMGM",
           "previousState": "Watch",
-          "observation": "No newer scan observation; outcome unknown."
+          "observation": "Latest scanned close 60.71; scanner state Triggered. This is not an executed trade or an intraday stop/target check."
         },
         {
           "symbol": "63MOONS",
           "previousState": "Watch",
-          "observation": "No newer scan observation; outcome unknown."
+          "observation": "Latest scanned close 961.5; scanner state Armed. This is not an executed trade or an intraday stop/target check."
         },
         {
           "symbol": "ACUTAAS",
           "previousState": "Watch",
-          "observation": "No newer scan observation; outcome unknown."
+          "observation": "Latest scanned close 3892.6; scanner state Caution. This is not an executed trade or an intraday stop/target check."
         },
         {
           "symbol": "AEROFLEX",
@@ -5710,7 +5863,7 @@
         {
           "symbol": "ATHERENERG",
           "previousState": "Watch",
-          "observation": "No newer scan observation; outcome unknown."
+          "observation": "Latest scanned close 1774.6; scanner state Armed. This is not an executed trade or an intraday stop/target check."
         }
       ]
     }
