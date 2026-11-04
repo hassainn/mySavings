@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-04T19:03:16.697Z",
+  "generatedAt": "2026-11-04T19:55:18.053Z",
   "sessionDate": "2026-11-05",
   "status": "ready",
   "scanGeneratedAt": "2026-11-04T19:03:01.012Z",
@@ -211,109 +211,13 @@
   ],
   "previousSession": "2026-11-04",
   "intelligenceGeneratedAt": "2026-11-04T18:38:37.573Z",
-  "commentary": "Benchmark indices extend a five-day rally, with Nifty at 23,960.60 buoyed by capital goods and defence. However, beneath headline resilience, breadth sits neutral at 50, requiring strict O'Neil market-direction vigilance and Stan Weinstein stage qualification. With the macro gate on CAUTION, aggressive exposure is unwarranted. O'Neil's CANSLIM discipline requires simultaneous confirmation of accelerating earnings and institutional volume, while Minervini's SEPA demands tight pivots and low-risk entry points. Leadership belongs exclusively to names displaying bona fide Stage 2 characteristics, triple-digit EPS momentum, and expanding operating margins, such as Aeroflex and Acutaas. Laggards with decelerating or negative fundamentals must remain capped at Watch or Avoid regardless of technical consolidation.",
-  "commentaryStatus": "available",
+  "commentary": null,
+  "commentaryStatus": "unavailable",
   "limitations": [
     "Daily scan observations are not fills or performance results.",
     "Price levels are scanner references, not live quotes.",
     "No broker orders are submitted."
   ],
-  "model": "gemini-3.8-flash",
-  "analysis": {
-    "analyst": "Minervini SEPA, O'Neil CANSLIM & Weinstein Stage Discipline",
-    "bySymbol": {
-      "63MOONS": {
-        "stage": "Unclear",
-        "technical": "Constructing a 23.3% deep cup with a 6.8% handle above key moving averages, but relative strength remains choppy with poor follow-through.",
-        "epsGrowth": [
-          "Q2 FY27 negative",
-          "Q1 FY27 negative",
-          "Q4 FY26 +64%"
-        ],
-        "revenueGrowth": "+635%",
-        "earningsTrend": "Negative",
-        "growthQualified": "No",
-        "fundamental": "Despite massive top-line surge driven by cybersecurity subsidiary billing, the company remains unprofitable at net level with negligible ROE (1.5%) and poor operating margin consistency.",
-        "verdict": "Watch",
-        "risk": "Thesis fails if price breaks below handle support at 880.20; close immediately to limit drawdown under Minervini rules."
-      },
-      "AAREYDRUGS": {
-        "stage": "Unclear",
-        "technical": "Forms a double bottom testing 114.91 neckline above rising 200-DMA, but RS rating is weak and lacks volume conviction.",
-        "epsGrowth": [
-          "Q1 FY27 -25.5%",
-          "Q4 FY26 -18.2%",
-          "Q3 FY26 +12.4%"
-        ],
-        "revenueGrowth": "-56.3%",
-        "earningsTrend": "Negative",
-        "growthQualified": "No",
-        "fundamental": "Severe contraction in sales (-56.3%) and earnings (-25.5%) invalidates CANSLIM criteria. Return on capital employed is sub-par at 5.6% with thin 2.3% net margins.",
-        "verdict": "Avoid",
-        "risk": "Fails on breach of the double-bottom pivot floor at 103.61; exit cleanly to prevent capital erosion."
-      },
-      "ACUTAAS": {
-        "stage": "Stage 2 advancing",
-        "technical": "Textbook Stage 2 advance; clearing double bottom at 4049.35 with bullish moving-average stack and RSI at 68 signaling leadership.",
-        "epsGrowth": [
-          "Q2 FY27 +73.4%",
-          "Q1 FY27 +67.7%",
-          "Q4 FY26 +33.3%"
-        ],
-        "revenueGrowth": "+42.7%",
-        "earningsTrend": "Accelerating",
-        "growthQualified": "Yes",
-        "fundamental": "Pristine CANSLIM profile: EBITDA margin widened to 40.3%, net profit up 71.4%, robust ROCE of 31.6%, virtually debt-free balance sheet.",
-        "verdict": "Leading",
-        "risk": "Invalidated if price undercuts swing support at 3637.50; strictly honor stop to protect open equity."
-      },
-      "ADANIGREEN": {
-        "stage": "Stage 2 advancing",
-        "technical": "Clearing 20-session high at 1417.42 above EMA21 and SMA50, though momentum shows signs of consolidation.",
-        "epsGrowth": [
-          "Q2 FY27 +15.0%",
-          "Q1 FY27 +38.8%",
-          "Q4 FY26 -28.0%"
-        ],
-        "revenueGrowth": "+18.2%",
-        "earningsTrend": "Decelerating",
-        "growthQualified": "Partial",
-        "fundamental": "Sales expansion intact, but EPS growth moderated from 38.8% to 15.0% YoY. Capital intensity keeps interest coverage tight and ROCE modest at 7.4%.",
-        "verdict": "Watch",
-        "risk": "Setup breaks down on violation of breakout support at 1329.50; execute strict stop-loss discipline."
-      },
-      "ADANIPORTS": {
-        "stage": "Stage 2 advancing",
-        "technical": "20-day high breakout at 1877.08 on 1.29x average volume, printing new 52-week highs in classic Darvas fashion.",
-        "epsGrowth": [
-          "Q2 FY27 +17.3%",
-          "Q1 FY27 +10.0%",
-          "Q4 FY26 +76.2%"
-        ],
-        "revenueGrowth": "+23.7%",
-        "earningsTrend": "Decelerating",
-        "growthQualified": "Partial",
-        "fundamental": "Healthy industry-leading EBITDA margins (60%+) and 23.7% revenue growth, but latest EPS YoY (+17.3%) misses the 25% CANSLIM threshold.",
-        "verdict": "Watch",
-        "risk": "Pattern fails if price falls below trailing shelf at 1776.35; enforce stop without hesitation."
-      },
-      "AEROFLEX": {
-        "stage": "Stage 2 advancing",
-        "technical": "Superb Stage 2 structure; clearing double bottom at 614.31 with sequential higher highs off 21-EMA support on heavy accumulation volume.",
-        "epsGrowth": [
-          "Q2 FY27 +150.9%",
-          "Q1 FY27 +72.7%",
-          "Q4 FY26 +44.4%"
-        ],
-        "revenueGrowth": "+87.0%",
-        "earningsTrend": "Accelerating",
-        "growthQualified": "Yes",
-        "fundamental": "Exceptional O'Neil CANSLIM credentials: Q2 revenue up 87%, PAT surged 157% powered by high-margin data center liquid cooling, ROCE at 18.9%.",
-        "verdict": "Leading",
-        "risk": "Thesis invalid if price breaks below base support at 529.97; cut losses immediately."
-      }
-    }
-  },
   "history": [
     {
       "sessionDate": "2026-10-30",
