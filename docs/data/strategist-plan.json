@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-03T19:39:48.436Z",
+  "generatedAt": "2026-11-04T09:53:35.475Z",
   "sessionDate": "2026-11-04",
   "status": "ready",
   "scanGeneratedAt": "2026-11-03T18:48:49.620Z",
@@ -239,7 +239,7 @@
   ],
   "previousSession": "2026-11-03",
   "intelligenceGeneratedAt": "2026-11-03T18:27:16.090Z",
-  "commentary": "While benchmark indices show headline strength on institutional buying, market breadth is notably weak with a breadth score of 40 and an active WEAK gate. Stan Weinstein and Jesse Livermore warn never to mistake index heavyweights for broad market health; stage breakouts suffer elevated failure rates in deteriorating breadth. William O'Neil and Mark Minervini demand aggressive risk control, progressive exposure, and strict capital protection. Traders must keep stop-losses tight, resist chasing extended setups, and restrict exposure strictly to high-quality Stage 2 leaders demonstrating accelerating quarterly earnings and sales. Deteriorating fundamentals or non-equity instruments must be avoided until breadth confirms broader market participation.",
+  "commentary": "While benchmark indices rallied on falling crude oil prices and net FII purchases, scanner market breadth registered a defensive score of 40 with a WEAK gate. Under Stan Weinstein and William O'Neil market-timing rules, headline index surges on weak underlying breadth frequently conceal distributional rot or selective rotation. Legendary tape readers like Jesse Livermore demand alignment between broad market health and individual leadership. With market breadth sub-50, exposure must remain disciplined and progressive. We demand strict CANSLIM standards: only confirmed Stage 2 advancers displaying 25%+ accelerating quarterly earnings and superior relative strength, such as ACUTAAS and AARTIPHARM, warrant attention, while non-equity vehicles and fundamental laggards must be avoided.",
   "commentaryStatus": "available",
   "limitations": [
     "Daily scan observations are not fills or performance results.",
@@ -248,89 +248,95 @@
   ],
   "model": "gemini-3.8-flash",
   "analysis": {
-    "analyst": "Minervini SEPA, O'Neil CANSLIM & Weinstein Stage Analysis",
+    "analyst": "SEPA / CANSLIM / Stage Analysis Composite",
     "bySymbol": {
       "21STCENMGM": {
         "stage": "Stage 2 advancing",
-        "technical": "Displays Stage 2 momentum clearing a 20-day high at 60.77 on 2.67x volume above rising EMAs and SMAs. However, relative strength in erratic micro-caps lacks institutional sponsorship and clean base symmetry.",
+        "technical": "Clearing 20-session highs at 60.77 to reach fresh 52-week highs on 2.67x volume confirms strong accumulation. The stock trades cleanly above rising 21 EMA, 50 SMA, and 200 SMA trendlines, confirming a nascent Stage 2 markup with strong relative strength.",
         "epsGrowth": [
-          "not verified"
+          "Q1 FY27 +295%",
+          "Q4 FY26 Negative",
+          "Q3 FY26 Negative"
         ],
-        "revenueGrowth": "not verified",
-        "earningsTrend": "Negative",
-        "growthQualified": "No",
-        "fundamental": "Severe CANSLIM failure. Reported FY26 net losses of ₹24 crore and negative operational cash flows undermine quality. Negative ROE (-72%) and speculative capital market activities fail institutional sponsorship standards.",
-        "verdict": "Avoid",
-        "risk": "Violating the 54.81 stop or breaking below the 50-day SMA invalidates setup; cut losses immediately."
+        "revenueGrowth": "+194%",
+        "earningsTrend": "Accelerating",
+        "growthQualified": "Partial",
+        "fundamental": "Capital markets firm showing erratic bottom-line swings, turning profitable in Q1 FY27 with 9 crore INR net profit. However, TTM ROE remains deeply negative (-72.7%) and microcap market capitalization of 60 crore INR lacks institutional sponsorship, failing primary CANSLIM institutional criteria.",
+        "verdict": "Watch",
+        "risk": "Break below the defined 54.81 stop violates breakout support; microcap illiquidity risks severe slippage and circuit lockups."
       },
       "AAREYDRUGS": {
-        "stage": "Stage 2 advancing",
-        "technical": "Constructing a double-bottom consolidation above its 50-day and 200-day SMAs with RSI at 55. However, overhead supply remains pronounced and recent volume action fails to show institutional accumulation.",
+        "stage": "Stage 1 base",
+        "technical": "Forming a double bottom base testing the 114.91 trigger with RSI at 55. While price holds above key EMAs and SMAs, absence of breakout volume and sluggish relative strength reflect dull accumulation without definitive Stage 2 momentum.",
         "epsGrowth": [
-          "Q1 FY27 -25.6%",
-          "not verified"
+          "Q1 FY27 -25%",
+          "Q4 FY26 +10%",
+          "Q3 FY26 -15%"
         ],
-        "revenueGrowth": "-56.3%",
+        "revenueGrowth": "-55%",
         "earningsTrend": "Negative",
         "growthQualified": "No",
-        "fundamental": "Sharp fundamental contraction. Q1 FY27 revenue dropped 56.3% YoY to ₹44.6 crore, while net profit fell 25.6% YoY to ₹1.02 crore. Weak ROCE (5.6%) disqualifies it from CANSLIM leadership criteria.",
+        "fundamental": "Dismal fundamental profile with Q1 FY27 revenue plunging 55% YoY and EPS sliding 25%. Operating margins remain wafer-thin at 2% to 3%, while 3-year average ROE is a poor 3.1%. The business remains dependent on low-margin chemical trading with falling promoter holding.",
         "verdict": "Avoid",
-        "risk": "Close below the 103.98 stop or breakdown beneath the 50-day SMA triggers immediate defensive exit."
+        "risk": "Breakdown below 103.98 breaches swing low support; failing CANSLIM fundamental growth exposes the stock to severe Stage 4 markdown risk."
       },
       "AARTIDRUGS": {
         "stage": "Stage 2 advancing",
-        "technical": "Stage 2 20-day breakout clearing 463.96 with positive MACD and RSI at 68 above rising 21 EMA, 50 SMA, and 200 SMA. Base structure is constructive, though relative strength remains moderate.",
+        "technical": "Decisive 20-day breakout clearing 463.96 with MACD confirming above zero and RSI at 68. Moving averages (EMA21, SMA50, SMA200) are in bullish stack, reflecting strong upward momentum out of multi-week consolidation.",
         "epsGrowth": [
-          "Q1 FY27 -7.1%",
-          "Q4 FY26 +6.5%"
+          "Q2 FY27 +83%",
+          "Q1 FY27 -4%",
+          "Q4 FY26 -28%"
         ],
-        "revenueGrowth": "+19.0%",
-        "earningsTrend": "Decelerating",
+        "revenueGrowth": "+27%",
+        "earningsTrend": "Accelerating",
         "growthQualified": "Partial",
-        "fundamental": "Mixed CANSLIM profile. Q1 FY27 revenue rose 19.0% YoY to ₹702.8 crore, but net profit contracted 7.1% YoY to ₹50.1 crore due to margin compression. ROCE stands at 12% with manageable leverage.",
-        "verdict": "Watch",
-        "risk": "Thesis fails if price breaks below the 424.59 stop or violates the rising 50-day SMA."
+        "fundamental": "Robust Q2 FY27 turnaround with net profit jumping 83% YoY to 82.8 crore INR on 27% sales growth, pushing EBITDA margins to a 6-year high of 16.6%. ROCE sits around 12% with moderate leverage, though management cautions on margin normalization ahead.",
+        "verdict": "Constructive",
+        "risk": "Thesis fails on a drop below the 424.59 stop; post-earnings profit booking or margin compression could trigger a false breakout."
       },
       "AARTIPHARM": {
         "stage": "Stage 2 advancing",
-        "technical": "Classic Stage 2 advancing pattern with price above rising 50-day and 200-day SMAs. Cleared a double-bottom neckline setup near 1,003.4 with MACD confirmation and healthy relative strength.",
+        "technical": "Constructing a solid double bottom base with neckline pressure at 1003.40. Price maintains bullish alignment above EMA21, SMA50, and SMA200, while RSI at 56 and MACD crossing above zero confirm constructive base-building before Stage 2 continuation.",
         "epsGrowth": [
-          "Q2 FY27 +180%",
-          "Q1 FY27 +54%"
+          "Q2 FY27 +112%",
+          "Q1 FY27 +39%",
+          "Q4 FY26 +3%"
         ],
-        "revenueGrowth": "+46.8%",
+        "revenueGrowth": "+47%",
         "earningsTrend": "Accelerating",
         "growthQualified": "Yes",
-        "fundamental": "Outstanding CANSLIM leader. Q2 FY27 standalone PAT jumped 180% YoY to ₹65.8 crore on 46.8% sales growth. Operating margins expanded 441 bps to 22.2%, supported by low gearing (0.32x D/E) and expanding USFDA capacity.",
+        "fundamental": "Exceptional operational performance driven by CDMO expansion and xanthine leadership. Q2 FY27 revenue rose 47% YoY to 613 crore INR while PAT surged 180% to 66 crore INR. EBITDA margin expanded 441 bps to 22.2%. Low debt-to-equity of 0.36 supports aggressive ongoing capex.",
         "verdict": "Leading",
-        "risk": "Exit immediately if price breaks below the 915.01 stop or breaches the 50-day SMA."
+        "risk": "Break below 915.01 stop level invalidates the double bottom pivot; working capital cycle elongation poses short-term cash flow risk."
       },
       "ABSLLIQUID": {
         "stage": "Unclear",
-        "technical": "Overnight liquid fund proxy hugging NAV at ₹1,000 with flat moving averages and no price volatility. Completely lacks Darvas box consolidation, VCP characteristics, or momentum.",
+        "technical": "Flat-line price structure typical of an overnight debt ETF, hugging 1006 with negligible volatility. Moving averages converge tightly. Lacks directional momentum, relative strength, or any valid breakout pattern required by Minervini and Darvas methodologies.",
         "epsGrowth": [
           "not verified"
         ],
         "revenueGrowth": "not verified",
         "earningsTrend": "Not verified",
-        "growthQualified": "No",
-        "fundamental": "Liquid exchange-traded vehicle tracking the CRISIL Liquid Overnight Index. Provides cash management yields (~3.4%-6% annualized) with no corporate revenue, operating margins, or earnings metrics. CANSLIM analysis inapplicable.",
+        "growthQualified": "Not verified",
+        "fundamental": "Overnight debt ETF investing in tri-party repos (TREPS) and sovereign collateral. It possesses no corporate earnings, revenue growth, operating margins, or return ratios. Fails all CANSLIM fundamental screening requirements as a cash equivalent vehicle.",
         "verdict": "Avoid",
-        "risk": "Not an equity breakout instrument; exit if price deviates below the 1005.96 stop level."
+        "risk": "Capital loss risk is negligible, but holding debt ETF in an equity momentum portfolio creates severe opportunity cost and fee drag."
       },
       "ACUTAAS": {
         "stage": "Stage 2 advancing",
-        "technical": "High-quality Stage 2 leader clearing a 22% cup with a tight 6.3% handle above rising 50-day and 200-day SMAs. Double-bottom pivot at 4,049.35 displays positive MACD and strong volume accumulation.",
+        "technical": "Textbook 22.2% deep cup with a tight 6.3% handle base clearing 4049.35. Price trades decisively above rising 21 EMA, 50 SMA, and 200 SMA with MACD positive and swing lows aligned, exemplifying pristine Minervini VCP characteristics.",
         "epsGrowth": [
-          "Q1 FY27 +70.5%",
-          "Q4 FY26 +110.9%"
+          "Q2 FY27 +71%",
+          "Q1 FY27 +70%",
+          "Q4 FY26 +65%"
         ],
-        "revenueGrowth": "+59.4%",
+        "revenueGrowth": "+43%",
         "earningsTrend": "Accelerating",
         "growthQualified": "Yes",
-        "fundamental": "Prime CANSLIM growth candidate. Q1 FY27 net sales climbed 59.4% YoY to ₹330 crore with PAT up 70.5%, following Q4 FY26 profit expansion of 110.9%. High RoE (~21%), minimal debt (0.02 D/E), and semiconductor/battery expansion.",
+        "fundamental": "Powerhouse CANSLIM profile with Q2 FY27 revenue up 42.7% YoY to 437 crore INR and PAT up 71.4%. Premium pharmaceutical intermediate shift drove record EBITDA margins of 40.3% (+914 bps). Net cash balance sheet with ~301 crore INR liquidity easily funds growth capex.",
         "verdict": "Leading",
-        "risk": "Thesis fails on high-volume distribution breaking the 3652.72 stop or handle low support."
+        "risk": "A breach below 3652.72 handle support invalidates the pivot structure; high valuation multiple leaves little room for operational execution slips."
       }
     }
   },
