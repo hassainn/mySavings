@@ -1,267 +1,262 @@
 {
   "status": "live",
   "method": "gemini-grounded",
-  "generatedAt": "2026-11-04T18:38:37.573Z",
+  "generatedAt": "2026-11-05T10:56:34.240Z",
   "model": "gemini-3.8-flash",
   "marketDirection": {
     "direction": "Sideways",
-    "changePct": 1.58,
-    "close": 23811,
-    "asOf": "2026-11-03",
+    "changePct": 0.63,
+    "close": 23961,
+    "asOf": "2026-11-04",
     "headline": "Indian market is range-bound today.",
     "reasons": [
       {
         "tag": "Index",
-        "text": "Nifty 50 closed +1.58% at 23,811, above its 20-DMA, above the 50-DMA (falling), below the 200-DMA."
+        "text": "Nifty 50 closed +0.63% at 23,961, above its 20-DMA, above the 50-DMA (falling), below the 200-DMA."
       },
       {
         "tag": "Trend",
-        "text": "The index is up 4.7% over the last five sessions — no clear directional edge (range-bound)."
+        "text": "The index is up 5.6% over the last five sessions — no clear directional edge (range-bound)."
       },
       {
         "tag": "Breadth",
-        "text": "Market breadth is cautious — 64.6% of scanned NSE stocks advancing, 21.9% above their 50-DMA."
+        "text": "Market breadth is mixed — 80% of scanned NSE stocks advancing, 30.6% above their 50-DMA."
       },
       {
-        "tag": "Order win",
-        "text": "Ignites a high-volume gap-up breakout through multi-month consolidation resistance."
+        "tag": "Macro/flows",
+        "text": "High-volume index thrust clears major multi-week resistance levels, expanding upside setup odds across large-cap leaders."
       },
       {
-        "tag": "Earnings",
-        "text": "Decisive high-volume expansion from a multimonth base with immediate continuation potential toward 52-week highs."
+        "tag": "Regulatory",
+        "text": "Regulatory shutdown risk creates sudden supply-side uncertainty, testing moving-average support near ₹814."
       }
     ],
     "disclaimer": "A rules-based read of index price, market breadth and headline flow — not a forecast or trading advice."
   },
-  "marketMood": "Bullish Expansion",
-  "marketSummary": "Indian benchmark indices closed higher for the fifth consecutive trading session on November 4, 2026, with the Nifty 50 closing at 23,960.60 (+0.63%) and Sensex gaining over 380 points to 77,301.40. Momentum is heavily skewed toward Defence PSUs, Capital Goods, and Power Infrastructure, buoyed by the Ministry of Defence's mega corvette contract awards and fresh multi-gigawatt thermal equipment mandates. Institutional liquidity showed stabilization following commentary from Finance Minister Nirmala Sitharaman indicating government review of equity capital gains tax structures ahead of the budget.",
-  "dailyFocus": "Swing setups are heavily concentrated in breakout retests across capital goods, naval defense shipbuilders, and electrical equipment providers following decisive quarterly earnings beats and bilateral mega-contract announcements.",
+  "marketMood": "Strongly Bullish",
+  "marketSummary": "Indian equities experienced a powerful breakout rally on November 5, 2026, with the Nifty 50 surging 576 points (2.4%) to close at 24,536.60 and the Sensex gaining 2,008 points to reach 79,310.01. The rally was propelled by a sharp 9% drop in Brent crude oil prices towards $93-$94/bbl, easing imported inflation concerns, and aggressive foreign institutional buying of over ₹20,800 crore across four consecutive sessions. Defense shipbuilders and electronics led market breadth following the Ministry of Defence's ₹53,866 crore warship contracts, while financial services and capital markets infrastructure rallied strongly on robust Q2 earnings.",
+  "dailyFocus": "Focus on breakout follow-through across high-relative-strength defense leaders (BEL, HAL, GRSE) and capital market infrastructure plays (BSE), while managing risk around CGPOWER following an MPCB regulatory shutdown order on its Sambhajinagar plant. Watch scheduled Q2 results for COCHINSHIP (Nov 10) and HAL (Nov 12).",
   "sectors": [
     {
-      "name": "Defence & Aerospace",
+      "name": "Aerospace & Defence",
       "momentum": "Leading",
-      "score": 92,
-      "reason": "The sector has triggered high-volume base breakouts following the Ministry of Defence's Rs 53,866-crore Next-Generation Corvette order and BEL's Q2 earnings beat.",
+      "score": 94,
+      "reason": "Unprecedented order inflow momentum catalyzed by the Ministry of Defence's ₹53,866 crore Next-Gen Corvettes contract award, coupled with Nomura upgrading BEL target to ₹520 on a ₹1.36 trillion pipeline and upcoming earnings announcements for HAL and COCHINSHIP.",
       "catalysts": [
-        "MoD Rs 53,866-crore naval corvette contract finalized",
-        "Q2 earnings outperformance and guidance upgrades across defence PSUs",
-        "Upcoming QRSAM missile system orders expected before year-end"
+        "₹32,000 crore corvette award to GRSE with equipment sub-allocations across defense electronics",
+        "Nomura and Motilal Oswal target price upgrades for BEL post Q2 PAT beat",
+        "Scheduled Board meetings for Q2 earnings from Cochin Shipyard (Nov 10) and HAL (Nov 12)"
       ],
       "risks": [
-        "Extended technical momentum indicators reaching near-term overbought levels",
-        "Execution slippages on large developmental platforms"
+        "Execution bottlenecks and margin compression on high fixed-price contracts",
+        "Profit booking after steep multi-day price extensions"
       ],
       "relatedStocks": [
         "BEL",
         "HAL",
         "COCHINSHIP",
-        "GRSE",
-        "BDL"
+        "GRSE"
       ]
     },
     {
-      "name": "Power & Capital Goods",
+      "name": "Capital Markets & Financial Intermediaries",
       "momentum": "Leading",
       "score": 88,
-      "reason": "Revived mega thermal equipment capex alongside sustained transmission grid modernization continues to drive multi-week swing breakouts.",
+      "reason": "Exceptional operating leverage demonstrated by exchange operators and non-bank lenders, evidenced by BSE's 45% net profit jump, 53% surge in options turnover charges, and strong double-digit gains in heavyweights like Bajaj Finance and Shriram Finance.",
       "catalysts": [
-        "BHEL securing Rs 20,000-28,000 crore thermal orders from Adani Power",
-        "Sustained quarterly EBITDA margin expansion in industrial transformers and switchgears",
-        "Capex acceleration in grid infrastructure and green transition corridors"
+        "Structural volume shift toward weekly index derivative expiries",
+        "Substantial institutional and FII liquidity inflow into index heavyweights"
       ],
       "risks": [
-        "Raw material inflation in commodity metals like copper and specialty steel",
-        "Working capital stretch on long-gestation EPC contracts"
+        "Regulatory changes in index derivative lot sizes or margin rules",
+        "Turnover volatility following major macro events"
       ],
       "relatedStocks": [
-        "CGPOWER",
-        "BHEL",
-        "SIEMENS",
-        "ABB"
+        "BSE",
+        "BAJFINANCE",
+        "SHRIRAMFIN"
       ]
     },
     {
-      "name": "Retail & Consumption",
+      "name": "Consumer Retail & Discretionary",
       "momentum": "Improving",
-      "score": 74,
-      "reason": "Post-earnings base consolidation is forming strong support as bellwether retail player Trent reported strong Q2 operational numbers and rapid network expansion.",
+      "score": 82,
+      "reason": "Festive demand rebound and strong store footprint additions showcased by Trent's 23% PAT rise, operating margin expansion to 18.2%, and Zudio crossing the 1,000-store milestone.",
       "catalysts": [
-        "Festive demand tailwinds carrying into Q3",
-        "Aggressive store footprint additions crossing key scale milestones",
-        "Margin stability driven by proprietary brand mixes"
+        "Pre-Diwali retail volume acceleration and footfall surges",
+        "Ambit Capital maintaining Buy on Trent with higher target prices"
       ],
       "risks": [
-        "Same-store-sales growth moderation in tier-2/3 geographies",
-        "Rich trailing price-to-earnings multiples limiting multiple expansion"
+        "Stretched valuation multiples leaving little room for execution missteps",
+        "Intensifying competition in value fashion from apparel conglomerates"
       ],
       "relatedStocks": [
         "TRENT",
-        "TITAN",
-        "DMART"
+        "TITAN"
       ]
     },
     {
-      "name": "Information Technology",
-      "momentum": "Weakening",
-      "score": 42,
-      "reason": "Relative lag persisted as Tier-1 IT names faced persistent distribution, offsetting broad-market bullishness.",
+      "name": "Capital Goods & Power Equipment",
+      "momentum": "Mixed",
+      "score": 68,
+      "reason": "Underlying secular demand for power transmission and substation capex remains resilient, but short-term sector momentum faces friction from regulatory shutdown orders issued against CG Power's Sambhajinagar manufacturing plant.",
       "catalysts": [
-        "Potential stabilization in US enterprise tech budgets",
-        "Mid-tier engineering and AI vendor deal ramp-ups"
+        "Multi-year grid modernization, transformer capex, and industrial electrification demand",
+        "Tube Investments posting 39.2% profit growth underpinned by CG Power subsidiary revenue"
       ],
       "risks": [
-        "Subdued near-term BFSI tech discretionary spending",
-        "Foreign portfolio rotation from IT into domestic industrials"
+        "Environmental and state regulatory compliance disruptions",
+        "Extended correction towards long-term moving averages"
       ],
       "relatedStocks": [
-        "TCS",
-        "INFY",
-        "HCLTECH"
+        "CGPOWER",
+        "TIINDIA",
+        "ABB"
       ]
     }
   ],
   "news": [
     {
-      "category": "stock",
-      "symbol": "BHEL",
-      "headline": "BHEL Surges 6% on Securing Rs 28,000-Crore Power Equipment Contracts from Adani Power",
-      "summary": "Bharat Heavy Electricals secured mega contracts valued between Rs 20,000 crore and Rs 28,000 crore for four thermal power projects from Adani Power, covering boilers, turbines, generators, and balance-of-plant packages. The wins boost BHEL order backlog past Rs 2.57 lakh crore.",
+      "category": "market",
+      "symbol": "NIFTY",
+      "headline": "Nifty Posts 576-Point Surge in Six-Month Best Day as Crude Tumbles Below $95 and FIIs Inject ₹20k Cr",
+      "summary": "The benchmark Nifty 50 surged 2.4% on November 5, 2026, closing at 24,536.60 alongside a 2,008-point jump in the Sensex. The advance was fueled by Brent crude tumbling 9% towards $93.82/bbl and FIIs turning net buyers with ₹20,834 crore across four sessions (including ₹7,284 crore net on November 4).",
       "sentiment": "Positive",
       "importance": "High",
-      "catalystType": "Order win",
+      "catalystType": "Macro/flows",
       "timeHorizon": "Today",
-      "impact": "Ignites a high-volume gap-up breakout through multi-month consolidation resistance.",
-      "sourceName": "India Infoline",
-      "sourceUrl": "https://www.indiainfoline.com/news/markets/bhel-share-price-jumps-5-on-securing-28000-crore-orders-from-adani-power",
-      "publishedAt": "2026-11-04T12:11:00Z"
-    },
-    {
-      "category": "stock",
-      "symbol": "BEL",
-      "headline": "Bharat Electronics Posts 19.6% PAT Surge in Q2; Upgraded to Buy by Major Brokerages",
-      "summary": "Bharat Electronics reported an operating EBITDA beat of 14% over consensus with Q2 net profit growing 19.6% YoY to Rs 1,530 crore. Brokerages including Motilal Oswal and ICICI Securities upgraded and reiterated Buy ratings with targets up to Rs 540, highlighting an upcoming Rs 55,000-crore order inflow visibility for FY27.",
-      "sentiment": "Positive",
-      "importance": "High",
-      "catalystType": "Earnings",
-      "timeHorizon": "Today",
-      "impact": "Decisive high-volume expansion from a multimonth base with immediate continuation potential toward 52-week highs.",
-      "sourceName": "The Economic Times",
-      "sourceUrl": "https://economictimes.indiatimes.com/markets/stocks/news/490-return-in-5-yrs-bel-shares-up-9-in-week-how-much-upside-do-experts-see-in-defence-psu-stock-post-q2-results/articleshow/125081912.cms",
-      "publishedAt": "2026-11-04T12:00:00Z"
-    },
-    {
-      "category": "stock",
-      "symbol": "COCHINSHIP",
-      "headline": "Cochin Shipyard Board Scheduled for Nov 10 to Consider Q2 Results and Interim Dividend",
-      "summary": "Cochin Shipyard filed a formal regulatory notice with BSE and NSE confirming its board meeting on November 10, 2026, to approve unaudited financial results for Q2 FY27 and consider declaration of a second interim dividend. The stock gained 3% ahead of the event amid positive naval capex tailwinds.",
-      "sentiment": "Positive",
-      "importance": "High",
-      "catalystType": "Corporate action",
-      "timeHorizon": "Watch",
-      "impact": "Binary event date creates pre-earnings accumulation setup within the stock's consolidation base.",
-      "sourceName": "PSU Connect",
-      "sourceUrl": "https://www.psuconnect.in/news/cochin-shipyard-board-meet-on-nov-10-for-q2-results-interim-dividend/45281",
-      "publishedAt": "2026-11-04T09:30:00Z"
+      "impact": "High-volume index thrust clears major multi-week resistance levels, expanding upside setup odds across large-cap leaders.",
+      "sourceName": "Financial Express",
+      "sourceUrl": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHsFnDiul_3Ln0pzro3Lw5oaW_gBpqmjO5HdoC03BpPD1aXzyyZnNrQsfaLPZZkOoMY0fX47PMruhx4ZAjN5Qpn4PjYmt1DMoOpVehLt9Bf_yC0VcMfNMRljKlse3xuXB8SHd_gThyLYrX3tGrYEDEKvqCJsvk__4eyU1jULO2SXfk3IlUW7FXdVy-u2PENHB5c7rRXPVzp4RY_AyLrs_PE3sE_jRJJI_H8H164LThu7YhQ6q4qke9WCKVTQBMoWVO6VoeJ-Q7AcnngbKxKcY7rB5RcH0rZ4omTVQmVQio4AXSDDkezRPoYArBXtizi6Js=",
+      "publishedAt": "2026-11-05T10:43:00Z"
     },
     {
       "category": "stock",
       "symbol": "CGPOWER",
-      "headline": "CG Power Extends Rebound Post 44% Q2 PAT Surge and Transmission Grid Capex Tailwind",
-      "summary": "CG Power gained nearly 4% on November 4 following its stellar Q2 performance where consolidated net profit jumped 44% YoY to Rs 409.09 crore on a 30% revenue increase to Rs 3,801.54 crore. Analysts highlighted strong order pipeline momentum in transmission switchgears and rail propulsion systems.",
-      "sentiment": "Positive",
+      "headline": "CG Power Slips Over 5% After MPCB Directs Closure of Chhatrapati Sambhajinagar Unit",
+      "summary": "CG Power and Industrial Solutions received an official direction from the Maharashtra Pollution Control Board ordering the closure of manufacturing operations at its MIDC unit in Chhatrapati Sambhajinagar under the Water and Air Pollution Acts. The company stated it is evaluating the directive and initiating appropriate legal and compliance steps, though the financial impact remains unascertained.",
+      "sentiment": "Negative",
       "importance": "High",
-      "catalystType": "Earnings",
-      "timeHorizon": "This week",
-      "impact": "Confirms swing floor reversal from key moving average support following post-earnings volatility.",
-      "sourceName": "Mint",
-      "sourceUrl": "https://www.livemint.com/market/stock-market-news/cg-power-has-rallied-29-in-2026-but-analysts-are-still-raising-their-bets-11761564758783.html",
-      "publishedAt": "2026-11-04T08:00:00Z"
-    },
-    {
-      "category": "sector",
-      "symbol": "DEFENCE",
-      "headline": "Defence Ministry Signs Landmark Rs 53,866-Crore Corvette Procurement Contract",
-      "summary": "The Ministry of Defence signed definitive contracts worth Rs 53,866 crore for eight Next-Generation Corvettes with GRSE and Goa Shipyard, providing strong revenue visibility over the coming 7-10 years and sparking rallies across shipbuilders and systems providers including Cochin Shipyard, HAL, and BEL.",
-      "sentiment": "Positive",
-      "importance": "High",
-      "catalystType": "Order win",
-      "timeHorizon": "This week",
-      "impact": "Supplies strong multi-week sector momentum and establishes structural support levels under leading naval names.",
-      "sourceName": "Moneycontrol",
-      "sourceUrl": "https://www.moneycontrol.com/news/business/markets/grse-mazagon-dock-cochin-shipyard-to-bel-defence-stocks-jump-up-to-7-on-rs-53866-crore-warship-order-12856002.html",
-      "publishedAt": "2026-11-03T06:03:00Z"
+      "catalystType": "Regulatory",
+      "timeHorizon": "Today",
+      "impact": "Regulatory shutdown risk creates sudden supply-side uncertainty, testing moving-average support near ₹814.",
+      "sourceName": "CNBC TV18",
+      "sourceUrl": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHZBhCbBJ-zqyoW7Avc2ddHjpfrKHK3FzESTbMRyjc0dZArx2HVcamaVMmDQ1cfmWpwaEsX-iEQqQWwgAnuKV7MD2lFCwvTSIXPU9mXUnygRKxCezvs1dHrp8pzErJTG0pdbGCAuAxsbaswC235ew==",
+      "publishedAt": "2026-11-05T07:30:00Z"
     },
     {
       "category": "stock",
-      "symbol": "SHYAMMET",
-      "headline": "Shyam Metalics Touches 52-Week High as Q2 Net Profit Soars 96%",
-      "summary": "Shyam Metalics & Energy reached a fresh 52-week peak of Rs 1,253.90 on November 4 after reporting a 96% YoY surge in consolidated net profit to Rs 511 crore and a 33.4% rise in revenue, backed by approvals for capital investments in coal block and solar infrastructure.",
+      "symbol": "BSE",
+      "headline": "BSE Rallies Over 6% as Q2 Net Profit Jumps 45% to ₹809 Crore on Equity Derivatives Spike",
+      "summary": "BSE surged past ₹3,820 on November 5 after reporting a 45% YoY jump in Q2 FY27 consolidated net profit to ₹809 crore. Total transaction charges grew 42% to ₹1,127.8 crore, driven by a 53% surge in equity-options charges as its index-options premium market share expanded to approximately 35%.",
       "sentiment": "Positive",
-      "importance": "Medium",
+      "importance": "High",
       "catalystType": "Earnings",
-      "timeHorizon": "Today",
-      "impact": "Clean 52-week high breakout with volume backing offering strong swing continuation characteristics.",
-      "sourceName": "India Infoline",
-      "sourceUrl": "https://www.indiainfoline.com/news/markets/shyam-metalics-hits-52-week-high-profit-jumps-96-as-coal-and-solar-expansion-plans-boost-sentiment",
-      "publishedAt": "2026-11-04T12:16:00Z"
+      "timeHorizon": "This week",
+      "impact": "Strong operational earnings beat clears multi-week resistance at ₹3,700, establishing a renewed swing leg upward.",
+      "sourceName": "The Economic Times",
+      "sourceUrl": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHyxyHdoQnr02Hjxg9ZG6uBdqiFrqiFYJBdJuf2gvVxv49TmKAcv2r3-gItLAsGsATfSBjerqZnj3r-RzAsUT5WxytR8aq0EoNJZZrrd5gZp7hEz9QLCFrgf-bp_NNMYmzHGO9RMGdmMXrgnNHg3eLobayY8ltDXqaQkt8E8QuNJIXTCxIb9OxOtSbnXOi4rHVAxO-5uredGpgYU35E7AXAK2olUlKaQwe3IFlsecTLB6DAywGRbA==",
+      "publishedAt": "2026-11-05T07:17:14Z"
     },
     {
-      "category": "market",
-      "symbol": "NIFTY",
-      "headline": "Finance Minister Signals Review of Equity Taxation Concerns Amid Resuming FII Inflows",
-      "summary": "Finance Minister Nirmala Sitharaman stated the government is actively evaluating participant feedback regarding the equity capital gains taxation framework ahead of the upcoming Union Budget. The clarification came as foreign institutional flows stabilized and benchmark indices clinched their 5th straight positive session.",
+      "category": "stock",
+      "symbol": "BEL",
+      "headline": "Nomura Hikes Bharat Electronics Target to ₹520 on ₹1.36 Trillion Order Pipeline and Q2 Beat",
+      "summary": "Nomura raised its target price on Bharat Electronics to ₹520 following BEL's Q2 FY27 net profit of ₹1,540 crore, which beat consensus estimates by 15%. Management reaffirmed 15%+ revenue growth and 28%+ EBITDA margins, driven by indigenization and naval programs including P75(I) submarines and Project KUSHA, projecting order backlog to reach ₹1.36 trillion by FY29.",
       "sentiment": "Positive",
-      "importance": "Medium",
-      "catalystType": "Regulatory",
-      "timeHorizon": "Watch",
-      "impact": "Reduces macro overhang on institutional equity flows, improving follow-through for broader index swing setups.",
+      "importance": "High",
+      "catalystType": "Rating change",
+      "timeHorizon": "This week",
+      "impact": "Analyst target upgrade and earnings beat drive high-volume institutional accumulation toward fresh highs above ₹420.",
       "sourceName": "Moneycontrol",
-      "sourceUrl": "https://www.moneycontrol.com/news/business/economy/fm-sitharaman-says-she-will-consider-investors-concerns-on-equity-taxation-12856841.html",
-      "publishedAt": "2026-11-04T08:38:00Z"
+      "sourceUrl": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEHHveAUn9-t2J8ZT1JZoN_ec2Gy5m7is3pmkLMkz61KSL2fWI7q9mGq1eNsL-VSNJ5LoN3QTn6dsdEhTpnOsqNw4my3ue1kGNjq8c9kDINlS5kslFBtMQwk2xTxPcVhYd2RZ9C_0iHACsyQ4nSILMnnc2z8twBoX6JKJiQztkp9eys8JLa46a5Jgyw8VHEwu-45V58SLOI3oHZkbVOKtGx-yGAaZgGkIswiT7KGqXP6a_mhR-FeXFNchw9cisCezQbrp6ZRF6bfjmvpE5-",
+      "publishedAt": "2026-11-05T06:56:00Z"
+    },
+    {
+      "category": "stock",
+      "symbol": "COCHINSHIP",
+      "headline": "Cochin Shipyard Board Meeting Set for November 10 to Consider Q2 Results and Interim Dividend",
+      "summary": "Cochin Shipyard informed the exchanges under Regulation 29 of SEBI LODR that a meeting of its Board of Directors will take place on Tuesday, November 10, 2026, to approve unaudited standalone and consolidated Q2 FY27 results and consider declaring an interim dividend. Trading windows remain closed until 48 hours post-declaration.",
+      "sentiment": "Positive",
+      "importance": "High",
+      "catalystType": "Corporate action",
+      "timeHorizon": "This week",
+      "impact": "Upcoming earnings and interim dividend catalyst provides firm price support above the ₹1,200 swing level.",
+      "sourceName": "PSU Connect",
+      "sourceUrl": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGimQa3o7ysg7jZgRj7jeWzO7njkj-PahOCAs41dJ98C7kdXVJ8rbLqS8RQodUu7LS2sEPf0l0Z17LiL7rdaljKF93buGcKmrwwRU01Kewk_U0VmmiLKduwuvUIEXQzYoA66FYoWf0PtYS18N3R7fsifE-Iu5kSWSk84CjnjMn6YRLzkUhRahccZD5bD-CWz3uRajvuQoXEcwQkIPMSWg==",
+      "publishedAt": "2026-11-04T12:00:00Z"
     },
     {
       "category": "stock",
       "symbol": "HAL",
-      "headline": "Hindustan Aeronautics Outperforms on Easing Supply Chains and Platform Handover Acceleration",
-      "summary": "Hindustan Aeronautics shares traded up to Rs 5,079 as institutional desks highlighted accelerating delivery rates across indigenous platforms and execution readiness for recent Rs 1.10 lakh crore DAC clearance pipelines. Technical patterns show the stock breaking out from a multi-week descending channel.",
+      "headline": "HAL Board Meeting Scheduled for November 12, 2026 to Approve Q2 Results",
+      "summary": "Hindustan Aeronautics Limited confirmed that its Board of Directors will convene on November 12, 2026, to review and approve unaudited financial results for the quarter ended September 30, 2026. The stock trades near ₹5,080, backed by zero long-term debt and rising aerospace orders.",
       "sentiment": "Positive",
-      "importance": "Medium",
-      "catalystType": "Macro/flows",
-      "timeHorizon": "This week",
-      "impact": "Descending channel breakout on daily charts validates swing entries targeting previous swing highs near Rs 5,150.",
+      "importance": "High",
+      "catalystType": "Earnings",
+      "timeHorizon": "Watch",
+      "impact": "Consolidation tightens above ₹5,000 as swing traders position ahead of the November 12 earnings disclosure.",
       "sourceName": "The Economic Times",
-      "sourceUrl": "https://economictimes.indiatimes.com/markets/stocks/news/stock-radar-hal-stock-breaks-out-from-a-descending-channel-time-to-buy/articleshow/124783321.cms",
-      "publishedAt": "2026-11-03T03:42:00Z"
+      "sourceUrl": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFBUkEyhv9zfddAa66JQLbj3tgwqrO7DdnFtUeQl_9zXP_XrHyFf-1ITlUmdKyhHZCju56EoV4yJCLCvWwSgk8mXkvhUmDM3cSGbPHcbhpy30tmPYuEZwzvxde7Qt0lvVSaqcXGKZTYFYpal55W-rAdeKQtAq7zLiDtnC88QaWIzqS68IkMBkI3exEVjk3F",
+      "publishedAt": "2026-11-04T10:00:00Z"
+    },
+    {
+      "category": "stock",
+      "symbol": "GRSE",
+      "headline": "MoD Awards ₹32,000 Crore Navy Contract to GRSE for Five Next Generation Corvettes",
+      "summary": "The Ministry of Defence signed contracts totaling ₹53,866.50 crore for eight Next Generation Corvettes on November 2, 2026, officially awarding ₹32,000 crore to lowest bidder Garden Reach Shipbuilders & Engineers to construct five 4,950-tonne corvettes over a nine-year period, substantially boosting long-term revenue visibility across the naval ecosystem.",
+      "sentiment": "Positive",
+      "importance": "High",
+      "catalystType": "Order win",
+      "timeHorizon": "This week",
+      "impact": "A massive ₹32,000 crore order win sparks a sector-wide base breakout across defense shipbuilders.",
+      "sourceName": "The Economic Times",
+      "sourceUrl": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEkt-klpyKiRFOBpO1xP4mea76BJnWTJisnbuZmJAp1SLtBqWw_L8X5Z29Cc8j5AnHDRGFQmhtUndxtVUdVgmZryU91KyBAWrnLGgEF74VRoyy5kug83JT9Bcrn2Y64u9j3WKvOMbDBYBg3llitm3wKuG7dRfi55CZMW7N1w5Wli1VoGFwVfMr250WoEQSnph89Qv_286HcObPeaMU0n57IZ2vTaukBLF5URNMMauJvXkWXBSXv9SdRphh1RPp-yE8gSikCshK9bx-hzDYkWfoCEiXztVeE_Sojx-qmN1wPLqWVZ3-v6AE=",
+      "publishedAt": "2026-11-03T07:43:26Z"
     },
     {
       "category": "stock",
       "symbol": "TRENT",
-      "headline": "Trent Operates Over 1,300 Fashion Stores as Q2 EBITDA Expands 37% Post-Results",
-      "summary": "Trent delivered a 23% YoY revenue jump to Rs 5,788 crore and a 37% expansion in operating EBITDA to Rs 785 crore in Q2 FY27, reaching the milestone of its 1,000th Zudio store. While profit after tax rose 9% beating street estimates, the stock is building a tight base around the Rs 2,850-2,900 zone.",
+      "headline": "Trent Hits 3-Month High as Q2 Margin Reaches 18.2% and Zudio Surpasses 1,000 Stores",
+      "summary": "Trent shares rallied over 6% towards ₹3,060 following Q2 FY27 results showing consolidated net profit growth of 23% YoY to ₹464 crore on 22.5% revenue growth to ₹5,788 crore. Operating margins expanded to 18.2% while the Zudio footprint expanded past 1,000 stores, prompting Ambit Capital to reaffirm Buy with a ₹3,509 target price.",
+      "sentiment": "Positive",
+      "importance": "High",
+      "catalystType": "Earnings",
+      "timeHorizon": "This week",
+      "impact": "Earnings gap-up above ₹3,000 establishes a textbook base breakout continuation pattern in the retail sector.",
+      "sourceName": "Stockopedia / Reuters",
+      "sourceUrl": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFq61yvGnuIKIfPjMb8-qZmt2gWUbq9k2nxRoPpP9W1LyHgUJkFCCv1Jls4Ch5hOtS488B2yJ6NyW7gPTkmoEsPbYetYQfdV_FHBEoNsRHxDAnV2Q79rGddigFdTuHuK39V9ZBlPL_vI_hAa4qDYyvULehAUnDcX8DergL5GPNPzRbCipzidpyq3ZrikOED1XzbnbBGmFUaIHukBljLV1gmpOHc2NjIUuVTWPADmjMdEJE4zkmYLetYtmzOp9UmIYKOscfoeZLZSCAgGUwNi6TNPmKuJhm7sVmz7V0c4M438aItA-nVSg==",
+      "publishedAt": "2026-10-30T08:46:00Z"
+    },
+    {
+      "category": "stock",
+      "symbol": "NBCC",
+      "headline": "NBCC Q2 Consolidated Net Profit Rises to ₹210 Crore, Beating Street Estimates of ₹135 Crore",
+      "summary": "State-run construction and PMC player NBCC reported a strong Q2 FY27 performance on November 5, delivering a consolidated net profit of ₹210 crore compared to ₹154 crore in the year-ago quarter, comfortably outpacing consensus estimates of ₹135 crore due to solid project management consultancy billing.",
       "sentiment": "Positive",
       "importance": "Medium",
       "catalystType": "Earnings",
       "timeHorizon": "This week",
-      "impact": "Tight range consolidation near key moving averages sets up an impending volatility contraction breakout.",
-      "sourceName": "TradingView / Moneycontrol",
-      "sourceUrl": "https://www.tradingview.com/news/moneycontrol:017d23f39094b:0-trent-q2-results-net-profit-rises-9-to-rs-490-crore-beats-estimate/",
-      "publishedAt": "2026-10-29T10:44:00Z"
+      "impact": "Pronounced earnings beat sets up high-volume price action towards multi-week consolidation pivots.",
+      "sourceName": "Sahi Markets",
+      "sourceUrl": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFW705qB_IV2havL8H6fFtpZDvZ29yyIX4ucJYN_l49ZI4wVoLzSu3pxCUVoQmf7UJ9A5TGpHHMOg_xcMFXVmcvOZfiXbIbC45TK4MF3ngqClNudJXKL5ji1fuQ3XHD0AAIKiYZc_o_UCn9zenxHIXqew-Oe1zyZ5hq_DK-2iCL8bVckHW5FjLxOnsbVl65",
+      "publishedAt": "2026-11-05T09:58:00Z"
     },
     {
       "category": "stock",
-      "symbol": "CAPACITE",
-      "headline": "Capacit'e Infraprojects Bags Rs 306-Crore Residential Construction Order from Puravankara",
-      "summary": "Capacit'e Infraprojects announced securing a contract worth Rs 306 crore from real estate developer Puravankara for a premium residential development project in Mumbai, improving its building construction backlog.",
+      "symbol": "TIINDIA",
+      "headline": "Tube Investments Q2 Consolidated PAT Rises 39.2% to ₹420.6 Crore Led by CG Power",
+      "summary": "Tube Investments of India Ltd posted a 39.2% YoY increase in consolidated profit after tax to ₹420.58 crore for Q2 FY27, as consolidated revenue climbed 32.7% to ₹7,330.31 crore. Growth was heavily underpinned by 56.3%-held subsidiary CG Power, which generated ₹3,802 crore in quarterly revenue.",
       "sentiment": "Positive",
-      "importance": "Low",
-      "catalystType": "Order win",
+      "importance": "Medium",
+      "catalystType": "Earnings",
       "timeHorizon": "This week",
-      "impact": "Incremental order book accretion providing short-term bounce off lower range support boundaries.",
-      "sourceName": "Trendlyne",
-      "sourceUrl": "https://trendlyne.com/posts/stock-market-today-nse-bse-indices-and-stocks-04-nov-2026/",
-      "publishedAt": "2026-11-04T06:00:00Z"
+      "impact": "Subsidiary outperformance solidifies parent earnings quality, anchoring swing support above key moving average bands.",
+      "sourceName": "Autocar Professional",
+      "sourceUrl": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH4gXLg1sm8PJyFKyJENhSi6ryYlCWGLby_ZHNkLFP7dijDUB7CKKJQ8L2LGoZIj0qlZRYkN8KEIya_YMet9afdlrz90mjPK-iudpoiPcE5BTTUwjC6JvvVIz9jsg9ivHM9QQlx8LXXh9ykGoGTTusytyPZRlaFl23f35B7e-k_0cPWjKXgXdhus6ka5WLz4xuUNIiVPsbcIneLfYlEOPgBhhrJed37bRXut40=",
+      "publishedAt": "2026-11-05T08:30:00Z"
     }
   ],
-  "disclaimer": "This intelligence briefing is prepared solely for educational and informational purposes for swing trading workspace users. It does not constitute investment advice, financial advisory, or recommendations to buy, hold, or sell any security. Market investments and swing trading strategies are subject to market risks. Readers must independently evaluate all setups and consult SEBI-registered advisors prior to trade execution.",
+  "disclaimer": "This research intelligence report is prepared solely for educational and informational purposes for swing traders on the National Stock Exchange of India (NSE). It does not constitute investment advice, financial endorsement, or any buy or sell recommendations. Market participants should verify all filings independently on official exchange portals (NSE/BSE) and consult a SEBI-registered financial advisor before executing trades.",
   "sources": []
 }
