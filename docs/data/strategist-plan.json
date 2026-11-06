@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-06T10:53:58.710Z",
+  "generatedAt": "2026-11-06T17:59:12.059Z",
   "sessionDate": "2026-11-06",
   "status": "ready",
   "scanGeneratedAt": "2026-11-05T19:05:13.861Z",
@@ -234,8 +234,8 @@
     }
   ],
   "previousSession": "2026-11-05",
-  "intelligenceGeneratedAt": "2026-11-06T10:52:51.750Z",
-  "commentary": "Nifty's decisive reclaim of the 25,000 milestone on explosive institutional buying confirms an ongoing Stage 2 market uptrend under Stan Weinstein's model. However, O'Neil market-direction discipline demands caution: breadth stands at a selective 52%, revealing a marked divergence between heavyweight leaders and vulnerable broader-market segments. In CANSLIM methodology, market follow-throughs without uniform breadth expansion require progressive exposure rather than reckless aggression. We trade exclusively confirmed Stage 2 leaders showing true earnings acceleration and tight pivot structures, while honoring Minervini-style risk parameters. Until smallcap and midcap participation synchronizes with headline benchmark momentum, maintain tight stop discipline, avoid chasing extended breakouts, and keep risk per trade strictly asymmetric.",
+  "intelligenceGeneratedAt": "2026-11-06T17:57:38.395Z",
+  "commentary": "Market breadth at 52 alongside a CAUTION gate reinforces Stan Weinstein and William O'Neil's primary directive: align fully with market direction before committing risk capital. Defying global weakness on heavy institutional flows confirms index resilience, yet neutral breadth signals elevated risk of false breakouts. In this environment, SEPA discipline mandates progressive exposure and strict asymmetry: fund only Stage 2 leaders displaying verified CANSLIM acceleration (EPS >=25% and sales >=15%), while capping decelerating or unverified names at Watch. If market conditions deteriorate, tight stop discipline guarantees capital preservation.",
   "commentaryStatus": "available",
   "limitations": [
     "Daily scan observations are not fills or performance results.",
@@ -244,66 +244,66 @@
   ],
   "model": "gemini-3.8-flash",
   "analysis": {
-    "analyst": "Minervini SEPA, O'Neil CANSLIM, Weinstein Stage Analysis, Darvas Box & Livermore Discipline",
+    "analyst": "Minervini SEPA, O'Neil CANSLIM, Weinstein Stage Analysis & Darvas Box Method",
     "bySymbol": {
       "360ONE": {
         "stage": "Stage 2 advancing",
-        "technical": "Cleared a 20-day consolidation high on 2.25x volume with RSI at 59, reflecting constructive institutional accumulation. Price action holds comfortably above the 21-day EMA and 50-day SMA, confirming an orderly Stage 2 advance out of a shallow base without overextension.",
+        "technical": "Clearing its 20-day high on 2.25x volume confirms supply absorption. The stock trades constructively above rising short and long-term averages, with RSI at 59 reflecting orderly Stage 2 accumulation without upside exhaustion.",
         "epsGrowth": [
           "Q2 FY27 -5%",
-          "Q1 FY27 +16%"
+          "Q1 FY27 +13%"
         ],
         "revenueGrowth": "+4%",
         "earningsTrend": "Decelerating",
         "growthQualified": "No",
-        "fundamental": "Operating margins remain robust at 59% with wealth ARR AUM advancing 24% YoY, but MTM volatility restrained quarterly earnings. TTM ROCE sits near 12% with clean balance-sheet leverage, though top-line growth of 4% misses strict CANSLIM high-acceleration benchmarks.",
+        "fundamental": "Annual recurring revenue AUM expanded 24% YoY, but consolidated Q2 net profit fell 4.9% YoY on higher operating expenses. Tangible ROE remains healthy at 16.9% with low leverage, yet slowing top-line growth fails CANSLIM thresholds.",
         "verdict": "Watch",
-        "risk": "Thesis fails if price breaks below the 1142.82 pivot floor, breaching short-term swing support and mandating an immediate exit."
+        "risk": "Thesis fails on a close below 1142.82 support; strict 6.6% stop discipline is mandatory as decelerating quarterly earnings increase false-breakout risk."
       },
       "63MOONS": {
-        "stage": "Stage 2 advancing",
-        "technical": "Forming a classic double bottom with neckline resistance at 982.83. Alignment above the 21-EMA, 50-SMA, and 200-SMA signals base completion and early Stage 2 transition, though volume conviction on the pivot attempt requires further institutional confirmation.",
+        "stage": "Stage 1 base",
+        "technical": "Forming a multi-month double-bottom base above rising 21-EMA, 50-SMA, and 200-SMA. RSI at 56 and MACD above zero suggest constructive base building, though volume expansion remains muted on the turn.",
         "epsGrowth": [
-          "Q2 FY27 -10%",
-          "Q1 FY27 -82%"
+          "Q1 FY27 -82%",
+          "Q4 FY26 +881%"
         ],
-        "revenueGrowth": "+82%",
+        "revenueGrowth": "+5%",
         "earningsTrend": "Negative",
-        "growthQualified": "Partial",
-        "fundamental": "ODIN platform provides a sticky trading franchise and virtually debt-free balance sheet, but net profitability contracted YoY (-10% in Q2, -82% in Q1). Poor 3-year ROE of 1.5% and reliance on other income violate CANSLIM earnings-quality standards.",
-        "verdict": "Watch",
-        "risk": "Break below 883.03 invalidates the double-bottom base structure and breaches key moving averages, triggering strict stop execution."
+        "growthQualified": "No",
+        "fundamental": "Operating revenue grew 5% YoY in Q1 FY27, but standalone net profit collapsed 82% YoY with negative core operating margins. Despite an almost debt-free balance sheet, erratic earnings and negative ROCE disqualify CANSLIM leadership.",
+        "verdict": "Avoid",
+        "risk": "Pattern invalidates on a breakdown below 883.03; tight stop protects against fundamental deterioration pulling the stock back into Stage 4 decline."
       },
       "ABCAPITAL": {
         "stage": "Stage 2 advancing",
-        "technical": "Executing a clean 20-day breakout at 416.87 after finding support at the rising 21-EMA. RSI at 58 shows healthy momentum with no extension, confirming strong Stage 2 leadership as price trades well above the 50-day and 200-day moving averages.",
+        "technical": "Textbook Stage 2 breakout clearing 20-session highs after a constructive bounce off the rising 21-EMA. RSI at 58 provides substantial overhead runway without momentum extension.",
         "epsGrowth": [
-          "Q2 FY27 +32%",
+          "Q2 FY27 +38%",
           "Q1 FY27 +32%"
         ],
-        "revenueGrowth": "+32%",
-        "earningsTrend": "Steady",
+        "revenueGrowth": "+31%",
+        "earningsTrend": "Accelerating",
         "growthQualified": "Yes",
-        "fundamental": "Delivered stellar 38% YoY net profit growth with revenue rising 32%, driven by NBFC profitability crossing 1,000 crore and credit costs dropping to seven-year lows of 92 bps. Broad-based lending growth and improving operating leverage support genuine CANSLIM leadership.",
+        "fundamental": "Outstanding CANSLIM credentials: consolidated Q2 PAT surged 38% YoY to ₹1,288 crore on 31% revenue growth. Lending AUM rose 32% with improving asset quality metrics, confirming strong institutional sponsorship.",
         "verdict": "Leading",
-        "risk": "A close below 391.17 violates the rising 21-EMA support and breakout pivot, demanding an immediate stop loss to protect capital."
+        "risk": "Thesis fails if price drops below 391.17 on heavy volume; strict 6.2% stop limits downside if market caution prompts financial sector weakness."
       },
       "ABSLNN50ET": {
         "stage": "Stage 2 advancing",
-        "technical": "Pushed past a 20-session consolidation high at 79.51 on 1.26x volume with RSI at 66. Trading well above rising 21-EMA, 50-SMA, and 200-SMA, reflecting broad Stage 2 accumulation across the Nifty Next 50 basket.",
+        "technical": "Advancing cleanly above all key moving averages with a 20-day high breakout supported by 1.26x volume. RSI at 66 reflects solid relative strength tracking large-cap index breadth.",
         "epsGrowth": [
           "not verified"
         ],
         "revenueGrowth": "not verified",
         "earningsTrend": "Not verified",
         "growthQualified": "Not verified",
-        "fundamental": "not verified",
+        "fundamental": "Passive exchange-traded fund replicating the Nifty Next 50 Index. Corporate financial metrics such as EPS growth, operating margins, ROCE, and debt leverage do not apply to this index vehicle.",
         "verdict": "Watch",
-        "risk": "A break below 76.15 breaches key swing support and the 21-day EMA, signaling base failure and enforcing an immediate exit."
+        "risk": "Setup fails on a broad market pullback beneath 76.15 support; disciplined 4.2% stop restricts loss exposure under cautionary gate conditions."
       },
       "ADANIENSOL": {
         "stage": "Stage 2 advancing",
-        "technical": "Logged a decisive 20-day breakout at 1673.67, comfortably clearing its base. Price holds firmly above its 21-EMA, 50-SMA, and 200-SMA with RSI 60 and positive MACD, confirming strong Stage 2 momentum and relative strength.",
+        "technical": "Strong Stage 2 breakout clearing a 20-day consolidation above rising EMA21, SMA50, and SMA200. RSI at 60 and positive MACD confirm institutional demand and powerful upside momentum.",
         "epsGrowth": [
           "Q2 FY27 +148%",
           "Q1 FY27 +124%"
@@ -311,23 +311,23 @@
         "revenueGrowth": "+53%",
         "earningsTrend": "Accelerating",
         "growthQualified": "Yes",
-        "fundamental": "Exceptional CANSLIM credentials with Q2 net profit leaping 145% YoY and revenue surging 53%, driven by smart meter contracts and operational transmission expansion. Operating EBITDA grew 68%, though heavy capital spending and high debt require vigilant monitoring.",
+        "fundamental": "Exceptional O'Neil CANSLIM delivery: Q2 PAT jumped 148% YoY to ₹1,364 crore on 53% revenue growth, backed by 68% operating EBITDA expansion. High borrowings of ₹51,520 crore are mitigated by robust infrastructure cash flows.",
         "verdict": "Leading",
-        "risk": "A decline below 1575.77 violates the breakout base and key moving averages, triggering an immediate stop-out."
+        "risk": "Pattern fails on a breakdown below the 1575.77 pivot stop; 5.8% stop discipline protects capital from high-beta infrastructure volatility."
       },
       "ADANIGREEN": {
         "stage": "Stage 2 advancing",
-        "technical": "Cleared its 20-day range at 1417.42 with RSI at 63 and positive MACD. Trading constructively above upward-sloping 21-EMA, 50-SMA, and 200-SMA, indicating healthy Stage 2 structure, though volume expansion remains moderate.",
+        "technical": "Clearing a 20-day high pivot while trading above rising 21-day EMA, 50-day SMA, and 200-day SMA. RSI at 63 and positive MACD show healthy Stage 2 trend momentum.",
         "epsGrowth": [
           "Q2 FY27 +16%",
-          "Q1 FY27 +33%"
+          "Q1 FY27 +20%"
         ],
         "revenueGrowth": "+42%",
         "earningsTrend": "Decelerating",
         "growthQualified": "Partial",
-        "fundamental": "Operational capacity reached 20.8 GW with power supply revenue surging 42% and EBITDA margins topping 90%. However, substantial finance costs softened net profit expansion to 16%, and elevated debt-to-EBITDA (5.6x) restrains fundamental CANSLIM qualification.",
+        "fundamental": "Operational capacity crossed 20.8 GW with revenue up 42% YoY and EBITDA margin at 93%. However, quarterly net profit growth decelerated to 16% YoY due to elevated finance and depreciation costs.",
         "verdict": "Watch",
-        "risk": "Breaching the 1326.34 stop level invalidates the 20-day pivot and fractures short-term moving average support."
+        "risk": "Thesis invalidates below 1326.34; strict stop discipline prevents holding through capital-intensive earnings drag if execution slows."
       }
     }
   },
