@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-06T18:19:50.835Z",
-  "sessionDate": "2026-11-06",
+  "generatedAt": "2026-11-06T19:35:09.712Z",
+  "sessionDate": "2026-11-07",
   "status": "ready",
   "scanGeneratedAt": "2026-11-06T18:19:35.551Z",
   "gate": "CAUTION",
@@ -193,49 +193,49 @@
   ],
   "observations": [
     {
-      "symbol": "63MOONS",
-      "previousState": "Watch",
-      "observation": "Latest scanned close 951.85; scanner state Armed. This is not an executed trade or an intraday stop/target check."
-    },
-    {
-      "symbol": "AAREYDRUGS",
+      "symbol": "360ONE",
       "previousState": "Watch",
       "observation": "No newer scan observation; outcome unknown."
     },
     {
-      "symbol": "ACUTAAS",
+      "symbol": "63MOONS",
+      "previousState": "Watch",
+      "observation": "No newer scan observation; outcome unknown."
+    },
+    {
+      "symbol": "ABCAPITAL",
+      "previousState": "Watch",
+      "observation": "No newer scan observation; outcome unknown."
+    },
+    {
+      "symbol": "ABSLNN50ET",
+      "previousState": "Watch",
+      "observation": "No newer scan observation; outcome unknown."
+    },
+    {
+      "symbol": "ADANIENSOL",
       "previousState": "Watch",
       "observation": "No newer scan observation; outcome unknown."
     },
     {
       "symbol": "ADANIGREEN",
       "previousState": "Watch",
-      "observation": "Latest scanned close 1414.9; scanner state Armed. This is not an executed trade or an intraday stop/target check."
+      "observation": "No newer scan observation; outcome unknown."
     },
     {
-      "symbol": "ADANIPORTS",
+      "symbol": "AHCL",
       "previousState": "Watch",
       "observation": "No newer scan observation; outcome unknown."
     },
     {
-      "symbol": "AEROFLEX",
-      "previousState": "Watch",
-      "observation": "No newer scan observation; outcome unknown."
-    },
-    {
-      "symbol": "AFFLE",
-      "previousState": "Watch",
-      "observation": "No newer scan observation; outcome unknown."
-    },
-    {
-      "symbol": "AGARWALEYE",
+      "symbol": "AIROLAM",
       "previousState": "Watch",
       "observation": "No newer scan observation; outcome unknown."
     }
   ],
-  "previousSession": "2026-11-05",
+  "previousSession": "2026-11-06",
   "intelligenceGeneratedAt": "2026-11-06T17:57:38.395Z",
-  "commentary": "While the Nifty 50 surged past 25,000 on heavy FII net buying, the scanner's Caution gate and breadth score of 52 dictate strict discipline. In Stan Weinstein's stage framework, counter-trend thrusts remain suspect until advancing breadth broadens and secondary tests confirm demand. William O'Neil insisted that true market direction is verified by leading growth stocks breaking out on expanding volume rather than broad relief rallies. We exercise progressive exposure: focusing capital strictly on confirmed Stage 2 leaders displaying textbook VCP consolidations and accelerating earnings, while capping decelerating or erratic counters at Watch and honoring predefined stops without hesitation.",
+  "commentary": "The Nifty 50 staged an aggressive 2% thrust to reclaim 25,000 on heavy institutional accumulation, yet a caution gate and breadth score of 52 demand strict O'Neil market-direction discipline. In Stage 2 market environments, explosive index rallies frequently mask narrow internal participation. Stan Weinstein and Jesse Livermore established that sustained uptrends require broad confirming leadership rather than concentrated short-covering rallies. While foreign capital flows heavily into select financial and utility names, traders must practice Mark Minervini's progressive exposure rules. We prioritize verified Stage 2 pivots with explosive earnings acceleration, keeping commitments light until market breadth confirms and liquidating quickly if breakouts fail to produce constructive follow-through.",
   "commentaryStatus": "available",
   "limitations": [
     "Daily scan observations are not fills or performance results.",
@@ -244,56 +244,54 @@
   ],
   "model": "gemini-3.8-flash",
   "analysis": {
-    "analyst": "Minervini SEPA, O'Neil CANSLIM, Weinstein Stage Analysis, Darvas Box Discipline",
+    "analyst": "Mark Minervini SEPA, William O'Neil CANSLIM & Stan Weinstein Stage Analysis",
     "bySymbol": {
       "360ONE": {
         "stage": "Stage 2 advancing",
-        "technical": "Price cleared a 20-session base on 2.25x average volume, pushing above key moving averages with RSI at 59. While the breakout shows constructive Stage 2 characteristics, prior overhead supply and recent choppy action require a decisive pivot follow-through.",
+        "technical": "Price broke above its 20-session pivot on 2.25x average volume with RSI at 59 and intact moving average alignment. However, upward momentum is restrained relative to true market leaders.",
         "epsGrowth": [
-          "Q2 FY27 -5.5%",
-          "Q1 FY27 +15.5%",
-          "Q4 FY26 +12.0%"
+          "Q2 FY27 -5%",
+          "Q1 FY27 +13%"
         ],
-        "revenueGrowth": "+4.2%",
-        "earningsTrend": "Decelerating",
+        "revenueGrowth": "+4%",
+        "earningsTrend": "Negative",
         "growthQualified": "No",
-        "fundamental": "Consolidated Q2 FY27 PAT fell 4.9% YoY to Rs 300 Cr due to mark-to-market impacts, with revenue up just 4.2%. While ARR AUM grew 24.3% YoY and tangible ROE is 16.9%, slowing earnings fail CANSLIM acceleration standards.",
+        "fundamental": "Q2 consolidated PAT slipped 5% YoY to Rs 300 crore while operational revenue rose just 4%, held back by mark-to-market fluctuations. Despite a healthy 16.9% tangible ROE, the bottom-line contraction violates CANSLIM standards.",
         "verdict": "Watch",
-        "risk": "Thesis fails if price slips back below the breakout floor and stop at 1142.82 on distribution volume."
+        "risk": "Fails on violation of the 1142.82 stop level; a close below the 50-day moving average mandates immediate loss cutting."
       },
       "63MOONS": {
-        "stage": "Stage 2 advancing",
-        "technical": "Stock completed a double-bottom reversal, clearing the neckline trigger with price aligning above the 21-EMA, 50-SMA, and 200-SMA. RSI at 56 and MACD crossing above zero signal nascent Stage 2 momentum, but overhead multi-month supply persists.",
+        "stage": "Stage 1 base",
+        "technical": "Price forms a double-bottom neckline breakout above its 21-EMA, 50-SMA, and 200-SMA. RSI of 56 and positive MACD reflect early bottoming action rather than established Stage 2 momentum.",
         "epsGrowth": [
-          "Q2 FY27 +424.0%",
-          "Q1 FY27 -81.8%",
-          "Q4 FY26 +445.0%"
+          "Q2 FY27 Negative",
+          "Q1 FY27 Negative"
         ],
-        "revenueGrowth": "+81.7%",
+        "revenueGrowth": "+5%",
         "earningsTrend": "Negative",
-        "growthQualified": "Partial",
-        "fundamental": "Standalone revenue jumped to Rs 34.6 Cr and PAT grew YoY, yet consolidated operations recorded continuing losses of Rs 41.2 Cr in Q2 FY27. Negative ROCE (-3.7%) and erratic bottom-line swings fail CANSLIM quality filters despite a virtually debt-free balance sheet.",
-        "verdict": "Watch",
-        "risk": "Stop discipline triggers immediately upon a close below the double-bottom support level of 883.03."
+        "growthQualified": "No",
+        "fundamental": "Consolidated operations posted recurring net losses of Rs 28.7 crore in Q2 and Rs 39.7 crore in Q1 FY27. Unreliable bottom-line execution and volatile operating margins disqualify the stock under CANSLIM rules.",
+        "verdict": "Avoid",
+        "risk": "Setup invalidates below the 883.03 neckline stop; violation of base support requires swift liquidation to avert deeper Stage 4 declines."
       },
       "ABCAPITAL": {
         "stage": "Stage 2 advancing",
-        "technical": "Classic Stage 2 advancing profile. Price respected the rising 21-EMA near recent highs, confirmed a bullish reclaim candle, and cleared 20-day resistance with RSI at 58. Constructive volatility contraction pattern shows strong relative strength against the benchmark.",
+        "technical": "Constructive Stage 2 advance following an orderly pullback to the rising 21-EMA and a high-volume 20-session breakout. RSI at 58 shows strong momentum without overextension.",
         "epsGrowth": [
-          "Q2 FY27 +31.9%",
-          "Q1 FY27 +30.5%",
-          "Q4 FY26 +26.0%"
+          "Q2 FY27 +38%",
+          "Q1 FY27 +40%",
+          "Q4 FY26 +33%"
         ],
-        "revenueGrowth": "+32.2%",
-        "earningsTrend": "Accelerating",
+        "revenueGrowth": "+31%",
+        "earningsTrend": "Steady",
         "growthQualified": "Yes",
-        "fundamental": "Exceptional CANSLIM credentials: Q2 FY27 PAT jumped 38% YoY to Rs 1,288 Cr on 32% revenue expansion to Rs 14,003 Cr. Total lending AUM expanded 32% YoY with gross stage 2/3 improving 72 bps. Robust operational leverage and improving credit metrics confirm elite fundamental health.",
-        "verdict": "Leading",
-        "risk": "Pattern breaks if price loses the 21-EMA support, violating the designated stop at 391.17."
+        "fundamental": "Consolidated net profit expanded 38% YoY to Rs 1,288 crore on 31% revenue growth, backed by a 32% surge in lending AUM and 73% PBT growth in housing finance. Balance sheet strength confirms institutional accumulation.",
+        "verdict": "Constructive",
+        "risk": "Invalidated if price breaches the 391.17 stop; failure to hold the rising 21-EMA signals distribution and demands an immediate exit."
       },
       "ABSLNN50ET": {
         "stage": "Stage 2 advancing",
-        "technical": "Stage 2 advance underway as the ETF clears 20-day highs on 1.26x average volume, holding comfortably above EMA21, SMA50, and SMA200. RSI at 66 confirms strong underlying mid-to-large-cap momentum, though extended slightly from the initial base pivot.",
+        "technical": "Index instrument cleared a 20-session high on 1.26x volume, sustaining clean positioning above rising 21, 50, and 200 moving averages with RSI at 66 reflecting broad large-cap momentum.",
         "epsGrowth": [
           "not verified"
         ],
@@ -302,46 +300,39 @@
         "growthQualified": "Not verified",
         "fundamental": "not verified",
         "verdict": "Watch",
-        "risk": "Setup invalidates if the ETF breaks below the key swing low and stop at 76.15."
+        "risk": "Thesis invalidates on a breakdown below 76.15; breach of intermediate moving average support dictates a disciplined rule-based exit."
       },
       "ADANIENSOL": {
         "stage": "Stage 2 advancing",
-        "technical": "Textbook Stage 2 advancing breakout clearing a 20-session consolidation range. Moving averages are sequentially stacked with price above EMA21, SMA50, and SMA200. RSI at 60 and positive MACD reflect sustained institutional accumulation and dominant relative strength.",
+        "technical": "Premier Stage 2 momentum leader breaking out to new 20-session highs. Price trades firmly above upward-trending 21-EMA, 50-SMA, and 200-SMA, reinforced by RSI at 60 and positive MACD.",
         "epsGrowth": [
-          "Q2 FY27 +148.0%",
-          "Q1 FY27 +124.1%",
-          "Q4 FY26 +78.5%"
+          "Q2 FY27 +148%",
+          "Q1 FY27 +130%",
+          "Q4 FY26 +16%"
         ],
-        "revenueGrowth": "+52.8%",
+        "revenueGrowth": "+53%",
         "earningsTrend": "Accelerating",
         "growthQualified": "Yes",
-        "fundamental": "Powerhouse earnings delivery: Q2 FY27 operational revenue rose 52.8% YoY to Rs 10,076 Cr while PAT surged 145% to Rs 1,364 Cr. Operating EBITDA expanded 68% driven by smart meters and transmission. However, total borrowings of Rs 51,520 Cr represent significant balance sheet leverage.",
+        "fundamental": "Stellar CANSLIM profile as Q2 operational revenue surged 53% YoY and PAT vaulted 148% to Rs 1,364 crore, driven by smart metering and high-margin energy solutions. Massive utility cash flows support capital expenditure debt.",
         "verdict": "Leading",
-        "risk": "Trade structure invalidates if price breaks back into the consolidation range below 1575.77."
+        "risk": "Violated on a drop below the 1575.77 pivot stop; closing beneath the 50-day moving average triggers instant capital preservation."
       },
       "ADANIGREEN": {
         "stage": "Stage 2 advancing",
-        "technical": "Price broke out above a 20-session ceiling, trading comfortably above its 21-EMA, 50-SMA, and 200-SMA. RSI at 63 and positive MACD confirm Stage 2 characteristics, yet overhead resistance from prior 52-week swing highs tempers breakout clarity.",
+        "technical": "Stage 2 breakout clearing a 20-session consolidation high above ascending 21, 50, and 200 moving averages. RSI of 63 and bullish MACD confirm accumulation.",
         "epsGrowth": [
-          "Q2 FY27 +4.0%",
-          "Q1 FY27 +38.8%",
-          "Q4 FY26 +21.4%"
+          "Q2 FY27 +16%"
         ],
-        "revenueGrowth": "+41.5%",
+        "revenueGrowth": "+42%",
         "earningsTrend": "Decelerating",
         "growthQualified": "Partial",
-        "fundamental": "Revenue from power supply jumped 45% YoY to Rs 4,019 Cr with EBITDA up 51% at 92% margins as operational capacity hit 20.8 GW. However, net profit growth decelerated to 4% YoY (Rs 670 Cr). Substantial leverage (net debt/run-rate EBITDA at 5.6x) remains a key fundamental hurdle.",
+        "fundamental": "Q2 revenue from power supply jumped 42% YoY with a remarkable 92% EBITDA margin. However, rising finance costs constrained net profit growth to 16%, failing O'Neil's 25% minimum EPS growth threshold.",
         "verdict": "Watch",
-        "risk": "Minervini risk rules require cutting exposure if price fails the base breakout level below 1326.34."
+        "risk": "Exit immediately on a breach of the 1326.34 stop level, which signals an institutional bull trap at range highs."
       }
     }
   },
   "history": [
-    {
-      "sessionDate": "2026-10-31",
-      "gate": "WEAK",
-      "verdict": "No new buys. Observe and protect capital."
-    },
     {
       "sessionDate": "2026-11-01",
       "gate": "WEAK",
@@ -369,6 +360,11 @@
     },
     {
       "sessionDate": "2026-11-06",
+      "gate": "CAUTION",
+      "verdict": "Watch only. Wait for broader confirmation."
+    },
+    {
+      "sessionDate": "2026-11-07",
       "gate": "CAUTION",
       "verdict": "Watch only. Wait for broader confirmation."
     }
