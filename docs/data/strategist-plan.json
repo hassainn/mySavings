@@ -1,9 +1,9 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-08T11:30:00.394Z",
+  "generatedAt": "2026-11-08T17:24:37.432Z",
   "sessionDate": "2026-11-08",
   "status": "ready",
-  "scanGeneratedAt": "2026-11-07T17:10:16.083Z",
+  "scanGeneratedAt": "2026-11-08T17:24:25.524Z",
   "gate": "WEAK",
   "breadthScore": 38,
   "verdict": "No new buys. Observe and protect capital.",
@@ -239,7 +239,7 @@
   ],
   "previousSession": "2026-11-07",
   "intelligenceGeneratedAt": "2026-11-08T11:24:46.211Z",
-  "commentary": "While headline benchmark indices celebrated Samvat 2083 by reclaiming 25,000 on foreign institutional buying, Stan Weinstein and William O'Neil discipline demands peering beneath index level action into market breadth. A breadth score of 38 leaves the gate in WEAK status, signaling distribution under the surface. In line with Jesse Livermore's tenet to respect the general market, capital preservation takes precedence: avoid chasing extended moves, enforce Mark Minervini's progressive exposure, and keep stops tight. Focus strictly on genuine Stage 2 leaders exhibiting confirmed quarterly earnings acceleration and constructive base development, while treating non-equity and debt tracker instruments with caution until broader participation decisively confirms the health of this technical rally.",
+  "commentary": "Benchmark indices have staged an aggressive rally to reclaim 25,000, yet underlying market breadth remains narrow with an internal breadth score of 38, holding our deterministic gate at WEAK. Under the market direction principles of William O'Neil and Stan Weinstein, an index advance lacking broad participation is vulnerable to whipsaws and false breakouts. While the Nifty holds above key moving averages, defensive position sizing and progressive exposure are mandatory. We demand confirmed Stage 2 structural leadership paired with undeniable CANSLIM quarterly earnings acceleration before committing capital, maintaining disciplined stop losses and treating index re-entries with caution until underlying breadth broadens across market segments.",
   "commentaryStatus": "available",
   "limitations": [
     "Daily scan observations are not fills or performance results.",
@@ -248,88 +248,88 @@
   ],
   "model": "gemini-3.8-flash",
   "analysis": {
-    "analyst": "SEPA-CANSLIM-StageAnalysis",
+    "analyst": "SEPA / CANSLIM / Stage Analysis / Darvas Box Framework",
     "bySymbol": {
       "AARTIPHARM": {
         "stage": "Stage 2 advancing",
-        "technical": "Trading above upward-sloping 21 EMA, 50 SMA, and 200 SMA, confirming Minervini Trend Template alignment. Breaking out from a constructive double-bottom base with neckline resistance at 1003.40. RSI at 59 shows unextended momentum, while volume dynamics and relative strength validate institutional accumulation.",
+        "technical": "Constructing a double bottom base clearing overhead resistance above rising 21-EMA, 50-SMA, and 200-SMA. RSI at 59 shows steady accumulation without extension. Relative strength is consolidating constructively against the broader market index.",
         "epsGrowth": [
-          "Q2 FY27 +156%",
-          "Q1 FY27 +65%"
+          "Q2 FY27 +180%",
+          "Q1 FY27 +54%"
         ],
         "revenueGrowth": "+47%",
         "earningsTrend": "Accelerating",
         "growthQualified": "Yes",
-        "fundamental": "CANSLIM profile confirmed as Q2 FY27 revenue grew 47% YoY and net profit surged 156% to Rs 71.5 crore. Operating leverage lifted EBITDA margins to 22.2%. Xanthine derivatives capacity expansion and active CDMO contracts provide strong growth visibility, though working capital borrowing cycles warrant monitoring.",
+        "fundamental": "High-grade CANSLIM acceleration driven by CDMO and xanthine volume ramp. Operating leverage expanded Q2 EBITDA margins to 22.2%. Low net debt-to-equity of 0.28x supports ongoing capex execution.",
         "verdict": "Leading",
-        "risk": "Thesis fails on a close below the double-bottom support stop at 914.01; break below the 50 SMA requires strict stop-out."
+        "risk": "Thesis fails on a break below the 914.01 pivot stop; cut losses immediately to protect capital."
       },
       "ABGSEC": {
         "stage": "Stage 2 advancing",
-        "technical": "Clearing a 20-session high at 118.12 on 1.9x average volume, moving above key 21 EMA, 50 SMA, and 200 SMA. RSI at 71 reflects persistent upward trend in sovereign gilt pricing, though upside remains mathematically capped by fixed-income duration characteristics.",
+        "technical": "SEPA breakout clearing 20-session highs on 1.9x volume. Holding above key moving averages with RSI at 71 reflecting steady sovereign debt momentum.",
         "epsGrowth": [
           "not verified"
         ],
         "revenueGrowth": "not verified",
         "earningsTrend": "Not verified",
         "growthQualified": "Not verified",
-        "fundamental": "Not verified. As a CRISIL Broad Based Gilt ETF tracking sovereign debt securities, standard equity CANSLIM metrics such as EPS growth, sales expansion, operating margins, and ROE do not apply. Driven purely by benchmark interest rate cycles and sovereign yield curves.",
+        "fundamental": "not verified",
         "verdict": "Watch",
-        "risk": "Invalidation occurs if price breaks below the 116.75 stop; position is vulnerable to sudden upward spikes in sovereign benchmark yields."
+        "risk": "Violating the 116.75 stop invalidates the breakout swing; sovereign yield spikes represent the primary downside risk."
       },
       "ABSLBANETF": {
         "stage": "Stage 2 advancing",
-        "technical": "Completed a clean 20-day high breakout at 60.94 on 2.55x average volume. Price holds firmly above its 21 EMA, 50 SMA, and 200 SMA with MACD above its signal line and RSI at 69, reflecting broad-based banking sector accumulation.",
+        "technical": "Cleared a 20-session high on 2.55x volume, confirming momentum across large-cap banking constituents. Price trends firmly above 21-EMA, 50-SMA, and 200-SMA with positive MACD.",
         "epsGrowth": [
           "not verified"
         ],
         "revenueGrowth": "not verified",
         "earningsTrend": "Not verified",
         "growthQualified": "Not verified",
-        "fundamental": "Not verified. An exchange-traded fund tracking the Bank Nifty index; single-stock CANSLIM earnings and revenue growth metrics do not apply. Fund performance is tethered to constituent bank credit growth, net interest margins, and non-performing asset trajectories.",
+        "fundamental": "not verified",
         "verdict": "Watch",
-        "risk": "Thesis invalidates on a reversal below the 58.55 stop level; exit if banking basket breaks beneath its 20-day EMA."
+        "risk": "Close below 58.55 invalidates sector follow-through; strict stop discipline protects against broader index roll-overs."
       },
       "ABSLLIQUID": {
         "stage": "Unclear",
-        "technical": "Trading tight near its 20-session pivot at 1006.00 with 3.41x average volume and MACD above zero. While moving averages are technically stacked, price action exhibits negligible volatility characteristic of an overnight cash parking mechanism rather than an equity breakout.",
+        "technical": "Linear cash-equivalent vehicle hugging short-term moving averages with compressed volatility. Volume surge reflects cash rebalancing rather than institutional momentum accumulation.",
         "epsGrowth": [
           "not verified"
         ],
         "revenueGrowth": "not verified",
         "earningsTrend": "Not verified",
         "growthQualified": "Not verified",
-        "fundamental": "Not verified. An overnight liquid ETF holding ultra-short sovereign call money and TREPS instruments to provide cash-equivalent stability. Lacks equity operating leverage, profit acceleration, or margin expansion metrics, making CANSLIM fundamental criteria inapplicable.",
+        "fundamental": "not verified",
         "verdict": "Avoid",
-        "risk": "Failure occurs on a breach of the 1005.25 stop; negligible capital risk, but poses severe opportunity cost relative to growth equities."
+        "risk": "Exit below 1005.25 stop; instrument offers zero capital appreciation potential for growth or momentum strategies."
       },
       "ACE": {
         "stage": "Stage 2 advancing",
-        "technical": "Carving a constructive double-bottom base above its rising 21 EMA, 50 SMA, and 200 SMA. Volume expanded 2.3x on the advance with RSI at 54, indicating steady accumulation without technical extension as price presses toward the 1269.27 neckline trigger.",
+        "technical": "Carving out a double bottom pivot above rising 21-EMA, 50-SMA, and 200-SMA on 2.3x average volume. RSI at 54 confirms base building without overbought conditions.",
         "epsGrowth": [
           "Q1 FY27 +22%",
-          "Q4 FY26 -7%"
+          "Q4 FY26 -2%"
         ],
-        "revenueGrowth": "+19%",
+        "revenueGrowth": "+20%",
         "earningsTrend": "Accelerating",
         "growthQualified": "Partial",
-        "fundamental": "Dominant market leader commanding over 63% domestic mobile crane share. Q1 FY27 total income climbed 19.5% YoY to Rs 840 crore and PAT rose 22.3% with record 20.5% EBITDA margins. Debt-free balance sheet with 31.6% ROCE supports institutional sponsorship, though EPS growth trails the 25% CANSLIM threshold.",
+        "fundamental": "Dominant market leader commanding 63% crane market share. Q1 FY27 operating profit rose 22% as EBITDA margins reached 20.5%. Zero net debt and solid 22.8% ROE.",
         "verdict": "Constructive",
-        "risk": "Structure invalidates below the 1171.13 swing low; strict discipline demands cutting the position if the 50 SMA fails."
+        "risk": "Break below 1171.13 invalidates the double bottom swing neckline; enforce immediate risk management."
       },
       "ADANIENSOL": {
         "stage": "Stage 2 advancing",
-        "technical": "Stage 2 uptrend intact with price positioned above 21 EMA, 50 SMA, and 200 SMA. Consolidating tightly within 1.5% of its 1639.94 pivot with RSI at 60 and MACD bullish, displaying healthy supply absorption ahead of a potential Stage 2 continuation breakout.",
+        "technical": "Tightly coiling within 1.5% of its 20-session breakout pivot, positioned comfortably above upward-trending 21-EMA, 50-SMA, and 200-SMA with constructive MACD and RSI at 60.",
         "epsGrowth": [
           "Q2 FY27 +148%",
           "Q1 FY27 +124%"
         ],
-        "revenueGrowth": "+51%",
+        "revenueGrowth": "+53%",
         "earningsTrend": "Accelerating",
         "growthQualified": "Yes",
-        "fundamental": "Exceptional CANSLIM acceleration as Q2 FY27 operational revenue rose 51% YoY to Rs 7,167 crore while net profit surged 145% to Rs 1,364 crore, boosting diluted EPS by 148%. Driven by transmission expansions and smart-meter rollouts, though high debt leverage and extensive capital expenditure require monitoring.",
+        "fundamental": "Exceptional earnings power with Q2 PAT up 145% and operating revenue up 53%. Highly leveraged utility model mitigated by robust operational EBITDA and a locked-in transmission pipeline.",
         "verdict": "Leading",
-        "risk": "Thesis fails on a breakdown below the 1539.98 pivot support; a close below the 50-day average requires cutting losses fast."
+        "risk": "Breaching 1539.98 violates base support; strictly honor stop loss to avoid trapped utility overhead."
       }
     }
   },
