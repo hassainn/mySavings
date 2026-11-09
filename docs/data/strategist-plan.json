@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-09T10:23:56.190Z",
+  "generatedAt": "2026-11-09T11:33:33.756Z",
   "sessionDate": "2026-11-09",
   "status": "ready",
   "scanGeneratedAt": "2026-11-08T17:24:25.524Z",
@@ -238,8 +238,8 @@
     }
   ],
   "previousSession": "2026-11-08",
-  "intelligenceGeneratedAt": "2026-11-08T11:24:46.211Z",
-  "commentary": "Market breadth remains narrow at 38 despite Nifty reclaiming 25,000, signaling an underlying divergence that demands classic O'Neil and Weinstein discipline. While institutional buying sparked an 8.6% weekly benchmark surge, sustainable market leadership requires broad market participation above rising 30-week averages rather than index-level heavy lifting. Under a WEAK gate, aggressive risk-taking is premature. We adhere to Minervini's progressive exposure rules: sit tight, demand pristine CANSLIM quarterly fundamentals, insist on volume-backed base breakouts, and keep watchlists selective until broad market confirmation emerges.",
+  "intelligenceGeneratedAt": "2026-11-09T11:32:05.798Z",
+  "commentary": "With market breadth at a weak 38% and benchmark indices testing psychological resistance, Stan Weinstein's stage discipline demands strict selectivity. William O'Neil's CANSLIM framework warns that weak breadth exposes low-conviction breakouts to swift institutional distribution. While foreign inflows and softening crude offer macro support, true Stage 2 leaders with accelerating quarterly earnings and sales are limited. Three candidates are debt or index ETFs lacking corporate earnings drivers, while Aarti Pharmalabs shows decelerating earnings. Only Action Construction Equipment and Adani Energy Solutions exhibit constructive accumulation backed by business momentum. In a WEAK market gate, prioritize capital preservation, keep positions small, and enforce strict Minervini stop discipline.",
   "commentaryStatus": "available",
   "limitations": [
     "Daily scan observations are not fills or performance results.",
@@ -248,91 +248,88 @@
   ],
   "model": "gemini-3.8-flash",
   "analysis": {
-    "analyst": "Minervini SEPA, O'Neil CANSLIM, Weinstein Stage Analysis & Darvas Box Integration",
+    "analyst": "Minervini SEPA, O'Neil CANSLIM, Weinstein Stage Analysis, Darvas & Livermore",
     "bySymbol": {
       "AARTIPHARM": {
         "stage": "Stage 2 advancing",
-        "technical": "Consolidating in a constructive double-bottom base above rising EMA21, SMA50, and SMA200. RSI 59 reflects healthy momentum without exhaustion. Neckline resistance at 1003.4 represents the pivot trigger.",
+        "technical": "Price trades above rising 21 EMA, 50 SMA, and 200 SMA, forming a double-bottom base. RSI at 59 and positive MACD show steady price action, but volume expansion on neckline resistance is subdued, and relative strength lags broader market leaders.",
         "epsGrowth": [
-          "Q2 FY27 +180%",
-          "Q1 FY27 +54%",
-          "Q4 FY26 -31%"
+          "Q2 FY25 +5%",
+          "Q1 FY25 +13%"
         ],
-        "revenueGrowth": "+46%",
-        "earningsTrend": "Accelerating",
-        "growthQualified": "Yes",
-        "fundamental": "EBITDA margins expanded to 22.2% driven by CDMO ramp-up and xanthine volume expansion. ROCE stands at 10.7% with modest leverage (D/E 0.36) and clean institutional sponsorship.",
-        "verdict": "Leading",
-        "risk": "Pattern failure occurs on a close below swing low support at 914.01. Minervini discipline mandates cutting losses immediately if the pivot falters."
+        "revenueGrowth": "+4%",
+        "earningsTrend": "Decelerating",
+        "growthQualified": "No",
+        "fundamental": "Operating margins hold near 20%, but modest 4% revenue and single-digit profit growth lag CANSLIM minimums. ROCE of 10.7% and ROE of 8.6% with debt-to-equity at 0.6x show stability without dynamic earnings acceleration.",
+        "verdict": "Watch",
+        "risk": "A close below 914.01 breaks the base low; cut losses immediately to preserve capital per Minervini discipline."
       },
       "ABGSEC": {
-        "stage": "Unclear",
-        "technical": "Price cleared 20-session highs on 1.9x volume above moving averages with RSI 71. However, equity momentum models and Darvas box structures do not fit sovereign debt instruments.",
+        "stage": "Stage 2 advancing",
+        "technical": "SEPA breakout above 21 EMA, 50 SMA, and 200 SMA on 1.9x volume with RSI at 71. Confirmed Stage 2 uptrend in a sovereign gilt vehicle benefiting from easing bond yields, clearing a 20-session high.",
         "epsGrowth": [
           "not verified"
         ],
         "revenueGrowth": "not verified",
         "earningsTrend": "Not verified",
         "growthQualified": "Not verified",
-        "fundamental": "Sovereign bond ETF tracking government securities. Corporate CANSLIM metrics including EPS acceleration, revenue growth, ROCE, and operating margins are structurally not applicable.",
+        "fundamental": "not verified",
         "verdict": "Watch",
-        "risk": "Thesis invalidates if price breaks beneath 116.75 on rising yields. Exit position immediately upon stop breach."
+        "risk": "Breach below 116.75 invalidates the breakout; exit immediately to honor predefined risk parameters."
       },
       "ABSLBANETF": {
         "stage": "Stage 2 advancing",
-        "technical": "Cleared a 20-session high on 2.55x average volume, holding above rising 21-EMA and 50-SMA with RSI 69. Captures sector banking breadth rather than individual company leadership.",
+        "technical": "Cleared 20-day high on 2.55x volume with RSI at 69 and MACD above signal line. Stage 2 posture reflects institutional rotation into large-cap banking heavyweights above rising key moving averages.",
         "epsGrowth": [
           "not verified"
         ],
         "revenueGrowth": "not verified",
         "earningsTrend": "Not verified",
         "growthQualified": "Not verified",
-        "fundamental": "Sectoral ETF tracking Bank Nifty constituents. Individual corporate fundamentals, operating margins, and earnings acceleration metrics are not applicable to the basket index.",
+        "fundamental": "not verified",
         "verdict": "Watch",
-        "risk": "Fails if Bank Nifty reverses beneath the 58.55 swing low support. Enforce strict mechanical stop-loss discipline."
+        "risk": "A drop below 58.55 violates the 20-day shelf; cut losses quickly to protect capital against sector pullbacks."
       },
       "ABSLLIQUID": {
-        "stage": "Unclear",
-        "technical": "Trading flat within a fraction of a percent of its pivot with low volatility. Cash management instrument lacking equity trend template or relative strength.",
+        "stage": "Stage 1 base",
+        "technical": "Trades within 1.5% of its 20-session pivot above key moving averages with 3.41x volume. Reflects pure overnight money market stability rather than equity accumulation or relative strength leadership.",
         "epsGrowth": [
           "not verified"
         ],
         "revenueGrowth": "not verified",
         "earningsTrend": "Not verified",
         "growthQualified": "Not verified",
-        "fundamental": "Overnight liquid fund designed for cash preservation. Earnings growth, profit margins, return on equity, and debt ratios are completely non-applicable.",
-        "verdict": "Avoid",
-        "risk": "Pure cash alternative; invalidation occurs on deviation below 1005.25. Inapplicable for swing trading strategies."
+        "fundamental": "not verified",
+        "verdict": "Watch",
+        "risk": "Price violation below 1005.25 negates the setup; exit immediately to preserve principal cash value."
       },
       "ACE": {
         "stage": "Stage 2 advancing",
-        "technical": "Constructing a double-bottom base above rising 21-EMA, 50-SMA, and 200-SMA on 2.3x volume. RSI 54 offers substantial momentum headroom toward the 1269.27 pivot.",
+        "technical": "Trades cleanly above 21 EMA, 50 SMA, and 200 SMA, completing a double-bottom base with 2.3x volume expansion at trigger. RSI 54 provides constructive headroom without technical extension.",
         "epsGrowth": [
-          "Q1 FY27 +22%",
-          "Q4 FY26 -6%",
-          "Q3 FY26 +26%"
+          "Q2 FY25 +28%",
+          "Q1 FY25 +24%"
         ],
-        "revenueGrowth": "+20%",
+        "revenueGrowth": "+13%",
         "earningsTrend": "Accelerating",
         "growthQualified": "Partial",
-        "fundamental": "Healthy 20% sales expansion supported by material handling and crane volume. Stellar ROCE above 40% with minimal debt; price hikes successfully mitigated raw material inflation.",
+        "fundamental": "Strong capital efficiency with ROCE of 31.6% and ROE of 22.8%. Virtually debt-free balance sheet and dominant domestic crane market share exceeding 60% provide solid fundamental support under CANSLIM criteria.",
         "verdict": "Constructive",
-        "risk": "Breakdown below the 1171.13 structural swing low negates the pattern. Enforce instant exit under Minervini risk protocol."
+        "risk": "Slipping below 1171.13 compromises base structure; cut losses without hesitation to enforce strict stop discipline."
       },
       "ADANIENSOL": {
         "stage": "Stage 2 advancing",
-        "technical": "Coiling tightly within 1.5% of its 20-session breakout pivot at 1639.94. Price is strongly aligned above rising EMA21, SMA50, and SMA200, with RSI 60 confirming healthy momentum.",
+        "technical": "Sits within 1.5% of a 20-session breakout pivot, holding firmly above 21 EMA, 50 SMA, and 200 SMA. Momentum is confirmed by RSI 60 and positive MACD, displaying constructive base contraction.",
         "epsGrowth": [
-          "Q2 FY27 +148%",
-          "Q1 FY27 +124%",
-          "Q4 FY26 +100%"
+          "Q2 FY25 +172%",
+          "Q1 FY25 Loss"
         ],
-        "revenueGrowth": "+53%",
+        "revenueGrowth": "+69%",
         "earningsTrend": "Accelerating",
-        "growthQualified": "Yes",
-        "fundamental": "Triple-digit earnings acceleration (+148%) paired with 53% revenue growth, powered by smart metering and an Rs 87,222 Cr transmission order book. Elevated debt offset by recent Rs 3,500 Cr QIP infusion.",
-        "verdict": "Leading",
-        "risk": "Violated on failure below the 1539.98 base stop level. Strict risk discipline guards against broader index pullbacks."
+        "growthQualified": "Partial",
+        "fundamental": "Substantial Q2 top-line surge of 69% and 172% PAT expansion driven by transmission line commissioning and smart metering. Capital-intensive operations keep ROCE at 9.6%, but strong order book visibility drives expansion.",
+        "verdict": "Constructive",
+        "risk": "A break below 1539.98 negates the pivot setup; execute immediate exit to control downside exposure."
       }
     }
   },
