@@ -1,49 +1,106 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-09T11:33:33.756Z",
-  "sessionDate": "2026-11-09",
+  "generatedAt": "2026-11-09T21:48:52.996Z",
+  "sessionDate": "2026-11-10",
   "status": "ready",
-  "scanGeneratedAt": "2026-11-08T17:24:25.524Z",
+  "scanGeneratedAt": "2026-11-09T21:48:39.191Z",
   "gate": "WEAK",
-  "breadthScore": 38,
+  "breadthScore": 44,
   "verdict": "No new buys. Observe and protect capital.",
   "ideas": [
     {
-      "symbol": "AARTIPHARM",
-      "name": "Aarti Pharmalabs",
+      "symbol": "AAREYDRUGS",
+      "name": "AAREY DRUGS & PHARM LTD",
       "pattern": "Double bottom",
       "confidence": 99,
       "state": "Watch",
       "scanState": "Armed",
-      "asOf": "2026-11-06T00:00:00+05:30",
-      "close": 929.1,
-      "entryTrigger": 1003.4,
-      "stop": 914.01,
-      "target2R": 1182.19,
+      "asOf": "2026-11-09T00:00:00+05:30",
+      "close": 109,
+      "entryTrigger": 114.91,
+      "stop": 104.11,
+      "target2R": 136.52,
       "evidence": [
         "Price above EMA21, SMA50 and SMA200",
-        "RSI 59 supports momentum without extreme extension",
+        "1.49× 20-day average volume",
+        "Two aligned swing lows with neckline pressure",
+        "Contracting ranges with volume dry-up"
+      ]
+    },
+    {
+      "symbol": "AARON",
+      "name": "AARON INDUSTRIES",
+      "pattern": "20-day breakout",
+      "confidence": 99,
+      "state": "Watch",
+      "scanState": "Armed",
+      "asOf": "2026-11-09T00:00:00+05:30",
+      "close": 141,
+      "entryTrigger": 148.04,
+      "stop": 134.59,
+      "target2R": 174.94,
+      "evidence": [
+        "Close cleared the prior 20-session high",
+        "1.21× 20-day average volume",
         "MACD is above signal and zero line",
         "Two aligned swing lows with neckline pressure"
       ]
     },
     {
-      "symbol": "ABGSEC",
-      "name": "ABSL CRISIL Broad Based Gilt",
+      "symbol": "AARTIDRUGS",
+      "name": "Aarti Drugs",
       "pattern": "SEPA breakout",
       "confidence": 99,
       "state": "Watch",
-      "scanState": "Armed",
-      "asOf": "2026-11-06T00:00:00+05:30",
-      "close": 114.7,
-      "entryTrigger": 118.12,
-      "stop": 116.75,
-      "target2R": 120.86,
+      "scanState": "Triggered",
+      "asOf": "2026-11-09T00:00:00+05:30",
+      "close": 499.75,
+      "entryTrigger": 497.45,
+      "stop": 441.76,
+      "target2R": 608.82,
       "evidence": [
         "Price above EMA21, SMA50 and SMA200",
         "Close cleared the prior 20-session high",
-        "1.9× 20-day average volume",
-        "RSI 71 supports momentum without extreme extension"
+        "23.57× 20-day average volume",
+        "MACD is above signal and zero line"
+      ]
+    },
+    {
+      "symbol": "ABCAPITAL",
+      "name": "Aditya Birla Capital",
+      "pattern": "20-day breakout",
+      "confidence": 99,
+      "state": "Watch",
+      "scanState": "Armed",
+      "asOf": "2026-11-09T00:00:00+05:30",
+      "close": 401.65,
+      "entryTrigger": 416.87,
+      "stop": 391.92,
+      "target2R": 466.75,
+      "evidence": [
+        "Price above EMA21, SMA50 and SMA200",
+        "Close cleared the prior 20-session high",
+        "RSI 72 supports momentum without extreme extension",
+        "MACD is above signal and zero line"
+      ]
+    },
+    {
+      "symbol": "ABDL",
+      "name": "ALLIED BLEND N DISTILS L",
+      "pattern": "Double bottom",
+      "confidence": 99,
+      "state": "Watch",
+      "scanState": "Armed",
+      "asOf": "2026-11-09T00:00:00+05:30",
+      "close": 719.1,
+      "entryTrigger": 767.67,
+      "stop": 712.35,
+      "target2R": 878.31,
+      "evidence": [
+        "Price above EMA21, SMA50 and SMA200",
+        "RSI 59 supports momentum without extreme extension",
+        "Two aligned swing lows with neckline pressure",
+        "Leader eased to the rising 21-EMA near highs, then a bullish reclaim candle"
       ]
     },
     {
@@ -52,17 +109,17 @@
       "pattern": "20-day breakout",
       "confidence": 99,
       "state": "Watch",
-      "scanState": "Armed",
-      "asOf": "2026-11-06T00:00:00+05:30",
-      "close": 60.41,
-      "entryTrigger": 60.94,
-      "stop": 58.55,
-      "target2R": 65.72,
+      "scanState": "Triggered",
+      "asOf": "2026-11-09T00:00:00+05:30",
+      "close": 61.08,
+      "entryTrigger": 60.76,
+      "stop": 58.68,
+      "target2R": 64.93,
       "evidence": [
         "Close cleared the prior 20-session high",
-        "2.55× 20-day average volume",
-        "RSI 69 supports momentum without extreme extension",
-        "MACD is above signal and zero line"
+        "1.44× 20-day average volume",
+        "MACD is above signal and zero line",
+        "Two aligned swing lows with neckline pressure"
       ]
     },
     {
@@ -72,90 +129,33 @@
       "confidence": 99,
       "state": "Watch",
       "scanState": "Armed",
-      "asOf": "2026-11-06T00:00:00+05:30",
-      "close": 1000,
+      "asOf": "2026-11-09T00:00:00+05:30",
+      "close": 1000.01,
       "entryTrigger": 1006,
       "stop": 1005.25,
       "target2R": 1007.51,
       "evidence": [
         "Price above EMA21, SMA50 and SMA200",
         "Within 1.5% of the 20-session pivot",
-        "3.41× 20-day average volume",
-        "MACD is above signal and zero line"
-      ]
-    },
-    {
-      "symbol": "ACE",
-      "name": "Action Const Equip",
-      "pattern": "Double bottom",
-      "confidence": 99,
-      "state": "Watch",
-      "scanState": "Armed",
-      "asOf": "2026-11-06T00:00:00+05:30",
-      "close": 1167.7,
-      "entryTrigger": 1269.27,
-      "stop": 1171.13,
-      "target2R": 1465.55,
-      "evidence": [
-        "Price above EMA21, SMA50 and SMA200",
-        "2.3× 20-day average volume",
-        "RSI 54 supports momentum without extreme extension",
-        "Two aligned swing lows with neckline pressure"
-      ]
-    },
-    {
-      "symbol": "ADANIENSOL",
-      "name": "Adani Energy Solution",
-      "pattern": "Near breakout",
-      "confidence": 99,
-      "state": "Watch",
-      "scanState": "Armed",
-      "asOf": "2026-11-06T00:00:00+05:30",
-      "close": 1457.4,
-      "entryTrigger": 1639.94,
-      "stop": 1539.98,
-      "target2R": 1839.85,
-      "evidence": [
-        "Price above EMA21, SMA50 and SMA200",
-        "Within 1.5% of the 20-session pivot",
-        "RSI 60 supports momentum without extreme extension",
+        "RSI 63 supports momentum without extreme extension",
         "MACD is above signal and zero line"
       ]
     },
     {
       "symbol": "ADANIGREEN",
       "name": "Adani Green",
-      "pattern": "Near breakout",
+      "pattern": "20-day breakout",
       "confidence": 99,
       "state": "Watch",
-      "scanState": "Armed",
-      "asOf": "2026-11-06T00:00:00+05:30",
-      "close": 1424.1,
-      "entryTrigger": 1431.03,
-      "stop": 1337.34,
-      "target2R": 1618.4,
+      "scanState": "Triggered",
+      "asOf": "2026-11-09T00:00:00+05:30",
+      "close": 1448.9,
+      "entryTrigger": 1436.43,
+      "stop": 1347.12,
+      "target2R": 1615.06,
       "evidence": [
         "Price above EMA21, SMA50 and SMA200",
-        "Within 1.5% of the 20-session pivot",
-        "RSI 65 supports momentum without extreme extension",
-        "MACD is above signal and zero line"
-      ]
-    },
-    {
-      "symbol": "ADANIPORTS",
-      "name": "Adani Port",
-      "pattern": "Near breakout",
-      "confidence": 99,
-      "state": "Watch",
-      "scanState": "Armed",
-      "asOf": "2026-11-06T00:00:00+05:30",
-      "close": 1936.6,
-      "entryTrigger": 1950.85,
-      "stop": 1840.63,
-      "target2R": 2171.28,
-      "evidence": [
-        "Price above EMA21, SMA50 and SMA200",
-        "Within 1.5% of the 20-session pivot",
+        "Close cleared the prior 20-session high",
         "MACD is above signal and zero line",
         "Two aligned swing lows with neckline pressure"
       ]
@@ -163,43 +163,43 @@
   ],
   "cautions": [
     {
-      "symbol": "LIQGRWBEES",
+      "symbol": "MODIS",
+      "reason": "Double bottom"
+    },
+    {
+      "symbol": "ANTHEM",
+      "reason": "SEPA breakout"
+    },
+    {
+      "symbol": "PGIL",
+      "reason": "Double bottom"
+    },
+    {
+      "symbol": "HEALTHAXIS",
+      "reason": "Double bottom"
+    },
+    {
+      "symbol": "CORONA",
       "reason": "Near breakout"
     },
     {
-      "symbol": "ELIQUID",
-      "reason": "20-day breakout"
-    },
-    {
-      "symbol": "NINSYS",
+      "symbol": "IGPL",
       "reason": "Double bottom"
     },
     {
-      "symbol": "SANSERA",
-      "reason": "Double bottom"
-    },
-    {
-      "symbol": "PRINCEPIPE",
-      "reason": "Double bottom"
-    },
-    {
-      "symbol": "EBBETF0431",
+      "symbol": "PAYTM",
       "reason": "Near breakout"
     },
     {
-      "symbol": "CPPLUS",
-      "reason": "Double bottom"
-    },
-    {
-      "symbol": "TCPLPACK",
-      "reason": "Double bottom"
+      "symbol": "SBC",
+      "reason": "Near breakout"
     }
   ],
   "observations": [
     {
       "symbol": "AARTIPHARM",
       "previousState": "Watch",
-      "observation": "No newer scan observation; outcome unknown."
+      "observation": "Latest scanned close 921.4; scanner state Armed. This is not an executed trade or an intraday stop/target check."
     },
     {
       "symbol": "ABGSEC",
@@ -209,12 +209,12 @@
     {
       "symbol": "ABSLBANETF",
       "previousState": "Watch",
-      "observation": "No newer scan observation; outcome unknown."
+      "observation": "Latest scanned close 61.08; scanner state Triggered. This is not an executed trade or an intraday stop/target check."
     },
     {
       "symbol": "ABSLLIQUID",
       "previousState": "Watch",
-      "observation": "No newer scan observation; outcome unknown."
+      "observation": "Latest scanned close 1000.01; scanner state Armed. This is not an executed trade or an intraday stop/target check."
     },
     {
       "symbol": "ACE",
@@ -229,17 +229,17 @@
     {
       "symbol": "ADANIGREEN",
       "previousState": "Watch",
-      "observation": "No newer scan observation; outcome unknown."
+      "observation": "Latest scanned close 1448.9; scanner state Triggered. This is not an executed trade or an intraday stop/target check."
     },
     {
       "symbol": "ADANIPORTS",
       "previousState": "Watch",
-      "observation": "No newer scan observation; outcome unknown."
+      "observation": "Latest scanned close 1942.7; scanner state Armed. This is not an executed trade or an intraday stop/target check."
     }
   ],
-  "previousSession": "2026-11-08",
+  "previousSession": "2026-11-09",
   "intelligenceGeneratedAt": "2026-11-09T11:32:05.798Z",
-  "commentary": "With market breadth at a weak 38% and benchmark indices testing psychological resistance, Stan Weinstein's stage discipline demands strict selectivity. William O'Neil's CANSLIM framework warns that weak breadth exposes low-conviction breakouts to swift institutional distribution. While foreign inflows and softening crude offer macro support, true Stage 2 leaders with accelerating quarterly earnings and sales are limited. Three candidates are debt or index ETFs lacking corporate earnings drivers, while Aarti Pharmalabs shows decelerating earnings. Only Action Construction Equipment and Adani Energy Solutions exhibit constructive accumulation backed by business momentum. In a WEAK market gate, prioritize capital preservation, keep positions small, and enforce strict Minervini stop discipline.",
+  "commentary": "With market breadth at a subdued 44% and our deterministic gate registering WEAK, disciplined practitioners of O'Neil and Weinstein must exercise patience. Benchmark indices cling to 25,000 on institutional support and easing crude, but weak underlying breadth warns of index divergence where broad participation is lacking. In a Stage 2 transition masked by selective index heavyweights, Minervini's progressive exposure principle is paramount: keep position sizing modest, avoid chasing extended moves, and demand impeccable CANSLIM acceleration before committing capital. Until breadth broadens convincingly above the 50% threshold, defensive cash preservation and rapid stop-loss execution must take precedence over aggressive breakout trading.",
   "commentaryStatus": "available",
   "limitations": [
     "Daily scan observations are not fills or performance results.",
@@ -248,38 +248,84 @@
   ],
   "model": "gemini-3.8-flash",
   "analysis": {
-    "analyst": "Minervini SEPA, O'Neil CANSLIM, Weinstein Stage Analysis, Darvas & Livermore",
+    "analyst": "Minervini SEPA, O'Neil CANSLIM & Weinstein Stage Analysis",
     "bySymbol": {
-      "AARTIPHARM": {
-        "stage": "Stage 2 advancing",
-        "technical": "Price trades above rising 21 EMA, 50 SMA, and 200 SMA, forming a double-bottom base. RSI at 59 and positive MACD show steady price action, but volume expansion on neckline resistance is subdued, and relative strength lags broader market leaders.",
+      "AAREYDRUGS": {
+        "stage": "Stage 1 base",
+        "technical": "Developing a double-bottom pattern above EMA21, SMA50, and SMA200 on 1.49x volume. Volatility contraction shows base stabilization, but relative strength lags true market leaders.",
         "epsGrowth": [
-          "Q2 FY25 +5%",
-          "Q1 FY25 +13%"
+          "Q1 FY27 -25.5%",
+          "Q4 FY26 not verified"
         ],
-        "revenueGrowth": "+4%",
-        "earningsTrend": "Decelerating",
+        "revenueGrowth": "-55.3%",
+        "earningsTrend": "Negative",
         "growthQualified": "No",
-        "fundamental": "Operating margins hold near 20%, but modest 4% revenue and single-digit profit growth lag CANSLIM minimums. ROCE of 10.7% and ROE of 8.6% with debt-to-equity at 0.6x show stability without dynamic earnings acceleration.",
-        "verdict": "Watch",
-        "risk": "A close below 914.01 breaks the base low; cut losses immediately to preserve capital per Minervini discipline."
+        "fundamental": "Operating margins remain depressed at ~1.5%-3.0% with revenue plunging -55.3% YoY. A modest net profit of ₹1.02 Cr is weighed down by weak interest coverage and a meager 3-year average ROE of 3.1%, failing CANSLIM's fundamental threshold.",
+        "verdict": "Avoid",
+        "risk": "Thesis invalidates on a close below 104.11 support; Minervini discipline requires an immediate exit to curb downside."
       },
-      "ABGSEC": {
+      "AARON": {
         "stage": "Stage 2 advancing",
-        "technical": "SEPA breakout above 21 EMA, 50 SMA, and 200 SMA on 1.9x volume with RSI at 71. Confirmed Stage 2 uptrend in a sovereign gilt vehicle benefiting from easing bond yields, clearing a 20-session high.",
+        "technical": "Stage 2 advance clearing a 20-session high on 1.21x volume. Aligned swing lows formed solid neckline support, while positive MACD momentum confirms steady accumulation without short-term exhaustion.",
         "epsGrowth": [
-          "not verified"
+          "Q2 FY27 +107%",
+          "Q1 FY27 +106%",
+          "Q4 FY26 +11%"
         ],
-        "revenueGrowth": "not verified",
-        "earningsTrend": "Not verified",
-        "growthQualified": "Not verified",
-        "fundamental": "not verified",
+        "revenueGrowth": "+21.9%",
+        "earningsTrend": "Accelerating",
+        "growthQualified": "Yes",
+        "fundamental": "Robust earnings acceleration with Q2 PAT surging 107% YoY and revenue rising 21.9%. ROCE of 18.7%, ROE of 15.0%, and 73.1% promoter backing reflect solid execution. October sales reached a record ₹11.66 Cr.",
+        "verdict": "Constructive",
+        "risk": "Violation of the 134.59 swing low breaches the 20-day breakout base, triggering a rapid stop-loss to conserve trading capital."
+      },
+      "AARTIDRUGS": {
+        "stage": "Stage 2 advancing",
+        "technical": "Textbook SEPA breakout clearing a 20-session high fueled by massive 23.57x average volume. Price is firmly above EMA21, SMA50, and SMA200 with MACD confirmation, demonstrating exceptional institutional accumulation.",
+        "epsGrowth": [
+          "Q2 FY27 +83%",
+          "Q1 FY27 +48%",
+          "Q4 FY26 +18%"
+        ],
+        "revenueGrowth": "+26.6%",
+        "earningsTrend": "Accelerating",
+        "growthQualified": "Yes",
+        "fundamental": "Exceptional quarter featuring record revenue of ₹829 Cr (+26.6% YoY) and an 83% PAT surge to ₹82.8 Cr. EBITDA margins expanded 370 bps to 16.6% as formulations leaped 58% on export demand, satisfying CANSLIM C and A criteria.",
+        "verdict": "Leading",
+        "risk": "Pattern fails if price falls below the 441.76 pivot stop; swift execution prevents capital erosion in a weak market environment."
+      },
+      "ABCAPITAL": {
+        "stage": "Stage 2 advancing",
+        "technical": "Emerging from a constructive Stage 2 base, clearing a 20-session high above key moving averages (EMA21, SMA50, SMA200). MACD is positive, and RSI of 72 reflects strong momentum without excessive extension.",
+        "epsGrowth": [
+          "Q2 FY27 +38%",
+          "Q1 FY27 +43%",
+          "Q4 FY26 +18%"
+        ],
+        "revenueGrowth": "+31.0%",
+        "earningsTrend": "Steady",
+        "growthQualified": "Yes",
+        "fundamental": "Lending AUM expanded 32% YoY to ₹2.34 lakh Cr while Housing Finance AUM jumped 50%, powering a 38% net profit surge and 31% top-line growth. Asset quality improved with Stage 2/3 loans down to 2.31%, underpinning institutional sponsorship.",
+        "verdict": "Constructive",
+        "risk": "A reversal below the 391.92 stop breaches key EMA21 support, negating the breakout thesis and forcing loss curtailment."
+      },
+      "ABDL": {
+        "stage": "Stage 2 advancing",
+        "technical": "Reclaimed its rising 21-EMA with a bullish pivot candle following a double-bottom pullback near highs. RSI at 59 indicates constructive momentum, though volume requires sustained expansion to power the advance.",
+        "epsGrowth": [
+          "Q2 FY27 +9.7%",
+          "Q1 FY27 -18.7%"
+        ],
+        "revenueGrowth": "+15.9%",
+        "earningsTrend": "Decelerating",
+        "growthQualified": "Partial",
+        "fundamental": "Top-line growth of 15.9% YoY was supported by record festive volumes, but supply-chain friction compressed margins, leaving PAT growth at 9.7% YoY. Elevated debt and single-digit profit growth miss CANSLIM's 25% earnings hurdle.",
         "verdict": "Watch",
-        "risk": "Breach below 116.75 invalidates the breakout; exit immediately to honor predefined risk parameters."
+        "risk": "Breakdown below 712.35 violates swing low and 21-EMA support, requiring immediate defensive liquidation under Minervini rules."
       },
       "ABSLBANETF": {
         "stage": "Stage 2 advancing",
-        "technical": "Cleared 20-day high on 2.55x volume with RSI at 69 and MACD above signal line. Stage 2 posture reflects institutional rotation into large-cap banking heavyweights above rising key moving averages.",
+        "technical": "Banking ETF clearing a 20-session resistance level on 1.44x volume expansion. Supported by aligned swing lows and positive MACD trajectory, though relative strength tracks the broader financial index rather than idiosyncratic leadership.",
         "epsGrowth": [
           "not verified"
         ],
@@ -288,57 +334,11 @@
         "growthQualified": "Not verified",
         "fundamental": "not verified",
         "verdict": "Watch",
-        "risk": "A drop below 58.55 violates the 20-day shelf; cut losses quickly to protect capital against sector pullbacks."
-      },
-      "ABSLLIQUID": {
-        "stage": "Stage 1 base",
-        "technical": "Trades within 1.5% of its 20-session pivot above key moving averages with 3.41x volume. Reflects pure overnight money market stability rather than equity accumulation or relative strength leadership.",
-        "epsGrowth": [
-          "not verified"
-        ],
-        "revenueGrowth": "not verified",
-        "earningsTrend": "Not verified",
-        "growthQualified": "Not verified",
-        "fundamental": "not verified",
-        "verdict": "Watch",
-        "risk": "Price violation below 1005.25 negates the setup; exit immediately to preserve principal cash value."
-      },
-      "ACE": {
-        "stage": "Stage 2 advancing",
-        "technical": "Trades cleanly above 21 EMA, 50 SMA, and 200 SMA, completing a double-bottom base with 2.3x volume expansion at trigger. RSI 54 provides constructive headroom without technical extension.",
-        "epsGrowth": [
-          "Q2 FY25 +28%",
-          "Q1 FY25 +24%"
-        ],
-        "revenueGrowth": "+13%",
-        "earningsTrend": "Accelerating",
-        "growthQualified": "Partial",
-        "fundamental": "Strong capital efficiency with ROCE of 31.6% and ROE of 22.8%. Virtually debt-free balance sheet and dominant domestic crane market share exceeding 60% provide solid fundamental support under CANSLIM criteria.",
-        "verdict": "Constructive",
-        "risk": "Slipping below 1171.13 compromises base structure; cut losses without hesitation to enforce strict stop discipline."
-      },
-      "ADANIENSOL": {
-        "stage": "Stage 2 advancing",
-        "technical": "Sits within 1.5% of a 20-session breakout pivot, holding firmly above 21 EMA, 50 SMA, and 200 SMA. Momentum is confirmed by RSI 60 and positive MACD, displaying constructive base contraction.",
-        "epsGrowth": [
-          "Q2 FY25 +172%",
-          "Q1 FY25 Loss"
-        ],
-        "revenueGrowth": "+69%",
-        "earningsTrend": "Accelerating",
-        "growthQualified": "Partial",
-        "fundamental": "Substantial Q2 top-line surge of 69% and 172% PAT expansion driven by transmission line commissioning and smart metering. Capital-intensive operations keep ROCE at 9.6%, but strong order book visibility drives expansion.",
-        "verdict": "Constructive",
-        "risk": "A break below 1539.98 negates the pivot setup; execute immediate exit to control downside exposure."
+        "risk": "A fall below 58.68 invalidates the 20-day breakout structure; strict risk protocol demands an immediate exit."
       }
     }
   },
   "history": [
-    {
-      "sessionDate": "2026-11-03",
-      "gate": "WEAK",
-      "verdict": "No new buys. Observe and protect capital."
-    },
     {
       "sessionDate": "2026-11-04",
       "gate": "WEAK",
@@ -366,6 +366,11 @@
     },
     {
       "sessionDate": "2026-11-09",
+      "gate": "WEAK",
+      "verdict": "No new buys. Observe and protect capital."
+    },
+    {
+      "sessionDate": "2026-11-10",
       "gate": "WEAK",
       "verdict": "No new buys. Observe and protect capital."
     }
