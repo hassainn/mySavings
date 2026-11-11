@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-10T19:52:56.756Z",
+  "generatedAt": "2026-11-11T09:52:04.963Z",
   "sessionDate": "2026-11-11",
   "status": "ready",
   "scanGeneratedAt": "2026-11-10T19:02:53.228Z",
@@ -239,7 +239,7 @@
   ],
   "previousSession": "2026-11-10",
   "intelligenceGeneratedAt": "2026-11-10T18:41:39.525Z",
-  "commentary": "With market gate categorized as WEAK and breadth score languishing at 43, Stan Weinstein's Stage discipline and William O'Neil's market-direction rules dictate defensive posture. Although Nifty reclaimed 25,000 in a holiday-shortened session, sub-50 breadth warns that underlying participation remains narrow and selective. In such treacherous environments, legendary traders limit market exposure, demand uncompromising CANSLIM earnings acceleration, and buy only low-cheat pivots from pristine Stage 2 bases while cutting losses ruthlessly at 5-7%.",
+  "commentary": "With market breadth lingering weak at 43 and the deterministic gate flagged WEAK despite Nifty reclaiming 25,000, legendary tape-reading discipline demands extreme caution. In Stan Weinstein's stage analysis and William O'Neil's market direction framework, a fragile breadth backdrop warns that follow-through on new breakouts will experience elevated failure rates. Even as benchmark indices attempt an assertive holiday-week recovery, Jesse Livermore's timeless rule applies: respect the general market tide. Mark Minervini's progressive exposure model dictates keeping pilot risk constrained, demanding pristine VCP consolidations, and never front-running pivots until breadth re-expands sustainably.",
   "commentaryStatus": "available",
   "limitations": [
     "Daily scan observations are not fills or performance results.",
@@ -248,94 +248,90 @@
   ],
   "model": "gemini-3.8-flash",
   "analysis": {
-    "analyst": "Minervini SEPA, O'Neil CANSLIM, Weinstein Stage Analysis & Livermore Discipline",
+    "analyst": "Minervini SEPA, O'Neil CANSLIM & Weinstein Stage Analysis",
     "bySymbol": {
       "AAREYDRUGS": {
         "stage": "Stage 2 advancing",
-        "technical": "Forming a constructive double-bottom base with price tracking above rising 21-EMA, 50-SMA, and 200-SMA. Neckline compression displays tightening volatility on contracting dry-up volume, followed by a 1.49x volume push toward trigger.",
+        "technical": "Price trades above rising 21-EMA, 50-SMA, and 200-SMA, carving a double-bottom base with neckline pressure on 1.49x volume. However, contracting volatility masks weak relative strength compared to market leaders.",
         "epsGrowth": [
-          "Q1 FY27 -25.6%",
-          "Q4 FY26 -18.2%"
+          "Q2 FY27 -25.5%",
+          "Q1 FY27 not verified"
         ],
         "revenueGrowth": "-56.3%",
         "earningsTrend": "Negative",
         "growthQualified": "No",
-        "fundamental": "Fundamentals fail CANSLIM standards outright. Quarterly net profit dropped 25.6% YoY accompanied by a sharp 56.3% top-line contraction. Sub-3% ROE and negligible operating leverage indicate severe fundamental headwinds.",
+        "fundamental": "Fundamentals fail CANSLIM benchmarks. Recent net profit contracted by 25.5% alongside a severe 56.3% top-line plunge. Low ROCE of 5.6% and poor interest coverage confirm an absence of institutional-grade operational earnings power.",
         "verdict": "Avoid",
-        "risk": "Fails below pivot support at 104.11; close under 50-day SMA mandates immediate exit without exception."
+        "risk": "Thesis breaks on neckline failure below 104.11; Minervini discipline mandates immediate exit to avoid trapped capital in deteriorating fundamentals."
       },
       "AARON": {
         "stage": "Stage 2 advancing",
-        "technical": "Clean 20-day breakout with price clearing resistance on 1.21x volume. Aligned swing lows established a solid Stage 2 platform above moving averages; MACD confirms constructive underlying momentum without technical exhaustion.",
+        "technical": "Aaron Industries exhibits Stage 2 momentum, clearing a 20-day high on 1.21x volume. Aligned swing lows demonstrate constructive absorption with MACD comfortably above zero, confirming emerging demand.",
         "epsGrowth": [
-          "Q1 FY27 +107.2%",
-          "Q4 FY26 +35.4%",
-          "Q3 FY26 +28.1%"
+          "Q2 FY27 +107.2%",
+          "Q1 FY27 +28.1%"
         ],
         "revenueGrowth": "+21.9%",
         "earningsTrend": "Accelerating",
         "growthQualified": "Yes",
-        "fundamental": "Outstanding CANSLIM profile. Net profit surged 107.2% YoY alongside 21.9% sales growth. Healthy return metrics (ROCE 18.7%, ROE 15.0%) and low institutional float provide explosive upward torque.",
-        "verdict": "Constructive",
-        "risk": "Thesis breaks below swing support at 134.59; swift stop discipline protects capital if breakout fails."
+        "fundamental": "Exemplary CANSLIM profile: net profit surged 107.2% YoY with revenue expanding 21.9%. Solid profitability is reinforced by an 18.7% ROCE and 15% ROE, with strong operational demand in elevator fabrication.",
+        "verdict": "Leading",
+        "risk": "Strict stop at 134.59 below support. Exit swiftly if price slips back into the base on higher volume."
       },
       "AARTIDRUGS": {
         "stage": "Stage 2 advancing",
-        "technical": "High-powered SEPA breakout registering an extraordinary 23.57x volume explosion. Price cleared a 20-session high and all major moving averages, demonstrating supreme institutional accumulation and elite relative strength.",
+        "technical": "Aarti Drugs registers a high-volume SEPA breakout, printing 23.57x 20-day volume while maintaining alignment above all primary moving averages (21-EMA, 50-SMA, 200-SMA) and clearing 20-session resistance decisively.",
         "epsGrowth": [
           "Q2 FY27 +83.2%",
-          "Q1 FY27 +45.1%",
-          "Q4 FY26 +18.4%"
+          "Q1 FY27 +2.0%"
         ],
         "revenueGrowth": "+26.6%",
         "earningsTrend": "Accelerating",
-        "growthQualified": "Yes",
-        "fundamental": "Exceptional earnings acceleration meeting both C and A criteria. Q2 profit jumped 83.2% YoY on record revenues crossing INR 826 Cr (+26.6%), bolstered by 370 bps margin expansion and expanding oncology formulations.",
-        "verdict": "Leading",
-        "risk": "Thesis invalidates below 441.76; heavy volume reversal back under the breakout shelf requires immediate liquidation."
+        "growthQualified": "Partial",
+        "fundamental": "Stellar Q2 turnaround with net profit soaring 83.2% YoY on 26.6% top-line expansion, lifting EBITDA margins to 16.6%. Moderate ROCE of 12% and debt require watchful tracking of margin sustainability.",
+        "verdict": "Constructive",
+        "risk": "Hard stop pegged at 441.76; a breakdown back through the breakout pivot triggers a swift SEPA risk-reduction exit."
       },
       "ABCAPITAL": {
         "stage": "Stage 2 advancing",
-        "technical": "Strong 20-session breakout clearing resistance in an established Stage 2 uptrend above 50-day and 200-day SMAs. Momentum remains vigorous with RSI at 72, though nearing short-term extended territory.",
+        "technical": "Solid Stage 2 advance with price breaking out to 20-day highs above the rising 21-EMA, 50-SMA, and 200-SMA. RSI at 72 confirms robust relative strength without extreme overextension.",
         "epsGrowth": [
           "Q2 FY27 +37.9%",
-          "Q1 FY27 +33.1%",
-          "Q4 FY26 +29.4%"
+          "Q1 FY27 +30.1%"
         ],
-        "revenueGrowth": "+32.2%",
+        "revenueGrowth": "+31.0%",
         "earningsTrend": "Accelerating",
         "growthQualified": "Yes",
-        "fundamental": "Robust institutional franchise performance. Consolidated net profit rose 37.9% YoY driven by 32.2% top-line expansion, reflecting 30% credit portfolio growth and strong asset management fee generation across group subsidiaries.",
+        "fundamental": "Prime CANSLIM candidate backed by Aditya Birla Group pedigree. Consolidated PAT expanded 37.9% YoY on 31% revenue growth, with strong loan growth, insurance margin expansion to 16.1%, and manageable leverage.",
         "verdict": "Leading",
-        "risk": "Fails below 391.92 base support; exit rapidly if price violates the rising 21-day EMA on distribution."
+        "risk": "Thesis invalidates below swing low stop at 391.92. Minervini rule enforces immediate cut if breakout reverses into consolidation."
       },
       "ABDL": {
         "stage": "Stage 2 advancing",
-        "technical": "Textbook double-bottom pattern above rising 21-EMA, 50-SMA, and 200-SMA. Controlled pullback to the 21-EMA met with decisive bullish reclaim and healthy RSI at 59, signaling ongoing Stage 2 structure.",
+        "technical": "ABDL reclaims its rising 21-EMA with a bullish reversal following a double bottom near highs. Price holds firmly above its 50-SMA and 200-SMA with healthy RSI momentum at 59.",
         "epsGrowth": [
           "Q2 FY27 +17.4%",
-          "Q1 FY27 -10.0%",
-          "Q4 FY26 -47.3%"
+          "Q1 FY27 -10.0%"
         ],
         "revenueGrowth": "+15.9%",
-        "earningsTrend": "Steady",
-        "growthQualified": "No",
-        "fundamental": "Mixed operational delivery. Q2 revenues expanded 15.9% YoY on record 10 million cases, but EPS growth (+17.4%) falls below the 25% CANSLIM threshold after previous negative quarters, pressured by elevated input costs.",
-        "verdict": "Watch",
-        "risk": "Violated if trigger fails and price slices 712.35 support; respect strict stops upon 21-EMA loss."
+        "earningsTrend": "Accelerating",
+        "growthQualified": "Partial",
+        "fundamental": "Operational turnaround visible as Q2 EPS grew 17.4% YoY on 15.9% revenue growth, bouncing back from Q1 contraction. Healthy ROCE near 18.4% and market share gains support improving institutional interest.",
+        "verdict": "Constructive",
+        "risk": "Violation of the double bottom shelf at 712.35 negates the setup; execute disciplined risk cut instantly."
       },
       "ABSLBANETF": {
         "stage": "Stage 2 advancing",
-        "technical": "Clean 20-day breakout on 1.44x volume, pushing past resistance after consolidating along twin swing lows. Price structure remains well-aligned above all critical short and intermediate moving averages with positive MACD.",
+        "technical": "Cleared a 20-day high on 1.44x volume, pushing above moving averages with aligned swing lows and positive MACD momentum. Mirrors broad banking index accumulation during the Nifty 25,000 reclaim.",
         "epsGrowth": [
           "not verified"
         ],
         "revenueGrowth": "not verified",
         "earningsTrend": "Not verified",
         "growthQualified": "Not verified",
-        "fundamental": "ETF vehicle mirroring Bank Nifty constituents. Fundamental metrics not applicable on a single-stock basis, but banking sector tailwinds reflect improving systemic loan growth and robust asset quality metrics across private lenders.",
+        "fundamental": "Not applicable for a passive banking exchange-traded fund tracking the Nifty Bank Index basket. Underlying constituents reflect sector-wide credit growth and stable asset quality, but fund lacks individual CANSLIM metrics.",
         "verdict": "Watch",
-        "risk": "Thesis invalidates under 58.68 stop; failure below the 50-SMA indicates broader financial sector deterioration."
+        "risk": "Stop at 58.68. Cut immediately if banking sector rally stalls and falls below index support."
       }
     }
   },
