@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-12T11:12:31.883Z",
-  "sessionDate": "2026-11-12",
+  "generatedAt": "2026-11-12T18:58:40.687Z",
+  "sessionDate": "2026-11-13",
   "status": "ready",
   "scanGeneratedAt": "2026-11-11T18:59:49.735Z",
   "gate": "HEALTHY",
@@ -197,49 +197,49 @@
   ],
   "observations": [
     {
+      "symbol": "360ONE",
+      "previousState": "Review",
+      "observation": "No newer scan observation; outcome unknown."
+    },
+    {
       "symbol": "AAREYDRUGS",
-      "previousState": "Watch",
-      "observation": "Latest scanned close 109; scanner state Armed. This is not an executed trade or an intraday stop/target check."
-    },
-    {
-      "symbol": "AARON",
-      "previousState": "Watch",
+      "previousState": "Review",
       "observation": "No newer scan observation; outcome unknown."
     },
     {
-      "symbol": "AARTIDRUGS",
-      "previousState": "Watch",
+      "symbol": "AARTIPHARM",
+      "previousState": "Review",
       "observation": "No newer scan observation; outcome unknown."
     },
     {
-      "symbol": "ABCAPITAL",
-      "previousState": "Watch",
+      "symbol": "AARVI",
+      "previousState": "Review",
       "observation": "No newer scan observation; outcome unknown."
     },
     {
       "symbol": "ABDL",
-      "previousState": "Watch",
-      "observation": "Latest scanned close 736.5; scanner state Armed. This is not an executed trade or an intraday stop/target check."
+      "previousState": "Review",
+      "observation": "No newer scan observation; outcome unknown."
+    },
+    {
+      "symbol": "ABGSEC",
+      "previousState": "Review",
+      "observation": "No newer scan observation; outcome unknown."
+    },
+    {
+      "symbol": "ABLBL",
+      "previousState": "Review",
+      "observation": "No newer scan observation; outcome unknown."
     },
     {
       "symbol": "ABSLBANETF",
-      "previousState": "Watch",
-      "observation": "Latest scanned close 62.29; scanner state Triggered. This is not an executed trade or an intraday stop/target check."
-    },
-    {
-      "symbol": "ABSLLIQUID",
-      "previousState": "Watch",
-      "observation": "No newer scan observation; outcome unknown."
-    },
-    {
-      "symbol": "ADANIGREEN",
-      "previousState": "Watch",
+      "previousState": "Review",
       "observation": "No newer scan observation; outcome unknown."
     }
   ],
-  "previousSession": "2026-11-11",
-  "intelligenceGeneratedAt": "2026-11-12T11:11:06.179Z",
-  "commentary": "With the Nifty holding firm above 25,250 on massive foreign institutional inflows, the broader tape remains in a constructive Weinstein Stage 2 posture. However, a breadth score of 58 reveals significant underlying selectivity driven by earnings dispersion. In line with William O'Neil's CANSLIM and Jesse Livermore's discipline, capital must be steered exclusively to true market leaders exhibiting verifiable earnings acceleration and sound pivots, while laggards and unbacked base breakouts are strictly avoided. Progressive exposure should be calibrated to confirmed quarterly earnings catalysts and heavy volume breakouts, immediately cutting losses on any setup that breaches trailing stops.",
+  "previousSession": "2026-11-12",
+  "intelligenceGeneratedAt": "2026-11-12T18:57:00.245Z",
+  "commentary": "The broader market environment remains healthy with benchmark indices consolidating near all-time highs above key averages, reinforced by robust institutional liquidity. However, a breadth score of 58 underscores the necessity of selective stock picking rather than broad beta exposure. Following Stan Weinstein's stage discipline and William O'Neil's market-direction framework, new capital must be committed only to confirmed Stage 2 leaders breaking out of sound bases with verified earnings acceleration. Low-quality penny turnarounds, decelerating earnings profiles, and passive debt products must be filtered out, preserving capital strictly for setups offering asymmetric risk-reward with predefined stops.",
   "commentaryStatus": "available",
   "limitations": [
     "Daily scan observations are not fills or performance results.",
@@ -248,99 +248,96 @@
   ],
   "model": "gemini-3.8-flash",
   "analysis": {
-    "analyst": "SEPA / CANSLIM / Stage Analysis",
+    "analyst": "Minervini SEPA, O'Neil CANSLIM & Weinstein Stage Analysis",
     "bySymbol": {
       "360ONE": {
         "stage": "Stage 2 advancing",
-        "technical": "Clearing 20-day highs at 1224.12 on 1.98x volume with RSI 67 and positive MACD. Trend template shows primary uptrend above rising moving averages, though consolidating below historical peaks with moderate relative strength.",
+        "technical": "Clearing its 20-day pivot on 1.98x volume expansion while maintaining alignment above EMA21, SMA50, and SMA200. RSI at 67 indicates strong upward momentum without being excessively extended.",
         "epsGrowth": [
-          "Q2 FY27 -5.5%",
-          "Q1 FY27 +16.0%"
+          "Q2 FY27 -4.4%",
+          "Q1 FY27 +19.4%"
         ],
         "revenueGrowth": "+17.5%",
-        "earningsTrend": "Negative",
-        "growthQualified": "No",
-        "fundamental": "Operating revenue rose 17.5% YoY to INR 896 crore, but net profit contracted 4.9% to INR 300 crore due to mark-to-market headwinds. Tangible ROE remains healthy near 18%, yet CANSLIM earnings acceleration is absent, failing the 25% growth benchmark.",
+        "earningsTrend": "Decelerating",
+        "growthQualified": "Partial",
+        "fundamental": "Operating revenue rose 17.5% YoY led by ARR AUM expansion, but consolidated PAT contracted 4.4% YoY due to mark-to-market fluctuations. Return on tangible equity remains solid near 17%.",
         "verdict": "Watch",
-        "risk": "Failure occurs if price breaks below the 1146.64 swing stop; strict discipline dictates cutting losses at maximum 6-8% without averaging down."
+        "risk": "Thesis fails if price slips back below the pivot level; maintain strict discipline at the 1146.64 stop."
       },
       "AAREYDRUGS": {
-        "stage": "Stage 2 advancing",
-        "technical": "Forming a double bottom pivot attempting a breakout over 114.91 with 1.57x volume. Price holds above key moving averages, but volume dry-up lacks tight VCP contraction characteristics and relative strength remains muted.",
+        "stage": "Stage 1 base",
+        "technical": "Attempting a double bottom with volume dry-up, but price action remains erratic and lacks the institutional demand footprint characteristic of true Stage 2 leaders.",
         "epsGrowth": [
-          "Q1 FY27 -25.0%",
-          "Q4 FY26 +231.9%"
+          "Q2 FY27 -25.6%",
+          "not verified"
         ],
-        "revenueGrowth": "-55.4%",
+        "revenueGrowth": "-56.3%",
         "earningsTrend": "Negative",
         "growthQualified": "No",
-        "fundamental": "Severe top-line contraction with revenue dropping 55.4% YoY to INR 46 crore and net profit dropping 25.6%. Low ROCE of ~5.6% and weak operating margin of ~1.5% reflect poor fundamental quality, failing CANSLIM C and A requirements.",
+        "fundamental": "Fails CANSLIM screening severely as Q2 sales declined 56.3% YoY and net profit dropped 25.6%. Low 3-year ROE of ~3.1% and weak interest coverage present significant risk.",
         "verdict": "Avoid",
-        "risk": "Thesis invalidates immediately below the 104.66 stop level; swift risk management is essential to prevent severe capital decay."
+        "risk": "Breakout thesis fails on a breach of recent swing lows; cut losses immediately below 104.66."
       },
       "AARTIPHARM": {
         "stage": "Stage 2 advancing",
-        "technical": "Strong Stage 2 breakout through a 1003.4 double-bottom pivot. RSI at 69 reflects assertive institutional demand with clean alignment across EMA21, SMA50, and SMA200. Price is pressing 52-week highs with dominant relative strength.",
+        "technical": "Classic double-bottom pivot test above rising EMA21, SMA50, and SMA200 with RSI 69 and positive MACD. Excellent relative strength confirms leadership status.",
         "epsGrowth": [
-          "Q2 FY27 +175.0%",
-          "Q1 FY27 +43.0%"
+          "Q2 FY27 +154%",
+          "Q1 FY27 +65%",
+          "Q4 FY26 +27%"
         ],
-        "revenueGrowth": "+47.0%",
+        "revenueGrowth": "+45.9%",
         "earningsTrend": "Accelerating",
         "growthQualified": "Yes",
-        "fundamental": "Superb CANSLIM profile: Q2 FY27 net profit jumped 2.75x to INR 66 crore with revenue expanding 47% to INR 613 crore. Operating margins widened to 22.2%, propelled by high-margin CDMO and xanthine volume expansions despite working capital debt.",
+        "fundamental": "Exemplary CANSLIM profile with Q2 FY27 net sales up 45.9% YoY to ₹610 Cr and PAT surging 154% YoY. EBITDA margins expanded to 22.2% on CDMO scaling.",
         "verdict": "Leading",
-        "risk": "Setup invalidates if the breakout fails below 914.25; respect the stop decisively to keep portfolio risk contained under 9%."
+        "risk": "Thesis fails if the double-bottom breakout falters; exit without hesitation on a violation of 914.25."
       },
       "AARVI": {
         "stage": "Stage 2 advancing",
-        "technical": "Prints an aggressive 20-day high breakout at 161.16 on 3.08x volume. Moving average stack is bullish with price comfortably above EMA21, SMA50, and SMA200. MACD confirmation and tightening volatility support asymmetric upside.",
+        "technical": "Decisive 20-day high breakout backed by heavy 3.08x volume surge. Price trades cleanly above EMA21, SMA50, and SMA200, signaling healthy Stage 2 accumulation.",
         "epsGrowth": [
-          "Q1 FY27 +50.0%",
-          "Q4 FY26 +41.9%"
+          "Q1 FY27 +42.3%",
+          "not verified"
         ],
-        "revenueGrowth": "+30.0%",
-        "earningsTrend": "Accelerating",
-        "growthQualified": "Yes",
-        "fundamental": "Solid CANSLIM growth metrics with Q1 FY27 net profit rising 50% YoY and revenue climbing 30%. Operating margins hover near 3%, but ROCE of 14.7% and low debt-to-equity (0.19) provide an unencumbered runway for technical staffing expansion.",
+        "revenueGrowth": "+14.1%",
+        "earningsTrend": "Steady",
+        "growthQualified": "Partial",
+        "fundamental": "Q1 FY27 PAT surged 42.3% YoY on 14.1% top-line growth driven by technical staffing contracts. Manpower business model exhibits slim EBITDA margins (~2.6%) and modest ROE.",
         "verdict": "Constructive",
-        "risk": "Violating the 145.61 trailing stop invalidates the pivot; execute fast stops to preserve capital against sudden micro-cap liquidity dry-ups."
+        "risk": "Breakout invalidates if price slips back under the pivot; stop out immediately below 145.61."
       },
       "ABDL": {
         "stage": "Stage 2 advancing",
-        "technical": "Constructing a double bottom pivot toward 767.67 with RSI at 63 and bullish MACD alignment. Price is trading above key moving averages, but volume lacks explosive institutional expansion on the breakout test.",
+        "technical": "Forming a solid double bottom above rising 21-day, 50-day, and 200-day moving averages. RSI at 63 and positive MACD indicate steady constructive accumulation.",
         "epsGrowth": [
-          "Q1 FY27 +4.2%",
-          "Q4 FY26 +12.8%"
+          "Q2 FY27 +17.4%",
+          "Q1 FY27 -10.0%",
+          "Q4 FY26 -47.3%"
         ],
-        "revenueGrowth": "+1.9%",
-        "earningsTrend": "Decelerating",
-        "growthQualified": "No",
-        "fundamental": "Tepid top-line expansion with Q1 FY27 sales up only 1.9% YoY. While prestige portfolio mix supports operating margins of ~14% and ROCE of 18.4%, lack of >=15% sales momentum and muted earnings growth fail CANSLIM acceleration screens.",
-        "verdict": "Watch",
-        "risk": "Thesis fails upon breakdown below the 711.18 stop level; maintain strict risk control and avoid chasing unconfirmed pivots."
+        "revenueGrowth": "+15.9%",
+        "earningsTrend": "Accelerating",
+        "growthQualified": "Partial",
+        "fundamental": "Q2 FY27 revenue rose 15.9% YoY to ₹1,148 Cr and EPS rebounded +17.4% YoY after two negative quarters. Premiumization supports margins, but elevated valuation (P/E ~85) warrants discipline.",
+        "verdict": "Constructive",
+        "risk": "Thesis fails if the twin-low support structure cracks; exit ruthlessly on a drop below 711.18."
       },
       "ABGSEC": {
-        "stage": "Unclear",
-        "technical": "Tight consolidation near 118.12 pivot, above short-term moving averages with RSI 64. However, technical analysis cannot be reliably applied due to low liquidity and fixed-income ETF structure lacking genuine equity accumulation.",
+        "stage": "Stage 1 base",
+        "technical": "Tight consolidation along its 20-session pivot above key moving averages, but displaying negligible equity-like volatility and low trading volume typical of fixed-income instruments.",
         "epsGrowth": [
           "not verified"
         ],
         "revenueGrowth": "not verified",
         "earningsTrend": "Not verified",
         "growthQualified": "Not verified",
-        "fundamental": "not verified",
+        "fundamental": "Not verified for corporate equity metrics; ABGSEC is a sovereign debt ETF mirroring CRISIL Broad Based Gilt Index. Lacks revenue, earnings, or corporate balance-sheet drivers.",
         "verdict": "Avoid",
-        "risk": "Thesis fails below 116.51; exit quickly if support falters, as illiquid debt ETF spreads risk erratic execution slippage."
+        "risk": "Thesis fails on sudden interest rate spikes; enforce deterministic stop at 116.51 strictly."
       }
     }
   },
   "history": [
-    {
-      "sessionDate": "2026-11-06",
-      "gate": "CAUTION",
-      "verdict": "Watch only. Wait for broader confirmation."
-    },
     {
       "sessionDate": "2026-11-07",
       "gate": "WEAK",
@@ -368,6 +365,11 @@
     },
     {
       "sessionDate": "2026-11-12",
+      "gate": "HEALTHY",
+      "verdict": "Review confirmed setups; the human decides."
+    },
+    {
+      "sessionDate": "2026-11-13",
       "gate": "HEALTHY",
       "verdict": "Review confirmed setups; the human decides."
     }
