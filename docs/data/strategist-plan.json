@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-16T22:03:00.993Z",
+  "generatedAt": "2026-11-16T22:22:59.920Z",
   "sessionDate": "2026-11-17",
   "status": "ready",
   "scanGeneratedAt": "2026-11-16T21:21:13.678Z",
@@ -239,7 +239,7 @@
   ],
   "previousSession": "2026-11-16",
   "intelligenceGeneratedAt": "2026-11-16T22:01:42.949Z",
-  "commentary": "The Nifty 50's rebound to 25,291 is constructive on institutional buying, but a breadth score of 39 keeps the gate at WEAK. In Stan Weinstein's stage framework and William O'Neil's CANSLIM discipline, an index advance on poor overall breadth signals selective leadership rather than an all-clear market trend. Legendary tape-reading requires strict selectivity: focus exclusively on top-tier Stage 2 candidates emerging from proper bases backed by institutional volume and verified earnings acceleration. Where earnings acceleration is absent or derived from one-offs, risk must be capped at Watch, respecting the general market and cutting losses swiftly.",
+  "commentary": "With the deterministic gate flagged WEAK and market breadth subdued at 39, Stan Weinstein and William O'Neil market-timing doctrines call for rigorous defensive capital exposure. Although the Nifty 50 defended key 25,140 support on strong FII institutional net inflows of Rs 4,864 crore, poor broad-market participation warns of elevated failure rates among speculative setups. Jesse Livermore's discipline requires trading only top leaders emerging from sound bases while sitting tight in cash elsewhere. Mark Minervini's progressive exposure rules dictate keeping pilot position sizing tightly constrained, demanding verified earnings acceleration, respecting precise entry triggers, and strictly cutting losses without hesitation if underlying pivots fail to hold.",
   "commentaryStatus": "available",
   "limitations": [
     "Daily scan observations are not fills or performance results.",
@@ -248,91 +248,92 @@
   ],
   "model": "gemini-3.8-flash",
   "analysis": {
-    "analyst": "Minervini SEPA, O'Neil CANSLIM & Weinstein Stage Analysis",
+    "analyst": "Minervini SEPA, O'Neil CANSLIM, Weinstein Stage Analysis, Darvas Box & Livermore Discipline",
     "bySymbol": {
       "AARTIPHARM": {
         "stage": "Stage 2 advancing",
-        "technical": "Consolidating cleanly above rising 50 and 200-day moving averages in a classic Stage 2 structure. Double-bottom setup cleared with 1.24x volume expansion and RSI at 68, showing constructive accumulation without extreme overextension.",
+        "technical": "Breaking out of a double-bottom base above rising 21 EMA, 50 SMA, and 200 SMA on 1.24x average volume. RSI at 68 confirms constructive momentum without extreme extension, showing classic Stage 2 accumulation characteristics.",
         "epsGrowth": [
-          "Q2 FY27 +156%",
-          "Q1 FY27 +54%"
+          "Q2 FY27 +113%",
+          "Q1 FY27 +49%"
         ],
         "revenueGrowth": "+46%",
         "earningsTrend": "Accelerating",
         "growthQualified": "Yes",
-        "fundamental": "Operating margins widened to 22.2% with EBITDA jumping 84% in Q2 FY27. Robust CDMO demand drove revenue up 46% YoY, while net debt-to-equity remains modest at 0.35x. CANSLIM criteria are strongly satisfied on current earnings acceleration.",
-        "verdict": "Leading",
-        "risk": "Breach below 929.48 pivot breaks the double-bottom structure; exit immediately if CDMO operating leverage or working capital cycles deteriorate."
+        "fundamental": "Strong CDMO and Xanthine derivative volumes drove Q2 sales to Rs 610 cr (+46% YoY) and net profit to Rs 66 cr (+113% YoY). ROCE stands near 11.4% with manageable leverage and expanding operating margins.",
+        "verdict": "Constructive",
+        "risk": "Failure to hold 929.48 breaches the double-bottom base support; exit immediately to preserve capital on any high-volume undercut."
       },
       "AARTISURF": {
         "stage": "Stage 2 advancing",
-        "technical": "Textbook SEPA breakout clearing 20-session highs on an exceptional 10.24x volume surge. Price action sits firmly above upward-trending EMA21, SMA50, and SMA200 with bullish MACD alignment indicating strong institutional sponsorship.",
+        "technical": "Powerful SEPA breakout clearing 20-session resistance on massive 10.24x volume surge. Moving averages are sequentially aligned above the 200 SMA, confirming explosive institutional accumulation out of a primary base.",
         "epsGrowth": [
-          "Q2 FY27 +673%",
-          "Q1 FY27 +74%"
+          "Q2 FY27 +672%",
+          "Q1 FY27 +206%"
         ],
-        "revenueGrowth": "+63%",
+        "revenueGrowth": "+62.5%",
         "earningsTrend": "Accelerating",
         "growthQualified": "Yes",
-        "fundamental": "Turnaround accelerated by 63% revenue growth and net profit reaching Rs 12.5 crore. Balance sheet carries low leverage with debt-to-equity at 0.42x and zero promoter pledging, though 3-year historical ROE (5.2%) requires ongoing recovery.",
+        "fundamental": "Q2 standalone PAT surged 672% YoY to Rs 12.59 cr on 62.5% revenue growth to Rs 291 cr. Working capital days reduced significantly to 21.5, though historic 3-year ROE remains modest at 5.2%.",
         "verdict": "Leading",
-        "risk": "Failure below the breakout pivot at 561.76 invalidates the SEPA setup; exit immediately if volume dries up and price slips back into range."
+        "risk": "A close below 561.76 invalidates the SEPA breakout pivot; enforce rapid stop discipline to prevent capital erosion."
       },
       "ABDL": {
         "stage": "Stage 2 advancing",
-        "technical": "Stage 2 advance punching to new trailing-year highs on 1.93x volume expansion. Moving averages are aligned in proper sequence (EMA21 > SMA50 > SMA200), reflecting healthy relative strength and clean Darvas box progression.",
+        "technical": "Clearing a Darvas-style box to print a new 52-week high on 1.93x volume. Price action is firmly supported above rising 21 EMA and 50 SMA, signaling sustained buying interest.",
         "epsGrowth": [
-          "Q2 FY27 +11%",
-          "Q1 FY27 +8%"
+          "Q2 FY27 +9.7%",
+          "Q1 FY27 not verified"
         ],
-        "revenueGrowth": "+16%",
+        "revenueGrowth": "+15.8%",
         "earningsTrend": "Steady",
         "growthQualified": "Partial",
-        "fundamental": "Revenue expanded 16% YoY to Rs 1,148 crore with ROCE at 18.4%. However, single-digit net profit growth (+11%) lags CANSLIM's 25% threshold, leaving its premium P/E multiple vulnerable to deceleration.",
+        "fundamental": "Record quarterly volume exceeding 10M cases drove 15.8% revenue expansion to Rs 1,152 cr, but net profit rose only 9.7% due to supply-chain cost headwinds. Net debt sits elevated at 2.2x EBITDA.",
         "verdict": "Watch",
-        "risk": "A close below 712.03 breaches the breakout floor; exit immediately to preserve capital given high valuation multiples and sub-25% profit growth."
+        "risk": "Violation of 712.03 breaks the 52-week pivot shelf, triggering immediate risk off pursuant to Minervini loss-cutting rules."
       },
       "AEROENTER": {
-        "stage": "Stage 1 base",
-        "technical": "Coiling tightly within 1.5% of its multi-year base ceiling near 160. Positioned above EMA21, SMA50, and SMA200 with RSI at 59, reflecting quiet supply absorption prior to an upside Stage 2 transition.",
+        "stage": "Stage 2 advancing",
+        "technical": "Consolidating within 1.5% of its 20-session pivot in a tight handle pattern. Moving averages are orderly and stacked in Stage 2 alignment, though volume lacks definitive institutional expansion.",
         "epsGrowth": [
-          "Q1 FY27 +617%",
-          "Q4 FY26 +85%"
+          "Q2 FY27 +84%",
+          "Q1 FY27 not verified"
         ],
-        "revenueGrowth": "+135%",
-        "earningsTrend": "Accelerating",
-        "growthQualified": "Yes",
-        "fundamental": "Headline net profit and sales surged following a subsidiary divestment, contributing Rs 144 crore other income. While debt is near zero, core operating ROCE remains low at 3.1%, warranting caution regarding earnings quality.",
-        "verdict": "Constructive",
-        "risk": "A break below 146.48 invalidates the pivot structure; exit quickly if divestment-fueled optimism fails to generate sustained operating follow-through."
+        "revenueGrowth": "+45%",
+        "earningsTrend": "Steady",
+        "growthQualified": "Partial",
+        "fundamental": "Consolidated Q2 revenue grew 45% YoY with profit up 84%, bolstered by subsidiary operations. However, high other income from stake sales and extended working capital cycles warrant fundamental caution.",
+        "verdict": "Watch",
+        "risk": "A drop below 146.48 breaches handle support and structural moving averages; execute defined stop discipline immediately."
       },
       "AGARWALEYE": {
         "stage": "Stage 2 advancing",
-        "technical": "Clean double-bottom pattern with long lower-wick session rejection validating strong demand at the base. Moving averages align positively above rising SMA50/SMA200 with MACD confirming upward thrust toward the 572 neckline.",
+        "technical": "Constructive double-bottom formation above EMA21, SMA50, and SMA200. Rejection of session lows via a long lower wick shows responsive institutional support defending neckline resistance.",
         "epsGrowth": [
-          "Q2 FY27 +54%",
+          "Q2 FY27 +89%",
           "Q1 FY27 +40%"
         ],
-        "revenueGrowth": "+31%",
+        "revenueGrowth": "+26%",
         "earningsTrend": "Accelerating",
         "growthQualified": "Yes",
-        "fundamental": "Operating margins held firm at 27% with net profit growing 56% YoY on hospital network expansion and surgical volumes. Robust top-line growth (+31%) supports high market valuation (P/E ~97x) alongside strong operating cash flows.",
+        "fundamental": "Dominant ophthalmology network delivered accelerating earnings with Q2 EPS surging 89% YoY and Q1 up 40%, accompanied by 26% revenue growth. Robust operating margins near 30% underpin high premium valuation multiples.",
         "verdict": "Leading",
-        "risk": "Slipping beneath 531.32 breaks dual swing lows; cut losses per Minervini risk protocol to avoid deep Stage 3 rollbacks."
+        "risk": "A break below 531.32 invalidates the double-bottom base pivot and mandates immediate liquidation to control portfolio risk."
       },
       "ALICON": {
         "stage": "Stage 2 advancing",
-        "technical": "Double-bottom breakout near 52-week highs on 1.45x volume expansion. Price maintains strict adherence above EMA21, SMA50, and SMA200, with RSI at 68 confirming healthy institutional accumulation without exhaustion.",
+        "technical": "Double-bottom breakout on 1.45x volume expansion. Price cleanly holds above rising 21 EMA, 50 SMA, and 200 SMA with RSI at 68 confirming strong upward trend without reaching overbought territory.",
         "epsGrowth": [
           "Q2 FY27 +67%",
-          "Q1 FY27 +21%"
+          "Q1 FY27 +23%",
+          "Q4 FY26 +45%"
         ],
-        "revenueGrowth": "+50%",
+        "revenueGrowth": "+50.4%",
         "earningsTrend": "Accelerating",
         "growthQualified": "Partial",
-        "fundamental": "Record quarterly revenue of Rs 652 crore (+50% YoY) driven by 19% volume growth and richer machining mix (68% share). ROCE sits near 10.7%, supported by lifetime order wins exceeding Rs 1,000 crore.",
+        "fundamental": "Record quarterly revenue of Rs 652 cr (+50.4% YoY) propelled by strong auto-component volumes and higher-margin machining mix (68% of sales). Order book additions of Rs 1,000 cr provide solid visibility.",
         "verdict": "Constructive",
-        "risk": "A reversal below 908.77 violates base support; strictly honor the stop if auto component cycle headwinds resume."
+        "risk": "Breaching 908.77 violates the double-bottom base pivot; close the position immediately according to SEPA risk parameters."
       }
     }
   },
