@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-16T22:22:59.920Z",
+  "generatedAt": "2026-11-17T11:12:58.600Z",
   "sessionDate": "2026-11-17",
   "status": "ready",
   "scanGeneratedAt": "2026-11-16T21:21:13.678Z",
@@ -239,7 +239,7 @@
   ],
   "previousSession": "2026-11-16",
   "intelligenceGeneratedAt": "2026-11-16T22:01:42.949Z",
-  "commentary": "With the deterministic gate flagged WEAK and market breadth subdued at 39, Stan Weinstein and William O'Neil market-timing doctrines call for rigorous defensive capital exposure. Although the Nifty 50 defended key 25,140 support on strong FII institutional net inflows of Rs 4,864 crore, poor broad-market participation warns of elevated failure rates among speculative setups. Jesse Livermore's discipline requires trading only top leaders emerging from sound bases while sitting tight in cash elsewhere. Mark Minervini's progressive exposure rules dictate keeping pilot position sizing tightly constrained, demanding verified earnings acceleration, respecting precise entry triggers, and strictly cutting losses without hesitation if underlying pivots fail to hold.",
+  "commentary": "Market breadth remains fragile at 39 despite benchmark index resilience, signaling a split market under Stan Weinstein and William O'Neil market-direction rules. Institutional selective accumulation exists, but broad participation is lacking. Under Mark Minervini's SEPA framework, progressive exposure is mandatory: capital must strictly follow confirmed Stage 2 leadership rather than anticipatory trades. CANSLIM discipline requires verifiable quarterly earnings and sales acceleration to validate true market leaders; setups showing decelerating bottom-line growth must be relegated to watchlists. Until market breadth sustainably reclaims constructive levels above 50, exposure must remain measured, stop losses kept tight to base invalidation pivots, and risk cut immediately when price violates structured stop levels.",
   "commentaryStatus": "available",
   "limitations": [
     "Daily scan observations are not fills or performance results.",
@@ -248,92 +248,91 @@
   ],
   "model": "gemini-3.8-flash",
   "analysis": {
-    "analyst": "Minervini SEPA, O'Neil CANSLIM, Weinstein Stage Analysis, Darvas Box & Livermore Discipline",
+    "analyst": "Minervini SEPA, O'Neil CANSLIM & Weinstein Stage Analysis",
     "bySymbol": {
       "AARTIPHARM": {
         "stage": "Stage 2 advancing",
-        "technical": "Breaking out of a double-bottom base above rising 21 EMA, 50 SMA, and 200 SMA on 1.24x average volume. RSI at 68 confirms constructive momentum without extreme extension, showing classic Stage 2 accumulation characteristics.",
+        "technical": "Price tracks above rising 21 EMA, 50 SMA, and 200 SMA, completing a double-bottom consolidation. Volume at 1.24x confirms institutional support, while RSI at 68 reflects constructive momentum without overextension. Relative strength is firming, but a decisive volume breakout through the 1020.52 trigger is needed to validate continuation.",
         "epsGrowth": [
-          "Q2 FY27 +113%",
-          "Q1 FY27 +49%"
+          "Q2 FY27 -6.1%",
+          "Q1 FY27 +24.6%"
         ],
-        "revenueGrowth": "+46%",
-        "earningsTrend": "Accelerating",
-        "growthQualified": "Yes",
-        "fundamental": "Strong CDMO and Xanthine derivative volumes drove Q2 sales to Rs 610 cr (+46% YoY) and net profit to Rs 66 cr (+113% YoY). ROCE stands near 11.4% with manageable leverage and expanding operating margins.",
-        "verdict": "Constructive",
-        "risk": "Failure to hold 929.48 breaches the double-bottom base support; exit immediately to preserve capital on any high-volume undercut."
+        "revenueGrowth": "+13.9%",
+        "earningsTrend": "Decelerating",
+        "growthQualified": "No",
+        "fundamental": "Aarti Pharmalabs demonstrates modest top-line growth of 13.9% and healthy 25% operating margins with low leverage (debt-to-equity 0.28). However, net profit declined 6.1% YoY in the latest quarter, failing CANSLIM C-criterion standards and reflecting persistent margin pressure in API intermediates.",
+        "verdict": "Watch",
+        "risk": "Thesis fails on a drop below the 929.48 swing low, demanding strict Minervini stop discipline to protect capital."
       },
       "AARTISURF": {
         "stage": "Stage 2 advancing",
-        "technical": "Powerful SEPA breakout clearing 20-session resistance on massive 10.24x volume surge. Moving averages are sequentially aligned above the 200 SMA, confirming explosive institutional accumulation out of a primary base.",
+        "technical": "Textbook SEPA breakout clearing 20-session resistance on massive 10.24x volume expansion, confirming heavy institutional accumulation. Moving averages are stacked positively with price above rising 21 EMA, 50 SMA, and 200 SMA. MACD expansion and strong relative-strength line support a high-velocity Stage 2 advance.",
         "epsGrowth": [
-          "Q2 FY27 +672%",
-          "Q1 FY27 +206%"
+          "Q2 FY27 +703.4%",
+          "Q1 FY27 +206.1%"
         ],
         "revenueGrowth": "+62.5%",
         "earningsTrend": "Accelerating",
         "growthQualified": "Yes",
-        "fundamental": "Q2 standalone PAT surged 672% YoY to Rs 12.59 cr on 62.5% revenue growth to Rs 291 cr. Working capital days reduced significantly to 21.5, though historic 3-year ROE remains modest at 5.2%.",
+        "fundamental": "Aarti Surfactants displays stellar CANSLIM characteristics with Q2 revenue climbing 62.5% YoY to Rs 291 Cr and net profit surging over 700% YoY to Rs 12.59 Cr. Working capital improvement from 32 to 21 days and expanding operating margins provide robust fundamental backing.",
         "verdict": "Leading",
-        "risk": "A close below 561.76 invalidates the SEPA breakout pivot; enforce rapid stop discipline to prevent capital erosion."
+        "risk": "Setup invalidates on a high-volume breakdown below 561.76; cut losses swiftly per SEPA risk-management guidelines."
       },
       "ABDL": {
         "stage": "Stage 2 advancing",
-        "technical": "Clearing a Darvas-style box to print a new 52-week high on 1.93x volume. Price action is firmly supported above rising 21 EMA and 50 SMA, signaling sustained buying interest.",
+        "technical": "Clear SEPA breakout clearing a 20-session high to reach a new 52-week high on 1.93x average volume. The stock demonstrates persistent relative strength above rising 21 EMA, 50 SMA, and 200 SMA. Bullish momentum indicators corroborate sustained institutional sponsorship.",
         "epsGrowth": [
-          "Q2 FY27 +9.7%",
-          "Q1 FY27 not verified"
+          "Q2 FY27 +17.9%",
+          "Q1 FY27 +11.2%"
         ],
-        "revenueGrowth": "+15.8%",
-        "earningsTrend": "Steady",
+        "revenueGrowth": "+15.9%",
+        "earningsTrend": "Accelerating",
         "growthQualified": "Partial",
-        "fundamental": "Record quarterly volume exceeding 10M cases drove 15.8% revenue expansion to Rs 1,152 cr, but net profit rose only 9.7% due to supply-chain cost headwinds. Net debt sits elevated at 2.2x EBITDA.",
-        "verdict": "Watch",
-        "risk": "Violation of 712.03 breaks the 52-week pivot shelf, triggering immediate risk off pursuant to Minervini loss-cutting rules."
+        "fundamental": "Allied Blenders shows steady revenue expansion of 15.9% to Rs 1,148 Cr and operating margins of 13.3%. While net profit grew 17.9% YoY, EPS acceleration remains below O'Neil's optimal 25% threshold, though post-IPO balance sheet deleveraging provides constructive financial tailwinds.",
+        "verdict": "Constructive",
+        "risk": "Breakout fails if price closes below 712.03, requiring an immediate stop to limit portfolio drawdown."
       },
       "AEROENTER": {
         "stage": "Stage 2 advancing",
-        "technical": "Consolidating within 1.5% of its 20-session pivot in a tight handle pattern. Moving averages are orderly and stacked in Stage 2 alignment, though volume lacks definitive institutional expansion.",
+        "technical": "Tight consolidation within 1.5% of its 20-session pivot, positioned constructively above rising 21 EMA, 50 SMA, and 200 SMA. Volatility contraction is visible with RSI at 59 and positive MACD alignment, but needs heavy breakout volume above 159.76 to confirm demand.",
         "epsGrowth": [
-          "Q2 FY27 +84%",
-          "Q1 FY27 not verified"
+          "Q2 FY27 +83.7%",
+          "Q1 FY27 +616.7%"
         ],
-        "revenueGrowth": "+45%",
-        "earningsTrend": "Steady",
-        "growthQualified": "Partial",
-        "fundamental": "Consolidated Q2 revenue grew 45% YoY with profit up 84%, bolstered by subsidiary operations. However, high other income from stake sales and extended working capital cycles warrant fundamental caution.",
+        "revenueGrowth": "+45.0%",
+        "earningsTrend": "Decelerating",
+        "growthQualified": "Yes",
+        "fundamental": "Aeroflex Enterprises reports strong revenue growth of 45% to Rs 250 Cr and virtually zero debt, but EPS growth decelerated from Q1's subsidiary-divestment-inflated +616.7% to +83.7% in Q2. One-off other income skews fundamental quality under CANSLIM examination.",
         "verdict": "Watch",
-        "risk": "A drop below 146.48 breaches handle support and structural moving averages; execute defined stop discipline immediately."
+        "risk": "Breach below 146.48 swing support negates the consolidation setup, triggering a disciplined exit."
       },
       "AGARWALEYE": {
         "stage": "Stage 2 advancing",
-        "technical": "Constructive double-bottom formation above EMA21, SMA50, and SMA200. Rejection of session lows via a long lower wick shows responsive institutional support defending neckline resistance.",
+        "technical": "Constructing a classical double-bottom pattern with long lower wicks confirming persistent accumulation at support. Price is pressing the 572.47 neckline above rising 21 EMA, 50 SMA, and 200 SMA. MACD is positive above signal and zero, reflecting solid underlying momentum.",
         "epsGrowth": [
-          "Q2 FY27 +89%",
-          "Q1 FY27 +40%"
+          "Q2 FY27 +57.0%",
+          "Q1 FY27 +44.4%"
         ],
-        "revenueGrowth": "+26%",
+        "revenueGrowth": "+31.0%",
         "earningsTrend": "Accelerating",
         "growthQualified": "Yes",
-        "fundamental": "Dominant ophthalmology network delivered accelerating earnings with Q2 EPS surging 89% YoY and Q1 up 40%, accompanied by 26% revenue growth. Robust operating margins near 30% underpin high premium valuation multiples.",
-        "verdict": "Leading",
-        "risk": "A break below 531.32 invalidates the double-bottom base pivot and mandates immediate liquidation to control portfolio risk."
+        "fundamental": "Dr. Agarwal's delivers prime CANSLIM credentials with revenue expanding 31% YoY to Rs 655 Cr and net profit jumping 57% YoY. Operating margins near 27% and a pristine balance sheet (debt-to-equity 0.07) reinforce institutional sponsorship and network expansion visibility.",
+        "verdict": "Constructive",
+        "risk": "Failure to hold the 531.32 base low invalidates the pattern, demanding an immediate stop-loss exit."
       },
       "ALICON": {
         "stage": "Stage 2 advancing",
-        "technical": "Double-bottom breakout on 1.45x volume expansion. Price cleanly holds above rising 21 EMA, 50 SMA, and 200 SMA with RSI at 68 confirming strong upward trend without reaching overbought territory.",
+        "technical": "Carving out a double-bottom base above rising 21 EMA, 50 SMA, and 200 SMA. Price is testing the 995.99 entry pivot on 1.45x volume expansion. Momentum is intact with RSI at 68 and MACD above zero, confirming an orderly Stage 2 uptrend.",
         "epsGrowth": [
-          "Q2 FY27 +67%",
-          "Q1 FY27 +23%",
-          "Q4 FY26 +45%"
+          "Q2 FY27 +26.7%",
+          "Q1 FY27 +22.0%"
         ],
         "revenueGrowth": "+50.4%",
         "earningsTrend": "Accelerating",
         "growthQualified": "Partial",
-        "fundamental": "Record quarterly revenue of Rs 652 cr (+50.4% YoY) propelled by strong auto-component volumes and higher-margin machining mix (68% of sales). Order book additions of Rs 1,000 cr provide solid visibility.",
+        "fundamental": "Alicon Castalloy delivered record Q2 revenue of Rs 652 Cr (+50.4% YoY) driven by EV machining orders, with PAT rising 26.7% YoY. Raw material cost inflation compressed operating margins, and elevated working capital requires monitoring under CANSLIM parameters.",
         "verdict": "Constructive",
-        "risk": "Breaching 908.77 violates the double-bottom base pivot; close the position immediately according to SEPA risk parameters."
+        "risk": "Thesis is negated on a decline below 908.77; cut losses promptly to protect capital."
       }
     }
   },
