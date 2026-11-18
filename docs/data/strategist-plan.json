@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-17T21:07:43.019Z",
+  "generatedAt": "2026-11-18T10:45:51.404Z",
   "sessionDate": "2026-11-18",
   "status": "ready",
   "scanGeneratedAt": "2026-11-17T20:09:51.277Z",
@@ -239,7 +239,7 @@
   ],
   "previousSession": "2026-11-17",
   "intelligenceGeneratedAt": "2026-11-17T20:55:54.037Z",
-  "commentary": "With Nifty at 25,387 and Bank Nifty printing record highs on institutional liquidity, market breadth sits at a cautious 47. Under Stan Weinstein and William O'Neil market-direction discipline, a bifurcated tape where headline indices advance while breadth wavers calls for defensive positioning. Institutional rotation into banking and capital goods offers selective leadership, but narrow participation demands that traders avoid chasing extended breakouts. With our deterministic gate locked at CAUTION, progressive exposure rules apply: honor strict stop-losses, insist on dual-quarter EPS and sales acceleration, and restrict new risk strictly to confirmed Stage 2 pivots offering asymmetric reward profiles.",
+  "commentary": "The market's internal breadth score of 47 indicates rotational selectivity rather than decisive, broad-market accumulation, even as Bank Nifty logs fresh record highs. Under O'Neil's market direction discipline and Stan Weinstein's framework, a CAUTION regime demands defensive posture: keep cash preserved, reject laggards, and avoid low-conviction extended setups. Exposure should be earned through progressive feedback rather than aggressive anticipation. Candidates must demonstrate verifiable Stage 2 structural alignment and authentic quarterly earnings acceleration to justify capital commitment. Non-operating vehicles like cash ETFs must be bypassed entirely, while unprofitable turnarounds must remain restricted to watch status until genuine CANSLIM earnings propulsion is confirmed under strict Minervini stop discipline.",
   "commentaryStatus": "available",
   "limitations": [
     "Daily scan observations are not fills or performance results.",
@@ -248,90 +248,90 @@
   ],
   "model": "gemini-3.8-flash",
   "analysis": {
-    "analyst": "Minervini SEPA, O'Neil CANSLIM & Weinstein Stage Analysis",
+    "analyst": "SEPA / CANSLIM / Stage Analysis / Darvas Box Framework",
     "bySymbol": {
       "63MOONS": {
         "stage": "Stage 1 base",
-        "technical": "Forms a double bottom base clearing EMA21, SMA50, and SMA200, pressing against neckline resistance at 982.83. Volume expansion of 1.31x confirms base accumulation, and RSI at 55 exhibits constructive momentum without extension. However, significant overhead resistance lingers.",
+        "technical": "Constructing a double-bottom base with price recovering across EMA21, SMA50, and SMA200. Volume expanded to 1.31x average with RSI at 55, confirming emerging accumulation off lows. However, severe overhead supply from prior declines still caps upside momentum.",
         "epsGrowth": [
-          "Q2 FY27 Negative",
-          "Q1 FY27 Negative"
+          "Q2 FY27 Negative (Loss)",
+          "Q1 FY27 Negative (Loss)"
         ],
         "revenueGrowth": "+647%",
         "earningsTrend": "Negative",
         "growthQualified": "No",
-        "fundamental": "Despite explosive top-line sales growth to ₹153.5 cr (+647% YoY), bottom-line profitability remains negative with net losses of ₹40.4 cr. Negative ROCE (-3.7%) and persistent operating losses fail O'Neil's CANSLIM earnings test.",
-        "verdict": "Avoid",
-        "risk": "Violates fundamental earnings viability due to net losses; thesis fails on a breakdown below the pattern pivot low of 893.10."
+        "fundamental": "Topline sales surged dramatically off a depressed base, but persistent net losses prevent CANSLIM qualification. Operating margins remain unstable, interest coverage is depressed, and negative returns on equity limit genuine institutional sponsorship despite recent software pipeline announcements.",
+        "verdict": "Watch",
+        "risk": "Close below 893.10 breaches the double-bottom support floor; exit immediately to preserve capital."
       },
       "AARTIPHARM": {
         "stage": "Stage 2 advancing",
-        "technical": "Displays classic Stage 2 structure holding firmly above rising 21 EMA, 50 SMA, and 200 SMA. Tightening near its 1024.82 pivot on 1.28x volume with an RSI of 72 reflects powerful institutional demand without being dangerously extended.",
+        "technical": "Superb Stage 2 consolidation hovering within 1.5% of its 20-session pivot. Price cleanly rides rising EMA21, SMA50, and SMA200. Volume expanded to 1.28x on the test with RSI 72, showing strong institutional demand without excessive extension.",
         "epsGrowth": [
           "Q2 FY27 +161%",
           "Q1 FY27 +65%"
         ],
-        "revenueGrowth": "+46%",
+        "revenueGrowth": "+45.9%",
         "earningsTrend": "Accelerating",
         "growthQualified": "Yes",
-        "fundamental": "Stellar earnings acceleration with Q2 PAT jumping 161% and revenue advancing 46% YoY, driven by strong xanthine export demand. Conservative leverage (D/E 0.36) and resilient ~25% EBITDA margins satisfy CANSLIM criteria.",
+        "fundamental": "Exceptional CANSLIM metrics backed by CDMO and Xanthine expansion. Operating EBITDA margins reached 22.2% with net profit surging 161% YoY. Conservative leverage supports ongoing brownfield capex at Atali, driving expanding ROCE above 14% and robust institutional sponsorship.",
         "verdict": "Leading",
-        "risk": "Failure to hold the 1024.82 breakout or a breach below 928.50 invalidates the Stage 2 advancing pattern."
+        "risk": "A breakdown below 928.50 invalidates the pivot structure; cut losses without hesitation."
       },
       "ABSLLIQUID": {
         "stage": "Unclear",
-        "technical": "An overnight debt ETF tracking TREPS repo rates. Moving averages and pattern triggers reflect pricing drift of overnight yields rather than true structural equity price accumulation or relative strength.",
+        "technical": "Instrument is a short-term cash management ETF, not an operating common stock. While moving average alignments and volume appear elevated mathematically, price volatility is essentially flat, rendering momentum and Darvas box breakout patterns economically irrelevant.",
         "epsGrowth": [
           "not verified"
         ],
         "revenueGrowth": "not verified",
         "earningsTrend": "Not verified",
-        "growthQualified": "Not verified",
-        "fundamental": "Not an operating corporate equity; constitutes a passive money-market vehicle with no sales, earnings, debt leverage, or ROE/ROCE. Entirely ineligible for CANSLIM analysis.",
+        "growthQualified": "No",
+        "fundamental": "not verified",
         "verdict": "Avoid",
-        "risk": "Not an equity breakout; fails all SEPA screening rules. Any trade below 1004.54 marks immediate misallocation of capital."
+        "risk": "A close below 1004.54 signals cash drag; unsuitable for growth and momentum equity strategies."
       },
       "ADANIENSOL": {
         "stage": "Stage 2 advancing",
-        "technical": "Clean Stage 2 transition clearing prior 20-session resistance at 1638.64 on 1.18x volume. Trading above upward-sloping EMA21, SMA50, and SMA200 with positive MACD confirmation shows legitimate institutional accumulation.",
+        "technical": "Powerful Stage 2 breakout clearing a 20-session high on 1.18x volume. Trading decisively above upward-trending EMA21, SMA50, and SMA200 clusters. Positive MACD trajectory above zero confirms sustained trend velocity and institutional buying pressure.",
         "epsGrowth": [
           "Q2 FY27 +145%",
-          "Q1 FY27 +128%"
+          "Q1 FY27 +129%"
         ],
-        "revenueGrowth": "+51%",
+        "revenueGrowth": "+52.8%",
         "earningsTrend": "Accelerating",
         "growthQualified": "Yes",
-        "fundamental": "Superb operational momentum with Q2 PAT rocketing 145% YoY and revenue surging 51% to ₹10,239 cr, led by smart metering and transmission. While debt is high, infrastructure cash flow strongly covers obligations.",
+        "fundamental": "Textbook CANSLIM acceleration driven by rapid commissioning in smart metering and transmission. Q2 PAT jumped 145% YoY with operational revenue up 51% YoY. Record order book of ₹87,000 crore offsets high balance sheet leverage, reinforcing high earnings visibility.",
         "verdict": "Leading",
-        "risk": "Breakdown below the breakout level with a stop violation at 1550.19 breaches support, requiring immediate loss cutting."
+        "risk": "A drop below 1550.19 fails the 20-day breakout level; execute immediate stop discipline."
       },
       "AJAXENGG": {
-        "stage": "Stage 1 base",
-        "technical": "Coiling constructively near its 620.52 pivot on an impressive 2.81x volume surge. Alignment above EMA21, SMA50, and SMA200 with RSI at 63 demonstrates emerging relative strength within an upper base.",
+        "stage": "Stage 2 advancing",
+        "technical": "Healthy Stage 2 base pattern following its post-listing consolidation. Trading tightly within 1.5% of the 20-session pivot, supported by ascending EMA21, SMA50, and SMA200. Heavy volume expansion of 2.81x and RSI at 63 signal imminent accumulation.",
         "epsGrowth": [
           "Q2 FY27 +30%",
-          "Q1 FY27 +5%"
+          "Q1 FY27 +23%"
         ],
-        "revenueGrowth": "+10%",
+        "revenueGrowth": "+18.2%",
         "earningsTrend": "Accelerating",
         "growthQualified": "Partial",
-        "fundamental": "Pristine balance sheet with zero debt and ₹1,150 cr cash. Q2 PAT rebounded +30% YoY, but sales growth of 9.5% lags CANSLIM's 15% threshold, reflecting transitory CEV-5 emission transition costs.",
-        "verdict": "Watch",
-        "risk": "Rejection at the 620.52 pivot or a break below the 586.53 stop invalidates the current base breakout setup."
+        "fundamental": "High-quality balance sheet featuring virtually zero net debt, ROCE of 23.9%, and ROE of 17.8%. As India's second-largest concrete equipment manufacturer, infrastructure tailwinds and 13% EBITDA margins drive steady double-digit profit expansion.",
+        "verdict": "Constructive",
+        "risk": "Violation of the 586.53 pivot stop compromises base integrity; liquidate according to risk rules."
       },
       "ALGOQUANT": {
         "stage": "Stage 2 advancing",
-        "technical": "Power breakout to new 52-week highs, clearing 20-session resistance at 86.88. Moving averages (EMA21, SMA50, SMA200) are in full bullish stack with positive MACD, confirming strong momentum and high relative strength.",
+        "technical": "Crisp Stage 2 momentum breakout crossing a 20-session ceiling to print fresh trailing-year highs. Price structure remains well above EMA21, SMA50, and SMA200 with MACD confirmation, though micro-cap profile warrants careful position sizing.",
         "epsGrowth": [
           "Q2 FY27 +179%",
-          "Q1 FY27 +43%"
+          "Q1 FY27 +16%"
         ],
-        "revenueGrowth": "+43%",
+        "revenueGrowth": "+42.9%",
         "earningsTrend": "Accelerating",
-        "growthQualified": "Yes",
-        "fundamental": "Proprietary HFT and arbitrage model generates exceptional momentum: Q2 net income up 179% YoY on 43% revenue expansion. High-margin operations compensate for trading-volume volatility.",
+        "growthQualified": "Partial",
+        "fundamental": "Proprietary HFT and hedged arbitrage strategies delivered substantial operating leverage, driving Q2 revenue up 42.9% YoY and operating profit up 179% YoY. While ROCE is robust, limited institutional float requires heightened liquidity scrutiny.",
         "verdict": "Constructive",
-        "risk": "Failure to hold the 86.88 pivot followed by a breach of the 80.20 stop demands disciplined risk mitigation."
+        "risk": "A close below 80.20 voids the 20-day breakout; cut losses rapidly to limit downside."
       }
     }
   },
