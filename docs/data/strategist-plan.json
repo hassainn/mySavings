@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-19T20:39:32.436Z",
+  "generatedAt": "2026-11-19T20:50:37.752Z",
   "sessionDate": "2026-11-20",
   "status": "ready",
   "scanGeneratedAt": "2026-11-19T19:52:26.859Z",
@@ -239,7 +239,7 @@
   ],
   "previousSession": "2026-11-19",
   "intelligenceGeneratedAt": "2026-11-19T20:37:49.015Z",
-  "commentary": "The Nifty 50 break above consolidation confirms robust institutional demand, yet internal market breadth scoring 49 keeps the environment in CAUTION. Per Stan Weinstein, disciplined market timing demands that broader participation align with headline index strength before deploying full risk capital. William O'Neil's CANSLIM framework requires uncompromising adherence to C+A earnings acceleration alongside clean Stage 2 base structures. While liquidity expansion provides an underlying tailwind, selective exposure and progressive position sizing remain imperative. Traders must restrict commitments exclusively to high-conviction pivots displaying genuine volume contraction, enforcing strict stop-losses to preserve capital against potential false breakouts.",
+  "commentary": "While the benchmark Nifty surged above consolidation on intense institutional accumulation (+₹7,411 Cr FII net buying), internal market breadth remains mixed with a breadth score of 49 and a CAUTION gate. Stan Weinstein's stage discipline warns against aggressive buying when breadth diverges from headline indices, as selective participation often leads to whipsaws. Under O'Neil's market-direction framework, fresh exposure must be progressive and strictly earned. Focus capital solely on verified Stage 2 leaders displaying explosive CANSLIM fundamental acceleration and tight pivot contractions, while strictly honoring stop-loss rules on laggards lacking institutional-grade earnings.",
   "commentaryStatus": "available",
   "limitations": [
     "Daily scan observations are not fills or performance results.",
@@ -248,91 +248,91 @@
   ],
   "model": "gemini-3.8-flash",
   "analysis": {
-    "analyst": "SEPA (Minervini), CANSLIM (O'Neil), Stage Analysis (Weinstein), Box Theory (Darvas)",
+    "analyst": "Minervini SEPA, O'Neil CANSLIM & Weinstein Stage Analysis",
     "bySymbol": {
       "63MOONS": {
         "stage": "Stage 2 advancing",
-        "technical": "Consolidating above rising 50-day and 200-day moving averages, fulfilling key SEPA trend template criteria. Price carved a 23.8% cup with a tighter 10.5% handle where volume contracted constructively, setting up a double-bottom neckline pivot at 982.83.",
+        "technical": "Trades above rising 21 EMA, 50 SMA, and 200 SMA. Forms a double-bottom base with a 23.8% cup depth and 10.5% handle contraction with dried-up volume, pressing against its 982.83 neckline pivot.",
         "epsGrowth": [
-          "Q2 FY27 -184%",
-          "Q1 FY27 +42%"
+          "Q2 FY27 -180%",
+          "Q1 FY27 -82%"
         ],
-        "revenueGrowth": "+131.7%",
+        "revenueGrowth": "+11.9%",
         "earningsTrend": "Negative",
-        "growthQualified": "Partial",
-        "fundamental": "While Q2 FY27 standalone revenue surged 131.7% YoY, the company posted a consolidated quarterly net loss of ₹28.73 crore. Inconsistent profitability and volatile margin profiles fail CANSLIM's bottom-line stability criteria despite zero long-term debt and strong cash reserves.",
+        "growthQualified": "No",
+        "fundamental": "Fundamentals fail CANSLIM criteria. Operating profitability remains weak with negative operating margins (-34% standalone), poor multi-year sales growth of ~5.7%, and negligible ROE. Unconfirmed earnings turnarounds prohibit high-conviction institutional accumulation.",
         "verdict": "Watch",
-        "risk": "Thesis invalidates below the handle trough at 892.13. Cut losses instantly if the pivot fails to hold on volume."
+        "risk": "Thesis invalidates below 892.13. Cut losses promptly if neckline breakout fails on expanding distribution volume."
       },
       "AAREYDRUGS": {
         "stage": "Stage 2 advancing",
-        "technical": "Trading comfortably above 21-EMA, 50-SMA, and rising 200-SMA. Carved a clean double-bottom base with RSI holding near 60, reflecting constructive relative strength without overbought conditions, clearing its trigger at 116.92.",
+        "technical": "Constructive double-bottom base above rising key moving averages (EMA21, SMA50, SMA200). Volume expanded to 1.19x 20-day average, with RSI at 60 providing bullish momentum without extension toward the 116.92 trigger.",
         "epsGrowth": [
-          "Q1 FY27 -25.0%",
-          "Q4 FY26 +66.7%"
+          "Q2 FY27 +34%",
+          "Q1 FY27 -25%"
         ],
-        "revenueGrowth": "-55.4%",
-        "earningsTrend": "Decelerating",
+        "revenueGrowth": "+5.3%",
+        "earningsTrend": "Accelerating",
         "growthQualified": "No",
-        "fundamental": "Sales contracted sharply by 55.4% YoY in Q1 FY27 with EPS sliding 25%. Operating margins remain thin at ~3% alongside modest ROE of ~5%, failing CANSLIM requirements for institutional-grade earnings acceleration.",
+        "fundamental": "Lacks consistent CANSLIM growth quality. Topline expanded only +5.3% YoY, trailing the 15% threshold. Low return on equity (3.1% 3-year ROE) and razor-thin operating margins (~4.2%) fail institutional leadership standards.",
         "verdict": "Watch",
-        "risk": "Violates structure below swing low support at 106.63. Honor the stop immediately to cap downside risk."
+        "risk": "Breach below 106.63 violates structural support; exit immediately to preserve capital."
       },
       "AARTIPHARM": {
         "stage": "Stage 2 advancing",
-        "technical": "Textbook Stage 2 profile with price aligned above 21-EMA, 50-SMA, and rising 200-SMA. The 22.8% base contracted into a tight 4.2% handle, forming a classic VCP pivot at 1048.30 with positive MACD momentum.",
+        "technical": "Displays textbook Stage 2 leadership above 21 EMA, 50 SMA, and 200 SMA. Well-developed double-bottom base shows upper-half contraction with a 4.2% handle, positive MACD divergence, and pivot resistance at 1048.30.",
         "epsGrowth": [
-          "Q2 FY27 +156.0%",
-          "Q1 FY27 +38.2%"
+          "Q2 FY27 +180%",
+          "Q1 FY27 +54%"
         ],
-        "revenueGrowth": "+13.9%",
+        "revenueGrowth": "+46.8%",
         "earningsTrend": "Accelerating",
-        "growthQualified": "Partial",
-        "fundamental": "Demonstrates potent bottom-line acceleration with Q2 FY27 PAT up 156% YoY driven by CDMO expansion and EBITDA margins reaching 22.2%. Low debt-to-equity of 0.36x and solid return metrics back institutional interest.",
-        "verdict": "Constructive",
-        "risk": "Fails if price slips below the handle support at 967.84. Strictly enforce stops on any breakdown."
+        "growthQualified": "Yes",
+        "fundamental": "Exemplary CANSLIM fundamentals. Record standalone quarterly revenue jumped 46.8% YoY, driven by CDMO expansion and API recovery. EBITDA margins expanded to 22.2%, supporting robust ROCE and high institutional accumulation.",
+        "verdict": "Leading",
+        "risk": "Failure to hold 967.84 pivot stop requires swift loss mitigation under SEPA discipline."
       },
       "AARTISURF": {
         "stage": "Stage 2 advancing",
-        "technical": "Solid Stage 2 uptrend maintaining positions above rising key moving averages. Completed a double-bottom base with above-average volume expansion (1.53x) and firm momentum shown by RSI at 71, challenging pivot at 620.02.",
+        "technical": "Strong Stage 2 advance with price comfortably above 21 EMA, 50 SMA, and 200 SMA. Volume expanded 1.53x 20-day average on double-bottom neckline test at 620.02, backed by RSI 71 and bullish MACD.",
         "epsGrowth": [
-          "Q2 FY27 +701.3%",
-          "Q1 FY27 +210.3%"
+          "Q2 FY27 +672%",
+          "Q1 FY27 +158%"
         ],
-        "revenueGrowth": "+26.5%",
+        "revenueGrowth": "+62.6%",
         "earningsTrend": "Accelerating",
         "growthQualified": "Yes",
-        "fundamental": "Superb earnings acceleration meeting full CANSLIM standards, with Q2 FY27 net profit surging 701% and Q1 net profit up 210% alongside 26.5% sales growth. Operating margins improved to 7% while working capital days dropped.",
+        "fundamental": "Exceptional O'Neil CANSLIM acceleration. Standalone quarterly revenues expanded 62.6% YoY to ₹291 Cr, while PAT surged 672%. Working capital days contracted from 32.4 to 21.5, significantly aiding operating cash flows.",
         "verdict": "Leading",
-        "risk": "Pattern breaks down on a close below 564.20. Exit promptly if volume fails to support the pivot."
+        "risk": "Violation of 564.20 stop signals false breakout; execute disciplined exit without hesitation."
       },
       "ABCAPITAL": {
         "stage": "Stage 2 advancing",
-        "technical": "Constructive Stage 2 advance trading above rising 50-SMA and 200-SMA. Compressing tightly within 1.5% of its 20-session pivot at 420.42, exhibiting classical volatility contraction with MACD positive and above signal.",
+        "technical": "Powerful Stage 2 uptrend hugging 21 EMA, 50 SMA, and 200 SMA. Coiling tightly within 1.5% of its 420.42 20-session pivot in a double-bottom consolidation, with MACD firmly above zero line.",
         "epsGrowth": [
-          "Q2 FY27 +30.1%",
-          "Q1 FY27 +17.5%"
+          "Q2 FY27 +32%",
+          "Q1 FY27 +39%"
         ],
-        "revenueGrowth": "+22.5%",
-        "earningsTrend": "Accelerating",
-        "growthQualified": "Partial",
-        "fundamental": "Robust top-line expansion of 22.5% YoY supported by 30.1% EPS growth in Q2 FY27. Strong parentage, consistent lending and AMC franchise growth, and healthy ROE of ~11.5% offer dependable institutional backing.",
+        "revenueGrowth": "+32.2%",
+        "earningsTrend": "Steady",
+        "growthQualified": "Yes",
+        "fundamental": "High-quality institutional growth. Consolidated revenue surged 32.2% YoY to ₹14,003 Cr, driven by sustained lending book expansion. Financing margins held firm at 13% with multi-quarter ROE strength and zero promoter pledge.",
         "verdict": "Constructive",
-        "risk": "Invalidation trigger lies below base support at 396.98. Execute risk discipline without hesitation."
+        "risk": "A drop below 396.98 breaks support shelf; cut losses immediately."
       },
       "ABDL": {
         "stage": "Stage 2 advancing",
-        "technical": "Structure firmly anchored above key moving averages in a confirmed Stage 2 advance. The double-bottom pattern exhibits constructive accumulation on 1.27x volume with MACD above zero line, testing trigger at 855.55.",
+        "technical": "Stage 2 uptrend maintained above key moving averages. Double bottom with neckline compression toward 855.55 on 1.27x volume and positive MACD alignment, but needs confirmation above pivot.",
         "epsGrowth": [
-          "Q2 FY27 +14.2%",
-          "Q1 FY27 +11.8%"
+          "Q2 FY27 +11%",
+          "Q1 FY27 -20%"
         ],
-        "revenueGrowth": "+6.8%",
-        "earningsTrend": "Steady",
-        "growthQualified": "No",
-        "fundamental": "Steady volume expansion in core spirits brands generated 6.8% YoY revenue growth in Q2 FY27. However, earnings growth remains below the CANSLIM 25% threshold, and recent promoter divestments warrant cautious positioning.",
+        "revenueGrowth": "+16.0%",
+        "earningsTrend": "Accelerating",
+        "growthQualified": "Partial",
+        "fundamental": "Revenue grew +16.0% YoY to ₹1,148 Cr, but EPS growth (+11% YoY) falls below the 25% CANSLIM standard following a weak Q1 (-20%). Elevated debt-to-equity (0.8x) and working capital intensity warrant caution.",
         "verdict": "Watch",
-        "risk": "Thesis fails if price breaks beneath pattern low at 795.07. Maintain strict stop-loss discipline."
+        "risk": "Thesis breaks below 795.07. Hard stop must be enforced to guard against base breakdown."
       }
     }
   },
