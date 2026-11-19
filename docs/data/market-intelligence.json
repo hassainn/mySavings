@@ -1,7 +1,7 @@
 {
   "status": "live",
   "method": "gemini-grounded",
-  "generatedAt": "2026-11-19T11:40:19.193Z",
+  "generatedAt": "2026-11-19T20:37:49.015Z",
   "model": "gemini-3.8-flash",
   "marketDirection": {
     "direction": "Uptrend",
@@ -20,262 +20,400 @@
       },
       {
         "tag": "Breadth",
-        "text": "Market breadth is cautious — 26.4% of scanned NSE stocks advancing, 42% above their 50-DMA."
-      },
-      {
-        "tag": "Order win",
-        "text": "Strong order accretion bolsters short-term accumulation setups near key moving averages."
+        "text": "Market breadth is mixed — 59.2% of scanned NSE stocks advancing, 44.1% above their 50-DMA."
       },
       {
         "tag": "Macro/flows",
-        "text": "Decisive sector volume expansion confirms an institutional sector rotation favorable to swing continuation patterns."
+        "text": "Aggressive institutional accumulation absorbs overhead supply, solidifying 25,200 as key swing support."
+      },
+      {
+        "tag": "Macro/flows",
+        "text": "Decisive multi-week range breakout above ₹13,000 on expanding volume provides high-probability trend continuation setup."
       }
     ],
     "disclaimer": "A rules-based read of index price, market breadth and headline flow — not a forecast or trading advice."
   },
-  "marketMood": "Bullish Momentum",
-  "marketSummary": "Indian equities surged sharply on November 19, 2026, with the Nifty 50 rallying 286 points to close above the 25,500 milestone at 25,514.30 and the BSE Sensex jumping 990 points to 83,021.75. The powerful upside was anchored by relentless Foreign Institutional Investor (FII) net buying that crossed the Rs 1 lakh crore threshold for November, driving decisive multi-session breakouts across Auto, Banking, and Capital Goods sectors, while the IT index lagged on hawkish Federal Reserve rate expectations. Watchlist constituents displayed constructive action, with defence heavyweights BEL and HAL reacting positively to key domestic military upgrade mandates, and Trent consolidating after leadership transition following robust quarterly network expansion.",
-  "dailyFocus": "Breakout follow-throughs in auto and defence names with strong order book expansion, alongside high-tight consolidation plays near intermediate multi-week resistance.",
+  "marketMood": "Bullish",
+  "marketSummary": "The Indian benchmark Nifty 50 surged 286.35 points (1.14%) to close at 25,514.30 on November 19, 2026, breaking cleanly above its prior multi-day consolidation zone. The decisive expansion was spearheaded by an aggressive rally across the Automobile sector (Nifty Auto +4.40%) and Capital Goods/Defence names, underpinned by an unrelenting institutional liquidity wave as Foreign Institutional Investors (FIIs) pumped ₹7,411.41 crore in single-day net purchases, marking their 14th consecutive net-buying session. The broader market participation provided strong confirmation for swing continuation setups across large-cap and high-beta leaders.",
+  "dailyFocus": "Look for high-probability swing breakouts in auto and defence names breaking past range resistances on heavy volumes, specifically monitoring follow-through on Maruti Suzuki above 13,000 and base-formation pivots in BEL and HAL following the Defence Ministry's proposed capital outlay expansion.",
   "sectors": [
     {
-      "name": "Nifty Auto",
+      "name": "Auto & Ancillaries",
       "momentum": "Leading",
-      "score": 88,
-      "reason": "Surged over 3.5% in a single session with heavy institutional accumulation in large-cap OEMs, leading the broad market breakout above key chart barriers.",
+      "score": 92,
+      "reason": "Sector demonstrated exceptional breakout momentum led by Maruti Suzuki (+7.6%) and Eicher Motors (+4.7%) on sharp raw material deflation (copper dropped 6%) and strong festive retail numbers.",
       "catalysts": [
-        "Strong festival retail conversion and stable input costs",
-        "Aggressive FII inflows targeting high-beta domestic cyclical leaders"
+        "Sharp 6% plunge in commodity inputs such as copper and crude softening",
+        "Aggressive call option accumulation and institutional buying across large-cap OEMs",
+        "Strong festive volume delivery updates"
       ],
       "risks": [
-        "Potential supply chain bottlenecks in specialized power electronics",
-        "Interest rate persistence impacting entry-level consumer financing"
+        "Intraday overbought technical readings on daily RSI across primary OEM tickers"
       ],
       "relatedStocks": [
         "MARUTI",
-        "M&M",
-        "EICHERMOT"
+        "EICHERMOT",
+        "M&M"
       ]
     },
     {
       "name": "Defence & Aerospace",
-      "momentum": "Improving",
-      "score": 82,
-      "reason": "Fresh multi-thousand crore Ministry of Defence capital procurement contracts and domestic avionics Make-1 tenders provided sustained accumulation support for core public sector defence contractors.",
+      "momentum": "Leading",
+      "score": 88,
+      "reason": "Government announcement proposing a 20% capex hike to ₹2.19 lakh crore for defence procurement in FY28 triggered fresh accumulation across the entire basket.",
       "catalysts": [
-        "New naval point-defence missile upgrade agreements worth Rs 1,976 crore",
-        "Substantial multi-year order books securing revenue visibility across 3 to 5 years"
+        "Ministry of Defence proposing 20% capex boost to expand procurement headroom",
+        "Steady conversion of multi-hundred crore order pipelines for BEL and HAL",
+        "Substantial domestic production substitution under indigenisation directives"
       ],
       "risks": [
-        "Execution delays in delivery of critical imported engine systems",
-        "High historical valuation multiples requiring uninterrupted quarterly operational deliveries"
+        "Supply chain bottlenecks in critical subsystems such as aero-engines"
       ],
       "relatedStocks": [
-        "BEL",
         "HAL",
-        "COCHINSHIP",
-        "BDL"
+        "BEL",
+        "BDL",
+        "COCHINSHIP"
       ]
     },
     {
-      "name": "Nifty Bank",
-      "momentum": "Leading",
-      "score": 80,
-      "reason": "Bank Nifty clocked an intraday peak of 63,063 led by sustained institutional bids across frontline private and state-owned lenders following easing liquidity stress.",
+      "name": "Power & Capital Goods",
+      "momentum": "Improving",
+      "score": 78,
+      "reason": "Broad-based multi-year capacity buildouts, transformer supply crunches, and transmission grid expansion contracts continue to support multi-week consolidation breakouts.",
       "catalysts": [
-        "Strong monthly institutional inflows absorbing floating supply",
-        "Benign asset quality disclosures through the mid-fiscal cycle"
+        "Massive multi-crore grid substation and transformer orders awarded by PowerGrid",
+        "Aggressive manufacturing capacity doubling by tier-1 manufacturers"
       ],
       "risks": [
-        "Margin compression from competitive deposit repricing",
-        "Selective credit growth moderation across unsecured retail books"
+        "Execution delays on civil infrastructure components and environmental clearances"
       ],
       "relatedStocks": [
-        "HDFCBANK",
-        "ICICIBANK",
-        "SBIN",
-        "AXISBANK"
+        "CGPOWER",
+        "LT",
+        "POWERGRID"
       ]
     },
     {
       "name": "Retail & Discretionary",
-      "momentum": "Improving",
-      "score": 74,
-      "reason": "Key sector bellwethers continue to hold multi-month bases as fast-fashion and lifestyle concepts accelerate network footprints beyond major tier-1 hubs.",
+      "momentum": "Mixed",
+      "score": 65,
+      "reason": "Strong structural performance in value-fashion retail networks contrasts with tier-1 urban demand moderation, leading to stock-specific bifurcation.",
       "catalysts": [
-        "Zudio milestone crossing 1,000 stores driving scalable operating leverage",
-        "Improving tier-2 store productivity metrics during peak shopping periods"
+        "Aggressive store additions and network scaling in tier-2/3 cities",
+        "Robust margins demonstrated in corporate earnings reports"
       ],
       "risks": [
-        "Elevated rental expenditures and store cannibalization in select mature clusters",
-        "Moderate like-for-like sales growth across non-value apparel segments"
+        "Rental and employee cost inflation pressuring standalone operating spreads"
       ],
       "relatedStocks": [
-        "TRENT",
-        "TITAN",
-        "ABFRL"
+        "TRENT"
       ]
     },
     {
-      "name": "Nifty IT",
+      "name": "IT & Software Services",
       "momentum": "Weakening",
-      "score": 38,
-      "reason": "Sector traded lower against the broad market trend, shedding over 1% as US bond yields and hawkish Fed rate commentary dampened discretionary technology budgets.",
+      "score": 42,
+      "reason": "Nifty IT declined 1.10% in the latest session, demonstrating clear relative weakness against the broader market rally amid global interest rate uncertainty.",
       "catalysts": [
-        "Gradual multi-quarter ramp-up of enterprise generative AI implementation deals"
+        "Selective client modernization contracts in cloud and AI automation"
       ],
       "risks": [
-        "Extended pause on US financial enterprise software spending",
-        "Margin pressure amidst prolonged hiring and offshore wage headwinds"
+        "Persistent cutbacks on discretionary enterprise IT spending",
+        "Underperformance relative to domestic cyclical sectors"
       ],
       "relatedStocks": [
-        "INFY",
         "TCS",
-        "TECHM"
+        "TECHM",
+        "HCLTECH"
       ]
     }
   ],
   "news": [
     {
-      "category": "stock",
-      "symbol": "BEL",
-      "headline": "BEL Rallies on Rs 1,976-Crore MoD Warship Upgrade Agreement and Inflow Pipeline",
-      "summary": "Shares of Bharat Electronics Limited gained traction after the Ministry of Defence entered a Rs 1,976.40-crore contract to modernise the Indian Navy's Barak point missile defence system, complementing BEL's recent disclosure of Rs 619 crore in fresh communication and drone system orders.",
+      "category": "market",
+      "symbol": "NIFTY",
+      "headline": "FII Buying Streak Extends to 14 Sessions with ₹7,411 Crore Single-Day Purchase",
+      "summary": "Foreign Institutional Investors purchased a provisional net ₹7,411.41 crore on November 19, 2026, taking cumulative 14-session equity inflows past $13 billion.",
       "sentiment": "Positive",
       "importance": "High",
-      "catalystType": "Order win",
+      "catalystType": "Macro/flows",
       "timeHorizon": "Today",
-      "impact": "Strong order accretion bolsters short-term accumulation setups near key moving averages.",
-      "sourceName": "Upstox",
-      "sourceUrl": "https://assets.upstox.com/content/assets/images/news/defense-sector-stocks-rally-nov-19-2026.webp",
-      "publishedAt": "2026-11-19T15:00:00Z"
+      "impact": "Aggressive institutional accumulation absorbs overhead supply, solidifying 25,200 as key swing support.",
+      "sourceName": "TradingView",
+      "sourceUrl": "https://www.tradingview.com/news/invezz:335520e15094b:0-india-draws-13-billion-in-fii-inflows-extends-buying-streak-to-14-sessions/",
+      "publishedAt": "2026-11-19T13:14:00Z"
+    },
+    {
+      "category": "stock",
+      "symbol": "MARUTI",
+      "headline": "Maruti Suzuki Surges 7.58% to ₹13,589 on High Volume and Heavy ₹13,000 Call Buying",
+      "summary": "Maruti Suzuki closed up 7.58% at ₹13,589 on November 19, 2026, leading the Nifty 50 rally backed by 18,431 call option contracts traded at the ₹13,000 strike and falling copper and commodity input prices.",
+      "sentiment": "Positive",
+      "importance": "High",
+      "catalystType": "Macro/flows",
+      "timeHorizon": "Today",
+      "impact": "Decisive multi-week range breakout above ₹13,000 on expanding volume provides high-probability trend continuation setup.",
+      "sourceName": "The Economic Times",
+      "sourceUrl": "https://economictimes.indiatimes.com/markets/stocks/news/maruti-suzuki-tata-motors-pv-other-auto-stocks-soar-up-to-7-nifty-auto-index-jumps-4-whats-driving-the-rally/articleshow/125430855.cms",
+      "publishedAt": "2026-11-19T09:43:00Z"
     },
     {
       "category": "sector",
-      "symbol": "NIFTYAUTO",
-      "headline": "Nifty Auto Surges Over 3.5% Driven by Heavyweights Eicher Motors and Maruti",
-      "summary": "Automotive shares surged decisively to spearhead the November 19 market session, logging gains of over 3.5% on heavy volumes as institutional investors rotated aggressively into passenger and commercial vehicle leaders.",
+      "symbol": "HAL",
+      "headline": "Defence Ministry Seeks 20% Capex Hike to ₹2.19 Lakh Crore for FY28",
+      "summary": "The Ministry of Defence has proposed a 20% CAGR increase in capital expenditure to ₹2.19 lakh crore for procurement and contracts, boosting outlooks for HAL, BEL, and shipbuilders.",
       "sentiment": "Positive",
       "importance": "High",
-      "catalystType": "Macro/flows",
-      "timeHorizon": "Today",
-      "impact": "Decisive sector volume expansion confirms an institutional sector rotation favorable to swing continuation patterns.",
-      "sourceName": "Business Standard",
-      "sourceUrl": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGREATLUO7Wr6C3Ct7uODUWJeBNvi5zWk9OGou77eU8SEJdkKE4dxdoK7_iNC8lbxkXFIrA7GZOQ8-SgeTvrkPSOKiNyYAA5JrbFkHYLGzd1yViVsNnkGybE2bw_AjyA7m3lmwoc5NDPqrJ2G-UixaPlBO4gx70zw1Cz3YqKICwJAZLMn-tUsjGafMWiiCDFu7CfZkQVjS3P2iaf6eq9gKr9E5-fFd6Thcnyf0jey0MqJzAdWbLv4VAkTX4XhksEUpZ_6DWYjWdC1b3m_3xB7SBZGKLZerKYVP9vr7djDrk5EiTDzCveFd7yLrGPCTq",
-      "publishedAt": "2026-11-19T10:25:00Z"
-    },
-    {
-      "category": "market",
-      "symbol": "NIFTY50",
-      "headline": "FII Purchases Surpass Rs 1 Lakh Crore in November as Nifty Reclaims 25,500",
-      "summary": "Aggressive foreign portfolio institutional flows have crossed Rs 1.12 lakh crore gross purchases in November 2026, propelling the benchmark Nifty 50 to 25,514.30 and generating broad liquidity that lifted market capitalization by over Rs 34 lakh crore.",
-      "sentiment": "Positive",
-      "importance": "High",
-      "catalystType": "Macro/flows",
-      "timeHorizon": "Today",
-      "impact": "Strong systemic institutional liquidity provides sturdy tailwinds for high-relative-strength breakout setups across NSE leaders.",
-      "sourceName": "Kotak Neo",
-      "sourceUrl": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGnDdSV6kai_7fpf1FEPTqO5C_7FDdw_f0yuprwj1ED0VWgUo5zRpiziLqpAeFzSwBOHHVLSKAXyR8-qgrCf-robzUhPzG1ZgddARAFjLQvLoh8Hql0wChaZOxftTUx4O5P2j6I1WONeF5PCIkHweQa2OZcRCS8Owf1WhOP0l1fusnCiqZFJx3hcQnOeBYem_vkxvINtbO-yYaNHwshwq0vkZjtjBoUZzU=",
-      "publishedAt": "2026-11-19T09:39:00Z"
+      "catalystType": "Regulatory",
+      "timeHorizon": "This week",
+      "impact": "Structural sector catalyst provides earnings tailwind, triggering dip-buying at the 200-day EMA support zone.",
+      "sourceName": "Mint",
+      "sourceUrl": "https://www.livemint.com/market/stock-market-news/defence-stocks-hal-bel-bdl-shares-jump-up-to-3-defence-ministry-seeks-20-capex-hike-for-fy27-order-boom-11763541893547.html",
+      "publishedAt": "2026-11-19T08:30:00Z"
     },
     {
       "category": "stock",
-      "symbol": "HAL",
-      "headline": "HAL Eyes LCA Tejas Delivery Acceleration as IAF Targets Full Squadron Induction",
-      "summary": "Hindustan Aeronautics faces an execution focal point as the Indian Air Force advances delivery requirements for 180 Tejas Mk1A fighters alongside Su-30 MKI upgrades, with initial squadron operationalization prioritized for the close of the current fiscal year.",
+      "symbol": "BEL",
+      "headline": "Bharat Electronics Secures ₹619 Crore Orders and Gains Focus on ₹1,976 Crore Barak Deal",
+      "summary": "BEL announced fresh contracts worth ₹619 crore for drones and communication suites, while the MoD signed a ₹1,976.4 crore naval missile upgrade with IAI.",
       "sentiment": "Positive",
       "importance": "High",
-      "catalystType": "Guidance",
+      "catalystType": "Order win",
       "timeHorizon": "This week",
-      "impact": "Execution clarity on high-margin fighter jet deliveries reinforces multi-week base construction.",
-      "sourceName": "Sahi Markets",
-      "sourceUrl": "https://www.sahi.com/assets/uploads/2811_PE_1_CORPORATE_16_11_2026_16x9_fbc71eea19.jpg",
-      "publishedAt": "2026-11-16T05:06:00Z"
+      "impact": "Continuous contract replenishment defends ₹398-₹400 pivot, keeping constructive consolidation structure intact.",
+      "sourceName": "Angel One",
+      "sourceUrl": "https://www.angelone.in/news/stocks/bharat-electronics-share-price-in-focus-receives-additional-orders-worth-619-crore",
+      "publishedAt": "2026-11-15T19:36:00Z"
     },
     {
       "category": "stock",
       "symbol": "COCHINSHIP",
-      "headline": "Cochin Shipyard Bags Rs 498.58-Crore MoD Contract for INS Betwa Refit and Repowering",
-      "summary": "Cochin Shipyard received an order valued at Rs 498.58 crore from the Ministry of Defence to execute a comprehensive refit and repowering of INS Betwa, replacing steam units with modern diesel propulsion while carrying a healthy aggregate order book over Rs 22,000 crore.",
+      "headline": "Cochin Shipyard Bags ₹500 Crore MoD Naval Vessel Refit Contract and Explores Aframax Tanker Bid",
+      "summary": "Cochin Shipyard signed a ₹500 crore contract with the MoD on November 11, 2026, for naval vessel refit and entered the bid race for four Aframax tankers worth $300 million.",
       "sentiment": "Positive",
       "importance": "High",
       "catalystType": "Order win",
       "timeHorizon": "This week",
-      "impact": "High-margin ship-repair and refit mandate helps stabilize price action following second-quarter earnings volatility.",
-      "sourceName": "The Economic Times",
-      "sourceUrl": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGVZ3ZkkFPYBzEgSLM4xCksRQUl4shBwEo5PsLPYv9syXJl7VbloWafuRJouTDmF4E8xttmOfaqIUkT9c132ZM6M8Gb0Z9tU-Wr0eqpNsXtBXq54D3i4nY9XkRcnQTnIBY=",
-      "publishedAt": "2026-11-11T19:10:00Z"
-    },
-    {
-      "category": "stock",
-      "symbol": "TRENT",
-      "headline": "Trent Enters Leadership Transition Under New Chairman Following 1,000th Zudio Store Landmark",
-      "summary": "Trent Limited appointed Bahram Vakil as Chairman following Noel Tata's retirement and subsequent transition to Chairman Emeritus, coming on the heels of Q2 revenue rising 22.5% to Rs 5,788 crore and its Zudio label surpassing 1,000 retail locations.",
-      "sentiment": "Positive",
-      "importance": "High",
-      "catalystType": "Corporate action",
-      "timeHorizon": "This week",
-      "impact": "Leadership continuity and retail footprint expansion provide fundamental backing for consolidation breakouts.",
-      "sourceName": "Upstox",
-      "sourceUrl": "https://assets.upstox.com/content/assets/images/news/trent-q2-fy2-update-oct-6-2026.webp",
-      "publishedAt": "2026-10-29T15:36:00Z"
+      "impact": "High-margin ship-repair order cushions recent margins, setting up support stabilization above ₹1,130.",
+      "sourceName": "Trade Brains",
+      "sourceUrl": "https://tradebrains.in/cochin-shipyard-bags-%e2%82%b9500-crore-defence-ministry-order-for-naval-vessel-refit-and-re-powering/",
+      "publishedAt": "2026-11-11T12:00:00Z"
     },
     {
       "category": "stock",
       "symbol": "CGPOWER",
-      "headline": "CG Power Subsidiary Awaits Final Safety Approvals Following Locomotive Order Cancellation",
-      "summary": "CG Power subsidiary GG Tronics had a developmental order worth Rs 500-600 crore from Chittaranjan Locomotive Works rescinded due to timeline expiration, but management reported final-stage safety and RDSO clearances for Version 4.0 to bid on upcoming bulk tenders.",
-      "sentiment": "Mixed",
+      "headline": "CG Power Approves ₹392.93 Crore Manufacturing Capex for Transformers and Switchgear",
+      "summary": "The board of CG Power approved capex across facilities to add 10,000 MVA power transformer capacity and 4,236 units of instrument transformers to meet transmission demand.",
+      "sentiment": "Positive",
       "importance": "High",
-      "catalystType": "Order win",
-      "timeHorizon": "Watch",
-      "impact": "Near-term order headwind is buffered by impending product safety qualification for larger upcoming procurements.",
-      "sourceName": "Mint",
-      "sourceUrl": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGugrd-LoeXa5RWzB1Sucq1MGT8IbrvcvMc69lXbF8BcZHiNECHJdws_N0V3GqDsHTE206Y-WJASim4HwfC9vlD2o8YMrSJtyVcaL3AVrTpUXSQ6ZqLj6CE8T1As5-F-k7A-moXQ8NxkvN-DivEHeLvp9-yNI9EOgvbL2yBj2NR0OLp1k81NJnV5vIqhQ6P5X8jUMp58k3uy27993-keB6HHkPdeAFQMz1UNceqdIc_-M639OF_5ZWnCkNmoigWGE7cUWNI",
-      "publishedAt": "2025-11-24T08:21:00Z"
-    },
-    {
-      "category": "sector",
-      "symbol": "NIFTYIT",
-      "headline": "Information Technology Sector Weakens on US Interest Rate Speculation",
-      "summary": "The Nifty IT index declined by 1.11% in a divergent session as frontline software exporters including TCS and Infosys fell under selling pressure triggered by hawkish US Fed policy minutes and higher global yields.",
-      "sentiment": "Negative",
-      "importance": "Medium",
-      "catalystType": "Macro/flows",
-      "timeHorizon": "Watch",
-      "impact": "Subdued relative strength advises caution on tech counter base breakouts pending clearer overseas macro cues.",
-      "sourceName": "The New Indian Express",
-      "sourceUrl": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHK9LdXcu_-w2VH8GVLrkHAu-aG3z5AGsj9qoJQN0bIjvOL7kMdmzuTu_3RAnp6a5rvPlMjHGjfq8YSzJBLwMBIuHrjYwmQ8G_t4v0DUfoGb173dOxbyIDiHQidaVyaKtOaBxJG0zVRPG0SyKdEofs77-dYH0rlmLpXmUxwTAYwXhnqY314amjWAz9ZpTrrQ24IOYlbTpPRF795qfTbYLc6_kcU_Ao17v22mGMKxW58ZdUEtDhaHHYJ7eFG",
-      "publishedAt": "2026-11-19T05:02:00Z"
+      "catalystType": "Corporate action",
+      "timeHorizon": "This week",
+      "impact": "Capacity doubling directly de-bottlenecks multi-quarter order backlog, sustaining long-term accumulation base.",
+      "sourceName": "Energetica India",
+      "sourceUrl": "https://www.energetica-india.net/noticias/cg-power-approves-inr-39293-crore-capex-for-manufacturing-expansion",
+      "publishedAt": "2026-11-10T08:00:00Z"
     },
     {
       "category": "stock",
       "symbol": "HAL",
-      "headline": "HAL Issues Make-1 Indigenisation Tender for Fighter Avionics Computer Cards",
-      "summary": "Hindustan Aeronautics Hyderabad Avionics Division issued an industry tender under the Make-1 project category to develop and qualify indigenous computer cards for fighter platforms, with bids scheduled to close on December 8, 2026.",
+      "headline": "Emkay Retains Buy on HAL with Target of ₹5,950 on Strong Q2 Execution",
+      "summary": "Emkay Global reiterated a Buy rating on HAL with an unchanged target of ₹5,950, highlighting Q2 revenue growth of 14.9% YoY to ₹7,613 crore and a ₹2.55 lakh crore order book.",
       "sentiment": "Positive",
       "importance": "Medium",
-      "catalystType": "Other",
-      "timeHorizon": "Watch",
-      "impact": "Structural push toward domestic avionics depth strengthens long-term gross margins across indigenous platforms.",
-      "sourceName": "idrw.org",
-      "sourceUrl": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF3J8oDProT3b6RksMXPmYQgG3WtIifzTwJ0CKeWFuf8Sc6uDm5tE4om3_Eyeqpu63dgm7fk9iGibrMTnHUWjnxI1zUe5G_fW_Pt7-EINLVJE7W5Tr7yRiNCT5ZS1N_NkgJs_4b7v-LDV5bt6rnN8NpISYDcY4whUZDnvZhvw==",
-      "publishedAt": "2026-11-18T12:00:00Z"
+      "catalystType": "Rating change",
+      "timeHorizon": "This week",
+      "impact": "Institutional research conviction anchors buying interest around ₹4,730 support during pullbacks.",
+      "sourceName": "TopNews",
+      "sourceUrl": "https://topnews.in/hindustan-aeronautics-hal-share-price-target-rs-5950-emkay-global-financial-services-2475681",
+      "publishedAt": "2026-11-19T06:00:00Z"
+    },
+    {
+      "category": "stock",
+      "symbol": "IIFL",
+      "headline": "Fairfax Sells Entire 13.25% Stake in IIFL Finance in ₹3,413 Crore Pre-Open Block Deal",
+      "summary": "Prem Watsa's Fairfax offloaded 5.61 crore shares of IIFL Finance at ₹611 each on November 18, 2026, to fund other banking acquisitions.",
+      "sentiment": "Positive",
+      "importance": "Medium",
+      "catalystType": "Block deal",
+      "timeHorizon": "This week",
+      "impact": "Removal of long-standing promoter-level overhang triggers 6% price pop, establishing clean multi-week launchpad.",
+      "sourceName": "Business Standard",
+      "sourceUrl": "https://www.business-standard.com/markets/news/iifl-finance-shares-gain-6-after-block-deal-fairfax-likely-seller-126111800366_1.html",
+      "publishedAt": "2026-11-18T05:33:00Z"
     },
     {
       "category": "stock",
       "symbol": "COCHINSHIP",
-      "headline": "Cochin Shipyard and NeST Group Launch Indigenous Hybrid Laser Welding Facility",
-      "summary": "Cochin Shipyard and SFO Technologies jointly inaugurated an Advanced Laser Engineering Centre to deploy indigenous hybrid laser arc welding technology, intended to cut build times and decrease foreign tooling dependence.",
-      "sentiment": "Neutral",
+      "headline": "Cochin Shipyard Marks Keel-Laying for Polestar Tugs and Signs Damen MoU",
+      "summary": "CSL laid the keel on November 18, 2026, for the first ASTDS 70T tug for Polestar Maritime and executed an MoU with Damen Shipyards on November 16, 2026, to explore localized tug manufacturing.",
+      "sentiment": "Positive",
       "importance": "Medium",
-      "catalystType": "Other",
+      "catalystType": "Corporate action",
       "timeHorizon": "Watch",
-      "impact": "Technological capability enhancement targets medium-term operational productivity for complex naval vessel construction.",
-      "sourceName": "The Economic Times",
-      "sourceUrl": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGVZ3ZkkFPYBzEgSLM4xCksRQUl4shBwEo5PsLPYv9syXJl7VbloWafuRJouTDmF4E8xttmOfaqIUkT9c132ZM6M8Gb0Z9tU-Wr0eqpNsXtBXq54D3i4nY9XkRcnQTnIBY=",
-      "publishedAt": "2026-11-11T16:25:00Z"
+      "impact": "Operational execution milestone supports base-building patterns around multi-month demand pivots.",
+      "sourceName": "PortNews IAA",
+      "sourceUrl": "https://en.portnews.ru/news/370216/",
+      "publishedAt": "2026-11-17T09:00:00Z"
+    },
+    {
+      "category": "stock",
+      "symbol": "TRENT",
+      "headline": "Trent Posts 25% Q2 Net Profit Growth to ₹468 Crore; Zudio Surpasses 1,000 Stores",
+      "summary": "Trent posted a 25% YoY rise in Q2 consolidated profit to ₹468.09 crore and 22% revenue growth to ₹5,873 crore, expanding its footprint past 1,000 Zudio outlets.",
+      "sentiment": "Positive",
+      "importance": "Medium",
+      "catalystType": "Earnings",
+      "timeHorizon": "Watch",
+      "impact": "Post-earnings consolidation near 50-day moving average sets up prospective cup-with-handle continuation setup.",
+      "sourceName": "Free Press Journal",
+      "sourceUrl": "https://www.freepressjournal.in/business/trent-q2-results-net-profit-rises-25-per-cetn-to-468-crore-zudio-crosses-1000-store-milestone",
+      "publishedAt": "2026-10-29T13:46:00Z"
+    },
+    {
+      "category": "stock",
+      "symbol": "CGPOWER",
+      "headline": "High Court Grants Relief with Stay on Waluj Plant Closure Direction",
+      "summary": "The Aurangabad bench stayed the Maharashtra Pollution Control Board closure directive against CG Power's Waluj facility (contributing 2.5% of revenue), with hearings set for November 19, 2026.",
+      "sentiment": "Neutral",
+      "importance": "Low",
+      "catalystType": "Regulatory",
+      "timeHorizon": "Watch",
+      "impact": "Removes immediate operational interruption overhang, allowing price to respect primary ascending trendline.",
+      "sourceName": "Stockk trading",
+      "sourceUrl": "https://stockktrading.com/cg-power-secures-stay-from-aurangabad-high-court-on-mpcb-closure-of-waluj-manufacturing-unit/",
+      "publishedAt": "2026-11-07T10:00:00Z"
     }
   ],
-  "disclaimer": "This intelligence report is compiled strictly for informational, educational, and analytical purposes within the Alpha Swing AI trading environment. It does not constitute investment advice, financial endorsement, or a direct buy/sell recommendation on any mentioned securities. Swing traders must perform independent technical and risk evaluation before deploying capital.",
-  "sources": []
+  "disclaimer": "This report is compiled strictly for analytical and educational purposes by Alpha Swing AI. It does not constitute investment advice, financial endorsement, or a recommendation to buy or sell securities. Capital markets involve substantial financial risk. Consult a SEBI-registered financial advisor before initiating trades.",
+  "sources": [
+    {
+      "title": "indiatimes.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGWNVLmRbB3oGuHreY6LSQpKa-Q80aW7p9RTV7tDN9xO9U5Xh3svlp2igzm89YdNxr4k7Ul45gWgo7VNSguQcmXLHCKWEGtkhLMyMeSq_OqUNmIEyv83Ch59PIWGDTCAXxz"
+    },
+    {
+      "title": "marketsmojo.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGDyeUAe9uSeprtFBQJFCnGK8npThtZVJX5hO1psHlFLYy2l3-oE2HR4T8QVJapkk1j1aYPJeYTu-OczRrRm4nmvwlVhwrBUCzusUgv9aa1HpM20MmTfoG4aknuPZLf4gMJbtbuuBExa3PsUxSl0ULiOB4rLy4XTzZ3Tjbe0Ztm1M89ILLblu94rYI5gVPCBMAgXt-TWuCGE0ucJn2tYB1Cr5AozOnS44T4ZvQpNLPNH3KVbalZ-jg16oOpElI="
+    },
+    {
+      "title": "globalbankingandfinance.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGdnTd4a-_qIBqs1qYxs_Sa3NMgd8-e-xgQ0krxB4LDj1AegCcYYSaQVL2S1lBFZSHx60WuV2egTr2BfGjGXHqrs-6wr_q7PIg4CYs-khHQbKT6plw_-0u6c6IB4wvJA3snr74_ASpZALt0ym-N_OV1HBdRw1kX8zRDXuWLtPULrl7XKlRsYj_WHwNugtYNDP0F"
+    },
+    {
+      "title": "financialexpress.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE7sHjCobfpT1ppkfyPspMT0OgduAFtl7RJBA6djzX84RpVWLzi_fq6O3RTWOdzWTOUyFwKBJES6JZ_744e8xpNUSdkJ4Z8T8AWsPaqVDVebw3mXybfxW9Dar5bTrL8zoq5tCv0PMW-EWBC4E8l45k1vvdM737g9LrWq0Jf55bNlPXIKoD-B6VoARcvZzftL3-NZ6ZChOKJjR0yvfgtDzjqKp45IBOdDe80Gv0fkMBms5smaKHZcj8Lq-tg5mRz"
+    },
+    {
+      "title": "kotakneo.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGLbPDqai6cRowR33PoNMWbXYu6fimCIzFiqubX7j1YEAjf6NwnZbr97jeS4SERS8u9-2gjz1uTAaHlG_6d9rHezcj4oZMUkNmBV_4ajijuDBOFg8jSwptrcVqYmYBR6HOeZxPqgYDfVgY8x2XR-91MAbptxQBo4FVOwwKKg0gbMbyAcoQwM17mu5zziObCTYY="
+    },
+    {
+      "title": "angelone.in",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGTMiTxc8egONLMHuxH-3yHxZ1psgZtT5-IV_iDkULqDJ-nwp0h3zDmGjmnthHKWwAEMXETn5LHzAAQALqVmo6F7DRbf56t8dEbI_Ne_CUtmBXn9j-muBIuujrdDGDti6jClYSv2iiYgDs93z6DAn5VfmLE-Yo4GHEICYbcjk7f2-71S8-FGZ41KvBKZzv3XGcO2UVyte_g8gDd6VaI1zNV1vS652Bn6ltOSCUNFnUiX5snfc_1"
+    },
+    {
+      "title": "livemint.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG4R587yUhBF2zvzf9zqKuxGQVh0HB9eXLxgjrv4xevDEmIuOi2zBKdLcHUrXATABu0PsqaZuGPn8spZmC-BZxVqsXkkRFvYJNaKNw_XU6smxY91xGL_5wbWO42VAcvau5AGRM156NKBOQ2j6IAI5i8lk9hfjwM0shnfGUlGsxIqgQratYsF0wDxaD7xZpOKD3EaTk0FowQEmCpgM8iI1nlRgkz7Ra1pt3fbQO7uxXBtMGHuySBofmaFpua9MIuEwxuW1bs3tITMzkd2kpLik_9IKMah1onE06PCUioZSkb7WB-Kj43sOEh"
+    },
+    {
+      "title": "perplexity.ai",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHo2x6smdlmJzoQajZJJwsPIM3v_ntaxiwClyflkp91hwLjL3BFE2dbhKuHhkW6u4zk5SGbebLXqcboV0udpp2cvA6btS6oLk7JBiUY9k7rRar1Qt1DOW5NIgO4WYMGsdnS-P2LShRXF8lCoF5e4sn5duilj1obk9n9BpXpvy9NDVRVNSoSoIfBgghmb72ZvCV875rvGdcrbBn42mjI"
+    },
+    {
+      "title": "tradingview.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFIqA1a-FG01XLvnuuMSGvuhKfQ7R7-EnupCPsuLZwigyrjhynbSPYRmFGkwFxf-rdQz88Z2d7rJ6i7fiJ5fJmBr7sMSUtt2Cn-c32ACFpygZ0-cQ-IZIFs7pk5vFWer2dlz6fjheEXohVOvP2c6A=="
+    },
+    {
+      "title": "investmentguruindia.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFmJXv3_Dwb3BkXUmKJYmzCVxetTCAVbb5UQtEKw7mIjoqnDbSAzCwg0JcsiphsjjLvHBEy5zVE0aYKpEUt_vPzEpLSYm0q3ouIpNWLjWzCws6oVt6jDl8-BT0g1XUBzNf70bUyexN3aRR3OEEzcaKXpHNwcNXo-zZXPLTVdPFEjVaPXMUGBsUiol27dlpeH8RZNpvu5XrqCshXrJ6vicNsnvBs2ApuZ12AJ2tQ4iRux6dvUUodx76qHMBYS3wXS5k9E9e5yHV144zYYwRb9YL6Q3N0cdhm3QXVdR_R1ZBGUYbWDe_gEbBUwBSxriNG"
+    },
+    {
+      "title": "bel-india.in",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG9tSs9IY-966KwPXNHOKKTVcONZM7Cn0v2jfFULNxI9kXYUsgMfMiAhxIcPtmX_oNERFauruyJmZLIH6NUTtyrr7Wd2RpQjkkr4JXZHDrnSq8uPWDCrhikBk8JaqM5DWbFLb3dGMzCRUicOJrY6rwOd_SHbUv7o4gZTwI="
+    },
+    {
+      "title": "kotakneo.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEb6giw-iBbRksV7bMtgm-mJpxNdJRfg5IJp8x7ekX1sSZf5GT6yGR5CfevI1Nl3y2BXnRGoAZ9zJMYx8TY83UREo8YAGiPGO_I9e8scfOaUQd9qOY0MumEHvry-tgXK_oe908sTIOhUgIW6-xWsA4UqWH-zgQFMyBWYGrU-tiStIY5aGi6QsWqZIAKI1AFuZpgNrkZMx0nG5zvxl6AcrmeMevXbI89zbkdw44__DkEiz0XihH9ZppdNtEAlBTg"
+    },
+    {
+      "title": "nseindia.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEEygAEOk2x77uAmStDaCWo519XRPu_Ia5xgVahTj16c5wk3smH26zald06GDO9mwzGRMRnKZqCSjEzuP9zx1y9kYa4sBfJN4MpqC7LWpZKD4hQ3tc9FP71Hk5x9Rg1AMWi7FIiLC2afaLflQXoSDl2fqS0nk9-l6ILZzAd-EcF2kEk4E4IpQhCikAPG3vuxpA1UPR_83wkLwaZpEefm0iDVmFVdtgF_WM="
+    },
+    {
+      "title": "energetica-india.net",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG2JKUydxUVe9X4eGZKeHiaJ5oQuPvixA6msPjX5kLUvOEkVihfgbCwswvEjUjObyyg6ktZIk9TbdTSq9Bq2p57ohefp0s2wd3QN0StyIwjrgufIgvM_sdtyy1XEsrV-LST_pDqLyb6jax7PMPZ-E_oA-ODAn5u5v74GMUCOR1G0rsO4GOvawKcHHBqSiox0bLRMOWWCuz9WssgneJX9Z02"
+    },
+    {
+      "title": "investmentguruindia.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHoPOWJ3ix8VdLrh2JGIU61mjU3JTY-kZu7Iih_PHOHWksWLzWv_7D7i8U11UffkLtA6Z28zdiNgHe6OG5Dgvqw0Taea_Pwbq12Bvwwp_HRkA_gmTpakfSE4wObtlhwfBvv_his9LfDmooYvcospnOQBRLcj0pD_NpHdzNaEwMMCA03Az4cpZh3csJ9rKk3uXCektCxD3X3BFAC6R0XmzMfBP7dyPtLD3g8RHb0rX9dvaSgHXI0oufpDV4XV4Sz66PqlRvljtsBxWoSwI59HXEVBQ=="
+    },
+    {
+      "title": "tradebrains.in",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQErBlLHoJ-zUXhtO5mFooeP_lBwdXe90R7-p6A5mUyxyhdnig7bsBww7VZ1Dm_ABQIfZpDKeFRBZdQisFk4jtAytiycQgBBzRDcQv8RA6TPOfYMmQAYWEpaW0Ae90JLQbdnt-Te1ybGOPX7GNrmnHI-0JoyQeTPpXgo-l6QlV2itdUvqi-0S8ASdGg8GS7hSK0e690MOsVaBuipLx0Of8LRP8OwCZfvhJN4FaqHrpM5yUDphuuTLw21UsQEUjQn3l91pQ=="
+    },
+    {
+      "title": "indiatimes.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFujrHUEuND6nYSxcNkpB8ypcDgh0QIS5erIeKOzHDr7mdP4LwVl66mDMNKydX9IWhfrr3xofKoQk28gDFBT3acMsTBeBphT171FBvS9SFMBdJEbSIcc1cswJ9-EaJWzhFTTgo9qxKKdTtT8KhZSFF7SikGJhUah0qLwR7Y3NC6YzNQQtyCSpcLgTpJumrHaAvlYwWSOhttGqVOR6Z1h79iMo6x8MuqEBE0i-ExRva4nfudpMojVENOKMGSiIvuVqDPaaXjYVBOijHbC0sChHjhFF9WrSk="
+    },
+    {
+      "title": "screener.in",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEidTEbp3dgTweUTR-ttiWge45OovtouWEqbydYQG3m4DZBTvnwtlCaEKqlSqPhUWXpL7OvZ4C-1Ou8Zzt5memOiH9ADj28jgWh6ONWGqM7U8RJofIRFV4rFLY9HwTPqhM="
+    },
+    {
+      "title": "scanx.trade",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFtKE8f6_w-rW2NFQyewuwz5dvAaCH49A6bLIfK9vuHHtgY-hA_G1o0PCouMLW38O_cOG-hzBLBNQwn4ql81KHwYOs4ObIuSb46a2TDSZY3J7pn3coMoFlSWV9YEcMJ8FJ1WUlpcJE_oqrgx2lhztkaftq2cwTASWvCcp7iI0Kfhf8gEJpg0QzJ0JkiWtNCErrvPgOVkvi1xbrGYi_U_tqFmJDTPN3we40WWDgE0hbjeaYn"
+    },
+    {
+      "title": "topnews.in",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHBGG4PE3Zz5AaHdO967bqbcrd8DOASnyWusdd0fZMNlwjEf-a7JpgZXwm_m7x65TRRhfPs_X65X1RtpVBPB3UpKy37cP0xI6XRKyiqP0uETDeIJZny961YDcbhULAL60sWr4MROWTDDGpOqDJGIvVzHnD8hd-gE7cfX5pF4acBHqyN5p3hCmASwViTHFBUlRH_WoXcBBcfcXvEVNniuWkxUxLw8LI="
+    },
+    {
+      "title": "nseindia.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF7DmNeAUDhFs_kWBmWRmDs35bxGCVLPcPKbobGYZcERAdPzJx_xggLSG4jlwB6klm7BVAsMn7IiAkmyhwECFY4XPg2AuHIp-hBRkqOJfMlSH7BXyfs8-vH_GMKmugSAk14KDmoaQ9H5Fm-s0enklbOwhvDpSTVgTNr9LcpX_GZTYU="
+    },
+    {
+      "title": "business-standard.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEC8gy-cbUqbC2ZlwHIbBppQYlfIK9xfc8eZPTMW0IUGRPk5IbZY5wtl0mwfsnAVnnHUWZjWVhjzoxzwTz5c5otelPfRpxe7Ww5WWBFnOUMMq3hC3F6-93MbOyMYb2Mkq4K8KLqSCI85LVl2zt2GLBeL2iSX4_fHHMtQ_id3TxTFo-qLSx2rGFMDN5WI4UiFsmMm1iAzPVXIFguCb31lvguYOFfm2Aqz6N-LiOxV4EMajKlVo0hx1_wI2bf"
+    },
+    {
+      "title": "trendlyne.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG_oPB1uULKsPNygLBfOggnnZtk_XNnLOIMAOv5bwTHNmryUNgf7xh0Mb4jZwQc445Sek0_KKo32CYWF4oc6N66P-LjPfFW7TADQDwrGphuUO05qkGQWreLyTxPhY-QKB9Rm7gNyBJpglrTqIh4LI9tqcnIBbs8aWf5NFKpb0OUoUtN3TFp38N4pxIngWTCfgoiCbkr8tDEvF-bTifZi6Xy86G8No6o-fy7BF16"
+    },
+    {
+      "title": "business-standard.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE1jr8z3hhCcy3Sr5eAbdPbCk9-jDcj3a_1UG_Ewr4OB4jEbpY0TZDYIkEfZWNlEPsTaKFrsEYUArkv_og88gjb6FW9koTNEWrU399FPXtHxja7MjxLA5LyTFKw--VmvmKEYmMUxnEfvxc_--euDk6loRtnGKBBih_ZITncUvB-M9EWBclElayafZIQe--AY6qVJXV7YzZCOEaVfvB33s0HR96kZyhCNlfOc3VvoSIEHyqSt9FvXSOQXs3h"
+    },
+    {
+      "title": "cochinshipyard.in",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGlPWlBv74apzQFvxWNnQiM5flkotXssqihi0YopF0ZZvKDv4EQfRUxE2BaCmwHEFUKC6zZvCvZ2vY_LPx4VSjc2BaE48viMXtqoNBb5z4ghQqBwnHEUnFQYM6eZbI="
+    },
+    {
+      "title": "portnews.ru",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGWPsKBoB4iLGJRn8SdC7xo12fMLwOw97if7DnD1_Ag6T-jpgIxIptzUp1QnSCC8DqkUvmfa6lKEhc57vV_5GNPyHrGUp31y3AAeczMOfc9cWkQRqtAM8_b3A=="
+    },
+    {
+      "title": "kalkinemedia.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFVPpv864o6cuyob03rRfSTXlUN77N2EaX4d8rCqu-Q2I9Qv6tFbhDM_TEVOyZ9PAcPs19NWinCH-E2v0RDW5-oBsX9c9Q4nXomkEi-Oq3dOkywnuxzJKv6P-dlDYb88bRMuYKx7yK0Ufo8yf_eytupOkC_FUZ-0yWgRrr4f539YL1Bh-ExsEVLANw7VaNfRgDHhPsUjAXMt0CZSr3hf1WqoYUf_jluAwUlGDAd-JFimDGa"
+    },
+    {
+      "title": "freepressjournal.in",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGInGAfVBXBUljNWIiiMP4v1JwUpLeOCxxzuDBzubRRT5-kvVB4HSTM384RcQXRQ4c6Lr7ZySeo4-N9I2Rpc9drFW4bvnKeds-56RAcfmSwm5LglYebgd7Z0YsSDFLoxpkX7p3itskBvy9wmqgoiecHc-5TQSwJC5YwPvVzNfVxvXMqmlv4PDv7A31x8NpbA2C5nQ2zWoW_OMSWLIBfQg2PBAGMWECalMe4dvj520_10JtQxHCmoOFIbnI4yeA="
+    },
+    {
+      "title": "dailypioneer.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGbpVm-1mS9UJrCYaBUevPwewQeBPSbueHNuL4hdn_GacVYbi-qtfVoRU4wOarIHoZg2kCJk1DL6KIn43miHumc77Nyk2JtgvxIc5ubcPiHHxhyyYopKZcRv8CWORzRw6FVYusyu9-nKv6QR1KQHqRbC7T1Izqg9m1Vw9eSC5duOZX3ucahWX00M40iKtLCm4iX5DRORC_fC1xBXGGRAmY="
+    },
+    {
+      "title": "business-standard.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHz0poVfKevsKLvGoiJy__qxmq7lM-dU5FKwnumxD0pJ2poLO78L94cLZam0L2wc-ZPM17NTnBvPwzv2-oloDLSkMWb8sS_yLUU6ZKUTKBRI9cfe5WZpczco-7F6bfhoBGZ3w8TjMk7HZlToKu91N-j1CIYpu-5ZCOw6QVPsCD8S6OG-2j3F_jktxauSMbbDdPsSb4FrGGML_cU-WA3WoKQcl1ly3Qaw9QklxbNIs3cMJgFPd3orZT1XPyXOs2Xd7o="
+    },
+    {
+      "title": "hdfcsec.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFP8T1-aAvD9q51PQw46s4ahy7F4NKGECJxwGqtCyR7oaaZf59RocoREChmqqq1CfZ7F6GXdRj9OxXpQQe4fUsvs-0Oy1qp9rCiUvbS9QS5tMWpl1MQqH3JN4JwldxhAtuI5gfXX7hgxg7E"
+    },
+    {
+      "title": "stockk.trade",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHnnOJTmUzhqna6Pxg2euVoqagOBjzkMB9P6_MeOMvRGabS_NWqx-2Eba_LscxFtyCcxXoQnqjaAij6IiOVyJrIc9ycnBS9h4_xH7Md2fM-CkR4FDttgb5Sj-nNZaUlXxa4sVJvSHb5VGzCT1WO2OfxoPijumVh57tIXaoKEt0nA5MwDj3iu59oUkV8_EHf5Pb-OMM3Ntjv4djJ2GDFd1D9jeGP4P18BZeKv_iSrjW8NXsTUKfIyAMpI0JzUdpk"
+    }
+  ]
 }
