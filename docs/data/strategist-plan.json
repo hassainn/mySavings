@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-20T20:22:49.363Z",
+  "generatedAt": "2026-11-20T20:35:02.955Z",
   "sessionDate": "2026-11-21",
   "status": "ready",
   "scanGeneratedAt": "2026-11-20T19:26:45.323Z",
@@ -239,13 +239,101 @@
   ],
   "previousSession": "2026-11-20",
   "intelligenceGeneratedAt": "2026-11-20T20:20:45.315Z",
-  "commentary": null,
-  "commentaryStatus": "unavailable",
+  "commentary": "With market breadth scored defensive at 42 and the deterministic gate marked WEAK, institutional discipline dictates caution. Weinstein stage analysis and O'Neil's market-direction rules emphasize that even while Nifty consolidates above 25,200 and Bank Nifty exhibits relative strength, broad participation remains narrow. In an uptrend under pressure, capital preservation takes precedence: high-volume breakouts face increased failure rates, progressive exposure must govern new buys, and position sizing should stay conservative. Minervini discipline mandates demanding confirmed, accelerating earnings (C+A) and tightening stop-losses immediately. We focus exclusively on verified Stage 2 leaders displaying relative strength, while passing on unconfirmed turnarounds, deteriorating fundamentals, and non-equity proxies.",
+  "commentaryStatus": "available",
   "limitations": [
     "Daily scan observations are not fills or performance results.",
     "Price levels are scanner references, not live quotes.",
     "No broker orders are submitted."
   ],
+  "model": "gemini-3.8-flash",
+  "analysis": {
+    "analyst": "SEPA, CANSLIM & Weinstein Stage Analysis",
+    "bySymbol": {
+      "63MOONS": {
+        "stage": "Stage 2 advancing",
+        "technical": "Trading constructively above rising 21-EMA, 50-SMA, and 200-SMA in a Stage 2 framework. Formed a 23.8% cup with a tight 10.5% handle and clear volume contraction towards the 982.83 trigger. However, resistance near 985 looms.",
+        "epsGrowth": [
+          "Q2 FY27 +420%",
+          "Q1 FY27 -52%"
+        ],
+        "revenueGrowth": "+131.7%",
+        "earningsTrend": "Negative",
+        "growthQualified": "No",
+        "fundamental": "Despite strong standalone sales growth (+131.7%) fueled by cybersecurity offerings, consolidated operations reported a net loss of ₹28.73 crore in Q2 FY27. Auditor qualifications and legacy exchange liabilities undermine balance sheet credibility.",
+        "verdict": "Watch",
+        "risk": "A breakdown beneath the handle support at 894.50 invalidates base structure; enforce strict stop-loss discipline."
+      },
+      "AAREYDRUGS": {
+        "stage": "Stage 2 advancing",
+        "technical": "Hovering within 1.5% of its 116.92 20-session pivot above key moving averages (21-EMA, 50-SMA, 200-SMA). Daily momentum is neutral-to-positive (RSI 61), but breakout volume conviction remains unproven.",
+        "epsGrowth": [
+          "Q1 FY27 -25.5%",
+          "Q4 FY26 +231.9%"
+        ],
+        "revenueGrowth": "-55.4%",
+        "earningsTrend": "Negative",
+        "growthQualified": "No",
+        "fundamental": "Operating numbers deteriorated sharply with Q1 FY27 sales collapsing 55.4% YoY and EPS sliding 25.5%. Thin operating margins (1-3%) and low return on equity (2.8%) fail CANSLIM investment thresholds.",
+        "verdict": "Avoid",
+        "risk": "Failure to hold 106.43 violates intermediate moving averages and base integrity, requiring immediate exit."
+      },
+      "AARTIPHARM": {
+        "stage": "Stage 2 advancing",
+        "technical": "Classic Stage 2 uptrend clearing a double bottom base toward 1048.30. Price tracks above upward-sloping 50-SMA and 200-SMA with an assertive RSI of 71 and bullish MACD confirmation.",
+        "epsGrowth": [
+          "Q2 FY27 +180%",
+          "Q1 FY27 +49.2%"
+        ],
+        "revenueGrowth": "+46.8%",
+        "earningsTrend": "Accelerating",
+        "growthQualified": "Yes",
+        "fundamental": "Textbook CANSLIM acceleration: Q2 FY27 standalone net profit soared 180% YoY to ₹65.8 crore on 46.8% sales growth. Operating EBITDA margins expanded to 22.2%, supported by low leverage (D/E 0.36) and CDMO expansion.",
+        "verdict": "Leading",
+        "risk": "Reversal below the swing floor at 965.77 damages the breakout pivot; cut loss immediately."
+      },
+      "ABCAPITAL": {
+        "stage": "Stage 2 advancing",
+        "technical": "Executed a clean 20-day high breakout above 420.42, maintaining clear alignment above rising 21-EMA, 50-SMA, and 200-SMA. Price prints higher reaction highs with supportive MACD and momentum.",
+        "epsGrowth": [
+          "Q2 FY27 +31.9%",
+          "Q1 FY27 +24.9%"
+        ],
+        "revenueGrowth": "+31.5%",
+        "earningsTrend": "Accelerating",
+        "growthQualified": "Yes",
+        "fundamental": "Universal financial powerhouse delivered 31.5% YoY consolidated revenue growth to ₹14,159 crore and 40.9% PAT growth in Q2 FY27. Core lending books and insurance subsidiaries are expanding steadily with ROE around 12%.",
+        "verdict": "Constructive",
+        "risk": "Violation of the breakout retest zone at 397.78 breaches structure; execute timely stop protection."
+      },
+      "ABGSEC": {
+        "stage": "Unclear",
+        "technical": "Gilt ETF holding central/state debt securities hugging moving averages near 118.12. Reflects sovereign bond duration and yield movements rather than equity Stage 2 volume-momentum characteristics.",
+        "epsGrowth": [
+          "not verified"
+        ],
+        "revenueGrowth": "not verified",
+        "earningsTrend": "Not verified",
+        "growthQualified": "Not verified",
+        "fundamental": "Sovereign debt index tracking fund holding Government of India securities; traditional CANSLIM corporate fundamentals, margins, sales, and EPS metrics do not apply.",
+        "verdict": "Avoid",
+        "risk": "Vulnerable to macro yield spikes; exit if NAV falls under key support at 116.63."
+      },
+      "ABSLBANETF": {
+        "stage": "Stage 2 advancing",
+        "technical": "Powering to new trailing-year highs on 4.16x volume expansion, confirming a textbook 20-day breakout at 64.86. Moving averages are in full bullish Stage 2 alignment, reflecting Bank Nifty leadership.",
+        "epsGrowth": [
+          "not verified"
+        ],
+        "revenueGrowth": "not verified",
+        "earningsTrend": "Not verified",
+        "growthQualified": "Not verified",
+        "fundamental": "Passive exchange-traded fund tracking the Bank Nifty basket. While individual company CANSLIM metrics do not apply directly, underlying banking constituents enjoy healthy net interest margins and multi-year low NPAs.",
+        "verdict": "Watch",
+        "risk": "A breakdown back below the breakout launchpad at 62.05 invalidates institutional momentum, triggering an exit."
+      }
+    }
+  },
   "history": [
     {
       "sessionDate": "2026-11-15",
