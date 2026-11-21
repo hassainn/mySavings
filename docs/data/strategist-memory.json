@@ -5861,29 +5861,10 @@
     },
     {
       "sessionDate": "2026-11-21",
-      "generatedAt": "2026-11-21T12:59:17.748Z",
+      "generatedAt": "2026-11-21T18:17:10.275Z",
       "gate": "WEAK",
       "verdict": "No new buys. Observe and protect capital.",
       "ideas": [
-        {
-          "symbol": "63MOONS",
-          "name": "63 Moons Technologies",
-          "pattern": "Double bottom",
-          "confidence": 99,
-          "state": "Watch",
-          "scanState": "Armed",
-          "asOf": "2026-11-20T00:00:00+05:30",
-          "close": 932.7,
-          "entryTrigger": 982.83,
-          "stop": 894.5,
-          "target2R": 1159.5,
-          "evidence": [
-            "Price above EMA21, SMA50 and SMA200",
-            "Two aligned swing lows with neckline pressure",
-            "Rounded cup 23.8% deep with a 10.5% handle in the upper half of the base",
-            "Volume dried up through the handle"
-          ]
-        },
         {
           "symbol": "AAREYDRUGS",
           "name": "AAREY DRUGS & PHARM LTD",
@@ -5892,7 +5873,7 @@
           "state": "Watch",
           "scanState": "Armed",
           "asOf": "2026-11-20T00:00:00+05:30",
-          "close": 115.9,
+          "close": 116.03,
           "entryTrigger": 116.92,
           "stop": 106.43,
           "target2R": 137.89,
@@ -5968,7 +5949,7 @@
           "state": "Watch",
           "scanState": "Triggered",
           "asOf": "2026-11-20T00:00:00+05:30",
-          "close": 66.15,
+          "close": 66.34,
           "entryTrigger": 64.86,
           "stop": 62.05,
           "target2R": 70.5,
@@ -6016,18 +5997,37 @@
             "MACD is above signal and zero line",
             "Two aligned swing lows with neckline pressure"
           ]
+        },
+        {
+          "symbol": "ADANIPOWER",
+          "name": "Adani Power",
+          "pattern": "20-day breakout",
+          "confidence": 99,
+          "state": "Watch",
+          "scanState": "Armed",
+          "asOf": "2026-11-20T00:00:00+05:30",
+          "close": 211.95,
+          "entryTrigger": 217.62,
+          "stop": 208.59,
+          "target2R": 235.67,
+          "evidence": [
+            "Price above EMA21, SMA50 and SMA200",
+            "Close cleared the prior 20-session high",
+            "1.78× 20-day average volume",
+            "MACD is above signal and zero line"
+          ]
         }
       ],
       "observations": [
         {
           "symbol": "63MOONS",
           "previousState": "Watch",
-          "observation": "Latest scanned close 932.7; scanner state Armed. This is not an executed trade or an intraday stop/target check."
+          "observation": "No newer scan observation; outcome unknown."
         },
         {
           "symbol": "AAREYDRUGS",
           "previousState": "Watch",
-          "observation": "Latest scanned close 115.9; scanner state Armed. This is not an executed trade or an intraday stop/target check."
+          "observation": "Latest scanned close 116.03; scanner state Armed. This is not an executed trade or an intraday stop/target check."
         },
         {
           "symbol": "AARTIPHARM",
