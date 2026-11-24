@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-23T23:02:09.948Z",
+  "generatedAt": "2026-11-24T00:07:28.090Z",
   "sessionDate": "2026-11-24",
   "status": "ready",
   "scanGeneratedAt": "2026-11-23T23:01:51.784Z",
@@ -239,7 +239,7 @@
   ],
   "previousSession": "2026-11-23",
   "intelligenceGeneratedAt": "2026-11-23T12:41:49.999Z",
-  "commentary": "With market breadth deteriorating to a weak score of 36 and benchmark indices shedding nearly 1.8% under aggressive distribution, Stan Weinstein's stage discipline and William O'Neil's market-direction rules demand strict defensiveness. In a weak market regime, broad selling pressure causes leading breakout attempts to fail at elevated rates. Legendary risk management dictates curtailing exposure, respecting stop losses without hesitation, and resisting the urge to chase extended setups. Even fundamentally robust Stage 2 advancing leaders require tight pivot entries and high volume confirmation before deploying progressive capital.",
+  "commentary": "Market breadth deteriorated to 36 as a sharp 1.75% distribution day on the Nifty 50 halted a four-week advance, driven by institutional liquidation across banks and metals. In Stan Weinstein's framework, broad deterioration imposes strong headwinds, while William O'Neil's market-direction discipline emphasizes that three out of four equities mirror general market trend. With the gate at WEAK, Minervini progressive exposure mandates extreme defensiveness: avoid aggressive buying, respect overhead supply, and demand elite CANSLIM fundamentals. Only confirmed Stage 2 issues demonstrating accelerating quarterly EPS, robust sales, and dry volume consolidations warrant watchlist placement until constructive market follow-through emerges.",
   "commentaryStatus": "available",
   "limitations": [
     "Daily scan observations are not fills or performance results.",
@@ -248,92 +248,90 @@
   ],
   "model": "gemini-3.8-flash",
   "analysis": {
-    "analyst": "Minervini SEPA, O'Neil CANSLIM, Weinstein Stage Analysis, Darvas Box & Livermore Discipline",
+    "analyst": "Minervini SEPA, O'Neil CANSLIM & Weinstein Stage Analysis",
     "bySymbol": {
       "AARTIPHARM": {
         "stage": "Stage 2 advancing",
-        "technical": "Constructing a classic Stage 2 double-bottom base above rising 21-EMA, 50-DMA, and 200-DMA. Approaching the 1048.30 pivot on 1.15x volume expansion with RSI at 71 confirming strong upside momentum without overbought exhaustion.",
+        "technical": "Clearing double-bottom pivot with RSI at 71 and MACD positive above zero. Price holds firmly above rising 21-EMA, 50-DMA, and 200-DMA trend template. Relative strength remains resilient against broad market distribution.",
         "epsGrowth": [
-          "Q2 FY27 +248%",
-          "Q1 FY27 +54%",
-          "Q4 FY26 +27%"
+          "Q2 FY27 +156%",
+          "Q1 FY27 +85%"
         ],
         "revenueGrowth": "+46%",
         "earningsTrend": "Accelerating",
         "growthQualified": "Yes",
-        "fundamental": "Specialty API and CDMO manufacturer showing robust operating margins (~25%), manageable leverage, and an expanding order pipeline. Clean balance sheet and strong institutional interest align with CANSLIM criteria.",
-        "verdict": "Leading",
-        "risk": "Thesis fails on a breakdown below 963.13, violating double-bottom support and the rising 21-day EMA."
+        "fundamental": "Robust CDMO and xanthine volume expansion drove 46% revenue growth and operating leverage. Operating margins expanded past 22% with healthy ROCE. Capital expenditure plans require monitorable debt additions.",
+        "verdict": "Constructive",
+        "risk": "Failure below 963.13 stop violates double-bottom support. Cut losses immediately to maintain asymmetric risk-reward."
       },
       "ABDL": {
         "stage": "Stage 2 advancing",
-        "technical": "Building a Stage 2 base above the 21-EMA, 50-DMA, and 200-DMA. Testing neckline resistance near 855.55 with lower wick rejections displaying intraday accumulation, though relative volume remains moderate.",
+        "technical": "Constructing double bottom with long lower rejection wick off swing lows. Price remains above key moving averages, but heavier volume expansion is required to validate neckline clearance.",
         "epsGrowth": [
-          "Q2 FY27 +18%",
-          "Q1 FY27 +15%"
+          "Q2 FY27 +15%",
+          "Q1 FY27 -20%"
         ],
         "revenueGrowth": "+16%",
         "earningsTrend": "Steady",
         "growthQualified": "Partial",
-        "fundamental": "Leading IMFL producer benefiting from premiumization and balance sheet deleveraging post-IPO. Operating margins hold steady at 13-14% with 18% ROCE, but sub-25% EPS expansion caps CANSLIM leadership rating.",
+        "fundamental": "Prestige portfolio premiumization drove 16% revenue growth and record volumes, but 10% net profit growth lags CANSLIM thresholds. Operating leverage is constrained by 2.2x debt leverage and supply friction.",
         "verdict": "Watch",
-        "risk": "Thesis invalidates below 798.53, breaking the double-bottom base floor and short-term moving average support."
+        "risk": "Break below 798.53 swing support invalidates bottom structure; cap risk per strict stop discipline."
       },
       "ABGSEC": {
         "stage": "Unclear",
-        "technical": "Fixed-income vehicle trading near 118.12 above moving averages on 1.87x volume. Lacks equity base characteristics, VCP contraction, or organic market relative strength required for growth trading.",
+        "technical": "Fixed-income Gilt ETF consolidating in a tight band near 118.12. Extremely low volatility and minimal volume characteristics typical of sovereign debt proxies, entirely lacking equity breakout dynamics.",
         "epsGrowth": [
           "not verified"
         ],
         "revenueGrowth": "not verified",
         "earningsTrend": "Not verified",
         "growthQualified": "Not verified",
-        "fundamental": "not verified",
+        "fundamental": "Aditya Birla Sun Life CRISIL Broad Based Gilt ETF tracks government securities. Standard corporate equity fundamentals including EPS, sales growth, operating margins, and ROCE do not apply.",
         "verdict": "Avoid",
-        "risk": "A decline below 116.48 breaches support; holding gilt ETFs violates active equity growth selection criteria."
+        "risk": "Thesis invalidates below 116.48; price behavior is governed by benchmark sovereign yields rather than corporate earnings."
       },
       "AIROLAM": {
         "stage": "Stage 2 advancing",
-        "technical": "Attempting a Stage 2 continuation above the 21-EMA and 50-DMA with a 3-up pullback structure toward 123.89. RSI at 54 reveals modest relative strength, requiring volume expansion to confirm.",
+        "technical": "Forming double bottom above rising 21-EMA and 50-DMA with constructive 3-up sequence. RSI at 54 provides ample room before overbought levels, though breakout volume expansion is still developing.",
         "epsGrowth": [
           "Q2 FY27 +42%",
-          "Q1 FY27 +7%"
+          "Q1 FY27 +91%"
         ],
-        "revenueGrowth": "+28%",
+        "revenueGrowth": "+30%",
         "earningsTrend": "Accelerating",
-        "growthQualified": "Partial",
-        "fundamental": "Laminate and plywood manufacturer showing revenue resurgence, yet constrained by thin operating margins (~3-5%), elevated debt-to-equity (1.14x), and modest 7.9% ROE, trailing CANSLIM quality filters.",
-        "verdict": "Watch",
-        "risk": "Stop triggers below 103.64; a breakdown invalidates the swing low and breaches key trendline support."
+        "growthQualified": "Yes",
+        "fundamental": "Decorative laminates maker demonstrated strong operating leverage with net profit up 42% on 30% revenue expansion. Export demand supports healthy return ratios while debt levels remain manageable.",
+        "verdict": "Constructive",
+        "risk": "Breakdown below 103.64 support negates double bottom; honor stop loss promptly to prevent capital impairment."
       },
       "AJAXENGG": {
         "stage": "Stage 2 advancing",
-        "technical": "Coiling constructively within 1.5% of its 635.63 pivot. Price holds firmly above 21-EMA, 50-DMA, and 200-DMA with 1.56x volume backing and positive MACD histogram expansion.",
+        "technical": "Tight consolidation within 1.5% of 635.63 pivot, supported by 1.56x volume and positive MACD. Price respects Stage 2 trend template above rising 21-EMA, 50-DMA, and 200-DMA.",
         "epsGrowth": [
-          "Q2 FY27 +31%",
-          "Q1 FY27 +6%",
-          "Q4 FY26 +4%"
+          "Q2 FY27 +30%",
+          "Q1 FY27 -8%"
         ],
-        "revenueGrowth": "+11%",
-        "earningsTrend": "Accelerating",
+        "revenueGrowth": "+10%",
+        "earningsTrend": "Steady",
         "growthQualified": "Partial",
-        "fundamental": "India's premier concrete equipment manufacturer boasts zero net debt, 23.9% ROCE, and 17.8% ROE. EPS growth accelerated smartly to 31%, though top-line growth trails the 15% threshold.",
-        "verdict": "Constructive",
-        "risk": "Thesis fails on a close below 594.18, confirming a false breakout and overhead supply."
+        "fundamental": "Leading concrete equipment manufacturer boasts 24% ROCE and an almost debt-free balance sheet. While Q2 profit rebounded 30%, revenue growth at 10% falls short of O'Neil's 15% benchmark.",
+        "verdict": "Watch",
+        "risk": "Violation of 594.18 stop level breaks pivot shelf; exit swiftly to respect downside protection."
       },
       "AJMERA": {
         "stage": "Stage 2 advancing",
-        "technical": "High-velocity 20-day breakout clearing 152.60 on extraordinary 28.87x volume expansion. Price trades decisively above upward-sloping 21-EMA, 50-DMA, and 200-DMA, exhibiting textbook institutional demand.",
+        "technical": "Stellar 20-day high breakout backed by massive 28.87x volume expansion, confirming explosive institutional accumulation. Trading firmly above all key moving averages with accelerating momentum.",
         "epsGrowth": [
-          "Q2 FY27 +48%",
+          "Q2 FY27 +55%",
           "Q1 FY27 +35%"
         ],
         "revenueGrowth": "+45%",
         "earningsTrend": "Accelerating",
         "growthQualified": "Yes",
-        "fundamental": "Urban realty developer benefiting from robust residential sales momentum. Demonstrates high operating margins (~32%), ROCE ~14%, low leverage, and commanding 68.6% promoter ownership, fulfilling core CANSLIM mandates.",
+        "fundamental": "Robust Mumbai residential project execution drove 55% PAT jump and 45% revenue surge. Operating margins remain solid at ~27% alongside disciplined deleveraging, maintaining debt-to-equity around 0.55x.",
         "verdict": "Leading",
-        "risk": "Thesis terminates on a breach below 135.25, signaling institutional distribution and a failed breakout."
+        "risk": "Close below 135.25 invalidates breakout pivot; enforce hard stop immediately without hesitation."
       }
     }
   },
