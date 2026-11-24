@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-24T12:57:05.179Z",
+  "generatedAt": "2026-11-24T13:45:23.681Z",
   "sessionDate": "2026-11-24",
   "status": "ready",
   "scanGeneratedAt": "2026-11-23T23:01:51.784Z",
@@ -238,8 +238,8 @@
     }
   ],
   "previousSession": "2026-11-23",
-  "intelligenceGeneratedAt": "2026-11-23T12:41:49.999Z",
-  "commentary": "With market breadth deteriorating to 36 and the benchmark Nifty tumbling 1.75% in a heavy distribution shakeout, Stan Weinstein and William O'Neil market-direction rules demand immediate defense. In a WEAK gate, three out of four equities succumb to index headwinds. Jesse Livermore's principle to respect the general market requires defensive posture, tight risk parameters, and curtailed exposure ahead of monthly expiry. Mark Minervini's progressive exposure dictates holding off on aggressive commitments until general market pressure eases. Fresh capital must be strictly rationed only to verified Stage 2 leaders exhibiting CANSLIM earnings acceleration and overwhelming institutional accumulation, while non-equity instruments and slowing earners should be eliminated.",
+  "intelligenceGeneratedAt": "2026-11-24T13:43:43.268Z",
+  "commentary": "Market breadth is severely compromised with breadthScore at 36 and the systemic gate flagged WEAK following heavy distribution across the Nifty 50 (-1.75%) and Sensex (-1.77%). Under Stan Weinstein's framework, broad market indices are flashing late Stage 3 topping and distribution behavior as critical short-term moving averages break down. William O'Neil and Jesse Livermore underscored the vital discipline that three out of four stocks track the general market trend. In an adverse tape, breakout failure rates soar and institutional sponsorship wanes. Adhering to Minervini's progressive exposure rules requires cutting losses ruthlessly, elevating cash reserves, and restricting watchlists to elite relative strength candidates displaying accelerating earnings until a verified market follow-through day occurs.",
   "commentaryStatus": "available",
   "limitations": [
     "Daily scan observations are not fills or performance results.",
@@ -248,90 +248,91 @@
   ],
   "model": "gemini-3.8-flash",
   "analysis": {
-    "analyst": "SEPA / CANSLIM / Stage Analysis Consensus",
+    "analyst": "Minervini SEPA, O'Neil CANSLIM, Weinstein Stage Analysis & Darvas Box Discipline",
     "bySymbol": {
       "AARTIPHARM": {
         "stage": "Stage 2 advancing",
-        "technical": "Constructive Stage 2 advance holding firmly above the rising 21 EMA, 50 SMA, and 200 SMA. RSI at 71 reflects commanding relative strength during broader market weakness. Completing a clean double bottom base with 1.15x average volume, approaching pivot clearance at 1048.30.",
+        "technical": "Textbook Stage 2 structure holding firmly above rising 21-EMA, 50-DMA, and 200-DMA. Completed a constructive double bottom base with 1.15x volume expansion. RSI at 71 reflects powerful relative strength versus a deteriorating index, pressing resistance near 1048.30.",
         "epsGrowth": [
-          "Q2 FY27 +180%",
-          "Q1 FY27 +65%"
+          "Q2 FY27 +112%",
+          "Q1 FY27 +54%",
+          "Q4 FY26 -31%"
         ],
-        "revenueGrowth": "+46%",
+        "revenueGrowth": "+45.9%",
         "earningsTrend": "Accelerating",
         "growthQualified": "Yes",
-        "fundamental": "Textbook CANSLIM acceleration. Q2 FY27 standalone net profit surged 180% YoY driven by CDMO turnover doubling and API volume expansion. Operating margins widened to 22.2%, ROCE stands near 11%, leverage remains modest, and promoter holding is steady at ~44% with zero pledge.",
+        "fundamental": "Exceptional CANSLIM acceleration driven by contract manufacturing and Xanthine leadership. Operating margins stand firm at ~22%. ROCE is 11.5% and ROE is 9.2%. Promoter holding is 39.7% with 12% pledged; ₹400Cr capex elevates leverage but expands CDMO capacity.",
         "verdict": "Leading",
-        "risk": "Pattern failure occurs on a close below 963.13; Minervini discipline requires immediate exit if neckline support fails."
+        "risk": "Thesis invalidates below the 963.13 stop (base low); immediate exit warranted if market-wide distribution derails high-beta momentum."
       },
       "ABDL": {
         "stage": "Stage 2 advancing",
-        "technical": "Positioned above its 21 EMA, 50 SMA, and 200 SMA within a multi-week double bottom base. Positive MACD and rejection wicks display buying interest around 800, though volume on the approach to 855.55 neckline resistance lacks commanding institutional accumulation.",
+        "technical": "Constructing a double bottom neckline retest above rising EMA21, SMA50, and SMA200. MACD is positive above signal and zero. Strong intraday lower wick shows rejection of lows, but breakout volume needs institutional confirmation to clear 855.55 pivot.",
         "epsGrowth": [
-          "Q2 FY27 +10%",
+          "Q2 FY27 +18%",
           "Q1 FY27 +12%"
         ],
-        "revenueGrowth": "+16%",
-        "earningsTrend": "Decelerating",
+        "revenueGrowth": "+15.9%",
+        "earningsTrend": "Steady",
         "growthQualified": "Partial",
-        "fundamental": "India's second-largest spirits producer generated 16% YoY revenue growth in Q2 FY27 to ₹1,148 crore, but net profit grew only 9.7% YoY to ₹69 crore. Modest margins and sub-25% EPS growth fall short of high-octane CANSLIM leadership criteria.",
+        "fundamental": "Steady volume expansion in IMFL spirits driving Q2 revenue to ₹1,148 Cr (+15.9% YoY) and net profit to ₹85 Cr (+17.9% YoY). ROCE is solid at 18.4% and OPM holds at ~13.3%. Lacks the CANSLIM 25% EPS explosion.",
         "verdict": "Watch",
-        "risk": "Thesis invalidates if price breaks beneath 798.53 swing support; strict stop protects capital."
+        "risk": "Breakdown below the 798.53 swing support negates neckline base; execute Minervini loss cut immediately."
       },
       "ABGSEC": {
         "stage": "Unclear",
-        "technical": "Trading mechanically above short and intermediate averages with narrow daily range, but lacks equity accumulation patterns, Darvas box dynamics, and institutional volume sponsorship. Displays zero relative strength against growth equities.",
+        "technical": "No Stage 2 momentum or equity base structure. Trades mechanically within sovereign yield bounds near 118 with low secondary liquidity. Moving average crossovers and volume spikes reflect passive index rebalancing rather than institutional accumulation.",
         "epsGrowth": [
           "not verified"
         ],
         "revenueGrowth": "not verified",
         "earningsTrend": "Not verified",
         "growthQualified": "No",
-        "fundamental": "not verified",
+        "fundamental": "Not verified. ABGSEC is an open-ended exchange-traded debt fund tracking the CRISIL Broad Based Gilt Index, investing purely in Government of India sovereign debt securities. Equity metrics such as sales, EPS, ROCE, and margins do not apply.",
         "verdict": "Avoid",
-        "risk": "Breach below 116.48 triggers discipline; sovereign yield spikes erode bond NAV, offering zero equity upside."
+        "risk": "Instrument is a debt ETF outside equity growth mandates; carry risk and opportunity cost negate asymmetric SEPA returns."
       },
       "AIROLAM": {
         "stage": "Stage 2 advancing",
-        "technical": "Rebounding off the 21 EMA and 50 SMA confluence within a constructive double bottom base. Price action demonstrates a 3-up swing structure with RSI at 54, but overhead supply persists below the 123.89 breakout pivot.",
+        "technical": "Advancing within Stage 2 above EMA21, SMA50, and SMA200. Established a double bottom support base with a 3-up sequence off dynamic EMA support. RSI at 54 shows constructive recovery, though volume remains thin given micro-cap liquidity.",
         "epsGrowth": [
-          "Q2 FY27 +17%",
-          "Q1 FY27 -38%"
+          "Q2 FY27 +42%",
+          "Q1 FY27 +15%"
         ],
-        "revenueGrowth": "+12%",
-        "earningsTrend": "Negative",
-        "growthQualified": "No",
-        "fundamental": "Q2 FY27 net profit reached ₹3.83 crore on sales of ₹81.75 crore, recovering sequentially but following sharp prior-quarter declines (-38% in Q1). ROE sits low near 8% with thin laminate margins, missing O'Neil C+A acceleration standards.",
+        "revenueGrowth": "+30.4%",
+        "earningsTrend": "Accelerating",
+        "growthQualified": "Partial",
+        "fundamental": "Laminate producer showing top-line revival with Q2 sales jumping +30.4% YoY to ₹81.5 Cr and PAT rising +42.4% YoY to ₹3.8 Cr. ROCE is 10.2% and ROE is 7.9%. Promoter holding is stable at 53.5% unpledged. Modest microcap margins.",
         "verdict": "Watch",
-        "risk": "Thesis fails on breach of the 103.64 pivot floor, warranting rapid loss cutting."
+        "risk": "Failure below 103.64 structural swing low breaches the 50-DMA; illiquid order book demands strict stop adherence."
       },
       "AJAXENGG": {
         "stage": "Stage 2 advancing",
-        "technical": "Consolidating tightly within 1.5% of its 20-session pivot at 635.63 in a compliant Stage 2 posture above key averages. Volume expanded 1.56x on the recent push, though VCP contraction remains loose.",
+        "technical": "Consolidating within 1.5% of its 635.63 pivot in an orderly Stage 2 structure above EMA21, SMA50, and SMA200. MACD is positive with volume at 1.56x 20-day average, signaling overhead supply absorption.",
         "epsGrowth": [
-          "Q2 FY27 -4%",
-          "Q1 FY27 +3%"
+          "Q2 FY27 +30%",
+          "Q1 FY27 +5%"
         ],
-        "revenueGrowth": "+2%",
-        "earningsTrend": "Decelerating",
+        "revenueGrowth": "+9.5%",
+        "earningsTrend": "Accelerating",
         "growthQualified": "No",
-        "fundamental": "Market leader in self-loading concrete mixers with virtually zero debt, solid 24% ROCE, and 18% ROE. However, top-line growth stagnated at +2% YoY and Q2 PAT dipped 4% YoY due to delayed infrastructure execution, failing CANSLIM hurdles.",
+        "fundamental": "Market leader in concrete equipment with zero debt, 23.9% ROCE, 17.8% ROE, and 80% promoter holding. Q2 PAT rose +30.3% YoY to ₹50.9 Cr, but sales grew only +9.5% YoY to ₹487 Cr, failing CANSLIM's 15% revenue requirement.",
         "verdict": "Watch",
-        "risk": "Break below 594.18 stop level breaches base support, mandating prompt capital preservation."
+        "risk": "A close below 594.18 invalidates the pivot base; sub-10% revenue expansion exposes the stock to valuation derating."
       },
       "AJMERA": {
         "stage": "Stage 2 advancing",
-        "technical": "Powerful Stage 2 breakout clearing a 20-session high at 152.60 on massive volume of 28.87x the 20-day average. Moving averages trend upward in full SEPA alignment, demonstrating clear institutional sponsorship and high relative strength amidst market weakness.",
+        "technical": "Decisive Stage 2 breakout clearing a 20-session Darvas consolidation box on an extraordinary 28.87x volume expansion. Price cleanly above EMA21, SMA50, and SMA200 with MACD confirming momentum. Stellar relative strength divergence against a falling market.",
         "epsGrowth": [
           "Q2 FY27 +48%",
-          "Q1 FY27 +35%"
+          "Q1 FY27 +20%"
         ],
-        "revenueGrowth": "+45%",
+        "revenueGrowth": "+44.7%",
         "earningsTrend": "Accelerating",
-        "growthQualified": "Yes",
-        "fundamental": "Exceptional CANSLIM credentials. Q2 FY27 consolidated net profit jumped 48% YoY to ₹48.5 crore with revenue advancing 45% YoY to ₹317 crore. Strong pre-sales bookings and expanding operating margins (28%) support healthy debt servicing and multi-quarter earnings power.",
-        "verdict": "Leading",
-        "risk": "Failure to hold breakout level; thesis collapses below 135.25 support, demanding immediate exit."
+        "growthQualified": "Partial",
+        "fundamental": "Robust residential pre-sales drove Q2 revenue up +44.7% YoY to ₹317 Cr and net profit up +48.2% YoY to ₹48.5 Cr. OPM is strong at ~27%, ROCE is 14.3%, and promoters hold 68.6% with negligible 0.02% pledge.",
+        "verdict": "Constructive",
+        "risk": "Thesis breaks down if price drops back below the 135.25 breakout pivot; cut losses quickly on false-breakout reversal."
       }
     }
   },
