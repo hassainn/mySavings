@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-27T11:26:29.397Z",
+  "generatedAt": "2026-11-27T12:22:17.058Z",
   "sessionDate": "2026-11-27",
   "status": "ready",
   "scanGeneratedAt": "2026-11-26T20:29:57.168Z",
@@ -238,14 +238,108 @@
     }
   ],
   "previousSession": "2026-11-26",
-  "intelligenceGeneratedAt": "2026-11-26T12:34:30.475Z",
-  "commentary": null,
-  "commentaryStatus": "unavailable",
+  "intelligenceGeneratedAt": "2026-11-27T12:20:43.032Z",
+  "commentary": "With major indices pausing near key psychological resistance around 25,800 to 26,000, market breadth at 46% and massive institutional net buying exceeding ₹11,400 crore confirm underlying health. Under Stan Weinstein and William O'Neil frameworks, the market remains in a confirmed uptrend absorbing overhead supply. Capital goods and industrials are emerging as leading themes, supported by heavy institutional volume. In this environment, disciplined operators avoid chasing extended names, deploy progressive exposure strictly on high-volume Stage 2 pivots, and maintain uncompromising stop discipline.",
+  "commentaryStatus": "available",
   "limitations": [
     "Daily scan observations are not fills or performance results.",
     "Price levels are scanner references, not live quotes.",
     "No broker orders are submitted."
   ],
+  "model": "gemini-3.8-flash",
+  "analysis": {
+    "analyst": "SEPA (Minervini), CANSLIM (O'Neil) & Stage Analysis (Weinstein)",
+    "bySymbol": {
+      "AARTIDRUGS": {
+        "stage": "Stage 2 advancing",
+        "technical": "Bullish double-bottom pattern forming above upward-sloping EMA21, SMA50, and SMA200. RSI at 69 reflects strong momentum without excessive extension. Reclaim candle at the rising 21-EMA confirms institutional demand.",
+        "epsGrowth": [
+          "Q2 FY27 +83%",
+          "Q1 FY27 -7%",
+          "Q4 FY26 -12%"
+        ],
+        "revenueGrowth": "+27%",
+        "earningsTrend": "Accelerating",
+        "growthQualified": "Partial",
+        "fundamental": "API volume recovery and backward integration at Sayakha expanded EBITDA margin 370 bps to 16.6%. ROCE sits near 12% and ROE at 13.4% with manageable leverage.",
+        "verdict": "Constructive",
+        "risk": "A breakdown below the 487.43 support pivot invalidates the double-bottom pattern; execute an immediate stop to limit drawdown."
+      },
+      "AARTIPHARM": {
+        "stage": "Stage 2 advancing",
+        "technical": "High-conviction double-bottom structure holding cleanly above rising 21, 50, and 200 moving averages. RSI of 69 and MACD above zero validate powerful relative strength and institutional sponsorship near highs.",
+        "epsGrowth": [
+          "Q2 FY27 +113%",
+          "Q1 FY27 +65%",
+          "Q4 FY26 -31%"
+        ],
+        "revenueGrowth": "+46%",
+        "earningsTrend": "Accelerating",
+        "growthQualified": "Yes",
+        "fundamental": "Dominant global Xanthine market share and expanding CDMO pipeline fueled 46% sales growth and triple-digit net income expansion. Operating margins exceed 21% with conservative leverage.",
+        "verdict": "Leading",
+        "risk": "Close below the 961.36 stop level shatters the base neckline; exit immediately to protect capital."
+      },
+      "ABCAPITAL": {
+        "stage": "Stage 2 advancing",
+        "technical": "Constructive double-bottom base pressing against neckline resistance. Price holds comfortably above rising EMA21, SMA50, and SMA200, while RSI at 60 indicates accumulation without momentum overextension.",
+        "epsGrowth": [
+          "Q2 FY27 +32%",
+          "Q1 FY27 +38%",
+          "Q4 FY26 +21%"
+        ],
+        "revenueGrowth": "+32%",
+        "earningsTrend": "Decelerating",
+        "growthQualified": "Yes",
+        "fundamental": "Strong 32% revenue expansion across lending and insurance verticals. ROE remains moderate at ~10% with substantial financial leverage typical of diversified non-bank financial holding structures.",
+        "verdict": "Watch",
+        "risk": "Violation of the 406.56 swing low breaches the 50-day average, signaling failure of the breakout setup."
+      },
+      "ABDL": {
+        "stage": "Stage 2 advancing",
+        "technical": "Double-bottom breakout attempt clearing moving-average cluster on 1.35x average volume. MACD is positive, though prior fast advance requires tight volatility contraction before sustainable continuation.",
+        "epsGrowth": [
+          "Q2 FY27 +15%",
+          "Q1 FY27 -19%",
+          "Q4 FY26 +21%"
+        ],
+        "revenueGrowth": "+16%",
+        "earningsTrend": "Accelerating",
+        "growthQualified": "No",
+        "fundamental": "Prestige & Above portfolio mix drove 16% revenue growth, yet operating margins remain thin at ~5.5%. Debt-to-equity is high at ~0.84x, requiring further earnings quality validation.",
+        "verdict": "Watch",
+        "risk": "Failure below 798.50 aborts the breakout attempt; enforce strict stop discipline to curb further downside."
+      },
+      "ABSLLIQUID": {
+        "stage": "Unclear",
+        "technical": "Overnight liquid debt ETF displaying flat-line pricing around par value. Possesses no trending characteristics, SEPA pattern, or relative strength traits suitable for equity momentum trading.",
+        "epsGrowth": [
+          "not verified"
+        ],
+        "revenueGrowth": "not verified",
+        "earningsTrend": "Not verified",
+        "growthQualified": "Not verified",
+        "fundamental": "not verified",
+        "verdict": "Avoid",
+        "risk": "Instrument is a cash equivalent proxy rather than an operating equity; holding entails opportunity cost versus Stage 2 growth leaders."
+      },
+      "ACE": {
+        "stage": "Stage 2 advancing",
+        "technical": "Exemplary SEPA Stage 2 breakout clearing a 20-session high and printing a new annual peak. Massive 9.98x volume surge signals intense institutional accumulation above all rising moving averages.",
+        "epsGrowth": [
+          "Q2 FY27 +82%",
+          "Q1 FY27 +22%",
+          "Q4 FY26 -6%"
+        ],
+        "revenueGrowth": "+19%",
+        "earningsTrend": "Accelerating",
+        "growthQualified": "Partial",
+        "fundamental": "Robust crane and material handling demand drove an 82% EPS spike. Balance sheet is virtually debt-free with superior operational efficiency (ROCE 31.6%, ROE 22.8%) matching top-tier CANSLIM metrics.",
+        "verdict": "Constructive",
+        "risk": "A reversal below the 1179.17 pivot stop invalidates the high-volume breakout; exit swiftly to manage downside risk."
+      }
+    }
+  },
   "history": [
     {
       "sessionDate": "2026-11-21",
