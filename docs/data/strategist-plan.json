@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-27T20:23:05.007Z",
+  "generatedAt": "2026-11-27T21:29:09.644Z",
   "sessionDate": "2026-11-28",
   "status": "ready",
   "scanGeneratedAt": "2026-11-27T20:22:50.715Z",
@@ -239,7 +239,7 @@
   ],
   "previousSession": "2026-11-27",
   "intelligenceGeneratedAt": "2026-11-27T12:20:43.032Z",
-  "commentary": "With Nifty pausing near the 25,800-26,000 zone after an extended run, the deterministic breadth score of 48 warrants caution under Stan Weinstein's market cycle principles. Headline benchmarks reflect selective distribution in heavyweight IT and private banks, yet underlying institutional accumulation remains vigorous, evidenced by ₹11,474 crore in net institutional buying and sector breakouts in capital goods and defence. William O'Neil's market-direction framework advises against aggressive index exposure during consolidation phases. Investors must demand strict Stage 2 alignment above rising 30-week averages, prioritize setups demonstrating authentic CANSLIM quarterly earnings acceleration, and deploy Minervini's progressive exposure rules—relying on tight pivot stop discipline rather than chasing extended leaders.",
+  "commentary": "With the deterministic market gate flagged at CAUTION and breadth reading 48, major indices are consolidating near 25,800-26,000. Under Stan Weinstein's stage analysis, broad index exhaustion demands extreme selectivity before deploying capital. However, massive institutional absorption of ₹11,474 crore alongside heavy accumulation in capital goods and defence mirrors textbook CANSLIM sector rotation. William O'Neil and Jesse Livermore taught that during market pauses, true institutional leaders detach from the pack and build sound pivot bases. Risk must be managed with progressive exposure: sit tight on cash, avoid chasing extended charts, demand accelerating quarterly earnings, and cut losses aggressively at predetermined stop thresholds.",
   "commentaryStatus": "available",
   "limitations": [
     "Daily scan observations are not fills or performance results.",
@@ -248,53 +248,54 @@
   ],
   "model": "gemini-3.8-flash",
   "analysis": {
-    "analyst": "SEPA, CANSLIM & Stage Analysis Framework",
+    "analyst": "Minervini SEPA, O'Neil CANSLIM & Weinstein Stage Analysis",
     "bySymbol": {
       "AARTIPHARM": {
         "stage": "Stage 2 advancing",
-        "technical": "Forming the right side of a double bottom toward the 1,048.30 neckline pivot. Price is stacked cleanly above the rising 21-day EMA, 50-day SMA, and 200-day SMA, confirming Minervini Trend Template criteria. RSI at 68 reflects strong momentum without overextension.",
+        "technical": "Double bottom base pressing against the 1048.30 neckline with constructive momentum (RSI 68). Price trades cleanly above upward-sloping EMA21, SMA50, and SMA200, fulfilling Minervini's Trend Template. MACD above zero confirms constructive underlying trend, though a decisive breakout requires sustained volume expansion.",
         "epsGrowth": [
-          "Q2 FY27 +180%",
-          "Q1 FY27 +92%"
+          "Q2 FY27 +156%",
+          "Q1 FY27 +48%"
         ],
         "revenueGrowth": "+46%",
         "earningsTrend": "Accelerating",
         "growthQualified": "Yes",
-        "fundamental": "Explosive earnings acceleration driven by caffeine/xanthine global leadership and expanding CDMO contracts. Standalone operating margins stabilized at ~22.2%. Demerger efficiencies compound with manageable debt and 11% ROCE, satisfying CANSLIM C+A criteria.",
-        "verdict": "Leading",
-        "risk": "A drop below the 979.65 pivot support invalidates the double-bottom pattern; execute an immediate stop to limit capital drawdown."
+        "fundamental": "Explosive top-line and bottom-line momentum driven by Xanthine capacity additions and CDMO expansion. Operating margins expanded strongly, supported by a healthy ROCE of ~15% and modest debt levels. Promoter holding is stable at 39.7% without pledging, satisfying strict CANSLIM fundamental criteria.",
+        "verdict": "Constructive",
+        "risk": "Thesis fails on a break below the double bottom pivot stop at 979.65; cut losses immediately if volume turns distribution-heavy."
       },
       "ABCAPITAL": {
         "stage": "Stage 2 advancing",
-        "technical": "Carving a double bottom with neckline entry at 427.88 on 1.82x volume expansion. Price holds constructively above its rising 21 EMA, 50 SMA, and 200 SMA, displaying institutional sponsorship and orderly accumulation with RSI at 57.",
+        "technical": "Forming an orderly double bottom above the rising EMA21 and SMA50 with an accumulation volume spike of 1.82x average. RSI 57 indicates steady upward traction without overbought exhaustion. The base exhibits healthy VCP characteristics as supply dries up along the right side.",
         "epsGrowth": [
-          "Q2 FY27 +32%",
-          "Q1 FY27 +40%"
+          "Q2 FY27 +44%",
+          "Q1 FY27 +39%",
+          "Q4 FY26 +30%"
         ],
-        "revenueGrowth": "+31%",
-        "earningsTrend": "Decelerating",
+        "revenueGrowth": "+32%",
+        "earningsTrend": "Accelerating",
         "growthQualified": "Yes",
-        "fundamental": "AUM expanded across NBFC and housing finance portfolios while Gross Stage 3 asset quality improved to 0.65-2.31%. However, quarterly EPS growth moderated from 40% to 32%; O'Neil discipline caps this setup at Watch despite 31% top-line growth.",
-        "verdict": "Watch",
-        "risk": "Breaching 405.96 compromises base support; exit promptly per Minervini risk discipline."
+        "fundamental": "Strong institutional CANSLIM profile with lending AUM expanding 27% and NBFC ROA reaching 2.5%. Robust 32% top-line growth and 44% EPS acceleration support operating leverage. High institutional holding and zero promoter pledge provide fundamental safety, though financial leverage remains typical for NBFCs.",
+        "verdict": "Constructive",
+        "risk": "Thesis is invalidated if price drops below 405.96 pivot support; enforce rapid stop discipline to prevent capital erosion during market pullbacks."
       },
       "ABDL": {
         "stage": "Stage 2 advancing",
-        "technical": "Advancing off 21-EMA and 50-DMA support with a 3-up continuation pattern towards the 855.55 neckline trigger. Moving averages trend upward in Stage 2 alignment, though volume on advances remains inconsistent.",
+        "technical": "Double bottom consolidation displaying a three-up candle sequence off the EMA21 and SMA50. Technicals meet basic trend template criteria, but lack explosive volume expansion on pushes toward the 855.55 trigger. Momentum remains modest with muted relative strength compared to market leaders.",
         "epsGrowth": [
-          "Q2 FY27 +10%",
-          "Q1 FY27 -18%"
+          "Q2 FY27 +15%",
+          "Q1 FY27 +11%"
         ],
-        "revenueGrowth": "+16%",
-        "earningsTrend": "Accelerating",
-        "growthQualified": "Partial",
-        "fundamental": "Quarterly volumes crossed 10 million cases led by ICONiQ White, but EBITDA margins at 12.4% remain compressed by supply-chain and raw-material costs. Sub-25% EPS growth fails O'Neil's core CANSLIM threshold, requiring patience.",
+        "revenueGrowth": "+7%",
+        "earningsTrend": "Steady",
+        "growthQualified": "No",
+        "fundamental": "Spirits volume growth remains subdued with revenue expanding just 7% YoY and EPS growing 15%. Although ROCE is 18.4% and debt has lowered post-IPO, lofty valuation (P/E >100x) and high debtor days (168 days) fail O'Neil's strict C-and-A earnings acceleration requirements.",
         "verdict": "Watch",
-        "risk": "A breakdown below 796.83 invalidates the EMA pullback structure, mandating strict capital protection."
+        "risk": "Failure below the 796.83 swing support breaks market structure; cut losses without hesitation to avoid protracted consolidation."
       },
       "ACE": {
         "stage": "Stage 2 advancing",
-        "technical": "Textbook SEPA breakout to fresh 52-week highs, clearing a 20-session resistance on 1.92x average volume. Aligns flawlessly with Minervini's 8-point Trend Template above rising 21 EMA, 50 SMA, and 200 SMA with top-tier relative strength.",
+        "technical": "Powerful SEPA breakout clearing 20-session and 52-week highs on 1.92x average volume. Stacked moving averages (EMA21 > SMA50 > SMA200) confirm a textbook Minervini Stage 2 uptrend with superior relative strength, buoyed by heavy institutional capital goods accumulation.",
         "epsGrowth": [
           "Q2 FY27 +82%",
           "Q1 FY27 +22%",
@@ -303,38 +304,37 @@
         "revenueGrowth": "+19%",
         "earningsTrend": "Accelerating",
         "growthQualified": "Partial",
-        "fundamental": "Commands 63% domestic mobile crane share. Surging capex and defence order pipelines drove Q2 PAT up 82% YoY. Negligible debt (D/E 0.06), 28.5% ROCE, 20.6% ROE, and unpledged 65.4% promoter holding reflect supreme institutional quality.",
+        "fundamental": "Superb industrial balance sheet with negligible debt (D/E 0.06), 28.5% ROCE, and 20.6% ROE. Operating margins holding at 15.4% while EPS surged 82% YoY in Q2, backed by sector tailwinds from defence and infrastructure capex pipelines. Promoters hold 65.4% unpledged.",
         "verdict": "Leading",
-        "risk": "Reversal below 1,215.50 negates the breakout pivot, requiring an immediate stop-out."
+        "risk": "Thesis fails on a reversal back into the base below 1215.50; apply strict loss-cutting discipline if breakout volume evaporates into a false move."
       },
       "ACMESOLAR": {
         "stage": "Stage 2 advancing",
-        "technical": "Coiling tightly within 1.5% of its 477.38 pivot on massive 3.01x volume accumulation. Moving averages conform to Stage 2 advancing criteria. RSI at 71 reflects powerful upside thrust without climactic exhaustion.",
+        "technical": "Constructive post-listing base tight within 1.5% of the 477.38 pivot. Heavy institutional accumulation evidenced by 3.01x volume surge. Moving averages are positively aligned and RSI 71 signals strong upward thrust, reflecting Darvas-like box breakout dynamics in a high-beta clean energy leader.",
         "epsGrowth": [
-          "Q2 FY27 +110%",
-          "Q1 FY27 +72%",
-          "Q4 FY26 +7%"
+          "Q2 FY27 +105%",
+          "Q1 FY27 +104%"
         ],
-        "revenueGrowth": "+90%",
+        "revenueGrowth": "+68%",
         "earningsTrend": "Accelerating",
         "growthQualified": "Yes",
-        "fundamental": "Benefiting from aggressive battery energy storage (BESS) commissioning, driving 90% revenue growth and 110% EPS expansion. Robust 86-88% operating margins offset elevated utility leverage, supported by 71.4% unpledged promoter ownership.",
+        "fundamental": "Exceptional CANSLIM fundamentals with revenue surging 68% and EPS leaping 105% YoY in Q2 FY27. EBITDA margin of 86.7% reflects massive BESS capacity scaling and contracted peak power PPAs. High sovereign/central offtake (67% rising to 84%) significantly mitigates receivable risks despite high capital intensity.",
         "verdict": "Leading",
-        "risk": "A close below 453.71 breaches the consolidation floor; exit immediately to preserve trading capital."
+        "risk": "A drop below 453.71 invalidates the breakout attempt; execute strict stop rules if execution delays or grid connectivity hurdles emerge."
       },
       "AEGISLOG": {
         "stage": "Stage 2 advancing",
-        "technical": "Cleared 20-session resistance to mark multi-month highs above rising moving averages. However, breakout volume is moderate at 1.16x and RSI at 72 indicates near-term overextension, warning against chasing.",
+        "technical": "Fresh 20-session high breakout with price holding above EMA21, SMA50, and SMA200. RSI 72 indicates strong momentum bordering on overbought. However, breakout volume at 1.16x is mediocre, lacking decisive institutional sponsorship typical of high-probability SEPA pivot setups.",
         "epsGrowth": [
           "Q2 FY27 +45%",
-          "Q1 FY27 +108%"
+          "Q1 FY27 +19%"
         ],
-        "revenueGrowth": "+65%",
+        "revenueGrowth": "-3.5%",
         "earningsTrend": "Decelerating",
-        "growthQualified": "Yes",
-        "fundamental": "Dominant LPG and chemical storage player with ROCE of 13.3% and ROE of 16.5%. While top-line growth is robust, profit growth decelerated from triple digits and promoter holding dropped 4.4%, warranting restraint.",
-        "verdict": "Extended",
-        "risk": "A pullback beneath 1,427.86 violates the breakout shelf; enforce the stop to curb downside."
+        "growthQualified": "Partial",
+        "fundamental": "Operating margins remain sound across liquid and gas logistics terminals with ROCE of 13.3% and ROE of 16.5%. However, Q2 revenue contracted 3.5% YoY and normalized net profit fell 46% sequentially, failing to show the synchronized sales and earnings acceleration O'Neil mandates.",
+        "verdict": "Watch",
+        "risk": "Thesis breaks on a drop below the breakout pivot stop at 1427.86; exit promptly if volume falters and the stock slips into a bull trap."
       }
     }
   },
